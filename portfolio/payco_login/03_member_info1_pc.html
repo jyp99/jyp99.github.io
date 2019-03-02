@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<title>사업자 인증 :: PAYCO 회원</title>
+<link rel="stylesheet" type="text/css" href="css/neid.css">
+<!-- for ie script -->
+<script type="text/javascript" src="js/html5.js"></script>
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+    <!-- header -->
+    <?php include 'inc/inc_header.html';?>
+    <!-- //header -->
+    
+	<div id="container">
+		<div class="content step_wrap">
+      <div class="step_area">
+        <ol>
+          <li class="step step_m1 is_active"><!--[D] 완료된 step 에 .is_complete 클래스 추가 -->
+            <span class="step_txt"><span class="ico_complete"></span>사업자 정보</span>
+            <span class="arr"></span>
+          </li>
+          <li class="step step_m2"><!--[D] 활성화된 step 에 .is_active 클래스 추가 -->
+            <span class="step_txt"><span class="ico_complete"></span>담당자 정보</span>
+            <span class="blind">현재단계</span><!--[D] 활성화된 단계에 .blind 처리된 '현재단계' 텍스트 추가 부탁드립니다.-->
+            <span class="arr"></span>
+          </li>
+          <li class="step step_m3">
+            <span class="step_txt">인증 완료</span>
+          </li>
+        </ol>
+      </div>
+      <div class="process_content_wrap">
+        <div class="tit_area">
+          <h2 class="h_tit">사업자 정보를 입력해주세요.</h2>
+        </div>
+        <form>
+        <fieldset>
+        <legend>사업자 정보 양식 입력</legend>
+        <span class="inp_bx">
+          <span class="inp_txt">
+            <span class="inp_placeholder">사업자명</span>
+            <input type="text" class="inp" title="사업자명">
+          </span>
+        </span>
+      
+        <span class="inp_bx">
+          <span class="inp_txt">
+            <span class="inp_placeholder">사업자 등록번호 (-없이 입력)</span>
+            <input type="text" class="inp" title="사업자 등록번호">
+          </span>
+        </span>
+
+        <div class="btn_area">
+          <button type="submit" class="btn btn_full btn_point">확인</button>
+        </div>
+
+        <p class="noti_txt">사업자 인증은 일 10회 가능합니다.<br>사업자인증이 되지 않는 경우, *** 으로 실명 등록을 요청해주시기 바랍니다.</p>
+        </fieldset>
+        </form>
+        </div>
+		</div>
+	</div>
+</div>
+
+<div class="dimmed" style="display:none"></div>
+<!-- 사업자정보 확인 -->
+<div class="ly_pop_wrap" style="display:none">
+  <div class="ly_pop">
+    <div class="ly_cont">
+      <h2 class="ly_tit">사업자 정보 확인</h2>
+      <em class="ly_desc">144-81-15549<br>NHN엔터테인먼트</em>
+      <p class="ly_desc">가입자 휴대폰 인증을 진행 후<br>사업자 인증이 완료됩니다.</p>
+    </div>
+    <div class="ly_btn_area">
+      <button type="button" class="btn btn_point">확인</button>
+      <button type="button" class="btn">취소</button>
+    </div>
+  </div>
+  <span class="vmiddle"></span>
+</div>
+<!-- 마크업 확인용입니다. -->
+<style>
+	#case_view,#case_view2{display:none;position:relative;width:100%;z-index:1000;padding:5px;background:#000;opacity:0.7}
+	#case_view2{display:inline-block;position:fixed;bottom:0;left:0;width:auto}
+	.btn_opt{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+	.btn_m-view{background:#22002e}
+</style>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script>    
+$(function(){
+	$('#case_view2 .btn_m-view').click(function(e){
+		e.preventDefault();
+		$('body').toggleClass('m');		
+	});
+	$('.ly_pop_wrap a,.ly_pop_wrap button,.btn_close').click(function(e){
+		e.preventDefault();
+		$('.ly_pop_wrap,.dimmed').hide();
+	});
+});
+</script>
+<div id="case_view2">
+  <a href="#" class="btn_opt btn_m-view">모바일 view</a>
+  <a href="#" class="btn_opt" onclick="$('.dimmed,.ly_pop_wrap').hide();$('.dimmed,.ly_pop_wrap:eq(0)').show();return false;">팝업 1</a>
+</div>
+<!-- //마크업 확인용입니다. -->
+</body>
+</html>

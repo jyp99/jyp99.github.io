@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<title>아이디 찾기 :: PAYCO 회원</title>
+<link rel="stylesheet" type="text/css" href="css/neid.css">
+<!-- for ie script -->
+<script type="text/javascript" src="js/html5.js"></script>
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+    <!-- header -->
+    <?php include 'inc/inc_header.html';?>
+    <!-- //header -->
+
+	<div id="container">
+		<div class="content">
+			<div class="tit_area">
+				<h2 class="h_tit">본인인증이 완료되었습니다.</h2>
+				<p class="sub_txt">로그인할 아이디를 선택해주세요.</p>
+			</div>
+			
+			<form>
+			<fieldset>
+			<legend>아이디 양식 입력</legend>
+				<div class="info_bx is_selected"><!-- [D]선택시 is_selected 사용 -->
+					<dl class="info_inner">
+					<dt class="info_tit">아이디</dt>
+					<dd class="info_txt">payco@nhnent.com</dd>
+					<dt class="info_tit">가입일자</dt>
+					<dd class="info_txt">2017.02.09 20:20</dd>
+					</dl>
+					<div class="info_checkbox">
+						<!--[D] 체크박스 선택 시 .is_checked 추가, input 에 checked 속성 추가 -->
+						<span class="inp_checkbox is_checked">
+							<input type="checkbox" id="saveid1" class="inp_chk" checked="">
+							<label for="saveid1" class="inp_label"><span class="ico_chk2"></span><em class="blind">아이디를 선택</em></label>
+						</span>
+					</div>
+				</div>
+		   
+				<div class="info_bx">
+					<dl class="info_inner">
+					<dt class="info_tit">아이디</dt>
+					<dd class="info_txt">payco@nhnent.com</dd>
+					<dt class="info_tit">가입일자</dt>
+					<dd class="info_txt">2017.02.09 20:20</dd>
+					</dl>
+					<div class="info_checkbox">
+						<!--[D] 체크박스 선택 시 .is_checked 추가, input 에 checked 속성 추가 -->
+						<span class="inp_checkbox">
+							<input type="checkbox" id="saveid2" class="inp_chk">
+							<label for="saveid2" class="inp_label"><span class="ico_chk2"></span><em class="blind">아이디를 선택</em></label>
+						</span>
+					</div>
+				</div>
+
+				<div class="btn_area">
+					<button type="button" class="btn btn_full btn_point">로그인</button>
+					<button type="button" class="btn btn_full">비밀번호 찾기</button>
+				</div>
+			</fieldset>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- 마크업 확인용입니다. -->
+<style>
+	#case_view,#case_view2{display:none;position:relative;width:100%;z-index:1000;padding:5px;background:#000;opacity:0.7}
+	#case_view2{display:inline-block;position:fixed;bottom:0;left:0;width:auto}
+	.btn_opt{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+	.btn_m-view{background:#22002e}
+</style>
+<div id="case_view2">
+	<a href="#" class="btn_opt btn_m-view">모바일 view</a>
+</div>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script>    
+$(function(){
+	$('#case_view2 .btn_m-view').click(function(e){
+		e.preventDefault();
+		$('body').toggleClass('m');		
+	});
+});
+</script>
+<!-- //마크업 확인용입니다. -->
+</body>
+</html>

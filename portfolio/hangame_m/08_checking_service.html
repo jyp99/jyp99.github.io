@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="all">
+<meta name="format-detection" content="telephone=no">
+<title>서비스 점검 중입니다 :: 한게임</title>
+<link rel="stylesheet" type="text/css" href="css/m_main.css">
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul class="skip">
+<li><a href="#header" onclick="document.getElementById('header').tabIndex=-1;document.getElementById('header').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+
+<div id="wrap" class="wrap">
+	<!--[D] HEADER -->
+	<header id="header" class="header">
+		<a href="00_main.html" class="logo_link">
+		  <h1 class="header_logo"><img src="img/logo_hangame.png" width="123" height="18" alt="HANGAME"></h1>
+		</a>
+	</header>
+	<!--//[D] HEADER -->
+
+	<!-- [D] CONTENTS -->
+	<div id="content" class="content">
+		<section class="sec checking_service_sec">
+			<h2 class="h_txt">서비스 점검 중입니다.</h2>
+			<p class="check_noti">오픈 예정 시간 <em class="point_txt">AM 10:00</em></p>
+			<ul class="check_detail">
+			<li class="check_item">
+				<span class="check_tit">점검 사유</span>
+				<span class="check_dsc">한게임 정기점검</span>
+			</li>
+			<li class="check_item">
+				<span class="check_tit">점검 시간</span>
+				<span class="check_dsc">8월 24일 06:00 ~ 10:00 (총 4시간)</span>
+			</li>
+			</ul>
+			<a href="#" class="banner_area">
+				<img src="img/banner_error01.png" alt="2018 우파루사가. 새해 보너스 받자!">
+			</a>
+			<a href="#" class="banner_area" style="display:none">
+				<img src="img/banner_error02.png" alt="킹스맨 : 골든 서클 게임. SEASON2 UPDATE!">
+			</a>
+		</section>
+	</div>
+	<!-- //[D] CONTENTS -->
+	
+	<!--[D] FOOTER -->
+	<footer id="footer" class="footer footer_type3">
+		<a href="http://www.nhnent.com/ko/index.nhn" class="corp_txt">© NHN Entertainment Corp.</a>
+	</footer>
+	<!--//[D] FOOTER -->
+</div>
+
+<!-- Javascript Area -->
+<script src="js/libs/jquery-1.12.4.min.js"></script>
+
+<!-- 마크업 확인용입니다. -->
+<style>
+.case_view{display:inline-block;position:fixed;bottom:0;left:0;z-index:1000;width:auto;padding:5px;background:#000;opacity:0.7}
+.case_view .btn{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+</style>
+<div class="case_view case_view1">
+	<a href="#" class="btn" onclick="$('.banner_area:eq(0)').hide();$('.banner_area:eq(1)').show();return false;">배너타입2</a>
+</div>
+<script src="js/case_view.js"></script>
+<!-- //마크업 확인용입니다. --> 
+</body>
+</html>

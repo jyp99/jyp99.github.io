@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="all">
+<meta name="format-detection" content="telephone=no">
+<title>웹게임 :: 한게임</title>
+<link rel="stylesheet" type="text/css" href="css/m_main.css">
+</head>
+<body><!-- [D] top 배너 닫을 경우 body 에 is_topbanner_close 클래스 추가 -->
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul class="skip">
+<li><a href="#header" onclick="document.getElementById('header').tabIndex=-1;document.getElementById('header').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+
+<div id="wrap" class="wrap">
+	<!--[D] HEADER -->
+	<?php include 'inc/header.html';?>
+	<!--//[D] HEADER -->
+
+	<!-- [D] CONTENTS -->
+	<div id="content" class="content">
+		<ul class="lst_tab">
+		<li class="tab">
+			<a href="01_webgame.html" class="link_tab is_active">
+				<span class="tab_txt">웹게임</span>
+			</a>
+		</li>
+		<li class="tab">
+			<a href="01_mobilegame.html" class="link_tab">
+				<span class="tab_txt">모바일게임</span>
+			</a>
+		</li>
+		</ul>
+		<section class="sec">
+			<h2 class="blind">웹게임</h2>
+			<ul class="lst_webgame">
+			<li class="game_wrea">
+				<a href="#" class="link_game">
+					<img src="img/img_webgame01.jpg" alt="" width="320" height="277">
+					<ul class="lst_tag">
+					<li class="tag">인기</li>
+					<li class="tag">신규</li>
+					</ul>
+					<div class="desc_wrap">
+						<span class="category">MMORPG</span>
+						<h3 class="tit_game">신들의 전쟁</h3>
+						<p class="desc_txt">선과 악의 불타는 전쟁</p>
+						<span class="ico_play">PLAY</span>
+					</div>
+				</a>
+			</li>
+			<li class="game_wrea">
+				<a href="#" class="link_game">
+					<img src="img/img_webgame02.jpg" alt="" width="320" height="277">
+					<ul class="lst_tag">
+					<li class="tag">인기</li>
+					</ul>
+					<div class="desc_wrap">
+						<span class="category">RPG</span>
+						<h3 class="tit_game">뮤 이그니션</h3>
+						<p class="desc_txt">선과 악의 불타는 전쟁 전율과 감동의<br>판타지 대작 원작 그대로</p>
+						<span class="ico_play">PLAY</span>
+					</div>
+				</a>
+			</li>
+			<li class="game_wrea">
+				<a href="#" class="link_game">
+					<img src="img/img_webgame03.jpg" alt="" width="320" height="277">
+					<ul class="lst_tag">
+					<li class="tag">신규</li>
+					</ul>
+					<div class="desc_wrap">
+						<span class="category">RPG</span>
+						<h3 class="tit_game">공명 온라인</h3>
+						<p class="desc_txt">원조 뇌섹남녀의 짜릿한 전략</p>
+						<span class="ico_play">PLAY</span>
+					</div>
+				</a>
+			</li>
+			</ul>
+		</section>
+		<a href="#wrap" class="btn_top"><img src="img/btn_go_top.png" alt="맨 위로"></a><!-- [D]노출 필요시 btn_top에 is_show 클래스 추가 -->
+	</div>
+	<!-- //[D] CONTENTS -->
+	
+	<!--[D] FOOTER -->
+	<?php include 'inc/footer.html';?>
+	<!--//[D] FOOTER -->
+</div>
+
+<!-- Javascript Area -->
+<script src="js/libs/jquery-1.12.4.min.js"></script>
+
+<!-- 마크업 확인용입니다. -->
+<style>
+.case_view{display:inline-block;position:fixed;bottom:0;left:0;z-index:1000;width:auto;padding:5px;background:#000;opacity:0.7}
+.case_view .btn{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+</style>
+<div class="case_view case_view1">
+	<a href="#" class="btn" onclick="$('body').toggleClass('is_gnb_show');return false;">GNB 열기/닫기</a>
+	<a href="#" class="btn" onclick="$('.lst_menu_other:eq(0)').hide();$('.lst_menu_other:eq(1),.member_data_wrap').show();$('footer .lst_func:eq(1)').show();$('footer .lst_func:eq(0)').hide();return false;">로그인 후</a>
+	<a href="#" class="btn" onclick="$('body').toggleClass('is_topbanner_close');return false;">top 배너 닫기</a>
+	<a href="#" class="btn" onclick="$('.btn_top').toggleClass('is_show');return false;">위로가기 노출 제어</a>
+	<a href="#" class="btn" onclick="$('.case_view1').hide();$('.case_view2').show();return false;">케이스뷰 닫기</a>
+</div>
+<div class="case_view case_view2" style="display:none">
+	<a href="#" class="btn" onclick="$('.case_view1').show(),$('.case_view2').hide();return false;">케이스뷰 열기</a>
+</div>
+<script src="js/case_view.js"></script>
+<!-- //마크업 확인용입니다. --> 
+</body>
+</html>

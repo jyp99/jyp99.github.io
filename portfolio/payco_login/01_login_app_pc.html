@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<title>로그인 :: PAYCO 회원</title>
+<link rel="stylesheet" type="text/css" href="css/neid.css">
+<!-- for ie script -->
+<script type="text/javascript" src="js/html5.js"></script>
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+    <h1 class="blind">로그인</h1>
+    <!-- container -->
+    <div id="container"> 
+        <div class="notice_area">
+            <img src="img/ico_paycoapp.png" alt="PAYCO APP">
+            <p class="notice_desc">아이디, 비밀번호 입력 없이 <em class="txt_point">페이코 앱</em>으로 로그인하세요.</p>
+        </div>
+        <div class="content">
+            <div class="auth_guide">
+                <ol class="auth_guide_lst">
+                <li><em class="ico_num num1">1.</em>페이코 앱을 실행하여 <span class="txt_point">[ <img src="img/@ico_qr.png" alt=""> QR코드 ]</span> 버튼 클릭</li>
+                <li><em class="ico_num num2">2.</em>QR코드 스캔 / 인증코드 입력
+                    <div class="auth_area">
+                      <div class="auth_detail">
+                        <span class="auth_qr"><img src="img/@img_qr.png" alt="코드정보 확인 QR코드">
+                        </span>
+                        <span class="auth_txt">or</span>
+                        <span class="auth_code">12-345-67</span>
+                        <span class="blind">유효시간 : </span><span class="auth_time">03:50</span>
+                      </div>
+                    </div>
+                </li>
+                <li><em class="ico_num num3">3.</em>인증 완료 후, 아래 [로그인] 버튼을 클릭</li>
+                </ol>
+            </div>
+
+            <div class="checkbox_area">
+                <span class="inp_checkbox is_checked"><!--[D] 체크박스 선택 시 .is_checked 추가, input 에 checked 속성 추가 -->
+                    <input type="checkbox" id="autoLogin" class="inp_chk" checked>
+                    <label for="autoLogin" class="inp_label"><span class="ico_chk"></span>로그인 상태 유지</label>
+                </span>
+                <span class="txt_checkbox">
+                    <a href="#" class="txt_link">IP보안</a>
+                    <input type="checkbox" class="inp_chk" id="ipSecurity">
+                    <label class="inp_label" for="ipSecurity">
+                        <span class="blind">IP보안</span>
+                        <em class="txt_point">ON</em><!-- [D] IP보안 체크 해제 시 .txt_point 제거 및 텍스트 OFF로 변경 -->
+                    </label>
+                </span> 
+            </div>
+
+            <div class="btn_area">
+                <button type="submit" class="btn btn_full btn_point">로그인</button>
+                <span class="txt_divide"><em>또는</em></span>
+                <button type="submit" class="btn btn_full btn_line">아이디 로그인으로 돌아가기</button>
+            </div>
+
+            <div class="msg_area">
+                <span class="msg_txt">페이코 앱을 설치한 후 이용 가능합니다.</span><a href="#" class="msg_btn"><img src="img/ico_paycoapp2.png" alt="" class="btn_img">앱 다운로드</a></div>
+        </div>
+    </div>
+    <!-- //container -->
+</div>
+</body>
+</html>

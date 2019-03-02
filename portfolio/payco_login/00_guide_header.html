@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<title>헤더 :: PAYCO 회원</title>
+<link rel="stylesheet" type="text/css" href="css/neid.css">
+<link rel="stylesheet" type="text/css" href="css/m_setting.css">
+<!-- for ie script -->
+<script type="text/javascript" src="js/html5.js"></script>
+<style>
+	/*[D] 임시 css*/
+	#wrap{min-height:50px}
+	.temp_tit{padding:5px 10px;border-bottom:1px solid #999;border-width:1px 0;text-align:left;color:#222}
+	.temp_ul li{padding:0 10px;font-size:14px;list-style-type:disc;line-height:20px}
+	.footer_menu .footer_inner,.footer_common{position:static}
+</style>
+</head>
+<body>
+<div id="wrap">
+	<h1 class="temp_tit">PAYCO 로그인 헤더 (.header_logo)</h1>
+	<!-- header -->
+	<?php include 'inc/inc_header_login.html';?>
+	<!-- //header -->
+</div>
+
+<hr>
+
+<div id="wrap">
+	<h1 class="temp_tit">공통 헤더 - img (.header)</h1>
+	<!-- header -->
+	<?php $title="로그인"; include 'inc/inc_header.html';?>
+	<!-- //header -->
+</div>
+
+<hr>
+
+<div id="wrap">
+	<h1 class="temp_tit">공통 헤더 - text (.header)</h1>
+	<!-- header -->
+	<?php $title="로그인"; include 'inc/inc_header2.html';?>
+	<!-- //header -->
+</div>
+
+<hr>
+
+<div id="wrap">
+	<h1 class="temp_tit">닷컴 헤더 - text (.header)</h1>
+	<!-- header -->
+	<div id="header" class="header" title="아이디 안심관리">
+		<div class="tit_area">
+			<h1 class="sec_tit">아이디 안심관리</h1>
+			<a href="#" class="btn_back"><span class="sp">이전 페이지로 이동</span></a>
+		</div>
+	</div>
+	<!-- //header -->
+</div>
+
+<hr>
+
+
+	<h1 class="temp_tit">버전 정보</h1>
+	<ul class="temp_ul">
+	<li>- PC 노출 없음</li>
+	<li>- M 로그인 페이지에만 노출</li>
+	</ul>
+	<div class="sdk_area"><!-- [D]화면 세로 길이-(header+container)가 78px보다 클경우 sdk_area에 sdk_fixed 클래스 추가 -->
+		<span class="sdk_txt"><span class="blind">간편로그인 sdk버전</span>Ver. 2.5.1</span>
+	</div>
+	<hr>
+	<h1 class="temp_tit">푸터</h1>
+	<ul class="temp_ul">
+	<li>- PC/M 로그인 페이지에서만 노출</li>
+	<li>- M에서와 PC에서의 위치가 상이함</li>
+	</ul>
+	<div class="footer_menu">
+		<div class="footer_inner">
+			<ul class="menu_lst">
+			<li class="menu_item"><a href="#" class="menu_link">아이디찾기</a></li>
+			<li class="menu_item"><span class="bar">|</span><a href="#" class="menu_link">비밀번호찾기</a></li>
+			<li class="menu_item"><span class="bar">|</span><a href="#" class="menu_link">회원가입</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<hr>
+	<h1 class="temp_tit">닷컴 푸터</h1>
+	<ul class="temp_ul">
+	<li>- 닷컴쪽 푸터 인클루드 해오는 페이지만 적용</li>
+	<li>- 적용시 content에 content_v2 클래스 추가 필요</li>
+	</ul>
+	<div id="footer_common" class="footer footer_common">
+		<ul class="lst_footlk">
+			<li><a href="#">이용약관</a></li>
+			<li><a href="#"><strong>개인정보처리방침</strong></a></li>
+		</ul>
+		<p class="copyright">© NHN PAYCO Corp. All Rights Reserved.</p>
+	</div>
+	<!-- //footer -->
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script>
+	$(function(){
+		var brandingWrapper = $('.login_cnt');
+		var toast_black=$('#wrap.toastcam');
+		$('.btn_toggle').on('click',function(){
+			brandingWrapper.removeClass().addClass('login_cnt');
+			$('.btn_mainarea .btn_v2').removeClass('white');
+			var biName = $(this).attr('id');
+			brandingWrapper.addClass(biName);
+
+			if(biName=='toastcam_black'){
+				toast_black.toggleClass('toastcam_black');
+			}
+		});
+		$('.btn_join').on('click',function(e){
+			brandingWrapper.removeClass().addClass('login_cnt');
+			$('.btn_mainarea .btn_v2').addClass('white');
+			var biName = $(this).attr('id');
+			brandingWrapper.addClass(biName);
+		});
+	});
+</script>
+<!-- 마크업 확인용입니다. -->
+<style>
+	#case_view,#case_view2{display:none;position:relative;width:100%;z-index:1000;padding:5px;background:#000;opacity:0.7}
+	#case_view2{display:inline-block;position:fixed;bottom:0;left:0;width:auto}
+	.btn_opt{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+	.btn_m-view{background:#22002e}
+</style>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script>
+	$(function(){
+		$('#case_view2 .btn_m-view').click(function(e){
+			e.preventDefault();
+			$('body').toggleClass('m');		
+		});
+		$('.ly_pop_wrap a,.btn_close').click(function(e){
+			e.preventDefault();
+			$('.ly_pop_wrap,.dimmed').hide();
+		});
+	});
+</script>
+<div id="case_view2">
+	<a href="#" class="btn_opt btn_m-view">모바일 view</a>
+</div>
+<!-- //마크업 확인용입니다. -->
+</body>
+</html>

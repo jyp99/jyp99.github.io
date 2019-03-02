@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<title>회원가입 :: PAYCO 회원</title>
+<link rel="stylesheet" type="text/css" href="css/neid.css">
+<!-- for ie script -->
+<script type="text/javascript" src="js/html5.js"></script>
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+    <!-- header -->
+    <?php include 'inc/inc_header.html';?>
+    <!-- //header -->
+
+    <!-- container -->
+    <div id="container">
+        <h1 class="blind">회원가입</h1>
+        <div class="content">
+            <div class="tit_area">
+                <h2 class="h_tit">페이코 가입을 환영합니다.</h2>
+            </div>
+            <ul class="tab">
+            <li class="tab_item is_selected"><a href="#" class="tab_link">이메일로 가입</a></li>
+            <li class="tab_item"><a href="#" class="tab_link">휴대폰 번호로 가입</a></li>
+            </ul>
+            
+           <span class="inp_bx sel"><!-- [D] 포커스 시 .is_focus 추가; 값 입력 시 .is_value 추가 -->
+                <!-- [D] 툴팁 노출시 .is_show 추가 -->
+                <span class="tooltip"><em class="txt">이메일 또는 휴대폰 아이디 입력</em></span>
+                <span class="inp_txt">
+                    <span class="inp_placeholder">이메일 또는 휴대폰 아이디</span>
+                    <input type="text" class="inp" value="" title="이메일 또는 휴대폰 아이디">
+                    <button type="button" class="btn_del"><span class="ico_del">입력한 내용 지우기</span></button>
+                    <!-- [D] 이메일 주소 select 영역 -->
+                    <div class="sel_email">
+                        <span class="ico_sel_arr"></span>
+                        <select name="" id="">
+                          <option value="0">직접 입력</option>
+                          <option value="1">naver.com</option>
+                          <option value="2">gmail.com</option>
+                          <option value="3">hanmail.net</option>
+                        </select>
+                    </div>
+                    <!-- //[D] 이메일 주소 select 영역 -->
+                </span>
+                <p class="error_txt">유효성 체크 메시지입니다</p>
+            </span>
+            <!-- [D] 자동완성 기능 비노출시 .is_show 제거-->
+            <ul class="sel_bx">
+                <li class="sel_item"><a href="#" class="sel_link"><span class="opt_tit">paycoui_design@payco.compaycoui_design@payco.com</span></a></li>
+                <li class="sel_item"><a href="#" class="sel_link"><span class="opt_tit">paycoui_design@payco.compaycoui_design@payco.compaycoui_design@payco.compaycoui_design@payco.com</span></a></li>
+                <li class="sel_item"><a href="#" class="sel_link"><span class="opt_tit">paycoui_design@payco.compaycoui_design@payco.compaycoui_design@payco.compaycoui_design@payco.com</span></a></li>
+            </ul>
+            <!-- [D] 에러 메시지 -->
+            <p class="noti_txt txt_point" style="display:none">잘못 입력하였습니다.</p>
+
+            <span class="inp_bx">
+                <span class="inp_txt">
+                    <span class="inp_placeholder">비밀번호 (영문, 숫자, 특수문자 8-15자)</span>
+                    <input type="password" class="inp" title="비밀번호">
+                    <button type="button" class="btn_del"><span class="ico_del">텍스트 지우기</span></button>
+                </span>
+                <p class="error_txt">유효성 체크 메시지입니다</p>
+            </span>
+            <span class="inp_bx">
+                <span class="inp_txt">
+                    <span class="inp_placeholder">비밀번호 재입력</span>
+                    <input type="password" class="inp" title="비밀번호">
+                    <button type="button" class="btn_del"><span class="ico_del">텍스트 지우기</span></button>
+                </span>
+                <p class="error_txt">유효성 체크 메시지입니다</p>
+            </span>
+            <div class="checkbox_area agree_all">
+                <span class="inp_checkbox inp_bold">
+                    <input type="checkbox" id="agree_all" class="inp_chk">
+                    <label for="agree_all" class="inp_label"><span class="ico_chk"></span>아래 내용에 모두 동의합니다.</label>
+                </span>
+            </div>
+
+            <div class="btn_chk_area">
+                <span class="inp_checkbox">
+                    <input type="checkbox" id="rdo_chk" class="inp_chk">
+                    <label for="rdo_chk" class="inp_label"><span class="ico_cfm"></span>모든 약관에 동의</label>
+                </span>
+            </div>
+
+            <div class="agree_area">
+                <ul class="agree_lst">
+                <li class="agree_item">
+                    <span class="inp_checkbox">
+                        <input type="checkbox" id="agree1" class="inp_chk">
+                        <label for="agree1" class="inp_label"><span class="ico_chk"></span>이용약관, 개인정보 수집/제공 동의</label>
+                    </span>
+                    <a href="#" class="fold_link">펼치기<span class="ico_arr"></span></a>
+                    <ul class="agree_lst">
+                    <li class="agree_item">
+                        <span class="inp_checkbox">
+                            <input type="checkbox" id="agree2" class="inp_chk">
+                            <label for="agree2" class="inp_label"><span class="ico_chk"></span>PAYCO 회원 약관</label>
+                        </span>
+                        <a href="#" class="agree_link">보기</a>
+                    </li>
+                    <li class="agree_item">
+                        <span class="inp_checkbox">
+                            <input type="checkbox" id="agree3" class="inp_chk">
+                            <label for="agree3" class="inp_label"><span class="ico_chk"></span>개인정보 수집/이용 동의</label>
+                        </span>
+                        <a href="#" class="agree_link">보기</a>
+                    </li>
+                    <li class="agree_item">
+                        <span class="inp_checkbox">
+                            <input type="checkbox" id="agree4" class="inp_chk">
+                            <label for="agree4" class="inp_label"><span class="ico_chk"></span>PAYCO 서비스 약관</label>
+                        </span>
+                        <a href="#" class="agree_link">보기</a>
+                    </li>
+                    </ul>
+                </li>
+                <li class="agree_item">
+                    <span class="inp_checkbox">
+                        <input type="checkbox" id="agree5" class="inp_chk">
+                        <label for="agree5" class="inp_label"><span class="ico_chk"></span>만 14세 이상입니다.</label>
+                    </span>
+                </li>
+                <li class="agree_item">
+                    <span class="inp_checkbox is_checked">
+                        <input type="checkbox" id="agree6" class="inp_chk">
+                        <label for="agree6" class="inp_label"><span class="ico_chk"></span><em>위치기반 서비스 약관 동의</em> (선택)</label>
+                    </span>
+                    <a href="#" class="agree_link">보기</a>
+                </li>
+                <li class="agree_item">
+                    <span class="inp_checkbox">
+                        <input type="checkbox" id="agree7" class="inp_chk">
+                        <label for="agree7" class="inp_label"><span class="ico_chk"></span><em>홍보성 정보 수신 동의</em> (선택)</label>
+                    </span>
+                </li>
+                </ul>
+            </div>
+            
+            <div class="btn_area">
+                <button type="submit" class="btn btn_full btn_point">회원가입</button>
+            </div>
+        </div>
+    </div>
+    <!-- //container -->
+</div>
+
+<div class="dimmed" style="display: none;"></div>
+<!-- [D]휴대폰 인증 오타변경 -->
+<div class="ly_pop_wrap" style="display:none">
+    <div class="ly_pop">
+      <div class="ly_cont">
+        <h2 class="ly_tit">asdfsa@<em class="txt_point">naber.com</em></h2>
+        <p class="ly_desc">입력하신 이메일에 오타가 발견되었습니다.<br><strong>@naver.com</strong>으로 변경할까요?</p>
+      </div>
+      <div class="ly_btn_area">
+        <button type="button" class="btn btn_point">변경</button>
+        <button type="button" class="btn">취소</button>
+      </div>
+    </div>
+    <span class="vmiddle"></span>
+</div>
+<!-- [D]외부 회원 약관 -->
+<div class="ly_pop_wrap" style="display: none;">
+    <div class="ly_pop ly_term_pop">
+      <div class="ly_cont">
+          <h2 class="ly_tit">PAYCO 회원 약관</h2>
+          <div class="frame_wrap">
+            <iframe src="https://id.payco.com/privacyPolicy.nhn" frameborder="0"></iframe>
+          </div>
+      </div>
+      <div class="ly_btn_area is_btn_full">
+        <button type="button" class="btn">확인</button>
+      </div>
+    </div>
+    <span class="vmiddle"></span>
+</div>
+<!-- [D]외부 회원 약관2 -->
+<div class="ly_pop_wrap" style="display: none;">
+    <div class="ly_pop ly_term_pop">
+      <div class="ly_cont">
+          <h2 class="ly_tit">개인정보 수집 및 이용 안내</h2>
+          <div class="frame_wrap">
+            <iframe src="00_collection_and_use_agree.html" frameborder="0"></iframe>
+          </div>
+          <div class="ly_btn_area is_btn_full">
+            <button type="button" class="btn">확인</button>
+          </div>
+        </div>
+    </div>
+    <span class="vmiddle"></span>
+</div>
+<!-- 토스트 팝업_한줄 -->
+<div class="msg_layer" style="display:none">
+    <div class="msg_inner">
+        <p class="msg_txt">비밀번호를 찾을 방법을 선택해주세요.</p>
+        <span class="bar"></span>
+    </div>
+</div>
+<!-- 마크업 확인용입니다. -->
+<style>
+	#case_view,#case_view2{display:none;position:relative;width:100%;z-index:1000;padding:5px;background:#000;opacity:0.7}
+	#case_view2{display:inline-block;position:fixed;bottom:0;left:0;width:auto}
+	.btn_opt{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+	.btn_m-view{background:#22002e}
+  #case_view2 .btn_on{background-color:#999}
+</style>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script>    
+$(function(){
+	$('#case_view2 .btn_m-view').click(function(e){
+		e.preventDefault();
+		$('body').toggleClass('m');		
+	});
+  $('.ly_pop_wrap a,.ly_pop_wrap button,.btn_close').click(function(e){
+    e.preventDefault();
+    $('.ly_pop_wrap,.dimmed').hide();
+  });
+});
+</script>
+<div id="case_view2">
+	<a href="#" class="btn_opt btn_m-view">모바일 view</a>
+  <a href="#" class="btn_opt" onclick="$('.dimmed,.ly_pop_wrap').hide();$('.dimmed,.ly_pop_wrap:eq(0)').show();return false;">오타변경 팝업</a>
+  <a href="#" class="btn_opt" onclick="$('.dimmed,.ly_pop_wrap').hide();$('.dimmed,.ly_pop_wrap:eq(1)').show();return false;">회원 약관 팝업</a>
+  <a href="#" class="btn_opt" onclick="$('.dimmed,.ly_pop_wrap').hide();$('.dimmed,.ly_pop_wrap:eq(2)').show();return false;">회원 약관 팝업2</a>
+  <a href="#" class="btn_opt" onclick="$('.dimmed,.ly_pop_wrap').hide();$('.msg_layer:eq(0)').show();return false;">토스트 팝업 샘플</a>
+  <a href="#" class="btn_opt" onclick="$(this).toggleClass('btn_on');$('body').toggleClass('ly_show');return false;">배경 고정</a>  
+</div>
+
+<!-- //마크업 확인용입니다. -->
+</body>
+</html>

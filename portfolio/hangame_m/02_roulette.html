@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="all">
+<meta name="format-detection" content="telephone=no">
+<title>한코인 룰렛 :: 한게임</title>
+<link rel="stylesheet" type="text/css" href="css/m_main.css">
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul class="skip">
+<li><a href="#header" onclick="document.getElementById('header').tabIndex=-1;document.getElementById('header').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+
+<div id="wrap" class="wrap">
+	<!--[D] HEADER -->
+	<?php include 'inc/header.html';?>
+	<!--//[D] HEADER -->
+
+	<!-- [D] CONTENTS -->
+	<main id="content" class="content">
+		<section class="sec sec_roulette">
+			<h2 class="h_tit"><img src="img/roulette_h_tit.png" width="251" height="53" alt="PAYCO로 결제한 날 100%충전, PAYCO X 한코인 룰렛"></h2>
+			<p class="txt"><img src="img/roulette_tit.png" width="135" height="14" alt="매일매일 선착순 3,000명"></p>
+			<div class="roulette_area">
+				<div class="roulette_inner"><!-- [D] 룰렛 돌아갈시 roulette_inner에 is_rolling 클래스 추가 -->
+					<img src="img/roulette_img01.gif" width="260" height="260" alt="룰렛">
+					<ul class="blind">
+					<li>한코인 50,000원</li>
+					<li>한코인 500원</li>
+					<li>한코인 3,000원</li>
+					<li>한코인 100원</li>
+					<li>한코인 1,000원</li>
+					</ul>
+				</div>
+				<button type="button" class="btn_roulette">룰렛 응모</button>
+			</div>
+			<div class="roulette_area roulette_area_type" style="display:none">
+				<div class="roulette_inner"><!-- [D] 룰렛 돌아갈시 roulette_inner에 is_rolling 클래스 추가 -->
+					<img src="img/roulette_img_5000.gif" width="260" height="260" alt="룰렛">
+					<ul class="blind">
+					<li>한코인 5,000원</li>
+					<li>한코인 500원</li>
+					<li>한코인 3,000원</li>
+					<li>한코인 100원</li>
+					<li>한코인 1,000원</li>
+					</ul>
+				</div>
+				<button type="button" class="btn_roulette">룰렛 응모</button>
+			</div>
+			<div class="step_area">
+				<h3 class="blind">참여방법</h3>
+				<ul class="step_lst">
+				<li class="step_item">
+					<span class="ico_img ico"><img src="img/ico_img.gif" width="50" height="41" alt=""></span>
+					<p class="step_desc">PAYCO가맹점에서 <em class="point">3천원 이상 결제</em></p>
+				</li>
+				<li class="step_item">
+					<span class="ico_img ico2"><img src="img/ico_img2.gif" width="47" height="50" alt=""></span>
+					<p class="step_desc">결제 내역 확인 후 <em class="point">응모하기</em></p>
+				</li>
+				<li class="step_item">
+					<span class="ico_img ico3"><img src="img/ico_img3.gif" width="50" height="46" alt=""></span>
+					<p class="step_desc">룰렛이 멈추면 <em class="point">한코인 충전</em></p>
+				</li>
+				</ul>
+			</div>
+			<ul class="lst_btn">
+				<li class="btn_area"><a href="#" class="btn">문의하기</a></li>
+				<li class="btn_area"><a href="02_roulette_list.html" class="btn">참여내역</a></li>
+			</ul>
+			<div class="notice_area">
+				<h3 class="h_sub_tit">유의사항</h3>
+				<button type="button" class="btn_control is_active"><span class="ico_arrow">닫기</span></button><!-- [D] 유의사항 펼침 btn_control에 is_active 클래스 추가 -->
+				<div class="notice_inner">
+					<ul class="notice_lst">
+					<li class="notice_item">접속 시 로그인 된 PAYCO ID의 정보로 참여하며, 연결된 PAYCO ID는 변경이 불가합니다.</li>
+					<li class="notice_item">PAYCO 전 가맹점에서 3천원 이상 결제한 내역이 있을 경우 참여할 수 있습니다.</li>
+					<li class="notice_item">접속 당일의 결제 내역만 확인할 수 있으며, 결제 내역 중 1개를 선택 후 [응모] 버튼을 눌러 1일 1회 참여할 수 있습니다.</li>
+					<li class="notice_item">당일 자정이 지나면 지난 결제 내역에 대한 참여는 불가능합니다.</li>
+					<li class="notice_item">모바일 게임 또는 PC에서 같은 날 참여한 경우 중복 참여할 수 없습니다.</li>
+					<li class="notice_item">룰렛은 선착순으로 참여 가능하며, 마감 후 참여 불가합니다.</li>
+					<li class="notice_item">룰렛에 참여 후 지급된 보상은 취소 및 변경, 환불이 불가합니다.</li>
+					<li class="notice_item">응모를 완료한 결제의 취소 발생 시 해당 횟수만큼 참여가 제한되며, 반복된 결제 취소 또는 부적절한 반복 결제 취소의 경우 영구 제한될 수 있습니다.</li>
+					<li class="notice_item">충전된 한코인은 월 충전한도 50만원에 포함되며, 보드게임 류의 상품 구매 시 구매한도 50만원에 포함됩니다.</li>
+					<li class="notice_item">해당 서비스는 사전 고지 없이 조기 종료될 수 있습니다.</li>
+					</ul>
+				</div>
+			</div>
+			<div >
+				<a href="#" class="banner_area"><img src="img/@banner.png" alt="맛있는 배달, 이제 PAYCO로!"></a>
+			</div>
+		</section>
+		<a href="#wrap" class="btn_top"><img src="img/btn_go_top.png" alt="맨 위로"></a>
+	</main>
+	<!-- //[D] CONTENTS -->
+	
+	<!--[D] FOOTER -->
+	<?php include 'inc/footer.html';?>
+	<!--//[D] FOOTER -->
+</div>
+
+<!-- [D] 레이어 팝업 노출시 body에 is_layer_show 추가 및 해당 layer_pop_wrap에 is_show 클래스 추가 -->
+<!-- [D] 텍스트 팝업 -->
+<div class="layer_pop_wrap layer_pop_type2 layer_txt_pop">
+	<div class="ly_pop">
+		<div class="ly_cont">
+			<p class="pop_txt">PAYCO 결제 내역이 없습니다</p>
+		</div>
+		<div class="pop_btn_area">
+			<button type="button" class="pop_btn">확인</button>
+		</div>
+	</div>
+</div>
+<!-- //[D] 텍스트 팝업 -->
+<!-- [D] 텍스트 팝업 - 2줄 -->
+<div class="layer_pop_wrap layer_pop_type2 layer_txt_pop">
+	<div class="ly_pop">
+		<div class="ly_cont">
+			<p class="pop_txt">반복된 결제 취소가 확인되어<br> 참여가 영구 제한됩니다</p>
+		</div>
+		<div class="pop_btn_area">
+			<button type="button" class="pop_btn">확인</button>
+		</div>
+	</div>
+</div>
+<!-- //[D] 텍스트 팝업 - 2줄 -->
+<!-- [D] 로그인 팝업 -->
+<div class="layer_pop_wrap layer_pop_type2 layer_txt_pop2">
+	<div class="ly_pop">
+		<div class="ly_cont">
+			<em class="logo_hangamexpayco"><img src="img/pop_logo.png" width="153" height="12" alt="HANGAME X PAYCO"></em>
+			<p class="pop_txt">로그인이 필요한 서비스입니다</p>
+		</div>
+		<div class="pop_btn_area">
+			<button type="button" class="pop_btn">로그인하기</button>
+		</div>
+		<button type="button" class="btn_pop_close"><span class="ico_pop_close">레이어 닫기</span></button>
+	</div>
+</div>
+<!-- //[D] 로그인 팝업 -->
+<!-- [D] 계정확인 팝업 -->
+<div class="layer_pop_wrap layer_pop_type2 layer_txt_pop2">
+	<div class="ly_pop">
+		<div class="ly_cont">
+			<em class="logo_hangamexpayco"><img src="img/pop_logo.png" width="153" height="12" alt="HANGAME X PAYCO"></em>
+			<p class="pop_txt">이용정보 확인을 위해 PAYCO ID 확인 후<br> 계정 연결이 필요합니다</p>
+		</div>
+		<div class="pop_btn_area">
+			<button type="button" class="pop_btn">PAYCO ID 확인</button>
+		</div>
+		<button type="button" class="btn_pop_close"><span class="ico_pop_close">레이어 닫기</span></button>
+	</div>
+</div>
+<!-- //[D] 계정확인 팝업 -->
+<!-- [D] 당첨 팝업 -->
+<div class="layer_pop_wrap layer_pop_type2 layer_hancoin_charge">
+	<div class="ly_pop">
+		<div class="ly_cont">
+			<em class="pop_tit_big">축하합니다</em>
+			<p class="pop_tit_point">한코인 50,000원 충전</p>
+			<div class="img_wrap">
+				<img src="img/img_coin.png" width="116" height="55" alt="코인">
+			</div>
+		</div>
+		<div class="pop_btn_area">
+			<button type="button" class="pop_btn">확인</button>
+		</div>
+	</div>
+</div>
+<!-- //[D] 당첨 팝업 -->
+
+<!-- Javascript Area -->
+<script src="js/libs/jquery-1.12.4.min.js"></script>
+
+<!-- 마크업 확인용입니다. -->
+<style>
+.case_view{display:inline-block;position:fixed;bottom:0;left:0;z-index:1000;width:auto;padding:5px;background:#000;opacity:0.7}
+.case_view .btn{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+</style>
+<div class="case_view case_view1">
+	<a href="#" class="btn" onclick="$('.layer_pop_wrap').removeClass('is_show');$('.layer_pop_wrap:eq(0)').addClass('is_show');return false;">팝업_텍스트 1줄</a>
+	<a href="#" class="btn" onclick="$('.layer_pop_wrap').removeClass('is_show');$('.layer_pop_wrap:eq(1)').addClass('is_show');return false;">팝업_텍스트 2줄</a>
+	<a href="#" class="btn" onclick="$('.layer_pop_wrap').removeClass('is_show');$('.layer_pop_wrap:eq(2)').addClass('is_show');return false;">팝업_로그인</a>
+	<a href="#" class="btn" onclick="$('.layer_pop_wrap').removeClass('is_show');$('.layer_pop_wrap:eq(3)').addClass('is_show');return false;">팝업_계정확인</a>
+	<a href="#" class="btn" onclick="$('.layer_pop_wrap').removeClass('is_show');$('.layer_pop_wrap:eq(4)').addClass('is_show');return false;">팝업_당첨</a>
+	<a href="#" class="btn" onclick="$('.roulette_area:eq(1)').show();$('.roulette_area:eq(0)').hide();return false;">룰렛 5,000원</a>
+	<a href="#" class="btn" onclick="$('.btn_control').toggleClass('is_active');return false;">유의사항 펼침/닫기</a>
+    <a href="#" class="btn" onclick="$('.case_view1').hide();$('.case_view2').show();return false;">케이스뷰 닫기</a>
+</div>
+<div class="case_view case_view2" style="display:none">
+    <a href="#" class="btn" onclick="$('.case_view1').show(),$('.case_view2').hide();return false;">케이스뷰 열기</a>
+</div>
+<script>
+$(function(){
+  $('.btn_roulette').click(function(e){
+		$('.roulette_inner').toggleClass('is_rolling');
+  });
+  $('.btn_control').click(function(e){
+		$(this).toggleClass('is_active');
+  });  
+});
+</script>
+<script src="js/case_view.js"></script>
+<!-- //마크업 확인용입니다. --> 
+
+</body>
+</html>

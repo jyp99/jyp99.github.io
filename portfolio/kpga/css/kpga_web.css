@@ -1,0 +1,739 @@
+@charset "utf-8";
+@import url("flags.css");
+/* HIVELAB (http://www.hivelab.co.kr) */
+/* nanumgothick */
+@font-face{
+font-family:'NanumGothic';
+font-weight:normal;
+src:url(../font/NanumGothic-Regular.eot);
+src:url(../font/NanumGothic-Regular.eot?#iefix) format('embedded-opentype'),url(../font/NanumGothic-Regular.woff) format('woff'),url(../font/NanumGothic-Regular.ttf) format('truetype')
+}
+@font-face{
+font-family:'NanumGothic';
+font-weight:bold;
+src:url(../font/NanumGothic-Bold.eot);
+src:url(../font/NanumGothic-Bold.eot?#iefix) format('embedded-opentype'),url(../font/NanumGothic-Bold.woff) format('woff'),url(../font/NanumGothic-Bold.ttf) format('truetype')
+}
+
+/* NotoSans */
+font-face{
+font-family:'NotoSans';
+font-weight:normal;
+src:url(../font/NotoSans-Regular.eot);
+src:url(../font/NotoSans-Regular.eot?#iefix) format('embedded-opentype'),url(../font/NotoSans-Regular.woff) format('woff'),url(../font/NotoSans-Regular.ttf) format('truetype')
+}
+font-face{
+font-family:'NotoSans';
+font-weight:bold;
+src:url(../font/NotoSans-Bold.eot);
+src:url(../font/NotoSans-Bold.eot?#iefix) format('embedded-opentype'),url(../font/NotoSans-Bold.woff) format('woff'),url(../font/NotoSans-Bold.ttf) format('truetype')
+}
+
+/* Reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,p,table,th,td,form,fieldset,legend,textarea,input,select,textarea,button,article,aside,dialog,footer,header,section,footer,nav,figure,main{margin:0;padding:0}
+article,aside,dialog,footer,header,section,footer,nav,figure,main{display:block}
+html,body{height:100%;-webkit-text-size-adjust:none;-ms-text-size-adjust:none}
+body,input,select,textarea,button{font-family:'NanumGothic','Malgun Gothic','맑은고딕','Apple SD Gothic Neo',Dotum,'돋움',sans-serif;font-size:12px}
+fieldset,li,img{border:0;vertical-align:top}
+ul,ol{list-style:none}
+input,select,textarea,button{-webkit-appearance:none;-moz-appearance:none;appearance:none;-webkit-border-radius:0}
+button{overflow:visible;border:0;background-color:transparent;cursor:pointer}
+button::-moz-focus-inner{padding:0;border:0}
+address,caption,em{font-style:normal}
+a,a:focus,a:active,a:hover{text-decoration:none}
+table{border-collapse:separate;border-spacing:0}
+input::-webkit-contacts-auto-fill-button{display:none !important;visibility:hidden;position:absolute;right:0;pointer-events:none}
+input::-ms-clear{display:none}
+input::-ms-reveal{display:none}
+select::-ms-expand{display:none}
+.inp::-webkit-input-placeholder{color:#999}
+.inp::-moz-placeholder{color:#999}
+.inp:-ms-input-placeholder{color:#999!important}
+
+.blind,caption span,legend{overflow:hidden;position:absolute;top:0;left:0;width:1px;height:1px;font-size:1px;line-height:100px;white-space:nowrap}
+.sp,.btn_menu_layer:before,.btn_total_menu:before,.lnb_wrap .depth2 .btn_menu_open:after,.lst_sns .ico_sns,.sec_ranking_card .h_card .link_txt:after,.lst_state .state_item .txt:after,.ranking_state .ico_arr,.lst_view_type .btn_mode:before{display:inline-block;overflow:hidden;background:url(../img/web/sp_web.png) no-repeat;line-height:999px}
+
+.skip{height:0}
+.skip a{display:block;position:absolute;top:-100px;left:0;width:100%;height:25px;text-align:center}
+.skip a:focus,#skip a:active{position:absolute;top:0;z-index:100;padding:10px 0;background:#000;font-weight:bold;font-size:20px;color:#fff;text-decoration:none}
+
+/* common */
+.is_m_show{display:none}
+.inner{position:relative;max-width:1280px;margin:0 auto}
+.sec .inner{padding:54px 0 56px;border-bottom:1px solid #ebeef2}
+.sec:last-of-type .inner{padding-bottom:93px;border-bottom:0}
+.sec .scroll_wrap{display:block;overflow:hidden;overflow-x:auto;width:100%;font-size:0;box-sizing:border-box}
+
+.wrap{padding-top:97px}
+
+/* header */
+header{position:fixed;top:0;left:0;right:0;z-index:50;background:url(../img/web/atype_korean.png) 50% 100% no-repeat;background-size:100% 100%;font-size:0}
+header.is_champions{background-image:url(../img/web/atype_champions.png)}
+header.is_challenge{background-image:url(../img/web/atype_challenge.png)}
+header.is_frontier{background-image:url(../img/web/atype_frontier.png)}
+header.has_gnb_show:after{position:absolute;top:97px;left:0;z-index:10;width:100%;height:211px;background-color:#fff;background-color:#fff;box-shadow:0 5px 5px rgba(0,0,0,.1);content:''}
+header .inner{max-width:1520px}
+header .logo{display:inline-block;position:relative;position:absolute;top:50%;left:0;margin-top:-11px;vertical-align:middle}
+header .logo .link_kpga{display:inline-block;overflow:hidden;width:88px;height:22px;background:url(../img/web/logo_kpga.png) no-repeat;line-height:999px}
+header .logo .link_stats{display:inline-block;overflow:hidden;width:52px;height:14px;margin-left:8px;background:url(../img/web/logo_stats.png) no-repeat;line-height:999px}
+header .btn_menu_layer{display:none;overflow:hidden;position:absolute;top:13px;right:15px;width:36px;height:36px;line-height:999px}
+header .btn_menu_layer:before{position:absolute;top:50%;left:50%;width:27px;height:23px;margin-left:-13px;margin-top:-10px;background-position:0 0;background-size:396px auto;content:''}
+
+/* gnb */
+.gnb{display:block;margin-left:200px}
+.gnb .lst_gnb{display:inline-block;height:97px}
+.gnb .lst_gnb .menu_item{display:inline-block;height:97px}
+.gnb .lst_gnb .menu_link{display:block;position:relative;height:100%;padding:0 30px}
+.gnb .lst_gnb .menu_link:before{display:inline-block;height:100%;vertical-align:middle;content:''}
+.gnb .lst_gnb .menu_link .txt{display:inline-block;position:relative;margin-top:2px;font-size:20px;font-family:'NanumGothic';font-weight:bold;color:#fff;vertical-align:middle}
+.gnb .lst_gnb .menu_link:hover .txt:after,.gnb .lst_gnb .menu_item.is_selected .txt:after{display:inline-block;position:absolute;right:0;left:0;bottom:-6px;width:100%;height:3px;background-color:#fff;content:''}
+.gnb .side_link{position:absolute;top:50%;right:0;margin-top:-9px}
+.gnb .side_link .link_item{display:inline-block}
+.gnb .side_link .menu_link{margin-left:15px;font-size:16px;color:#f6913f}
+.gnb .sub_menu_wrap{display:none;position:absolute;right:0;left:0;z-index:20;padding-top:30px;text-align:left}
+.gnb .sub_menu_wrap .h_gnb{float:left;width:12.5%;max-width:180px}
+.gnb .sub_menu_wrap .h_gnb img{width:100%}
+.gnb .sub_menu_wrap .lst_sub{display:block}
+.gnb .sub_menu_wrap .sub_item{display:inline-block;width:188px;height:150px;padding:19px 20px 0;border-left:1px solid #ebeef2;box-sizing:border-box}
+.gnb .sub_menu_wrap .sub_item:first-of-type{margin-left:10px;border-left:0}
+.gnb .sub_menu_wrap .sub_menu_link{font-weight:bold;font-size:18px;color:#111}
+
+/* gnb_mobile */
+.gnb.is_m_show{display:none}
+.gnb.is_m_show .menu_select_wrap{text-align:left}
+.gnb.is_m_show .menu_select_wrap .menu_area{display:inline-block;position:relative;width:50%;height:100%;padding-right:50px;border-left:1px solid #dfe2e6;border-bottom:1px solid #dfe2e6;background-color:#fff;box-sizing:border-box}
+.gnb.is_m_show .menu_select_wrap .link_txt{display:block;overflow:hidden;padding-left:18px;font-size:15px;font-weight:bold;line-height:52px;color:#1a1a1a;text-align:left;white-space:nowrap;text-overflow:ellipsis}
+.gnb.is_m_show .menu_select_wrap .btn_menu_select{display:inline-block;overflow:hidden;position:absolute;top:50%;right:0;width:50px;height:50px;margin-top:-25px;line-height:999px}
+.gnb.is_m_show .menu_select_wrap .btn_menu_select:after{position:absolute;top:50%;right:20px;width:11px;height:7px;margin-top:-4px;background-position:-13px -18px;content:'메뉴 열기'}
+.gnb.is_m_show .menu_select_wrap .has_menu_open .btn_menu_select:after{background-position:0 -18px;content:'메뉴 접기'}
+.gnb.is_m_show .menu_select_wrap .menu_area:first-of-type .btn_menu_select{border-left:0}
+.gnb.is_m_show .lst_sub{display:none}
+.gnb.is_m_show .has_menu_open .lst_sub{display:block;position:absolute;top:52px;right:-1px;left:0;border:1px solid #dfe2e6;box-shadow:0 3px 7px 0 rgba(0,0,0,0.12)}
+.gnb.is_m_show .has_menu_open .lst_sub:last-of-type{right:0}
+.gnb.is_m_show .lst_sub .sub_item .btn_menu{display:block;padding-left:18px;background-color:#fff;font-size:14px;line-height:44px;color:#444}
+.gnb.is_m_show .lst_sub .sub_item .btn_menu:hover,.gnb .lst_sub .sub_item .btn_menu.is_selected{color:#ff730a}
+.gnb.is_m_show .menu_select_wrap .is_disabled .link_txt{color:#ccc}
+.gnb.is_m_show .menu_select_wrap .is_disabled .btn_menu_select:after{background-position:-13px -27px}
+.gnb.is_m_show .is_disabled .lst_sub{display:none}
+
+/* lnb */
+.lnb_wrap{position:relative;z-index:10;border-bottom:1px solid #dfe2e6;font-size:0}
+.lnb_wrap .lst_lnb .lnb_item{display:inline-block;margin-left:60px}
+.lnb_wrap .lst_lnb .lnb_item:first-of-type{margin-left:0}
+.lnb_wrap .lst_lnb .lnb_link{display:block}
+.lnb_wrap .lst_lnb .lnb_link .txt{display:inline-block;position:relative;font-size:17px;line-height:56px;color:#121212}
+.lnb_wrap .lst_lnb .lnb_item.is_selected .txt:after{display:inline-block;position:absolute;right:0;left:0;bottom:11px;height:3px;background-color:#ff730a;content:''}
+.lnb_wrap .lst_lnb .lnb_item.is_selected .txt{font-weight:bold;color:#ff730a}
+.lnb_wrap .depth2_wrap{display:none}
+.lnb_wrap .menu_tit_wrap .link_txt{display:block;padding:0 20px;font-size:16px;color:#111;line-height:39px;font-weight:bold}
+.lnb_wrap .menu_tit_wrap .btn_close{display:none}
+.lnb_wrap .depth2_wrap,.lnb_wrap .depth3{position:absolute;min-width:180px;border:1px solid #d4d4d4;background-color:#fff;box-shadow:0 3px 7px 0 rgba(0,0,0,0.12);box-sizing:border-box}
+.lnb_wrap .depth3{display:none;top:-1px;left:100%}
+.lnb_wrap .depth2 .depth2_item{position:relative;padding-right:40px}
+.lnb_wrap .depth2 .depth2_link,.lnb_wrap .depth3 .depth3_link{display:block;padding:0 20px;background-color:#fff;font-size:14px;line-height:40px;color:#444;white-space:nowrap}
+.lnb_wrap .depth2 .depth2_link{padding-right:0}
+.lnb_wrap .depth2 .btn_menu_open{position:absolute;top:50%;right:0;overflow:hidden;width:40px;height:40px;margin-top:-20px;line-height:999px}
+.lnb_wrap .depth2 .btn_menu_open:after{position:absolute;top:50%;right:14px;width:6px;height:10px;margin-top:-5px;margin-left:-3px;background-position:-36px -6px;content:''}
+.lnb_wrap .depth2_wrap.is_show,.lnb_wrap .depth3.is_show{display:block}
+.lnb_wrap .depth2_item.is_selected .depth2_link,.depth3_item .depth3_link:hover{background-color:#f7f7f7;font-weight:bold;color:#ff730a}
+.lnb_wrap .depth2_item.is_selected{background-color:#f7f7f7}
+.lnb_wrap .btn_total_menu{overflow:hidden;position:absolute;top:50%;right:-5px;width:28px;height:28px;margin-top:-14px;line-height:999px}
+.lnb_wrap .btn_total_menu:before{position:absolute;top:50%;left:50%;width:18px;height:4px;margin-top:-2px;margin-left:-9px;background-position:-36px 0;content:''}
+
+/* location */
+.location{height:40px;background-color:#f7f7f7}
+.location .location_txt{line-height:40px;font-size:12px;color:#1a1a1a}
+.location .location_txt .arrow{margin:0 3px;font-size:10px;color:#999}
+
+/* layer_total_menu */
+.layer_total_menu{display:none;position:absolute;right:0;left:0;border:1px solid #d4d4d4;border-top-color:#dfe2e6;background-color:#fff;font-size:0}
+.layer_total_menu.is_show{display:block}
+.layer_total_menu .scroll_wrap{display:block;overflow:hidden;overflow-y:auto;height:925px}
+.layer_total_menu .h_txt{display:block;height:72px;padding:0 32px;background-color:#f7f7f7;line-height:72px;font-size:28px;font-weight:normal;color:#111;box-sizing:border-box}
+.layer_total_menu .h_txt .link_txt{color:inherit}
+.layer_total_menu .menu_wrap{display:table;width:calc(100% - 30px);table-layout:fixed}
+.layer_total_menu .row{display:table-row}
+.layer_total_menu .menu_group{display:table-cell;position:relative;padding:39px 0 33px 31px;vertical-align:top}
+.layer_total_menu .menu_group:after{display:inline-block;position:absolute;right:1px;left:30px;bottom:0;height:1px;background-color:#e4e7eb;content:''}
+.layer_total_menu .menu_wrap .row:last-of-type .menu_group{padding-bottom:53px}
+.layer_total_menu .menu_wrap .row:last-of-type .menu_group:after{display:none}
+.layer_total_menu .h_depth2{margin-bottom:12px;font-weight:bold;font-size:16px;color:#111}
+.layer_total_menu .h_depth2 .link_txt{display:block;color:#111}
+.layer_total_menu .depth3{display:block;position:static;border:0;box-shadow:none}
+.layer_total_menu .depth3 .depth3_item{display:inline-block;width:50%}
+.layer_total_menu .depth3 .depth3_link{position:relative;padding:0;padding-left:7px;font-size:14px;line-height:30px;color:#444}
+.layer_total_menu .depth3 .depth3_link:before{display:inline-block;position:absolute;top:50%;left:0;width:2px;height:2px;border-radius:100%;background-color:#444;content:''}
+.layer_total_menu .depth3 .depth3_link:hover{background-color:transparent;color:#ff730a}
+.layer_total_menu .depth3 .depth3_link:hover:before{background-color:#ff730a}
+.btn_total_menu.btn_close{top:-29px;background-color:#fff}
+.btn_total_menu.btn_close:before{width:20px;height:20px;margin-top:-10px;margin-left:-10px;background-position:-56px 0}
+
+/* footer */
+footer{border-top:1px solid #e6e6e6;font-size:0}
+footer .inner{padding:33px 0 38px}
+footer .lst_company_info{width:460px}
+footer .lst_company_info .item_info{display:inline-block;margin-right:9px;font-size:12px;line-height:24px;color:#121212}
+footer .lst_sns{float:right;margin-top:7px}
+footer .lst_sns .item_sns{display:inline-block;margin-left:10px}
+footer .lst_sns .item_sns:first-of-type{margin-left:0}
+footer .lst_sns .ico_sns{width:34px;height:34px}
+footer .lst_sns .ico_facebook{background-position:0 -30px}
+footer .lst_sns .ico_blog{background-position:-36px -30px}
+footer .lst_sns .ico_youtube{background-position:-72px -30px}
+footer .lst_sns .ico_instagram{background-position:-108px -30px}
+footer .lst_sns .ico_pinterest{background-position:-144px -30px}
+footer .lst_sns .ico_google{background-position:-180px -30px}
+footer .copyright_txt{margin-top:10px;font-size:11px;font-family:'NotoSans',sans-serif;color:#a3a3a3}
+
+/* layer_aside_menu */
+.layer_aside_show .wrap{overflow:hidden;width:100%;height:100%}
+.layer_aside_menu{display:none;position:fixed;top:0;right:0;left:0;bottom:0;z-index:100;background-color:#102d55}
+.layer_aside_show .layer_aside_menu{display:block}
+.layer_aside_menu .inner{overflow-y:auto;position:absolute;top:0;right:0;left:0;bottom:0;max-width:none;padding:62px 0 54px}
+.layer_aside_menu .side_link{display:block;margin:0 auto;padding-top:1px;border:1px solid #244169;border-width:1px 0;font-size:0;text-align:center}
+.layer_aside_menu .side_link .link_item{display:inline-block;position:relative;padding:0 15px 0 17px}
+.layer_aside_menu .side_link .link_item:before{display:inline-block;position:absolute;top:50%;left:0;width:1px;height:12px;margin-top:-8px;background-color:#244169;content:''}
+.layer_aside_menu .side_link .link_item:first-of-type:before{display:none}
+.layer_aside_menu .side_link .menu_link{font-size:14px;line-height:51px;color:#ff8b33}
+.layer_aside_menu .lst_menu{margin-top:20px;text-align:center}
+.layer_aside_menu .lst_menu .menu_item.has_sub_lst > .menu_link .txt:after{position:absolute;top:50%;right:0;width:16px;height:16px;margin-top:-8px;background-position:-17px 0;content:''}
+.layer_aside_menu .lst_menu .menu_item.is_open > .menu_link .txt:after{background-position:-35px 0}
+.layer_aside_menu .lst_menu .menu_link{display:block}
+.layer_aside_menu .lst_menu .txt{display:block;position:relative;width:80%;margin:0 auto;font-size:19px;line-height:47px;color:#fff}
+.layer_aside_menu .lst_depth2{padding:20px 0 21px;background-color:#0b2546}
+.layer_aside_menu .lst_depth2 .menu_link{font-size:15px;line-height:29px}
+.layer_aside_menu .lst_depth2 .txt{font-size:15px;line-height:28px}
+.layer_aside_menu .lst_depth2 .menu_item.has_sub_lst .txt{display:inline-block;position:relative;min-width:115px;width:auto}
+.layer_aside_menu .lst_depth2 .menu_item.has_sub_lst > .menu_link .txt:after{position:absolute;top:50%;right:0;width:11px;height:11px;margin-top:-6px;background-position:-53px 0;content:''}
+.layer_aside_menu .lst_depth2 .menu_item.is_open > .menu_link .txt:after{background-position:-66px 0}
+.layer_aside_menu .lst_depth2,.layer_aside_menu .lst_depth3{display:none}
+.layer_aside_menu .lst_depth3 .menu_link{font-size:14px;color:#344f75}
+.layer_aside_menu .btn_close{overflow:hidden;position:absolute;top:0;right:0;width:62px;height:62px;line-height:999px}
+.layer_aside_menu .btn_close:before{position:absolute;top:20px;right:20px;width:21px;height:21px;background-size:365px auto!important;content:''}
+
+/* 셀렉트박스 공통 */
+.inp_select{padding:0 30px 0 10px;border:1px solid #d4d4d4;background:#fff url(../img/web/arr_select.png) no-repeat;background-position:calc(100% - 8px) calc(50% + 1px);font-family:'NotoSans',sans-serif;font-size:14px;color:#121212;box-sizing:border-box}
+.inp_select:disabled{background-image:url(../img/web/arr_select_disabled.png);color:#ccc}
+
+/* search_wrap */
+.search_wrap{border-bottom:1px solid #dadde0;font-size:0}
+.search_wrap .inner{padding:24px 0}
+.search_wrap .row{display:block;margin-top:10px;white-space:nowrap}
+.search_wrap .row:first-of-type{margin-top:0}
+.search_wrap .select_bx{display:inline-block;margin-left:10px;vertical-align:top}
+.search_wrap .row .select_bx:first-of-type{margin-left:0}
+.search_wrap .inp_select{width:120px;height:38px;line-height:36px}
+.search_wrap .is_title_select .inp_select{width:120px}
+.search_wrap .is_distance_select .inp_select{width:182px}
+.search_wrap .is_distance_select .is_long{width:585px}
+.search_wrap .is_competition_select .inp_select{width:374px}
+.search_wrap .gap_txt{display:inline-block;margin-left:10px;font-size:14px;line-height:38px;color:#23282e;vertical-align:top}
+.search_wrap .btn_view{display:inline-block;width:120px;height:38px;margin-left:10px;background-color:#000;font-size:14px;color:#fff;vertical-align:top}
+.search_wrap .btn_view:disabled{background-color:#ccc}
+
+/* sec_ranking_card */
+.sec_ranking_card{font-size:0}
+.sec_ranking_card .h_section{font-size:20px;color:#111}
+.sec_ranking_card .lst_ranking_card{margin-top:2px}
+.sec_ranking_card .item_card{display:inline-block;margin:16px 0 0 16px}
+.sec_ranking_card .item_card:nth-child(4n+1){margin-left:0}
+.sec_ranking_card .sub_title{font-size:14px;font-weight:bold;color:#111;letter-spacing:-0.04em}
+.sec_ranking_card .card_wrap{display:flex;flex-direction:column;position:relative;width:308px;height:197px;box-sizing:border-box}
+.sec_ranking_card .sub_title+.card_wrap{margin-top:13px}
+.sec_ranking_card .h_card{display:inline-block;position:relative;padding:12px 40px 6px 18px;border:1px solid #e4e7eb;border-bottom:0;font-size:14px;color:#111}
+.sec_ranking_card .h_card .link_txt:after{display:inline-block;width:6px;height:10px;margin:-2px 0 0 5px;background-position:-36px -18px;vertical-align:middle;content:''}
+.sec_ranking_card .card_desc{position:absolute;top:14px;right:18px}
+.sec_ranking_card .ico_question_mark{display:inline-block;width:14px;height:14px;border-radius:2px;background:#cfcfcf;font-family:'Helvetica';font-size:12px;color:#fff;text-align:center}
+.sec_ranking_card .tooltip{display:inline-block;display:none;position:absolute;top:33px;right:-21px;z-index:10;width:212px;padding:0 17px 7px 20px;background:url(../img/web/bg_tooltip.png) repeat-y;background-position:-214px 0;font-size:12px;line-height:18px;color:#fff;box-sizing:border-box}
+.sec_ranking_card .tooltip:before{display:inline-block;position:absolute;top:-16px;left:0;width:212px;height:16px;background:url(../img/web/bg_tooltip.png) no-repeat;content:''}
+.sec_ranking_card .tooltip:after{display:inline-block;position:absolute;left:0;bottom:-12px;width:212px;height:12px;background:url(../img/web/bg_tooltip.png) no-repeat;background-position:-428px 0;content:''}
+.sec_ranking_card .card_desc:hover .ico_question_mark{background-color:#333}
+.sec_ranking_card .card_desc:hover .tooltip{display:block}
+.sec_ranking_card .ranking_area{padding:15px 18px;border:1px solid #e4e7eb;border-width:0 1px 1px;font-size:0}
+.sec_ranking_card .ranking_area.ranking_1st_area:before{display:inline-block;height:100%;vertical-align:middle;content:''}
+.sec_ranking_card .ranking_area.ranking_1st_area .txt_area{display:inline-block;vertical-align:middle}
+.sec_ranking_card .ranking_area .ranking_number{margin-right:14px;font-weight:bold;font-size:14px;color:#1a1a1a;font-family:'NotoSans',sans-serif}
+.sec_ranking_card .ranking_area .player_name{font-size:14px;color:#121212}
+.sec_ranking_card .ranking_area .match_record{float:right;font-size:14px;color:#121212}
+.sec_ranking_card .ranking_area .player_photo_area img{width:100%}
+.sec_ranking_card .ranking_1st_area{flex:1;position:relative;padding:0 18px;border-top:0;box-sizing:border-box}
+.sec_ranking_card .ranking_1st_area .ranking_number{display:inline-block;height:18px;padding:0 10px;border-radius:18px;background-color:#ff730a;line-height:18px;font-size:13px;color:#fff;text-align:center}
+.sec_ranking_card .ranking_1st_area .player_name{display:block;overflow:hidden;width:137px;max-height:67px;margin-top:10px;font-weight:bold}
+.sec_ranking_card .ranking_1st_area .link_txt{font-size:20px;line-height:23px;color:#121212;letter-spacing:-.04em}
+.sec_ranking_card .ranking_1st_area .match_record{display:block;float:none;margin-top:6px;font-size:20px;color:#ff730a;font-weight:bold}
+.sec_ranking_card .ranking_1st_area .unit{font-size:14px}
+.sec_ranking_card .ranking_1st_area .player_photo_area{overflow:hidden;position:absolute;top:50%;right:18px;width:113px;height:113px;margin-top:-57px;border:1px solid #e4e7eb;border-radius:100%;background:url(../img/@tmp_player_empty.jpg);background-size:contain;box-sizing:border-box}
+.sec_ranking_card .row{display:block}
+.sec_ranking_card .row:after{display:block;clear:both;content:''}
+.sec_ranking_card .row .lst_ranking_card{display:block}
+.sec_ranking_card .chart_card{display:inline-block;position:relative;float:left;width:632px;height:410px;margin:16px 16px 0 0;border:1px solid #e4e7eb;box-sizing:border-box}
+.sec_ranking_card .chart_card .h_card{padding-left:14px;border:0}
+.sec_ranking_card .link_txt{position:relative;color:#111;font-weight:bold;line-height:18px}
+.sec_ranking_card .donut_chart{height:300px}
+.sec_ranking_card .donut_chart svg{width:632px;height:100%}
+.sec_ranking_card .donut_chart+.lst_state{display:block;max-width:470px;margin:0 auto}
+.sec_ranking_card .bar_chart svg{width:632px;height:348px}
+.sec_ranking_card .chart_card+.lst_ranking_card{margin-top:0}
+.sec_ranking_card .row .item_card{margin:16px 16px 0 0}
+.sec_ranking_card .row .item_card:nth-child(4n){margin-right:0}
+.sec_ranking_card .chart_card+.lst_ranking_card .item_card:last-of-type{margin-left:0}
+.sec_ranking_card .chart_card+.lst_ranking_card .item_card:nth-child(even),.sec_ranking_card .chart_card:nth-child(even){margin-right:0}
+
+/* lst_state */
+.lst_state{display:inline-block;margin:0 80px;font-size:0;text-align:center}
+.lst_state:after{display:block;clear:both;content:''}
+.lst_state .state_item{display:inline-block;margin-right:15px}
+.lst_state .state_item:last-of-type{margin-right:0}
+.lst_state .state_item .txt{display:inline-block;padding:5px 0 4px;line-height:13px;font-size:12px;color:#1a1a1a;vertical-align:middle}
+.lst_state .state_item:before{display:inline-block;width:11px;height:11px;margin-right:5px;vertical-align:middle;content:'';box-sizing:border-box}
+.lst_state .state_item .txt:after{display:inline-block;width:6px;height:8px;margin-left:5px;background-position:-44px -18px;vertical-align:middle;content:''}
+.lst_state .legend1:before{background-color:#4c6aff}
+.lst_state .legend2:before{background-color:#ff730a}
+.lst_state .legend3:before{background-color:#fce365}
+.lst_state .legend4:before{background-color:#e6ebf0}
+.lst_state .legend5:before{background-color:#adb9c4}
+.lst_state .legend6:before{background-color:#a6daff}
+.lst_state .legend7:before{background-color:#55b2fa}
+
+.bar_chart .lst_state{display:flex;flex-direction:column;position:absolute;top:29px;left:53px;height:300px;margin:0;text-align:left}
+.bar_chart .lst_state .state_item{flex:1}
+.bar_chart .lst_state .state_item:before{display:inline-block;width:0;height:100%;margin:0;vertical-align:middle;background:none;content:''}
+.bar_chart .lst_state .state_item .txt{display:inline-block;padding:0;vertical-align:middle;line-height:normal}
+
+/* tbl_recode */
+.tbl_recode{width:100%;border-collapse:collapse;table-layout:auto}
+.tbl_recode th,.tbl_recode td{padding:0 25px;border:1px solid #ebeef2;color:#121212;text-align:center;white-space:nowrap}
+.tbl_recode th{height:49px;background-color:#f7f7f7;font-size:13px;line-height:18px;color:#121212}
+.tbl_recode th.detail_title{height:39px}
+.tbl_recode td{height:40px;padding-top:11px;padding-bottom:10px;background-color:#fff;font-size:14px;box-sizing:border-box}
+.tbl_recode tr th:first-child,.tbl_recode tr td:first-child{border-left:0}
+.tbl_recode tr th:last-child,.tbl_recode tr td:last-child{border-right:0}
+.tbl_recode .ranking_txt{font-weight:bold}
+.tbl_recode .link_txt{display:block;text-align:center;color:inherit;font-weight:bold}
+.tbl_recode .sub_txt{display:block}
+
+/* chart_tooltip */
+#chart_tooltip{z-index:10;border:1px solid #e4e7eb;background-color:white;box-shadow:0 3px 7px 0 rgba(0,0,0,0.12)}
+#chart_tooltip .inner{padding:7px 15px 10px 30px}
+#chart_tooltip .state_txt{display:block;font-size:12px;color:#121212;font-weight:bold;line-height:18px}
+#chart_tooltip .ico_brush{position:absolute;top:11px;left:13px;width:11px;height:11px;display:inline-block;border:0}
+#chart_tooltip .sub_txt{font-size:12px;color:#121212;line-height:18px}
+
+/* 공식기록 */
+/* 공통 */
+.sec .btn_link{display:inline-block;position:absolute;top:20px;right:0;min-width:163px;padding:0 15px;background-color:#ff730a;font-size:13px;font-weight:bold;color:#fff;line-height:35px;text-align:center;box-sizing:border-box}
+.table_noti_txt{display:block;margin-top:14px;line-height:27px;font-size:12px;color:#999;text-align:right}
+.table_noti_txt:before{margin-right:2px;content:'*'}
+.table_noti_txt.type2{margin:-2px 0 17px;line-height:18px;text-align:left}
+
+/* 순위 랭킹 */
+.ranking_state{display:block;margin-top:6px}
+.ranking_state .ico_arr{display:none;width:12px;height:10px;margin-right:2px;line-height:999px;overflow:hidden}
+.ranking_state.is_up .ico_arr{display:inline-block;background-position:-78px 0}
+.ranking_state.is_up .ico_arr:before{content:'순위 상승'}
+.ranking_state.is_down .ico_arr{display:inline-block;background-position:-92px 0}
+.ranking_state.is_down .ico_arr:before{content:'순위 하락'}
+
+/* tbl_ranking */
+.tbl_ranking th,.tbl_ranking td{padding-left:15px;padding-right:15px}
+.tbl_ranking col{width:101px}
+.tbl_ranking col:nth-child(1){width:65px}
+.tbl_ranking col:nth-child(2){width:auto}
+.tbl_ranking .reranking_point{font-weight:bold}
+.tbl_ranking .except_point{background-color:#fff2e6}
+.tbl_ranking abbr{display:block;text-decoration:none}
+
+/* 포인트 타이틀 */
+.title_wrap{display:inline-block;position:relative;height:48px}
+.title_wrap:before{display:inline-block;height:100%;vertical-align:middle;content:''}
+.title_wrap .title_bx{display:inline-block}
+.title_wrap .sponsor_logo{display:inline-block;height:48px;margin-right:12px;vertical-align:middle}
+.title_wrap .sponsor_logo img{height:100%}
+.title_group{display:inline-block}
+.title_wrap .h_section{display:inline-block;font-size:20px;color:#111;vertical-align:middle}
+.title_wrap .title_desc{display:inline-block;position:relative;vertical-align:middle}
+.title_wrap .h_section+.title_desc{margin-left:4px}
+.title_wrap .ico_question_mark{display:inline-block;width:14px;height:14px;border-radius:2px;background:#cfcfcf;font-family:'Helvetica';font-size:12px;color:#fff;text-align:center;vertical-align:middle}
+.title_wrap .tooltip{display:inline-block;display:none;position:absolute;top:32px;left:-21px;z-index:10;width:284px;padding:1px 16px 11px 22px;background:url(../img/web/bg_tooltip2.png) repeat-y;background-position:-286px 0;font-size:12px;line-height:18px;color:#fff;box-sizing:border-box}
+.title_wrap .tooltip:before{display:inline-block;position:absolute;top:-14px;left:0;width:284px;height:14px;background:url(../img/web/bg_tooltip2.png) no-repeat;content:''}
+.title_wrap .tooltip:after{display:inline-block;position:absolute;left:0;bottom:-12px;width:284px;height:12px;background:url(../img/web/bg_tooltip2.png) no-repeat;background-position:-572px 0;content:''}
+.title_wrap .title_desc:hover .ico_question_mark{background-color:#333}
+.title_wrap .title_desc:hover .tooltip{display:block}
+.title_wrap .tooltip .desc_txt{display:block;position:relative;margin-top:4px;padding-left:6px}
+.title_wrap .tooltip .desc_txt:before{display:inline-block;position:absolute;top:8px;left:0;width:1px;height:1px;margin-right:4px;border-radius:100%;background-color:#fff;content:''}
+
+/* 시즌 선택 */
+.lst_season{display:inline-block;margin-top:-1px;margin-left:57px;vertical-align:middle;font-size:0}
+.lst_season .season_item{display:inline-block;position:relative;width:93px;height:34px;text-align:center}
+.lst_season .btn_season{position:absolute;top:0;right:0;left:0;border:1px solid #d4d4d4;border-right:0;font-size:14px;color:#d4d4d4;line-height:32px}
+.lst_season .season_item:last-child .btn_season{border-right:1px solid #dbdbdb}
+.lst_season .season_item.is_selected .btn_season{z-index:1;border:1px solid #ff730a;color:#ff730a}
+.lst_season .season_item.is_selected +.season_item .btn_season{border-left:0;}
+.lst_season .season_item:last-child .is_selected .btn_season{border-right:1px solid #ff730a}
+
+.datatype_select_wrap{float:right;margin-top:7px;font-size:0}
+.datatype_select_wrap .select_area{display:inline-block;vertical-align:middle}
+.datatype_select_wrap .lb_select{margin-right:11px;font-size:14px;font-weight:bold;vertical-align:middle}
+.datatype_select_wrap .league_type_select{display:inline-block;vertical-align:middle}
+.datatype_select_wrap .league_type_select .inp_select{width:154px;height:34px;line-height:34px}
+
+/* 모드 선택 */
+.lst_view_type{display:inline-block;margin-left:60px;vertical-align:middle;font-size:0}
+.lst_view_type:after{display:block;clear:both;content:''}
+.lst_view_type .type_item{display:inline-block;position:relative;width:34px;height:34px;margin-left:-1px}
+.lst_view_type .type_item:first-of-type{margin-left:0}
+.lst_view_type .btn_mode{display:inline-block;overflow:hidden;position:absolute;top:0;right:0;left:0;bottom:0;border:1px solid #d4d4d4;line-height:999px;box-sizing:border-box}
+.lst_view_type .btn_mode:before{position:absolute;top:50%;left:50%;width:16px;height:16px;margin-top:-8px;margin-left:-8px;content:''}
+.lst_view_type .btn_chart_type:before{background-position:-106px 0}
+.lst_view_type .is_selected .btn_chart_type:before{background-position:-124px 0}
+.lst_view_type .btn_table_type:before{background-position:-142px 0}
+.lst_view_type .is_selected .btn_table_type:before{background-position:-160px 0}
+.lst_view_type .type_item.is_selected{z-index:1}
+.lst_view_type .type_item.is_selected .btn_mode{border-color:#ff730a}
+.lst_view_type+.scroll_wrap{clear:both}
+
+/* 포인트 랭킹 1위 선수 정보 */
+.ranking_1st_profile{display:table;position:relative;width:100%;min-height:145px;padding-left:180px;border:1px solid #e4e7eb;font-size:0;box-sizing:border-box}
+.ranking_1st_profile .main_info_wrap{display:table-cell;padding:16px 0;vertical-align:middle}
+.ranking_1st_profile .txt_area{width:269px}
+.ranking_1st_profile .ranking_number{display:inline-block;padding:0 12px 0 9px;border-radius:18px;background-color:#ff730a;font-size:13px;font-weight:bold;line-height:18px;color:#fff;font-family:'NotoSans',sans-serif}
+.ranking_1st_profile .country{display:block;margin-top:14px}
+.ranking_1st_profile .country:before{margin-right:6px;border-radius:0;vertical-align:middle}
+.ranking_1st_profile .country .country_name{display:inline-block;font-size:14px;font-weight:bold;vertical-align:middle}
+.ranking_1st_profile .player_name{display:block;margin-top:12px;font-size:20px;font-weight:bold}
+.ranking_1st_profile .player_photo_area{display:inline-block;overflow:hidden;position:absolute;top:50%;left:40px;margin-top:-57px;width:113px;height:113px;border-radius:100%}
+.ranking_1st_profile .player_photo_area:before{position:absolute;top:0;right:0;left:0;bottom:0;z-index:1;border:1px solid #e4e7eb;border-radius:100%;content:''}
+.ranking_1st_profile .player_photo_area img{width:100%}
+.sub_info_wrap{display:table-cell;width:815px;padding:30px 0 29px 0;vertical-align:middle;box-sizing:border-box}
+.ranking_1st_profile .lst_sub_info{display:table;vertical-align:middle}
+.ranking_1st_profile .lst_sub_info .info_item{display:table-cell;position:relative;width:210px;padding:0 23px;vertical-align:top;box-sizing:border-box}
+.ranking_1st_profile .lst_sub_info .info_item:before{display:inline-block;position:absolute;top:2px;left:0;bottom:3px;width:1px;background-color:#e5e8eb;content:''}
+.ranking_1st_profile .lst_sub_info .info_item:first-of-type:before{display:none}
+.ranking_1st_profile .lst_sub_info .info_item:first-of-type{width:379px}
+.ranking_1st_profile .lst_sub_info .tit_txt{display:block;margin-bottom:8px;font-size:14px;color:#4c4c4c}
+.ranking_1st_profile .lst_sub_info .desc_txt{font-size:14px;color:#ff730a;letter-spacing:-0.04em}
+.ranking_1st_profile .lst_sub_info .point_txt{font-size:26px}
+
+/* 포인트_차트 테이블 */
+.tbl_chart{margin-top:38px}
+.tbl_chart col:nth-child(1){width:82px}
+.tbl_chart col:nth-child(2){width:388px}
+.tbl_chart col:nth-child(3){width:585px}
+.tbl_chart .link_txt{white-space:normal;word-break:break-word}
+.tbl_chart th{height:48px}
+.tbl_chart td{height:49px;padding:0 18px}
+.tbl_chart .gage_wrap{text-align:left}
+.gage_wrap:before{display:inline-block;height:100%;vertical-align:middle;content:''}
+.gage_wrap .gage_area{display:inline-block;position:relative;width:420px;height:8px;margin-right:19px;background-color:#f7f7f7;vertical-align:middle}
+.gage_wrap .gage_area .gage_bar{display:inline-block;position:absolute;top:0;left:0;bottom:0;background-color:#c0c2c4;vertical-align:middle}
+.gage_wrap .point_txt{display:inline-block;vertical-align:middle;color:#414141}
+.is_ranking_1st .gage_wrap .gage_bar{background-color:#ff730a}
+.is_ranking_1st .gage_wrap .point_txt{color:#ff8f3b}
+
+.tbl_point{margin-top:16px}
+
+/* 대회 기록 */
+.tbl_history_recode{min-width:100%;width:auto;table-layout:fixed}
+.tbl_history_recode th{padding-left:5px;padding-right:5px;box-sizing:border-box}
+.tbl_history_recode td{min-width:80px;padding-left:15px;padding-right:15px}
+.tbl_history_recode tr td:nth-child(1){padding-left:15px;padding-right:50px}
+.tbl_history_recode .link_txt{text-align:left}
+
+/* 포인트 페이지 */
+.point_recode_sec .inner{padding-top:40px}
+.ranking_1st_profile{margin-top:16px}
+
+@media all and (max-width:1450px){
+	.wrap{padding-top:161px}
+	/* header */
+	header{height:auto}
+	header.has_gnb_show:after{top:150px}
+	header .inner,.inner{max-width:1024px}
+	header .inner{padding-top:60px}
+	header .top_wrap{height:auto}
+	header .logo{top:25px;left:50%;margin-left:-74px;margin-top:0}
+
+	/* gnb */
+	.gnb{margin-left:0;text-align:center}
+	.gnb .lst_gnb{height:100px;margin:0 0 1px;vertical-align:top}
+	.gnb .lst_gnb .menu_item{height:100%}
+	.gnb .lst_gnb .menu_link{padding:0 19px}
+	.gnb .lst_gnb .menu_link .txt{margin-top:0;font-size:16px;font-weight:normal}
+	.gnb .side_link{display:inline-block;position:relative;top:auto;margin:0}
+	.gnb .side_link .menu_link{margin-left:38px;line-height:100px}
+	.gnb .side_link .link_item:first-of-type .menu_link{margin-left:19px}
+	.gnb .sub_menu_wrap{padding-top:17px}
+	.gnb .sub_menu_wrap .sub_item{width:14.2%}
+
+	/* layer_total_menu */
+	.layer_total_menu .depth3 .depth3_item{width:100%}
+
+	/* sec_ranking_card */
+	.sec_ranking_card .item_card:nth-child(4n+1){margin-left:16px}
+	.sec_ranking_card .item_card:nth-child(3n+1){margin-left:0}
+	
+	/* 포인트 랭킹 1위 선수 정보 */
+	.ranking_1st_profile .txt_area{width:252px}
+	.ranking_1st_profile .sub_info_wrap{width:589px}
+	.ranking_1st_profile .lst_sub_info .info_item{width:187px}
+	.ranking_1st_profile .lst_sub_info .info_item:first-of-type{width:215px}
+}
+
+@media all and (max-width:1024px){
+	.sp,.btn_menu_select:after,.btn_total_menu:before,.lnb_wrap .depth2 .btn_menu_open:after,.layer_aside_menu .btn_close:before,.layer_aside_menu .menu_item.has_sub_lst .txt:after,.lst_state .state_item .txt:after,.btn_close:before,.menu_tit_wrap .link_txt:after{display:inline-block;overflow:hidden;background-image:url(../img/web/sp_web_m.png);background-size:250px auto;line-height:999px}
+	.is_pc_show{display:none}
+	.is_m_show{display:block}
+
+	.wrap{padding-top:63px}
+	
+	/* header */
+	header .top_wrap{height:63px}
+	header .top_wrap:before{display:inline-block;height:100%;vertical-align:middle;content:''}
+	header .inner{height:100%;padding-top:0;text-align:center}
+	header.has_gnb_show:after{display:none}
+	header .logo{display:inline-block;position:static;margin:0;vertical-align:middle}
+	header .btn_menu_layer{display:inline-block}
+
+	/* gnb */
+	.gnb.is_m_show{display:block;position:relative;z-index:11;font-size:0}
+
+	/* lnb_wrap */
+	.lnb_wrap{z-index:10;font-size:0}
+	.lnb_wrap .inner{padding:0 45px 0 0}
+	.lnb_wrap .scroll_wrap{display:block;overflow:hidden;overflow-x:auto;height:44px;padding:0 20px}
+	.lnb_wrap .lst_lnb{padding:0;white-space:nowrap}
+	.lnb_wrap .lst_lnb .lnb_item{margin:0 10px 0 15px}
+	.lnb_wrap .lst_lnb .lnb_item:first-of-type{margin-left:0}
+	.lnb_wrap .lst_lnb .lnb_link .txt{line-height:44px;font-size:15px}
+	.lnb_wrap .lst_lnb .lnb_item.is_selected .txt:after{bottom:8px;height:2px}
+	.lnb_wrap .menu_tit_wrap{display:block;position:relative;border-bottom:1px solid #e4e6eb}
+	.lnb_wrap .menu_tit_wrap .link_txt{display:inline-block;padding-left:0;line-height:51px;font-size:15px;color:#121212;font-weight:bold}
+	.lnb_wrap .menu_tit_wrap .link_txt:after{display:inline-block;width:7px;height:12px;margin-left:7px;background-position:-79px -19px;vertical-align:middle;content:''}
+	.lnb_wrap .depth2_wrap .btn_close{overflow:hidden;position:absolute;top:50%;right:-15px;width:44px;height:44px;margin-top:-22px;line-height:999px}
+	.lnb_wrap .depth2_wrap .btn_close:before{display:inline-block;position:absolute;top:13px;left:13px;width:17px;height:17px;background-position:-98px 0;content:''}
+	.lnb_wrap .depth2_wrap{right:0;left:0;padding:0 20px 8px;border-color:#dfe2e6;border-width:1px 0;background-color:#f7f7f7}
+	.lnb_wrap .depth2 .depth2_link{padding:0;background-color:transparent;line-height:45px}
+	.lnb_wrap .depth2 .btn_menu_open{top:3px;right:-15px;margin-top:0}
+	.lnb_wrap .depth2 .btn_menu_open:after{top:50%;left:50%;width:11px;height:11px;margin:-6px 0 0 -5px;background-position:-53px -13px}
+	.lnb_wrap .depth2 .depth2_item.is_selected .btn_menu_open:after{background-position:-66px -13px}
+	.lnb_wrap .depth2{margin-top:8px}
+	.lnb_wrap .depth3 .depth3_item.is_selected .depth3_link:before{display:inline-block;width:2px;height:2px;margin-right:5px;border-radius:100%;background-color:#666;vertical-align:middle;content:''}
+	.lnb_wrap .depth3{position:static;margin-top:4px;padding-bottom:4px;border:0;background-color:transparent;box-shadow:none}
+	.lnb_wrap .depth3 .depth3_link:before{display:inline-block;width:2px;height:2px;margin:-1px 5px 0 0;border-radius:100%;background-color:#666;vertical-align:middle;content:''}
+	.lnb_wrap .depth3 .depth3_link{background-color:transparent;font-size:13px;line-height:29px;color:#666}
+	.lnb_wrap .btn_total_menu{right:0;width:45px;height:44px;margin-top:-22px;border-left:1px solid #dfe2e6}
+	.lnb_wrap .btn_total_menu:before{width:16px;height:4px;margin-top:-2px;margin-left:-8px;background-position:-26px -18px}
+	.lnb_wrap .btn_total_menu.btn_close:before{width:17px;height:17px;margin-top:-8px;margin-left:-8px;background-position:-79px 0}
+	
+	/* 셀렉트박스 공통 */
+	.search_wrap .inp_select{background-image:url(../img/web/arr_select_m.png);background-position:calc(100% - 10px) 50%;background-size:11px auto}
+	.search_wrap .inp_select:disabled{background-image:url(../img/web/arr_select_disabled_m.png)}
+
+	/* search_wrap */
+	.search_wrap .inner{padding:16px 20px}
+	.search_wrap .row{margin-top:7px;white-space:normal}
+	.search_wrap .inp_select{height:33px;line-height:33px}
+	.search_wrap .select_bx{margin-top:7px;margin-left:0;margin-right:10px}
+	.search_wrap .select_bx:first-of-type,.search_wrap .select_bx:last-of-type{margin-right:0}
+	.search_wrap .select_bx:first-of-type{margin-top:0}
+	.search_wrap .is_distance_select{width:calc(50% - 5px)}
+	.search_wrap .is_distance_select .inp_select{width:100%}
+	.search_wrap .is_competition_select{width:calc(50% - 10px);margin-right:0}
+	.search_wrap .is_competition_select .inp_select{width:100%}
+	.search_wrap .gap_txt{display:inline-block;width:20px;margin:7px 0 0 0;line-height:33px;text-align:center}
+	.search_wrap .select_bx.is_title_select{display:block}
+	.search_wrap .is_title_select .inp_select{display:block;width:100%}
+	.search_wrap .row:first-of-type .is_title_select{display:inline-block;width:calc(50% - 5px);margin-right:10px}
+	.search_wrap .row:first-of-type .select_bx:nth-child(3){margin-top:0;margin-right:0}
+	.search_wrap .row:first-of-type .select_bx:nth-child(4){display:block;width:100%;margin-right:10px}
+	.search_wrap .btn_view{display:block;width:100%;margin-top:10px;margin-left:0}
+	
+	/* location */
+	.location{display:none}
+	
+	/* common */
+	.sec .inner{padding-left:20px;padding-right:20px}
+	.sec:last-of-type .inner{padding-bottom:80px}
+	.sec .scroll_wrap{width:auto;margin:0 -20px;padding:0 20px}
+
+	/* layer_total_menu */
+	.layer_total_menu{top:0;padding-top:45px;border:0}
+	.layer_total_menu .scroll_wrap{height:auto;padding:0;border-top:1px solid #dfe2e6}
+	.layer_total_menu .h_txt{height:64px;padding:0 19px;font-size:24px;line-height:64px}
+	.menu_wrap{display:block;width:100%}
+	.row{display:block}
+	.layer_total_menu .menu_group{display:block;padding:28px 20px 0}
+	.layer_total_menu .menu_group:after{display:none}
+	.layer_total_menu .h_depth2{margin-bottom:0;font-size:14px;line-height:36px}
+	.layer_total_menu .depth3{margin-top:0;padding-bottom:0;border-bottom:0}
+	.layer_total_menu .depth3 .depth3_link{line-height:28px;white-space:normal}
+	.btn_total_menu.btn_close{top:22px;border-left:0}
+
+	/* sec_ranking_card */
+	.sec_ranking_card .inner{padding:49px 0;margin-left:20px;margin-right:20px}
+	.sec_ranking_card .h_section{font-size:18px}
+	.sec_ranking_card .item_card:nth-child(3n+1){margin-left:15px}
+	.sec_ranking_card .lst_ranking_card .item_card:nth-child(3n+1){margin-left:0}
+	.sec_ranking_card .row .chart_card+.lst_ranking_card .item_card:nth-child(even){margin-right:16px}
+	.sec_ranking_card .row .item_card:nth-child(4n+1){margin-left:auto}
+
+	/* lst_state */
+	.lst_state .state_item .txt:after{width:6px;height:10px;margin-left:2px;background-position:-44px -18px}
+
+	.tbl_chart .gage_wrap{position:relative;padding:0 10px;font-size:0}
+	.tbl_chart .gage_area{width:100%;min-width:95px;height:20px}
+	.tbl_chart .point_txt{position:absolute;top:50%;left:17px;margin-top:-11px;line-height:20px;font-size:12px}
+	.tbl_chart tbody tr:first-of-type .point_txt{color:#fff}
+
+	/* footer */
+	footer{border-top-color:#ebeef2;text-align:center}
+	footer .inner{padding:48px 0}
+	footer .lst_company_info{width:auto;margin-top:54px}
+	footer .lst_company_info .item_info{display:block;margin-right:0;font-size:14px;line-height:2;color:#000}
+	footer .lst_sns{display:inline-block;float:none;margin:0 auto}
+	footer .copyright_txt{width:250px;margin:23px auto 0;line-height:20px;font-size:14px;line-height:2}
+
+}
+
+@media all and (max-width:930px){
+	/* 포인트 랭킹 1위 선수 정보 */
+	.ranking_1st_profile{display:block;margin-top:15px;padding:0}
+	.ranking_1st_profile .main_info_wrap{display:table;position:relative;width:100%;padding:16px 15px 13px;box-sizing:border-box}
+	.ranking_1st_profile .txt_area{display:table-cell;width:100%;vertical-align:middle}
+	.ranking_1st_profile .country{margin-top:10px}
+	.ranking_1st_profile .country .country_name{font-size:12px}
+	.ranking_1st_profile .player_name{font-size:19px;line-height:22px}
+	.photo_wrap{display:table-cell;padding-left:32px;vertical-align:middle}
+	.ranking_1st_profile .player_photo_area{position:relative;top:auto;left:auto;width:108px;height:108px;margin-top:auto}
+	.ranking_1st_profile .sub_info_wrap{display:table;width:100%;padding:15px 0;border-top:1px solid #edeff2;table-layout:fixed}
+	.ranking_1st_profile .lst_sub_info .info_item{width:33.33%;padding:0 13px}
+	.ranking_1st_profile .lst_sub_info .info_item:first-of-type{width:auto;padding:0 14px}
+}
+@media all and (max-width:632px){
+	/* 공통 */
+	.sec .btn_link{top:16px;right:auto}
+	.sec .btn_link+.h_section{margin-top:51px}
+	.sec .h_section+.row{margin-top:15px}
+	
+	/* 테이블 공통 */
+	.tbl_recode .sub_txt{font-size:10px;line-height:15px}
+	.tbl_recode .link_txt{display:block;line-height:18px;text-align:left}
+	
+	/* sec_ranking_card */
+	.sec_ranking_card .item_card{display:block;margin:8px 0 0!important}
+	.sec_ranking_card .sub_title{margin-top:17px}
+	.sec_ranking_card .sub_title+.card_wrap{margin-top:12px}
+	.sec_ranking_card .card_wrap{width:100%}
+	.sec_ranking_card .h_card{padding-bottom:0;padding-left:15px;letter-spacing:-0.04em}
+	.sec_ranking_card .chart_card{float:none;width:100%;height:auto;padding-bottom:12px}
+	.sec_ranking_card .ranking_1st_area{height:150px;padding:0 15px}
+	.sec_ranking_card .ranking_1st_area .txt_area{margin-top:0}
+	.sec_ranking_card .ranking_1st_area .player_name{width:128px}
+	.sec_ranking_card .ranking_1st_area .match_record{font-size:20px}
+	.sec_ranking_card .ranking_1st_area .player_photo_area{right:15px;width:108px;height:108px;margin-top:-54px}
+	.sec_ranking_card .donut_chart{height:222px}
+	.sec_ranking_card .chart_wrap svg{width:100%}
+	.sec_ranking_card .chart_card+.lst_ranking_card{margin-top:8px}
+
+	.lst_state{margin-left:15px;margin-right:15px}
+	.lst_state .state_item:before{width:9px;height:9px}
+	.lst_state .state_item .txt{padding:6px 0;font-size:11px}
+
+	.donut_chart .chart_wrap text{font-size:11px!important}
+	.bar_chart .lst_state{top:28px}
+	.sec_ranking_card .card_desc{top:12px;right:16px}
+	.sec_ranking_card .ico_question_mark{width:16px;height:16px;border-radius:0;line-height:16px}
+	.sec_ranking_card .tooltip{right:-17px;width:264px;padding-top:6px;padding-bottom:11px;background-image:url(../img/web/bg_tooltip_m.png);background-position:-266px 0;background-size:auto 13px}
+	.sec_ranking_card .tooltip:before{top:-13px;width:264px;height:13px;background-image:url(../img/web/bg_tooltip_m.png);background-position:0 0;background-size:auto 13px}
+	.sec_ranking_card .tooltip:after{bottom:-8px;width:264px;height:8px;background-image:url(../img/web/bg_tooltip_m.png);background-position:-532px 0;background-size:auto 13px}
+
+	/* chart_tooltip */
+	#chart_tooltip{position:absolute;left:50%!important;top:50%!important;margin-top:-30px;margin-left:-128px;width:257px}
+  #chart_tooltip .inner{border:0;margin:0;padding:12px 34px 13px 32px}
+  #chart_tooltip .ico_brush{top:17px;left:17px}
+  #chart_tooltip .btn_tooltip_close{display:inline-block;overflow:hidden;position:absolute;top:0;right:0;width:34px;height:35px;background:url(../img/ico_tooltip_close.png) 50% no-repeat;background-size:12px 13px;line-height:999px}
+
+	/* 포인트 페이지 */
+	.point_recode_sec .inner{padding-top:12px}
+	.title_wrap{display:table;width:100%;height:auto}
+	.title_wrap:before{display:none}
+	.title_wrap .sponsor_logo{display:table-cell;height:36px;margin-right:0;padding-right:11px;vertical-align:middle}
+	.title_group{display:table-cell;position:relative;width:100%;vertical-align:middle}
+	.title_wrap .title_bx{display:table;position:relative;width:100%;padding-right:40px;vertical-align:middle;box-sizing:border-box}
+	.title_wrap .h_section{display:block;line-height:23px;font-size:18px}
+	.title_wrap .title_desc{position:absolute;top:3px;right:0;margin-left:0}
+	.title_wrap .ico_question_mark{width:16px;height:16px;line-height:16px}
+	.title_wrap .card_desc{top:12px;right:16px}
+	.title_wrap .ico_question_mark{width:16px;height:16px;border-radius:0;line-height:16px}
+	.title_wrap .tooltip{left:auto;right:-17px;width:264px;padding:6px 20px 11px;background-image:url(../img/web/bg_tooltip_m.png);background-position:-266px 0;background-size:auto 13px}
+	.title_wrap .tooltip:before{top:-13px;width:264px;height:13px;background-image:url(../img/web/bg_tooltip_m.png);background-position:0 0;background-size:auto 13px}
+	.title_wrap .tooltip:after{bottom:-8px;width:264px;height:8px;background-image:url(../img/web/bg_tooltip_m.png);background-position:-532px 0;background-size:auto 13px}
+	.table_noti_txt{margin-top:42px;font-size:11px;text-align:left}
+	.table_noti_txt.type2{margin-top:-5px;margin-bottom:7px}
+
+	/* 시즌 선택 */
+	.lst_season{display:table;width:100%;table-layout:fixed;margin-left:0;margin-top:15px}
+	.lst_season .season_item{display:table-cell;height:31px}
+	.lst_season .btn_season{width:100%;line-height:29px}
+
+	.datatype_select_wrap{float:none;margin-top:16px;font-size:0}
+	.datatype_select_wrap .select_area{display:block}
+	.datatype_select_wrap .lb_select{display:none}
+	.datatype_select_wrap .league_type_select{display:block}
+	.datatype_select_wrap .league_type_select .inp_select{width:100%;height:31px;line-height:31px}
+
+	/* 모드 선택 */
+	.lst_view_type{display:block;float:none;margin:16px 0 0}
+	.lst_view_type .type_item{width:50%;height:32px}
+	.lst_view_type .btn_mode{line-height:30px;font-size:12px;font-weight:bold;color:#999;text-align:center}
+	.lst_view_type .type_item.is_selected .btn_mode{color:#ff730a}
+	.lst_view_type .btn_mode:before{display:inline-block;position:static;margin:0;margin-right:7px;vertical-align:middle}
+	.lst_view_type .btn_mode:after{display:inline-block;height:100%;vertical-align:middle;content:''}
+	.lst_view_type+.title_wrap{margin-top:42px}
+
+	.ranking_1st_profile{margin-top:17px}
+	.ranking_1st_profile .lst_sub_info{display:table-row}
+	.ranking_1st_profile .lst_sub_info .tit_txt{font-size:11px}
+	.ranking_1st_profile .lst_sub_info .desc_txt{font-size:11px}
+	.ranking_1st_profile .lst_sub_info .point_txt{font-size:13px}
+	
+	/* tbl_chart */
+	.tbl_chart{margin-top:20px}
+	.tbl_chart th{padding:0 5px}
+	.tbl_chart td{padding:0 9px}
+	.tbl_chart col:nth-child(1){width:36px}
+	.tbl_chart col:nth-child(3){min-width:105px}
+	.tbl_chart col:nth-child(4){min-width:92px}
+	.tbl_chart tr td:nth-child(2){padding:15px 10px 17px}
+	.tbl_chart .link_txt{min-width:82px}
+	
+	/* tbl_ranking */
+	.tbl_ranking td{padding:14px 10px 12px}
+	.tbl_ranking col:nth-child(1){width:36px}
+
+	/* 순위 랭킹 */
+	.ranking_state{width:auto;margin-top:7px}
+	
+	/* 포인트_테이블 */
+	.tbl_point{margin-top:19px}
+	.tbl_point th,.tbl_point td{padding-left:10px;padding-right:10px}
+	.tbl_point td{height:45px}
+	.tbl_point .link_txt{white-space:normal;word-break:break-word}
+	.tbl_point col:nth-child(2){width:212px}
+
+	/* 대회 기록 */
+	.tbl_history_recode col:nth-child(1){width:140px}
+	.tbl_history_recode tr td:nth-child(1){padding-left:0;padding-right:15px;white-space:normal}
+}
+
+@media screen and (max-width: 930px) and (min-width: 632px){
+	.point_recode_sec .inner{padding-top:42px}
+	.lst_season{margin-left:16px}
+	.lst_season .season_item{width:64px}
+	.datatype_select_wrap .league_type_select .inp_select{width:114px}
+	.lst_view_type{margin-left:20px}
+}
+
+@media all and (max-width:320px){
+	.ranking_1st_profile .lst_sub_info .point_txt{font-size:11px}
+}

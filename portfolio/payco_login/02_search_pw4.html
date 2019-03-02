@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<title>비밀번호 찾기 :: PAYCO 회원</title>
+<link rel="stylesheet" type="text/css" href="css/neid.css">
+<!-- for ie script -->
+<script type="text/javascript" src="js/html5.js"></script>
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+    <!-- header -->
+    <?php include 'inc/inc_header.html';?>
+    <!-- //header -->
+
+	<div id="container">
+		<div class="content">
+			<div class="tit_area">
+				<h2 class="h_tit">본인인증이 완료되었습니다.</h2>
+				<p class="sub_txt">새로운 비밀번호를 입력해 주세요.</p>
+			</div>
+			
+			<div class="info_bx">
+				<dl class="info_inner">
+				<dt class="info_tit">아이디</dt>
+				<dd class="info_txt">payco@nhnent.com</dd>
+				</dl>
+			</div>
+
+			<span class="inp_bx">
+				<span class="inp_txt">
+					<span class="inp_placeholder">신규 비밀번호</span>
+					<input type="password" class="inp" title="신규 비밀번호">
+          <button type="button" class="btn_del"><span class="ico_del">입력한 내용 지우기</span></button>
+				</span>
+        <p class="error_txt">잘못 입력하였습니다.</p>
+			</span>
+
+			<span class="inp_bx">
+				<span class="inp_txt">
+					<span class="inp_placeholder">신규 비밀번호 재입력</span>
+					<input type="password" class="inp" title="신규 비밀번호 재입력">
+          <button type="button" class="btn_del"><span class="ico_del">입력한 내용 지우기</span></button>
+				</span>
+        <p class="error_txt">잘못 입력하였습니다.</p>
+			</span>
+	   
+			<div class="checkbox_area">
+				<span class="inp_checkbox inp_bold is_checked">
+					<input type="checkbox" id="id_logout" class="inp_chk">
+					<label for="id_logout" class="inp_label"><span class="ico_chk"></span>모든 서비스에서 로그아웃합니다.</label>
+				</span>
+			</div>
+
+			<div class="btn_area">
+				<button type="button" class="btn btn_full btn_point">확인</button>
+			</div>
+
+		</div>
+	</div>
+</div>
+<!-- 마크업 확인용입니다. -->
+<style>
+	#case_view,#case_view2{display:none;position:relative;width:100%;z-index:1000;padding:5px;background:#000;opacity:0.7}
+	#case_view2{display:inline-block;position:fixed;bottom:0;left:0;width:auto}
+	.btn_opt{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+	.btn_m-view{background:#22002e}
+</style>
+<div id="case_view2">
+	<a href="#" class="btn_opt btn_m-view">모바일 view</a>
+</div>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script>    
+$(function(){
+	$('#case_view2 .btn_m-view').click(function(e){
+		e.preventDefault();
+		$('body').toggleClass('m');		
+	});
+});
+</script>
+<!-- //마크업 확인용입니다. -->
+</body>
+</html>

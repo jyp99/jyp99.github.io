@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="all">
+<meta name="format-detection" content="telephone=no">
+<title>공지사항 :: 한게임</title>
+<link rel="stylesheet" type="text/css" href="css/m_main.css">
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul class="skip">
+<li><a href="#header" onclick="document.getElementById('header').tabIndex=-1;document.getElementById('header').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+
+<div id="wrap" class="wrap">
+	<!--[D] HEADER -->
+	<?php include 'inc/header.html';?>
+	<!--//[D] HEADER -->
+
+	<!-- [D] CONTENTS -->
+	<div id="content" class="content">
+		<section class="sub_sec sec_notice">
+			<div class="sub_tit_wrap">
+				<h2 class="h_txt"><a href="01_notice_list.html" class="link_txt">공지사항 · 한게임 공통</a></h2>
+			</div>
+			<div class="view_post is_new"><!-- [D] 새 게시물인 경우 view_post에  is_new 클래스 추가 -->
+				<div class="tit_wrap">
+					<span class="post_tit">
+						<span class="tag">[안내]</span><em class="tit_txt">내정보 지킴이 캠페인</em>
+					</span>
+					<dl class="post_data">
+					<dt class="data_tit">작성일</dt>
+					<dd class="data_txt">2017-09-19</dd>
+					<dt class="data_tit">조회</dt>
+					<dd class="data_txt">324,345</dd>
+					</dl>
+				</div>
+				<div class="cnt_wrap">
+					<div class="cnt_txt"><p>난 개인정보 척척박사 지킬 스마트폰 앱 접근권한을 개인정 알아보고 난 개인정보 선택적 접근권한을 관리하자</p></div>
+					<div class="img_wrap">
+						<img src="img/@tmp_noti_cnt.jpg" alt="">
+					</div>
+				</div>
+				<div class="paging_wrap">
+					<a href="#" class="btn btn_prev">
+						<span class="nav_txt">이전</span>
+						<span class="post_item is_new"><!-- [D] 새 게시물인 경우 post_item에 is_new 클래스 추가 -->
+							<span class="tag">[안내]</span>
+							<em class="tit_txt">6월 1일(월) 개인정보처리방침 변경</em>
+						</span>
+					</a>
+					<a href="#" class="btn btn_next">
+						<span class="nav_txt">다음</span>
+						<span class="post_item">
+							<span class="tag">[안내]</span>
+							<em class="tit_txt">한코인 충전 결제수단 - 계좌이체 결제 종료 말줄임 테스트 용 텍스트</em>
+						</span>
+					</a>
+					<a href="#" class="btn btn_list">목록</a>
+				</div>
+			</div>
+		</section>
+		<a href="#wrap" class="btn_top"><img src="img/btn_go_top.png" alt="맨 위로"></a><!-- [D]노출 필요시 btn_top에 is_show 클래스 추가 -->
+	</div>
+	<!-- //[D] CONTENTS -->
+	
+	<!--[D] FOOTER -->
+	<?php include 'inc/footer.html';?>
+	<!--//[D] FOOTER -->
+</div>
+
+<!-- Javascript Area -->
+<script src="js/libs/jquery-1.12.4.min.js"></script>
+
+<!-- 마크업 확인용입니다. -->
+<style>
+.case_view{display:inline-block;position:fixed;bottom:0;left:0;z-index:1000;width:auto;padding:5px;background:#000;opacity:0.7}
+.case_view .btn{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+</style>
+<div class="case_view case_view1">
+	<a href="#" class="btn" onclick="$('body').toggleClass('is_gnb_show');return false;">GNB 열기/닫기</a>
+	<a href="#" class="btn" onclick="$('.lst_menu_other:eq(0)').hide();$('.lst_menu_other:eq(1),.member_data_wrap').show();$('footer .lst_func:eq(1)').show();$('footer .lst_func:eq(0)').hide();return false;">로그인 후</a>
+	<a href="#" class="btn" onclick="$('body').toggleClass('is_topbanner_close');return false;">top 배너 닫기</a>
+	<a href="#" class="btn" onclick="$('.btn_top').toggleClass('is_show');return false;">위로가기 노출 제어</a>
+	<a href="#" class="btn" onclick="$('.case_view1').hide();$('.case_view2').show();return false;">케이스뷰 닫기</a>
+</div>
+<div class="case_view case_view2" style="display:none">
+	<a href="#" class="btn" onclick="$('.case_view1').show(),$('.case_view2').hide();return false;">케이스뷰 열기</a>
+</div>
+<script src="js/case_view.js"></script>
+<!-- //마크업 확인용입니다. --> 
+</body>
+</html>

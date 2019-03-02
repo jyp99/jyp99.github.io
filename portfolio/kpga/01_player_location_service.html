@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="all">
+<title>KPGA :: STATS :: 선수 위치 찾기 서비스 - 코리안투어 OOOO 대회</title>
+<meta property="og:site_name" content="KPGA STATS" />
+<meta property="og:title" content="KPGA :: STATS :: 선수 위치 찾기 서비스 - 코리안투어 OOOO 대회" />
+<meta property="og:type" content="website" />
+<meta name="keyword" content="KPGA, (사)한국프로골프협회, 사단법인한국프로골프협회, 한국프로골프협회, 골프, 남자골프, 코리안투어, 챔피언스투어, 챌린지투어, 프론티어투어" />
+<meta name="decription" content="코리안투어 OOOO 대회의 선수 위치 찾기 서비스에서 응원하는 선수와 경기 결과를 실시간으로 확인하세요!" />
+<meta property="og:description" content="코리안투어 OOOO 대회의 선수 위치 찾기 서비스에서 응원하는 선수와 경기 결과를 실시간으로 확인하세요!" />
+<link rel="shortcut icon" href="img/icon/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="img/icon/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/icon/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="152x152" href="img/icon/favicon-152x152.png">
+<meta property="og:image" content="img/icon/favicon-350x350.jpg" /> 
+<link rel="stylesheet" type="text/css" href="css/kpga.css">
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul class="skip">
+<li><a href="#header" onclick="document.getElementById('header').tabIndex=-1;document.getElementById('header').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+
+<div class="wrap is_no_scroll"><!-- [D]지도 페이지에서는 wrap에 is_no_scroll 클래스 추가 -->
+	<!--[D] HEADER -->
+	<header>
+		<h1 class="logo"><a href="#" class="link_kpga">KPGA</a> <a href="#" class="link_stats">STATS</a></h1>
+		<h2 class="h_main"><a href="#" class="link_txt">선수 위치 찾기 서비스</a></h2>
+		<a href="#" class="link_live_score">LIVE SCORE</a>
+	</header>
+	<!--//[D] HEADER -->
+
+	<!-- [D] CONTENTS -->
+	<main id="content">
+		<div class="map_wrap">
+			<div id="map"></div>
+			<!-- 마커 카테고리 버튼 -->
+			<div class="category">
+				<ul>
+				<li>
+					<button value="tee" class="btn_maker ico_tee golf btn-marker-toggle on" data-marker-title="tee">티</button>
+				</li>
+				<li>
+					<button value="fairway" class="btn_maker ico_fairway golf btn-marker-toggle on" data-marker-title="fairway">페어웨이</button>
+				</li>
+				<li>
+					<button value="hole" class="btn_maker ico_hole golf btn-marker-toggle on" data-marker-title="hole">홀</button>
+				</li>
+				<li>
+					<button value="facilities" class="btn_maker ico_facilities golf btn-marker-toggle on" data-marker-title="facilities">편의시설</button>
+				</li>
+				</ul>
+			</div>
+			<!-- //마커 카테고리 버튼 -->
+			<!-- 선수명 검색 -->
+			<div class="search_bx has_value">
+				<form>
+				<div class="inp_area">
+					<input class="inp inp_search" id="inp_player_search" placeholder="선수명 검색">
+					<button class="btn_delete" type="reset">검색어 삭제</button>
+				</div>
+				<div class="scroll_area">
+					<ul class="search_data_list">
+					<li class="data">
+						<a href="#" class="player">
+							<span class="player_photo_area">
+								<img src="img/@tmp_player1.jpg" alt="선수 이미지">
+							</span>
+							<span class="search_txt">이경준 (Seungtaek LEE)</span>
+						</a>
+					</li>
+					<li class="data">
+						<a href="#" class="player">
+							<span class="player_photo_area"></span><!-- [D]선수이미지가 없는 경우 적용 가이드1 : 이미지 태그 제거 -->
+							<span class="search_txt">이승연 (Seungyon LEE)</span>
+						</a>
+					</li>
+					<li class="data">
+						<a href="#" class="player">
+							<span class="player_photo_area">
+								<img src="img/@tmp_player_empty.jpg" alt="선수 이미지"><!-- [D]선수이미지가 없는 경우 적용 가이드2 : 더미 이미지 경로 적용 -->
+							</span>
+							<span class="search_txt">이승호 (Seungho LEE)</span>
+						</a>
+					</li>
+					</ul>
+				</div>
+				</form>
+			</div>
+			<!-- //선수명 검색 -->
+		</div>
+	</main>
+	<!-- //[D] CONTENTS -->
+</div>
+<!-- [D] 로딩중 레이어 -->
+<div class="layer_loading"><!-- [D] 노출 필요시 layer_loading에 is_show 클래스 추가 -->
+	<span class="ico_area">
+		<img src="img/ico_spin.gif" alt="로딩 중">
+	</span>
+</div>
+<!-- [D] 로딩중 레이어 -->
+<!-- Javascript Area -->
+<script src="js/libs/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2e81dc023b23007625ba2dfc4a6b84f7"></script>
+<script src="js/apps/dMap.js"></script>
+<script>
+    $(document).ready(function () {
+        var map = window.dMap.makeMap(null, null);
+    })
+</script>
+<!-- 마크업 확인용입니다. -->
+<style>
+.case_view{display:inline-block;position:fixed;bottom:0;left:0;z-index:1000;width:auto;padding:5px;background:#000;opacity:0.7}
+.case_view .btn{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+</style>
+<div class="case_view">
+	<a href="#" class="btn" onclick="$('body > .layer_loading').toggleClass('is_show');return false;">지도 로딩 중</a>
+	<a href="#" class="btn" onclick="$('.layer_marker_info .layer_loading').toggleClass('is_show');return false;">지도 로딩 중</a>
+</div>
+<!-- //마크업 확인용입니다. -->
+</body>
+</html>

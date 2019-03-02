@@ -1,0 +1,53 @@
+@charset "utf-8";
+/* HIVELAB (http://www.hivelab.co.kr) */
+
+@font-face {
+font-family:'NanumBarunGothic';
+src:local(*);
+src:url(../font/NanumBarunGothic.woff) format('woff'),url(../font/NanumBarunGothic.ttf) format('truetype');
+}
+
+/* Reset */
+#chg_header div,#chg_header dl,#chg_header dt,#chg_header dd,#chg_header ul,#chg_header ol,#chg_header li,#chg_header h1,#chg_header h2,#chg_header h3,#chg_header h4,#chg_header h5,#chg_header h6,#chg_header p,#chg_header form,#chg_header fieldset,#chg_header legend,#chg_header textarea,#chg_header input,#chg_header select,#chg_header button,#chg_header article,#chg_header aside,#chg_header.chg_header,#chg_header section,#chg_header nav{margin:0;padding:0}
+#chg_header article,#chg_header aside,#chg_header.chg_header,#chg_header section,#chg_header nav{display:block}
+#chg_header.chg_header,#chg_header input,#chg_header select,#chg_header textarea,#chg_header button{font-family:NanumBarunGothic,'나눔바른고딕','Nanum BarunGothic','Malgun Gothic','맑은고딕','Apple SD Gothic Neo',Dotum,'돋움',sans-serif;font-size:12px}
+#chg_header fieldset,#chg_header li,#chg_header img{border:0;vertical-align:top}
+#chg_header ul,#chg_header ol{list-style:none}
+#chg_header button{overflow:visible;border:0;background-color:transparent;cursor:pointer}
+#chg_header button::-moz-focus-inner{padding:0;border:0}
+#chg_header button{border:0 none;border-radius:0;-webkit-appearance:none;appearance:none;-webkit-text-size-adjust:none;-webkit-border-radius:0}
+#chg_header address,#chg_header caption,#chg_header em{font-style:normal}
+#chg_header a,#chg_header a:focus,#chg_header a:active,#chg_header a:hover{text-decoration:none}
+#chg_header{-webkit-text-size-adjust:none}
+#chg_header .blind,#chg_header caption span,#chg_header legend{overflow:hidden;position:absolute;top:0;left:0;width:1px;height:1px;font-size:1px;line-height:100px;white-space:nowrap}
+#chg_header img{width:100%;height:auto}
+
+/* header */
+#chg_header.chg_header{position:relative;padding:16px 16px 14px 15px;border-bottom:1px solid #f0f0f0;background-color:#fff;font-size:0;box-sizing:border-box}
+#chg_header.chg_header:after{display:block;clear:both;content:''}
+#chg_header.chg_header .chg_logo_link{display:inline-block;padding:3px 0 2px}
+#chg_header.chg_header .chg_header_logo{display:inline-block;width:91px;height:auto}
+#chg_header .chg_top_menu{float:right;margin-top:0}
+#chg_header .chg_top_menu .chg_menu_area{display:inline-block;position:relative;margin-left:5px}
+#chg_header .chg_top_menu .chg_menu_area:first-child{margin-left:0}
+#chg_header .chg_top_menu .chg_menu_area .chg_btn{width:30px;padding:0}
+#chg_header .chg_top_menu .chg_menu_area .chg_btn_close{width:19px}
+#chg_header .chg_top_menu .chg_menu_area .chg_btn_gnb{width:20px}
+#chg_header .chg_top_menu .chg_menu_area .chg_label{display:none;position:absolute;top:26px;left:50%;z-index:10;width:79px;margin-left:-38px}
+#chg_header .chg_top_menu .chg_menu_area .chg_label.is_show{display:inline-block}
+
+/* gnb */
+#chg_header .chg_gnb{display:none;position:fixed;top:0;right:0;left:0;bottom:0;z-index:100;background-color:#fff}
+#chg_header .chg_gnb .chg_top_wrap{position:relative;padding:16px 16px 16px 15px;border-bottom:1px solid #f0f0f0}
+#chg_header .chg_gnb .chg_scroll_wrap{overflow:auto;-webkit-overflow-scrolling:touch;height:calc(100% - 93px);padding:0 0 43px}
+#chg_header .chg_gnb .chg_lst_gnb_menu{margin-top:18px}
+#chg_header .chg_gnb .chg_lst_gnb_menu .chg_link_menu{display:block;padding:0 24px;line-height:48px;font-size:15px;color:#000}
+#chg_header .chg_gnb .chg_lst_gnb_menu .chg_menu.is_selected .chg_link_menu{color:#fa6e00}
+#chg_header .chg_gnb .chg_bottom_wrap{position:absolute;right:0;left:0;bottom:0;height:43px;padding:0 15px;background-color:#fa6e00}
+#chg_header .chg_gnb .chg_lst_menu_other{display:inline-block;margin-left:-10px}
+#chg_header .chg_gnb .chg_lst_menu_other .chg_menu{display:inline-block;margin-left:10px}
+#chg_header .chg_gnb .chg_lst_menu_other .chg_link_menu{display:inline-block;padding:0 10px;font-size:12px;line-height:43px;color:#fff}
+#chg_header .chg_gnb .chg_lst_menu_other .chg_menu:first-child{margin-left:0}
+#chg_header .chg_gnb .chg_bottom_wrap .chg_corp_txt{float:right;font-size:10px;line-height:43px;color:#fff;opacity:0.3}
+.is_gnb_show .chg_wrap{overflow:hidden;height:100%}
+.is_gnb_show #chg_header .chg_gnb{display:block}

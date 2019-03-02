@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<title>로그인 :: PAYCO 회원</title>
+<link rel="stylesheet" type="text/css" href="css/neid.css">
+<!-- for ie script -->
+<script type="text/javascript" src="js/html5.js"></script>
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+	<a href="#" class="ban_area"><img src="img/ban_app.jpg" alt="APP 전용 혜택과 이용정보를 확인해보세요! 앱 다운로드"></a>
+
+	<!-- header -->
+	<?php include 'inc/inc_header.html';?>
+	<!-- //header -->
+	
+	<div id="container">
+		<div class="error_bx on">
+	        <em class="error_tit">로그인에 실패 하였습니다!</em>
+	        <p class="error_desc">비밀번호가 5회 이상 잘못 입력 되었습니다.<br>안전한 이용을 위하여 자동입력방지 문자를 입력해 주세요.</p>
+	        <a href="#" class="lnk_leave-cancel">탈퇴 신청 취소</a>
+	    </div>
+		<div class="content">
+			<h2 class="blind">로그인</h2>
+			<form>
+			<fieldset>
+			<legend>로그인 정보 입력</legend>
+				<div class="keyboard_area"> 
+					<a href="#" class="txt_link"><span class="txt">PC자판 이미지보기</span><span class="ico_arr">PC자판 열기</span></a> <!-- [D] PC자판 활성화 시 .is_active 추가; .key_area 디스플레이 block처리 -->
+					<span class="key_area" style="display:none"><span class="key_img">영문/한글 자판 이미지</span></span>
+				</div>
+				<div class="login_inp_area">
+					<span class="inp_bx sel"><!-- [D] 포커스 시 .is_focus 추가; 값 입력 시 .is_value 추가 -->
+						<!-- [D] 툴팁 노출시 .is_show 추가 -->
+					 	<span class="tooltip"><em class="txt">이메일 또는 휴대폰 아이디 입력</em></span>
+						<span class="inp_txt">
+							<span class="inp_placeholder">이메일 또는 휴대폰 아이디</span>
+							<input type="text" class="inp" value="" title="이메일 또는 휴대폰 아이디">
+							<button type="button" class="btn_del"><span class="ico_del">입력한 내용 지우기</span></button>
+							<!-- [D] 이메일 주소 select 영역 -->
+							<div class="sel_email">
+								<span class="ico_sel_arr"></span>
+								<select name="" id="">
+								  <option value="0">직접 입력</option>
+								  <option value="1">naver.com</option>
+								  <option value="2">gmail.com</option>
+								  <option value="3">hanmail.net</option>
+								</select>
+							</div>
+							<!-- //[D] 이메일 주소 select 영역 -->
+						</span>
+						<p class="error_txt">잘못 입력하였습니다.</p>
+					</span>
+					<!-- [D] 자동완성 기능 비노출시 .is_show 제거-->
+					<ul class="sel_bx">
+						<li class="sel_item"><a href="#" class="sel_link"><span class="opt_tit">paycoui_design@payco.compaycoui_design@payco.com</span></a></li>
+						<li class="sel_item"><a href="#" class="sel_link"><span class="opt_tit">paycoui_design@payco.compaycoui_design@payco.compaycoui_design@payco.compaycoui_design@payco.com</span></a></li>
+						<li class="sel_item"><a href="#" class="sel_link"><span class="opt_tit">paycoui_design@payco.compaycoui_design@payco.compaycoui_design@payco.compaycoui_design@payco.com</span></a></li>
+					</ul>
+					<!--// [D] 자동완성 기능 -->
+					<span class="inp_bx error"><!-- [D] 입력 에러 시 .error 추가 -->
+						<span class="inp_txt">
+							<span class="inp_placeholder">비밀번호 (8~16자리)</span>
+							<input type="password" class="inp" title="비밀번호">
+						</span>
+						<button type="button" class="btn_del"><span class="ico_del">입력한 내용 지우기</span></button>
+						<p class="error_txt">잘못 입력하였습니다.</p>
+					</span>
+				</div>
+				<div class="captcha_wrap">
+					<div class="captcha_area img">
+						<div class="captcha_img">
+							<img src="img/captcha_img.gif" width="135" height="74" alt="캡차이미지">
+						</div>
+						<div class="captcha_ctrl">
+							<a href="#" class="captcha_btn"><span class="ico_refresh"></span>새로고침</a>
+							<a href="#" class="captcha_btn"><span class="ico_play"></span>음성으로 듣기</a> <!--[D] 클릭 시 .captcha_area.img => display:none, .captcha_area.sound => display:block 처리 -->
+						</div>
+					</div>
+					<div class="captcha_area sound">
+						<div class="captcha_img">
+							<div class="captcha_img_area">	
+								<span class="ico_sound"></span>
+		            <em>음성으로 안내중</em>
+							</div>
+						</div>
+						<div class="captcha_ctrl">
+							<a href="#" class="captcha_btn"><span class="ico_refresh"></span>새로고침</a>
+							<a href="#" class="captcha_btn"><span class="ico_img"></span>이미지로 보기</a> <!--[D] 클릭 시 .captcha_area.sound => display:none, .captcha_area.img => display:block 처리 -->
+						</div>
+					</div>
+					<span class="inp_bx">
+						<span class="inp_txt">
+							<label for="captcha" class="inp_placeholder">자동입력 방지문자</label>
+							<input type="text" id="captcha" class="inp">
+							<button type="button" class="btn_del"><span class="ico_del">입력한 내용 지우기</span></button>
+						</span>
+						<p class="error_txt">잘못 입력하였습니다.</p>
+					</span>
+				</div>
+				<div class="checkbox_area">
+					<span class="inp_checkbox is_checked"><!--[D] 체크박스 선택 시 .is_checked 추가, input 에 checked 속성 추가 -->
+						<span class="tooltip"><em class="txt">개인정보보호를 위해 개인 PC에서만 사용하세요.</em></span>
+						<input type="checkbox" id="autoLogin" class="inp_chk" checked>
+						<label for="autoLogin" class="inp_label"><span class="ico_chk"></span>아이디 저장</label>
+					</span>
+					<span class="txt_checkbox">
+						<a href="#" class="txt_link">IP보안</a>
+						<input type="checkbox" class="inp_chk" id="ipSecurity">
+						<label class="inp_label" for="ipSecurity">
+							<span class="blind">IP보안</span>
+							<em class="txt_point">ON</em><!-- [D] IP보안 체크 해제 시 .txt_point 제거 및 텍스트 OFF로 변경 -->
+						</label>
+					</span>
+				</div>
+				<div class="btn_area">
+					<button type="submit" class="btn btn_full btn_point">로그인</button>
+					<span class="txt_divide"><em>또는</em></span>
+					<button type="submit" class="btn btn_full btn_line"><span class="ico_app"></span>페이코 앱으로 로그인</button>
+				</div>
+			</fieldset>
+			</form>
+		</div>
+
+		<div class="footer_menu">
+			<div class="footer_inner">
+				<ul class="menu_lst">
+				<li class="menu_item"><a href="#" class="menu_link">아이디찾기</a></li>
+				<li class="menu_item"><span class="bar">|</span><a href="#" class="menu_link">비밀번호찾기</a></li>
+				<li class="menu_item"><span class="bar">|</span><a href="#" class="menu_link">회원가입</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 마크업 확인용입니다. -->
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script>    
+$(function(){
+	$('#case_view2 .btn_menu').click(function(e){
+		e.preventDefault();
+		$('#case_view').show();
+		$('#case_view2').hide();
+	});
+});
+</script>
+<!-- //마크업 확인용입니다. -->
+<!-- 마크업 확인용입니다. -->
+<style>
+	#case_view,#case_view2{display:none;position:relative;width:100%;z-index:1000;padding:5px;background:#000;opacity:0.7}
+	#case_view2{display:inline-block;position:fixed;bottom:0;left:0;width:auto}
+	.btn_opt{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+	.btn_m-view{background:#22002e}
+</style>
+<div id="case_view2">
+	<a href="#" class="btn_opt btn_m-view">모바일 view</a>
+</div>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script>    
+$(function(){
+	$('#case_view2 .btn_m-view').click(function(e){
+		e.preventDefault();
+		$('body').toggleClass('m');		
+	});
+});
+</script>
+<!-- //마크업 확인용입니다. -->
+</body>
+</html>

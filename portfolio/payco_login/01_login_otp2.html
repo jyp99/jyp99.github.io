@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<title>OTP 로그인 :: PAYCO 회원</title>
+<link rel="stylesheet" type="text/css" href="css/neid.css">
+<!-- for ie script -->
+<script type="text/javascript" src="js/html5.js"></script>
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+    <!-- header -->
+    <?php include 'inc/inc_header.html';?>
+    <!-- //header -->
+    
+	<div id="container">
+		<div class="content step_wrap otp_guide_wrap">
+      <div class="step_area">
+        <ol>
+        <li class="step step_m1 is_complete"><!--[D] 완료된 step 에 .is_complete 클래스 추가 -->
+          <span class="step_txt"><span class="ico_complete"></span>앱 설치</span>
+          <span class="arr"></span>
+        </li>
+        <li class="step step_m2 is_active"><!--[D] 활성화된 step 에 .is_active 클래스 추가 -->
+          <span class="step_txt"><span class="ico_complete"></span>OTP 인증</span>
+          <span class="blind">현재단계</span><!--[D] 활성화된 단계에 .blind 처리된 '현재단계' 텍스트 추가 부탁드립니다.-->
+          <span class="arr"></span>
+        </li>
+        <li class="step step_m3">
+          <span class="step_txt">가입 완료</span>
+        </li>
+        </ol>
+      </div>
+      <div class="process_content_wrap">
+        <div class="tit_area is_long_txt">
+          <h2 class="h_tit">PAYCO 앱을 실행 후<br>더보기 &gt; [PAYCO OTP]에서 OTP 인증해주세요.</h2>
+          <a href="#" class="detail_link">자세히 보기</a>
+        </div>
+        <div class="auth_guide">
+          <ol class="auth_guide_lst">
+          <li><em class="ico_num num1">1.</em>OTP 인증번호 입력
+            <span class="inp_bx"><!-- [D] 포커스 시 .is_focus 추가 -->
+              <span class="inp_txt">
+                  <span class="inp_placeholder">OTP 인증 번호 6자리 (예. 123456)</span>
+                  <input type="text" value="" class="inp" title="기기 시리얼 번호 입력">
+                  <button type="button" class="btn_del"><span class="ico_del">입력한 내용 지우기</span></button>
+              </span>
+              <p class="error_txt">유효성 체크 메시지입니다</p>
+            </span>
+          </li>
+          <li><em class="ico_num num2">2.</em>[보기] 버튼을 누른 후, 기기 시리얼 번호 입력
+            <span class="inp_bx"><!-- [D] 포커스 시 .is_focus 추가 -->
+              <span class="inp_txt">
+                  <span class="inp_placeholder">기기 시리얼 번호 12자리 (예. 123456789000)</span>
+                  <input type="text" value="" class="inp" title="OTP 인증번호 입력">
+                  <button type="button" class="btn_del"><span class="ico_del">입력한 내용 지우기</span></button>
+              </span>
+              <p class="error_txt">유효성 체크 메시지입니다</p>
+            </span>
+          </li>
+          </ol>
+        </div>
+        <div class="checkbox_area is_line">
+          <span class="inp_checkbox inp_bold">
+              <input type="checkbox" id="check3" class="inp_chk">
+              <label for="check3" class="inp_label"><span class="ico_chk"></span>모든 서비스에서 로그아웃합니다.</label>
+          </span>
+        </div>
+        <div class="btn_area">
+          <button type="submit" class="btn btn_full btn_point">다음</button>
+        </div>
+      </div>
+		</div>
+	</div>
+</div>
+
+<div class="dimmed" style="display:none"></div>
+<!-- OTP 인증번호 확인 방법 -->
+<div class="ly_pop_wrap" style="display:none">
+  <div class="ly_pop ly_otp_guide">
+    <div class="ly_cont">
+      <h2 class="ly_tit">OTP 인증번호 확인 방법</h2>
+      <ul class="lst_img_desc">
+      <li class="desc_wrap">
+        <span class="tit_txt"><span class="num">1.</span> PAYCO 앱 &gt; 왼쪽 상단 [더보기] 버튼 터치</span>
+        <span class="img_bx is_pc_show">
+          <img src="img/img_otp_desc.jpg" alt="">
+          <span class="underline"></span>
+        </span>
+        <span class="img_bx full_img is_m_show">
+          <img src="img/img_otp_desc_m.jpg" alt="">
+        </span>
+      </li>
+      <li class="desc_wrap">
+        <span class="tit_txt"><span class="num">2.</span> 더보기 &gt; [PAYCO OTP] 메뉴 터치</span>
+        <span class="img_bx is_pc_show">
+          <img src="img/img_otp_desc2.jpg" alt="">
+          <span class="underline"></span>
+        </span>
+        <span class="img_bx full_img is_m_show">
+          <img src="img/img_otp_desc2_m.jpg" alt="">
+        </span>
+      </li>
+      </ul>
+    </div>
+    <div class="ly_btn_area is_btn_full">
+      <button type="button" class="btn">확인</button>
+    </div>
+  </div>
+  <span class="vmiddle"></span>
+</div>
+<!-- 마크업 확인용입니다. -->
+<style>
+	#case_view,#case_view2{display:none;position:relative;width:100%;z-index:1000;padding:5px;background:#000;opacity:0.7}
+	#case_view2{display:inline-block;position:fixed;bottom:0;left:0;width:auto}
+	.btn_opt{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+	.btn_m-view{background:#22002e}
+</style>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script>    
+$(function(){
+	$('#case_view2 .btn_m-view').click(function(e){
+		e.preventDefault();
+		$('body').toggleClass('m');		
+	});
+	$('.ly_pop_wrap a,.ly_pop_wrap button,.btn_close').click(function(e){
+		e.preventDefault();
+		$('.ly_pop_wrap,.dimmed').hide();
+	});
+});
+</script>
+<div id="case_view2">
+  <a href="#" class="btn_opt btn_m-view">모바일 view</a>
+  <a href="#" class="btn_opt" onclick="$('.dimmed,.ly_pop_wrap').hide();$('.dimmed,.ly_pop_wrap:eq(0)').show();return false;">팝업 1</a>
+</div>
+<!-- //마크업 확인용입니다. -->
+</body>
+</html>

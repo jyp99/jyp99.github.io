@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<title>UIO :: PAYCO 회원</title>
+<link rel="stylesheet" type="text/css" href="css/neid.css">
+<!-- for ie script -->
+<script type="text/javascript" src="js/html5.js"></script>
+<style>
+body>h1{margin:2em 1em}
+h2{margin:20px 0 10px}
+h3{margin:15px 0 10px}
+.content{max-width:initial;margin:initial;padding:20px}
+.tit_area,.h_tit,.sub_txt,.logo_area{padding:0;margin:0;text-align:left}
+.txt_guide{margin-bottom:15px;padding:15px;background:#f5f5f5}
+.ssl_noti{position:static}
+.sel_lang{position:relative;right:0}
+.step_area{position:static}
+</style>
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+	<div class="content">
+		<h1>PAYCO 회원 가이드</h1>
+		<h2>타이틀 영역</h2>
+		<div class="tit_area">
+			<h2 class="h_tit">기본 타이틀 .h_tit</h2>
+			<p class="sub_txt">제목 하단 텍스트</p>
+		</div>
+		<div class="tit_area">
+			<h2 class="h_tit long_txt">간격 좁은 타이틀 .h_tit.long_txt</h2>
+			<p class="sub_txt">제목 하단 텍스트</p>
+		</div>		
+		<div class="tit_area">
+			<h2 class="h_tit2">last_process_area 안에서 사용하는 타이틀 .h_tit2</h2>
+			<p class="sub_txt">제목 하단 텍스트</p>
+		</div>
+
+		<h2>로고</h2>
+		<h1 class="logo_area"><span class="logo_payco">PAYCO</span></h1>
+		<h3>로고 + 텍스트</h3>
+		<h1 class="logo_area">
+			<span class="logo_payco">PAYCO</span>
+			<span class="txt">페이코 아이디로 <em>티켓몬스터</em>를 이용할 수 있습니다.</span>
+		</h1>
+		
+		<h2>에러 텍스트</h2>
+		<p class="noti_txt2"><span class="ico_exclamation"></span><span class="txt">창을 닫으면 이메일 인증이 진행되지 않습니다.</span></p>
+		
+		<h2>언어선택</h2>
+		<div class="sel_lang is_active"><!-- [D] 목록 노출 시 .is_active 추가 -->
+			<a href="#" class="btn_sel">한국어<span class="sel_arr">언어선택 더보기</span></a>
+			<ul class="lst_sel">
+			<li class="is_active"><a href="#">한국어<span class="sel_arr"></span></a></li><!--[D] 선택된 언어에 .is_active 추가-->
+			<li><a href="#">ENG<span class="sel_arr"></span></a></li>
+			</ul>
+		</div>
+		<br><br><br><br>
+		<h2>SSL 인증창</h2>
+		<div class="ssl_noti">
+			<a href="#" class="txt_noti">
+				<span class="txt">
+					<span class="ico_lock"></span>안전한 PAYCO 로그인을 위해<br>녹색 주소창과 URL, 자물쇠 마크를 확인하세요!<em><span class="ico_lock"></span>자세히 보기</em>
+				</span>
+				<span class="vmiddle"></span>
+			</a>
+			<button type="button" class="btn_close"><span class="ico_close">안내창 닫기</span></button>
+		</div>
+		
+		<h2>에러 창</h2>
+		<div class="error_bx on">
+	        <em class="error_tit">로그인에 실패 하였습니다!</em>
+	        <p class="error_desc">비밀번호가 5회 이상 잘못 입력 되었습니다.<br>안전한 이용을 위하여 자동입력방지 문자를 입력해 주세요.</p>
+	        <a href="#" class="lnk_leave-cancel">탈퇴 신청 취소</a>
+	    </div>
+			
+		<h2>input</h2>
+		<h3>input 기본</h3>
+		<span class="inp_bx">
+			<span class="inp_txt">
+				<span class="inp_placeholder">아이디</span>
+				<input type="text" class="inp" title="아이디">
+				<button type="button" class="btn_del"><span class="ico_del">텍스트 지우기</span></button>
+			</span>
+			<p class="error_txt">잘못 입력하였습니다.</p>
+		</span>
+		<h3>input 포커스 시 inp_bx에 .is_focus 추가</h3>
+		<span class="inp_bx is_focus">
+			<span class="inp_txt">
+				<span class="inp_placeholder">아이디</span>
+				<input type="text" class="inp" title="아이디">
+				<button type="button" class="btn_del"><span class="ico_del">텍스트 지우기</span></button>
+			</span>
+			<p class="error_txt">잘못 입력하였습니다.</p>
+		</span>
+		
+		<h3>input 글자 입력 될 경우 inp_bx에 .is_focus, is_value(placeholder 비활성화, 삭제버튼 노출) 추가</h3>
+		<span class="inp_bx is_focus is_value">
+			<span class="inp_txt">
+				<span class="inp_placeholder">아이디</span>
+				<input type="text" class="inp" title="아이디" value="paycoui@naver.com">
+				<button type="button" class="btn_del"><span class="ico_del">텍스트 지우기</span></button>
+			</span>
+			<p class="error_txt">잘못 입력하였습니다.</p>
+		</span>
+		
+		<h3>inp_bx에 .error 추가 : 빨간테두리, 에러텍스트 노출</h3>
+		<span class="inp_bx error">
+			<span class="inp_txt">
+				<input type="text" class="inp" title="아이디">
+			</span>
+			<p class="error_txt">잘못 입력하였습니다.</p>
+		</span>
+		
+		<h3>툴팁</h3>
+		<p class="txt_guide">
+			- 까만 툴팁 : inp_bx안에 위치, 노출 시 tooltip에 .is_show 추가(PC전용)<br>
+		</p>
+		<span class="inp_bx">
+			<span class="inp_txt">
+				<span class="inp_placeholder">비밀번호</span>
+				<input type="password" class="inp" title="비밀번호">
+			</span>
+			<p class="error_txt">잘못 입력하였습니다.</p>
+			<!-- [D] 툴팁 노출시 .is_show 추가 -->
+		 	<span class="tooltip is_show"><em>이메일 또는 휴대폰 아이디 입력</em></span>
+		</span>
+		<br>
+		<span class="tooltip2 is_show"><em>통신사 인증앱 설치/가입 필요 (T인증, KT인증, U+인증)</em></span>
+		<br>
+		<h3>일반 안내문구 필요할때</h3>
+		<span class="inp_bx">
+			<span class="inp_txt">
+				<span class="inp_placeholder">비밀번호</span>
+				<input type="password" class="inp" title="비밀번호">
+			</span>
+			<p class="error_txt">잘못 입력하였습니다.</p>
+		</span>
+		<p class="noti_txt">[안내문구] 휴대폰 인증은 1일 5회까지 가능합니다.</p>
+		
+		<h3>비활성화 시 inp_bx에 .is_disabled 클래스 추가 및 input에 disabled 속성 추가</h3>
+		<span class="inp_bx is_disabled">
+			<span class="inp_txt">
+				<input type="text" class="inp" title="이름" value="홍길동ggHHOI" disabled>
+			</span>
+		</span>
+
+		<h2>SelectBox(기존 inp_bx에 .sel 추가 / 활성화 시 .is_focus 추가)</h2>
+		<h3>PC (input + selectBox) 기본</h3>
+		<span class="inp_bx sel"><!-- [D] 활성화 시 .is_focus 추가 -->
+			<span class="inp_txt">
+				<span class="inp_placeholder">이메일 또는 휴대폰 아이디</span>
+				<input type="text" class="inp" title="이메일 또는 휴대폰 아이디">
+				<button type="button" class="btn_del"><span class="ico_del">입력한 내용 지우기</span></button>
+				<span class="ico_sel_arr"></span>
+			</span>
+		</span>
+		<ul class="sel_bx">
+		<li class="sel_item"><a href="#" class="sel_link"><span class="opt_tit">paycoui@naver.com</span></a></li>
+		<li class="sel_item"><a href="#" class="sel_link"><span class="opt_tit">paycoui@nate.com</span></a></li>
+		</ul>
+		
+		<h3>PC (input + selectBox) 활성화 : inp_bx에 is_focus, sel_bx에 is_show 추가</h3>
+		<span class="inp_bx sel is_focus is_value"><!-- [D] 활성화 시 .is_focus 추가 -->
+			<span class="inp_txt">
+				<span class="inp_placeholder">이메일 또는 휴대폰 아이디</span>
+				<input type="text" class="inp" value="paycoui@n" title="이메일 또는 휴대폰 아이디">
+				<button type="button" class="btn_del"><span class="ico_del">입력한 내용 지우기</span></button>
+				<span class="ico_sel_arr"></span>
+			</span>
+			<ul class="sel_bx is_show">
+				<li class="sel_item"><a href="#" class="sel_link"><span class="opt_tit">paycoui@naver.com</span></a></li>
+				<li class="sel_item"><a href="#" class="sel_link"><span class="opt_tit">paycoui@nate.com</span></a></li>
+			</ul>
+		</span>
+		<br><br><br><br><br><br>
+		<h3>PC/M (텍스트 + selectBox) 비활성화</h3>
+		<span class="inp_bx sel"><!-- [D] 활성화 시 .is_focus 추가 -->
+			<span class="inp_txt inp_txt2">
+				<span class="inp">선택</span>
+				<span class="ico_sel_arr"></span>
+			</span>
+			<ul class="sel_bx">
+				<li class="sel_item"><a href="#" class="sel_link"><span class="opt_tit">대한민국 +82</span></a></li>
+				<li class="sel_item"><a href="#" class="sel_link"><span class="opt_tit">대한민국 +82</span></a></li>
+			</ul>
+		</span>
+
+		<h3>PC/M (텍스트 + selectBox) 활성화:inp_bx에 is_focus, sel_bx에 is_show 추가</h3>
+		<!--[D] 옵션 펼쳐질 때 .is_focus 클래스 추가 -->
+		<span class="inp_bx sel is_focus">
+			<span class="inp_txt inp_txt2">
+				<span class="inp">선택</span>
+				<span class="ico_sel_arr"></span>
+			</span>
+			<ul class="sel_bx is_show">
+				<li class="sel_item"><a href="#" class="sel_link"><span class="opt_tit">대한민국 +82</span></a></li>
+				<li class="sel_item"><a href="#" class="sel_link"><span class="opt_tit">대한민국 +82</span></a></li>
+			</ul>
+		</span>
+		<br><br><br><br><br><br>
+		<h2>input 주민번호 입력 type</h2>
+		<div class="inp_wrap">
+			<div class="inp_area">
+				<span class="inp_bx">
+					<span class="inp_txt">
+						<span class="inp_placeholder">주민번호 앞부분</span>
+						<input type="text" class="inp" title="주민번호 앞부분">
+					</span>
+				</span>
+				<span class="txt_bar">-</span>
+				<span class="inp_bx">
+					<span class="inp_txt"><input type="text" class="inp" title="주민번호 뒷부분 첫자리" value="2"></span>
+				</span>
+				<span class="secret_num">
+					<span class="ico_bul"></span>
+					<span class="ico_bul"></span>
+					<span class="ico_bul"></span>
+					<span class="ico_bul"></span>
+					<span class="ico_bul"></span>
+					<span class="ico_bul"></span>
+				</span>
+			</div>
+			<p class="error_txt">유효성 체크 메시지입니다</p>
+		</div>
+		<h3>주민등록번호 에러</h3>
+		<div class="inp_wrap error">
+			<div class="inp_area">
+				<span class="inp_bx">
+					<span class="inp_txt"><input type="text" class="inp" title="주민번호 앞부분" value="20170401"></span>
+				</span>
+				<span class="txt_bar">-</span>
+				<span class="inp_bx">
+					<span class="inp_txt"><input type="text" class="inp" title="주민번호 뒷부분 첫자리" value="2"></span>
+				</span>
+				<span class="secret_num">
+					<span class="ico_bul"></span>
+					<span class="ico_bul"></span>
+					<span class="ico_bul"></span>
+					<span class="ico_bul"></span>
+					<span class="ico_bul"></span>
+					<span class="ico_bul"></span>
+				</span>
+			</div>
+			<p class="error_txt">유효성 체크 메시지입니다</p>
+		</div>
+		<h2>input 유효시간 추가</h2>
+		<span class="inp_bx time_add">
+			<span class="inp_txt">
+				<span class="inp_placeholder">인증번호 입력 (6자리 숫자)</span>
+				<input type="text" class="inp" title="인증번호">
+				<span class="time_bx">유효시간 <em class="txt_point">03:00</em></span>
+				<button type="button" class="btn_del"><span class="ico_del">텍스트 지우기</span></button>
+			</span>
+		</span>
+		<h3>x버튼 노출</h3>
+		<span class="inp_bx time_add is_value">
+			<span class="inp_txt">
+				<span class="inp_placeholder">인증번호 입력 (6자리 숫자)</span>
+				<input type="text" class="inp" title="인증번호">
+				<span class="time_bx">유효시간 <em class="txt_point">03:00</em></span>
+				<button type="button" class="btn_del"><span class="ico_del">텍스트 지우기</span></button>
+			</span>
+		</span>
+		<h2>input 검색창(포커스 시 .is_focus 추가)</h2>
+		<span class="inp_bx search_add">
+			<span class="inp_txt">
+				<span class="inp_placeholder">예) 반포대로 58, 분당 주공, 삼평동 629</span>
+				<input type="text" class="inp" title="검색">
+				<button type="button" class="btn_search"><span class="ico_search">검색</span></button>
+			</span>
+		</span>
+		<span class="inp_bx search_add is_focus">
+			<span class="inp_txt">
+				<span class="inp_placeholder">예) 반포대로 58, 분당 주공, 삼평동 629</span>
+				<input type="text" class="inp" title="검색">
+				<button type="button" class="btn_search"><span class="ico_search">검색</span></button>
+			</span>
+		</span>
+
+		<h2>checkbox</h2>
+		<p class="txt_guide">
+			- 선택시 inp_checkbox에 .is_checked 추가<br>
+			- 두꺼운 라벨은 inp_checkbox에 .inp_bold 추가<br>
+			- 두줄짜리 레이블은 inp_checkbox에 .inp_multi_txt 추가
+		</p>
+		<div class="checkbox_area">
+			<span class="inp_checkbox">
+				<input type="checkbox" id="check1" class="inp_chk">
+				<label for="check1" class="inp_label"><span class="ico_chk"></span>기본</label>
+			</span>
+		</div>
+		<div class="checkbox_area">
+			<span class="inp_checkbox is_checked">
+				<input type="checkbox" id="check2" class="inp_chk">
+				<label for="check2" class="inp_label"><span class="ico_chk"></span>기본-체크</label>
+			</span>
+		</div>
+		<div class="checkbox_area">
+			<span class="inp_checkbox inp_bold">
+				<input type="checkbox" id="check3" class="inp_chk">
+				<label for="check3" class="inp_label"><span class="ico_chk"></span>굵게</label>
+			</span>
+		</div>
+		<div class="checkbox_area">
+			<span class="inp_checkbox inp_multi_txt">
+				<input type="checkbox" id="check4" class="inp_chk">
+				<label for="check4" class="inp_label"><span class="ico_chk"></span>두줄짜리<br>체크</label>
+			</span>
+		</div>
+		<div class="checkbox_area">
+        <span class="inp_checkbox inp_bold">
+            <input type="checkbox" class="inp_chk">
+            <span class="inp_label has_lypop"><span class="ico_chk"></span><button type="button" class="txt_link">개인정보 수집이용</button> 및 <button type="button" class="txt_link">통신사/본인확인서비스 약관</button> 동의</span>
+        </span>
+    </div>
+		<h2>tab</h2>
+		<p class="txt_guide">
+			- 선택시 tab_item에 is_selected 추가
+		</p>
+		<ul class="tab">
+		<li class="tab_item is_selected"><a href="#" class="tab_link">이메일로 가입</a></li>
+		<li class="tab_item"><a href="#" class="tab_link">휴대폰 번호로 가입</a></li>
+		</ul>
+		<h2>PC 자판 이미지 보기</h2>
+		<p class="txt_guide">
+			- 모바일에서만 사용<br>
+			- pc에서 기본스타일 display none처리하지않고 리얼에서 개발에서 노출 제어하기로 하여 PC에서도 노출 됨
+		</p>
+		<div class="keyboard_area"> 
+			<a href="#" class="txt_link"><span class="txt">PC자판 이미지보기</span><span class="ico_arr">PC자판 열기</span></a> <!-- [D] PC자판 활성화 시 .is_active 추가; .key_area 디스플레이 block처리 -->
+			<span class="key_area" style="display:none"><span class="key_img">영문/한글 자판 이미지</span></span>
+		</div>
+		<div class="keyboard_area"> 
+			<a href="#" class="txt_link is_active"><span class="txt">PC자판 이미지보기</span><span class="ico_arr">PC자판 열기</span></a> <!-- [D] PC자판 활성화 시 .is_active 추가; .key_area 디스플레이 block처리 -->
+			<span class="key_area" style="display:block"><span class="key_img">영문/한글 자판 이미지</span></span>
+		</div>
+				
+		<h2>텍스트</h2>
+		<h3>텍스트 한줄형</h3>
+		<p class="noti_txt">회원탈퇴는 <a href="#" class="txt_link">여기</a>를 눌러주세요.</p>
+		<h3>텍스트 목록형</h3>
+		<div class="info_bx">
+			<ul class="noti_lst">
+			<li class="noti_item"><span class="bul"></span>회원 탈퇴일로부터 30일이 경과해야만 재가입이 가능합니다.</li>
+			<li class="noti_item"><span class="bul"></span>탈퇴 시 보유한 쿠폰과 적립 포인트, 스탬프는 즉시 자동 소멸됩니다.</li>
+			<li class="noti_item"><span class="bul"></span>유상 포인트, 진행 중인 전자상거래 이용내역, 이용 중인 서비스가 완료되지 않은 경우 탈퇴할 수 없습니다.</li>
+			<li class="noti_item"><span class="bul"></span>탈퇴 후 30일간 재가입 방지 및 포인트 불법 이용, 부정행위를 방지하기 위해 회원님의 아이디를 포함한 회원정보가 보존됩니다.(회원가입 시 동의한 개인정보 수집과 이용에 명시한 파기절차와 방법에 따라 30일 후 회원정보를 파기합니다.)</li>
+			</ul>
+		</div>
+		<ul class="noti_lst">
+		<li class="noti_item"><span class="bul"></span>메일 아이디는 최대 8자리까지 표시합니다</li>
+		<li class="noti_item"><span class="bul"></span>본인인증이 완료된 아이디만 전체 아이디 확인이 가능합니다</li>
+		</ul>
+
+		<h2>list 메뉴</h2>
+		<ul class="menu_lst">
+		<li class="menu_item"><a href="#" class="menu_link">아이디찾기</a></li>
+		<li class="menu_item"><span class="bar">|</span><a href="#" class="menu_link">비밀번호찾기</a></li>
+		<li class="menu_item"><span class="bar">|</span><a href="#" class="menu_link">회원가입</a></li>
+		</ul>
+		<h2>약관 동의</h2>
+		<h3>약관 체크형</h3>
+		<!-- [D] PC에서 노출 -->
+		<div class="checkbox_area agree_all">
+		    <span class="inp_checkbox inp_bold">
+		        <input type="checkbox" id="agree_all" class="inp_chk">
+		        <label for="agree_all" class="inp_label"><span class="ico_chk"></span>아래 내용에 모두 동의합니다.</label>
+		    </span>
+		</div>
+		<!-- [D] 모바일에서 노출 -->
+		<div class="btn_chk_area">
+		    <span class="inp_checkbox">
+		        <input type="checkbox" id="rdo_chk" class="inp_chk">
+		        <label for="rdo_chk" class="inp_label"><span class="ico_cfm"></span>모든 약관에 동의</label>
+		    </span>
+		</div>
+		<div class="agree_area">
+			<ul class="agree_lst">
+			<li class="agree_item">
+				<span class="inp_checkbox">
+					<input type="checkbox" id="agree1" class="inp_chk">
+					<label for="agree1" class="inp_label"><span class="ico_chk"></span>PAYCO 회원 약관</label>
+				</span>
+				<!-- [D] 펼치기 클릭 시 .is_active 추가 및 텍스트 변경 -->
+				<a href="#" class="fold_link">펼치기<span class="ico_arr"></span></a>
+				<ul class="agree_lst">
+				<li class="agree_item">
+					<span class="inp_checkbox">
+						<input type="checkbox" id="agree2" class="inp_chk">
+						<label for="agree2" class="inp_label"><span class="ico_chk"></span>PAYCO 회원 약관</label>
+					</span>
+					<a href="#" class="agree_link">보기</a>
+				</li>
+				<li class="agree_item">
+					<span class="inp_checkbox">
+						<input type="checkbox" id="agree3" class="inp_chk">
+						<label for="agree3" class="inp_label"><span class="ico_chk"></span>PAYCO 회원 약관</label>
+					</span>
+					<a href="#" class="agree_link">보기</a>
+				</li>
+				<li class="agree_item">
+					<span class="inp_checkbox">
+						<input type="checkbox" id="agree4" class="inp_chk">
+						<label for="agree4" class="inp_label"><span class="ico_chk"></span>PAYCO 회원 약관</label>
+					</span>
+					<a href="#" class="agree_link">보기</a>
+				</li>
+				</ul>
+			</li>
+			<li class="agree_item">
+				<span class="inp_checkbox is_checked">
+					<input type="checkbox" id="agree5" class="inp_chk">
+					<label for="agree5" class="inp_label"><span class="ico_chk"></span>개인정보 수집과 이용</label>
+				</span>
+				<a href="#" class="agree_link">보기</a>
+			</li>
+			<li class="agree_item">
+				<span class="inp_checkbox">
+					<input type="checkbox" id="agree6" class="inp_chk">
+					<label for="agree6" class="inp_label"><span class="ico_chk"></span>홍보성 정보 수신 동의 (선택)</label>
+				</span>
+			</li>
+			</ul>
+		</div>
+		<h3>선택할 약관 하나(agree_area에 has_item_one 클래스 추가)</h3>
+		<div class="agree_area has_item_one" style=""><!-- [D]선택할 약관이 1개일 경우 agree_area에 has_item_one 클래스 추가 -->
+			<ul class="agree_lst">
+				<li class="agree_item">
+					<span class="inp_checkbox is_checked">
+						<input type="checkbox" id="agree9" class="inp_chk">
+						<label for="agree9" class="inp_label"><span class="ico_chk"></span><em>위치기반 서비스 약관 동의</em> (선택)</label>
+					</span>
+					<a href="#" class="agree_link">보기</a>
+				</li>
+			</ul>
+		</div>
+		
+		<h3>제목+내용</h3>
+		<div class="agree_area2">
+			<ul class="agree_lst">
+			<li class="agree_item">
+				<span class="inp_checkbox inp_bold">
+					<input type="checkbox" id="agree2" class="inp_chk">
+					<label for="agree2" class="inp_label"><span class="ico_chk"></span>제 3자 개인정보 제공 안내</label>
+				</span>
+				<p class="noti_txt">제 3자 개인정보 제공 안내 제 3자 개인정보 제공 안내 제 3자 개인정보 제공 안내 제 3자 개인정보 제공 안내 제 3자 개인정보 제공 안내 제 3자 개인정보 제공 안내 제 3자 개인정보 제공 안내 제 3자 개인정보 제공 안내 제 3자 개인정보 제공 제 3자 개인정보 제공 안내 제 3자 개인정보 제공 안내 제 3자 개인정보 제공 안내 제 3자 개인정보 제공 안내 제 3자 개인정보 제공 안내 제 3자 개인정보 제공 안내 제 3자 개인정보 제공 안내 제 3자 개인정보 제공 안내 제 3자 개인정보 제공 안내제 3자 개인정보 제공 안내 제 3자 개인정보 제공 안내자 개인정보 제공 안내 제 3자 개인정보 제공 안내 제 3자 개인정보 제공 안내 제 3자 개인정보 제공 안내 제 3자 개인정보 제공 안내 제 3자 개인정보 제공 안내 제 3자 개인정보</p>
+			</li>
+			</ul>
+		</div>
+		
+		<h3>내용만</h3>
+		<div class="agree_area3">
+			<ul class="agree_lst">
+			<li class="agree_item">
+				<p class="noti_txt">서비스 이용을 위한 아이디 생성 목적으로 [PAYCO ID(이메일 또는 휴대폰번호), 비밀번호와 주소(선택)]를 제공합니다.</p>
+				<p class="noti_txt">서비스 특성에 따라 본인 가입 의사 확인, CS 처리 등 원활한 서비스 제공을 위해 아래의 정보를 제공할 수 있습니다. <br>- 본인 인증한 경우 : 이름, 생년월일, 성별, 휴대폰 번호, 아이핀 번호(아이핀 이용 시), 내/외국인 정보, DI, CI <br>- 사업자 정보를 등록한 경우 : 상호명, 사업자등록번호, 담당자 정보(이름, 생년월일, 휴대폰번호), 위임장 수령 시 수임인 정보(이름, 생년월일, 휴대폰번호), 위임인 정보(상호, 사업자등록번호, 대표자명, 전화번호)</p>
+				<p class="noti_txt">위 정보 제공에 동의 시, PAYCO ID로 연결된 [NHN엔터테인먼트]서비스를 모두 이용할 수 있으며, 제공한 정보는 서비스 탈퇴 시 또는 서비스 종료시까지 보관 후 파기됩니다.</p>
+			</li>
+			</ul>
+		</div>
+
+		<h2>정보 영역</h2>
+		<div class="info_bx">
+			<dl class="info_inner">
+			<dt class="info_tit">아이디</dt>
+			<dd class="info_txt">paycoui@nhnent.com</dd>
+			</dl>
+		</div>
+		<div class="info_bx">
+			<dl class="info_inner">
+			<dt class="info_tit">아이디</dt>
+			<dd class="info_txt">paycoui@nhnent.com</dd>
+			<dd class="info_txt">+82 10 0125 4824</dd>
+			</dl>
+		</div>
+		<h3>정보 목록 - 2개 이상인 경우</h3>
+		<div class="info_bx">
+		    <dl class="info_inner">
+		    <dt class="info_tit">아이디</dt>
+		    <dd class="info_txt">paycoui@nhnent.com</dd>
+		    </dl>
+		    <dl class="info_inner">
+		    <dt class="info_tit">제한일</dt>
+		    <dd class="info_txt">2016.05.18</dd>
+		    </dl>
+		    <dl class="info_inner">
+		    <dt class="info_tit">제한사유</dt>
+		    <dd class="info_txt">비정상 서비스 이용</dd>
+		    </dl>
+		</div>
+		<h3>잠금표시</h3>
+		<div class="info_bx info_bx2">
+        <span class="info_txt"><span class="ico_sec"></span>paycoui@nhnent.com</span>
+    </div>
+		
+		<h3>선택형</h3>
+		<div class="info_bx is_selected">
+			<dl class="info_inner">
+			<dt class="info_tit">이메일로 인증</dt>
+			<dd class="info_txt">payco@nhnent.com</dd>
+			</dl>
+			<div class="info_checkbox">
+				<!--[D] 체크박스 선택 시 .is_checked 추가, input 에 checked 속성 추가 -->
+				<span class="inp_checkbox is_checked">
+					<input type="radio" name="pw_find" id="saveid1" class="inp_chk" checked="">
+					<label for="saveid1" class="inp_label"><span class="ico_chk2"></span><em class="blind">이메일 인증 선택</em></label>
+				</span>
+			</div>
+		</div>
+		<div class="info_bx">
+			<div class="info_inner">
+				<p class="info_tit info_tit2">본인 명의로 등록된 휴대폰 인증</p>
+			</div>
+			<div class="info_checkbox">
+				<!--[D] 체크박스 선택 시 .is_checked 추가, input 에 checked 속성 추가 -->
+				<span class="inp_checkbox">
+					<input type="radio" name="pw_find" id="saveid3" class="inp_chk">
+					<label for="saveid3" class="inp_label"><span class="ico_chk2"></span><em class="blind">본인 명의로 등록된 휴대폰 인증 선택</em></label>
+				</span>
+			</div>
+		</div>
+		<div class="info_bx">
+			<dl class="info_inner">
+			<dt class="info_tit">아이디</dt>
+			<dd class="info_txt">payco@nhnent.com</dd>
+			<dt class="info_tit">가입일자</dt>
+			<dd class="info_txt">2017.02.09 20:20</dd>
+			</dl>
+			<div class="info_checkbox">
+				<!--[D] 체크박스 선택 시 .is_checked 추가, input 에 checked 속성 추가 -->
+				<span class="inp_checkbox">
+					<input type="checkbox" id="saveid2" class="inp_chk">
+					<label for="saveid2" class="inp_label"><span class="ico_chk2"></span><em class="blind">아이디를 선택</em></label>
+				</span>
+			</div>
+		</div>
+		
+		<h2>가입한 서비스</h2>
+		<p class="txt_guide">
+			- 1,2번째 li에는 first_item 클래스가 붙어야함<br>
+			- li갯수는 짝수여야 함
+		</p>
+		
+		<ul class="join_service_lst"><!-- [D] join_service_lst의 1,2번째 li에는 first_item 클래스가 붙도록 작업 부탁 드립니다. -->
+		<!--[D] 추후 이미지 변경 -->
+		<li class="first_item"><img src="img/@logo_tmon.png" width="160" height="50" alt=""></li>
+		<li class="first_item"><img src="img/@logo_ticketlink.png" width="160" height="50" alt=""></li>
+		<li><img src="img/@logo_cjmall.png" width="160" height="50" alt=""></li>
+		<li><img src="img/@logo_wmp.png" width="160" height="50" alt=""></li>
+		<li><img src="img/@logo_hmall.png" width="160" height="50" alt=""></li>
+		<li><span class="no_img_txt">페이코 몰(텍스트)</span></li>
+		</ul>
+		<br>
+		<ul class="join_service_lst"><!-- [D] join_service_lst의 1,2번째 li에는 first_item 클래스가 붙도록 작업 부탁 드립니다. -->
+		<!--[D] 추후 이미지 변경 -->
+		<li class="first_item"><img src="img/@logo_tmon.png" width="160" height="50" alt=""></li>
+		<li class="first_item"><img src="img/@logo_ticketlink.png" width="160" height="50" alt=""></li>
+		<li><img src="img/@logo_cjmall.png" width="160" height="50" alt=""></li>
+		<li><img src="img/@logo_wmp.png" width="160" height="50" alt=""></li>
+		<li><span class="no_img_txt">페이코 몰(텍스트)</span></li>
+		<li></li>
+		</ul>
+							
+		<h2>검색 결과</h2>
+		<div class="search_num">검색결과 총 <em class="txt_point">2</em> 개</div>
+
+				
+		<h2>captcha</h2>
+		<p class="txt_guide">
+			captcha 우측에 버튼 2개가 기본 타입<br>
+			버튼 1개 케이스 적용 시 captcha_ctrl에 has_btn_one 클래스 추가
+		</p>
+		<div class="captcha_area">
+			<div class="captcha_img">
+				<img src="img/captcha_img.gif" width="135" height="74" alt="캡차이미지">
+			</div>
+			<div class="captcha_ctrl"><!-- captcha_ctrl에 버튼이 1개일 경우 has_btn_one 클래스 추가 -->
+				<a href="#" class="captcha_btn"><span class="ico_refresh"></span>새로고침</a>
+				<a href="#" class="captcha_btn"><span class="ico_play"></span>음성으로 듣기</a>
+			</div>
+		</div>
+		<div class="captcha_area">
+			<div class="captcha_img">
+				<img src="img/captcha_img.gif" width="135" height="74" alt="캡차이미지">
+			</div>
+			<div class="captcha_ctrl has_btn_one"><!-- captcha_ctrl에 버튼이 1개일 경우 has_btn_one 클래스 추가 -->
+				<a href="#" class="captcha_btn"><span class="ico_refresh"></span>새로고침</a>
+				<a href="#" class="captcha_btn"><span class="ico_play"></span>음성으로 듣기</a>
+			</div>
+		</div>
+		<h2>step</h2>
+		<p class="txt_guide">
+			완료된 step 에 .is_complete 클래스 추가<br>
+			활성화 된 step 에 .is_active 클래스 추가<br>
+			활성화 된 step_txt 다음에 &lt;span class="blind"&gt;현재단계&lt;/span&gt; 추가
+		</p>
+		<h3>step1</h3>
+		<div class="step_area">
+			<ol>
+			<li class="step step_m1 is_active"><!--[D] 완료된 step 에 .is_complete 클래스 추가 -->
+				<span class="step_num">1</span>
+				<span class="step_txt">사업자 정보</span>
+				<span class="blind">현재단계</span><!--[D] 활성화된 단계에 .blind 처리된 '현재단계' 텍스트 추가 부탁드립니다.-->
+			</li>
+			<li class="step step_m2"><!--[D] 활성화된 step 에 .is_active 클래스 추가 -->
+				<span class="step_num">2</span>
+				<span class="step_txt">담당자 정보</span>
+			</li>
+			<li class="step step_m3">
+				<span class="step_num">3</span>
+				<span class="step_txt">인증 완료</span>
+			</li>
+			</ol>
+		</div>
+		
+		<h3>step2</h3>
+		<div class="step_area">
+			<ol>
+			<li class="step step_m1 is_complete"><!--[D] 완료된 step 에 .is_complete 클래스 추가 -->
+				<span class="step_num">1</span>
+				<span class="step_txt">사업자 정보</span>
+			</li>
+			<li class="step step_m2 is_active"><!--[D] 활성화된 step 에 .is_active 클래스 추가 -->
+				<span class="step_num">2</span>
+				<span class="step_txt">담당자 정보</span>
+				<span class="blind">현재단계</span><!--[D] 활성화된 단계에 .blind 처리된 '현재단계' 텍스트 추가 부탁드립니다.-->
+			</li>
+			<li class="step step_m3">
+				<span class="step_num">3</span>
+				<span class="step_txt">인증 완료</span>
+			</li>
+			</ol>
+		</div>
+		
+		<h3>step3</h3>
+		<div class="step_area">
+			<ol>
+			<li class="step step_m1 is_complete"><!--[D] 완료된 step 에 .is_complete 클래스 추가 -->
+				<span class="step_num">1</span>
+				<span class="step_txt">사업자 정보</span>
+			</li>
+			<li class="step step_m2 is_complete">
+				<span class="step_num">2</span>
+				<span class="step_txt">담당자 정보</span>
+			</li>
+			<li class="step step_m3 is_active">
+				<span class="step_num">3</span>
+				<span class="step_txt">인증 완료</span>
+				<span class="blind">현재단계</span><!--[D] 활성화된 단계에 .blind 처리된 '현재단계' 텍스트 추가 부탁드립니다.-->
+			</li>
+			</ol>
+		</div>
+		
+		
+		<h2>버튼</h2>
+		<p class="txt_guide">
+			- 버튼은 btn 클래스가 기본 (min-width 110px, 배경 #555, 높이 44px, font-size 13px)<br>
+			- 버튼이 100% 일때, .btn_area 로 감싸고 .btn 에 .btn_full 클래스 추가<br>
+			- 포인트 색상(빨강)은 .btn_point 클래스 추가<br>
+			- 연한 회색 버튼 .btn_light 클래스 추가, 흰 버튼 .btn_white 클래스 추가<br>
+			- a, button 태그 모두 사용 가능
+		</p>
+		<div class="btn_area">
+			<button type="button" class="btn btn_full btn_point">로그인</button>
+			<button type="button" class="btn btn_full">비밀번호 찾기</button>
+			<button type="button" class="btn btn_full btn_light_gray">취소</button>
+			<button type="button" class="btn btn_full btn_line"><span class="ico_app"></span>페이코 앱으로 로그인</button>
+			<button type="button" class="btn btn_full" disabled>인증 요청</button>
+			<a href="#" class="btn btn_full is_disabled">인증 요청</a>
+		</div>
+		<br>
+		<a href="#" class="btn">인증번호 발송</a>
+		<a href="#" class="btn btn_light">온라인회원 전환</a>
+		<a href="#" class="btn btn_white">변경</a>
+		<br>
+		
+		<h2>last_process_area 버튼 스타일</h2>
+		<p class="txt_guide">
+			- 버튼이 1개인 경우 : pc에서는 100%, m에서는 150px<br>
+			- 버튼이 2개인 경우 : btn_area에 is_btn_full 추가 시, m에서도 100%
+		</p>
+		<h3>버튼 1개</h3>
+		<div class="last_process_area">
+			<div class="btn_area">
+				<button type="submit" class="btn btn_full btn_point">확인</button>
+			</div>
+		</div>
+		
+		<h3>버튼 2개</h3>
+		<div class="last_process_area">
+			<div class="btn_area is_btn_full">
+				<button type="submit" class="btn btn_full btn_point">예</button>
+				<button type="submit" class="btn btn_full">아니오</button>
+			</div>
+		</div>
+		<h2>모바일용 버튼형 체크박스 선택 시 .is_checked 추가</h2>
+		<div class="btn_chk_area">
+			<span class="inp_checkbox">
+				<input type="checkbox" id="rdo_chk" class="inp_chk">
+				<label for="rdo_chk" class="inp_label"><span class="ico_cfm"></span>모든 약관에 동의</label>
+			</span>
+		</div>
+		<div class="btn_chk_area">
+			<span class="inp_checkbox is_checked">
+				<input type="checkbox" id="rdo_chk" class="inp_chk">
+				<label for="rdo_chk" class="inp_label"><span class="ico_cfm"></span>모든 약관에 동의</label>
+			</span>
+		</div>
+
+		<h2>통신사, 성별 선택 - radio</h2>
+		<p class="txt_guide">
+			선택 시 .is_checked 클래스 추가<br>
+		</p>
+		<div class="radio_area">
+			<span class="btn_radio is_checked"><!--[D] 통신사 선택 시 .is_checked 클래스 추가, input 에 checked 속성 추가 -->
+				<label for="skt" class="inp_label">SKT</label>
+				<input type="radio" id="skt" name="phone" class="inp_radio" checked>
+			</span>
+			<span class="btn_radio">
+				<label for="kt" class="inp_label">KT</label>
+				<input type="radio" id="kt" name="phone" class="inp_radio">
+			</span>
+			<span class="btn_radio">
+				<label for="lg" class="inp_label">LG U+</label>
+				<input type="radio" id="lg" name="phone" class="inp_radio">
+			</span>
+			<span class="btn_radio">
+				<label for="etc" class="inp_label">알뜰폰</label>
+				<input type="radio" id="etc" name="phone" class="inp_radio">
+			</span>
+		</div>
+		<h3>2중 택1 사이즈(온 오프 활성화 색 같음)</h3>
+		<div class="radio_area gender_area">
+			<span class="btn_radio is_checked">
+				<label for="male" class="inp_label">남자</label>
+				<input type="radio" id="male" name="sex" class="inp_radio" checked>
+			</span>
+			<span class="btn_radio">
+				<label for="female" class="inp_label">여자</label>
+				<input type="radio" id="female" name="sex" class="inp_radio">
+			</span>
+		</div>
+		<div class="radio_area gender_area">
+			<span class="btn_radio">
+				<label for="male" class="inp_label">남자</label>
+				<input type="radio" id="male" name="sex" class="inp_radio" checked>
+			</span>
+			<span class="btn_radio is_checked">
+				<label for="female" class="inp_label">여자</label>
+				<input type="radio" id="female" name="sex" class="inp_radio">
+			</span>
+		</div>
+		<h3>on/off 버튼(온 오프 활성화 색 다름)</h3>
+		<div class="radio_area toggle_area">
+			<span class="btn_radio is_checked">
+				<label for="on" class="inp_label">ON</label>
+				<input type="radio" id="on" name="sex" class="inp_radio" checked>
+			</span>
+			<span class="btn_radio">
+				<label for="off" class="inp_label btn_off">OFF</label>
+				<input type="radio" id="off" name="sex" class="inp_radio">
+			</span>
+		</div>
+		<div class="radio_area toggle_area">
+			<span class="btn_radio">
+				<label for="on" class="inp_label">ON</label>
+				<input type="radio" id="on" name="sex" class="inp_radio" checked>
+			</span>
+			<span class="btn_radio is_checked">
+				<label for="off" class="inp_label btn_off">OFF</label>
+				<input type="radio" id="off" name="sex" class="inp_radio">
+			</span>
+		</div>
+
+		<h2>input과 버튼, input 과 성별 선택</h2>
+		<h3>input + button</h3>
+		<div class="inp_group">
+			<span class="inp_bx">
+				<span class="inp_txt">
+					<span class="inp_placeholder">주소</span>
+					<input type="text" class="inp" title="주소">
+				</span>
+			</span>
+			<a href="#" class="btn">주소찾기</a>
+		</div>
+		<h3>input + radio button</h3>
+		<div class="inp_group inp_group2">
+			<span class="inp_bx">
+				<span class="inp_txt">
+					<span class="inp_placeholder">생년월일 8자리</span>
+					<input type="text" class="inp" title="생년월일">
+				</span>
+			</span>
+			<div class="radio_area gender_area">
+				<span class="btn_radio is_checked"><!--[D] 성별 선택 시 .is_checked 클래스 추가, input 에 checked 속성 추가 -->
+					<label for="male" class="inp_label">남자</label>
+					<input type="radio" id="male" name="sex" class="inp_radio" checked>
+				</span>
+				<span class="btn_radio">
+					<label for="female" class="inp_label">여자</label>
+					<input type="radio" id="female" name="sex" class="inp_radio">
+				</span>
+			</div>
+		</div>
+
+		<h2>주소검색</h2>
+		<h3>지역 선택</h3>
+		<p class="txt_guide">
+			- 선택 시 td에 .is_checked 클래스 추가<br>
+			- 한줄에 1개 또는 2개일 경우 td 추가 후 .td_none 클래스 추가 (valid)
+		</p>
+		<div class="tbl_wrap">
+			<table class="tbl tbl_address">
+			<caption><span>행정구역 목록</span></caption>
+			<tbody>
+			<tr>
+			<td class="is_checked"><!--[D] 선택 시 td에 is_checked 클래스 추가, 해당 자식 input 에 checked 속성 추가  -->
+				<span class="btn_radio">
+					<label for="all" class="inp_label">전체 (14205)</label>
+					<input type="radio" id="all" name="address" class="inp_radio" checked>
+				</span>
+			</td>
+			<td>
+				<span class="btn_radio">
+					<label for="seoul" class="inp_label">서울 (278)</label>
+					<input type="radio" id="seoul" name="address" class="inp_radio">
+				</span>
+			</td>
+			<td>
+				<span class="btn_radio">
+					<label for="busan" class="inp_label">부산 (2150)</label>
+					<input type="radio" id="busan" name="address" class="inp_radio">
+				</span>
+			</td>
+			</tr>
+			<tr>
+			<td>
+				<span class="btn_radio">
+					<label for="daejeon" class="inp_label">대전 (620)</label>
+					<input type="radio" id="daejeon" name="address" class="inp_radio">
+				</span>
+			</td>
+			<td>
+				<span class="btn_radio">
+					<label for="gg" class="inp_label">경기 (4407)</label>
+					<input type="radio" id="gg" name="address" class="inp_radio">
+				</span>
+			</td>
+			<td>
+				<span class="btn_radio">
+					<label for="chungnam" class="inp_label">충남 (1105)</label>
+					<input type="radio" id="chungnam" name="address" class="inp_radio">
+				</span>
+			</td>
+			</tr>
+			<tr>
+			<td>
+				<span class="btn_radio">
+					<label for="chungbuk" class="inp_label">충북 (1105)</label>
+					<input type="radio" id="chungbuk" name="address" class="inp_radio">
+				</span>
+			</td>
+			<td>
+				<span class="btn_radio">
+					<label for="jeonnam" class="inp_label">전남 (2004)</label>
+					<input type="radio" id="jeonnam" name="address" class="inp_radio">
+				</span>
+			</td>
+			<td>
+				<span class="btn_radio">
+					<label for="gb" class="inp_label">경북 (8)</label>
+					<input type="radio" id="gb" name="address" class="inp_radio">
+				</span>
+			</td>
+			</tr>
+			<tr>
+			<td>
+				<span class="btn_radio">
+					<label for="jeju" class="inp_label">제주특별자치도 (12345)</label>
+					<input type="radio" id="jeju" name="address" class="inp_radio">
+				</span>
+			</td>
+			<td>
+				<span class="btn_radio">
+					<label for="etcetc" class="inp_label">가나다라마바사아자차카 (12345)</label>
+					<input type="radio" id="etcetc" name="address" class="inp_radio">
+				</span>
+			</td>
+			<td class="td_none">
+			</td>
+			</tr>
+			</tbody>
+			</table>
+		</div>
+		<div class="paginate"><!--[D] 현재 페이지 일때 aria-label="현재 페이지" 추가 부탁드립니다 -->
+			<a class="btn_prev is_disabled"><span class="ico_prev">이전 페이지</span></a>
+			<strong class="btn_page is_selected" aria-label="현재 페이지">1</strong>
+			<a href="#" class="btn_page">2</a>
+			<a href="#" class="btn_page">3</a>
+			<a href="#" class="btn_page">4</a>
+			<a href="#" class="btn_page">5</a>
+			<a href="#" class="btn_next"><span class="ico_next">다음 페이지</span></a>
+		</div>
+		
+		<h3>주소 선택</h3>
+		<a href="#" class="address_info">
+			<dl class="addr_load">
+				<dt class="tag_txt">도로명</dt>
+				<dd class="txt_address">경기도 성남시 분당구 동판교로266번길 24 (삼평동, 분당경찰서 동판교파출소)</dd>
+			</dl>
+			<dl class="addr_land">
+				<dt class="tag_txt">지번</dt>
+				<dd class="txt_address">경상남도 김해시 강동 309-10</dd>
+			</dl>
+			<span class="zipcode"><span class="blind">우편번호</span>461-360</span>
+		</a>
+		<a href="#" class="address_info">
+			<dl class="addr_load">
+				<dt class="tag_txt">도로명</dt>
+				<dd class="txt_address">경상남도 김해시 김해대로 2272번길 43 (강동)</dd>
+			</dl>
+			<dl class="addr_land">
+				<dt class="tag_txt">지번</dt>
+				<dd class="txt_address">경상남도 김해시 강동 309-10</dd>
+			</dl>
+			<span class="zipcode"><span class="blind">우편번호</span>461-360</span>
+		</a>
+		
+		<h3>주소 선택 결과</h3>
+		<div class="address_fix_area">
+			<p class="address_fix_item1">경기도 성남시 분당구 판교로 332 (삼평동)</p>
+			<span class="address_fix_item2">13493</span>
+		</div>
+	</div>
+</div>
+<!-- 마크업 확인용입니다. -->
+<style>
+	#case_view,#case_view2{display:none;position:relative;width:100%;z-index:1000;padding:5px;background:#000;opacity:0.7}
+	#case_view2{display:inline-block;position:fixed;bottom:0;left:0;width:auto}
+	.btn_opt{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+	.btn_m-view{background:#22002e}
+</style>
+<div id="case_view2">
+	<a href="#" class="btn_opt btn_m-view">모바일 view</a>
+</div>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script>    
+$(function(){
+	$('#case_view2 .btn_m-view').click(function(e){
+		e.preventDefault();
+		$('body').toggleClass('m');		
+	});
+});
+</script>
+<!-- //마크업 확인용입니다. -->
+</body>
+</html>

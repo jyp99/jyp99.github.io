@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<title>로그인 :: PAYCO 회원</title>
+<link rel="stylesheet" type="text/css" href="css/neid.css">
+<!-- for ie script -->
+<script type="text/javascript" src="js/html5.js"></script>
+</head>
+<body class="m">
+<!-- wrap -->
+<div class="wrap">
+	<!--SSL 인증창-->
+	<div class="ssl_noti">
+		<a href="#" class="txt_noti">
+			<span class="txt">
+				<span class="ico_lock"></span>안전한 PAYCO 로그인을 위해<br>녹색 주소창과 URL, 자물쇠 마크를 확인하세요!<em><span class="ico_lock"></span>자세히 보기</em>
+			</span>
+		</a>
+		<button type="button" class="btn_close"><span class="ico_close">안내창 닫기</span></button>
+	</div>
+	<!--//SSL 인증창-->
+	<!--언어선택-->
+	<div class="sel_lang"><!-- [D] 목록 노출 시 .is_active 추가 -->
+		<a href="#" class="btn_sel">한국어<span class="sel_arr">언어선택 더보기</span></a>
+		<ul class="lst_sel">
+		<li class="is_active"><a href="#">한국어<span class="sel_arr"></span></a></li><!--[D] 선택된 언어에 .is_active 추가-->
+		<li><a href="#">ENG<span class="sel_arr"></span></a></li>
+		</ul>
+	</div>
+	<!--//언어선택-->
+
+	<!-- header -->
+	<header id="header" class="header_logo">
+		<!-- 로그인 첫 화면 -->
+		<h1 class="logo_area">
+			<span class="logo_payco">PAYCO</span>
+			<span class="txt">페이코 아이디로 <em>티켓몬스터</em>를 이용할 수 있습니다.</span>
+		</h1>
+	</header>
+	<!-- //header -->
+	<div id="container">
+		<div class="content">
+			<form>
+			<fieldset>
+			<legend>로그인 정보 입력</legend>
+				<div class="keyboard_area"> 
+						<a href="#" class="txt_link"><span class="txt">PC자판 이미지보기</span><span class="ico_arr">PC자판 열기</span></a> <!-- [D] PC자판 활성화 시 .is_active 추가; .key_area 디스플레이 block처리 -->
+						<span class="key_area" style="display:none"><span class="key_img">영문/한글 자판 이미지</span></span>
+					</div>
+					<div class="login_inp_area">
+						<span class="inp_bx sel"><!-- [D] 포커스 시 .is_focus 추가; 값 입력 시 .is_value 추가 -->
+							<!-- [D] 툴팁 노출시 .is_show 추가 -->
+						 	<span class="tooltip"><em class="txt">이메일 또는 휴대폰 아이디 입력</em></span>
+							<span class="inp_txt">
+								<span class="inp_placeholder">이메일 또는 휴대폰 아이디</span>
+								<input type="text" class="inp" value="" title="이메일 또는 휴대폰 아이디">
+								<button type="button" class="btn_del"><span class="ico_del">입력한 내용 지우기</span></button>
+								<!-- [D] 이메일 주소 select 영역 -->
+								<div class="sel_email">
+									<span class="ico_sel_arr"></span>
+									<select name="" id="">
+									  <option value="0">직접 입력</option>
+									  <option value="1">naver.com</option>
+									  <option value="2">gmail.com</option>
+									  <option value="3">hanmail.net</option>
+									</select>
+								</div>
+								<!-- //[D] 이메일 주소 select 영역 -->
+							</span>
+							<p class="error_txt">유효성 체크 메시지입니다</p>
+						</span>
+						<!-- [D] 자동완성 기능 비노출시 .is_show 제거-->
+						<ul class="sel_bx">
+							<li class="sel_item"><a href="#" class="sel_link"><span class="opt_tit">paycoui_design@payco.compaycoui_design@payco.com</span></a></li>
+							<li class="sel_item"><a href="#" class="sel_link"><span class="opt_tit">paycoui_design@payco.compaycoui_design@payco.compaycoui_design@payco.compaycoui_design@payco.com</span></a></li>
+							<li class="sel_item"><a href="#" class="sel_link"><span class="opt_tit">paycoui_design@payco.compaycoui_design@payco.compaycoui_design@payco.compaycoui_design@payco.com</span></a></li>
+						</ul>
+						<!--// [D] 자동완성 기능 -->
+						<span class="inp_bx"><!-- [D] 입력 에러 시 .error 추가 -->
+							<span class="inp_txt">
+								<span class="inp_placeholder">비밀번호 (8~16자리)</span>
+								<input type="password" class="inp" title="비밀번호">
+								<button type="button" class="btn_del"><span class="ico_del">입력한 내용 지우기</span></button>
+							</span>
+							<p class="error_txt">잘못 입력하였습니다.</p>
+						</span>
+					</div>
+				<div class="checkbox_area">
+					<span class="inp_checkbox is_checked"><!--[D] 체크박스 선택 시 .is_checked 추가, input 에 checked 속성 추가 -->
+						<input type="checkbox" id="autoLogin" class="inp_chk" checked>
+						<label for="autoLogin" class="inp_label"><span class="ico_chk"></span>로그인 상태 유지</label>
+					</span>
+					<span class="txt_checkbox">
+						<a href="#" class="txt_link">IP보안</a>
+						<input type="checkbox" class="inp_chk" id="ipSecurity">
+						<!--[D] IP보안 체크 해제 시, 텍스트 ON에서 OFF으로 변경 -->
+						<label class="inp_label" for="ipSecurity"><span class="blind">IP보안</span><em>ON</em></label>
+					</span> 
+				</div>
+				<div class="btn_area">
+					<button type="submit" class="btn btn_full btn_point">로그인</button>
+					<span class="txt_divide"><em>또는</em></span>
+					<button type="submit" class="btn btn_full btn_line"><span class="ico_app"></span>페이코 앱으로 로그인</button>
+				</div>
+			</fieldset>
+			</form>
+		</div>
+
+		<div class="footer_menu">
+			<div class="footer_inner">
+				<ul class="menu_lst">
+				<li class="menu_item"><a href="#" class="menu_link">아이디찾기</a></li>
+				<li class="menu_item"><span class="bar">|</span><a href="#" class="menu_link">비밀번호찾기</a></li>
+				<li class="menu_item"><span class="bar">|</span><a href="#" class="menu_link">회원가입</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+</div>
+
+<div class="dimmed" style="display:none"></div>
+<div class="ly_pop_wrap is_m_show" style="display:none">
+	<div class="ly_pop ly_app_down">
+		<div class="ly_cont">
+			<div class="img_wrap">
+				<img src="img/img_payco_app_m2.png" alt="">
+			</div>
+			<h2 class="ly_tit">PAYCO 앱으로 로그인이 진행됩니다.</h2>
+			<p class="ly_desc">앱에서 인증이 완료된 후<br><em class="point_txt">[인증완료]</em> 버튼을 눌러주세요.</p>
+			<p class="ly_desc">앱이 설치되어 있지 않나요?<br><a href="#" class="txt_link">앱 다운받기</a></p>
+		</div>
+		<div class="ly_btn_area">
+			<button type="button" class="btn btn_point btn_dark_gray">인증완료</button>
+			<button type="button" class="btn">취소</button>
+		</div>
+	</div>
+	<span class="vmiddle"></span>
+</div>
+<!-- [D] 앱실행 확인 -->
+<div class="ly_pop_wrap is_m_show" style="display:none">
+	<div class="ly_pop ly_app_down">
+		<div class="ly_cont">
+			<div class="img_wrap">
+				<img src="img/img_app_error_m.png" alt="">
+			</div>
+			<h2 class="ly_tit">PAYCO 앱에서<br>인증이 완료되지 않았습니다.</h2>
+			<p class="ly_desc">로그인을 위해 앱을 실행합니다.</p>
+		</div>
+		<div class="ly_btn_area">
+			<button type="button" class="btn btn_point">재시도</button>
+			<button type="button" class="btn">취소</button>
+		</div>
+	</div>
+	<span class="vmiddle"></span>
+</div>
+<!-- 마크업 확인용입니다. -->
+<style>
+	#case_view,#case_view2{display:none;position:relative;width:100%;z-index:1000;padding:5px;background:#000;opacity:0.7}
+	#case_view2{display:inline-block;position:fixed;bottom:0;left:0;width:auto}
+	.btn_opt{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+	.btn_m-view{background:#22002e}
+</style>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script>
+	$(function(){
+		$('.ly_pop_wrap a,.btn_close').click(function(e){
+			e.preventDefault();
+			$('.ly_pop_wrap,.dimmed').hide();
+		});
+	});
+</script>
+<div id="case_view2">
+	<a href="#" class="btn_opt" onclick="$('.dimmed,.ly_pop_wrap').hide();$('.dimmed,.ly_pop_wrap:eq(0)').show();return false;">앱으로 로그인 팝업(모바일전용)</a>
+	<a href="#" class="btn_opt" onclick="$('.dimmed,.ly_pop_wrap').hide();$('.dimmed,.ly_pop_wrap:eq(1)').show();return false;">앱 실행 확인(모바일전용)</a>
+</div>
+<!-- //마크업 확인용입니다. -->
+</body>
+</html>

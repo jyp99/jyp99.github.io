@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<title>주소검색 :: PAYCO 회원</title>
+<link rel="stylesheet" type="text/css" href="css/neid.css">
+<!-- for ie script -->
+<script type="text/javascript" src="js/html5.js"></script>
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+    <!-- header -->
+    <?php include 'inc/inc_header.html';?>
+    <!-- //header -->
+    
+	<div id="container">
+		<div class="content">
+			<div class="tit_area">
+				<h2 class="h_tit">동이름(읍/면/리) 또는 도로명을 입력해 주세요.</h2>
+			</div>
+			<form>
+			<fieldset>
+			<legend>주소 검색 양식 입력</legend>
+				<span class="inp_bx search_add">
+					<span class="inp_txt">
+						<input type="text" class="inp" title="검색" value="삼평동">
+            <button type="button" class="btn_search"><span class="ico_search">검색</span></button>
+            <button type="button" class="btn_del"><span class="ico_del">입력한 내용 지우기</span></button>
+					</span>
+          <p class="error_txt">유효성 체크 메시지입니다</p>
+				</span>
+				<div class="address_fix_area">
+					<p class="address_fix_item1">경기도 성남시 분당구 판교로 332 (삼평동)</p>
+					<span class="address_fix_item2">13493</span>
+				</div>
+				<!-- [D] 포커스 시, is_focus 클래스 추가 -->
+				<span class="inp_bx search_add">
+					<span class="inp_txt">
+						<span class="inp_placeholder">상세주소입력</span>
+						<input type="text" class="inp" title="상세주소입력">
+            <button type="button" class="btn_del"><span class="ico_del">입력한 내용 지우기</span></button>
+					</span>
+          <p class="error_txt">유효성 체크 메시지입니다</p>
+				</span>
+        <div class="checkbox_area">
+          <span class="inp_checkbox inp_bold inp_multi_txt">
+            <input type="checkbox" id="check3" class="inp_chk">
+            <label for="check3" class="inp_label"><span class="ico_chk"></span>서비스 이용 및 부정거래방지 목적으로 이메일 주소를<br> 수집하며, 회원탈퇴 시까지 저장됩니다.</label>
+          </span>
+        </div>
+
+				<div class="btn_area">
+					<button type="submit" class="btn btn_full btn_point">확인</button>
+				</div>
+			</fieldset>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- 마크업 확인용입니다. -->
+<style>
+	#case_view,#case_view2{display:none;position:relative;width:100%;z-index:1000;padding:5px;background:#000;opacity:0.7}
+	#case_view2{display:inline-block;position:fixed;bottom:0;left:0;width:auto}
+	.btn_opt{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+	.btn_m-view{background:#22002e}
+</style>
+<div id="case_view2">
+	<a href="#" class="btn_opt btn_m-view">모바일 view</a>
+</div>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script>    
+$(function(){
+	$('#case_view2 .btn_m-view').click(function(e){
+		e.preventDefault();
+		$('body').toggleClass('m');		
+	});
+});
+</script>
+<!-- //마크업 확인용입니다. -->
+</body>
+</html>

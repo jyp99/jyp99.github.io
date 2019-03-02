@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="all">
+<title>KPGA :: STATS :: 선수 위치 찾기 서비스 - 코리안투어 OOOO 대회</title>
+<meta property="og:site_name" content="KPGA STATS" />
+<meta property="og:title" content="KPGA :: STATS :: 선수 위치 찾기 서비스 - 코리안투어 OOOO 대회" />
+<meta property="og:type" content="website" />
+<meta name="keyword" content="KPGA, (사)한국프로골프협회, 사단법인한국프로골프협회, 한국프로골프협회, 골프, 남자골프, 코리안투어, 챔피언스투어, 챌린지투어, 프론티어투어" />
+<meta name="decription" content="코리안투어 OOOO 대회의 선수 위치 찾기 서비스에서 응원하는 선수와 경기 결과를 실시간으로 확인하세요!" />
+<meta property="og:description" content="코리안투어 OOOO 대회의 선수 위치 찾기 서비스에서 응원하는 선수와 경기 결과를 실시간으로 확인하세요!" />
+<link rel="shortcut icon" href="img/icon/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="img/icon/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/icon/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="152x152" href="img/icon/favicon-152x152.png">
+<meta property="og:image" content="img/icon/favicon-350x350.jpg" /> 
+<link rel="stylesheet" type="text/css" href="css/kpga.css">
+<link rel="stylesheet" type="text/css" href="js/libs/jui-chart-develop/lib/ui.css">
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul class="skip">
+<li><a href="#header" onclick="document.getElementById('header').tabIndex=-1;document.getElementById('header').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+
+<div class="wrap">
+	<!--[D] HEADER -->
+	<header>
+		<h1 class="logo"><a href="#" class="link_kpga">KPGA</a> <a href="#" class="link_stats">STATS</a></h1>
+		<h2 class="h_main"><a href="#" class="link_txt">선수 위치 찾기 서비스</a></h2>
+		<a href="#" class="link_live_score">LIVE SCORE</a>
+	</header>
+	<!--//[D] HEADER -->
+
+	<!-- [D] CONTENTS -->
+	<main id="content">
+		<section class="sec sec_live_score">
+			<div class="inner">
+				<h3 class="group_name">20조</h3>
+				<span class="start_time_wrap">
+					<span class="tit_txt">출발 시간</span>
+					<em class="time_txt">#1, AM 11:08</em>
+				</span>
+				<h4 class="blind">선수 별 라이브 스코어</h4>
+				<div class="scroll_wrap">
+					<table class="tbl_player">
+					<caption><span class="blind">선수 별 라이브 스코어</span></caption>
+					<thead>
+					<tr>
+					<th scope="col">선수</th>
+					<th scope="col">순위</th>
+					<th scope="col">오늘 스코어</th>
+					<th scope="col">누적 스코어</th>
+					<th scope="col">제네시스 포인트</th>
+					<th scope="col">제네시스 상금 순위</th>
+					<th scope="col">평균 타수</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+					<th scope="row" class="name">
+						<span class="player_photo_area">
+							<img src="img/@tmp_player1.jpg" alt="선수 이미지">
+						</span>김병준
+					</th>
+					<td class="ranking">2</td>
+					<td class="score_today">E</td>
+					<td>-9</td>
+					<td><em class="ranking">89th</em><span class="points">3,142 points</span></td>
+					<td><em class="ranking">36th</em><span class="points">\113,600,000</span></td>
+					<td>70.25</td>
+					</tr>
+					<tr>
+					<th scope="row" class="name">
+						<span class="player_photo_area"></span>
+						이승택<!-- [D] 선수 이미지 없는 경우 적용 예 1 -->
+					</th>
+					<td class="ranking">4</td>
+					<td class="score_today is_plus">+1</td>
+					<td>-9</td>
+					<td><em class="ranking">89th</em><span class="points">3,142 points</span></td>
+					<td><em class="ranking">36th</em><span class="points">\113,600,000</span></td>
+					<td>70.25</td>
+					</tr>
+					<tr>
+					<th scope="row" class="name">
+						<span class="player_photo_area">
+							<img src="img/@tmp_player_empty.jpg" alt="이미지 없음"></span>
+						</span>
+						김태우<!-- [D] 선수 이미지 없는 경우 적용 예 2 -->
+					</th>
+					<td class="ranking">3</td>
+					<td class="score_today is_minus">-1</td>
+					<td>-9</td>
+					<td><em class="ranking">89th</em><span class="points">3,142 points</span></td>
+					<td><em class="ranking">36th</em><span class="points">\113,600,000</span></td>
+					<td>70.25</td>
+					</tr>
+					</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+		
+
+		<section class="sec sec_holl_by_holl">
+			<div class="inner">
+				<div class="sec_tit_wrap">
+					<h4 class="h_sec">홀 바이 홀</h4>
+					<div class="tit_sub_desc"><em class="point_txt">11 Hole</em>  Par 4, 431yds</div>
+				</div>
+				<div class="scroll_wrap">
+					<table class="tbl_holl_by_holl">
+					<caption><span class="blind">홀 바이 홀</span></caption>
+					<thead>
+					<tr>
+					<th scope="row">HOLE</th>
+					<th scope="col">1</th>
+					<th scope="col">2</th>
+					<th scope="col">3</th>
+					<th scope="col">4</th>
+					<th scope="col">5</th>
+					<th scope="col">6</th>
+					<th scope="col">7</th>
+					<th scope="col">8</th>
+					<th scope="col">9</th>
+					<th scope="col" class="state_inout">IN</th><!-- [D] IN/OUT일경우 th와 첫번째 td에 state_inout 클래스 적용 -->
+					<th scope="col">10</th>
+					<th scope="col" class="is_active">11</th><!-- [D]현재 진행중인 홀의 th와 td에 is_active 클래스 적용 -->
+					<th scope="col">12</th>
+					<th scope="col">13</th>
+					<th scope="col">14</th>
+					<th scope="col">15</th>
+					<th scope="col">16</th>
+					<th scope="col">17</th>
+					<th scope="col">18</th>
+					<th scope="col" class="state_inout">OUT</th><!-- [D] IN/OUT일경우 th와 첫번째 td에 state_inout 클래스 적용 -->
+					<th scope="col" class="total">TOTAL</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+					<th scope="row">PAR</th>
+					<td>4</td>
+					<td>4</td>
+					<td>5</td>
+					<td>4</td>
+					<td>3</td>
+					<td>4</td>
+					<td>5</td>
+					<td>3</td>
+					<td>5</td>
+					<td class="state_inout">37</td>
+					<td>3</td>
+					<td class="is_active">4</td>
+					<td>4</td>
+					<td>4</td>
+					<td>4</td>
+					<td>4</td>
+					<td>4</td>
+					<td>4</td>
+					<td>4</td>
+					<td class="state_inout">43</td>
+					<td class="total">72</td>
+					</tr>
+					<tr>
+					<th scope="row"><a href="#" class="link_player_detail">김병준</a></th>
+					<td>4</td>
+					<td>4</td>
+					<td>5</td>
+					<td>4</td>
+					<td>3</td>
+					<td>4</td>
+					<td>5</td>
+					<td>3</td>
+					<td>5</td>
+					<td class="state_dimmed">37</td>
+					<td>3</td>
+					<td class="is_active state_b">4<em class="blind">버디</em></td>
+					<td>4</td>
+					<td>4</td>
+					<td class="state_a">4<em class="blind">알바트로스</em></td>
+					<td>4</td>
+					<td>4</td>
+					<td>4</td>
+					<td>4</td>
+					<td class="state_dimmed">43</td><!-- [D] IN/OUT일경우 2번째 이상 td에 state_dimmed 클래스 적용 -->
+					<td class="total_dimmed">72</td>
+					</tr>
+					<tr>
+					<th scope="row"><a href="#" class="link_player_detail">이승택</a></th>
+					<td>4</td>
+					<td>4</td>
+					<td>5</td>
+					<td>4</td>
+					<td>3</td>
+					<td>4</td>
+					<td>5</td>
+					<td>3</td>
+					<td>5</td>
+					<td class="state_dimmed">37</td>
+					<td>3</td>
+					<td class="is_active state_b">4<em class="blind">버디</em></td>
+					<!-- [D]범례에 해당되는 상태 표시 필요한 경우 td에 범례 관련 클래스 적용 및 대체 텍스트 추가 적용
+					알바트로 : state_a / <em class="blind">알바트로스</em>
+					이글 : state_e / <em class="blind">이글</em>
+					버디 : state_b / <em class="blind">버디</em>
+					파 : state_f / <em class="blind">파</em>
+					보기 : state_v / <em class="blind">보기</em>
+					더블보기 : state_v2 / <em class="blind">더블보기</em>
+					3+ 보기 : state_v3 / <em class="blind">3+ 보기</em>
+					-->
+					<td>4</td>
+					<td>4</td>
+					<td>4</td>
+					<td>4</td>
+					<td>4</td>
+					<td>4</td>
+					<td>4</td>
+					<td class="state_dimmed">43</td>
+					<td class="total_dimmed">72</td>
+					</tr>
+					<tr>
+					<th scope="row"><a href="#" class="link_player_detail">김태우</a></th>
+					<td>4</td>
+					<td>4</td>
+					<td>5</td>
+					<td>4</td>
+					<td>3</td>
+					<td>4</td>
+					<td>5</td>
+					<td>3</td>
+					<td>5</td>
+					<td class="state_dimmed">37</td>
+					<td>3</td>
+					<td class="is_active">4</td>
+					<td>4</td>
+					<td>4</td>
+					<td>4</td>
+					<td>4</td>
+					<td>4</td>
+					<td>4</td>
+					<td>4</td>
+					<td class="state_dimmed">43</td>
+					<td class="total_dimmed">72</td>
+					</tr>
+					</tbody>
+					</table>
+				</div>
+				<ul class="lst_state">
+				<li class="state_item state_a"><span class="txt">알바트로스</span></li>
+				<li class="state_item state_e"><span class="txt">이글</span></li>
+				<li class="state_item state_b"><span class="txt">버디</span></li>
+				<li class="state_item state_f"><span class="txt">파</span></li>
+				<li class="state_item state_v"><span class="txt">보기</span></li>
+				<li class="state_item state_v2"><span class="txt">더블보기</span></li>
+				<li class="state_item state_v3"><span class="txt">3+ 보기</span></li>
+				</ul>
+			</div>
+		</section>
+		<section class="sec sec_shot_tracker">
+			<div class="inner">
+				<div class="sec_tit_wrap">
+					<h4 class="h_sec">샷 트랙커</h4>
+				</div>
+				<div class="nav_controll_wrap lst_holl">
+					<div class="scroll_wrap">
+						<ul class="tab">
+						<li class="tab_item"><a href="#" class="btn_tab btn_holl1">1</a></li>
+						<li class="tab_item"><a href="#" class="btn_tab btn_holl2">2</a></li>
+						<li class="tab_item"><a href="#" class="btn_tab btn_holl3">3</a></li>
+						<li class="tab_item"><a href="#" class="btn_tab btn_holl4">4</a></li>
+						<li class="tab_item"><a href="#" class="btn_tab btn_holl5">5</a></li>
+						<li class="tab_item"><a href="#" class="btn_tab btn_holl6">6</a></li>
+						<li class="tab_item"><a href="#" class="btn_tab btn_holl7">7</a></li>
+						<li class="tab_item"><a href="#" class="btn_tab btn_holl8">8</a></li>
+						<li class="tab_item"><a href="#" class="btn_tab btn_holl9">9</a></li>
+						<li class="tab_item"><a href="#" class="btn_tab btn_holl10">10</a></li>
+						<li class="tab_item is_selected"><a href="#" class="btn_tab btn_holl11 ">11<span class="blind">선택 됨</span></a></li><!-- [D]선택된 tab_item에 is_selected 클래스 추가 -->
+						<li class="tab_item"><a href="#" class="btn_tab btn_holl12">12</a></li>
+						<li class="tab_item"><a href="#" class="btn_tab btn_holl13">13</a></li>
+						<li class="tab_item"><a href="#" class="btn_tab btn_holl14">14</a></li>
+						<li class="tab_item"><a href="#" class="btn_tab btn_holl15">15</a></li>
+						<li class="tab_item"><a href="#" class="btn_tab btn_holl16">16</a></li>
+						<li class="tab_item is_disabled"><a href="#" class="btn_tab btn_holl17">17</a></li><!-- [D]비활성인 tab_item에 is_disabled 클래스 추가 -->
+						<li class="tab_item is_disabled"><a href="#" class="btn_tab btn_holl18">18</a></li>
+						</ul>
+					</div>
+					<button class="btn_prev is_show is_disabled">이전</button>
+					<button class="btn_next is_show">다음</button>
+				</div>
+				<div class="tab_contents holl_contents">
+					<div class="tit_wrap">
+						<h5 class="tit_txt">11 HOLE</h5>
+						<div class="tit_sub_desc"> Par 4, 431Yds</div>
+					</div>
+					<div class="player_map_wrap">
+						<div class="map_area">
+							<!-- 지도 위  라인을 클릭했을때 노출되는 샷 정보 레이어 -->
+							<div class="layer_player_info is_show" style="left:48.61%;top:29.09%">
+								<div class="cnt_wrap">	
+									<span class="player_photo_area player3">
+										<img src="img/@tmp_player1.jpg" alt="선수 이미지">
+									</span>
+									<span class="txt_area">
+										<span class="name">김태우</span>
+										<span class="desc_txt">Shot 1 : 251.5Yds <br class="is_pc_show">(남은 거리 166Yds)</span>
+									</span>
+								</div>
+								<button class="btn_close">닫기</button>
+							</div>
+							<!-- //지도 위  라인을 클릭했을때 노출되는 샷 정보 레이어 -->
+							<a href="#" class="btn_marker" style="left:61.94%;top:8%">선수1 샷1 정보</a>
+							<a href="#" class="btn_marker" style="left:50.55%;top:32.36%">선수1 샷2 정보</a>
+							<a href="#" class="btn_marker" style="left:75%;top:91.82%">선수1 샷3 정보</a>
+							<a href="#" class="btn_marker" style="left:62.5%;top:8.36%">선수2 샷1 정보</a>
+							<a href="#" class="btn_marker" style="left:52.22%;top:30.91%">선수2 샷2 정보</a>
+							<a href="#" class="btn_marker" style="left:75.56%;top:92.36%">선수2 샷3 정보</a>
+							<a href="#" class="btn_marker" style="left:62.5%;top:5.82%">선수3 샷1 정보</a>
+							<a href="#" class="btn_marker" style="left:48.61%;top:29.09%">선수3 샷2 정보</a>
+							<a href="#" class="btn_marker" style="left:80.56%;top:89.09%">선수3 샷3 정보</a>
+							<img src="img/course/kb/11.png" alt="">
+							<svg class="map_point" width="100%" height="100%" viewBox="0 0 360 550" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+							<!-- 선수1 -->
+							<g class="player1">
+								<path d="M223 44 L182 178"></path><!-- 1번째 지점부터 2번째 지점까지 연결 선 -->
+								<path d="M182 178 L270 505"></path><!-- 2번째 지점부터 3번째 지점까지 연결 선 -->
+								<circle cx="223" cy="44" r="5"></circle><!-- 1번째 지점 포인트 -->
+								<circle cx="182" cy="178" r="5"></circle><!-- 2번째 지점 포인트 -->
+								<circle cx="270" cy="505" r="5"></circle><!-- 3번째 지점 포인트 -->
+							</g>
+							<!-- 선수2 -->
+							<g class="player2">
+								<path d="M225 46 L188 170"></path>
+								<path d="M188 170 L272 508"></path>
+								<circle cx="225" cy="46" r="5"></circle>
+								<circle cx="188" cy="170" r="5"></circle>
+								<circle cx="272" cy="508" r="5"></circle>
+							</g>
+							<!-- 선수3 -->
+							<g class="player3">
+								<path d="M225 32 L175 160"></path>
+								<path d="M175 160 L290 490"></path>
+								<circle cx="225" cy="32" r="5"></circle>
+								<circle cx="175" cy="160" r="5"></circle>
+								<circle cx="290" cy="490" r="5"></circle>
+							</g>
+							</svg>
+						</div>
+					</div>
+					<ul class="tab lst_round">
+					<li class="tab_item"><a href="#" class="btn_tab btn_round1">Round 1</a></li>
+					<li class="tab_item"><a href="#" class="btn_tab btn_round2">Round 2</a></li>
+					<li class="tab_item"><a href="#" class="btn_tab btn_round3">Round 3</a></li>
+					<li class="tab_item is_selected"><a href="#" class="btn_tab btn_round4">Round 4<span class="blind">선택 됨</span></a></li>
+					</ul>
+					<div class="tab_contents round_info">
+						<ul class="tab lst_player">
+						<li class="tab_item">
+							<a href="#" class="btn_tab btn_player1">
+								<span class="player_photo_area">
+									<img src="img/@tmp_player1.jpg" alt="선수 이미지">
+								</span>
+								<span class="name">김병준</span>
+							</a>
+						</li>
+						<li class="tab_item">
+							<a href="#" class="btn_tab btn_player2">
+								<span class="player_photo_area">
+								</span>
+								<span class="name">이승택</span>
+							</a>
+						</li>
+						<li class="tab_item is_selected">
+							<a href="#" class="btn_tab btn_player3">
+								<span class="player_photo_area">
+									<img src="img/@tmp_player3.jpg" alt="선수 이미지">
+								</span>
+								<span class="name">김태우</span>
+							</a>
+						</li>
+						</ul>
+						<a href="#" class="link_player_detail"><span class="txt">선수 정보 상세보기</span></a>
+						<div class="tab_contents player_shot_info">
+							<table class="tbl_shot">
+							<caption><span>선수 샷 기록</span></caption>
+							<thead>
+							<tr>
+							<th scope="col">샷</th>
+							<th scope="col">비거리<br class="is_m_show">(Yds)</th>
+							<th scope="col">샷 상황</th>
+							<th scope="col">남은 거리<br class="is_m_show">(Yds)</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+							<th>1</th>
+							<td>283.453</td>
+							<td>페어웨이</td>
+							<td>153.092</td>
+							</tr>
+							<tr>
+							<th>2</th>
+							<td>283.453</td>
+							<td>페어웨이</td>
+							<td>153.092</td>
+							</tr>
+							<tr>
+							<th>3</th>
+							<td>283.453</td>
+							<td>페어웨이</td>
+							<td>153.092</td>
+							</tr>
+							<tr>
+							<th>4</th>
+							<td>283.453</td>
+							<td>페어웨이</td>
+							<td>153.092</td>
+							</tr>
+							<tr>
+							<th>5</th>
+							<td>283.453</td>
+							<td>페어웨이</td>
+							<td>153.092</td>
+							</tr>
+							<tr>
+							<th>6</th>
+							<td>283.453</td>
+							<td>페어웨이</td>
+							<td>153.092</td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="holl_detail_wrap">
+						<div class="holl_cnt">
+							<h6 class="h_txt">홀 성적</h6>
+							<div class="chart_wrap donut_chart">
+							</div>
+							<ul class="lst_state">
+							<li class="state_item state_a"><span class="txt">알바트로스</span></li>
+							<li class="state_item state_e"><span class="txt">이글</span></li>
+							<li class="state_item state_b"><span class="txt">버디</span></li>
+							<li class="state_item state_f"><span class="txt">파</span></li>
+							<li class="state_item state_v"><span class="txt">보기</span></li>
+							<li class="state_item state_v2"><span class="txt">더블보기</span></li>
+							<li class="state_item state_v3"><span class="txt">3+ 보기</span></li>
+							</ul>
+						</div>
+						<div class="holl_cnt">
+							<h6 class="h_txt">홀 기록</h6>
+							<ul class="lst_holl_history">
+							<li class="holl_data">
+								<em class="data_tit">총 난이도</em>
+								<span class="data_txt">9</span>
+							</li>
+							<li class="holl_data">
+								<em class="data_tit">평균타수</em>
+								<span class="data_txt">4.09</span>
+							</li>
+							<li class="holl_data">
+								<em class="data_tit">최장타</em>
+								<span class="data_txt">301 Yards</span>
+							</li>
+							<li class="holl_data">
+								<em class="data_tit">페어웨이 안착률</em>
+								<span class="data_txt">68.15%</span>
+							</li>
+							<li class="holl_data">
+								<em class="data_tit">그린적중률(GIR)</em>
+								<span class="data_txt">65.83%</span>
+							</li>
+							<li class="holl_data">
+								<em class="data_tit">최장퍼팅</em>
+								<span class="data_txt">19 Yards</span>
+							</li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+	</main>
+	<!-- //[D] CONTENTS -->
+</div>
+<!-- Javascript Area -->
+<script src="js/libs/jquery-1.12.4.min.js"></script>
+<script src="js/libs/jui-chart-develop/dist/chart.js"></script>
+<script id="script_code">
+
+var windowWidth = $( window ).width();
+var chart = jui.include("chart.builder");
+var tpl_tooltip = '';
+
+winSizeChk();
+
+
+function winSizeChk() {
+	// 모바일일경우
+	if(windowWidth < 632) {
+		tpl_tooltip = '<div id="chart_tooltip" class="popover popover-top">' +
+		'<div class="inner">' +
+			'<em class="state_txt"><span id="axisColor" class="ico_brush"></span><!=dataKey!>: <!= result !>%</em>' +
+			'<button type="button" class="btn_tooltip_close" onclick="$("#chart_tooltip").remove(); return false;">레이어 닫기</button>' +
+		'</div>' +
+	'</div>';
+		
+	} else {
+	//PC일경우
+		tpl_tooltip = '<div id="chart_tooltip" class="popover popover-top" >' +
+		'<div class="inner">' +
+			'<em class="state_txt"><span id="axisColor" class="ico_brush"></span> <!=dataKey!>: <!= result !>%</em>' +
+		'</div>' + 
+	'</div>';
+	}
+};
+
+chart(".donut_chart", {
+	theme:"custom",
+	padding : 0,
+	axis : {
+		data : [
+			{ '알바트로스' : 5, '이글' : 10, '버디' : 16, '파' : 87, '보기' : 22, '더블보기' : 2, '3+보기' : 0 }
+		]
+	},
+	brush : {
+		type : "donut",
+		colors : [ "#e62525", "#ff7c0a", "#f9b842", "#fff", "#7dc0fa", "#5e8deb", "#4744c4" ],
+		format : function(k, v) {
+			return  v + "%";
+		},
+		showText : true,
+		size:49,
+		showText : "inside"
+	},
+	tpl : {
+		tooltip : tpl_tooltip
+	}, 
+	event : {
+        mouseover : function(obj, e) {
+			var $tooltip = $(this.tpl.tooltip({ data: obj.data, dataKey : obj.dataKey, result : obj.data[obj.dataKey] }));
+            
+			if(windowWidth < 632) {
+				// 모바일일경우
+				$(".donut_chart").append($tooltip);
+			} else {
+				$("body").append($tooltip);
+				
+			}
+			
+			$tooltip.css({left: e.pageX - $tooltip.width(), top: e.pageY - $tooltip.height()});
+			
+			changeBrush(obj, $tooltip);
+        },
+        mouseout : function(obj, e) {
+            $("#chart_tooltip").remove();
+        }
+    }
+});
+
+function changeBrush(obj, $tooltip){
+	for(var i=0; i < obj.brush.target.length; i++) {
+		if(obj.dataKey === obj.brush.target[i]){
+			$('.ico_brush').css({'background-color' : obj.brush.colors[i]});
+			if($('.ico_brush').css('background-color') === 'rgb(255, 255, 255)'){
+				$('.ico_brush').css('border','1px solid #ccc');
+			}
+		}
+	}
+}
+
+</script>
+</body>
+</html>

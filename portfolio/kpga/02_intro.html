@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="all">
+<title>KPGA :: STATS :: 선수 위치 찾기 서비스 - 코리안투어 OOOO 대회</title>
+<meta property="og:site_name" content="KPGA STATS" />
+<meta property="og:title" content="KPGA :: STATS :: 선수 위치 찾기 서비스 - 코리안투어 OOOO 대회" />
+<meta property="og:type" content="website" />
+<meta name="keyword" content="KPGA, (사)한국프로골프협회, 사단법인한국프로골프협회, 한국프로골프협회, 골프, 남자골프, 코리안투어, 챔피언스투어, 챌린지투어, 프론티어투어" />
+<meta name="decription" content="코리안투어 OOOO 대회의 선수 위치 찾기 서비스에서 응원하는 선수와 경기 결과를 실시간으로 확인하세요!" />
+<meta property="og:description" content="코리안투어 OOOO 대회의 선수 위치 찾기 서비스에서 응원하는 선수와 경기 결과를 실시간으로 확인하세요!" />
+<link rel="shortcut icon" href="img/icon/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="img/icon/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/icon/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="152x152" href="img/icon/favicon-152x152.png">
+<meta property="og:image" content="img/icon/favicon-350x350.jpg" />
+<link rel="stylesheet" type="text/css" href="css/kpga_web.css">
+</head>
+<body><!-- [D]btn_menu_layer 클릭 시 body에 layer_aside_show 클래스 추가 -->
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul class="skip">
+<li><a href="#header" onclick="document.getElementById('header').tabIndex=-1;document.getElementById('header').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+
+<div class="wrap ">
+	<!--[D] HEADER -->
+	<header><!-- [D]페이지에 따라 header에 분기 추가
+		기본 : 코리안투어
+		is_champions : 챔피언스투어
+		is_challenge : 챌린지투어
+		is_frontier : 프론티어투어
+		 -->
+		<div class="inner">
+			<div class="top_wrap">
+				<h1 class="logo"><a href="#" class="link_kpga">KPGA</a> <a href="#" class="link_stats">STATS</a></h1>
+				<button class="btn_menu_layer">전체 메뉴 보기</button>
+			</div>
+			<nav class="gnb is_pc_show">
+				<span class="blind">주요 메뉴</span>
+				<ul class="lst_gnb">
+				<li class="menu_item is_selected"><!-- [D]선택된 메뉴의 menu_item에 is_selected 클래스 추가 -->
+					<a href="#" class="menu_link"><span class="txt">코리안투어</span></a><!-- [D] menu_link 클릭시 header에 has_gnb_show 클래스 추가 -->
+					<div class="sub_menu_wrap">
+						<h2 class="h_gnb"><img src="img/web/img_gnb1.png" alt="코리안투어"></h2>
+						<ul class="lst_sub">
+						<li class="sub_item"><a href="#" class="sub_menu_link">일정</a></li>
+						<li class="sub_item"><a href="#" class="sub_menu_link">공식 기록</a></li>
+						<li class="sub_item"><a href="#" class="sub_menu_link">위치기반 경기기록</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="menu_item">
+					<a href="#" class="menu_link"><span class="txt">챔피언스투어</span></a>
+					<div class="sub_menu_wrap">
+						<h2 class="h_gnb"><img src="img/web/img_gnb2.png" alt="챔피언스투어"></h2>
+						<ul class="lst_sub">
+						<li class="sub_item"><a href="#" class="sub_menu_link">일정</a></li>
+						<li class="sub_item"><a href="#" class="sub_menu_link">기록</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="menu_item">
+					<a href="#" class="menu_link"><span class="txt">챌린지투어</span></a>
+					<div class="sub_menu_wrap">
+						<h2 class="h_gnb"><img src="img/web/img_gnb3.png" alt="챌린지투어"></h2>
+						<ul class="lst_sub">
+						<li class="sub_item"><a href="#" class="sub_menu_link">일정</a></li>
+						<li class="sub_item"><a href="#" class="sub_menu_link">기록</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="menu_item">
+					<a href="#" class="menu_link"><span class="txt">프론티어투어</span></a>
+					<div class="sub_menu_wrap">
+						<h2 class="h_gnb"><img src="img/web/img_gnb4.png" alt="프론티어투어"></h2>
+						<ul class="lst_sub">
+						<li class="sub_item"><a href="#" class="sub_menu_link">일정</a></li>
+						<li class="sub_item"><a href="#" class="sub_menu_link">기록</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="menu_item"><a href="#" class="menu_link"><span class="txt">회원선발전</span></a></li>
+				</ul>
+				<ul class="side_link">
+				<li class="link_item"><a href="#" class="menu_link">협회회원</a></li>
+				<li class="link_item"><a href="#" class="menu_link">투어선수</a></li>
+				</ul> 
+			</nav>
+		</div>
+	</header>
+	<!--//[D] HEADER -->
+	<nav class="gnb is_m_show">
+		<span class="blind">주요 메뉴</span>
+		<div class="menu_select_wrap">
+			<div class="menu_area depth1_area">
+				<a href="02_intro.html" class="link_txt">코리안투어</a><button type="button" class="btn_menu_select">다른메뉴 더 보기</button><!-- [D]btn_menu_select 클릭시 부모 menu_area에 has_menu_open 클래스 추가 -->
+				<ul class="lst_sub">
+				<li class="sub_item"><a href="#" class="btn_menu">코리안투어</a></li><!-- [D]btn_menu 클릭시 btn_menu_select의 value 에 선택 메뉴명 적용 및 depth2_area 영역 해당 카테고리에 맞는 세부 메뉴 리스트로 갱신 -->
+				<li class="sub_item"><a href="#" class="btn_menu">챔피언스투어</a></li><!-- [D]현재 선택 메뉴 표시 위해 선택된 btn_menu에 is_selected 클래스 추가 -->
+				<li class="sub_item"><a href="#" class="btn_menu">챌린지투어</a></li>
+				<li class="sub_item"><a href="#" class="btn_menu">프론티어투어</a></li>
+				</ul>
+			</div>
+			<div class="menu_area depth2_area is_disabled">
+				<a href="#" class="link_txt">위치기반 경기기록</a>
+				<button type="button" class="btn_menu_select">다른메뉴 더 보기</button><!-- [D] 메뉴 비활성 필요시 menu_area에 is_disabled 클래스 추가 -->
+				<ul class="lst_sub">
+				<li class="sub_item"><a href="#" class="btn_menu">공식기록</a></li>
+				<li class="sub_item"><a href="#" class="btn_menu">위치기반 경기기록</a></li>
+				<li class="sub_item"><a href="#" class="btn_menu">기록</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="lnb_wrap">
+		<div class="inner">
+			<div class="scroll_wrap">
+				<ul class="lst_lnb">
+				<li class="lnb_item"><!-- [D]현재 활성 페이지 표시 위해 선택된 lnb_link의 부모 lnb_item에 is_selected 클래스 추가 -->
+					<a href="02_intro.html" class="lnb_link"><span class="txt">개요</span></a>
+				</li>
+				<li class="lnb_item is_selected">
+					<a href="#" class="lnb_link"><span class="txt">티샷</span></a><!-- [D]lnb_link 마우스 오버/클릭시 하위 depth2_wrap에 is_show 클래스 추가 -->
+					<div class="depth2_wrap">
+						<div class="menu_tit_wrap">
+							<a href="02_teeshot.html" class="link_txt">티샷</a>
+							<button type="button" class="btn_close">세부 메뉴 닫기</button>
+						</div>
+						<ul class="depth2">
+						<li class="depth2_item"><!-- [D]btn_menu_open 클릭시 부모 depth2_item에 is_selected 클래스 추가 -->
+							<a href="02_teeshot.html#sec_all" class="depth2_link">전체 거리 기록</a>
+							<button type="button" class="btn_menu_open">메뉴 펼치기</button>
+							<ul class="depth3"><!-- [D]is_show 클래스로 노출제어 -->
+							<li class="depth3_item"><a href="#" class="depth3_link">평균티샷 거리</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">320Yds 이상</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">300Yds ~ 320Yds</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">280Yds ~ 300Yds</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">260Yds ~ 280Yds</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">240Yds ~ 260Yds</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">220Yds ~ 240Yds</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">220Yds 미만</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">최장타</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">티샷으로 보낸 전체거리 비율</a></li>
+							</ul>
+						</li>
+						<li class="depth2_item">
+							<a href="02_teeshot.html#sec_par5" class="depth2_link">Par5 거리 기록</a>
+							<button type="button" class="btn_menu_open">메뉴 펼치기</button>
+							<ul class="depth3">
+							<li class="depth3_item"><a href="#" class="depth3_link">평균티샷 거리</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">320Yds 이상</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">300Yds ~ 320Yds</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">280Yds ~ 300Yds</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">260Yds ~ 280Yds</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">240Yds ~ 260Yds</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">220Yds ~ 240Yds</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">220Yds 미만</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">최장타</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">티샷으로 보낸 전체거리 비율</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">PAR5 상황시 티샷으로 보낸 전체전장대비 비율</a></li>
+							</ul>
+						</li>
+						<li class="depth2_item">
+							<a href="02_teeshot.html#sec_par4" class="depth2_link">Par4 거리 기록</a>
+							<button type="button" class="btn_menu_open">메뉴 펼치기</button>
+							<ul class="depth3">
+							<li class="depth3_item"><a href="#" class="depth3_link">평균티샷 거리</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">320Yds 이상</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">300Yds ~ 320Yds</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">280Yds ~ 300Yds</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">260Yds ~ 280Yds</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">240Yds ~ 260Yds</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">220Yds ~ 240Yds</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">220Yds 미만</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">최장타</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">티샷으로 보낸 전체거리 비율</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">PAR4 상황시 티샷으로 보낸 전체전장대비 비율</a></li>
+							</ul>
+						</li>
+						<li class="depth2_item">
+							<a href="02_teeshot.html#sec_par3" class="depth2_link">Par3 거리 기록</a>
+							<button type="button" class="btn_menu_open">메뉴 펼치기</button>
+							<ul class="depth3">
+							<li class="depth3_item"><a href="#" class="depth3_link">PAR3 티샷시 평균 그린적중률</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">200Yds 이상 그린적중률</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">190Yds ~ 200Yds 그린적중률</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">180Yds ~ 190Yds 그린적중률</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">170Yds ~ 180Yds 그린적중률</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">160Yds ~ 170Yds 그린적중률</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">150Yds ~ 160Yds 그린적중률</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">150Yds 미만 그린적중률</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">PAR3 티샷시 남은거리 평균</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">200Yds 이상시 남은거리 평균</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">190Yds ~ 200Yds 이상시 남은거리 평균</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">180Yds ~ 190Yds 이상시 남은거리 평균</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">170Yds ~ 180Yds 이상시 남은거리 평균</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">160Yds ~ 170Yds 이상시 남은거리 평균</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">150Yds ~ 160Yds 이상시 남은거리 평균</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">150Yds 미만 남은거리 평균</a></li>
+							</ul>
+						</li>
+						<li class="depth2_item">
+							<a href="02_teeshot.html#sec_accuracy" class="depth2_link">정확도</a>
+							<button type="button" class="btn_menu_open">메뉴 펼치기</button>
+							<ul class="depth3">
+							<li class="depth3_item"><a href="#" class="depth3_link">러프착지율</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">좌측 러프 착지 비율</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">우측 러프 착지 비율</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">토탈 드라이빙</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">볼 스트라이킹</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">페어웨이 벙커 착지율</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">페어웨이 안착률</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">페어웨이 놓친 샷 비율</a></li>
+							</ul>
+						</li>
+						</ul>
+					</div>
+				</li>
+				<li class="lnb_item">
+					<a href="#" class="lnb_link"><span class="txt">페어웨이</span></a>
+					<div class="depth2_wrap">
+						<div class="menu_tit_wrap">
+							<a href="02_teeshot.html" class="link_txt">페어웨이</a>
+							<button type="button" class="btn_close">세부 메뉴 닫기</button>
+						</div>
+						<ul class="depth2">
+						<li class="depth2_item">
+							<a href="#" class="depth2_link">전체 거리 기록</a>
+							<button type="button" class="btn_menu_open">메뉴 펼치기</button>
+							<ul class="depth3">
+							<li class="depth3_item"><a href="#" class="depth3_link">평균티샷 거리</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">320Yds 이상</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">300Yds ~ 320Yds</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">280Yds ~ 300Yds</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">260Yds ~ 280Yds</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">240Yds ~ 260Yds</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">220Yds ~ 240Yds</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">220Yds 미만</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">최장타</a></li>
+							<li class="depth3_item"><a href="#" class="depth3_link">티샷으로 보낸 전체거리 비율</a></li>
+							</ul>
+						</li>
+						</ul>
+					</div>
+				</li>
+				<li class="lnb_item">
+					<a href="#" class="lnb_link"><span class="txt">그린 주변</span></a>
+				</li>
+				<li class="lnb_item">
+					<a href="#" class="lnb_link"><span class="txt">그린</span></a>
+				</li>
+				</ul>
+			</div>
+			<button class="btn_total_menu">전체보기</button><!-- [D] btn_total_menu 클릭시 layer_total_menu에 is_show 클래스 추가 -->
+			<!-- [D] LAYER -->
+			<div class="layer_total_menu"><!-- [D] btn_total_menu 클릭시 layer_total_menu에 is_show 클래스 추가 -->
+				<h2 class="blind">메뉴 전체보기</h2>
+				<button class="btn_total_menu btn_close">레이어 닫기</button><!-- [D]btn_total_menu 클릭시 대체 노출 -->
+				<div class="scroll_wrap">
+					<h3 class="h_txt"><a href="#" class="link_txt">티샷</a></h3>
+					<div class="menu_wrap">
+						<div class="row">
+							<div class="menu_group">
+								<h4 class="h_depth2"><a href="#" class="link_txt">전체 거리기록</a></h4>
+								<ul class="depth3">
+								<li class="depth3_item"><a href="#" class="depth3_link">평균티샷 거리</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">320Yds 이상</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">300Yds ~ 320Yds</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">280Yds ~ 300Yds</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">260Yds ~ 280Yds</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">240Yds ~ 260Yds</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">220Yds ~ 240Yds</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">220Yds 미만</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">최장타</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">티샷으로 보낸 전체거리 비율</a></li>
+								</ul>
+							</div>
+							<div class="menu_group">
+								<h4 class="h_depth2"><a href="#" class="link_txt">PAR5 거리기록</a></h4>
+								<ul class="depth3">
+								<li class="depth3_item"><a href="#" class="depth3_link">평균티샷 거리</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">320Yds 이상</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">300Yds ~ 320Yds</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">280Yds ~ 300Yds</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">260Yds ~ 280Yds</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">240Yds ~ 260Yds</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">220Yds ~ 240Yds</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">220Yds 미만</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">최장타</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">티샷으로 보낸 전체거리 비율</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">PAR5 상황시 티샷으로 보낸 전체전장대비 비율</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="row">
+							<div class="menu_group">
+								<h4 class="h_depth2"><a href="#" class="link_txt">PAR4 거리기록</a></h4>
+								<ul class="depth3">
+								<li class="depth3_item"><a href="#" class="depth3_link">평균티샷 거리</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">320Yds 이상</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">300Yds ~ 320Yds</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">280Yds ~ 300Yds</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">260Yds ~ 280Yds</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">240Yds ~ 260Yds</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">220Yds ~ 240Yds</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">220Yds 미만</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">최장타</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">티샷으로 보낸 전체거리 비율</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">PAR4 상황시 티샷으로 보낸 전체전장대비 비율</a></li>
+								</ul>
+							</div>
+							<div class="menu_group">
+								<h4 class="h_depth2"><a href="#" class="link_txt">PAR3 거리기록</a></h4>
+								<ul class="depth3">
+								<li class="depth3_item"><a href="#" class="depth3_link">PAR3 티샷시 평균 그린적중률</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">200Yds 이상 그린적중률</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">190Yds ~ 200Yds 그린적중률</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">180Yds ~ 190Yds 그린적중률</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">170Yds ~ 180Yds 그린적중률</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">160Yds ~ 170Yds 그린적중률</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">150Yds ~ 160Yds 그린적중률</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">150Yds 미만 그린적중률</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">PAR3 티샷시 남은거리 평균</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">200Yds 이상시 남은거리 평균</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">190Yds ~ 200Yds 이상시 남은거리 평균</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">180Yds ~ 190Yds 이상시 남은거리 평균</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">170Yds ~ 180Yds 이상시 남은거리 평균</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">160Yds ~ 170Yds 이상시 남은거리 평균</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">150Yds ~ 160Yds 이상시 남은거리 평균</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">150Yds 미만 남은거리 평균</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="row">
+							<div class="menu_group">
+								<h4 class="h_depth2"><a href="#" class="link_txt">정확도</a></h4>
+								<ul class="depth3">
+								<li class="depth3_item"><a href="#" class="depth3_link">러프착지율</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">좌측 러프 착지 비율</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">우측 러프 착지 비율</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">토탈 드라이빙</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">볼 스트라이킹</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">페어웨이 벙커 착지율</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">페어웨이 안착률</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">페어웨이 놓친 샷 비율</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<h3 class="h_txt"><a href="#" class="link_txt">페어웨이</a></h3>
+					<div class="menu_wrap">
+						<div class="row">
+							<div class="menu_group">
+								<h4 class="h_depth2"><a href="#" class="link_txt">거리별 그린적중률</a></h4>
+								<ul class="depth3">
+								<li class="depth3_item"><a href="#" class="depth3_link">평균티샷 거리</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">320Yds 이상</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">300Yds ~ 320Yds</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">280Yds ~ 300Yds</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">260Yds ~ 280Yds</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">240Yds ~ 260Yds</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">220Yds ~ 240Yds</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">220Yds 미만</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">최장타</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">티샷으로 보낸 전체거리 비율</a></li>
+								</ul>
+							</div>
+							<div class="menu_group">
+								<h4 class="h_depth2"><a href="#" class="link_txt">페어웨이시 정확도</a></h4>
+								<ul class="depth3">
+								<li class="depth3_item"><a href="#" class="depth3_link">평균티샷 거리</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">320Yds 이상</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">300Yds ~ 320Yds</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">280Yds ~ 300Yds</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">260Yds ~ 280Yds</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">240Yds ~ 260Yds</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">220Yds ~ 240Yds</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">220Yds 미만</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">최장타</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">티샷으로 보낸 전체거리 비율</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">PAR5 상황시 티샷으로 보낸 전체전장대비 비율</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="row">
+							<div class="menu_group">
+								<h4 class="h_depth2"><a href="#" class="link_txt">러프시 정확도</a></h4>
+								<ul class="depth3">
+								<li class="depth3_item"><a href="#" class="depth3_link">평균티샷 거리</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">320Yds 이상</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">300Yds ~ 320Yds</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">280Yds ~ 300Yds</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">260Yds ~ 280Yds</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">240Yds ~ 260Yds</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">220Yds ~ 240Yds</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">220Yds 미만</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">최장타</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">티샷으로 보낸 전체거리 비율</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">PAR4 상황시 티샷으로 보낸 전체전장대비 비율</a></li>
+								</ul>
+							</div>
+							<div class="menu_group">
+								<h4 class="h_depth2"><a href="#" class="link_txt">스코어링</a></h4>
+								<ul class="depth3">
+								<li class="depth3_item"><a href="#" class="depth3_link">PAR3 티샷시 평균 그린적중률</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">200Yds 이상 그린적중률</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">190Yds ~ 200Yds 그린적중률</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">180Yds ~ 190Yds 그린적중률</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">170Yds ~ 180Yds 그린적중률</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">160Yds ~ 170Yds 그린적중률</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">150Yds ~ 160Yds 그린적중률</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">150Yds 미만 그린적중률</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">PAR3 티샷시 남은거리 평균</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">200Yds 이상시 남은거리 평균</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">190Yds ~ 200Yds 이상시 남은거리 평균</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">180Yds ~ 190Yds 이상시 남은거리 평균</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">170Yds ~ 180Yds 이상시 남은거리 평균</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">160Yds ~ 170Yds 이상시 남은거리 평균</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">150Yds ~ 160Yds 이상시 남은거리 평균</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">150Yds 미만 남은거리 평균</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="row">
+							<div class="menu_group">
+								<h4 class="h_depth2"><a href="#" class="link_txt">기타</a></h4>
+								<ul class="depth3">
+								<li class="depth3_item"><a href="#" class="depth3_link">러프착지율</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">좌측 러프 착지 비율</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">우측 러프 착지 비율</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">토탈 드라이빙</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">볼 스트라이킹</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">페어웨이 벙커 착지율</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">페어웨이 안착률</a></li>
+								<li class="depth3_item"><a href="#" class="depth3_link">페어웨이 놓친 샷 비율</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- [D] LAYER -->
+		</div>
+	</div>
+	<div class="location">
+		<div class="inner">
+			<span class="blind">현재위치</span>
+			<span class="location_txt">코리안 투어 <span class="arrow">&gt;</span> 위치기반 경기기록 <span class="arrow">&gt;</span> 개요</span>
+		</div>
+	</div>
+	<!-- [D] CONTENTS -->
+	<main id="content">
+		<section class="search_wrap">
+			<div class="inner">
+				<h2 class="blind">개요</h2>
+				<div class="row">
+					<span class="select_bx">
+						<span class="blind">연도 선택</span>
+						<select class="inp_select" id="year">
+							<option value="2017">2017</option>
+							<option value="2018">2018</option>
+						</select>
+					</span>
+				</div>
+			</div>
+		</section>
+		<section class="sec sec_ranking_card">
+			<div class="inner">
+				<h3 class="h_section"><a href="#" class="link_txt">티샷</a></h3>
+				<div class="row">
+					<ul class="lst_ranking_card">
+					<li class="item_card">
+						<h4 class="sub_title">전체 거리 기록</h4>
+						<div class="card_wrap">
+							<h5 class="h_card"><a href="#" class="link_txt">전체 거리기록</a></h5>
+							<a href="#" class="card_desc">
+								<span class="ico_question_mark">?</span>
+								<span class="tooltip">제네시스 포인트 순위 (KPGA 대상 포인트) 해당 해 획득한 포인트 누적 순위</span>
+							</a>
+							<div class="ranking_area ranking_1st_area">
+								<span class="txt_area">
+									<em class="ranking_number">1st</em>
+									<em class="player_name"><a href="#" class="link_txt">김태우</a></em>
+									<em class="match_record">290.275<span class="unit">Yds</span></em>
+								</span>
+								<a href="#" class="player_photo_area">
+									<img src="img/@tmp_player_profile.jpg" alt="선수 사진">
+								</a>
+							</div>
+						</div>
+						<div class="ranking_area">
+							<em class="ranking_number">2</em>
+							<em class="player_name"><a href="#" class="link_txt">김지우</a></em>
+							<em class="match_record">13.3<span class="unit">Yds</span></em>
+						</div>
+						<div class="ranking_area">
+							<em class="ranking_number">3</em>
+							<em class="player_name"><a href="#" class="link_txt">황중곤</a></em>
+							<em class="match_record">12.6<span class="unit">Yds</span></em>
+						</div>
+					</li>
+					<li class="item_card">
+						<h4 class="sub_title">PAR5 거리 기록</h4>
+						<div class="card_wrap">
+							<h5 class="h_card"><a href="#" class="link_txt">PAR5 거리 기록</a></h5>
+							<a href="#" class="card_desc">
+								<span class="ico_question_mark">?</span>
+								<span class="tooltip">제네시스 포인트 순위 (KPGA 대상 포인트) 해당 해 획득한 포인트 누적 순위</span>
+							</a>
+							<div class="ranking_area ranking_1st_area">
+								<span class="txt_area">
+									<em class="ranking_number">1st</em>
+									<em class="player_name"><a href="#" class="link_txt">김병준</a></em>
+									<em class="match_record">32<span class="unit">Rounds</span></em>
+								</span>
+								<a href="#" class="player_photo_area">
+									<img src="img/@tmp_player_profile.jpg" alt="선수 사진">
+								</a>
+							</div>
+						</div>
+						<div class="ranking_area">
+							<em class="ranking_number">2</em>
+							<em class="player_name"><a href="#" class="link_txt">김지우</a></em>
+							<em class="match_record">25<span class="unit">R</span></em>
+						</div>
+						<div class="ranking_area">
+							<em class="ranking_number">3</em>
+							<em class="player_name"><a href="#" class="link_txt">황중곤</a></em>
+							<em class="match_record">25<span class="unit">R</span></em>
+						</div>
+					</li>
+					<li class="item_card">
+						<h4 class="sub_title">PAR4 거리 기록</h4>
+						<div class="card_wrap">
+							<h5 class="h_card"><a href="#" class="link_txt">PAR4 거리 기록</a></h5>
+							<a href="#" class="card_desc">
+								<span class="ico_question_mark">?</span>
+								<span class="tooltip">제네시스 포인트 순위 (KPGA 대상 포인트) 해당 해 획득한 포인트 누적 순위</span>
+							</a>
+							<div class="ranking_area ranking_1st_area">
+								<span class="txt_area">
+									<em class="ranking_number">1st</em>
+									<em class="player_name"><a href="#" class="link_txt">OUAYCHAI<br>PHURIPANY<br>ANONT</a></em>
+									<em class="match_record">50<span class="unit">%</span></em>
+								</span>
+								<a href="#" class="player_photo_area">
+									<img src="img/@tmp_player_empty.jpg" alt="선수 이미지 없음">
+								</a>
+							</div>
+						</div>
+						<div class="ranking_area">
+							<em class="ranking_number">2</em>
+							<em class="player_name"><a href="#" class="link_txt">김지우</a></em>
+							<em class="match_record">13.3<span class="unit">Yds</span></em>
+						</div>
+						<div class="ranking_area">
+							<em class="ranking_number">3</em>
+							<em class="player_name"><a href="#" class="link_txt">황중곤</a></em>
+							<em class="match_record">12.6<span class="unit">Yds</span></em>
+						</div>
+					</li>
+					<li class="item_card">
+						<h4 class="sub_title">PAR3 거리 기록</h4>
+						<div class="card_wrap">
+							<h5 class="h_card"><a href="#" class="link_txt">PAR3 거리 기록</a></h5>
+							<a href="#" class="card_desc">
+								<span class="ico_question_mark">?</span>
+								<span class="tooltip">제네시스 포인트 순위 (KPGA 대상 포인트) 해당 해 획득한 포인트 누적 순위</span>
+							</a>
+							<div class="ranking_area ranking_1st_area">
+								<span class="txt_area">
+									<em class="ranking_number">1st</em>
+									<em class="player_name"><a href="#" class="link_txt">김승혁</a></em>
+									<em class="match_record">50<span class="unit">%</span></em>
+								</span>
+								<a href="#" class="player_photo_area">
+									<img src="img/@tmp_player_profile.jpg" alt="선수 사진">
+								</a>
+							</div>
+						</div>
+						<div class="ranking_area">
+							<em class="ranking_number">2</em>
+							<em class="player_name"><a href="#" class="link_txt">김지우</a></em>
+							<em class="match_record">13.3<span class="unit">Yds</span></em>
+						</div>
+						<div class="ranking_area">
+							<em class="ranking_number">3</em>
+							<em class="player_name"><a href="#" class="link_txt">황중곤</a></em>
+							<em class="match_record">12.6<span class="unit">Yds</span></em>
+						</div>
+					</li>
+					<li class="item_card">
+						<h4 class="sub_title">정확도</h4>
+						<div class="card_wrap">
+							<h5 class="h_card"><a href="#" class="link_txt">정확도</a></h5>
+							<a href="#" class="card_desc">
+								<span class="ico_question_mark">?</span>
+								<span class="tooltip">제네시스 포인트 순위 (KPGA 대상 포인트) 해당 해 획득한 포인트 누적 순위</span>
+							</a>
+							<div class="ranking_area ranking_1st_area">
+								<span class="txt_area">
+									<em class="ranking_number">1st</em>
+									<em class="player_name"><a href="#" class="link_txt">김승혁</a></em>
+									<em class="match_record">50<span class="unit">%</span></em>
+								</span>
+								<a href="#" class="player_photo_area">
+									<img src="img/@tmp_player_profile.jpg" alt="선수 사진">
+								</a>
+							</div>
+						</div>
+						<div class="ranking_area">
+							<em class="ranking_number">2</em>
+							<em class="player_name"><a href="#" class="link_txt">김지우</a></em>
+							<em class="match_record">13.3<span class="unit">Yds</span></em>
+						</div>
+						<div class="ranking_area">
+							<em class="ranking_number">3</em>
+							<em class="player_name"><a href="#" class="link_txt">황중곤</a></em>
+							<em class="match_record">12.6<span class="unit">Yds</span></em>
+						</div>
+					</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section class="sec sec_ranking_card">
+			<div class="inner">
+				<h3 class="h_section"><a href="#" class="link_txt">페어웨이</a></h3>
+				<div class="row">
+					<ul class="lst_ranking_card">
+					<li class="item_card">
+						<h4 class="sub_title">거리별 그린적중률</h4>
+						<div class="card_wrap">
+							<h5 class="h_card"><a href="#" class="link_txt">거리별 그린적중률</a></h5>
+							<a href="#" class="card_desc">
+								<span class="ico_question_mark">?</span>
+								<span class="tooltip">제네시스 포인트 순위 (KPGA 대상 포인트) 해당 해 획득한 포인트 누적 순위</span>
+							</a>
+							<div class="ranking_area ranking_1st_area">
+								<span class="txt_area">
+									<em class="ranking_number">1st</em>
+									<em class="player_name"><a href="#" class="link_txt">김태우</a></em>
+									<em class="match_record">290.275<span class="unit">Yds</span></em>
+								</span>
+								<a href="#" class="player_photo_area">
+									<img src="img/@tmp_player_profile.jpg" alt="선수 사진">
+								</a>
+							</div>
+						</div>
+						<div class="ranking_area">
+							<em class="ranking_number">2</em>
+							<em class="player_name"><a href="#" class="link_txt">김지우</a></em>
+							<em class="match_record">13.3<span class="unit">Yds</span></em>
+						</div>
+						<div class="ranking_area">
+							<em class="ranking_number">3</em>
+							<em class="player_name"><a href="#" class="link_txt">황중곤</a></em>
+							<em class="match_record">12.6<span class="unit">Yds</span></em>
+						</div>
+					</li>
+					<li class="item_card">
+						<h4 class="sub_title">페어웨이시 정확도</h4>
+						<div class="card_wrap">
+							<h5 class="h_card"><a href="#" class="link_txt">페어웨이시 정확도</a></h5>
+							<a href="#" class="card_desc">
+								<span class="ico_question_mark">?</span>
+								<span class="tooltip">제네시스 포인트 순위 (KPGA 대상 포인트) 해당 해 획득한 포인트 누적 순위</span>
+							</a>
+							<div class="ranking_area ranking_1st_area">
+								<span class="txt_area">
+									<em class="ranking_number">1st</em>
+									<em class="player_name"><a href="#" class="link_txt">김병준</a></em>
+									<em class="match_record">32<span class="unit">Rounds</span></em>
+								</span>
+								<a href="#" class="player_photo_area">
+									<img src="img/@tmp_player_profile.jpg" alt="선수 사진">
+								</a>
+							</div>
+						</div>
+						<div class="ranking_area">
+							<em class="ranking_number">2</em>
+							<em class="player_name"><a href="#" class="link_txt">김지우</a></em>
+							<em class="match_record">25<span class="unit">R</span></em>
+						</div>
+						<div class="ranking_area">
+							<em class="ranking_number">3</em>
+							<em class="player_name"><a href="#" class="link_txt">황중곤</a></em>
+							<em class="match_record">25<span class="unit">R</span></em>
+						</div>
+					</li>
+					<li class="item_card">
+						<h4 class="sub_title">러프시 정확도</h4>
+						<div class="card_wrap">
+							<h5 class="h_card"><a href="#" class="link_txt">러프시 정확도</a></h5>
+							<a href="#" class="card_desc">
+								<span class="ico_question_mark">?</span>
+								<span class="tooltip">제네시스 포인트 순위 (KPGA 대상 포인트) 해당 해 획득한 포인트 누적 순위</span>
+							</a>
+							<div class="ranking_area ranking_1st_area">
+								<span class="txt_area">
+									<em class="ranking_number">1st</em>
+									<em class="player_name"><a href="#" class="link_txt">OUAYCHAI<br>PHURIPANY<br>ANONT</a></em>
+									<em class="match_record">50<span class="unit">%</span></em>
+								</span>
+								<a href="#" class="player_photo_area">
+									<img src="img/@tmp_player_empty.jpg" alt="선수 이미지 없음">
+								</a>
+							</div>
+						</div>
+						<div class="ranking_area">
+							<em class="ranking_number">2</em>
+							<em class="player_name"><a href="#" class="link_txt">김지우</a></em>
+							<em class="match_record">13.3<span class="unit">Yds</span></em>
+						</div>
+						<div class="ranking_area">
+							<em class="ranking_number">3</em>
+							<em class="player_name"><a href="#" class="link_txt">황중곤</a></em>
+							<em class="match_record">12.6<span class="unit">Yds</span></em>
+						</div>
+					</li>
+					<li class="item_card">
+						<h4 class="sub_title">스코어링</h4>
+						<div class="card_wrap">
+							<h5 class="h_card"><a href="#" class="link_txt">스코어링</a></h5>
+							<a href="#" class="card_desc">
+								<span class="ico_question_mark">?</span>
+								<span class="tooltip">제네시스 포인트 순위 (KPGA 대상 포인트) 해당 해 획득한 포인트 누적 순위</span>
+							</a>
+							<div class="ranking_area ranking_1st_area">
+								<span class="txt_area">
+									<em class="ranking_number">1st</em>
+									<em class="player_name"><a href="#" class="link_txt">김승혁</a></em>
+									<em class="match_record">50<span class="unit">%</span></em>
+								</span>
+								<a href="#" class="player_photo_area">
+									<img src="img/@tmp_player_profile.jpg" alt="선수 사진">
+								</a>
+							</div>
+						</div>
+						<div class="ranking_area">
+							<em class="ranking_number">2</em>
+							<em class="player_name"><a href="#" class="link_txt">김지우</a></em>
+							<em class="match_record">13.3<span class="unit">Yds</span></em>
+						</div>
+						<div class="ranking_area">
+							<em class="ranking_number">3</em>
+							<em class="player_name"><a href="#" class="link_txt">황중곤</a></em>
+							<em class="match_record">12.6<span class="unit">Yds</span></em>
+						</div>
+					</li>
+					<li class="item_card">
+						<h4 class="sub_title">기타</h4>
+						<div class="card_wrap">
+							<h5 class="h_card"><a href="#" class="link_txt">기타</a></h5>
+							<a href="#" class="card_desc">
+								<span class="ico_question_mark">?</span>
+								<span class="tooltip">제네시스 포인트 순위 (KPGA 대상 포인트) 해당 해 획득한 포인트 누적 순위</span>
+							</a>
+							<div class="ranking_area ranking_1st_area">
+								<span class="txt_area">
+									<em class="ranking_number">1st</em>
+									<em class="player_name"><a href="#" class="link_txt">김승혁</a></em>
+									<em class="match_record">50<span class="unit">%</span></em>
+								</span>
+								<a href="#" class="player_photo_area">
+									<img src="img/@tmp_player_profile.jpg" alt="선수 사진">
+								</a>
+							</div>
+						</div>
+						<div class="ranking_area">
+							<em class="ranking_number">2</em>
+							<em class="player_name"><a href="#" class="link_txt">김지우</a></em>
+							<em class="match_record">13.3<span class="unit">Yds</span></em>
+						</div>
+						<div class="ranking_area">
+							<em class="ranking_number">3</em>
+							<em class="player_name"><a href="#" class="link_txt">황중곤</a></em>
+							<em class="match_record">12.6<span class="unit">Yds</span></em>
+						</div>
+					</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+	</main>
+	<!-- //[D] CONTENTS -->
+	<!--[D] FOOTER -->
+	<footer id="footer">
+		<div class="inner">
+			<ul class="lst_sns">
+			<li class="item_sns"><a href="https://www.facebook.com/koreapga" class="ico_sns ico_facebook" target="_blank">facebook</a></li>
+			<li class="item_sns"><a href="http://blog.naver.com/kpga_1968" class="ico_sns ico_blog" target="_blank">blog</a></li>
+			<li class="item_sns"><a href="https://www.youtube.com/c/KPGAKoreanTour" class="ico_sns ico_youtube" target="_blank">Youtube</a></li>
+			<li class="item_sns"><a href="https://www.instagram.com/kpga_official/" class="ico_sns ico_instagram" target="_blank">Instagram</a></li>
+			<li class="item_sns"><a href="http://m.post.naver.com/my.nhn?memberNo=10791875" class="ico_sns ico_pinterest" target="_blank">Pinterest</a></li>
+			<li class="item_sns"><a href="https://plus.google.com/u/0/+KPGAKoreanTour/posts" class="ico_sns ico_google" target="_blank">Google</a></li>
+			</ul>
+			<ul class="lst_company_info">
+			<li class="item_info">(사)한국프로골프협회</li>
+			<li class="item_info">경기도 성남시 분당구 운중로 121 KPGA빌딩 9F</li>
+			<li class="item_info">대표자:양휘부</li>
+			<li class="item_info">전화:01-414-8855</li>
+			<li class="item_info">팩스:02-415-7676</li>
+			<li class="item_info">개인정보관리책임자:김형섭</li>
+			<li class="item_info">사용자등록번호 215-87-01295</li>
+			<li class="item_info">제 2013-경기성남-0871호</li>
+			</ul>
+			<p class="copyright_txt">COPYRIGHT 2017 KPGA. CO. KR ALL RIGHTS RESERVED.</p>
+		</div>
+	</footer>
+	<!--//[D] FOOTER -->
+</div>
+
+<!-- 햄버거 메뉴 -->
+<div class="layer_aside_menu"><!-- [D]열릴때 wrap에 has_aside_show 클래스 추가 -->
+	<div class="inner">
+		<button type="button" class="btn_close">메뉴 닫기</button>
+		<ul class="side_link">
+		<li class="link_item"><a href="#" class="menu_link">협회회원</a></li>
+		<li class="link_item"><a href="#" class="menu_link">투어선수</a></li>
+		</ul>
+		<ul class="lst_menu">
+		<li class="menu_item has_sub_lst"><!-- [D]하위 메뉴가 있는 경우 menu_item에 has_sub_lst, 하위메뉴 열람시 is_open 클래스 추가 -->
+			<a href="#" class="menu_link"><span class="txt">코리안투어</span></a>
+			<ul class="lst_depth2">
+			<li class="menu_item">
+				<a href="#" class="menu_link"><span class="txt">일정</span></a>
+			</li>
+			<li class="menu_item">
+				<a href="#" class="menu_link"><span class="txt">선수</span></a>
+			</li>
+			<li class="menu_item has_sub_lst">
+				<a href="#" class="menu_link"><span class="txt">미디어</span></a>
+				<ul class="lst_depth3">
+				<li class="menu_item"><a href="#" class="menu_link">뉴스</a></li>
+				<li class="menu_item"><a href="#" class="menu_link">사진</a></li>
+				<li class="menu_item"><a href="#" class="menu_link">영상</a></li>
+				</ul>
+			</li>
+			<li class="menu_item has_sub_lst">
+				<a href="#" class="menu_link"><span class="txt">제네시스</span></a>
+				<ul class="lst_depth3">
+				<li class="menu_item"><a href="#" class="menu_link">대상시상식</a></li>
+				<li class="menu_item"><a href="#" class="menu_link">제네시스포인트 결과</a></li>
+				<li class="menu_item"><a href="#" class="menu_link">제네시스포인트분배표</a></li>
+				</ul>
+			</li>
+			</ul>
+		</li>
+		<li class="menu_item has_sub_lst">
+			<a href="#" class="menu_link"><span class="txt">챔피언스투어</span></a>
+			<ul class="lst_depth2">
+			<li class="menu_item">
+				<a href="#" class="menu_link"><span class="txt">일정</span></a>
+			</li>
+			<li class="menu_item">
+				<a href="#" class="menu_link"><span class="txt">선수</span></a>
+			</li>
+			<li class="menu_item has_sub_lst">
+				<a href="#" class="menu_link"><span class="txt">미디어</span></a>
+				<ul class="lst_depth3">
+				<li class="menu_item"><a href="#" class="menu_link">뉴스</a></li>
+				<li class="menu_item"><a href="#" class="menu_link">사진</a></li>
+				<li class="menu_item"><a href="#" class="menu_link">영상</a></li>
+				</ul>
+			</li>
+			<li class="menu_item has_sub_lst">
+				<a href="#" class="menu_link"><span class="txt">제네시스</span></a>
+				<ul class="lst_depth3">
+				<li class="menu_item"><a href="#" class="menu_link">대상시상식</a></li>
+				<li class="menu_item"><a href="#" class="menu_link">제네시스포인트 결과</a></li>
+				<li class="menu_item"><a href="#" class="menu_link">제네시스포인트분배표</a></li>
+				</ul>
+			</li>
+			</ul>
+		</li>
+		<li class="menu_item has_sub_lst">
+			<a href="#" class="menu_link"><span class="txt">챌린지투어</span></a>
+		</li>
+		<li class="menu_item has_sub_lst">
+			<a href="#" class="menu_link"><span class="txt">프론티어투어</span></a>
+		</li>
+		<li class="menu_item">
+			<a href="#" class="menu_link"><span class="txt">회원선발전</span></a>
+		</li>
+		</ul>
+
+	</div>
+</div>
+<!-- //햄버거 메뉴 -->
+<!-- Javascript Area -->
+<script src="js/libs/jquery-1.12.4.min.js"></script>
+<!-- 마크업 확인용입니다. -->
+<style>
+.case_view{display:inline-block;position:fixed;bottom:0;left:0;z-index:1000;width:auto;padding:5px;background:#000;opacity:0.7}
+.case_view .btn{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+</style>
+<div class="case_view">
+    <a href="#" class="btn" onclick="$('header').attr('class','');return false;">헤더_코리안투어</a>
+    <a href="#" class="btn" onclick="$('header').attr('class','').addClass('is_champions');return false;">헤더_챔피언스투어</a>
+    <a href="#" class="btn" onclick="$('header').attr('class','').addClass('is_challenge');return false;">헤더_챌린지투어</a>
+    <a href="#" class="btn" onclick="$('header').attr('class','').addClass('is_frontier');return false;">헤더_프론티어투어</a>
+</div>
+<script src="js/case_view.js"></script>
+<!-- //마크업 확인용입니다. -->
+</body>
+</html>

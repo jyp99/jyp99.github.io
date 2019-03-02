@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<title>로그인 :: PAYCO 회원</title>
+<link rel="stylesheet" type="text/css" href="css/neid.css">
+<!-- for ie script -->
+<script type="text/javascript" src="js/html5.js"></script>
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+    <!-- container -->
+    <div id="container">
+        <h1 class="blind">로그인</h1>
+        <div class="content">
+            <div class="new_device">
+                <div class="tit_area">
+                    <h2 class="h_tit2">회원님의 아이디가<br><em class="txt_point">새로운 기기(브라우저)에서<br>로그인 되었습니다.</em></h2>
+                </div>
+                <div class="info_bx">
+                    <dl class="detail_lst">
+                    <dt class="detail_tit">기기명</dt>
+                    <dd class="detail_item"><span class="bar"></span>PC / Windows (Internet Explorer)</dd>
+                    <dt class="detail_tit">등록일시</dt>
+                    <dd class="detail_item"><span class="bar"></span>2016.05.26. 16:25:30</dd>
+                    <dt class="detail_tit">접속 IP</dt>
+                    <dd class="detail_item"><span class="bar"></span>10.77.245.363 (대한민국)</dd>
+                    </dl>
+                    <ul class="noti_lst">
+                    <li class="noti_item"><span class="bul"></span>기기 [삭제] 시 해당 기기에서 접속하면 새로운 기기 인증 후 이용할 수 있습니다.</li>
+                    <li class="noti_item"><span class="bul"></span>하나의 기기라도 여러 개의 브라우저/애플리케이션에서 로그인하면 개별적 등록됩니다.</li>
+                    </ul>
+                </div>
+                <p class="sub_txt">이러한 활동을 한 적이 없다면,<br>지금! <a href="#" class="txt_link">PAYCO 비밀번호를 변경</a>하세요.</p>
+            </div>
+        </div>
+    </div>
+    <!-- //container -->
+</div>
+
+<!-- 마크업 확인용입니다. -->
+<style>
+	#case_view,#case_view2{display:none;position:relative;width:100%;z-index:1000;padding:5px;background:#000;opacity:0.7}
+	#case_view2{display:inline-block;position:fixed;bottom:0;left:0;width:auto}
+	.btn_opt{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+	.btn_m-view{background:#22002e}
+</style>
+<div id="case_view2">
+	<a href="#" class="btn_opt btn_m-view">모바일 view</a>
+</div>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script>    
+$(function(){
+	$('#case_view2 .btn_m-view').click(function(e){
+		e.preventDefault();
+		$('body').toggleClass('m');		
+	});
+});
+</script>
+<!-- //마크업 확인용입니다. -->
+</body>
+</html>

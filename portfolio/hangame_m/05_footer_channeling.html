@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="all">
+<meta name="format-detection" content="telephone=no">
+<title>공지사항 :: 한게임</title>
+<link rel="stylesheet" type="text/css" href="css/m_main.css">
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul class="skip">
+<li><a href="#header" onclick="document.getElementById('header').tabIndex=-1;document.getElementById('header').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+
+<div id="wrap" class="wrap">
+	<!--[D] HEADER -->
+	<?php include 'inc/header.html';?>
+	<!--//[D] HEADER -->
+
+	<!-- [D] CONTENTS -->
+	<div id="content" class="content">
+
+	</div>
+	<!-- //[D] CONTENTS -->
+	
+	<!--[D] FOOTER -->
+	<footer id="footer" class="footer footer_type2">
+		<ul class="lst_func">
+		<li class="func">
+			<a href="#" class="btn"><span class="btn_txt">한게임 홈</span></a>
+		</li>
+		<li class="func">
+			<button class="btn btn_logout"><span class="btn_txt">로그아웃</span></button>
+		</li>
+		</ul>
+		<ul class="lst_terms">
+		<li class="term">
+			<a href="03_terms.html" class="btn">이용약관</a>
+		</li>
+		<li class="term">
+			<a href="03_youth_protection_policy.html" class="btn">청소년 보호 정책</a>
+		</li>
+		<li class="term">
+			<a href="03_personal_information_policy.html" class="btn">
+				<em class="point_txt">개인정보처리방침</em>
+			</a>
+		</li>
+		<li class="term">
+			<a href="#" class="btn">서비스 해지</a>
+		</li>		
+		</ul>
+		<a href="http://www.nhnent.com/ko/index.nhn" class="corp_txt">© NHN Entertainment Corp.</a>
+		<p class="footer_noti">엔에이치엔 엔터테인먼트(주)는 통신판매중개자로서 게임의 거래에 대한<br>의무와 책임은 각 제공자에게 있으며 이와 관련하여 발생하는 문제에<br>대해서 당사는 법적 책임을 부담하지 않습니다.</p>
+	</footer>
+	<!--//[D] FOOTER -->
+</div>
+
+<!-- Javascript Area -->
+<script src="js/libs/jquery-1.12.4.min.js"></script>
+
+<!-- 마크업 확인용입니다. -->
+<style>
+.case_view{display:inline-block;position:fixed;bottom:0;left:0;z-index:1000;width:auto;padding:5px;background:#000;opacity:0.7}
+.case_view .btn{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+</style>
+<div class="case_view case_view1">
+	<a href="#" class="btn" onclick="$('body').toggleClass('is_gnb_show');return false;">GNB 열기/닫기</a>
+	<a href="#" class="btn" onclick="$('body').toggleClass('is_topbanner_close');return false;">top 배너 닫기</a>
+	<a href="#" class="btn" onclick="$('.case_view1').hide();$('.case_view2').show();return false;">케이스뷰 닫기</a>
+</div>
+<div class="case_view case_view2" style="display:none">
+	<a href="#" class="btn" onclick="$('.case_view1').show(),$('.case_view2').hide();return false;">케이스뷰 열기</a>
+</div>
+<script src="js/case_view.js"></script>
+<!-- //마크업 확인용입니다. --> 
+</body>
+</html>

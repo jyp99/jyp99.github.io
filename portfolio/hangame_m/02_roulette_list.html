@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="all">
+<meta name="format-detection" content="telephone=no">
+<title>무료충전 참여내역 :: 한게임</title>
+<link rel="stylesheet" type="text/css" href="css/m_main.css">
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul class="skip">
+<li><a href="#header" onclick="document.getElementById('header').tabIndex=-1;document.getElementById('header').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+
+<div id="wrap" class="wrap">
+	<!--[D] HEADER -->
+	<?php include 'inc/header.html';?>
+	<!--//[D] HEADER -->
+
+	<!-- [D] CONTENTS -->
+	<main id="content" class="content">
+		<section class="sub_sec">
+			<div class="sub_tit_wrap">
+				<h2 class="h_txt">무료충전 참여내역</h2>
+			</div>
+			<div class="roulette_history_area">
+				<table class="tbl">
+				<caption><span>무료충전 참여내역</span></caption>
+				<colgroup>
+				<col style="width:40%">
+				<col style="width:28%">
+				<col>
+				</colgroup>
+				<thead>
+				<tr>
+					<th scope="col" class="blind">게임명</th>
+					<th scope="col" class="blind">충전금액</th>
+					<th scope="col" class="blind">처리상태</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td class="txt_align">한게임 포커 <em class="date">2017.06.21. 14:31</em></td>
+					<td>11,500,000원</td>
+					<td><em class="state">보상지급 완료<br> 한코인 5,000원</em></td>
+				</tr>
+				<tr>
+					<td class="txt_align">한게임 신맞고 <em class="date">2017.06.21. 14:31</em></td>
+					<td>500,000원</td>
+					<td><em class="state">보상지급 완료<br> 한코인 100원</em></td>
+				</tr>
+				<tr>
+					<td class="txt_align">한코인 룰렛 <em class="date">2017.06.21. 14:31</em></td>
+					<td class="price">500,000원</td>
+					<td><em class="state2">결제취소</em></td>
+				</tr>
+				<tr>
+					<td class="txt_align">한코인 룰렛 <em class="date">2017.06.21. 14:31</em></td>
+					<td class="price">7,000원</td>
+					<td><em class="state2">결제취소</em></td>
+				</tr>
+				<tr>
+					<td class="txt_align">한게임 포커 <em class="date">2017.06.21. 14:31</em></td>
+					<td>500,000원</td>
+					<td><em class="state">보상지급 완료<br> 한코인 1,000원</em></td>
+				</tr>
+				<tr>
+					<td class="txt_align">한게임 포커 <em class="date">2017.06.21. 14:31</em></td>
+					<td>500,000원</td>
+					<td><em class="state">보상지급 완료<br> 한코인 300원</em></td>
+				</tr>
+				</tbody>
+				</table>
+				<p class="noti_txt">* 당월 참여 내역을 확인할 수 있습니다</p>
+			</div>
+		</section>
+		<a href="#wrap" class="btn_top"><img src="img/btn_go_top.png" alt="맨 위로"></a>
+	</main>
+	<!-- //[D] CONTENTS -->
+	
+	<!--[D] FOOTER -->
+	<?php include 'inc/footer.html';?>
+	<!--//[D] FOOTER -->
+</div>
+
+<!-- [D] 레이어 팝업 노출시 body에 is_layer_show 추가 및 해당 layer_pop_wrap에 is_show 클래스 추가 -->
+<!-- [D] 오늘의 결제내역 팝업 -->
+<div class="layer_pop_wrap layer_pop_type2 layer_payment">
+	<div class="ly_pop">
+		<div class="ly_header">
+			<h1 class="ly_h_tit">오늘의 결제 내역</h1>
+		</div>
+		<div class="ly_cont">
+			<div class="payment_bx">
+				<ul class="payment_lst">
+				<li class="payment_item">
+					<div class="radio_area">
+						<span class="inp_radio">
+							<input type="radio" id="rdo1" name="pay" class="inp_rdo" checked>
+							<label for="rdo1" class="inp_label">111,163,000원<em class="payment_date">2017.06.21. 14:31</em></label>
+						</span>
+					</div>
+				</li>
+				<li class="payment_item">
+					<div class="radio_area">
+						<span class="inp_radio">
+							<input type="radio" id="rdo2" name="pay" class="inp_rdo">
+							<label for="rdo2" class="inp_label">12,000원<em class="payment_date">2017.06.21. 14:33</em></label>
+						</span>
+					</div>
+				</li>
+				<li class="payment_item">
+					<div class="radio_area">
+						<span class="inp_radio">
+							<input type="radio" id="rdo3" name="pay" class="inp_rdo">
+							<label for="rdo3" class="inp_label">9,000원<em class="payment_date">2017.06.21. 14:31</em></label>
+						</span>
+					</div>
+				</li>
+				<li class="payment_item">
+					<div class="radio_area">
+						<span class="inp_radio">
+							<input type="radio" id="rdo4" name="pay" class="inp_rdo">
+							<label for="rdo4" class="inp_label">3,000원<em class="payment_date">2017.06.21. 14:31</em></label>
+						</span>
+					</div>
+				</li>
+				</ul>
+			</div>
+		</div>
+		<div class="pop_btn_area">
+			<button type="button" class="pop_btn">응모하기</button>
+		</div>
+		<button type="button" class="btn_pop_close"><span class="ico_pop_close">레이어 닫기</span></button>
+	</div>
+</div>
+<!-- //[D] 오늘의 결제내역 팝업 -->
+
+<!-- Javascript Area -->
+<script src="js/libs/jquery-1.12.4.min.js"></script>
+
+<!-- 마크업 확인용입니다. -->
+<style>
+.case_view{display:inline-block;position:fixed;bottom:0;left:0;z-index:1000;width:auto;padding:5px;background:#000;opacity:0.7}
+.case_view .btn{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+</style>
+<div class="case_view case_view1">
+	<a href="#" class="btn" onclick="$('.layer_pop_wrap').removeClass('is_show');$('.layer_pop_wrap:eq(0)').addClass('is_show');return false;">팝업_결제 내역</a>
+  <a href="#" class="btn" onclick="$('.case_view1').hide();$('.case_view2').show();return false;">케이스뷰 닫기</a>
+</div>
+<div class="case_view case_view2" style="display:none">
+    <a href="#" class="btn" onclick="$('.case_view1').show(),$('.case_view2').hide();return false;">케이스뷰 열기</a>
+</div>
+<script src="js/case_view.js"></script>
+<!-- //마크업 확인용입니다. --> 
+
+</body>
+</html>

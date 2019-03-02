@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<title>회원가입 :: PAYCO 회원</title>
+<link rel="stylesheet" type="text/css" href="css/neid.css">
+<!-- for ie script -->
+<script type="text/javascript" src="js/html5.js"></script>
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+    <!-- header -->
+    <?php include 'inc/inc_header.html';?>
+    <!-- //header -->
+    
+    <!-- container -->
+    <div id="container">
+        <h1 class="blind">회원가입</h1>
+        <div class="content">
+            <div class="tit_area">
+                <h2 class="h_tit">핑크다이어리 이용을 위하여 아래에 동의해 주세요.</h2>
+            </div>
+
+			<div class="checkbox_area agree_all">
+			    <span class="inp_checkbox inp_bold">
+			        <input type="checkbox" id="agree_all" class="inp_chk">
+			        <label for="agree_all" class="inp_label"><span class="ico_chk"></span>아래 내용에 모두 동의합니다.</label>
+			    </span>
+			</div>
+
+            <div class="btn_chk_area">
+                <span class="inp_checkbox is_checked">
+                    <input type="checkbox" id="rdo_chk" class="inp_chk">
+                    <label for="rdo_chk" class="inp_label"><span class="ico_cfm"></span>모든 약관에 동의</label>
+                </span>
+            </div>
+			
+			<div class="agree_area">
+			    <ul class="agree_lst">
+			    <li class="agree_item">
+			        <span class="inp_checkbox">
+			            <input type="checkbox" id="agree1" class="inp_chk">
+			            <label for="agree1" class="inp_label"><span class="ico_chk"></span>이용약관, 개인정보 수집/제공 동의</label>
+			        </span>
+			        <a href="#" class="fold_link">펼치기<span class="ico_arr"></span></a>
+			        <ul class="agree_lst" style="display:none">
+			        <li class="agree_item">
+			            <span class="inp_checkbox">
+			                <input type="checkbox" id="agree2" class="inp_chk">
+			                <label for="agree2" class="inp_label"><span class="ico_chk"></span>PAYCO 회원 약관</label>
+			            </span>
+			            <a href="#" class="agree_link">보기</a>
+			        </li>
+			        <li class="agree_item">
+			            <span class="inp_checkbox">
+			                <input type="checkbox" id="agree3" class="inp_chk">
+			                <label for="agree3" class="inp_label"><span class="ico_chk"></span>개인정보 수집/이용 동의</label>
+			            </span>
+			            <a href="#" class="agree_link">보기</a>
+			        </li>
+			        <li class="agree_item">
+			            <span class="inp_checkbox">
+			                <input type="checkbox" id="agree4" class="inp_chk">
+			                <label for="agree4" class="inp_label"><span class="ico_chk"></span>PAYCO 서비스 약관</label>
+			            </span>
+			            <a href="#" class="agree_link">보기</a>
+			        </li>
+			        </ul>
+			    </li>
+			    <li class="agree_item">
+			        <span class="inp_checkbox">
+			            <input type="checkbox" id="agree5" class="inp_chk">
+			            <label for="agree5" class="inp_label"><span class="ico_chk"></span>PAYCO 서비스 약관</label>
+			        </span>
+			    </li>
+			    <li class="agree_item">
+			        <span class="inp_checkbox">
+			            <input type="checkbox" id="agree6" class="inp_chk">
+			            <label for="agree6" class="inp_label"><span class="ico_chk"></span>전자금융거래 이용약관</label>
+			        </span>
+			    </li>
+			    <li class="agree_item">
+			        <span class="inp_checkbox is_checked">
+			            <input type="checkbox" id="agree7" class="inp_chk">
+			            <label for="agree7" class="inp_label"><span class="ico_chk"></span><em>위치기반 서비스 약관 동의</em> (선택)</label>
+			        </span>
+			        <a href="#" class="agree_link">보기</a>
+			    </li>
+			    <li class="agree_item">
+			        <span class="inp_checkbox">
+			            <input type="checkbox" id="agree8" class="inp_chk">
+			            <label for="agree8" class="inp_label"><span class="ico_chk"></span><em>홍보성 정보 수신 동의</em> (선택)</label>
+			        </span>
+			    </li>
+			    </ul>
+			</div>
+
+      <div class="agree_area has_item_one" style="display:none"><!-- [D]선택할 약관이 1개일 경우 agree_area에 has_item_one 클래스 추가 -->
+        <ul class="agree_lst">
+        <li class="agree_item">
+          <span class="inp_checkbox is_checked">
+              <input type="checkbox" id="agree9" class="inp_chk">
+              <label for="agree9" class="inp_label"><span class="ico_chk"></span><em>위치기반 서비스 약관 동의</em> (선택)</label>
+          </span>
+          <a href="#" class="agree_link">보기</a>
+        </li>
+        </ul>
+			</div>
+      
+			<div class="btn_area">
+				<button type="button" class="btn btn_full btn_point">동의</button>
+			</div>
+        </div>
+    </div>
+    <!-- //container -->
+</div>
+<!-- 마크업 확인용입니다. -->
+<style>
+	#case_view,#case_view2{display:none;position:relative;width:100%;z-index:1000;padding:5px;background:#000;opacity:0.7}
+	#case_view2{display:inline-block;position:fixed;bottom:0;left:0;width:auto}
+	.btn_opt{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+	.btn_m-view{background:#22002e}
+</style>
+<div id="case_view2">
+	<a href="#" class="btn_opt btn_m-view">모바일 view</a>
+  <a href="#" class="btn_opt" onclick="$('.agree_all,.btn_chk_area,.agree_area:eq(0)').hide();$('.agree_area:eq(1)').show();return false;">약관 1개만 있는 경우</a>
+</div>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script>    
+$(function(){
+	$('#case_view2 .btn_m-view').click(function(e){
+		e.preventDefault();
+		$('body').toggleClass('m');		
+	});
+});
+</script>
+<!-- //마크업 확인용입니다. -->
+</body>
+</html>

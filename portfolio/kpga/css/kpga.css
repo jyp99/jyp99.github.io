@@ -1,0 +1,781 @@
+@charset "utf-8";
+@import url("flags.css");
+/* HIVELAB (http://www.hivelab.co.kr) */
+/* nanumgothick */
+@font-face{
+font-family:'NanumGothic';
+font-weight:normal;
+src:url(../font/NanumGothic-Regular.eot);
+src:url(../font/NanumGothic-Regular.eot?#iefix) format('embedded-opentype'),url(../font/NanumGothic-Regular.woff) format('woff'),url(../font/NanumGothic-Regular.ttf) format('truetype')
+}
+@font-face{
+font-family:'NanumGothic';
+font-weight:bold;
+src:url(../font/NanumGothic-Bold.eot);
+src:url(../font/NanumGothic-Bold.eot?#iefix) format('embedded-opentype'),url(../font/NanumGothic-Bold.woff) format('woff'),url(../font/NanumGothic-Bold.ttf) format('truetype')
+}
+
+/* NotoSans */
+font-face{
+font-family:'NotoSans';
+font-weight:normal;
+src:url(../font/NotoSans-Regular.eot);
+src:url(../font/NotoSans-Regular.eot?#iefix) format('embedded-opentype'),url(../font/NotoSans-Regular.woff) format('woff'),url(../font/NotoSans-Regular.ttf) format('truetype')
+}
+font-face{
+font-family:'NotoSans';
+font-weight:bold;
+src:url(../font/NotoSans-Bold.eot);
+src:url(../font/NotoSans-Bold.eot?#iefix) format('embedded-opentype'),url(../font/NotoSans-Bold.woff) format('woff'),url(../font/NotoSans-Bold.ttf) format('truetype')
+}
+
+/* Reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,p,table,th,td,form,fieldset,legend,textarea,input,select,textarea,button,article,aside,dialog,footer,header,section,footer,nav,figure,main{margin:0;padding:0}
+article,aside,dialog,footer,header,section,footer,nav,figure,main{display:block}
+html,body{height:100%;-webkit-text-size-adjust:none;-ms-text-size-adjust:none}
+body,input,select,textarea,button{font-family:'NanumGothic','Malgun Gothic','맑은고딕','Apple SD Gothic Neo',Dotum,'돋움',sans-serif;font-size:12px}
+fieldset,li,img{border:0;vertical-align:top}
+ul,ol{list-style:none}
+button{overflow:visible;border:0;background-color:transparent;cursor:pointer}
+button::-moz-focus-inner{padding:0;border:0}
+address,caption,em{font-style:normal}
+a,a:focus,a:active,a:hover{text-decoration:none}
+table{border-collapse:separate;border-spacing:0}
+input::-webkit-contacts-auto-fill-button{display:none !important;visibility:hidden;position:absolute;right:0;pointer-events:none}
+input::-ms-clear{display:none}
+input::-ms-reveal{display:none}
+select::-ms-expand{display:none}
+.inp::-webkit-input-placeholder{color:#999}
+.inp::-moz-placeholder{color:#999}
+.inp:-ms-input-placeholder{color:#999!important}
+
+.blind,caption span,legend{overflow:hidden;position:absolute;top:0;left:0;width:1px;height:1px;font-size:1px;line-height:100px;white-space:nowrap}
+.sp,header .link_live_score:after,.category .btn_maker,.info_marker .ico,.layer_marker_info .title_wrap .ico_maker,.nav_controll_wrap .btn_prev:before,.nav_controll_wrap .btn_next:before,.layer_marker_info .btn_wrap .btn_group_detail:after,.search_bx .btn_delete:before,.search_bx .inp_area:before,.sec_live_score .tit_txt:before,.round_info .link_player_detail:after,.facilities_marker .ico,.facilities_marker .marker_info_txt,.layer_marker_info .btn_layer_close,.layer_marker_info .btn_layer_close:before,.layer_player_info .btn_close,.btn_wrap .btn_back:before{display:inline-block;overflow:hidden;background:url(../img/sp.png) no-repeat;line-height:999px}
+
+.skip{height:0}
+.skip a{display:block;position:absolute;top:-100px;left:0;width:100%;height:25px;text-align:center}
+.skip a:focus,#skip a:active{position:absolute;top:0;z-index:100;padding:10px 0;background:#000;font-weight:bold;font-size:20px;color:#fff;text-decoration:none}
+
+.wrap{min-width:1280px;padding-top:56px}
+.is_no_scroll{min-width:auto}
+.is_m_show{display:none}
+
+/* 헤더 */
+header{display:block;position:fixed;top:0;left:0;right:0;z-index:100;min-width:320px;height:56px;padding:0 0 0 26px;background-color:#1b1d1f;font-size:0;white-space:nowrap;text-align:center;box-sizing:border-box}
+header:before{display:inline-block;height:100%;vertical-align:middle;content:''}
+header .logo{display:inline-block;position:absolute;top:50%;left:20px;width:148px;height:22px;margin-top:-11px}
+header .logo .link_kpga{display:inline-block;position:absolute;top:0;left:0;overflow:hidden;width:88px;height:22px;background:url(../img/logo_kpga.png) no-repeat;line-height:999px}
+header .logo .link_stats{display:inline-block;position:absolute;bottom:0;right:0;overflow:hidden;width:52px;height:14px;background:url(../img/logo_stats.png) no-repeat;line-height:999px}
+header .h_main{display:inline-block;vertical-align:middle}
+header .h_main .link_txt{display:inline-block;font-size:18px;font-weight:normal;line-height:1;color:#fff;vertical-align:middle}
+header .link_live_score{position:absolute;right:0;padding:0 26px;font-size:12px;line-height:56px;font-family:'NotoSans',sans-serif;color:#fff;letter-spacing:.1em}
+header .link_live_score:after{width:10px;height:10px;margin-left:7px;background-position:-160px 0;content:''}
+
+/* 선수 위치 찾기 맵 */
+#map{margin:auto}
+.map_wrap{overflow:hidden;position:absolute;width:100%;min-width:320px;height:calc(100% - 56px);padding:0 20px;box-sizing:border-box}
+.map_wrap #map{position:absolute;top:0;right:0;left:0;bottom:0}
+
+/* 카테고리 */
+.category{position:absolute;top:50%;left:26px;z-index:10;width:40px;margin-top:-80px;font-size:12px;text-align:center}
+.category li{display:block;position:relative;width:40px;height:40px;margin-top:10px}
+.category li:first-of-type{margin-top:0}
+.category .btn_maker{display:block;width:40px;height:40px;border-radius:100%;background-color:#ccc;box-shadow:0 3px 7px 0 rgba(0,0,0,0.3)}
+.category .ico_tee{background-position:0 0}
+.category .ico_tee.on{background-color:#f1515f}
+.category .ico_fairway{background-position:0 -42px}
+.category .ico_fairway.on{background-color:#f7b841}
+.category .ico_hole{background-position:0 -84px}
+.category .ico_hole.on{background-color:#389ef1}
+.category .ico_facilities{background-position:0 -126px}
+.category .ico_facilities.on{background-color:#9151f1}
+
+/* 마커 */
+.info_marker{display:inline-block;width:48px;height:24px;padding:3px;border-radius:24px;background-color:#fff;font-size:0;box-sizing:border-box;box-shadow:0 4px 8px 0 rgba(0,0,0,0.3)}
+.info_marker .ico{width:18px;height:18px;border-radius:100%;vertical-align:middle}
+.info_marker.info_tee .ico{background-position:-42px 0;background-color:#f1515f}
+.info_marker.info_fairway .ico{background-position:-42px -20px;background-color:#f7b841}
+.info_marker.info_hole .ico{background-position:-42px -40px;background-color:#389ef1}
+.info_marker.info_facilities .ico{background-position:-42px -60px;background-color:#9151f1}
+.marker_info_txt{display:inline-block;width:24px;font-size:12px;line-height:18px;color:#1a1a1a;text-align:center;vertical-align:middle}
+.is_selected .info_marker{width:52px;height:28px;margin:-2px 0 0 -2px;border:2px solid #fff}
+.is_selected .info_tee{background-color:#f1515f}
+.is_selected .info_fairway{background-color:#f7b841}
+.is_selected .info_hole{background-color:#389ef1}
+.is_selected .info_facilities{background-color:#9151f1}
+.is_selected .info_marker .ico{background-color:#fff}
+.is_selected .info_tee .ico{background-position:-62px 0}
+.is_selected .info_fairway .ico{background-position:-62px -20px}
+.is_selected .info_hole .ico{background-position:-62px -40px}
+.is_selected .marker_info_txt{color:#fff}
+[id^=daum-maps-shape]{stroke-dasharray:0.3,6!important}
+
+/* 편의시설 마커 */
+.facilities_marker{position:relative}
+.facilities_marker .ico{width:20px;height:20px;border:1px solid #3d117e;background-color:#8b41fa;box-sizing:border-box;border-radius:100%;box-shadow:0 3px 5px 0 rgba(0,0,0,0.2)}
+.facilities_marker .marker_info_txt{position:absolute;top:23px;left:50%;height:14px}
+.facilities_marker.info_BU .ico{background-position:-42px -60px}
+.facilities_marker.info_BU .marker_info_txt{width:58px;margin-left:-29px;background-position:-180px 0}
+.facilities_marker.info_SM .ico{background-position:-42px -120px}
+.facilities_marker.info_SM .marker_info_txt{width:48px;margin-left:-24px;background-position:-352px 0}
+.facilities_marker.info_GF .ico{background-position:-42px -100px}
+.facilities_marker.info_GF .marker_info_txt{width:72px;margin-left:-36px;background-position:-278px 0}
+.facilities_marker.info_TO .ico{background-position:-42px -80px}
+.facilities_marker.info_TO .marker_info_txt{width:36px;margin-left:-18px;background-position:-240px 0}
+
+/* 선수 스코어 공통 */
+.tbl_player{width:100%}
+.tbl_player .name{white-space:nowrap;box-sizing:border-box}
+.tbl_player .name .link_player_detail{display:block;text-align:left;font-size:0}
+.tbl_player .player_photo_area{width:36px;height:36px;margin-right:7px;vertical-align:middle}
+.tbl_player .player_photo_area:before{position:absolute;left:0;top:0;right:0;bottom:0;z-index:1;border:1px solid #ccc;border-radius:100%;content:''}
+.tbl_player .name_txt{display:inline-block;padding:0;vertical-align:middle;font-size:14px;font-weight:bold;color:#1a1a1a;}
+.tbl_player .score_today{font-weight:bold}
+.tbl_player .score_today.is_plus{color:#33a7ff}
+.tbl_player .score_today.is_minus{color:#fe3534}
+
+/* 조별상세 레이어 */
+.overlaybox{position:absolute;top:27px;left:50%;margin-left:-153px}
+.layer_marker_info{position:relative;width:306px;background-color:#fff;box-shadow:0 4px 6px 0 rgba(0,0,0,0.4)}
+.layer_marker_info:before{display:inline-block;position:absolute;top:-10px;left:50%;z-index:1;width:22px;height:10px;margin-left:-8px;background:url(../img/bg_layer_arr.png) no-repeat;content:''}
+.layer_marker_info .title_wrap{display:table;width:100%;padding:12px;border-bottom:1px solid #e7e7e7;table-layout:auto;box-sizing:border-box}
+.layer_marker_info .title_wrap .ico_area{display:table-cell;width:35px;padding-right:7px;font-size:0;vertical-align:middle}
+.layer_marker_info .title_wrap .ico_maker{width:35px;height:35px;border-radius:100%}
+.layer_marker_info .title_wrap .ico_maker.ico_tee{background-position:-82px 0;background-color:#f1515f}
+.layer_marker_info .title_wrap .ico_maker.ico_fairway{background-position:-82px -37px;background-color:#f7b841}
+.layer_marker_info .title_wrap .ico_maker.ico_hole{background-position:-82px -74px;background-color:#389ef1}
+.layer_marker_info .title_wrap .txt_area{display:table-cell;vertical-align:middle}
+.layer_marker_info .title_wrap .h_layer{font-size:16px;font-weight:bold;color:#1a1a1a}
+.layer_marker_info .title_wrap .desc_txt{display:block;margin-top:3px;font-size:12px;color:#666}
+.layer_marker_info .nav_controll_wrap{display:block;position:relative;padding:0 40px;border-bottom:1px solid #e7e7e7;text-align:center}
+.layer_marker_info .scroll_wrap{overflow:hidden;height:40px;font-size:0;white-space:nowrap}
+.layer_marker_info .lst_group{overflow:hidden;overflow-x:scroll}
+.layer_marker_info .lst_group .group{display:inline-block;width:60px;margin-left:20px}
+.layer_marker_info .lst_group .group:first-of-type{margin-left:0}
+.layer_marker_info .lst_group .group_name{display:inline-block;position:relative;font-size:14px;line-height:40px;color:#666}
+.layer_marker_info .lst_group span.group_name{font-weight:bold;color:#1a1a1a}
+.layer_marker_info .lst_group a.group_name.is_selected{font-weight:bold;color:#ff730a}
+.layer_marker_info .lst_group a.group_name.is_selected:after{position:absolute;right:0;left:0;bottom:0;height:3px;background-color:#ff730a;content:''}
+.layer_marker_info .btn_prev,.layer_marker_info  .btn_next{display:none;overflow:hidden;position:absolute;top:0;width:40px;height:40px;line-height:999px}
+.layer_marker_info .btn_prev:before,.layer_marker_info .btn_next:before{position:absolute;top:50%;left:50%;width:8px;height:14px;margin-left:-4px;margin-top:-7px;content:''}
+.layer_marker_info .btn_prev:before{background-position:-120px 0}
+.layer_marker_info .btn_next:before{background-position:-140px 0}
+.layer_marker_info .btn_layer_close{position:absolute;top:7px;right:7px;width:30px;height:30px}
+.layer_marker_info .btn_layer_close:before{position:absolute;top:6px;right:6px;width:18px;height:18px;background-position:-202px -16px;content:''}
+
+/* 버튼 컨트롤 탭 공통 */
+.nav_controll_wrap .btn_prev{left:0}
+.nav_controll_wrap .btn_next{right:0}
+.nav_controll_wrap .btn_prev,.nav_controll_wrap .btn_next{display:none}
+.nav_controll_wrap .btn_prev.is_show,.nav_controll_wrap .btn_next.is_show{display:inline-block}
+
+.layer_marker_info .tbl_player thead th{height:40px;border-bottom:1px solid #e8e8e8;font-weight:normal;font-size:14px;color:#666;text-align:center}
+.layer_marker_info .tbl_player tbody th{border-bottom:1px solid #e8e8e8;background-color:#f7f7f7;text-align:left}
+.layer_marker_info .tbl_player tbody td{height:47px;border-bottom:1px solid #e8e8e8;background-color:#f7f7f7;text-align:center}
+.layer_marker_info .tbl_player .name{max-width:122px;padding-left:12px}
+.layer_marker_info .tbl_player .player_photo_area{float:left}
+.layer_marker_info .tbl_player .name_txt{display:block;text-overflow:ellipsis;overflow:hidden;line-height:36px}
+.layer_marker_info .layer_loading{top:calc(0% + 63px);background:rgba(255,255,255,0.4)}
+.layer_marker_info .btn_wrap{font-size:0}
+.layer_marker_info .btn_wrap .btn_group_detail{display:block;height:40px;text-align:center}
+.layer_marker_info .btn_wrap .btn_txt{display:inline-block;font-size:14px;line-height:40px;color:#1a1a1a;font-weight:bold;vertical-align:middle}
+.layer_marker_info .btn_wrap .btn_group_detail:after{width:6px;height:12px;margin-left:7px;background-position:-158px -16px;vertical-align:middle;content:''}
+
+/* 검색기능있는 셀렉트 박스 */
+.search_bx{display:block;position:relative;top:32px;z-index:10;width:100%;max-width:400px;margin:0 auto;font-size:0;box-sizing:border-box}
+.search_bx .inp_area{display:inline-block;position:relative;width:100%;height:48px;padding:0 0 0 48px;background-color:#fff;box-sizing:border-box;box-shadow:0 3px 7px 0 rgba(0,0,0,0.6)}
+.search_bx .inp{border:none}
+.search_bx .inp_area:before{position:absolute;top:50%;left:24px;width:18px;height:18px;margin:-9px 0 0 -9px;background-position:-120px -16px;content:''}
+.search_bx .inp_search{display:inline-block;width:100%;height:48px; font-size:14px;line-height:48px;color:#1a1a1a}
+.search_bx .btn_delete{display:none;overflow:hidden;position:absolute;top:0;right:0;width:48px;height:100%;line-height:999px}
+.search_bx .btn_delete:before{position:absolute;top:50%;left:50%;width:16px;height:16px;margin:-8px 0 0 -8px;background-position:-140px -16px;content:''}
+.search_bx .scroll_area{display:none;position:relative;overflow-y:auto;min-height:80px;max-height:304px;margin-top:4px;background-color:#fff;box-shadow:0 3px 7px 0 rgba(0,0,0,0.6)}
+.search_bx .search_data_list{padding:16px 0}
+.search_bx .search_data_list .player{display:block;padding:0 14px;font-size:14px;line-height:48px;color:#1a1a1a;box-sizing:border-box}
+.search_bx .search_data_list .player:hover{background-color:#fff2e6}
+.search_bx .player_photo_area{width:37px;height:37px;margin-right:13px;vertical-align:middle}
+.search_bx .player_photo_area:before{position:absolute;left:0;top:0;right:0;bottom:0;z-index:1;border:1px solid #ccc;border-radius:100%;content:''}
+.search_bx .search_data_list .search_txt{vertical-align:middle}
+.search_bx .inp_area:after{display:inline-block;height:100%;vertical-align:middle;content:''}
+.search_bx .search_keywords_area{display:inline-block;position:relative;max-width:100%;padding:8px 38px 8px 14px;border:1px solid #ffa866;background-color:#ffeee0;vertical-align:middle;box-sizing:border-box}
+.search_bx .search_keywords_area .keywords{display:block;overflow:hidden;font-size:14px;color:#1a1a1a;white-space:nowrap;text-overflow:ellipsis}
+.search_bx .search_keywords_area .btn_delete{width:32px;height:32px}
+.search_bx .search_keywords_area .btn_delete:before{width:16px;height:16px;background-position:-166px -16px}
+.search_bx.has_value .inp_area{padding-right:48px}
+.search_bx.has_value .btn_delete{display:inline-block}
+.search_bx.has_value .scroll_area{display:block}
+.search_bx .scroll_area.is_empty{display:table;width:100%;text-align:center}
+.search_bx .scroll_area.is_empty .search_data_list{display:table-row}
+.search_bx .scroll_area.is_empty .search_data_list .data{display:table-cell;line-height:24px;font-size:14px;color:#1a1a1a;vertical-align:middle}
+
+/* 조 별 상세 */
+/* 공통 */
+.inner{width:1280px;margin:0 auto}
+.sec_tit_wrap .h_sec{display:inline-block;font-size:24px;color:#1a1a1a;vertical-align:middle}
+.tit_sub_desc{display:inline-block;font-size:14px;font-family:'NotoSans',sans-serif;color:#666;letter-spacing:-.03em;vertical-align:middle}
+.tit_sub_desc:before{display:inline-block;width:1px;height:12px;margin:0 10px;background-color:rgba(0,0,0,0.2);vertical-align:middle;content:''}
+.sec_tit_wrap .point_txt{margin-right:5px;font-weight:bold;color:#ff730a}
+.tit_wrap .tit_txt{display:inline-block;font-size:20px;font-weight:normal;font-family:'NotoSans',sans-serif;color:#1a1a1a;letter-spacing:0;vertical-align:middle}
+.nav_controll_wrap{position:relative}
+.scroll_wrap{display:block;overflow:hidden;overflow-x:auto;width:100%;font-size:0;box-sizing:border-box}
+.player_photo_area{display:inline-block;position:relative;overflow:hidden;background:url(../img/@tmp_player_empty.jpg);background-size:contain;border-radius:100%}
+.player_photo_area img{width:100%;height:auto}
+  
+/* chart_tooltip */
+#chart_tooltip{z-index:10;border:1px solid #e4e7eb;background-color:white;box-shadow:0 3px 7px 0 rgba(0,0,0,0.12)}
+#chart_tooltip .inner{padding:7px 15px 10px 30px}
+#chart_tooltip .state_txt{display:block;font-size:12px;color:#121212;font-weight:bold;line-height:18px}
+#chart_tooltip .ico_brush{position:static;top:11px;left:13px;width:11px;height:11px;display:inline-block;border:0}
+#chart_tooltip .sub_txt{font-size:12px;color:#121212;line-height:18px}
+
+/* 조별 라이브 스코어 */
+.sec_live_score{padding:66px 0 97px;background-color:#1b1d1f;text-align:center}
+.sec_live_score .group_name{position:relative;font-size:36px;line-height:74px;font-weight:bold;color:#fff}
+.sec_live_score .group_name:after{display:inline-block;position:absolute;left:50%;bottom:0;width:20px;height:2px;margin-left:-10px;background-color:#ff730a;content:''}
+.sec_live_score .start_time_wrap{display:block;margin-top:17px;font-size:14px;line-height:16px;color:#999}
+.sec_live_score .tit_txt{position:relative;padding-left:24px}
+.sec_live_score .tit_txt:before{position:absolute;top:50%;left:0;width:16px;height:16px;margin-top:-8px;background-position:-184px -16px;vertical-align:middle;content:''}
+.sec_live_score .tit_txt:after{display:inline-block;margin-top:-2px;padding:0 4px;vertical-align:middle;content:':'}
+.sec_live_score .time_txt{font-family:'NotoSans',sans-serif;color:#fff}
+.sec_live_score .tbl_player{margin-top:53px;font-family:'NotoSans',sans-serif}
+.sec_live_score .tbl_player thead th:nth-child(2){width:101px}
+.sec_live_score .tbl_player thead th:nth-child(3){width:135px}
+.sec_live_score .tbl_player thead th:nth-child(4){width:118px}
+.sec_live_score .tbl_player thead th:nth-child(5){width:126px}
+.sec_live_score .tbl_player thead th:nth-child(6){width:142px}
+.sec_live_score .tbl_player thead th:nth-child(7){width:110px}
+.sec_live_score .tbl_player thead th{height:47px;padding:0 20px;border-top:2px solid #4d4d4d;border-bottom:1px solid #333;font-weight:normal;font-size:14px;font-family:'NanumGothic';color:#999;text-align:center;white-space:nowrap}
+.sec_live_score .tbl_player tbody th{width:auto;padding:0;border-bottom:1px solid #333;font-size:16px;font-family:'NanumGothic';color:#fff;text-align:left}
+.sec_live_score .tbl_player tbody td{height:80px;border-bottom:1px solid #333;font-size:16px;color:#fff;text-align:center}
+.sec_live_score .tbl_player .player_photo_area{position:relative;width:48px;height:48px;margin-right:30px;border:0}
+.sec_live_score .tbl_player td.ranking{font-weight:bold;color:#ff730a}
+.sec_live_score .tbl_player .points{display:block;margin-top:5px;font-size:14px;color:#999}
+
+/* 홀 바이 홀 */
+.sec_holl_by_holl{padding:69px 0 71px}
+.sec_holl_by_holl .scroll_wrap{margin-top:22px}
+.tbl_holl_by_holl{width:100%;border-top:1px solid #1a1a1a;font-family:'NotoSans',sans-serif}
+.tbl_holl_by_holl th,.tbl_holl_by_holl tr:first-of-type th,.tbl_holl_by_holl tr:first-of-type td{width:45px;height:48px;padding:0 20px;border-bottom:1px solid #e6e6e6;border-left:1px solid #e6e6e6;background-color:#f7f7f7;font-weight:normal;font-size:14px;font-weight:bold;color:#1a1a1a;color:#1a1a1a;text-align:center;white-space:nowrap;box-sizing:border-box}
+.tbl_holl_by_holl tr th:first-of-type,.tbl_holl_by_holl tbody tr:first-of-type th:first-of-type{border-left:0}
+.tbl_holl_by_holl tbody th{border-bottom:1px solid #e6e6e6;background-color:#fcfcfc;font-size:14px;color:#1a1a1a}
+.tbl_holl_by_holl tbody td{height:56px;border-bottom:1px solid #e6e6e6;border-left:1px solid #e6e6e6;font-size:14px;color:#1a1a1a;text-align:center}
+.tbl_holl_by_holl .link_player_detail{font-size:14px;font-family:'NanumGothic';color:#1a1a1a;text-align:center}
+.tbl_holl_by_holl thead th.is_active,.tbl_holl_by_holl th.is_active,.tbl_holl_by_holl tbody td.is_active{background-color:#fff2e7}
+.tbl_holl_by_holl thead th.is_active{color:#ff730a}
+.tbl_holl_by_holl thead th:first-of-type,.tbl_holl_by_holl thead th:last-of-type{width:90px}
+.tbl_holl_by_holl tbody td.state_a{background-color:#e72525;color:#fff}
+.tbl_holl_by_holl tbody td.state_e{background-color:#ff7c0a;color:#fff}
+.tbl_holl_by_holl tbody td.state_b{background-color:#f9b842;color:#fff}
+.tbl_holl_by_holl tbody td.state_f{background-color:#fff;color:#1a1a1a}
+.tbl_holl_by_holl tbody td.state_v{background-color:#7ec0fa;color:#fff}
+.tbl_holl_by_holl tbody td.state_v2{background-color:#5f8deb;color:#fff}
+.tbl_holl_by_holl tbody td.state_v3{background-color:#4744c5;color:#fff}
+.tbl_holl_by_holl tbody td.state_inout,.tbl_holl_by_holl thead th.state_inout{background-color:#ebebeb}
+.tbl_holl_by_holl tbody td.total,.tbl_holl_by_holl thead th.total{background-color:#d6d6d6}
+.tbl_holl_by_holl tbody td.state_dimmed,.tbl_holl_by_holl tbody td.total_dimmed{background-color:#fcfcfc}
+
+.lst_state{display:block;margin:13px 0 -4px;text-align:right;font-size:0}
+.lst_state:after{display:block;clear:both;content:''}
+.lst_state .state_item{display:inline-block;margin-right:16px}
+.lst_state .state_item:last-of-type{margin-right:0}
+.lst_state .state_item .txt{display:inline-block;padding:5px 0 4px;line-height:13px;font-size:12px;color:#1a1a1a;vertical-align:middle}
+.lst_state .state_item:before{display:inline-block;width:13px;height:13px;margin-right:7px;vertical-align:middle;content:'';box-sizing:border-box}
+.lst_state .state_a:before{background-color:#e72525}
+.lst_state .state_e:before{background-color:#ff7c0a}
+.lst_state .state_b:before{background-color:#f9b842}
+.lst_state .state_f:before{border:1px solid #e6e6e6;background-color:#fff}
+.lst_state .state_v:before{background-color:#7ec0fa}
+.lst_state .state_v2:before{background-color:#5f8deb}
+.lst_state .state_v3:before{background-color:#4744c5}
+
+/* 탭 공통 */
+.tab{font-family:'NotoSans',sans-serif;font-size:0;white-space:nowrap}
+.tab .tab_item{position:relative}
+.tab .tab_item:first-of-type{margin-left:0}
+.tab .btn_tab{position:absolute;top:0;right:0;left:0;border:1px solid #dbdbdb;border-right:0;font-size:16px;color:#666;text-align:center}
+.tab .tab_item:last-of-type .btn_tab{border-right:1px solid #dbdbdb}
+.tab .tab_item.is_selected .btn_tab{z-index:1;border:1px solid #ff730a;color:#ff730a;font-weight:bold}
+.tab .tab_item.is_selected+.tab_item .btn_tab{border-left:0}
+.tab .tab_item.is_disabled .btn_tab{background-color:#f2f2f2;color:#dbdbdb}
+
+/* 홀 리스트 탭 */
+.lst_holl .tab{display:table;width:100%;height:72px;table-layout:fixed}
+.lst_holl .tab_item{display:table-cell;width:auto}
+.lst_holl .btn_tab{height:70px;line-height:70px}
+.lst_holl .btn_prev.is_disabled:before{background-position:-130px 0}
+.lst_holl .btn_next.is_disabled:before{background-position:-150px 0}
+.lst_holl .btn_prev.is_show,.lst_holl .btn_next.is_show{display:none}
+
+/* 샷 트랙커 */
+.sec_shot_tracker{padding:65px 0 85px;background-color:#f7f7f7}
+.sec_shot_tracker .nav_controll_wrap{margin-top:22px}
+.sec_shot_tracker .lst_round .tab_item.is_selected .btn_tab{border-bottom-color:#f7f7f7}
+
+/* 홀 */
+.holl_contents{position:relative;padding-top:40px}
+.lst_round{position:absolute;top:86px;width:100%;height:47px;margin-top:0;border-bottom:1px solid #ff730a}
+.lst_round .tab_item{display:inline-block;width:211px}
+.lst_round .btn_tab{height:46px;border-bottom:1px solid #ff730a;line-height:46px}
+.lst_round .tab_item.is_selected .btn_tab{z-index:1;height:46px;border:1px solid #ff730a;border-bottom:1px solid #fff}
+.holl_detail_wrap{display:table;width:calc(100% - 410px);table-layout:fixed;margin-top:38px}
+.holl_cnt{display:table-cell;position:relative;padding:0 0 0 57px;box-sizing:border-box}
+.holl_cnt:first-of-type{padding-left:0;padding-right:57px}
+.holl_cnt .h_txt{font-size:16px;color:#1a1a1a}
+.holl_cnt:before{display:inline-block;position:absolute;left:0;top:2px;bottom:2px;width:1px;background-color:#dbdbdb;content:''}
+.holl_cnt:first-of-type:before{display:none}
+.holl_detail_wrap .donut_chart+.lst_state{margin-top:14px;text-align:left}
+.holl_detail_wrap .donut_chart+.lst_state .state_item .txt{padding:3px 0}
+.holl_detail_wrap .donut_chart svg{margin-top:10px;width:100%;height:170px;border-bottom:1px solid #e6e6e6}
+.lst_holl_history{display:table;margin-top:44px;table-layout:auto}
+.lst_holl_history .holl_data{display:table-row;font-size:14px;line-height:30px}
+.lst_holl_history .data_tit{display:table-cell;position:relative;padding:0 24px 0 8px;font-weight:bold;color:#1a1a1a}
+.lst_holl_history .data_tit:before{display:inline-block;position:absolute;top:50%;left:0;width:2px;height:2px;margin-top:-1px;border-radius:100%;background-color:#1a1a1a;content:''}
+.lst_holl_history .data_txt{display:table-cell;color:#000005}
+
+/* 라운드 */
+.round_info{display:block;position:relative;margin-top:107px;padding-left:410px}
+.lst_player{margin-top:0}
+.lst_player .tab_item{display:inline-block;width:auto;height:auto;margin-left:40px;border:0}
+.lst_player .tab_item:first-of-type{margin-left:0}
+.lst_player .btn_tab{position:static;border:0;line-height:48px}
+.lst_player .player_photo_area{width:48px;height:48px;margin-right:2px;border:2px solid #b2b2b2;line-height:48px;vertical-align:middle}
+.lst_player .player_photo_area:after{position:absolute;top:-2px;right:-2px;left:-2px;bottom:-2px;z-index:1;border-radius:100%;background-color:rgba(31,25,25,0.3);content:''}
+.lst_player .tab_item.is_selected .btn_tab .player_photo_area:after{display:none}
+.lst_player .tab_item.is_selected .btn_tab{border:0}
+.lst_player .tab_item:last-of-type .btn_tab{border:0}
+.lst_player .is_selected .btn_player1 .player_photo_area{border-color:#e4e212}
+.lst_player .is_selected .btn_player2 .player_photo_area{border-color:#fe3534}
+.lst_player .is_selected .btn_player3 .player_photo_area{border-color:#3942ec}
+.lst_player .name{line-height:48px}
+.lst_player .is_selected .btn_tab .name{font-weight:bold;color:#1a1a1a}
+.round_info .link_player_detail{position:absolute;top:0;right:0;font-size:0}
+.round_info .link_player_detail .txt{display:inline-block;font-size:12px;color:#1a1a1a;vertical-align:middle}
+.round_info .link_player_detail:after{display:inline-block;width:6px;height:10px;margin-left:6px;background-position:-172px 0;vertical-align:middle;content:''}
+.player_shot_info{display:block;height:178px;overflow-y:auto;margin-top:20px}
+.tbl_shot{width:100%;font-size:0}
+.tbl_shot th,.tbl_shot td{border-bottom:1px solid #e6e6e6;font-size:14px;color:#1a1a1a;text-align:center;line-height:40px}
+.tbl_shot thead th{height:39px;border-top:1px solid #e6e6e6;background-color:#f7f7f7}
+.tbl_shot thead th:nth-child(1){width:139px}
+.tbl_shot thead th:nth-child(2){width:241px}
+.tbl_shot thead th:nth-child(3){width:244px}
+.sec_shot_tracker .tbl_shot th,.sec_shot_tracker .tbl_shot td{border-bottom-color:#e5e5e5}
+.sec_shot_tracker .tbl_shot thead th{height:32px;line-height:normal;border-top-color:#e5e5e5;background-color:#f0f0f0}
+.sec_shot_tracker .tbl_shot tbody th,.sec_shot_tracker .tbl_shot tbody td{line-height:35px}
+
+/* 선수별 지도 */
+.player_map_wrap{display:inline-block;float:left;position:relative;width:100%;max-width:360px;margin:107px 50px 0 0}
+.player_map_wrap .map_area{position:relative;height:0;padding-bottom:152.7777%}
+.player_map_wrap .map_area .btn_marker{display:inline-block;overflow:hidden;position:absolute;z-index:1;width:20px;height:20px;margin:-10px 0 0 -10px;line-height:999px;border-radius:100%}
+.player_map_wrap .map_area img{width:100%}
+.map_point{position:absolute;top:0;left:0}
+.player_map_wrap path{stroke-width:2;fill:transparent}
+.player_map_wrap .player1 path{stroke:#e4e212}
+.player_map_wrap .player1 circle{fill:#e4e212}
+.player_map_wrap .player2 path{stroke:#fe3534}
+.player_map_wrap .player2 circle{r:5;fill:#fe3534}
+.player_map_wrap .player3 path{stroke:#3942ec}
+.player_map_wrap .player3 circle{r:5;fill:#3942ec}
+.layer_player_info{display:none;position:absolute;z-index:2;height:94px;margin:-98px 0 0 14px;padding:16px 45px 0 0;background:url(../img/bg_player_info.png) 0 -96px repeat-x;background-size:50px auto;font-size:0;box-sizing:border-box}
+.layer_player_info.is_show{display:block}
+.layer_player_info:before{display:inline-block;position:absolute;top:0;left:-50px;width:50px;height:94px;background:url(../img/bg_player_info.png) 0 0 no-repeat;background-position:0 0;content:''}
+.layer_player_info .cnt_wrap{display:inline-block;position:relative;margin-left:-31px;vertical-align:middle;white-space:nowrap;box-sizing:border-box}
+.layer_player_info:after{display:inline-block;position:absolute;top:0;right:-14px;width:14px;height:94px;background:url(../img/bg_player_info.png) 0 0 no-repeat;background-position:0 -192px;content:''}
+.layer_player_info .player_photo_area{float:left;width:30px;height:30px;margin-right:7px;border:2px solid}
+.layer_player_info .txt_area{display:inline-block;vertical-align:middle}
+.layer_player_info .name{font-size:16px;font-weight:bold;color:#1a1a1a}
+.layer_player_info .desc_txt{display:block;font-size:12px;color:#666;line-height:16px;letter-spacing:-0.04em}
+.layer_player_info .btn_close{position:absolute;top:16px;right:6px;width:16px;height:16px;background-position:-202px -16px}
+.layer_player_info .player_photo_area.player1{border-color:#e4e212}
+.layer_player_info .player_photo_area.player2{border-color:#fe3534}
+.layer_player_info .player_photo_area.player3{border-color:#3942ec}
+
+/* 선수 별 상세 */
+/* 프로필 영역 */
+.sec_player_profile{position:relative;padding-top:83px;border-bottom:1px solid #e5e8eb;background:linear-gradient(#1b1d1f 228px, #fff 228px) no-repeat;box-sizing:border-box}
+.sec_player_profile .inner{position:relative;padding-left:320px;box-sizing:border-box}
+.player_profile{display:block;position:relative;height:145px;font-size:0}
+.player_profile .player_name{overflow:hidden;max-height:41px;margin-top:15px;font-size:36px;font-weight:bold;color:#fff;letter-spacing:-0.01em;word-break:break-all}
+.player_profile .en_name{display:block;overflow:hidden;max-height:19px;margin-top:16px;margin-right:226px;font-size:16px;font-weight:300;color:#999;letter-spacing:-0.02em;word-break:break-all}
+.player_profile .country{font-size:0}
+.player_profile .country:before{margin-right:14px;border-radius:3px;vertical-align:middle}
+.player_profile .country .country_name{display:inline-block;line-height:18px;font-size:14px;font-weight:bold;font-family:'NotoSans',sans-serif;color:#fff;vertical-align:middle}
+.player_profile .player_photo_area{position:absolute;top:2px;left:-254px;width:188px;height:188px;box-shadow:0 5px 18px 0 rgba(0,0,0,0.1)}
+.player_profile .player_photo_area img{width:100%;height:auto}
+.lst_physical_info{position:absolute;top:91px;right:0}
+.lst_physical_info .info{display:inline-block;margin-left:24px;font-size:16px;line-height:22px;color:#fff}
+.lst_record{display:table;width:100%;padding-top:37px;padding-bottom:35px;table-layout:fixed}
+.lst_record .record_area{display:table-cell;position:relative;padding:0 30px}
+.lst_record .record_area:before{display:inline-block;position:absolute;top:50%;left:0;width:1px;height:60px;margin-top:-30px;background-color:#e5e8eb;content:''}
+.lst_record .record_area:first-of-type{padding-left:0}
+.lst_record .record_area:first-of-type:before{display:none}
+.lst_record .tit_txt{display:block;margin-bottom:8px;font-size:12px;color:#4c4c4c}
+.lst_record .point_txt{font-size:36px;font-weight:bold;color:#1a1a1a}
+.lst_record .desc_txt{position:absolute;right:30px;bottom:6px;font-size:14px;color:#1a1a1a}
+.sec_player_profile .noti_txt{position:absolute;right:0;bottom:-26px;font-size:12px;color:#999}
+.sec_player_profile .noti_txt:before{margin-right:4px;content:'*'}
+
+/* 선수 기록 상세 */
+.sec_player_record{padding:105px 0}
+.lst_player_record{display:table;width:100%;height:72px;table-layout:fixed}
+.lst_player_record .tab_item{display:table-cell;width:auto;height:auto;border:0;box-sizing:border-box}
+.lst_player_record .btn_tab{height:70px;line-height:68px;font-family:'NanumGothic'}
+.lst_player_record .tab_item:last-of-type.is_selected .btn_tab{border-right:1px solid #ff730a}
+.lst_player_record .is_selected+.tab_item .btn_tab{border-left:0}
+.sec_player_record .btn_wrap{padding-top:88px}
+.sec_player_record .btn_wrap .btn_back{display:inline-block;width:210px;height:52px;background-color:#111;line-height:52px;font-size:16px;color:#fff;text-align:center}
+.sec_player_record .btn_wrap .btn_back:before{display:inline-block;width:8px;height:14px;margin-right:9px;background-position:-220px -16px;vertical-align:middle;content:''}
+
+/* 프로필 탭 */
+#tab_player_history{padding-top:60px}
+.lst_history{position:relative;overflow:hidden;border-top:1px solid #1a1a1a}
+.lst_history .history{position:relative;float:left;width:50%;height:102px;padding-top:26px;padding-left:31px;border-bottom:1px solid #e6e6e6;box-sizing:border-box}
+.lst_history .history:nth-child(even):before{display:inline-block;position:absolute;left:0;top:28px;bottom:25px;width:1px;background-color:#e6e6e6;content:''}
+.lst_history .tit_txt{display:block;font-size:14px;font-weight:normal;color:#4c4c4c}
+.lst_history .desc_txt{display:block;margin-top:6px;font-weight:bold;font-size:24px;color:#1a1a1a}
+.lst_history:after{display:inline-block;position:absolute;bottom:0;left:0;right:0;z-index:1;height:1px;background-color:#999;content:''}
+
+/* 스코어 탭 */
+#tab_player_score{padding:55px 0 0}
+#tab_player_score .sec_tit_wrap{margin-top:39px}
+#tab_player_score .sec_tit_wrap:first-of-type{margin-top:0}
+#tab_player_score .sec_tit_wrap .h_sec{font-size:20px}
+#tab_player_score .scroll_wrap{margin-top:24px}
+
+/* 스탯 탭 */
+.stat_wrap{margin-top:55px;font-size:0}
+.stat_wrap .stat_item{display:inline-block;width:305px;margin-left:20px;vertical-align:bottom}
+.stat_wrap .stat_item:first-of-type{margin-left:0}
+.stat_wrap .h_stat{font-size:16px;color:#1a1a1a;text-align:center}
+.stat_wrap .chart_wrap{display:inline-block;position:relative;width:305px;height:305px;margin-top:35px}
+.stat_wrap .chart_wrap:after{display:inline-block;position:absolute;left:0;bottom:0;width:100%;height:1px;background-color:#e6e6e6;content:''}
+#tab_player_stat .lst_state{margin-top:19px}
+#tab_player_stat .state_ta:before{background-color:#ff730a}
+#tab_player_stat .state_sa:before{background-color:#b1b3b3}
+#tab_player_stat .state_ca:before{background-color:#525659}
+.stat_wrap .chart_wrap.is_empty{text-align:center}
+.stat_wrap .chart_wrap.is_empty svg{display:none}
+.stat_wrap .chart_wrap.is_empty:before{display:inline-block;height:100%;vertical-align:middle;content:''}
+.stat_wrap .chart_wrap.is_empty .guide_txt{display:inline-block;vertical-align:middle;font-size:14px;color:#999}
+
+/* 샷 트랙커 탭 */
+#tab_player_tracker .nav_controll_wrap{margin-top:-1px}
+#tab_player_tracker .tab_holl_content{position:relative;margin-top:55px;padding-left:409px}
+.tab_holl_content .player_map_wrap{position:absolute;top:0;left:0;margin:0}
+.tbl_hole_detail{min-width:100%;margin-top:19px;table-layout:fixed}
+.tbl_hole_detail th,.tbl_hole_detail td{border-bottom:1px solid #e6e6e6;font-size:14px;color:#1a1a1a}
+.tbl_hole_detail thead th{height:39px;border-top:1px solid #e6e6e6;background-color:#f7f7f7}
+.tbl_hole_detail tbody td{height:40px;text-align:center}
+.tab_holl_content .tab.lst_round{display:table;position:static;height:48px;margin-top:51px;border-bottom:0;table-layout:fixed}
+.tab_holl_content .lst_round .tab_item{display:table-cell;width:auto;border:0;box-sizing:border-box}
+
+/* layer_loading */
+.layer_loading{display:none;position:absolute;top:0;left:0;right:0;bottom:0;text-align:center;background:rgba(0,0,0,0.3);z-index:100;font-size:0;}
+.layer_loading.is_show{display:block}
+.layer_loading:before{display:inline-block;height:100%;vertical-align:middle;content:'';}
+.layer_loading .ico_area{display:inline-block;width:88px;height:88px;background-color:#fff;vertical-align:middle;border-radius:100%}
+.layer_loading .ico_area:before{display:inline-block;height:100%;vertical-align:middle;content:'';}
+.layer_loading .ico_area img{display:inline-block;vertical-align:middle}
+
+/* chart_tooltip */
+#chart_tooltip{z-index:10;border:1px solid #e4e7eb;background-color:white;box-shadow:0 3px 7px 0 rgba(0,0,0,0.12);text-align:left}
+#chart_tooltip .inner{width:auto;padding:7px 15px 10px 30px}
+#chart_tooltip .state_txt{display:block;font-size:12px;color:#121212;font-weight:bold;line-height:18px}
+#chart_tooltip .ico_brush{position:absolute;top:11px;left:13px;width:11px;height:11px;display:inline-block;border:0;box-sizing:border-box}
+#chart_tooltip .sub_txt{font-size:12px;color:#121212;line-height:18px}
+
+@media all and (max-width:1024px){
+  .wrap{overflow:hidden;min-width:320px;padding-top:48px}
+  .inner{width:auto;padding:0 20px}
+  .is_m_show{display:block}
+  .is_pc_show{display:none}
+  .sp,header .link_live_score:after,.category .btn_maker,.info_marker .ico,.layer_marker_info .title_wrap .ico_maker,.nav_controll_wrap .btn_prev:before,.nav_controll_wrap .btn_next:before,.layer_marker_info .btn_wrap .btn_group_detail:after,.search_bx .btn_delete:before,.search_bx .inp_area:before,.sec_live_score .tit_txt:before,.layer_player_info .btn_close,.facilities_marker .ico,.facilities_marker .marker_info_txt,.layer_marker_info .btn_layer_close:before,.btn_wrap .btn_back:before{background-image:url(../img/sp_m.png);background-size:250px auto}
+
+  /* 헤더 */
+  header{height:48px}
+  header .logo{width:53px;height:24px;margin-top:-12px}
+  header .logo .link_kpga{width:53px;height:13px;background:url(../img/logo_kpga_m.png) no-repeat;background-size:100% auto}
+  header .logo .link_stats{width:35px;height:11px;background:url(../img/logo_stats_m.png) right bottom no-repeat;background-size:30px 7px}
+  header .h_main:before{display:none}
+  header .h_main .link_txt{font-size:14px}
+  header .link_live_score{right:18px;width:55px;height:100%;padding:10px 0;line-height:14px;letter-spacing:.05em;text-align:left;white-space:normal;box-sizing:border-box}
+  .category{top:auto;left:20px;margin-top:60px}
+  header .link_live_score:after{width:9px;height:9px;margin-left:3px;background-position:-158px 0}
+
+  /* 지도 */
+  .map_wrap{height:calc(100% - 48px)}
+
+  /* 카테고리 */
+  .category li{width:36px;height:36px}
+  .category .btn_maker{width:36px;height:36px}
+  .category .ico_tee{background-position:0 0}
+  .category .ico_fairway{background-position:0 -38px}
+  .category .ico_hole{background-position:0 -76px}
+  .category .ico_facilities{background-position:0 -114px}
+
+  /* 마커 */
+  .info_marker{width:52px;height:26px;padding:3px;border-radius:26px}
+  .info_marker .ico{width:20px;height:20px}
+  .info_marker.info_tee .ico{background-position:-38px 0}
+  .info_marker.info_fairway .ico{background-position:-38px -22px}
+  .info_marker.info_hole .ico{background-position:-38px -44px}
+  .info_marker.info_facilities .ico{background-position:-38px -66px}
+  .marker_info_txt{width:29px;font-size:13px;line-height:20px}
+  .is_selected .info_marker{width:56px;height:30px;border:2px solid #fff}
+  .is_selected .info_tee{background-color:#f1515f}
+  .is_selected .info_fairway{background-color:#f7b841}
+  .is_selected .info_hole{background-color:#389ef1}
+  .is_selected .info_facilities{background-color:#9151f1}
+  .is_selected .info_tee .ico{background-position:-60px 0}
+  .is_selected .info_fairway .ico{background-position:-60px -22px}
+  .is_selected .info_hole .ico{background-position:-60px -44px}
+
+  /* 편의시설 마커 */
+  .facilities_marker .ico{width:16px;height:16px;background-color:#9151f1}
+  .facilities_marker .marker_info_txt{top:18px;height:13px}
+  .facilities_marker.info_BU .ico{background-position:-38px -66px}
+  .facilities_marker.info_BU .marker_info_txt{width:52px;margin-left:-26px;background-position:-118px -67px}
+  .facilities_marker.info_SM .ico{background-position:-38px -114px}
+  .facilities_marker.info_SM .marker_info_txt{width:43px;margin-left:-21px;background-position:-185px -82px}
+  .facilities_marker.info_GF .ico{background-position:-38px -98px}
+  .facilities_marker.info_GF .marker_info_txt{width:65px;margin-left:-32px;background-position:-118px -82px}
+  .facilities_marker.info_TO .ico{background-position:-38px -82px}
+  .facilities_marker.info_TO .marker_info_txt{width:32px;margin-left:-16px;background-position:-172px -67px}
+
+  /* 조별상세 레이어 */
+  .overlaybox{margin-left:-145px}
+  .layer_marker_info{width:290px}
+  .layer_marker_info .title_wrap{padding-top:11px}
+  .layer_marker_info .title_wrap .ico_area{width:33px}
+  .layer_marker_info .title_wrap .ico_maker{width:33px;height:33px}
+  .layer_marker_info .title_wrap .ico_maker.ico_tee{background-position:-82px 0}
+  .layer_marker_info .title_wrap .ico_maker.ico_fairway{background-position:-82px -36px}
+  .layer_marker_info .title_wrap .ico_maker.ico_hole{background-position:-82px -72px}
+  .layer_marker_info .title_wrap .h_layer{font-size:17px}
+  .layer_marker_info .title_wrap .desc_txt{margin-top:0}
+  .layer_marker_info .nav_controll_wrap{margin-top:0}
+  .layer_marker_info .nav_controll_wrap .scroll_wrap{height:38px}
+  .layer_marker_info .lst_group .group_name{line-height:38px}
+  .nav_controll_wrap .btn_prev:before,.nav_controll_wrap .btn_next:before{height:13px}
+  .nav_controll_wrap .btn_prev:before{background-position:-128px 0}
+  .nav_controll_wrap .btn_next:before{background-position:-148px 0}
+  .nav_controll_wrap .btn_prev.is_disabled:before{background-position:-118px 0}
+  .nav_controll_wrap .btn_next.is_disabled:before{background-position:-138px 0}
+  .tbl_player .player_photo_area{width:31px;height:31px}
+  .layer_marker_info .tbl_player .name_txt{line-height:31px}
+  .layer_marker_info .layer_loading{top:calc(0% + 61px)}
+  .layer_marker_info .tbl_player thead th{height:38px;font-size:13px}
+  .layer_marker_info .tbl_player tbody td{height:44px}
+  .layer_marker_info .btn_wrap .btn_txt{font-size:13px}
+  .layer_marker_info .btn_wrap .btn_group_detail:after{height:10px;background-position:-153px -15px}
+  .layer_marker_info .btn_layer_close{top:0;right:0;width:40px;height:40px}
+  .layer_marker_info .btn_layer_close:before{right:12px;top:12px;width:16px;height:16px;background-position:-54px -66px}
+
+  /* 검색기능있는 셀렉트 박스 */
+  .search_bx{top:8px}
+  .search_bx .inp_area{height:36px;padding-right:45px;padding-left:50px}
+  .search_bx .inp_area:before{width:17px;height:17px;margin:-8px 0 0 -8px;background-position:-118px -15px}
+  .search_bx .inp_search{height:36px;line-height:36px;font-size:14px}
+  .search_bx .btn_delete:before{width:14px;height:14px;margin:-6px 0 0 -6px;background-position:-137px -15px}
+  .search_bx .scroll_area{max-height:216px}
+  .search_bx .search_data_list{padding-top:12px}
+  .search_bx .search_data_list .player{padding:0 14px;font-size:13px;line-height:44px}
+  .search_bx .player_photo_area{width:31px;height:31px;margin-right:9px}
+  .search_bx .scroll_area.is_empty .search_data_list .data{font-size:13px;line-height:20px}
+  .search_bx .search_keywords_area{padding:4px 37px 6px 10px}
+  .search_bx .search_keywords_area .btn_delete{right:5px;width:27px;height:27px}
+  .search_bx .search_keywords_area .btn_delete:before{width:15px;height:15px;margin:-8px 0 0 -8px;background-position:-161px -15px}
+
+  /* 조별 상세 */
+  .scroll_wrap{width:auto;margin:0 -20px;padding:0 20px}
+  .nav_controll_wrap .scroll_wrap{overflow:hidden;margin:0;padding:0}
+  .sec_tit_wrap .h_sec{font-size:20px}
+  .tit_sub_desc{font-size:13px}
+  .tit_sub_desc:before{height:11px;margin:0 4px}
+  .sec_tit_wrap .point_txt{margin-right:4px}
+  .tit_wrap .tit_txt{font-size:18px}
+
+  /* 탭 공통 */
+  .tab{height:56px}
+  .tab .tab_item{width:56px;box-sizing:border-box}
+  .tab .btn_tab{height:54px;line-height:54px;font-size:14px}
+  
+  .sec_live_score{padding:40px 0 60px;border-top:1px solid #333}
+  .sec_live_score .group_name:after{width:16px;margin-left:-8px}
+  .sec_live_score .tit_txt{font-size:15px}
+  .sec_live_score .tit_txt:before{background-position:-178px -15px}
+  .sec_live_score .tit_txt:after{padding-right:5px;padding-left:9px}
+  .sec_live_score .time_txt{font-size:15px}
+  .sec_live_score .tbl_player{margin-top:59px}
+  .sec_live_score .tbl_player thead th{height:37px}
+  .sec_live_score .tbl_player tbody th{font-size:15px}
+  .sec_live_score .tbl_player tbody td{font-size:15px}
+  .sec_live_score .tbl_player .player_photo_area{width:56px;height:56px;margin-right:15px}
+
+  .sec_holl_by_holl{padding:58px 0 29px}
+  .sec_holl_by_holl .scroll_wrap{margin-top:14px}
+  .tbl_holl_by_holl{border-top-width:2px}
+  .tbl_holl_by_holl th,.tbl_holl_by_holl tr:first-of-type th,.tbl_holl_by_holl tr:first-of-type td{height:36px}
+  .tbl_holl_by_holl tbody td{height:44px}
+
+  .lst_state{margin:11px 0 -8px;text-align:left}
+  .lst_state .state_item{padding:5px 0 4px}
+  .lst_state .state_item .txt{font-size:11px;line-height:12px}
+  .lst_state .state_item:before{width:12px;height:12px;margin-right:6px}
+
+  /* 샷 트랙커 */
+  .sec_shot_tracker{padding-top:50px;padding-bottom:44px}
+
+  /* 홀 선택 메뉴 */
+  .lst_holl{margin-top:13px;padding:0 30px}
+  .lst_holl .scroll_wrap{height:56px;border-right:1px solid #dbdbdb}
+  .lst_holl .tab{height:56px}
+  .lst_holl .tab_item{height:56px}
+  .lst_holl .btn_prev,.lst_holl .btn_next{display:none;overflow:hidden;position:absolute;top:0;width:30px;height:56px;line-height:999px}
+  .lst_holl .btn_prev:before,.lst_holl .btn_next:before{position:absolute;top:50%;left:auto;width:11px;height:20px;margin:-10px 0 0;content:''}
+  .lst_holl .btn_prev{left:0;text-align:right}
+  .lst_holl .btn_prev:before{left:0;background-position:-131px -34px}
+  .lst_holl .btn_next{right:0;text-align:left}
+  .lst_holl .btn_next:before{right:0;background-position:-157px -34px}
+  .lst_holl .btn_prev.is_show,.lst_holl .btn_next.is_show{display:inline-block}
+  .lst_holl .btn_prev.is_disabled:before{background-position:-118px -34px}
+  .lst_holl .btn_next.is_disabled:before{background-position:-144px -34px}
+
+  /* 홀 */
+  .holl_contents{padding-top:24px}
+  .lst_round{display:table;position:static;height:40px;margin-top:40px;border-bottom:0;table-layout:fixed}
+  .lst_round .tab_item{display:table-cell;height:auto;border:0;box-sizing:border-box;box-sizing:border-box}
+  .lst_round .btn_tab{bottom:0;height:38px;border:1px solid #dbdbdb;border-right-width:0;border-bottom:1px solid #ff730a;line-height:38px}
+  .lst_round .tab_item.is_selected .btn_tab{height:38px}
+  .lst_round .is_selected+.tab_item .btn_tab{border-left:0}
+  .holl_detail_wrap{display:block;width:auto}
+  .holl_cnt{display:block;width:100%;padding:33px 0 32px;border-top:1px solid #dbdbdb}
+  .holl_cnt:first-of-type{padding-top:37px;padding-bottom:31px;padding-right:0}
+  .holl_cnt .h_txt{font-size:18px}
+  .holl_cnt:before{display:none}
+  .chart_wrap{margin-top:9px;text-align:center}
+  .lst_holl_history{width:100%;margin-top:15px;table-layout:fixed}
+  .lst_holl_history .holl_data{line-height:29px}
+  .lst_holl_history .data_txt{padding-left:7px}
+
+  /* 라운드 */
+  .round_info{height:auto;margin-top:25px;padding-left:0}
+  .tab.lst_player{display:table;width:100%;table-layout:fixed}
+  .tab.lst_player .tab_item{display:table-cell;text-align:center}
+  .tab.lst_player .tab_item:before{display:inline-block;position:absolute;top:50%;left:0;width:1px;height:37px;margin-top:-19px;background-color:#dbdbdb;content:''}
+  .tab.lst_player .tab_item:first-of-type:before{display:none}
+  .tab.lst_player .player_photo_area{width:56px;height:56px;border-width:1px}
+  .tab.lst_player .name{display:block;overflow:hidden;text-overflow:ellipsis;margin-top:6px;padding:0 5px;line-height:normal;white-space:nowrap}
+  .round_info .link_player_detail{display:block;position:static;margin-top:20px;text-align:right}
+  .round_info .link_player_detail:after{margin-left:4px}
+  .player_shot_info{margin-top:20px;height:auto}
+  .link_player_detail+.player_shot_info{margin-top:23px}
+  .tbl_shot thead th{height:39px;font-size:13px;line-height:15px}
+  .tbl_shot tbody th, .tbl_shot tbody td{line-height:39px}
+  .tbl_shot thead th:nth-child(1){width:16.07%}
+  .tbl_shot thead th:nth-child(2){width:27.78%}
+  .tbl_shot thead th:nth-child(3){width:28.13%}
+
+  /* 선수별 지도 */
+  .player_map_wrap{float:none;max-width:none;margin:9px 0 0}
+  .layer_player_info{left:50%!important;width:298px;height:70px;margin:10px 0 0 -149px;padding:16px 17px;background:#fff;box-shadow:0 4px 8px 0 rgba(0,0,0,0.3)}
+  .layer_player_info .cnt_wrap{margin:0}
+  .layer_player_info:before{display:none}
+  .layer_player_info:after{display:none}
+  .layer_player_info .player_photo_area{float:left;width:36px;height:36px;margin-right:8px;border-width:1px}
+  .layer_player_info .txt_area{display:block}
+  .layer_player_info .cnt_wrap:after{display:block;clear:both;content:''}
+  .layer_player_info .desc_txt{line-height:16px}
+  .layer_player_info .btn_close{display:inline-block;overflow:hidden;position:absolute;top:12px;right:12px;width:12px;height:13px;background-position:-169px 0;line-height:999px}
+
+  /* 선수 별 상세 */
+  /* 선수 기록 상세 */
+  .lst_player_record{height:56px}
+  .lst_player_record .tab_item{height:auto}
+  .lst_player_record .btn_tab{height:54px;line-height:54px}
+  .sec_player_record .btn_wrap{padding-top:60px}
+  .sec_player_record .btn_wrap .btn_back{width:100%}
+  .sec_player_record .btn_wrap .btn_back:before{width:6px;height:11px;background-position:-183px 0}
+
+  /* 프로필 영역 */
+  .sec_player_profile{padding-top:0;background:linear-gradient(#1b1d1f 155px, #fff 155px)}
+  .sec_player_profile .inner{padding-left:20px}
+  .player_profile{display:table;width:100%;height:155px;padding-left:103px;box-sizing:border-box}
+  .player_profile .player_name{display:block;max-height:48px;margin-top:5px;font-size:18px;line-height:24px}
+  .player_profile .en_name{max-height:34px;margin-top:4px;margin-right:0;font-size:12px;line-height:17px}
+  .player_profile .country{display:inline-block}
+  .player_profile .country:before{margin-right:8px;border-radius:0}
+  .player_profile .country .country_name{font-size:12px}
+  .player_profile .player_photo_area{left:0;top:50%;width:90px;height:90px;margin-top:-45px;margin-right:14px;vertical-align:middle}
+  .player_profile .txt_wrap{display:table-cell;vertical-align:middle}
+  .lst_physical_info{position:static;margin-top:6px}
+  .lst_physical_info .info{margin-left:0;margin-right:7px;font-size:12px;line-height:normal}
+  .lst_record{clear:both;padding-top:24px;padding-bottom:23px}
+  .lst_record .record_area{padding:0 14px}
+  .lst_record .record_area:first-of-type{padding-left:0}
+  .lst_record .record_area:before{height:76px;margin-top:-38px}
+  .lst_record .tit_txt{height:26px;margin-bottom:0;font-size:11px}
+  .lst_record .point_txt{display:block;margin-top:9px;font-size:18px}
+  .lst_record .desc_txt{display:block;position:static;margin-top:5px;font-size:13px}
+  .sec_player_profile .noti_txt{right:20px;bottom:-19px;font-size:10px}
+  .sec_player_profile .noti_txt:before{margin-right:3px}
+
+  /* 선수 기록 상세 */
+  .sec_player_record{padding-top:47px;padding-bottom:98px}
+
+  /* 프로필 탭 */
+  #tab_player_history{padding-top:33px}
+  .lst_history{display:table;table-layout:fixed;width:100%;border-top-width:2px}
+  .lst_history .history{float:none;display:table-row;width:auto;height:53px;padding:0;padding-bottom:0}
+	.lst_history .tit_txt,.lst_history .desc_txt{display:table-cell;padding:15px 0;border-top:1px solid #e6e6e6;vertical-align:middle;content:''}
+	.lst_history .history:first-of-type .tit_txt,.lst_history .history:first-of-type .desc_txt{border-top:0}
+  .lst_history .tit_txt{font-weight:bold}
+  .lst_history .desc_txt{margin-top:0;font-size:14px;font-weight:normal;line-height:22px;word-wrap:break-word}
+	.lst_history .history:nth-child(even):before{display:none}
+	
+  /* 스코어 탭 */
+  #tab_player_score{padding:28px 0 0}
+  #tab_player_score .sec_tit_wrap{margin-top:16px}
+  #tab_player_score .sec_tit_wrap .h_sec{font-size:18px}
+  #tab_player_score .scroll_wrap{margin-top:12px}
+  #tab_player_score .tbl_holl_by_holl td{height:40px;font-size:13px}
+  #tab_player_score .tbl_holl_by_holl th,#tab_player_score .tbl_holl_by_holl tr:first-of-type th,#tab_player_score .tbl_holl_by_holl tbody tr:first-of-type td,#tab_player_score .tbl_holl_by_holl thead th{height:33px;font-size:13px}
+
+  /* 스탯 탭 */
+  #tab_player_stat{padding-bottom:0}
+  .stat_wrap{margin-top:0}
+  .stat_wrap .stat_item{display:block;width:auto;margin-top:48px;margin-left:0}
+  .stat_wrap .h_stat{font-size:14px}
+  .stat_wrap .chart_wrap{width:100%;height:185px;margin-top:0}
+  .stat_wrap .chart_wrap.is_empty .guide_txt{font-size:12px}
+  #tab_player_stat .lst_state{margin-top:7px}
+
+  /* 샷 트랙커 탭 */
+  #tab_player_tracker{padding-bottom:0}
+  #tab_player_tracker .nav_controll_wrap{margin-top:20px}
+  #tab_player_tracker .tab_holl_content{margin-top:25px;padding:0}
+  .tab_holl_content .player_map_wrap{position:static;margin-top:9px}
+  .tbl_hole_detail th,.tbl_hole_detail td{font-size:13px}
+  .tbl_hole_detail thead th{height:40px}
+  .tbl_hole_detail tbody td{height:39px;padding:0 8px}
+  .tab_holl_content .tab.lst_round{height:40px;margin-top:40px}
+  .tab_holl_content .lst_round .btn_tab{height:38px}
+
+  /* chart_tooltip */
+  #chart_tooltip{position:absolute;left:50%!important;top:50%!important;margin-top:-30px;margin-left:-128px;width:257px}
+  #chart_tooltip .inner{border:0;margin:0;padding:12px 34px 13px 32px}
+  #chart_tooltip .ico_brush{top:17px;left:17px}
+  #chart_tooltip .btn_tooltip_close{display:inline-block;overflow:hidden;position:absolute;top:0;right:0;width:34px;height:35px;background:url(../img/ico_tooltip_close.png) 50% no-repeat;background-size:12px 13px;line-height:999px}
+  
+}
+
+@media all and (max-width:375px){
+  .holl_detail_wrap .chart_wrap svg{width:100%;height:auto}
+  .layer_player_info{width:calc(100% - 38px);height:auto;margin-left:calc(-100% / 2 + 19px)}
+  .layer_player_info .cnt_wrap{white-space:normal}
+  
+  /* chart_tooltip */
+  #chart_tooltip{position:absolute;left:50%!important;top:50%!important;margin-top:-30px;margin-left:-128px;width:257px}
+  #chart_tooltip .inner{border:0;margin:0;padding:12px 34px 13px 32px}
+  #chart_tooltip .ico_brush{top:17px;left:17px}
+  #chart_tooltip .btn_tooltip_close{display:inline-block;overflow:hidden;position:absolute;top:0;right:0;width:34px;height:35px;background:url(../img/ico_tooltip_close.png) 50% no-repeat;background-size:12px 13px;line-height:999px}
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<title>본인인증 :: PAYCO 회원</title>
+<link rel="stylesheet" type="text/css" href="css/neid.css">
+<!-- for ie script -->
+<script type="text/javascript" src="js/html5.js"></script>
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+    <!-- header -->
+    <?php include 'inc/inc_header.html';?>
+    <!-- //header -->
+    
+    <!-- container -->
+    <div id="container">
+        <div class="content">
+            <div class="tit_area">
+                <h2 class="h_tit">본인인증 수단을 선택해주세요.</h2>
+            </div>
+            <div class="radio_area certificate_area">
+                <span class="btn_radio is_checked">
+                    <span class="ico_chk2">선택됨</span>
+                    <label for="male" class="inp_label">
+                        <span class="ico_phone"></span>
+                        <span class="rdo_txt">본인명의의<br><em>휴대폰으로 인증</em></span>
+                    </label>
+                    <input type="radio" id="male" name="sex" class="inp_radio" checked="">
+                </span>
+                <span class="btn_radio">
+                    <span class="ico_chk2">선택됨</span>
+                    <label for="female" class="inp_label">
+                        <span class="ico_ipin"></span>
+                        <span class="rdo_txt">본인확인기관의<br><em>아이핀으로 인증</em></span>
+                    </label>
+                    <input type="radio" id="female" name="sex" class="inp_radio">
+                </span>
+            </div>
+            <div class="btn_area">
+                <button type="submit" class="btn btn_full btn_point">확인</button>
+            </div>
+        </div>
+    </div>
+    <!-- //container -->
+</div>
+
+<div class="dimmed" style="display:none;"></div>
+<div class="ly_pop_wrap" style="display:none;">
+    <div class="ly_pop ly_term_pop">
+        <div class="ly_cont">
+          <h2 class="ly_tit">개인정보 수집 및 이용 안내</h2>
+          <div class="ly_cont_txt">
+            <h2 class="tit_txt">1.수집하는 개인정보 항목</h2>
+            <p class="ly_desc">이름, 생년월일,성별, 내외국인정보, 아이핀번호, DI, CI</p>
+            <h2 class="tit_txt">2.개인정보 수집 이용목적</h2>
+            <p class="ly_desc">본인인증, 결제인증 및 회원가입시 동의한 목적</p>
+            <h2 class="tit_txt">3.개인정보의 보유 이용기간</h2>
+            <ul class="ly_desc">
+            <li>- 회원의 경우: 회원탈퇴 시까지(단, 수집일로부터 1년 내에 탈퇴 시 수집일로부터 1년간 저장)</li>
+            <li>- 비회원의 경우: 수집일로부터 1년</li>
+            </ul>
+          </div>
+        </div>
+        <div class="ly_btn_area is_btn_full">
+          <button type="button" class="btn">확인</button>
+        </div>
+    </div>
+    <span class="vmiddle"></span>
+</div>
+<!-- 마크업 확인용입니다. -->
+<style>
+	#case_view,#case_view2{display:none;position:relative;width:100%;z-index:1000;padding:5px;background:#000;opacity:0.7}
+	#case_view2{display:inline-block;position:fixed;bottom:0;left:0;width:auto}
+	.btn_opt{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+	.btn_m-view{background:#22002e}
+</style>
+<div id="case_view2">
+	<a href="#" class="btn_opt btn_m-view">모바일 view</a>
+  <a href="#" class="btn_opt" onclick="$('.dimmed,.ly_pop_wrap').hide();$('.dimmed,.ly_pop_wrap:eq(0)').show();return false;">팝업 1</a>
+</div>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script>    
+$(function(){
+	$('#case_view2 .btn_m-view').click(function(e){
+		e.preventDefault();
+		$('body').toggleClass('m');		
+	});
+  $('.ly_pop_wrap a,.ly_pop_wrap button,.btn_close').click(function(e){
+		e.preventDefault();
+		$('.ly_pop_wrap,.dimmed').hide();
+	});  
+});
+</script>
+<!-- //마크업 확인용입니다. -->
+</body>
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<title>본인인증 :: PAYCO 회원</title>
+<link rel="stylesheet" type="text/css" href="css/neid.css">
+<!-- for ie script -->
+<script type="text/javascript" src="js/html5.js"></script>
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+    <!-- header -->
+    <?php include 'inc/inc_header.html';?>
+    <!-- //header -->
+    
+    <!-- container -->
+    <div id="container">
+        <div class="content">
+            <div class="tit_area">
+                <h2 class="h_tit">본인명의로 등록된 휴대폰으로 인증을 하시면 <br> 전체 아이디를 확인하실 수 있습니다.</h2>
+            </div>
+            <div class="tit_area" style="display:none">
+                <h2 class="h_tit">새로운 기기(브라우저)에서 로그인 시도되었습니다.</h2>
+                <p class="sub_txt">본인 명의 휴대폰 정보를 입력해주세요.</p>
+            </div>
+            <ul class="tab">
+            <li class="tab_item"><a href="#" class="tab_link">간편본인확인 (앱)</a></li>
+            <li class="tab_item is_selected"><a href="#" class="tab_link">휴대폰본인확인 (문자)</a></li>
+            </ul>
+            <!-- [D] 휴대폰본인확인 선택 시 미 노출 -->
+            <span class="tooltip2 is_show" style="display:none"><em>통신사 인증앱 설치/가입 필요 (KT인증, T인증, U+인증)</em></span>
+
+            <span class="inp_bx">
+                <span class="inp_txt">
+                    <label for="name" class="inp_placeholder">이름</label>
+                    <input type="text" id="name" value="" class="inp">
+                    <button type="button" class="btn_del"><span class="ico_del">입력한 내용 지우기</span></button>
+                </span>
+                <p class="error_txt">유효성 체크 메시지입니다</p>
+            </span>
+      <div class="inp_wrap">
+  			<div class="inp_area">
+  				<span class="inp_bx">
+  					<span class="inp_txt">
+              <input type="text" class="inp" title="주민번호 앞부분" value="20170401">
+            </span>
+  				</span>
+  				<span class="txt_bar">-</span>
+  				<span class="inp_bx">
+  					<span class="inp_txt"><input type="text" class="inp" title="주민번호 뒷부분 첫자리" value="2"></span>
+  				</span>
+  				<span class="secret_num">
+  					<span class="ico_bul"></span>
+  					<span class="ico_bul"></span>
+  					<span class="ico_bul"></span>
+  					<span class="ico_bul"></span>
+  					<span class="ico_bul"></span>
+  					<span class="ico_bul"></span>
+  				</span>
+  			</div>
+        <p class="error_txt">유효성 체크 메시지입니다</p>
+      </div>
+
+      <div class="checkbox_area">
+          <span class="inp_checkbox inp_bold">
+              <input type="checkbox" class="inp_chk">
+              <span class="inp_label has_lypop"><span class="ico_chk"></span><button type="button" class="txt_link">개인정보 수집이용</button> 및 <button type="button" class="txt_link">통신사/본인확인서비스 약관</button> 동의</span>
+          </span>
+      </div>
+
+      <div class="radio_area">
+        <span class="btn_radio is_checked"><!--[D] 통신사 선택 시 .is_checked 클래스 추가, input 에 checked 속성 추가 -->
+          <label for="skt" class="inp_label">SKT</label>
+          <input type="radio" id="skt" name="phone" class="inp_radio" checked="">
+        </span>
+        <span class="btn_radio">
+          <label for="kt" class="inp_label">KT</label>
+          <input type="radio" id="kt" name="phone" class="inp_radio">
+        </span>
+        <span class="btn_radio">
+          <label for="lg" class="inp_label">LG U+</label>
+          <input type="radio" id="lg" name="phone" class="inp_radio">
+        </span>
+        <span class="btn_radio">
+          <label for="etc" class="inp_label">알뜰폰</label>
+          <input type="radio" id="etc" name="phone" class="inp_radio">
+        </span>
+      </div>
+      
+      <!--[D] 옵션 펼쳐질 때 .is_focus 클래스 추가 -->
+      <span class="inp_bx sel">
+        <span class="inp_txt inp_txt2">
+          <span class="inp">기타 통신사 선택</span>
+          <span class="ico_sel_arr"></span>
+        </span>
+        <ul class="sel_bx">
+          <li class="sel_item"><a href="#" class="sel_link"><span class="opt_tit">기타</span></a></li>
+          <li class="sel_item"><a href="#" class="sel_link"><span class="opt_tit">기타</span></a></li>
+        </ul>
+      </span>
+      <div class="inp_wrap">
+        <div class="inp_group">
+          <span class="inp_bx">
+            <span class="inp_txt">
+              <span class="inp_placeholder">휴대폰 번호</span>
+              <input type="text" class="inp" title="휴대폰 번호">
+              <button type="button" class="btn_del"><span class="ico_del">입력한 내용 지우기</span></button>
+            </span>
+          </span>
+          <a href="#" class="btn">인증번호 다시 받기</a>
+        </div>
+        <p class="error_txt">유효성 체크 메시지입니다</p>
+      </div>
+
+			<span class="inp_bx time_add">
+				<span class="inp_txt">
+					<span class="inp_placeholder">인증번호 입력</span>
+					<input type="number" class="inp">
+					<span class="time_bx">유효시간 <em class="txt_point">03:00</em></span>
+          <button type="button" class="btn_del"><span class="ico_del">텍스트 지우기</span></button>
+				</span>
+        <p class="error_txt">유효성 체크 메시지입니다</p>
+			</span>
+      <p class="noti_txt">휴대폰 인증은 1일 5회까지 가능합니다.</p>
+      <div class="inp_wrap">
+        <div class="inp_group">
+          <span class="inp_bx is_disabled">
+            <span class="inp_txt">
+              <span class="inp_placeholder">휴대폰 번호</span>
+              <input type="text" class="inp" title="휴대폰 번호" value="010 5555 8888" disabled>
+              <button type="button" class="btn_del"><span class="ico_del">입력한 내용 지우기</span></button>
+            </span>
+          </span>
+          <a href="#" class="btn">인증번호 발송</a>
+        </div>
+        <p class="error_txt">유효성 체크 메시지입니다</p>
+      </div>
+      
+            <div class="btn_area">
+              <button type="submit" class="btn btn_full btn_point">확인</button>
+                <button type="submit" class="btn btn_full">로그아웃</button>
+            </div>
+
+            <p class="noti_txt">본인명의의 휴대폰이 없으세요? <a href="#" class="txt_link">아이핀 인증</a></p>
+        </div>
+    </div>
+    <!-- //container -->
+</div>
+
+<div class="dimmed" style="display: none;"></div>
+
+<!-- [D]통신사 이용약관 동의 -->
+<div class="ly_pop_wrap" style="display:none;">
+  <div class="ly_pop ly_info_pop">
+    <div class="ly_cont">
+      <h2 class="ly_tit">통신사 이용약관 동의</h2>
+      <ul class="lst_agree has_right_btn">
+      <li>개인정보 이용 <a href="#">보기</a></li>
+      <li>고유식별정보 처리 <a href="#">보기</a></li>
+      <li>통신사 이용약관 <a href="#">보기</a></li>
+      <li>서비스 이용약관 <a href="#">보기</a></li>
+      <li>개인정보 수집이용 <a href="#">보기</a></li>
+      </ul>
+    </div>
+    <div class="ly_btn_area is_btn_full">
+      <button type="button" class="btn">확인</button>
+    </div>
+  </div>
+  <span class="vmiddle"></span>
+</div>
+
+<!-- [D]약관보기1 -->
+<div class="ly_pop_wrap" style="display: none;">
+  <div class="ly_pop ly_term_pop">
+    <div class="ly_cont">
+      <h2 class="ly_tit">이용약관</h2>
+      <div class="tab_select_area">
+        <ul class="tab_select tab_type">
+        <li class="tab_sel on"><a href="#">SKT</a></li>
+        <li class="tab_sel"><a href="#">KT</a></li>
+        <li class="tab_sel last_sel"><a href="#">LG U+</a></li>
+        </ul>
+        <div class="frame_wrap">
+          <!-- <iframe src="https://auth.mobilians.co.kr/terms/infoAgreeSKT.html" frameborder="0"></iframe>
+          <iframe src="https://auth.mobilians.co.kr/terms/infoAgreeKTF.html" frameborder="0"></iframe> -->
+          <!-- <iframe src="https://auth.mobilians.co.kr/terms/infoAgreeLGT.html" frameborder="0"></iframe> -->
+          <iframe src="https://auth.mobilians.co.kr/terms/payAgree.html" frameborder="0"></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="ly_btn_area is_btn_full">
+      <button type="button" class="btn">확인</button>
+    </div>
+  </div>
+  <span class="vmiddle"></span>
+</div>
+
+<!-- [D]약관보기2 -->
+<div class="ly_pop_wrap" style="display: none;">
+  <div class="ly_pop ly_term_pop">
+    <div class="ly_cont">
+      <h2 class="ly_tit">개인정보 이용 (일반)</h2>
+      <div class="tab_select_area">
+        <ul class="tab_select tab_type">
+        <li class="tab_sel on"><a href="#">SKT</a></li>
+        <li class="tab_sel"><a href="#">KT</a></li>
+        <li class="tab_sel last_sel"><a href="#">LG U+</a></li>
+        </ul>
+        <ul class="tab_select tab_type2">
+        <li class="tab_sel on"><a href="#"><span class="txt">KG 모빌리언스</span></a></li>
+        <!-- <li class="tab_sel"><a href="#"><span class="txt">SCI</span></a></li> -->
+        <li class="tab_sel"><a href="#"><span class="txt">한국사이버결제</span></a></li>
+        </ul>	
+        <div class="frame_wrap">
+          <!-- <iframe src="https://auth.mobilians.co.kr/terms/infoAgreeSKT.html" frameborder="0"></iframe>
+          <iframe src="https://auth.mobilians.co.kr/terms/infoAgreeKTF.html" frameborder="0"></iframe> -->
+          <!-- <iframe src="https://auth.mobilians.co.kr/terms/infoAgreeLGT.html" frameborder="0"></iframe> -->
+          <iframe src="https://auth.mobilians.co.kr/terms/payAgree.html" frameborder="0"></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="ly_btn_area is_btn_full">
+      <button type="button" class="btn">확인</button>
+    </div>
+  </div>
+  <span class="vmiddle"></span>
+</div>
+
+<!-- [D]약관보기3 -->
+<div class="ly_pop_wrap" style="display: none;">
+  <div class="ly_pop ly_term_pop">
+    <div class="ly_cont">
+      <h2 class="ly_tit">이용약관</h2>
+      <div class="tab_select_area">
+        <ul class="tab_select tab_type is_long_txt">
+        <li class="tab_sel on"><a href="#"><span class="txt">KG 모빌리언스</span></a></li>
+        <li class="tab_sel"><a href="#"><span class="txt">SCI</span></a></li>
+        <li class="tab_sel last_sel"><a href="#"><span class="txt">한국사이버결제</span></a></li>
+        </ul>	
+        <div class="frame_wrap">
+          <!-- <iframe src="https://auth.mobilians.co.kr/terms/infoAgreeSKT.html" frameborder="0"></iframe>
+          <iframe src="https://auth.mobilians.co.kr/terms/infoAgreeKTF.html" frameborder="0"></iframe> -->
+          <!-- <iframe src="https://auth.mobilians.co.kr/terms/infoAgreeLGT.html" frameborder="0"></iframe> -->
+          <iframe src="https://auth.mobilians.co.kr/terms/payAgree.html" frameborder="0"></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="ly_btn_area is_btn_full">
+      <button type="button" class="btn">확인</button>
+    </div>
+  </div>
+  <span class="vmiddle"></span>
+</div>
+<!-- [D]휴대폰 인증점검 안내 -->
+<div class="ly_pop_wrap" style="display:none">
+  <div class="ly_pop ly_info_pop">
+    <div class="ly_cont">
+      <h2 class="ly_tit">휴대폰 인증 점검안내</h2>
+      <ul class="noti_lst">
+      <li class="noti_item">통신사 : SKT</li>
+      <li class="noti_item">시간 : 4월11일 00:00 ~ 4월11일 08:00</li>
+      <li class="noti_item">내용 : 간헐적으로 SMS 발송실패</li>
+      </ul>
+    </div>
+    <div class="ly_btn_area is_btn_full">
+      <button type="button" class="btn">확인</button>
+    </div>
+  </div>
+  <span class="vmiddle"></span>
+</div>
+<!-- [D]휴대폰 아이디 추가 -->
+<div class="ly_pop_wrap" style="display:none">
+  <div class="ly_pop">
+    <div class="ly_cont">
+      <h2 class="ly_tit">휴대폰 번호(<em class="txt_point">010-9346-0499</em>)를<br>아이디로 등록합니다.</h2>
+      <p class="ly_desc">휴대폰 아이디를 등록하면 이메일과 휴대폰 번호 중<br>편한 정보를 입력하고 로그인할 수 있습니다.</p>
+    </div>
+    <div class="ly_btn_area">
+      <button type="button" class="btn btn_point">등록</button>
+      <button type="button" class="btn">취소</button>
+    </div>
+  </div>
+  <span class="vmiddle"></span>
+</div>
+<!-- [D]휴대폰 아이디 변경 -->
+<div class="ly_pop_wrap" style="display:none">
+  <div class="ly_pop">
+    <div class="ly_cont">
+      <h2 class="ly_tit">휴대폰 아이디를 변경합니다.</h2>
+      <p class="ly_desc">변경 전 : 가나다라마바</p>
+      <em class="txt_point">변경 후 : 가갸거겨고규구</em>
+    </div>
+    <div class="ly_btn_area">
+      <button type="button" class="btn btn_point">변경</button>
+      <button type="button" class="btn">취소</button>
+    </div>
+  </div>
+  <span class="vmiddle"></span>
+</div>
+<!-- 마크업 확인용입니다. -->
+<style>
+	#case_view,#case_view2{display:none;position:relative;width:100%;z-index:1000;padding:5px;background:#000;opacity:0.7}
+	#case_view2{display:inline-block;position:fixed;bottom:0;left:0;width:auto}
+	.btn_opt{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+	.btn_m-view{background:#22002e}
+</style>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script>    
+$(function(){
+	$('#case_view2 .btn_m-view').click(function(e){
+		e.preventDefault();
+		$('body').toggleClass('m');		
+	});
+	$('.ly_pop_wrap a,.ly_pop_wrap button,.btn_close').click(function(e){
+		e.preventDefault();
+		$('.ly_pop_wrap,.dimmed').hide();
+	});
+});
+</script>
+<div id="case_view2">
+  <a href="#" class="btn_opt btn_m-view">모바일 view</a>
+  <a href="#" class="btn_opt" onclick="$('.tit_area:eq(0)').hide();$('.tit_area:eq(1)').show();return false;">새로운 기기 로그인 시도</a>
+  <a href="#" class="btn_opt" onclick="$('.dimmed,.ly_pop_wrap').hide();$('.dimmed,.ly_pop_wrap:eq(0)').show();return false;">팝업 1</a>
+  <a href="#" class="btn_opt" onclick="$('.dimmed,.ly_pop_wrap').hide();$('.dimmed,.ly_pop_wrap:eq(1)').show();return false;">팝업 2</a>
+  <a href="#" class="btn_opt" onclick="$('.dimmed,.ly_pop_wrap').hide();$('.dimmed,.ly_pop_wrap:eq(2)').show();return false;">팝업 3</a>
+  <a href="#" class="btn_opt" onclick="$('.dimmed,.ly_pop_wrap').hide();$('.dimmed,.ly_pop_wrap:eq(3)').show();return false;">팝업 4</a>
+  <a href="#" class="btn_opt" onclick="$('.dimmed,.ly_pop_wrap').hide();$('.dimmed,.ly_pop_wrap:eq(4)').show();return false;">팝업 4</a>
+  <a href="#" class="btn_opt" onclick="$('.dimmed,.ly_pop_wrap').hide();$('.dimmed,.ly_pop_wrap:eq(5)').show();return false;">휴대폰아이디등록</a>
+  <a href="#" class="btn_opt" onclick="$('.dimmed,.ly_pop_wrap').hide();$('.dimmed,.ly_pop_wrap:eq(6)').show();return false;">휴대폰아이디변경</a>
+</div>
+<!-- //마크업 확인용입니다. -->
+</body>
+</html>

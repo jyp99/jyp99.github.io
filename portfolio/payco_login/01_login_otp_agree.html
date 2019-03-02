@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<title>로그인 :: PAYCO 회원</title>
+<link rel="stylesheet" type="text/css" href="css/neid.css">
+<!-- for ie script -->
+<script type="text/javascript" src="js/html5.js"></script>
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+    <!-- header -->
+    <?php include 'inc/inc_header.html';?>
+    <!-- //header -->
+    <h1 class="blind">로그인</h1>
+    <!-- container -->
+    <div id="container" class="otp"> 
+        <div class="tit_area">            
+            <h2 class="h_tit2"><span class="ico_otp"><img src="img/ico_otp.png" alt=""></span>페이코 OTP 로그인을 설정하세요.</h2>
+            <p class="sub_txt">페이코 앱 실행 후 <em>[더보기 > PAYCO OTP]</em> 메뉴를 터치합니다.</p>
+        </div>
+        <div class="content">
+            <div class="auth_guide">
+                <ol class="auth_guide_lst">
+                <li><em class="ico_num num1">1.</em>OTP 인증번호 입력
+                  <span class="inp_bx"><!-- [D] 포커스 시 .is_focus 추가 -->
+                    <span class="inp_txt">
+                        <span class="inp_placeholder">OTP 인증 번호 6자리 (예. 123456)</span>
+                        <input type="text" value="" class="inp" title="기기 시리얼 번호 입력">
+                        <button type="button" class="btn_del"><span class="ico_del">입력한 내용 지우기</span></button>
+                    </span>
+                    <p class="error_txt">유효성 체크 메시지입니다</p>
+                  </span>
+                </li>
+                <li><em class="ico_num num2">2.</em>[보기] 버튼을 누른 후, 기기 시리얼 번호 입력
+                  <span class="inp_bx"><!-- [D] 포커스 시 .is_focus 추가 -->
+                    <span class="inp_txt">
+                        <span class="inp_placeholder">기기 시리얼 번호 12자리 (예. 123456789000)</span>
+                        <input type="text" value="" class="inp" title="OTP 인증번호 입력">
+                        <button type="button" class="btn_del"><span class="ico_del">입력한 내용 지우기</span></button>
+                    </span>
+                    <p class="error_txt">유효성 체크 메시지입니다</p>
+                  </span>
+                </li>
+                </ol>
+            </div>
+            <div class="checkbox_area is_line">
+                <span class="inp_checkbox inp_bold">
+                    <input type="checkbox" id="check3" class="inp_chk">
+                    <label for="check3" class="inp_label"><span class="ico_chk"></span>모든 서비스에서 로그아웃합니다.</label>
+                </span>
+            </div>
+            <div class="btn_area">
+                <button type="submit" class="btn btn_full btn_point">확인</button>
+            </div>
+        </div>
+    </div>
+    <!-- //container -->
+</div>
+</body>
+</html>

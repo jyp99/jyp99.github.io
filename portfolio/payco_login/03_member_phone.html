@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<title>회원정보 :: PAYCO 회원</title>
+<link rel="stylesheet" type="text/css" href="css/neid.css">
+<!-- for ie script -->
+<script type="text/javascript" src="js/html5.js"></script>
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+    <!-- header -->
+    <?php include 'inc/inc_header.html';?>
+    <!-- //header -->
+    
+	<div id="container">
+		<div class="content">
+			<div class="tit_area">
+				<h2 class="h_tit">등록한 휴대폰 번호는 내 정보로 함께 저장됩니다.</h2>
+			</div>
+
+			<form>
+			<fieldset>
+			<legend>휴대폰 번호 인증 양식 입력</legend>
+				<!--[D] 옵션 펼쳐질 때 .is_focus 클래스 추가 -->
+				<span class="inp_bx sel">
+				    <span class="inp_txt inp_txt2">
+				        <span class="inp">대한민국 +82</span>
+				        <span class="ico_sel_arr"></span>
+				    </span>
+            <ul class="sel_bx">
+              <li class="sel_item"><a href="#" class="sel_link"><span class="opt_tit">대한민국 +82</span></a></li>
+              <li class="sel_item"><a href="#" class="sel_link"><span class="opt_tit">대한민국 +82</span></a></li>
+            </ul>
+				</span>
+				<div class="inp_wrap">
+				  <div class="inp_group">
+				    <span class="inp_bx">
+				      <span class="inp_txt">
+				        <span class="inp_placeholder">휴대폰 번호</span>
+				        <input type="text" class="inp" title="휴대폰 번호">
+				        <button type="button" class="btn_del"><span class="ico_del">입력한 내용 지우기</span></button>
+				      </span>
+				    </span>
+				    <a href="#" class="btn">인증번호 발송</a>
+				  </div>
+				  <p class="error_txt">유효성 체크 메시지입니다</p>
+				</div>
+				<span class="inp_bx time_add">
+					<span class="inp_txt">
+						<span class="inp_placeholder">인증번호 입력</span>
+						<input type="number" class="inp">
+						<span class="time_bx">유효시간 <em class="txt_point">03:00</em></span>
+            <button type="button" class="btn_del"><span class="ico_del">텍스트 지우기</span></button>
+					</span>
+				</span>
+
+				<div class="checkbox_area">
+					<span class="inp_checkbox inp_bold inp_multi_txt">
+						<input type="checkbox" id="check3" class="inp_chk">
+						<label for="check3" class="inp_label"><span class="ico_chk"></span>서비스 이용 및 부정거래방지 목적으로 휴대폰번호를<br> 수집하며, 회원탈퇴 시까지 저장됩니다.</label>
+					</span>
+				</div>
+
+				<div class="btn_area">
+					<button type="button" class="btn btn_full btn_point">확인</button>
+				</div>
+			</fieldset>
+			</form>
+		</div>
+	</div>
+</div>
+
+<div class="dimmed" style="display: none;"></div>
+<!-- [D]휴대폰 아이디 추가 -->
+<div class="ly_pop_wrap" style="display:none">
+  <div class="ly_pop">
+    <div class="ly_cont">
+      <h2 class="ly_tit">휴대폰 번호(<em class="txt_point">010-9346-0499</em>)를<br>아이디로 등록합니다.</h2>
+      <p class="ly_desc">휴대폰 아이디를 등록하면 이메일과 휴대폰 번호 중<br>편한 정보를 입력하고 로그인할 수 있습니다.</p>
+    </div>
+    <div class="ly_btn_area">
+      <button type="button" class="btn btn_point">등록</button>
+      <button type="button" class="btn">취소</button>
+    </div>
+  </div>
+  <span class="vmiddle"></span>
+</div>
+<!-- [D]휴대폰 아이디 변경 -->
+<div class="ly_pop_wrap" style="display:none">
+  <div class="ly_pop">
+    <div class="ly_cont">
+      <h2 class="ly_tit">휴대폰 아이디를 변경합니다.</h2>
+      <p class="ly_desc">변경 전 : 가나다라마바</p>
+      <em class="txt_point">변경 후 : 가갸거겨고규구</em>
+    </div>
+    <div class="ly_btn_area">
+      <button type="button" class="btn btn_point">변경</button>
+      <button type="button" class="btn">취소</button>
+    </div>
+  </div>
+  <span class="vmiddle"></span>
+</div>
+<!-- 마크업 확인용입니다. -->
+<style>
+	#case_view,#case_view2{display:none;position:relative;width:100%;z-index:1000;padding:5px;background:#000;opacity:0.7}
+	#case_view2{display:inline-block;position:fixed;bottom:0;left:0;width:auto}
+	.btn_opt{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+	.btn_m-view{background:#22002e}
+</style>
+<div id="case_view2">
+	<a href="#" class="btn_opt btn_m-view">모바일 view</a>
+  <a href="#" class="btn_opt" onclick="$('.dimmed,.ly_pop_wrap').hide();$('.dimmed,.ly_pop_wrap:eq(0)').show();return false;">휴대폰아이디등록</a>  
+	<a href="#" class="btn_opt" onclick="$('.dimmed,.ly_pop_wrap').hide();$('.dimmed,.ly_pop_wrap:eq(1)').show();return false;">휴대폰아이디변경</a>  
+</div>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script>    
+$(function(){
+	$('#case_view2 .btn_m-view').click(function(e){
+		e.preventDefault();
+		$('body').toggleClass('m');		
+	});
+  $('.ly_pop_wrap a,.ly_pop_wrap button,.btn_close').click(function(e){
+    e.preventDefault();
+    $('.ly_pop_wrap,.dimmed').hide();
+  });  
+});
+</script>
+<!-- //마크업 확인용입니다. -->
+</body>
+</html>

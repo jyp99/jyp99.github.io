@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<title>비밀번호 찾기 :: PAYCO 회원</title>
+<link rel="stylesheet" type="text/css" href="css/neid.css">
+<!-- for ie script -->
+<script type="text/javascript" src="js/html5.js"></script>
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+    <!-- header -->
+    <?php include 'inc/inc_header.html';?>
+    <!-- //header -->
+
+	<div id="container">
+		<div class="content">
+			<div class="tit_area">
+				<h2 class="h_tit">비밀번호를 찾을 방법을 선택해주세요.</h2>
+			</div>
+			
+			<form>
+			<fieldset>
+			<legend>비밀번호 양식 입력</legend>
+				<!-- [D]선택시 is_selected 사용 -->
+				<div class="info_bx is_selected">
+					<dl class="info_inner">
+					<dt class="info_tit">이메일로 인증</dt>
+					<dd class="info_txt">payco@nhnent.com</dd>
+					</dl>
+					<div class="info_checkbox">
+						<!--[D] 체크박스 선택 시 .is_checked 추가, input 에 checked 속성 추가 -->
+						<span class="inp_checkbox is_checked">
+							<input type="radio" name="pw_find" id="saveid1" class="inp_chk" checked="">
+							<label for="saveid1" class="inp_label"><span class="ico_chk2"></span><em class="blind">이메일 인증 선택</em></label>
+						</span>
+					</div>
+				</div>
+		   
+				<div class="info_bx">
+					<dl class="info_inner">
+					<dt class="info_tit">휴대폰 아이디로 SMS 인증</dt>
+					<dd class="info_txt">+82 10 1234 5678</dd>
+					</dl>
+					<div class="info_checkbox">
+						<!--[D] 체크박스 선택 시 .is_checked 추가, input 에 checked 속성 추가 -->
+						<span class="inp_checkbox">
+							<input type="radio" name="pw_find" id="saveid2" class="inp_chk">
+							<label for="saveid2" class="inp_label"><span class="ico_chk2"></span><em class="blind">휴대폰 아이디로 SMS 인증 선택</em></label>
+						</span>
+					</div>
+				</div>
+
+				<div class="info_bx">
+					<div class="info_inner">
+						<p class="info_tit info_tit2">본인 명의로 등록된 휴대폰 인증</p>
+					</div>
+					<div class="info_checkbox">
+						<!--[D] 체크박스 선택 시 .is_checked 추가, input 에 checked 속성 추가 -->
+						<span class="inp_checkbox">
+							<input type="radio" name="pw_find" id="saveid3" class="inp_chk">
+							<label for="saveid3" class="inp_label"><span class="ico_chk2"></span><em class="blind">본인 명의로 등록된 휴대폰 인증 선택</em></label>
+						</span>
+					</div>
+				</div>
+
+				<div class="info_bx">
+					<div class="info_inner">
+						<p class="info_tit info_tit2">아이핀 인증</p>
+					</div>
+					<div class="info_checkbox">
+						<!--[D] 체크박스 선택 시 .is_checked 추가, input 에 checked 속성 추가 -->
+						<span class="inp_checkbox">
+							<input type="radio" name="pw_find" id="saveid4" class="inp_chk">
+							<label for="saveid4" class="inp_label"><span class="ico_chk2"></span><em class="blind">아이핀 인증 선택</em></label>
+						</span>
+					</div>
+				</div>
+
+				<div class="btn_area">
+					<button type="button" class="btn btn_full btn_point">다음</button>
+				</div>
+			</fieldset>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- 마크업 확인용입니다. -->
+<style>
+	#case_view,#case_view2{display:none;position:relative;width:100%;z-index:1000;padding:5px;background:#000;opacity:0.7}
+	#case_view2{display:inline-block;position:fixed;bottom:0;left:0;width:auto}
+	.btn_opt{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+	.btn_m-view{background:#22002e}
+</style>
+<div id="case_view2">
+	<a href="#" class="btn_opt btn_m-view">모바일 view</a>
+</div>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script>    
+$(function(){
+	$('#case_view2 .btn_m-view').click(function(e){
+		e.preventDefault();
+		$('body').toggleClass('m');		
+	});
+});
+</script>
+<!-- //마크업 확인용입니다. -->
+</body>
+</html>

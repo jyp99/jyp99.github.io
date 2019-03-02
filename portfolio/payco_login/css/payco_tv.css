@@ -1,0 +1,59 @@
+@charset "utf-8";
+/* Hivelab NE UI 2017 */
+
+@font-face {
+	font-family:'Noto Sans KR';
+	font-weight:400;
+	font-style:normal;
+	src:url('../fonts/notokr-regular.woff') format('woff'),
+		url('../fonts/notokr-regular.ttf') format('truetype');
+}
+@font-face {
+	font-family:'Noto Sans KR Bold';
+	font-weight:700;
+	font-weight:normal;
+	src:url('../fonts/notokr-bold.woff') format('woff'),
+		url('../fonts/notokr-bold.ttf') format('truetype');
+}
+
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select{margin:0;padding:0}
+body,input,textarea,select,button,table{font-family:'Noto Sans KR',sans-serif;font-size:12px;line-height:1.25}
+body{background:#f7f7f7;color:#565960;-webkit-text-size-adjust:none}
+img,fieldset,button{border:0}
+img{vertical-align:top}
+ul,ol{list-style:none}
+em,address{font-style:normal}
+a{color:#565960;text-decoration:none}
+table{border-collapse:collapse}
+.blind,hr,legend{overflow:hidden;position:absolute;width:1px;height:1px;margin:-1px;padding:0;clip:rect(0,0,0,0)}
+input,select{border:0;vertical-align:middle;border-radius:0}
+input::-ms-clear{display:none}
+input[type=password]::-ms-reveal{display:none}
+input{outline-style:none}
+strong{font-weight:bold}
+.qr_area .logo,.ico_pc,.ico_qr{display:inline-block;overflow:hidden;background:url(../img/tv_spr.png) no-repeat;-webkit-background-size:250px auto;background-size:250px auto;line-height:999px;vertical-align:top}
+#header{position:relative;height:237px;-webkit-box-sizing:border-box;box-sizing:border-box}
+h1.logo{padding-top:107px;text-align:center}
+h1.logo span{display:inline-block;overflow:hidden;width:190px;height:44px;background:url(../img/tv_logo.png) no-repeat;-webkit-background-size:100% 100%;background-size:100% 100%;line-height:999px}
+.error_msg_tit {padding-top:70px;font-size:30px;line-height:32px;color:#fa2828;text-align:center}
+.error_message {margin-top:16px;font-size:25px;line-height:42px;color:#404040;text-align:center;letter-spacing:-2px}
+.btn_back{display:inline-block;overflow:hidden;position:absolute;top:92px;left:96px;width:77px;height:73px;text-align:center}
+.btn_back .ico{display:inline-block;overflow:hidden;width:100%;height:100%;background:url(../img/tv_btn_back.png) no-repeat;-webkit-background-size:100% 100%;background-size:100% 100%;line-height:999px}
+.btn_back:focus .ico{background-image:url(../img/tv_btn_back_on.png)}
+#content{width:522px;margin:0 auto;padding-bottom:44px}
+.inp_bx{margin-top:13px;height:82px}
+.inp_bx:first-child{margin-top:0}
+.inp_bx .inp{width:100%;height:100%;padding:0 31px;border:2px solid #fff;border-radius:3px;box-shadow:0px 4px 7px 0 rgba(176,176,176,0.32);font-size:25px;color:#212121;-webkit-box-sizing:border-box;box-sizing:border-box}
+.inp:focus{border-color:#3eaefe;box-shadow:0px 0 43px 10px rgba(62,174,254,0.52)}
+.inp_bx .inp::-webkit-input-placeholder{color:#8d8d8d}
+.btn_area{margin-top:30px}
+.btn{display:block;width:100%;height:88px;border-radius:3px;border:2px solid #fa2828;background:#fa2828;box-shadow:0px 7px 24px 0 rgba(255,0,26,0.38);font-size:28px;color:#fff;text-align:center;-webkit-box-sizing:border-box;box-sizing:border-box}
+.btn:focus{border-color:#007cd5;box-shadow:0px 0 59px 15px rgba(62,174,254,0.52)}
+.qr_area{margin-top:50px;padding:36px 0 29px;background:#fff;font-size:24px;color:#333;text-align:center}
+.qr_area .logo{width:85px;height:21px;margin-top:3px}
+.qr_txt em{font-weight:bold}
+.img_qr{width:277px;margin:28px auto 0}
+.img_qr img{width:100%}
+.ico_pc{width:28px;height:25px;margin:1px 6px 0 4px;background-position:-87px 0}
+.ico_qr{width:24px;height:24px;margin:4px 4px 0 4px;background-position:-117px 0}
+.qr_num{margin-top:13px;font-family:'Noto Sans KR Bold';font-size:34px;color:#1a1a1a}

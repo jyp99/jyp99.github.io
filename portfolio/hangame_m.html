@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noodp, notranslate, noimageindex">
+<title>박진영 포트폴리오</title>
+
+<!-- Icon & Favicon / 미사용시 삭제 -->
+<link rel="shortcut icon" href="img/icon/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="img/icon/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/icon/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="img/icon/favicon-180x180.png">
+<!-- // Icon & Favicon -->
+<base href="http://localhost:5000/jyp99.github.io/">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul class="skip">
+<li><a href="#header" onclick="document.getElementById('header').tabIndex=-1;document.getElementById('header').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+
+<div class="wrap">
+	<!--[D] HEADER -->
+	<h1 class="logo">
+		<a href="index.html" class="link_area">
+			<img src="img/icon/favicon.ico" alt="J">
+		</a>
+	</h1>
+	<!--//[D] HEADER -->
+	<!-- [D] CONTENTS -->
+	<div class="content portfolio_content">
+		<div class="cover_wrap" style="background-image:url(img/portfolio/img_hangame_main.png)">
+			<div class="inner">
+				<h2 class="h_txt">한게임 모바일</h2>
+			</div>
+		</div>
+		<div class="desc_wrap">
+			<div class="inner">
+				<p>한게임 모바일.</p>
+				<p>작업 기간 : </p>
+				<p>리얼 : <a href="https://m.hangame.com/" target="_blank" class="link_txt">https://m.hangame.com/</a></p>
+				<p>마크업 산출물 : <a href="portfolio/hangame_m/@index.html" target="_blank" class="link_txt">인덱스</a></p>
+				<p>크로스브라우징 : 안드로이드 4.* 이상, ios7 이상</p>
+				<p>사이트 소개 : 한게임의 모바일 페이지 제작.</p>
+				<p>보통 모바일 프로젝트는 꽉 차는 컨텐츠는 좌우 여백 등을 제외한 나머지 영역안에서 100% 라던지, 풀 사이즈가 아닌 컨텐츠들은 고정 px를 줘서 작업하는게 일반적이였는데 모바일 프로젝트 작업 중 처음으로 디바이스 가로 폭에 따라 디자인 비율이 그대로 유지 되게끔 작업을 해달라는 요청을 받았다.</p>
+				<p>%로 컨텐츠의 사이즈를 계산해 주는 방법도 있긴 하지만, %는 부모요소에 대한 비율을 계산해야하는 번거로움도 있고, 추후 레이아웃이 변경되면 하위에 있는 자식 요소들의 비율값 계산도 다시 해줘야하는 위험이 있기 때문에, 요구사항 재현을 위해 적합한 방법을 서칭해 본 결과, 이미지 크기 및 여백 등의 단위는 vw를 적용하기로 하고, 폰트 사이즈는  rem을 이용하여 작성하기로 하였다.</p>
+				<p>vw는 가로 뷰포트(스크린 가로 사이즈)에 대해 상대적 비율을 지정해 줄 수 있는 방법이고, rem은 root(최상위) 값에 대한 비율값을 적용해주는 단위로, html에 작성 해 놓은 폰트 사이즈에 비례한 값이 적용되게 하는 방법이다.</p>
+				<p>표현하려는 vw 수치를 계산하는 공식은 [표현하고자 하는 수치(px)*100/디바이스 가로크기(전달 받은 디자인 기준)] 으로, 예를 들어 가로 320 디바이스 기준으로 전달받은 디자인 시안의 20px를 가로 값으로 적용하고싶으면 [20*100/320=6.25(vw)] 와 같이 계산하면 되고, rem을 적용하는 방법은 html에 font-size:10px;font-size:3.125vw를 적용해 놓으면 [적용할 사이즈(px)/10]을 적용해 주면 되어 예를 들어 디자인이 23px인 텍스트를 표현하려면 2.3rem 을 적용해 주면 된다.</p>
+				<p>모바일에서는 두 단위 다 대부분 지원하긴 하지만 하위 버전에서는 일부 지원되지 않는 기기들이 있기 때문에 px 를 앞에 먼저 작성해 줌으로써, vw 및 rem가 지원되지 않는 하위 버전의 기기에서는 px 단위를 인식하고, 지원되는 기기에서는 vw나 rem을 적용하도록 하였다.(예: width:20px;width:6.25vw, font-size:23px;font-size:2.3rem)</p>
+
+				<img src="img/portfolio/img_hangame_main.png" alt="">
+
+			</div>
+
+		</div>
+		<a href="index.html" class="btn_back">뒤로</a>
+
+	</div>
+	<!-- //[D] CONTENTS -->
+	<!--[D] FOOTER -->
+    <footer class="footer">
+		<div class="inner">
+			<p class="copyright_txt">Copyright © JYP 2019 All Right Reserverd</p>
+		</div>
+	</footer>
+	<!--//[D] FOOTER -->
+</div>
+
+<!-- [D] LAYER -->
+<div class="layer"></div>
+<!-- [D] LAYER -->
+
+<!-- Javascript Area -->
+<script src="js/libs/jquery-1.12.4.min.js"></script>
+<script src="js/case_view.js"></script>
+</body>
+</html>

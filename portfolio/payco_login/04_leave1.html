@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<title>회원탈퇴 :: PAYCO 회원</title>
+<link rel="stylesheet" type="text/css" href="css/neid.css">
+<!-- for ie script -->
+<script type="text/javascript" src="js/html5.js"></script>
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+    <!-- header -->
+    <?php include 'inc/inc_header.html';?>
+    <!-- //header -->
+    
+	<div id="container">
+		<div class="content">
+			<div class="tit_area">
+				<h2 class="h_tit">페이코 회원탈퇴</h2>
+        <p class="noti_txt2"><span class="ico_exclamation"></span><span class="txt">탈퇴 대신 안심관리 어떠세요?</span></p>
+        <p class="noti_txt has_txt_link">보안설정과 최근 활동내역을 점검하여 내 계정을 보호할 수 있어요.<br><a href="#" class="txt_link">바로가기</a></p>
+			</div>
+
+            <div class="info_bx">
+                <dl class="info_inner">
+                <dt class="info_tit">아이디</dt>
+                <dd class="info_txt">payco@nhnent.com</dd>
+                <dd class="info_txt">+82 10-8888-9999</dd>
+                </dl>
+            </div>
+			<ul class="noti_lst">
+			<li class="noti_item"><span class="bul"></span>탈퇴한 아이디는 복구되지 않습니다.</li>
+			<li class="noti_item"><span class="bul"></span>탈퇴한 이메일 아이디는 30일간 재사용하실 수 없습니다.</li>
+			<li class="noti_item"><span class="bul"></span>보유하신 PAYCO 포인트와 쿠폰이 있을경우 함께 소멸됩니다.</li>
+			<li class="noti_item"><span class="bul"></span>PAYCO 아이디로 연결된 서비스도 더 이상 이용하실 수 없습니다.</li>
+			</ul>
+
+			<div class="join_service_area">
+				<h3 class="join_service_tit">가입한 서비스</h3>
+	            <ul class="join_service_lst"><!-- [D] join_service_lst의 1,2번째 li에는 first_item 클래스가 붙도록 작업 부탁 드립니다. -->
+	            <!--[D] 추후 이미지 변경 -->
+	            <li class="first_item"><img src="img/@logo_tmon.png" width="160" height="50" alt=""></li>
+	            <li class="first_item"><img src="img/@logo_ticketlink.png" width="160" height="50" alt=""></li>
+				<li><img src="img/@logo_cjmall.png" width="160" height="50" alt=""></li>
+				<li><img src="img/@logo_wmp.png" width="160" height="50" alt=""></li>
+				<li><img src="img/@logo_hmall.png" width="160" height="50" alt=""></li>
+	            <li><span class="no_img_txt">페이코 몰(텍스트)</span></li>
+	            </ul>
+              <!-- [D]가입 서비스가 없을 경우 display:block -->
+              <ul class="noti_lst" style="display:none">
+        			<li class="noti_item"><span class="bul"></span>이용중인 서비스가 없습니다.</li>
+              </ul>
+	        </div>
+
+			<div class="checkbox_area">
+				<!-- [D] 체크시, is_checked 클래스 추가 -->
+				<span class="inp_checkbox inp_bold">
+					<input type="checkbox" id="check4" class="inp_chk">
+					<label for="check4" class="inp_label"><span class="ico_chk"></span>안내사항을 모두 확인하였으며, 동의합니다.</label>
+				</span>
+			</div>
+			<div class="btn_area">
+				<button type="submit" class="btn btn_full btn_point">탈퇴 신청</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 마크업 확인용입니다. -->
+<style>
+	#case_view,#case_view2{display:none;position:relative;width:100%;z-index:1000;padding:5px;background:#000;opacity:0.7}
+	#case_view2{display:inline-block;position:fixed;bottom:0;left:0;width:auto}
+	.btn_opt{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+	.btn_m-view{background:#22002e}
+</style>
+<div id="case_view2">
+	<a href="#" class="btn_opt btn_m-view">모바일 view</a>
+  <a href="#" class="btn_opt" onclick="$('.join_service_area .join_service_lst').hide();$('.join_service_area .noti_lst').show();return false;">가입 서비스 없을 경우</a>
+</div>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script>    
+$(function(){
+	$('#case_view2 .btn_m-view').click(function(e){
+		e.preventDefault();
+		$('body').toggleClass('m');		
+	});
+});
+</script>
+<!-- //마크업 확인용입니다. -->
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="all">
+<meta name="format-detection" content="telephone=no">
+<title>공지사항 :: 한게임</title>
+<link rel="stylesheet" type="text/css" href="css/m_main.css">
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul class="skip">
+<li><a href="#header" onclick="document.getElementById('header').tabIndex=-1;document.getElementById('header').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+
+<div id="wrap" class="wrap">
+  <!--[D] HEADER -->
+  <header id="header" class="header header_type2">
+    <a href="00_main.html" class="logo_link">
+      <h1 class="header_logo"><img src="img/logo_hangame2.png" width="91" height="13" alt="HANGAME"></h1>
+    </a>
+    <ul class="top_menu">
+    <li class="menu_area">
+      <button type="button" class="btn btn_gnb"><img src="img/ico_gnb.png" alt="메뉴"></button>
+    </li>
+    </ul>
+    <nav id="gnb" class="gnb">
+      <div class="top_wrap">
+        <a href="00_main.html" class="logo_link header_logo">
+            <img src="img/logo_hangame2.png" width="91" height="13" alt="HANGAME">
+        </a>
+        <ul class="top_menu">
+        <li class="menu_area">
+            <button type="button" class="btn btn_close"><img src="img/ico_gnb_close.png" alt="메뉴 닫기"></button>
+        </li>
+        </ul>
+      </div>
+      <div class="scroll_wrap">
+        <ul class="lst_gnb_menu">
+        <li class="menu is_selected"><a href="01_webgame.html" class="link_menu">웹게임</a></li><!-- [D] 현재 위치한 페이지에 해당하는 link_menu에 is_selected 클래스 추가 -->
+        <li class="menu"><a href="01_mobilegame.html" class="link_menu">모바일게임</a></li>
+        <li class="menu"><a href="#" class="link_menu">만화</a></li>
+        <li class="menu"><a href="#" class="link_menu">사주/운세</a></li>
+        <li class="menu"><a href="#" class="link_menu">도움말</a></li>
+        <li class="menu"><a href="03_terms.html" class="link_menu">약관/정책</a></li>
+        </ul>
+      </div>
+      <div class="bottom_wrap">
+        <ul class="lst_menu_other">
+        <li class="menu"><a href="#" class="link_menu">로그인</a></li>
+        <li class="menu"><a href="#" class="link_menu">회원가입</a></li>
+        </ul>
+        <ul class="lst_menu_other" style="display:none"><!-- [D] 로그인 후 노출 영역 -->
+        <li class="menu"><a href="#" class="link_menu">로그아웃</a></li>
+        </ul>
+        <p class="corp_txt">© NHN Entertainment Corp.</p>
+      </div>
+    </nav>
+  </header>
+  <!--//[D] HEADER -->
+
+  <!-- [D] CONTENTS -->
+  <div id="content" class="content">
+
+  </div>
+  <!-- //[D] CONTENTS -->
+  
+  <!--[D] FOOTER -->
+  <!--//[D] FOOTER -->
+</div>
+
+<!-- Javascript Area -->
+<script src="js/libs/jquery-1.12.4.min.js"></script>
+
+<!-- 마크업 확인용입니다. -->
+<style>
+.case_view{display:inline-block;position:fixed;bottom:0;left:0;z-index:1000;width:auto;padding:5px;background:#000;opacity:0.7}
+.case_view .btn{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+</style>
+<div class="case_view case_view1">
+  <a href="#" class="btn" onclick="$('.lst_menu_other:eq(0)').hide();$('.lst_menu_other:eq(1)').show();return false;">로그인 후</a>
+</div>
+<script src="js/case_view.js"></script>
+<!-- //마크업 확인용입니다. --> 
+</body>
+</html>

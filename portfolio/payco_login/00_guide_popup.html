@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<title>UIO :: PAYCO 회원</title>
+<link rel="stylesheet" type="text/css" href="css/neid.css">
+<!-- for ie script -->
+<script type="text/javascript" src="js/html5.js"></script>
+<style>
+.wrap{min-width:auto;min-height:auto}
+.dimmed{position:absolute;}
+.ly_pop_wrap{position:static;height:auto;margin-top:10px}
+.m .content{max-width:100%!important;color:#000}
+body>h1{margin:2em 1em}
+h2{position:relative;z-index:110;margin:20px 0 10px}
+h3{position:relative;z-index:110;margin:15px 0 10px}
+.content{max-width:initial;margin:initial;padding:20px}
+.tit_area,.h_tit,.sub_txt,.logo_area{padding:0;margin:0;text-align:left}
+.txt_guide{position:relative;z-index:110;margin:15px auto;padding:15px;background:#f5f5f5}
+.msg_layer,.m .msg_layer{display:block;position:relative;top:auto;left:auto;margin:10px auto 0}
+</style>
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+	<div class="content">
+		<h1>PAYCO 회원 레이어 팝업 가이드</h1>
+		<div class="dimmed"></div>
+		
+		<h2>토스트 팝업</h2>
+		
+		<p class="txt_guide">- 토스트 팝업 노출시 dimmed 노출 X<br>- 줄 수에 따른 추가 분기 없음</p>
+		<!-- 토스트 팝업_한줄 -->
+		<div class="msg_layer">
+			<div class="msg_inner">
+				<p class="msg_txt">비밀번호를 찾을 방법을 선택해주세요.</p>
+				<span class="bar"></span>
+			</div>
+		</div>
+		<!-- 토스트 팝업_두줄 -->
+		<div class="msg_layer">
+			<div class="msg_inner">
+				<p class="msg_txt">토스트팝업 두줄일때<br> 창 사이즈는 줄수와 상관없이 동일합니다.</p>
+				<span class="bar"></span>
+			</div>
+		</div>
+		<!-- 토스트 팝업_세줄 -->
+		<div class="msg_layer">
+			<div class="msg_inner">
+				<p class="msg_txt">토스트팝업 세줄일때<br> 창 사이즈는 줄수와 상관없이<br> 동일합니다.</p>
+				<span class="bar"></span>
+			</div>
+		</div>
+		
+		<h2>정보성 팝업</h2>
+		
+		<p class="txt_guide">- 분기 추가시 ly_pop에 추가<br>- OTP 인증번호 확인 방법 팝업 : ly_otp_guide 클래스 추가.</p>
+		<!-- OTP 인증번호 확인 방법 -->
+		<div class="ly_pop_wrap">
+			<div class="ly_pop ly_otp_guide">
+				<div class="ly_cont">
+					<h2 class="ly_tit">OTP 인증번호 확인 방법</h2>
+					<ul class="lst_img_desc">
+						<li class="desc_wrap">
+							<span class="tit_txt"><span class="num">1.</span> PAYCO 앱 &gt; 왼쪽 상단 [더보기] 버튼 터치</span>
+							<span class="img_bx is_pc_show">
+								<img src="img/img_otp_desc.jpg" alt="">
+								<span class="underline"></span>
+							</span>
+							<span class="img_bx full_img is_m_show">
+								<img src="img/img_otp_desc_m.jpg" alt="">
+							</span>
+						</li>
+						<li class="desc_wrap">
+							<span class="tit_txt"><span class="num">2.</span> 더보기 &gt; [PAYCO OTP] 메뉴 터치</span>
+							<span class="img_bx is_pc_show">
+								<img src="img/img_otp_desc2.jpg" alt="">
+								<span class="underline"></span>
+							</span>
+							<span class="img_bx full_img is_m_show">
+								<img src="img/img_otp_desc2_m.jpg" alt="">
+							</span>
+						</li>
+					</ul>
+				</div>
+				<div class="ly_btn_area is_btn_full">
+					<button type="button" class="btn">확인</button>
+				</div>
+			</div>
+			<span class="vmiddle"></span>
+		</div>
+		
+		<p class="txt_guide is_pc_show">- IP보안이란 팝업 : ly_ip_security 클래스 추가.<br>- PC에서만 노출</p>
+		<!-- IP보안이란(PC전용) -->
+		<div class="ly_pop_wrap is_pc_show">
+			<div class="ly_pop ly_ip_security">
+				<div class="ly_cont">
+					<h2 class="ly_tit">IP보안이란?</h2>
+					<p class="ly_desc">타인이 로그인 권한을 가로채어 부정하게 사용하는 것을 방지하기 위하여 사용자의 IP 주소 정보를 이용하여 개인정보를 보호하기 위한  보안 서비스 입니다.</p>
+					<dl class="lst_dsc">
+						<dt class="tit_txt txt_point">ON</dt>
+						<dd class="ly_desc">IP보안을 ON으로 설정하시면 사용자의 인증이 필요한 서비스 접속 시, 정상적으로 로그인한 IP와 서비스 사용 중 접속한 IP 정보가 일치하지 않을 경우 안전한 서비스 이용을 위하여 로그아웃 하게 됩니다.</dd>
+						<dt class="tit_txt">OFF</dt>
+						<dd class="ly_desc">로그인 상태에서 IP주소가 자주 변경되는 사용자의 경우 IP보안을 OFF로 설정하셔야 정상적으로 서비스 이용이 가능합니다. 단, IP 보안설정을 하지 않은 상태에서는 보안이 취약할 수 있습니다.</dd>
+					</dl>
+				</div>
+				<div class="ly_btn_area is_btn_full">
+					<button type="button" class="btn">확인</button>
+				</div>
+			</div>
+			<span class="vmiddle"></span>
+		</div>
+		
+		<p class="txt_guide">- 정보성 팝업 : ly_info_pop 클래스 추가.</p>
+		<!-- [D]통신사 이용약관 동의 -->
+		<div class="ly_pop_wrap">
+			<div class="ly_pop ly_info_pop">
+				<div class="ly_cont">
+					<h2 class="ly_tit">통신사 이용약관 동의</h2>
+					<ul class="lst_agree has_right_btn">
+					<li>개인정보 이용 <a href="#">보기</a></li>
+					<li>고유식별정보 처리 <a href="#">보기</a></li>
+					<li>통신사 이용약관 <a href="#">보기</a></li>
+					<li>서비스 이용약관 <a href="#">보기</a></li>
+					<li>개인정보 수집이용 <a href="#">보기</a></li>
+					</ul>
+				</div>
+				<div class="ly_btn_area is_btn_full">
+					<button type="button" class="btn">확인</button>
+				</div>
+			</div>
+			<span class="vmiddle"></span>
+		</div>
+		<!-- [D]휴대폰 인증점검 안내 -->
+		<div class="ly_pop_wrap">
+			<div class="ly_pop ly_info_pop">
+				<div class="ly_cont">
+					<h2 class="ly_tit">휴대폰 인증 점검안내</h2>
+					<ul class="lst_agree">
+					<li>통신사 : SKT</li>
+					<li>시간 : 4월11일 00:00 ~ 4월11일 08:00</li>
+					<li>내용 : 간헐적으로 SMS 발송실패</li>
+					</ul>
+				</div>
+				<div class="ly_btn_area is_btn_full">
+					<button type="button" class="btn">확인</button>
+				</div>
+			</div>
+			<span class="vmiddle"></span>
+		</div>
+		
+		<h2>약관 팝업</h2>
+		<p class="txt_guide">- 약관 팝업 : ly_term_pop 클래스 추가.</p>
+		<!-- [D]외부 회원 약관 -->
+		<div class="ly_pop_wrap">
+			<div class="ly_pop ly_term_pop">
+				<div class="ly_cont">
+					<h2 class="ly_tit">PAYCO 회원 약관</h2>
+					<div class="frame_wrap">
+						<iframe src="https://id.payco.com/privacyPolicy.nhn" frameborder="0"></iframe>
+					</div>
+				</div>
+				<div class="ly_btn_area is_btn_full">
+					<button type="button" class="btn">확인</button>
+				</div>
+			</div>
+			<span class="vmiddle"></span>
+		</div>
+		<!-- [D]외부 회원 약관2 -->
+		<div class="ly_pop_wrap">
+			<div class="ly_pop ly_term_pop">
+				<div class="ly_cont">
+					<h2 class="ly_tit">개인정보 수집 및 이용 안내</h2>
+					<div class="frame_wrap">
+						<iframe src="00_collection_and_use_agree.html" frameborder="0"></iframe>
+					</div>
+				</div>
+				<div class="ly_btn_area is_btn_full">
+					<button type="button" class="btn">확인</button>
+				</div>
+			</div>
+			<span class="vmiddle"></span>
+		</div>
+		<!-- [D]약관보기1 -->
+		<div class="ly_pop_wrap">
+			<div class="ly_pop ly_term_pop">
+				<div class="ly_cont">
+					<h2 class="ly_tit">이용약관</h2>
+					<div class="tab_select_area">
+						<ul class="tab_select tab_type">
+							<li class="tab_sel on"><a href="#">SKT</a></li>
+							<li class="tab_sel"><a href="#">KT</a></li>
+							<li class="tab_sel last_sel"><a href="#">LG U+</a></li>
+						</ul>
+						<div class="frame_wrap">
+							<!-- <iframe src="https://auth.mobilians.co.kr/terms/infoAgreeSKT.html" frameborder="0"></iframe>
+							<iframe src="https://auth.mobilians.co.kr/terms/infoAgreeKTF.html" frameborder="0"></iframe> -->
+							<!-- <iframe src="https://auth.mobilians.co.kr/terms/infoAgreeLGT.html" frameborder="0"></iframe> -->
+							<iframe src="https://auth.mobilians.co.kr/terms/payAgree.html" frameborder="0"></iframe>
+						</div>
+					</div>
+				</div>
+				<div class="ly_btn_area is_btn_full">
+					<button type="button" class="btn">확인</button>
+				</div>
+			</div>
+			<span class="vmiddle"></span>
+		</div>
+		<!-- [D]약관보기2 -->
+		<div class="ly_pop_wrap">
+			<div class="ly_pop ly_term_pop">
+				<div class="ly_cont">
+					<h2 class="ly_tit">개인정보 이용 (일반)</h2>
+					<div class="tab_select_area">
+						<ul class="tab_select tab_type">
+						<li class="tab_sel on"><a href="#">SKT</a></li>
+						<li class="tab_sel"><a href="#">KT</a></li>
+						<li class="tab_sel last_sel"><a href="#">LG U+</a></li>
+						</ul>
+						<ul class="tab_select tab_type2 is_sel2">
+						<li class="tab_sel on"><a href="#"><span class="txt">KG 모빌리언스</span></a></li>
+						<!-- <li class="tab_sel"><a href="#"><span class="txt">SCI</span></a></li> -->
+						<li class="tab_sel"><a href="#"><span class="txt">한국사이버결제</span></a></li>
+						</ul>	
+						<div class="frame_wrap">
+							<!-- <iframe src="https://auth.mobilians.co.kr/terms/infoAgreeSKT.html" frameborder="0"></iframe>
+							<iframe src="https://auth.mobilians.co.kr/terms/infoAgreeKTF.html" frameborder="0"></iframe> -->
+							<!-- <iframe src="https://auth.mobilians.co.kr/terms/infoAgreeLGT.html" frameborder="0"></iframe> -->
+							<iframe src="https://auth.mobilians.co.kr/terms/payAgree.html" frameborder="0"></iframe>
+						</div>
+					</div>
+				</div>
+				<div class="ly_btn_area is_btn_full">
+					<button type="button" class="btn">확인</button>
+				</div>
+			</div>
+			<span class="vmiddle"></span>
+		</div>
+		<!-- [D]약관보기3 -->
+		<div class="ly_pop_wrap">
+			<div class="ly_pop ly_term_pop">
+				<div class="ly_cont">
+					<h2 class="ly_tit">이용약관</h2>
+					<div class="tab_select_area">
+						<ul class="tab_select tab_type is_long_txt">
+						<li class="tab_sel on"><a href="#"><span class="txt">KG 모빌리언스</span></a></li>
+						<li class="tab_sel"><a href="#"><span class="txt">SCI</span></a></li>
+						<li class="tab_sel last_sel"><a href="#"><span class="txt">한국사이버결제</span></a></li>
+						</ul>	
+						<div class="frame_wrap">
+							<!-- <iframe src="https://auth.mobilians.co.kr/terms/infoAgreeSKT.html" frameborder="0"></iframe>
+							<iframe src="https://auth.mobilians.co.kr/terms/infoAgreeKTF.html" frameborder="0"></iframe> -->
+							<!-- <iframe src="https://auth.mobilians.co.kr/terms/infoAgreeLGT.html" frameborder="0"></iframe> -->
+							<iframe src="https://auth.mobilians.co.kr/terms/payAgree.html" frameborder="0"></iframe>
+						</div>
+					</div>
+				</div>
+				<div class="ly_btn_area is_btn_full">
+					<button type="button" class="btn">확인</button>
+				</div>
+			</div>
+			<span class="vmiddle"></span>
+		</div>
+		<!-- [D]개인정보 수집 및 이용 안내 -->
+		<div class="ly_pop_wrap">
+			<div class="ly_pop ly_term_pop">
+				<div class="ly_cont">
+					<h2 class="ly_tit">개인정보 수집 및 이용 안내</h2>
+					<div class="ly_cont_txt">
+						<h2 class="tit_txt">1.수집하는 개인정보 항목</h2>
+						<p class="ly_desc">이름, 생년월일,성별, 내외국인정보, 아이핀번호, DI, CI</p>
+						<h2 class="tit_txt">2.개인정보 수집 이용목적</h2>
+						<p class="ly_desc">본인인증, 결제인증 및 회원가입시 동의한 목적</p>
+						<h2 class="tit_txt">3.개인정보의 보유 이용기간</h2>
+						<ul class="ly_desc">
+						<li>- 회원의 경우: 회원탈퇴 시까지(단, 수집일로부터 1년 내에 탈퇴 시 수집일로부터 1년간 저장)</li>
+						<li>- 비회원의 경우: 수집일로부터 1년</li>
+						</ul>
+					</div>
+				</div>
+				<div class="ly_btn_area is_btn_full">
+					<button type="button" class="btn">확인</button>
+				</div>
+			</div>
+			<span class="vmiddle"></span>
+		</div>
+		<h2>개인정보수집이용 재동의 팝업</h2>
+		<!-- [D]개인정보수집이용 재동의 팝업 -->
+		<div class="ly_pop_wrap">
+			<div class="ly_pop">
+				<div class="ly_cont">
+					<h2 class="ly_tit">PAYCO 개인 정보 수집/이용 약관이<br>변경되었습니다.</h2>
+					<em class="ly_desc">안전한 서비스 이용과 개인 정보 관리를 위해<br>변경된 내용에 동의해 주세요.</em>
+					<a href="#" class="btn_link">개인 정보 수집/이용 약관 보기<span class="ico_arr"></span></a>
+				</div>
+				<div class="ly_btn_area is_btn_full">
+					<button type="button" class="btn">동의</button>
+				</div>
+			</div>
+			<span class="vmiddle"></span>
+		</div>
+		<h2>일반버튼형 팝업</h2>
+		<p class="txt_guide is_m_show">- 앱으로 로그인 팝업, 앱 실행 확인 팝업 : .ly_app_down 클래스 추가<br>- 모바일에서만 노출</p>
+		<!-- [D]앱으로 로그인 팝업 -->
+		<div class="ly_pop_wrap is_m_show">
+			<div class="ly_pop ly_app_down">
+				<div class="ly_cont">
+					<div class="img_wrap">
+						<img src="img/img_payco_app_m2.png" alt="">
+					</div>
+					<h2 class="ly_tit">PAYCO 앱으로 로그인이 진행됩니다.</h2>
+					<p class="ly_desc">앱에서 인증이 완료된 후<br><em class="point_txt">[인증완료]</em> 버튼을 눌러주세요.</p>
+					<p class="ly_desc">앱이 설치되어 있지 않나요?<br><a href="#" class="txt_link">앱 다운받기</a></p>
+				</div>
+				<div class="ly_btn_area">
+					<button type="button" class="btn btn_point btn_dark_gray">인증완료</button>
+					<button type="button" class="btn">취소</button>
+				</div>
+			</div>
+			<span class="vmiddle"></span>
+		</div>
+		<!-- [D] 앱실행 확인 -->
+		<div class="ly_pop_wrap is_m_show">
+			<div class="ly_pop ly_app_down">
+				<div class="ly_cont">
+					<div class="img_wrap">
+						<img src="img/img_app_error_m.png" alt="">
+					</div>
+					<h2 class="ly_tit">PAYCO 앱에서<br>인증이 완료되지 않았습니다.</h2>
+					<p class="ly_desc">로그인을 위해 앱을 실행합니다.</p>
+				</div>
+				<div class="ly_btn_area">
+					<button type="button" class="btn btn_point">재시도</button>
+					<button type="button" class="btn">취소</button>
+				</div>
+			</div>
+			<span class="vmiddle"></span>
+		</div>
+		
+		<p class="txt_guide">- 일반버튼형 팝업 : 별도 클래스 추가 없음</p>
+		<!-- [D]휴대폰 인증 오타변경 -->
+		<div class="ly_pop_wrap">
+			<div class="ly_pop">
+				<div class="ly_cont">
+					<h2 class="ly_tit">asdfsa@<em class="txt_point">naber.com</em></h2>
+					<p class="ly_desc">입력하신 이메일에 오타가 발견되었습니다.<br><strong>@naver.com</strong>으로 변경할까요?</p>
+				</div>
+				<div class="ly_btn_area">
+					<button type="button" class="btn btn_point">변경</button>
+					<button type="button" class="btn">취소</button>
+				</div>
+			</div>
+			<span class="vmiddle"></span>
+		</div>
+
+		<!-- [D]휴대폰 아이디 추가 -->
+		<div class="ly_pop_wrap">
+			<div class="ly_pop">
+				<div class="ly_cont">
+					<h2 class="ly_tit">휴대폰 번호(<em class="txt_point">010-9346-0499</em>)를<br>아이디로 등록합니다.</h2>
+					<p class="ly_desc is_pc_show">휴대폰 아이디를 등록하면 이메일과 휴대폰 번호 중<br>편한 정보를 입력하고 로그인할 수 있습니다.</p>
+					<p class="ly_desc is_m_show">휴대폰 아이디를 등록하면<br>이메일과 휴대폰 번호 중 편한 정보를 입력하고<br>로그인할 수 있습니다.</p>
+				</div>
+				<div class="ly_btn_area">
+					<button type="button" class="btn btn_point">등록</button>
+					<button type="button" class="btn">취소</button>
+				</div>
+			</div>
+			<span class="vmiddle"></span>
+		</div>
+		<!-- [D]휴대폰 아이디 변경 -->
+		<div class="ly_pop_wrap">
+			<div class="ly_pop">
+				<div class="ly_cont">
+					<h2 class="ly_tit">휴대폰 아이디를 변경합니다.</h2>
+					<p class="ly_desc">변경 전 : 가나다라마바</p>
+					<em class="txt_point">변경 후 : 가갸거겨고규구</em>
+				</div>
+				<div class="ly_btn_area">
+					<button type="button" class="btn btn_point">변경</button>
+					<button type="button" class="btn">취소</button>
+				</div>
+			</div>
+			<span class="vmiddle"></span>
+		</div>
+		<!-- 사업자정보 확인 -->
+		<div class="ly_pop_wrap">
+			<div class="ly_pop">
+				<div class="ly_cont">
+					<h2 class="ly_tit">사업자 정보 확인</h2>
+					<em class="ly_desc">144-81-15549<br>NHN엔터테인먼트</em>
+					<p class="ly_desc">가입자 휴대폰 인증을 진행 후<br>사업자 인증이 완료됩니다.</p>
+				</div>
+				<div class="ly_btn_area">
+					<button type="button" class="btn btn_point">확인</button>
+					<button type="button" class="btn">취소</button>
+				</div>
+			</div>
+			<span class="vmiddle"></span>
+		</div>
+		<!-- [D]포인트 소멸안내 팝업 -->
+		<div class="ly_pop_wrap">
+			<div class="ly_pop">
+				<div class="ly_cont">
+					<h2 class="ly_tit">PAYCO 충전포인트<br><em class="txt_point">500 P가 소멸됩니다.</em></h2>
+					<p class="ly_desc">탈퇴 후 소멸된 포인트는 복구되지 않습니다.</p>
+				</div>
+				<div class="ly_btn_area">
+					<button type="button" class="btn btn_point">확인</button>
+					<button type="button" class="btn">취소</button>
+				</div>
+			</div>
+			<span class="vmiddle"></span>
+		</div>
+		<!-- 새로운 기기 로그인 차단 알림 해제 -->
+		<div class="ly_pop_wrap">
+			<div class="ly_pop">
+				<div class="ly_cont">
+					<h2 class="ly_tit">새로운 기기(브라우저)에서<br>추가인증 없이 로그인합니다.</h2>
+				</div>
+				<div class="ly_btn_area">
+					<button type="button" class="btn btn_point">확인</button>
+					<button type="button" class="btn">취소</button>
+				</div>
+			</div>
+			<span class="vmiddle"></span>
+		</div>
+		<!-- [D]이메일 주소 보관 안내 -->
+		<div class="ly_pop_wrap">
+			<div class="ly_pop">
+				<div class="ly_cont">
+					<h2 class="ly_tit">이메일 도용 방지를 위해<br>고객의 이메일 주소를<br>차단 해제시까지 보관합니다.</h2>
+				</div>
+				<div class="ly_btn_area">
+					<button type="button" class="btn btn_point">동의</button>
+					<button type="button" class="btn">취소</button>
+				</div>
+			</div>
+			<span class="vmiddle"></span>
+		</div>
+		<!-- [D]삭제 전 팝업 -->
+		<div class="ly_pop_wrap">
+			<div class="ly_pop">
+				<div class="ly_cont">
+					<h2 class="ly_tit">타인에 의해 이메일이 도용된 경우에만<br>삭제해주세요.</h2>
+				</div>
+				<div class="ly_btn_area">
+					<button type="button" class="btn btn_point">삭제</button>
+					<button type="button" class="btn">취소</button>
+				</div>
+			</div>
+			<span class="vmiddle"></span>
+		</div>
+		<h2>시스템얼럿 대체 팝업</h2>
+		<p class="txt_guide">- 일반버튼형 팝업 : 별도 클래스 추가 없음<br>- 버튼 1개만 있을때 ly_btn_area에 is_btn_full 클래스 추가</p>
+		<!-- [D]시스템얼럿 대체 팝업_한줄 -->
+		<div class="ly_pop_wrap">
+			<div class="ly_pop">
+				<div class="ly_cont">
+					<h3 class="ly_tit">시스템얼럿대체팝업 한줄일때</h3>
+				</div>
+				<div class="ly_btn_area is_btn_full">
+					<button type="button" class="btn">확인</button>
+				</div>
+			</div>
+			<span class="vmiddle"></span>
+		</div>
+		<!-- [D]시스템얼럿 대체 팝업_두줄 -->
+		<div class="ly_pop_wrap">
+			<div class="ly_pop">
+				<div class="ly_cont">
+					<h3 class="ly_tit">시스템얼럿대체팝업<br>두줄일때</h3>
+				</div>
+				<div class="ly_btn_area is_btn_full">
+					<button type="button" class="btn">확인</button>
+				</div>
+			</div>
+			<span class="vmiddle"></span>
+		</div>
+		<!-- [D]시스템얼럿 대체 팝업_세줄 -->
+		<div class="ly_pop_wrap">
+			<div class="ly_pop">
+				<div class="ly_cont">
+					<h3 class="ly_tit">시스템얼럿대체팝업<br>세줄일때<br>일이삼사오육칠팔구십</h3>
+				</div>
+				<div class="ly_btn_area is_btn_full">
+					<button type="button" class="btn">확인</button>
+				</div>
+			</div>
+			<span class="vmiddle"></span>
+		</div>
+	</div>
+</div>
+<!-- 마크업 확인용입니다. -->
+<style>
+	#case_view,#case_view2{display:none;position:relative;width:100%;z-index:1000;padding:5px;background:#000;opacity:0.7}
+	#case_view2{display:inline-block;position:fixed;bottom:0;left:0;width:auto}
+	.btn_opt{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+	.btn_m-view{background:#22002e}
+</style>
+<div id="case_view2">
+	<a href="#" class="btn_opt btn_m-view">모바일 view</a>
+	<a href="#" class="btn_opt" onclick="$(this).toggleClass('btn_on');$('body').toggleClass('ly_show');return false;">배경 고정</a>
+</div>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script>    
+$(function(){
+	$('#case_view2 .btn_m-view').click(function(e){
+		e.preventDefault();
+		$('body').toggleClass('m');		
+	});
+});
+</script>
+<!-- //마크업 확인용입니다. -->
+</body>
+</html>

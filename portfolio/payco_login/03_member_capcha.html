@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<title>로그인 :: PAYCO 회원</title>
+<link rel="stylesheet" type="text/css" href="css/neid.css">
+<!-- for ie script -->
+<script type="text/javascript" src="js/html5.js"></script>
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+	<a href="#" class="ban_area"><img src="img/ban_app.jpg" alt="APP 전용 혜택과 이용정보를 확인해보세요! 앱 다운로드"></a>
+
+	<!-- header -->
+	<?php include 'inc/inc_header.html';?>
+	<!-- //header -->
+	
+	<div id="container">
+		<div class="content">
+			<div class="tit_area">
+          <h2 class="h_tit">안전한 이용을 위해 자동입력방지문자를 입력해주세요.</h2>
+      </div>
+			<form>
+			<fieldset>
+			<legend>자동입력방지문자 입력</legend>
+				<div class="captcha_wrap">
+					<div class="captcha_area img">
+						<div class="captcha_img">
+							<img src="img/captcha_img.gif" width="135" height="74" alt="캡차이미지">
+						</div>
+						<div class="captcha_ctrl"><!-- captcha_ctrl에 버튼이 1개일 경우 has_btn_one 클래스 추가 -->
+							<a href="#" class="captcha_btn"><span class="ico_refresh"></span>새로고침</a>
+							<a href="#" class="captcha_btn"><span class="ico_play"></span>음성으로 듣기</a> <!--[D] 클릭 시 .captcha_area.img => display:none, .captcha_area.sound => display:block 처리 -->
+						</div>
+					</div>
+					<div class="captcha_area sound" style="display:none">
+						<div class="captcha_img">
+							<div class="captcha_img_area">	
+								<span class="ico_sound"></span>
+		            <em>음성으로 안내중</em>
+							</div>
+						</div>
+						<div class="captcha_ctrl">
+							<a href="#" class="captcha_btn"><span class="ico_refresh"></span>새로고침</a>
+							<a href="#" class="captcha_btn"><span class="ico_img"></span>이미지로 보기</a> <!--[D] 클릭 시 .captcha_area.sound => display:none, .captcha_area.img => display:block 처리 -->
+						</div>
+					</div>
+					<span class="inp_bx">
+						<span class="inp_txt">
+							<label for="captcha" class="inp_placeholder">자동입력 방지문자</label>
+							<input type="text" id="captcha" class="inp">
+							<button type="button" class="btn_del"><span class="ico_del">입력한 내용 지우기</span></button>
+						</span>
+						<p class="error_txt">잘못 입력하였습니다.</p>
+					</span>
+				</div>
+				<div class="btn_area">
+					<button type="submit" class="btn btn_full btn_point">확인</button>
+				</div>
+			</fieldset>
+			</form>
+		</div>
+
+		<div class="footer_menu">
+			<div class="footer_inner">
+				<ul class="menu_lst">
+				<li class="menu_item"><a href="#" class="menu_link">아이디찾기</a></li>
+				<li class="menu_item"><span class="bar">|</span><a href="#" class="menu_link">비밀번호찾기</a></li>
+				<li class="menu_item"><span class="bar">|</span><a href="#" class="menu_link">회원가입</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 마크업 확인용입니다. -->
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script>    
+$(function(){
+	$('#case_view2 .btn_menu').click(function(e){
+		e.preventDefault();
+		$('#case_view').show();
+		$('#case_view2').hide();
+	});
+	$('#case_view .btn_menu').click(function(e){
+		e.preventDefault();
+		$('#case_view2').show();
+		$('#case_view').hide();
+	});
+	$('#input-login').on('focus',function(){
+		$(this).parent().toggleClass('on');
+		$('.auto_cmp').show();
+	});
+	$('#input-login').on('blur',function(){
+		$(this).parent().toggleClass('on');
+		$('.auto_cmp').hide();
+	});
+	$('.btn_show').on('click',function(){
+			$('.input_email_id').toggle();
+			$('.input_row').toggle();
+
+		});
+	$('.btn_ip').on('click',function(){            
+		$('.ip_ly').toggleClass('on');
+
+	});
+	$('.btn_sel, .lst_sel').on('click',function(){
+		$(this).parent().toggleClass('is_active');
+	});
+	$('.btn_tooltip').on('click',function(){
+		$('.tooltip').toggle();
+	});
+	$('.btn_appon').on('click',function(){
+		$('.btn_mainarea').toggleClass('app_on');
+	});
+	$('.btn_join').on('click',function(){
+		$('.btn_mainarea .btn_v2').toggleClass('white');
+	});
+	$('.btn_sdkon').on('click',function(){
+		$('#wrap').toggleClass('sdk_on');
+	});
+	$('.btn_lypop').on('click',function(){
+		$('.dimmed, .ly_popwrap.ly_app:eq(0)').show();
+	});
+	$('.btn_lypop2').on('click',function(){
+		$('.dimmed, .ly_popwrap.ly_app:eq(1)').show();
+	});
+	$('.btn_cfm').on('click',function(){
+		$('.dimmed, .ly_popwrap').hide();
+	});
+	$('.ssl_noti, .ssl_noti .btn_close').on('click',function(){
+		$('.ssl_noti').hide();
+	});
+	$('.btn_other').on('click',function(e){
+		e.preventDefault();
+		$('#wrap').removeClass();
+	});
+});
+</script>
+<!-- //마크업 확인용입니다. -->
+<!-- 마크업 확인용입니다. -->
+<style>
+	#case_view,#case_view2{display:none;position:relative;width:100%;z-index:1000;padding:5px;background:#000;opacity:0.7}
+	#case_view2{display:inline-block;position:fixed;bottom:0;left:0;width:auto}
+	.btn_opt{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+	.btn_m-view{background:#22002e}
+</style>
+<div id="case_view2">
+	<a href="#" class="btn_opt btn_m-view">모바일 view</a>
+</div>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script>    
+$(function(){
+	$('#case_view2 .btn_m-view').click(function(e){
+		e.preventDefault();
+		$('body').toggleClass('m');		
+	});
+});
+</script>
+<!-- //마크업 확인용입니다. -->
+</body>
+</html>

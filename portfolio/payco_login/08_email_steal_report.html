@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<title>이메일 도용 신고 :: PAYCO 회원</title>
+<link rel="stylesheet" type="text/css" href="css/neid.css">
+<!-- for ie script -->
+<script type="text/javascript" src="js/html5.js"></script>
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+    <!-- header -->
+    <?php include 'inc/inc_header.html';?>
+    <!-- //header -->
+
+  	<div id="container">
+  		<div class="content">
+  			<div class="tit_area">
+  				<h2 class="h_tit">이메일 도용 신고</h2>
+  			</div>
+  			<div class="info_bx">
+  				<dl class="info_inner">
+  				<dt class="info_tit">아이디</dt>
+  				<dd class="info_txt">payco@nhnent.com</dd>
+  				</dl>
+  			</div>
+  			<div class="checkbox_area">
+  				<span class="inp_checkbox inp_bold is_checked">
+  					<input type="checkbox" id="id_delete" class="inp_chk">
+            <label for="id_delete" class="inp_label"><span class="ico_chk"></span>위 이메일로 가입한 PAYCO 아이디를 삭제합니다.</label>
+  				</span>
+        </div>
+        <div class="checkbox_area">
+          <span class="inp_checkbox inp_bold is_checked">
+  					<input type="checkbox" id="id_interception" class="inp_chk">
+            <label for="id_interception" class="inp_label"><span class="ico_chk"></span>위 이메일로 PAYCO 신규 가입을 차단합니다.</label>
+  				</span>
+  			</div>
+  			<div class="btn_area">
+  				<button type="button" class="btn btn_full btn_point">확인</button>
+  			</div>
+  		</div>
+  	</div>
+</div>
+
+<div class="dimmed" style="display:none"></div>
+<!-- [D]이메일 주소 보관 안내 -->
+<div class="ly_pop_wrap" style="display:none">
+    <div class="ly_pop">
+        <div class="ly_cont">
+        <h2 class="ly_tit">이메일 도용 방지를 위해<br>고객의 이메일 주소를<br>차단 해제시까지 보관합니다.</h2>
+        </div>
+        <div class="ly_btn_area">
+          <button type="button" class="btn btn_point">동의</button>
+          <button type="button" class="btn">취소</button>
+        </div>
+    </div>
+    <span class="vmiddle"></span>
+</div>
+<!-- [D]삭제 전 팝업 -->
+<div class="ly_pop_wrap" style="display:none">
+    <div class="ly_pop">
+        <div class="ly_cont">
+        <h2 class="ly_tit">타인에 의해 이메일이 도용된 경우에만<br>삭제해주세요.</h2>
+        </div>
+        <div class="ly_btn_area">
+          <button type="button" class="btn btn_point">삭제</button>
+          <button type="button" class="btn">취소</button>
+        </div>
+    </div>
+    <span class="vmiddle"></span>
+</div>
+<!-- 마크업 확인용입니다. -->
+<style>
+	#case_view,#case_view2{display:none;position:relative;width:100%;z-index:1000;padding:5px;background:#000;opacity:0.7}
+	#case_view2{display:inline-block;position:fixed;bottom:0;left:0;width:auto}
+	.btn_opt{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+	.btn_m-view{background:#22002e}
+</style>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script>    
+$(function(){
+	$('#case_view2 .btn_m-view').click(function(e){
+		e.preventDefault();
+		$('body').toggleClass('m');		
+	});
+	$('.ly_pop_wrap a,.ly_pop_wrap button,.btn_close').click(function(e){
+		e.preventDefault();
+		$('.ly_pop_wrap,.dimmed').hide();
+	});
+});
+</script>
+<div id="case_view2">
+  <a href="#" class="btn_opt btn_m-view">모바일 view</a>
+  <a href="#" class="btn_opt" onclick="$('.dimmed,.ly_pop_wrap').hide();$('.dimmed,.ly_pop_wrap:eq(0)').show();return false;">팝업 1</a>
+  <a href="#" class="btn_opt" onclick="$('.dimmed,.ly_pop_wrap').hide();$('.dimmed,.ly_pop_wrap:eq(1)').show();return false;">팝업 2</a>
+</div>
+<!-- //마크업 확인용입니다. -->
+</body>
+</html>

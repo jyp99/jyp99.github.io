@@ -1,0 +1,476 @@
+@charset "utf-8";
+.country:before{display:inline-block;overflow:hidden;width:24px;height:18px;background:url(../img/sp_flags.png) no-repeat;background-size:100% auto;content:''}
+.country.AFG:before{background-position:0 0px}
+.country.AHO:before{background-position:0 -22px}
+.country.AIA:before{background-position:0 -44px}
+.country.ALB:before{background-position:0 -66px}
+.country.ALG:before{background-position:0 -88px}
+.country.AND:before{background-position:0 -110px}
+.country.ANG:before{background-position:0 -132px}
+.country.ANT:before{background-position:0 -154px}
+.country.ARG:before{background-position:0 -176px}
+.country.ARM:before{background-position:0 -198px}
+.country.ARU:before{background-position:0 -220px}
+.country.ASA:before{background-position:0 -242px}
+.country.ASEAN:before{background-position:0 -264px}
+.country.ATA:before{background-position:0 -286px}
+.country.AUS:before{background-position:0 -308px}
+.country.AUT:before{background-position:0 -330px}
+.country.AZE:before{background-position:0 -352px}
+.country.BAH:before{background-position:0 -374px}
+.country.BAN:before{background-position:0 -396px}
+.country.BAR:before{background-position:0 -418px}
+.country.BDI:before{background-position:0 -440px}
+.country.BEL:before{background-position:0 -462px}
+.country.BEN:before{background-position:0 -484px}
+.country.BER:before{background-position:0 -506px}
+.country.BHU:before{background-position:0 -528px}
+.country.BIH:before{background-position:0 -550px}
+.country.BIZ:before{background-position:0 -572px}
+.country.BLR:before{background-position:0 -594px}
+.country.BOL:before{background-position:0 -616px}
+.country.BOT:before{background-position:0 -638px}
+.country.BRA:before{background-position:0 -660px}
+.country.BRN:before{background-position:0 -682px}
+.country.BRU:before{background-position:0 -704px}
+.country.BUL:before{background-position:0 -726px}
+.country.BUR:before{background-position:0 -748px}
+.country.CAF:before{background-position:0 -770px}
+.country.CAM:before{background-position:0 -792px}
+.country.CAN:before{background-position:0 -814px}
+.country.CAY:before{background-position:0 -836px}
+.country.CGO:before{background-position:0 -858px}
+.country.CHA:before{background-position:0 -880px}
+.country.CHI:before{background-position:0 -902px}
+.country.CHN:before{background-position:0 -924px}
+.country.CIV:before{background-position:0 -946px}
+.country.CMR:before{background-position:0 -968px}
+.country.COD:before{background-position:0 -990px}
+.country.COK:before{background-position:0 -1012px}
+.country.COL:before{background-position:0 -1034px}
+.country.COM:before{background-position:0 -1056px}
+.country.CPV:before{background-position:0 -1078px}
+.country.CRC:before{background-position:0 -1100px}
+.country.CRO:before{background-position:0 -1122px}
+.country.CUB:before{background-position:0 -1144px}
+.country.CYP:before{background-position:0 -1166px}
+.country.CZE:before{background-position:0 -1188px}
+.country.DEN:before{background-position:0 -1210px}
+.country.DEU:before{background-position:0 -1232px}
+.country.DJI:before{background-position:0 -1254px}
+.country.DMA:before{background-position:0 -1276px}
+.country.DOM:before{background-position:0 -1298px}
+.country.ECU:before{background-position:0 -1320px}
+.country.EGY:before{background-position:0 -1342px}
+.country.ENG:before{background-position:0 -1364px}
+.country.ERI:before{background-position:0 -1386px}
+.country.ESA:before{background-position:0 -1408px}
+.country.ESH:before{background-position:0 -1430px}
+.country.ESP:before{background-position:0 -1452px}
+.country.EST:before{background-position:0 -1474px}
+.country.ETH:before{background-position:0 -1496px}
+.country.EUR:before{background-position:0 -1518px}
+.country.FIJ:before{background-position:0 -1540px}
+.country.FIN:before{background-position:0 -1562px}
+.country.FRA:before{background-position:0 -1584px}
+.country.FRO:before{background-position:0 -1606px}
+.country.FSM:before{background-position:0 -1628px}
+.country.GAB:before{background-position:0 -1650px}
+.country.GAM:before{background-position:0 -1672px}
+.country.GBR:before{background-position:0 -1694px}
+.country.GEO:before{background-position:0 -1716px}
+.country.GEQ:before{background-position:0 -1738px}
+.country.GER:before{background-position:0 -1760px}
+.country.GGY:before{background-position:0 -1782px}
+.country.GHA:before{background-position:0 -1804px}
+.country.GIB:before{background-position:0 -1826px}
+.country.GLP:before{background-position:0 -1848px}
+.country.GNS:before{background-position:0 -1870px}
+.country.GRE:before{background-position:0 -1892px}
+.country.GRL:before{background-position:0 -1914px}
+.country.GRN:before{background-position:0 -1936px}
+.country.GUA:before{background-position:0 -1958px}
+.country.GUI:before{background-position:0 -1980px}
+.country.GUM:before{background-position:0 -2002px}
+.country.GUY:before{background-position:0 -2024px}
+.country.HAI:before{background-position:0 -2046px}
+.country.HKG:before{background-position:0 -2068px}
+.country.HON:before{background-position:0 -2090px}
+.country.HUN:before{background-position:0 -2112px}
+.country.IMN:before{background-position:0 -2134px}
+.country.INA:before{background-position:0 -2156px}
+.country.IND:before{background-position:0 -2178px}
+.country.IRI:before{background-position:0 -2200px}
+.country.IRL:before{background-position:0 -2222px}
+.country.IRQ:before{background-position:0 -2244px}
+.country.ISL:before{background-position:0 -2266px}
+.country.ISR:before{background-position:0 -2288px}
+.country.ISV:before{background-position:0 -2310px}
+.country.ITA:before{background-position:0 -2332px}
+.country.IVB:before{background-position:0 -2354px}
+.country.JAM:before{background-position:0 -2376px}
+.country.JEY:before{background-position:0 -2398px}
+.country.JOR:before{background-position:0 -2420px}
+.country.JPN:before{background-position:0 -2442px}
+.country.KAZ:before{background-position:0 -2464px}
+.country.KEN:before{background-position:0 -2486px}
+.country.KGZ:before{background-position:0 -2508px}
+.country.KIR:before{background-position:0 -2530px}
+.country.KOR:before{background-position:0 -2552px}
+.country.KSA:before{background-position:0 -2574px}
+.country.KUW:before{background-position:0 -2596px}
+.country.LAO:before{background-position:0 -2618px}
+.country.LAT:before{background-position:0 -2640px}
+.country.LBA:before{background-position:0 -2662px}
+.country.LBR:before{background-position:0 -2684px}
+.country.LCA:before{background-position:0 -2706px}
+.country.LES:before{background-position:0 -2728px}
+.country.LIB:before{background-position:0 -2750px}
+.country.LIE:before{background-position:0 -2772px}
+.country.LTU:before{background-position:0 -2794px}
+.country.LUX:before{background-position:0 -2816px}
+.country.MAC:before{background-position:0 -2838px}
+.country.MAD:before{background-position:0 -2860px}
+.country.MAR:before{background-position:0 -2882px}
+.country.MAS:before{background-position:0 -2904px}
+.country.MAW:before{background-position:0 -2926px}
+.country.MDA:before{background-position:0 -2948px}
+.country.MDV:before{background-position:0 -2970px}
+.country.MEX:before{background-position:0 -2992px}
+.country.MGL:before{background-position:0 -3014px}
+.country.MHL:before{background-position:0 -3036px}
+.country.MKD:before{background-position:0 -3058px}
+.country.MLI:before{background-position:0 -3080px}
+.country.MLT:before{background-position:0 -3102px}
+.country.MNE:before{background-position:0 -3124px}
+.country.MON:before{background-position:0 -3146px}
+.country.MOZ:before{background-position:0 -3168px}
+.country.MRI:before{background-position:0 -3190px}
+.country.MSR:before{background-position:0 -3212px}
+.country.MTN:before{background-position:0 -3234px}
+.country.MTQ:before{background-position:0 -3256px}
+.country.MYA:before{background-position:0 -3278px}
+.country.NAM:before{background-position:0 -3300px}
+.country.NCA:before{background-position:0 -3322px}
+.country.NCL:before{background-position:0 -3344px}
+.country.NED:before{background-position:0 -3366px}
+.country.NGR:before{background-position:0 -3388px}
+.country.NIG:before{background-position:0 -3410px}
+.country.NIR:before{background-position:0 -3432px}
+.country.NOR:before{background-position:0 -3454px}
+.country.NRU:before{background-position:0 -3476px}
+.country.NZL:before{background-position:0 -3498px}
+.country.OMA:before{background-position:0 -3520px}
+.country.PAK:before{background-position:0 -3542px}
+.country.PAN:before{background-position:0 -3564px}
+.country.PAR:before{background-position:0 -3586px}
+.country.PER:before{background-position:0 -3608px}
+.country.PHI:before{background-position:0 -3630px}
+.country.PLE:before{background-position:0 -3652px}
+.country.PLW:before{background-position:0 -3674px}
+.country.PNG:before{background-position:0 -3696px}
+.country.POL:before{background-position:0 -3718px}
+.country.POR:before{background-position:0 -3740px}
+.country.PRK:before{background-position:0 -3762px}
+.country.PUE:before{background-position:0 -3784px}
+.country.PUR:before{background-position:0 -3806px}
+.country.PYF:before{background-position:0 -3828px}
+.country.QAT:before{background-position:0 -3850px}
+.country.RNC:before{background-position:0 -3872px}
+.country.ROC:before{background-position:0 -3894px}
+.country.ROU:before{background-position:0 -3916px}
+.country.RSA:before{background-position:0 -3938px}
+.country.RUS:before{background-position:0 -3960px}
+.country.RWA:before{background-position:0 -3982px}
+.country.SAM:before{background-position:0 -4004px}
+.country.SCO:before{background-position:0 -4026px}
+.country.SEN:before{background-position:0 -4048px}
+.country.SEY:before{background-position:0 -4070px}
+.country.SIN:before{background-position:0 -4092px}
+.country.SKN:before{background-position:0 -4114px}
+.country.SLE:before{background-position:0 -4136px}
+.country.SLO:before{background-position:0 -4158px}
+.country.SMR:before{background-position:0 -4180px}
+.country.SOL:before{background-position:0 -4202px}
+.country.SOM:before{background-position:0 -4224px}
+.country.SOS:before{background-position:0 -4246px}
+.country.SRB:before{background-position:0 -4268px}
+.country.SRI:before{background-position:0 -4290px}
+.country.STP:before{background-position:0 -4312px}
+.country.SUD:before{background-position:0 -4334px}
+.country.SUI:before{background-position:0 -4356px}
+.country.SUR:before{background-position:0 -4378px}
+.country.SVK:before{background-position:0 -4400px}
+.country.SWE:before{background-position:0 -4422px}
+.country.SWZ:before{background-position:0 -4444px}
+.country.SYR:before{background-position:0 -4466px}
+.country.TAN:before{background-position:0 -4488px}
+.country.TCA:before{background-position:0 -4510px}
+.country.TGA:before{background-position:0 -4532px}
+.country.THA:before{background-position:0 -4554px}
+.country.TJK:before{background-position:0 -4576px}
+.country.TKM:before{background-position:0 -4598px}
+.country.TLS:before{background-position:0 -4620px}
+.country.TOG:before{background-position:0 -4642px}
+.country.TPE:before{background-position:0 -4664px}
+.country.TTO:before{background-position:0 -4686px}
+.country.TUN:before{background-position:0 -4708px}
+.country.TUR:before{background-position:0 -4730px}
+.country.TUV:before{background-position:0 -4752px}
+.country.TWN:before{background-position:0 -4774px}
+.country.UAE:before{background-position:0 -4796px}
+.country.UGA:before{background-position:0 -4818px}
+.country.UKR:before{background-position:0 -4840px}
+.country.URU:before{background-position:0 -4862px}
+.country.USA:before{background-position:0 -4884px}
+.country.UZB:before{background-position:0 -4906px}
+.country.VAN:before{background-position:0 -4928px}
+.country.VAT:before{background-position:0 -4950px}
+.country.VEN:before{background-position:0 -4972px}
+.country.VIE:before{background-position:0 -4994px}
+.country.VIN:before{background-position:0 -5016px}
+.country.WAL:before{background-position:0 -5038px}
+.country.XKV:before{background-position:0 -5060px}
+.country.YEM:before{background-position:0 -5082px}
+.country.ZAM:before{background-position:0 -5104px}
+.country.ZIM:before{background-position:0 -5126px}
+.country.NEP:before{height:22px;background-position:0 -5148px}
+
+@media all and (max-width:1024px){
+	.country:before{width:17px;height:12px}
+	.country.AFG:before{background-position:0 0}
+	.country.AHO:before{background-position:0 -17px}
+	.country.AIA:before{background-position:0 -32px}
+	.country.ALB:before{background-position:0 -47px}
+	.country.ALG:before{background-position:0 -63px}
+	.country.AND:before{background-position:0 -78px}
+	.country.ANG:before{background-position:0 -94px}
+	.country.ANT:before{background-position:0 -109px}
+	.country.ARG:before{background-position:0 -125px}
+	.country.ARM:before{background-position:0 -140px}
+	.country.ARU:before{background-position:0 -156px}
+	.country.ASA:before{background-position:0 -172px}
+	.country.ASEAN:before{background-position:0 -188px}
+	.country.ATA:before{background-position:0 -202px}
+	.country.AUS:before{background-position:0 -218px}
+	.country.AUT:before{background-position:0 -234px}
+	.country.AZE:before{background-position:0 -249px}
+	.country.BAH:before{background-position:0 -265px}
+	.country.BAN:before{background-position:0 -281px}
+	.country.BAR:before{background-position:0 -296px}
+	.country.BDI:before{background-position:0 -312px}
+	.country.BEL:before{background-position:0 -328px}
+	.country.BEN:before{background-position:0 -344px}
+	.country.BER:before{background-position:0 -358px}
+	.country.BHU:before{background-position:0 -374px}
+	.country.BIH:before{background-position:0 -390px}
+	.country.BIZ:before{background-position:0 -406px}
+	.country.BLR:before{background-position:0 -421px}
+	.country.BOL:before{background-position:0 -437px}
+	.country.BOT:before{background-position:0 -452px}
+	.country.BRA:before{background-position:0 -468px}
+	.country.BRN:before{background-position:0 -483px}
+	.country.BRU:before{background-position:0 -499px}
+	.country.BUL:before{background-position:0 -515px}
+	.country.BUR:before{background-position:0 -529px}
+	.country.CAF:before{background-position:0 -545px}
+	.country.CAM:before{background-position:0 -561px}
+	.country.CAN:before{background-position:0 -577px}
+	.country.CAY:before{background-position:0 -592px}
+	.country.CGO:before{background-position:0 -608px}
+	.country.CHA:before{background-position:0 -624px}
+	.country.CHI:before{background-position:0 -639px}
+	.country.CHN:before{background-position:0 -655px}
+	.country.CIV:before{background-position:0 -670px}
+	.country.CMR:before{background-position:0 -686px}
+	.country.COD:before{background-position:0 -701px}
+	.country.COK:before{background-position:0 -717px}
+	.country.COL:before{background-position:0 -733px}
+	.country.COM:before{background-position:0 -748px}
+	.country.CPV:before{background-position:0 -764px}
+	.country.CRC:before{background-position:0 -779px}
+	.country.CRO:before{background-position:0 -795px}
+	.country.CUB:before{background-position:0 -811px}
+	.country.CYP:before{background-position:0 -826px}
+	.country.CZE:before{background-position:0 -842px}
+	.country.DEN:before{background-position:0 -858px}
+	.country.DEU:before{background-position:0 -872px}
+	.country.DJI:before{background-position:0 -889px}
+	.country.DMA:before{background-position:0 -904px}
+	.country.DOM:before{background-position:0 -920px}
+	.country.ECU:before{background-position:0 -935px}
+	.country.EGY:before{background-position:0 -950px}
+	.country.ENG:before{background-position:0 -967px}
+	.country.ERI:before{background-position:0 -982px}
+	.country.ESA:before{background-position:0 -998px}
+	.country.ESH:before{background-position:0 -1013px}
+	.country.ESP:before{background-position:0 -1029px}
+	.country.EST:before{background-position:0 -1044px}
+	.country.ETH:before{background-position:0 -1061px}
+	.country.EUR:before{background-position:0 -1076px}
+	.country.FIJ:before{background-position:0 -1091px}
+	.country.FIN:before{background-position:0 -1107px}
+	.country.FRA:before{background-position:0 -1122px}
+	.country.FRO:before{background-position:0 -1138px}
+	.country.FSM:before{background-position:0 -1154px}
+	.country.GAB:before{background-position:0 -1169px}
+	.country.GAM:before{background-position:0 -1185px}
+	.country.GBR:before{background-position:0 -1200px}
+	.country.GEO:before{background-position:0 -1216px}
+	.country.GEQ:before{background-position:0 -1231px}
+	.country.GER:before{background-position:0 -1247px}
+	.country.GGY:before{background-position:0 -1262px}
+	.country.GHA:before{background-position:0 -1278px}
+	.country.GIB:before{background-position:0 -1294px}
+	.country.GLP:before{background-position:0 -1310px}
+	.country.GNS:before{background-position:0 -1325px}
+	.country.GRE:before{background-position:0 -1340px}
+	.country.GRL:before{background-position:0 -1356px}
+	.country.GRN:before{background-position:0 -1372px}
+	.country.GUA:before{background-position:0 -1387px}
+	.country.GUI:before{background-position:0 -1403px}
+	.country.GUM:before{background-position:0 -1418px}
+	.country.GUY:before{background-position:0 -1434px}
+	.country.HAI:before{background-position:0 -1449px}
+	.country.HKG:before{background-position:0 -1465px}
+	.country.HON:before{background-position:0 -1480px}
+	.country.HUN:before{background-position:0 -1497px}
+	.country.IMN:before{background-position:0 -1512px}
+	.country.INA:before{background-position:0 -1527px}
+	.country.IND:before{background-position:0 -1543px}
+	.country.IRI:before{background-position:0 -1559px}
+	.country.IRL:before{background-position:0 -1575px}
+	.country.IRQ:before{background-position:0 -1590px}
+	.country.ISL:before{background-position:0 -1606px}
+	.country.ISR:before{background-position:0 -1620px}
+	.country.ISV:before{background-position:0 -1637px}
+	.country.ITA:before{background-position:0 -1652px}
+	.country.IVB:before{background-position:0 -1667px}
+	.country.JAM:before{background-position:0 -1683px}
+	.country.JEY:before{background-position:0 -1699px}
+	.country.JOR:before{background-position:0 -1715px}
+	.country.JPN:before{background-position:0 -1730px}
+	.country.KAZ:before{background-position:0 -1746px}
+	.country.KEN:before{background-position:0 -1761px}
+	.country.KGZ:before{background-position:0 -1777px}
+	.country.KIR:before{background-position:0 -1793px}
+	.country.KOR:before{background-position:0 -1807px}
+	.country.KSA:before{background-position:0 -1824px}
+	.country.KUW:before{background-position:0 -1839px}
+	.country.LAO:before{background-position:0 -1855px}
+	.country.LAT:before{background-position:0 -1871px}
+	.country.LBA:before{background-position:0 -1886px}
+	.country.LBR:before{background-position:0 -1900px}
+	.country.LCA:before{background-position:0 -1917px}
+	.country.LES:before{background-position:0 -1932px}
+	.country.LIB:before{background-position:0 -1948px}
+	.country.LIE:before{background-position:0 -1964px}
+	.country.LTU:before{background-position:0 -1979px}
+	.country.LUX:before{background-position:0 -1995px}
+	.country.MAC:before{background-position:0 -2011px}
+	.country.MAD:before{background-position:0 -2026px}
+	.country.MAR:before{background-position:0 -2042px}
+	.country.MAS:before{background-position:0 -2057px}
+	.country.MAW:before{background-position:0 -2073px}
+	.country.MDA:before{background-position:0 -2089px}
+	.country.MDV:before{background-position:0 -2104px}
+	.country.MEX:before{background-position:0 -2120px}
+	.country.MGL:before{background-position:0 -2135px}
+	.country.MHL:before{background-position:0 -2151px}
+	.country.MKD:before{background-position:0 -2166px}
+	.country.MLI:before{background-position:0 -2182px}
+	.country.MLT:before{background-position:0 -2197px}
+	.country.MNE:before{background-position:0 -2213px}
+	.country.MON:before{background-position:0 -2228px}
+	.country.MOZ:before{background-position:0 -2244px}
+	.country.MRI:before{background-position:0 -2260px}
+	.country.MSR:before{background-position:0 -2275px}
+	.country.MTN:before{background-position:0 -2291px}
+	.country.MTQ:before{background-position:0 -2307px}
+	.country.MYA:before{background-position:0 -2323px}
+	.country.NAM:before{background-position:0 -2337px}
+	.country.NCA:before{background-position:0 -2353px}
+	.country.NCL:before{background-position:0 -2369px}
+	.country.NED:before{background-position:0 -2384px}
+	.country.NGR:before{background-position:0 -2399px}
+	.country.NIG:before{background-position:0 -2415px}
+	.country.NIR:before{background-position:0 -2431px}
+	.country.NOR:before{background-position:0 -2447px}
+	.country.NRU:before{background-position:0 -2462px}
+	.country.NZL:before{background-position:0 -2478px}
+	.country.OMA:before{background-position:0 -2493px}
+	.country.PAK:before{background-position:0 -2509px}
+	.country.PAN:before{background-position:0 -2525px}
+	.country.PAR:before{background-position:0 -2541px}
+	.country.PER:before{background-position:0 -2556px}
+	.country.PHI:before{background-position:0 -2572px}
+	.country.PLE:before{background-position:0 -2587px}
+	.country.PLW:before{background-position:0 -2603px}
+	.country.PNG:before{background-position:0 -2618px}
+	.country.POL:before{background-position:0 -2634px}
+	.country.POR:before{background-position:0 -2649px}
+	.country.PRK:before{background-position:0 -2665px}
+	.country.PUE:before{background-position:0 -2681px}
+	.country.PUR:before{background-position:0 -2696px}
+	.country.PYF:before{background-position:0 -2712px}
+	.country.QAT:before{background-position:0 -2727px}
+	.country.RNC:before{background-position:0 -2743px}
+	.country.ROC:before{background-position:0 -2759px}
+	.country.ROU:before{background-position:0 -2774px}
+	.country.RSA:before{background-position:0 -2790px}
+	.country.RUS:before{background-position:0 -2805px}
+	.country.RWA:before{background-position:0 -2821px}
+	.country.SAM:before{background-position:0 -2837px}
+	.country.SCO:before{background-position:0 -2852px}
+	.country.SEN:before{background-position:0 -2868px}
+	.country.SEY:before{background-position:0 -2883px}
+	.country.SIN:before{background-position:0 -2899px}
+	.country.SKN:before{background-position:0 -2915px}
+	.country.SLE:before{background-position:0 -2930px}
+	.country.SLO:before{background-position:0 -2945px}
+	.country.SMR:before{background-position:0 -2961px}
+	.country.SOL:before{background-position:0 -2977px}
+	.country.SOM:before{background-position:0 -2992px}
+	.country.SOS:before{background-position:0 -3007px}
+	.country.SRB:before{background-position:0 -3023px}
+	.country.SRI:before{background-position:0 -3039px}
+	.country.STP:before{background-position:0 -3054px}
+	.country.SUD:before{background-position:0 -3070px}
+	.country.SUI:before{background-position:0 -3085px}
+	.country.SUR:before{background-position:0 -3101px}
+	.country.SVK:before{background-position:0 -3117px}
+	.country.SWE:before{background-position:0 -3133px}
+	.country.SWZ:before{background-position:0 -3148px}
+	.country.SYR:before{background-position:0 -3164px}
+	.country.TAN:before{background-position:0 -3179px}
+	.country.TCA:before{background-position:0 -3195px}
+	.country.TGA:before{background-position:0 -3210px}
+	.country.THA:before{background-position:0 -3226px}
+	.country.TJK:before{background-position:0 -3241px}
+	.country.TKM:before{background-position:0 -3257px}
+	.country.TLS:before{background-position:0 -3272px}
+	.country.TOG:before{background-position:0 -3288px}
+	.country.TPE:before{background-position:0 -3303px}
+	.country.TTO:before{background-position:0 -3320px}
+	.country.TUN:before{background-position:0 -3334px}
+	.country.TUR:before{background-position:0 -3350px}
+	.country.TUV:before{background-position:0 -3366px}
+	.country.TWN:before{background-position:0 -3382px}
+	.country.UAE:before{background-position:0 -3397px}
+	.country.UGA:before{background-position:0 -3413px}
+	.country.UKR:before{background-position:0 -3428px}
+	.country.URU:before{background-position:0 -3444px}
+	.country.USA:before{background-position:0 -3459px}
+	.country.UZB:before{background-position:0 -3475px}
+	.country.VAN:before{background-position:0 -3491px}
+	.country.VAT:before{background-position:0 -3507px}
+	.country.VEN:before{background-position:0 -3522px}
+	.country.VIE:before{background-position:0 -3538px}
+	.country.VIN:before{background-position:0 -3553px}
+	.country.WAL:before{background-position:0 -3569px}
+	.country.XKV:before{background-position:0 -3585px}
+	.country.YEM:before{background-position:0 -3601px}
+	.country.ZAM:before{background-position:0 -3615px}
+	.country.ZIM:before{background-position:0 -3631px}
+	.country.NEP:before{height:16px;background-position:0 -3646px}
+}

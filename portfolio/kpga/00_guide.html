@@ -1,0 +1,1542 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>UIO :: KPGA</title>
+<link rel="stylesheet" type="text/css" href="css/kpga.css">
+<!--[if lt IE 9]>
+<script src="js/html5shiv.min.js"></script>
+<![endif]-->
+<style>
+body{margin:0;padding:0 0 20px}
+h1, h2, h3, h4, h5, h6{font-family:"Noto Sans CJK", Notokr, 'Malgun Gothic','맑은고딕','Apple SD Gothic Neo',Dotum,'돋움',sans-serif}
+.wrap{padding-top:0;overflow-x:hidden;overflow-y:auto}
+.wrap h1.guide_title{display:block;padding:10px;background:#000;color:#fff;font-size:28px}
+.inner{padding:0 20px;margin:0}
+.wrap h2.guide_title{margin:20px 0 10px;padding:0 0 8px 5px;border-bottom:1px solid #000;font-size:20px}
+.wrap h2.guide_title:first-child{margin-top:0}
+.wrap h3.guide_title{margin:20px 0 10px;font-size:16px}
+.wrap .txt_guide{display:block;margin-bottom:15px;padding:10px;background-color:#eee;color:#333;font-size:14px;line-height:24px}
+.wrap .txt_guide li:before{margin-right:4px;content:'-'}
+.lst_round{position:static}
+.player_map_wrap{float:none;margin:0}
+.player_photo_area{width:50px;height:50px}
+.layer_marker_info{display:inline-block;margin-right:20px;vertical-align:top}
+.lst_flag{border:1px solid #ddd;border-left:0;font-size:0}
+.lst_flag .flag_item{display:inline-block;width:50px;height:30px;text-align:center;border-left:1px solid #ddd;padding:5px 0}
+.lst_flag .flag_txt{display:block;font-size:12px}
+
+
+/* 기존 국기 */
+.flag.flag-24x24{width:24px;height:22px}
+.flag{display:inline-block;background:url(img/flags_org.png) no-repeat}
+.flag.flag-24x24.AFG{background-position:0 -7167px}
+.flag.flag-24x24.AHO{background-position:0 -3639px}
+.flag.flag-24x24.AIA{background-position:0 -6447px}
+.flag.flag-24x24.ALB{background-position:0 -3663px}
+.flag.flag-24x24.ALG{background-position:0 -3687px}
+.flag.flag-24x24.AND{background-position:0 -3711px}
+.flag.flag-24x24.ANG{background-position:0 -3735px}
+.flag.flag-24x24.ANT{background-position:0 -3759px}
+.flag.flag-24x24.ARG{background-position:0 -3783px}
+.flag.flag-24x24.ARM{background-position:0 -3807px}
+.flag.flag-24x24.ARU{background-position:0 -3831px}
+.flag.flag-24x24.ASA{background-position:0 -3855px}
+.flag.flag-24x24.ASEAN{background-position:0 -3879px}
+.flag.flag-24x24.ATA{background-position:0 -3903px}
+.flag.flag-24x24.AUS{background-position:0 -3927px}
+.flag.flag-24x24.AUT{background-position:0 -3951px}
+.flag.flag-24x24.AZE{background-position:0 -3975px}
+.flag.flag-24x24.BAH{background-position:0 -3999px}
+.flag.flag-24x24.BAN{background-position:0 -4023px}
+.flag.flag-24x24.BAR{background-position:0 -4047px}
+.flag.flag-24x24.BDI{background-position:0 -4071px}
+.flag.flag-24x24.BEL{background-position:0 -4095px}
+.flag.flag-24x24.BEN{background-position:0 -4119px}
+.flag.flag-24x24.BER{background-position:0 -4143px}
+.flag.flag-24x24.BHU{background-position:0 -4167px}
+.flag.flag-24x24.BIH{background-position:0 -4191px}
+.flag.flag-24x24.BIZ{background-position:0 -4215px}
+.flag.flag-24x24.BLR{background-position:0 -4239px}
+.flag.flag-24x24.BOL{background-position:0 -4263px}
+.flag.flag-24x24.BOT{background-position:0 -4287px}
+.flag.flag-24x24.BRA{background-position:0 -4311px}
+.flag.flag-24x24.BRN{background-position:0 -4335px}
+.flag.flag-24x24.BRU{background-position:0 -4359px}
+.flag.flag-24x24.BUL{background-position:0 -4383px}
+.flag.flag-24x24.BUR{background-position:0 -4407px}
+.flag.flag-24x24.CAF{background-position:0 -4431px}
+.flag.flag-24x24.CAM{background-position:0 -4455px}
+.flag.flag-24x24.CAN{background-position:0 -4479px}
+.flag.flag-24x24.CAY{background-position:0 -4503px}
+.flag.flag-24x24.CGO{background-position:0 -4527px}
+.flag.flag-24x24.CHA{background-position:0 -4551px}
+.flag.flag-24x24.CHI{background-position:0 -4575px}
+.flag.flag-24x24.CHN{background-position:0 -4599px}
+.flag.flag-24x24.CIV{background-position:0 -4623px}
+.flag.flag-24x24.CMR{background-position:0 -4647px}
+.flag.flag-24x24.COD{background-position:0 -4671px}
+.flag.flag-24x24.COK{background-position:0 -4695px}
+.flag.flag-24x24.COL{background-position:0 -4719px}
+.flag.flag-24x24.COM{background-position:0 -4743px}
+.flag.flag-24x24.CPV{background-position:0 -4767px}
+.flag.flag-24x24.CRC{background-position:0 -4791px}
+.flag.flag-24x24.CRO{background-position:0 -4815px}
+.flag.flag-24x24.CUB{background-position:0 -4839px}
+.flag.flag-24x24.CYP{background-position:0 -4863px}
+.flag.flag-24x24.CZE{background-position:0 -4887px}
+.flag.flag-24x24.DEN{background-position:0 -4911px}
+.flag.flag-24x24.DEU{background-position:0 -4935px}
+.flag.flag-24x24.DJI{background-position:0 -4959px}
+.flag.flag-24x24.DMA{background-position:0 -4983px}
+.flag.flag-24x24.DOM{background-position:0 -5007px}
+.flag.flag-24x24.ECU{background-position:0 -5031px}
+.flag.flag-24x24.EGY{background-position:0 -5055px}
+.flag.flag-24x24.ENG{background-position:0 -5079px}
+.flag.flag-24x24.ERI{background-position:0 -5103px}
+.flag.flag-24x24.ESA{background-position:0 -5127px}
+.flag.flag-24x24.ESH{background-position:0 -5151px}
+.flag.flag-24x24.ESP{background-position:0 -5175px}
+.flag.flag-24x24.EST{background-position:0 -5199px}
+.flag.flag-24x24.ETH{background-position:0 -5223px}
+.flag.flag-24x24.EUR{background-position:0 -5247px}
+.flag.flag-24x24.FIJ{background-position:0 -5271px}
+.flag.flag-24x24.FIN{background-position:0 -5295px}
+.flag.flag-24x24.FRA{background-position:0 -5319px}
+.flag.flag-24x24.FRO{background-position:0 -5343px}
+.flag.flag-24x24.FSM{background-position:0 -5367px}
+.flag.flag-24x24.GAB{background-position:0 -5391px}
+.flag.flag-24x24.GAM{background-position:0 -5415px}
+.flag.flag-24x24.GBR{background-position:0 -5439px}
+.flag.flag-24x24.GEO{background-position:0 -5463px}
+.flag.flag-24x24.GEQ{background-position:0 -5487px}
+.flag.flag-24x24.GER{background-position:0 -5511px}
+.flag.flag-24x24.GGY{background-position:0 -5535px}
+.flag.flag-24x24.GHA{background-position:0 -5559px}
+.flag.flag-24x24.GIB{background-position:0 -5583px}
+.flag.flag-24x24.GLP{background-position:0 -5607px}
+.flag.flag-24x24.GNS{background-position:0 -5631px}
+.flag.flag-24x24.GRE{background-position:0 -5655px}
+.flag.flag-24x24.GRL{background-position:0 -5679px}
+.flag.flag-24x24.GRN{background-position:0 -5703px}
+.flag.flag-24x24.GUA{background-position:0 -5727px}
+.flag.flag-24x24.GUI{background-position:0 -5751px}
+.flag.flag-24x24.GUM{background-position:0 -5775px}
+.flag.flag-24x24.GUY{background-position:0 -5799px}
+.flag.flag-24x24.HAI{background-position:0 -5823px}
+.flag.flag-24x24.HKG{background-position:0 -5847px}
+.flag.flag-24x24.HON{background-position:0 -5871px}
+.flag.flag-24x24.HUN{background-position:0 -5895px}
+.flag.flag-24x24.IMN{background-position:0 -5919px}
+.flag.flag-24x24.INA{background-position:0 -5943px}
+.flag.flag-24x24.IND{background-position:0 -5967px}
+.flag.flag-24x24.IRI{background-position:0 -5991px}
+.flag.flag-24x24.IRL{background-position:0 -6015px}
+.flag.flag-24x24.IRQ{background-position:0 -6039px}
+.flag.flag-24x24.ISL{background-position:0 -6063px}
+.flag.flag-24x24.ISR{background-position:0 -6087px}
+.flag.flag-24x24.ISV{background-position:0 -6111px}
+.flag.flag-24x24.ITA{background-position:0 -6135px}
+.flag.flag-24x24.IVB{background-position:0 -6159px}
+.flag.flag-24x24.JAM{background-position:0 -6183px}
+.flag.flag-24x24.JEY{background-position:0 -6207px}
+.flag.flag-24x24.JOR{background-position:0 -6231px}
+.flag.flag-24x24.JPN{background-position:0 -6255px}
+.flag.flag-24x24.KAZ{background-position:0 -6279px}
+.flag.flag-24x24.KEN{background-position:0 -6303px}
+.flag.flag-24x24.KGZ{background-position:0 -6327px}
+.flag.flag-24x24.KIR{background-position:0 -6351px}
+.flag.flag-24x24.KOR{background-position:0 -6375px}
+.flag.flag-24x24.KSA{background-position:0 -6399px}
+.flag.flag-24x24.KUW{background-position:0 -6423px}
+.flag.flag-24x24.LAO{background-position:0 -3615px}
+.flag.flag-24x24.LAT{background-position:0 -6471px}
+.flag.flag-24x24.LBA{background-position:0 -6495px}
+.flag.flag-24x24.LBR{background-position:0 -6519px}
+.flag.flag-24x24.LCA{background-position:0 -6543px}
+.flag.flag-24x24.LES{background-position:0 -6567px}
+.flag.flag-24x24.LIB{background-position:0 -6591px}
+.flag.flag-24x24.LIE{background-position:0 -6615px}
+.flag.flag-24x24.LTU{background-position:0 -6639px}
+.flag.flag-24x24.LUX{background-position:0 -6663px}
+.flag.flag-24x24.MAC{background-position:0 -6687px}
+.flag.flag-24x24.MAD{background-position:0 -6711px}
+.flag.flag-24x24.MAR{background-position:0 -6735px}
+.flag.flag-24x24.MAS{background-position:0 -6759px}
+.flag.flag-24x24.MAW{background-position:0 -6783px}
+.flag.flag-24x24.MDA{background-position:0 -6807px}
+.flag.flag-24x24.MDV{background-position:0 -6831px}
+.flag.flag-24x24.MEX{background-position:0 -6855px}
+.flag.flag-24x24.MGL{background-position:0 -6879px}
+.flag.flag-24x24.MHL{background-position:0 -6903px}
+.flag.flag-24x24.MKD{background-position:0 -6927px}
+.flag.flag-24x24.MLI{background-position:0 -6951px}
+.flag.flag-24x24.MLT{background-position:0 -6975px}
+.flag.flag-24x24.MNE{background-position:0 -6999px}
+.flag.flag-24x24.MON{background-position:0 -7023px}
+.flag.flag-24x24.MOZ{background-position:0 -7047px}
+.flag.flag-24x24.MRI{background-position:0 -7071px}
+.flag.flag-24x24.MSR{background-position:0 -7095px}
+.flag.flag-24x24.MTN{background-position:0 -7119px}
+.flag.flag-24x24.MTQ{background-position:0 -7143px}
+.flag.flag-24x24.MYA{background-position:0 -3600px; width: 22px}
+.flag.flag-24x24.NAM{background-position:0 -7191px}
+.flag.flag-24x24.NCA{background-position:0 -7215px}
+.flag.flag-24x24.NCL{background-position:0 -7239px}
+.flag.flag-24x24.NED{background-position:0 -7263px}
+.flag.flag-24x24.NEP{background-position:0 -7287px}
+.flag.flag-24x24.NGR{background-position:0 -7311px}
+.flag.flag-24x24.NIG{background-position:0 -7335px}
+.flag.flag-24x24.NIR{background-position:0 -7359px}
+.flag.flag-24x24.NOR{background-position:0 -7383px}
+.flag.flag-24x24.NRU{background-position:0 -7407px}
+.flag.flag-24x24.NZL{background-position:0 -7431px}
+.flag.flag-24x24.OMA{background-position:0 -7455px}
+.flag.flag-24x24.PAK{background-position:0 -7479px}
+.flag.flag-24x24.PAN{background-position:0 -7503px}
+.flag.flag-24x24.PAR{background-position:0 -7527px}
+.flag.flag-24x24.PER{background-position:0 -7551px}
+.flag.flag-24x24.PHI{background-position:0 -7575px}
+.flag.flag-24x24.PLE{background-position:0 -7599px}
+.flag.flag-24x24.PLW{background-position:0 -7623px}
+.flag.flag-24x24.PNG{background-position:0 -7647px}
+.flag.flag-24x24.POL{background-position:0 -7671px}
+.flag.flag-24x24.POR{background-position:0 -7695px}
+.flag.flag-24x24.PRK{background-position:0 -7719px}
+.flag.flag-24x24.PUE{background-position:0 -7743px}
+.flag.flag-24x24.PUR{background-position:0 -7767px}
+.flag.flag-24x24.PYF{background-position:0 -7791px}
+.flag.flag-24x24.QAT{background-position:0 -7815px}
+.flag.flag-24x24.RNC{background-position:0 -7839px}
+.flag.flag-24x24.ROC{background-position:0 -7863px}
+.flag.flag-24x24.ROU{background-position:0 -7887px}
+.flag.flag-24x24.RSA{background-position:0 -7911px}
+.flag.flag-24x24.RUS{background-position:0 -7935px}
+.flag.flag-24x24.RWA{background-position:0 -7959px}
+.flag.flag-24x24.SAM{background-position:0 -7983px}
+.flag.flag-24x24.SCO{background-position:0 -8007px}
+.flag.flag-24x24.SEN{background-position:0 -8031px}
+.flag.flag-24x24.SEY{background-position:0 -8055px}
+.flag.flag-24x24.SIN{background-position:0 -8079px}
+.flag.flag-24x24.SKN{background-position:0 -8103px}
+.flag.flag-24x24.SLE{background-position:0 -8127px}
+.flag.flag-24x24.SLO{background-position:0 -8151px}
+.flag.flag-24x24.SMR{background-position:0 -8175px}
+.flag.flag-24x24.SOL{background-position:0 -8199px}
+.flag.flag-24x24.SOM{background-position:0 -8223px}
+.flag.flag-24x24.SOS{background-position:0 -8247px}
+.flag.flag-24x24.SRB{background-position:0 -8271px}
+.flag.flag-24x24.SRI{background-position:0 -8295px}
+.flag.flag-24x24.STP{background-position:0 -8319px}
+.flag.flag-24x24.SUD{background-position:0 -8343px}
+.flag.flag-24x24.SUI{background-position:0 -8367px}
+.flag.flag-24x24.SUR{background-position:0 -8391px}
+.flag.flag-24x24.SVK{background-position:0 -8415px}
+.flag.flag-24x24.SWE{background-position:0 -8439px}
+.flag.flag-24x24.SWZ{background-position:0 -8463px}
+.flag.flag-24x24.SYR{background-position:0 -8487px}
+.flag.flag-24x24.TAN{background-position:0 -8511px}
+.flag.flag-24x24.TCA{background-position:0 -8535px}
+.flag.flag-24x24.TGA{background-position:0 -8559px}
+.flag.flag-24x24.THA{background-position:0 -8583px}
+.flag.flag-24x24.TJK{background-position:0 -8607px}
+.flag.flag-24x24.TKM{background-position:0 -8631px}
+.flag.flag-24x24.TLS{background-position:0 -8655px}
+.flag.flag-24x24.TOG{background-position:0 -8679px}
+.flag.flag-24x24.TPE{background-position:0 -8703px}
+.flag.flag-24x24.TTO{background-position:0 -8727px}
+.flag.flag-24x24.TUN{background-position:0 -8751px}
+.flag.flag-24x24.TUR{background-position:0 -8775px}
+.flag.flag-24x24.TUV{background-position:0 -8799px}
+.flag.flag-24x24.TWN{background-position:0 -8823px}
+.flag.flag-24x24.UAE{background-position:0 -8847px}
+.flag.flag-24x24.UGA{background-position:0 -8871px}
+.flag.flag-24x24.UKR{background-position:0 -8895px}
+.flag.flag-24x24.UNKNOWN{background-position:0 -8919px}
+.flag.flag-24x24.UNX{background-position:0 -8943px}
+.flag.flag-24x24.URU{background-position:0 -8967px}
+.flag.flag-24x24.USA{background-position:0 -8991px}
+.flag.flag-24x24.UZB{background-position:0 -9015px}
+.flag.flag-24x24.VAN{background-position:0 -9039px}
+.flag.flag-24x24.VAT{background-position:0 -9063px}
+.flag.flag-24x24.VEN{background-position:0 -9087px}
+.flag.flag-24x24.VIE{background-position:0 -9111px}
+.flag.flag-24x24.VIN{background-position:0 -9135px}
+.flag.flag-24x24.WAL{background-position:0 -9159px}
+.flag.flag-24x24.XKV{background-position:0 -9183px}
+.flag.flag-24x24.YEM{background-position:0 -9207px}
+.flag.flag-24x24.ZAM{background-position:0 -9231px}
+.flag.flag-24x24.ZIM{background-position:0 -9255px}
+</style>
+</head>
+<body>
+	<div class="wrap">
+	<!-- wrap -->
+		<h1 class="guide_title">KPGA UIO 가이드</h1>
+		<div class="inner">
+			<h2 class="guide_title">국기</h2>
+			<ul class="txt_guide">
+			<li>기존 사이트에서 국가 이미지 및 국가 분기 코드 동일하게 적용</li>
+			<li>country 클래스에 국가코드를 추가로 적용</li>
+			<li>적용 예) 한국 국기 노출시 : &lt;span class="country KOR"&gt;&lt;/span&gt;</li>
+			</ul>
+			<h3 class="guide_title">기존 사이트(국기 이미지 대조용)</h3>
+			<ul class="lst_flag">
+			<li class="flag_item"><span class="flag flag-24x24 AFG"></span><span class="flag_txt">AFG</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 AHO"></span><span class="flag_txt">AHO</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 AIA"></span><span class="flag_txt">AIA</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 ALB"></span><span class="flag_txt">ALB</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 ALG"></span><span class="flag_txt">ALG</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 AND"></span><span class="flag_txt">AND</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 ANG"></span><span class="flag_txt">ANG</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 ANT"></span><span class="flag_txt">ANT</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 ARG"></span><span class="flag_txt">ARG</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 ARM"></span><span class="flag_txt">ARM</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 ARU"></span><span class="flag_txt">ARU</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 ASA"></span><span class="flag_txt">ASA</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 ASEAN  "></span><span class="flag_txt">ASEAN  </span></li>
+			<li class="flag_item"><span class="flag flag-24x24 ATA"></span><span class="flag_txt">ATA</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 AUS"></span><span class="flag_txt">AUS</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 AUT"></span><span class="flag_txt">AUT</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 AZE"></span><span class="flag_txt">AZE</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 BAH"></span><span class="flag_txt">BAH</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 BAN"></span><span class="flag_txt">BAN</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 BAR"></span><span class="flag_txt">BAR</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 BDI"></span><span class="flag_txt">BDI</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 BEL"></span><span class="flag_txt">BEL</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 BEN"></span><span class="flag_txt">BEN</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 BER"></span><span class="flag_txt">BER</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 BHU"></span><span class="flag_txt">BHU</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 BIH"></span><span class="flag_txt">BIH</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 BIZ"></span><span class="flag_txt">BIZ</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 BLR"></span><span class="flag_txt">BLR</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 BOL"></span><span class="flag_txt">BOL</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 BOT"></span><span class="flag_txt">BOT</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 BRA"></span><span class="flag_txt">BRA</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 BRN"></span><span class="flag_txt">BRN</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 BRU"></span><span class="flag_txt">BRU</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 BUL"></span><span class="flag_txt">BUL</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 BUR"></span><span class="flag_txt">BUR</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 CAF"></span><span class="flag_txt">CAF</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 CAM"></span><span class="flag_txt">CAM</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 CAN"></span><span class="flag_txt">CAN</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 CAY"></span><span class="flag_txt">CAY</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 CGO"></span><span class="flag_txt">CGO</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 CHA"></span><span class="flag_txt">CHA</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 CHI"></span><span class="flag_txt">CHI</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 CHN"></span><span class="flag_txt">CHN</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 CIV"></span><span class="flag_txt">CIV</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 CMR"></span><span class="flag_txt">CMR</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 COD"></span><span class="flag_txt">COD</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 COK"></span><span class="flag_txt">COK</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 COL"></span><span class="flag_txt">COL</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 COM"></span><span class="flag_txt">COM</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 CPV"></span><span class="flag_txt">CPV</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 CRC"></span><span class="flag_txt">CRC</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 CRO"></span><span class="flag_txt">CRO</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 CUB"></span><span class="flag_txt">CUB</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 CYP"></span><span class="flag_txt">CYP</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 CZE"></span><span class="flag_txt">CZE</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 DEN"></span><span class="flag_txt">DEN</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 DEU"></span><span class="flag_txt">DEU</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 DJI"></span><span class="flag_txt">DJI</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 DMA"></span><span class="flag_txt">DMA</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 DOM"></span><span class="flag_txt">DOM</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 ECU"></span><span class="flag_txt">ECU</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 EGY"></span><span class="flag_txt">EGY</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 ENG"></span><span class="flag_txt">ENG</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 ERI"></span><span class="flag_txt">ERI</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 ESA"></span><span class="flag_txt">ESA</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 ESH"></span><span class="flag_txt">ESH</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 ESP"></span><span class="flag_txt">ESP</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 EST"></span><span class="flag_txt">EST</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 ETH"></span><span class="flag_txt">ETH</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 EUR"></span><span class="flag_txt">EUR</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 FIJ"></span><span class="flag_txt">FIJ</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 FIN"></span><span class="flag_txt">FIN</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 FRA"></span><span class="flag_txt">FRA</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 FRO"></span><span class="flag_txt">FRO</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 FSM"></span><span class="flag_txt">FSM</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 GAB"></span><span class="flag_txt">GAB</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 GAM"></span><span class="flag_txt">GAM</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 GBR"></span><span class="flag_txt">GBR</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 GEO"></span><span class="flag_txt">GEO</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 GEQ"></span><span class="flag_txt">GEQ</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 GER"></span><span class="flag_txt">GER</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 GGY"></span><span class="flag_txt">GGY</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 GHA"></span><span class="flag_txt">GHA</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 GIB"></span><span class="flag_txt">GIB</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 GLP"></span><span class="flag_txt">GLP</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 GNS"></span><span class="flag_txt">GNS</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 GRE"></span><span class="flag_txt">GRE</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 GRL"></span><span class="flag_txt">GRL</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 GRN"></span><span class="flag_txt">GRN</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 GUA"></span><span class="flag_txt">GUA</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 GUI"></span><span class="flag_txt">GUI</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 GUM"></span><span class="flag_txt">GUM</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 GUY"></span><span class="flag_txt">GUY</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 HAI"></span><span class="flag_txt">HAI</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 HKG"></span><span class="flag_txt">HKG</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 HON"></span><span class="flag_txt">HON</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 HUN"></span><span class="flag_txt">HUN</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 IMN"></span><span class="flag_txt">IMN</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 INA"></span><span class="flag_txt">INA</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 IND"></span><span class="flag_txt">IND</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 IRI"></span><span class="flag_txt">IRI</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 IRL"></span><span class="flag_txt">IRL</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 IRQ"></span><span class="flag_txt">IRQ</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 ISL"></span><span class="flag_txt">ISL</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 ISR"></span><span class="flag_txt">ISR</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 ISV"></span><span class="flag_txt">ISV</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 ITA"></span><span class="flag_txt">ITA</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 IVB"></span><span class="flag_txt">IVB</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 JAM"></span><span class="flag_txt">JAM</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 JEY"></span><span class="flag_txt">JEY</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 JOR"></span><span class="flag_txt">JOR</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 JPN"></span><span class="flag_txt">JPN</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 KAZ"></span><span class="flag_txt">KAZ</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 KEN"></span><span class="flag_txt">KEN</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 KGZ"></span><span class="flag_txt">KGZ</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 KIR"></span><span class="flag_txt">KIR</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 KOR"></span><span class="flag_txt">KOR</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 KSA"></span><span class="flag_txt">KSA</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 KUW"></span><span class="flag_txt">KUW</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 LAO"></span><span class="flag_txt">LAO</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 LAT"></span><span class="flag_txt">LAT</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 LBA"></span><span class="flag_txt">LBA</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 LBR"></span><span class="flag_txt">LBR</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 LCA"></span><span class="flag_txt">LCA</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 LES"></span><span class="flag_txt">LES</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 LIB"></span><span class="flag_txt">LIB</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 LIE"></span><span class="flag_txt">LIE</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 LTU"></span><span class="flag_txt">LTU</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 LUX"></span><span class="flag_txt">LUX</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 MAC"></span><span class="flag_txt">MAC</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 MAD"></span><span class="flag_txt">MAD</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 MAR"></span><span class="flag_txt">MAR</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 MAS"></span><span class="flag_txt">MAS</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 MAW"></span><span class="flag_txt">MAW</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 MDA"></span><span class="flag_txt">MDA</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 MDV"></span><span class="flag_txt">MDV</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 MEX"></span><span class="flag_txt">MEX</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 MGL"></span><span class="flag_txt">MGL</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 MHL"></span><span class="flag_txt">MHL</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 MKD"></span><span class="flag_txt">MKD</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 MLI"></span><span class="flag_txt">MLI</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 MLT"></span><span class="flag_txt">MLT</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 MNE"></span><span class="flag_txt">MNE</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 MON"></span><span class="flag_txt">MON</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 MOZ"></span><span class="flag_txt">MOZ</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 MRI"></span><span class="flag_txt">MRI</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 MSR"></span><span class="flag_txt">MSR</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 MTN"></span><span class="flag_txt">MTN</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 MTQ"></span><span class="flag_txt">MTQ</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 MYA"></span><span class="flag_txt">MYA</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 NAM"></span><span class="flag_txt">NAM</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 NCA"></span><span class="flag_txt">NCA</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 NCL"></span><span class="flag_txt">NCL</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 NED"></span><span class="flag_txt">NED</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 NEP"></span><span class="flag_txt">NEP</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 NGR"></span><span class="flag_txt">NGR</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 NIG"></span><span class="flag_txt">NIG</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 NIR"></span><span class="flag_txt">NIR</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 NOR"></span><span class="flag_txt">NOR</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 NRU"></span><span class="flag_txt">NRU</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 NZL"></span><span class="flag_txt">NZL</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 OMA"></span><span class="flag_txt">OMA</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 PAK"></span><span class="flag_txt">PAK</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 PAN"></span><span class="flag_txt">PAN</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 PAR"></span><span class="flag_txt">PAR</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 PER"></span><span class="flag_txt">PER</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 PHI"></span><span class="flag_txt">PHI</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 PLE"></span><span class="flag_txt">PLE</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 PLW"></span><span class="flag_txt">PLW</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 PNG"></span><span class="flag_txt">PNG</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 POL"></span><span class="flag_txt">POL</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 POR"></span><span class="flag_txt">POR</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 PRK"></span><span class="flag_txt">PRK</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 PUE"></span><span class="flag_txt">PUE</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 PUR"></span><span class="flag_txt">PUR</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 PYF"></span><span class="flag_txt">PYF</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 QAT"></span><span class="flag_txt">QAT</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 RNC"></span><span class="flag_txt">RNC</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 ROC"></span><span class="flag_txt">ROC</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 ROU"></span><span class="flag_txt">ROU</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 RSA"></span><span class="flag_txt">RSA</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 RUS"></span><span class="flag_txt">RUS</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 RWA"></span><span class="flag_txt">RWA</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 SAM"></span><span class="flag_txt">SAM</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 SCO"></span><span class="flag_txt">SCO</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 SEN"></span><span class="flag_txt">SEN</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 SEY"></span><span class="flag_txt">SEY</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 SIN"></span><span class="flag_txt">SIN</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 SKN"></span><span class="flag_txt">SKN</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 SLE"></span><span class="flag_txt">SLE</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 SLO"></span><span class="flag_txt">SLO</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 SMR"></span><span class="flag_txt">SMR</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 SOL"></span><span class="flag_txt">SOL</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 SOM"></span><span class="flag_txt">SOM</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 SOS"></span><span class="flag_txt">SOS</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 SRB"></span><span class="flag_txt">SRB</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 SRI"></span><span class="flag_txt">SRI</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 STP"></span><span class="flag_txt">STP</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 SUD"></span><span class="flag_txt">SUD</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 SUI"></span><span class="flag_txt">SUI</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 SUR"></span><span class="flag_txt">SUR</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 SVK"></span><span class="flag_txt">SVK</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 SWE"></span><span class="flag_txt">SWE</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 SWZ"></span><span class="flag_txt">SWZ</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 SYR"></span><span class="flag_txt">SYR</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 TAN"></span><span class="flag_txt">TAN</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 TCA"></span><span class="flag_txt">TCA</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 TGA"></span><span class="flag_txt">TGA</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 THA"></span><span class="flag_txt">THA</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 TJK"></span><span class="flag_txt">TJK</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 TKM"></span><span class="flag_txt">TKM</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 TLS"></span><span class="flag_txt">TLS</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 TOG"></span><span class="flag_txt">TOG</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 TPE"></span><span class="flag_txt">TPE</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 TTO"></span><span class="flag_txt">TTO</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 TUN"></span><span class="flag_txt">TUN</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 TUR"></span><span class="flag_txt">TUR</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 TUV"></span><span class="flag_txt">TUV</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 TWN"></span><span class="flag_txt">TWN</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 UAE"></span><span class="flag_txt">UAE</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 UGA"></span><span class="flag_txt">UGA</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 UKR"></span><span class="flag_txt">UKR</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 URU"></span><span class="flag_txt">URU</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 USA"></span><span class="flag_txt">USA</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 UZB"></span><span class="flag_txt">UZB</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 VAN"></span><span class="flag_txt">VAN</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 VAT"></span><span class="flag_txt">VAT</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 VEN"></span><span class="flag_txt">VEN</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 VIE"></span><span class="flag_txt">VIE</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 VIN"></span><span class="flag_txt">VIN</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 WAL"></span><span class="flag_txt">WAL</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 XKV"></span><span class="flag_txt">XKV</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 YEM"></span><span class="flag_txt">YEM</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 ZAM"></span><span class="flag_txt">ZAM</span></li>
+			<li class="flag_item"><span class="flag flag-24x24 ZIM"></span><span class="flag_txt">ZIM</span></li>
+
+
+			</ul>
+			<h3 class="guide_title">리뉴얼</h3>
+			<ul class="lst_flag">
+			<li class="flag_item"><span class="country AFG"></span><span class="flag_txt">AFG</span></li>
+			<li class="flag_item"><span class="country AHO"></span><span class="flag_txt">AHO</span></li>
+			<li class="flag_item"><span class="country AIA"></span><span class="flag_txt">AIA</span></li>
+			<li class="flag_item"><span class="country ALB"></span><span class="flag_txt">ALB</span></li>
+			<li class="flag_item"><span class="country ALG"></span><span class="flag_txt">ALG</span></li>
+			<li class="flag_item"><span class="country AND"></span><span class="flag_txt">AND</span></li>
+			<li class="flag_item"><span class="country ANG"></span><span class="flag_txt">ANG</span></li>
+			<li class="flag_item"><span class="country ANT"></span><span class="flag_txt">ANT</span></li>
+			<li class="flag_item"><span class="country ARG"></span><span class="flag_txt">ARG</span></li>
+			<li class="flag_item"><span class="country ARM"></span><span class="flag_txt">ARM</span></li>
+			<li class="flag_item"><span class="country ARU"></span><span class="flag_txt">ARU</span></li>
+			<li class="flag_item"><span class="country ASA"></span><span class="flag_txt">ASA</span></li>
+			<li class="flag_item"><span class="country ASEAN"></span><span class="flag_txt">ASEAN</span></li>
+			<li class="flag_item"><span class="country ATA"></span><span class="flag_txt">ATA</span></li>
+			<li class="flag_item"><span class="country AUS"></span><span class="flag_txt">AUS</span></li>
+			<li class="flag_item"><span class="country AUT"></span><span class="flag_txt">AUT</span></li>
+			<li class="flag_item"><span class="country AZE"></span><span class="flag_txt">AZE</span></li>
+			<li class="flag_item"><span class="country BAH"></span><span class="flag_txt">BAH</span></li>
+			<li class="flag_item"><span class="country BAN"></span><span class="flag_txt">BAN</span></li>
+			<li class="flag_item"><span class="country BAR"></span><span class="flag_txt">BAR</span></li>
+			<li class="flag_item"><span class="country BDI"></span><span class="flag_txt">BDI</span></li>
+			<li class="flag_item"><span class="country BEL"></span><span class="flag_txt">BEL</span></li>
+			<li class="flag_item"><span class="country BEN"></span><span class="flag_txt">BEN</span></li>
+			<li class="flag_item"><span class="country BER"></span><span class="flag_txt">BER</span></li>
+			<li class="flag_item"><span class="country BHU"></span><span class="flag_txt">BHU</span></li>
+			<li class="flag_item"><span class="country BIH"></span><span class="flag_txt">BIH</span></li>
+			<li class="flag_item"><span class="country BIZ"></span><span class="flag_txt">BIZ</span></li>
+			<li class="flag_item"><span class="country BLR"></span><span class="flag_txt">BLR</span></li>
+			<li class="flag_item"><span class="country BOL"></span><span class="flag_txt">BOL</span></li>
+			<li class="flag_item"><span class="country BOT"></span><span class="flag_txt">BOT</span></li>
+			<li class="flag_item"><span class="country BRA"></span><span class="flag_txt">BRA</span></li>
+			<li class="flag_item"><span class="country BRN"></span><span class="flag_txt">BRN</span></li>
+			<li class="flag_item"><span class="country BRU"></span><span class="flag_txt">BRU</span></li>
+			<li class="flag_item"><span class="country BUL"></span><span class="flag_txt">BUL</span></li>
+			<li class="flag_item"><span class="country BUR"></span><span class="flag_txt">BUR</span></li>
+			<li class="flag_item"><span class="country CAF"></span><span class="flag_txt">CAF</span></li>
+			<li class="flag_item"><span class="country CAM"></span><span class="flag_txt">CAM</span></li>
+			<li class="flag_item"><span class="country CAN"></span><span class="flag_txt">CAN</span></li>
+			<li class="flag_item"><span class="country CAY"></span><span class="flag_txt">CAY</span></li>
+			<li class="flag_item"><span class="country CGO"></span><span class="flag_txt">CGO</span></li>
+			<li class="flag_item"><span class="country CHA"></span><span class="flag_txt">CHA</span></li>
+			<li class="flag_item"><span class="country CHI"></span><span class="flag_txt">CHI</span></li>
+			<li class="flag_item"><span class="country CHN"></span><span class="flag_txt">CHN</span></li>
+			<li class="flag_item"><span class="country CIV"></span><span class="flag_txt">CIV</span></li>
+			<li class="flag_item"><span class="country CMR"></span><span class="flag_txt">CMR</span></li>
+			<li class="flag_item"><span class="country COD"></span><span class="flag_txt">COD</span></li>
+			<li class="flag_item"><span class="country COK"></span><span class="flag_txt">COK</span></li>
+			<li class="flag_item"><span class="country COL"></span><span class="flag_txt">COL</span></li>
+			<li class="flag_item"><span class="country COM"></span><span class="flag_txt">COM</span></li>
+			<li class="flag_item"><span class="country CPV"></span><span class="flag_txt">CPV</span></li>
+			<li class="flag_item"><span class="country CRC"></span><span class="flag_txt">CRC</span></li>
+			<li class="flag_item"><span class="country CRO"></span><span class="flag_txt">CRO</span></li>
+			<li class="flag_item"><span class="country CUB"></span><span class="flag_txt">CUB</span></li>
+			<li class="flag_item"><span class="country CYP"></span><span class="flag_txt">CYP</span></li>
+			<li class="flag_item"><span class="country CZE"></span><span class="flag_txt">CZE</span></li>
+			<li class="flag_item"><span class="country DEN"></span><span class="flag_txt">DEN</span></li>
+			<li class="flag_item"><span class="country DEU"></span><span class="flag_txt">DEU</span></li>
+			<li class="flag_item"><span class="country DJI"></span><span class="flag_txt">DJI</span></li>
+			<li class="flag_item"><span class="country DMA"></span><span class="flag_txt">DMA</span></li>
+			<li class="flag_item"><span class="country DOM"></span><span class="flag_txt">DOM</span></li>
+			<li class="flag_item"><span class="country ECU"></span><span class="flag_txt">ECU</span></li>
+			<li class="flag_item"><span class="country EGY"></span><span class="flag_txt">EGY</span></li>
+			<li class="flag_item"><span class="country ENG"></span><span class="flag_txt">ENG</span></li>
+			<li class="flag_item"><span class="country ERI"></span><span class="flag_txt">ERI</span></li>
+			<li class="flag_item"><span class="country ESA"></span><span class="flag_txt">ESA</span></li>
+			<li class="flag_item"><span class="country ESH"></span><span class="flag_txt">ESH</span></li>
+			<li class="flag_item"><span class="country ESP"></span><span class="flag_txt">ESP</span></li>
+			<li class="flag_item"><span class="country EST"></span><span class="flag_txt">EST</span></li>
+			<li class="flag_item"><span class="country ETH"></span><span class="flag_txt">ETH</span></li>
+			<li class="flag_item"><span class="country EUR"></span><span class="flag_txt">EUR</span></li>
+			<li class="flag_item"><span class="country FIJ"></span><span class="flag_txt">FIJ</span></li>
+			<li class="flag_item"><span class="country FIN"></span><span class="flag_txt">FIN</span></li>
+			<li class="flag_item"><span class="country FRA"></span><span class="flag_txt">FRA</span></li>
+			<li class="flag_item"><span class="country FRO"></span><span class="flag_txt">FRO</span></li>
+			<li class="flag_item"><span class="country FSM"></span><span class="flag_txt">FSM</span></li>
+			<li class="flag_item"><span class="country GAB"></span><span class="flag_txt">GAB</span></li>
+			<li class="flag_item"><span class="country GAM"></span><span class="flag_txt">GAM</span></li>
+			<li class="flag_item"><span class="country GBR"></span><span class="flag_txt">GBR</span></li>
+			<li class="flag_item"><span class="country GEO"></span><span class="flag_txt">GEO</span></li>
+			<li class="flag_item"><span class="country GEQ"></span><span class="flag_txt">GEQ</span></li>
+			<li class="flag_item"><span class="country GER"></span><span class="flag_txt">GER</span></li>
+			<li class="flag_item"><span class="country GGY"></span><span class="flag_txt">GGY</span></li>
+			<li class="flag_item"><span class="country GHA"></span><span class="flag_txt">GHA</span></li>
+			<li class="flag_item"><span class="country GIB"></span><span class="flag_txt">GIB</span></li>
+			<li class="flag_item"><span class="country GLP"></span><span class="flag_txt">GLP</span></li>
+			<li class="flag_item"><span class="country GNS"></span><span class="flag_txt">GNS</span></li>
+			<li class="flag_item"><span class="country GRE"></span><span class="flag_txt">GRE</span></li>
+			<li class="flag_item"><span class="country GRL"></span><span class="flag_txt">GRL</span></li>
+			<li class="flag_item"><span class="country GRN"></span><span class="flag_txt">GRN</span></li>
+			<li class="flag_item"><span class="country GUA"></span><span class="flag_txt">GUA</span></li>
+			<li class="flag_item"><span class="country GUI"></span><span class="flag_txt">GUI</span></li>
+			<li class="flag_item"><span class="country GUM"></span><span class="flag_txt">GUM</span></li>
+			<li class="flag_item"><span class="country GUY"></span><span class="flag_txt">GUY</span></li>
+			<li class="flag_item"><span class="country HAI"></span><span class="flag_txt">HAI</span></li>
+			<li class="flag_item"><span class="country HKG"></span><span class="flag_txt">HKG</span></li>
+			<li class="flag_item"><span class="country HON"></span><span class="flag_txt">HON</span></li>
+			<li class="flag_item"><span class="country HUN"></span><span class="flag_txt">HUN</span></li>
+			<li class="flag_item"><span class="country IMN"></span><span class="flag_txt">IMN</span></li>
+			<li class="flag_item"><span class="country INA"></span><span class="flag_txt">INA</span></li>
+			<li class="flag_item"><span class="country IND"></span><span class="flag_txt">IND</span></li>
+			<li class="flag_item"><span class="country IRI"></span><span class="flag_txt">IRI</span></li>
+			<li class="flag_item"><span class="country IRL"></span><span class="flag_txt">IRL</span></li>
+			<li class="flag_item"><span class="country IRQ"></span><span class="flag_txt">IRQ</span></li>
+			<li class="flag_item"><span class="country ISL"></span><span class="flag_txt">ISL</span></li>
+			<li class="flag_item"><span class="country ISR"></span><span class="flag_txt">ISR</span></li>
+			<li class="flag_item"><span class="country ISV"></span><span class="flag_txt">ISV</span></li>
+			<li class="flag_item"><span class="country ITA"></span><span class="flag_txt">ITA</span></li>
+			<li class="flag_item"><span class="country IVB"></span><span class="flag_txt">IVB</span></li>
+			<li class="flag_item"><span class="country JAM"></span><span class="flag_txt">JAM</span></li>
+			<li class="flag_item"><span class="country JEY"></span><span class="flag_txt">JEY</span></li>
+			<li class="flag_item"><span class="country JOR"></span><span class="flag_txt">JOR</span></li>
+			<li class="flag_item"><span class="country JPN"></span><span class="flag_txt">JPN</span></li>
+			<li class="flag_item"><span class="country KAZ"></span><span class="flag_txt">KAZ</span></li>
+			<li class="flag_item"><span class="country KEN"></span><span class="flag_txt">KEN</span></li>
+			<li class="flag_item"><span class="country KGZ"></span><span class="flag_txt">KGZ</span></li>
+			<li class="flag_item"><span class="country KIR"></span><span class="flag_txt">KIR</span></li>
+			<li class="flag_item"><span class="country KOR"></span><span class="flag_txt">KOR</span></li>
+			<li class="flag_item"><span class="country KSA"></span><span class="flag_txt">KSA</span></li>
+			<li class="flag_item"><span class="country KUW"></span><span class="flag_txt">KUW</span></li>
+			<li class="flag_item"><span class="country LAO"></span><span class="flag_txt">LAO</span></li>
+			<li class="flag_item"><span class="country LAT"></span><span class="flag_txt">LAT</span></li>
+			<li class="flag_item"><span class="country LBA"></span><span class="flag_txt">LBA</span></li>
+			<li class="flag_item"><span class="country LBR"></span><span class="flag_txt">LBR</span></li>
+			<li class="flag_item"><span class="country LCA"></span><span class="flag_txt">LCA</span></li>
+			<li class="flag_item"><span class="country LES"></span><span class="flag_txt">LES</span></li>
+			<li class="flag_item"><span class="country LIB"></span><span class="flag_txt">LIB</span></li>
+			<li class="flag_item"><span class="country LIE"></span><span class="flag_txt">LIE</span></li>
+			<li class="flag_item"><span class="country LTU"></span><span class="flag_txt">LTU</span></li>
+			<li class="flag_item"><span class="country LUX"></span><span class="flag_txt">LUX</span></li>
+			<li class="flag_item"><span class="country MAC"></span><span class="flag_txt">MAC</span></li>
+			<li class="flag_item"><span class="country MAD"></span><span class="flag_txt">MAD</span></li>
+			<li class="flag_item"><span class="country MAR"></span><span class="flag_txt">MAR</span></li>
+			<li class="flag_item"><span class="country MAS"></span><span class="flag_txt">MAS</span></li>
+			<li class="flag_item"><span class="country MAW"></span><span class="flag_txt">MAW</span></li>
+			<li class="flag_item"><span class="country MDA"></span><span class="flag_txt">MDA</span></li>
+			<li class="flag_item"><span class="country MDV"></span><span class="flag_txt">MDV</span></li>
+			<li class="flag_item"><span class="country MEX"></span><span class="flag_txt">MEX</span></li>
+			<li class="flag_item"><span class="country MGL"></span><span class="flag_txt">MGL</span></li>
+			<li class="flag_item"><span class="country MHL"></span><span class="flag_txt">MHL</span></li>
+			<li class="flag_item"><span class="country MKD"></span><span class="flag_txt">MKD</span></li>
+			<li class="flag_item"><span class="country MLI"></span><span class="flag_txt">MLI</span></li>
+			<li class="flag_item"><span class="country MLT"></span><span class="flag_txt">MLT</span></li>
+			<li class="flag_item"><span class="country MNE"></span><span class="flag_txt">MNE</span></li>
+			<li class="flag_item"><span class="country MON"></span><span class="flag_txt">MON</span></li>
+			<li class="flag_item"><span class="country MOZ"></span><span class="flag_txt">MOZ</span></li>
+			<li class="flag_item"><span class="country MRI"></span><span class="flag_txt">MRI</span></li>
+			<li class="flag_item"><span class="country MSR"></span><span class="flag_txt">MSR</span></li>
+			<li class="flag_item"><span class="country MTN"></span><span class="flag_txt">MTN</span></li>
+			<li class="flag_item"><span class="country MTQ"></span><span class="flag_txt">MTQ</span></li>
+			<li class="flag_item"><span class="country MYA"></span><span class="flag_txt">MYA</span></li>
+			<li class="flag_item"><span class="country NAM"></span><span class="flag_txt">NAM</span></li>
+			<li class="flag_item"><span class="country NCA"></span><span class="flag_txt">NCA</span></li>
+			<li class="flag_item"><span class="country NCL"></span><span class="flag_txt">NCL</span></li>
+			<li class="flag_item"><span class="country NED"></span><span class="flag_txt">NED</span></li>
+			<li class="flag_item"><span class="country NEP"></span><span class="flag_txt">NEP</span></li>
+			<li class="flag_item"><span class="country NGR"></span><span class="flag_txt">NGR</span></li>
+			<li class="flag_item"><span class="country NIG"></span><span class="flag_txt">NIG</span></li>
+			<li class="flag_item"><span class="country NIR"></span><span class="flag_txt">NIR</span></li>
+			<li class="flag_item"><span class="country NOR"></span><span class="flag_txt">NOR</span></li>
+			<li class="flag_item"><span class="country NRU"></span><span class="flag_txt">NRU</span></li>
+			<li class="flag_item"><span class="country NZL"></span><span class="flag_txt">NZL</span></li>
+			<li class="flag_item"><span class="country OMA"></span><span class="flag_txt">OMA</span></li>
+			<li class="flag_item"><span class="country PAK"></span><span class="flag_txt">PAK</span></li>
+			<li class="flag_item"><span class="country PAN"></span><span class="flag_txt">PAN</span></li>
+			<li class="flag_item"><span class="country PAR"></span><span class="flag_txt">PAR</span></li>
+			<li class="flag_item"><span class="country PER"></span><span class="flag_txt">PER</span></li>
+			<li class="flag_item"><span class="country PHI"></span><span class="flag_txt">PHI</span></li>
+			<li class="flag_item"><span class="country PLE"></span><span class="flag_txt">PLE</span></li>
+			<li class="flag_item"><span class="country PLW"></span><span class="flag_txt">PLW</span></li>
+			<li class="flag_item"><span class="country PNG"></span><span class="flag_txt">PNG</span></li>
+			<li class="flag_item"><span class="country POL"></span><span class="flag_txt">POL</span></li>
+			<li class="flag_item"><span class="country POR"></span><span class="flag_txt">POR</span></li>
+			<li class="flag_item"><span class="country PRK"></span><span class="flag_txt">PRK</span></li>
+			<li class="flag_item"><span class="country PUE"></span><span class="flag_txt">PUE</span></li>
+			<li class="flag_item"><span class="country PUR"></span><span class="flag_txt">PUR</span></li>
+			<li class="flag_item"><span class="country PYF"></span><span class="flag_txt">PYF</span></li>
+			<li class="flag_item"><span class="country QAT"></span><span class="flag_txt">QAT</span></li>
+			<li class="flag_item"><span class="country RNC"></span><span class="flag_txt">RNC</span></li>
+			<li class="flag_item"><span class="country ROC"></span><span class="flag_txt">ROC</span></li>
+			<li class="flag_item"><span class="country ROU"></span><span class="flag_txt">ROU</span></li>
+			<li class="flag_item"><span class="country RSA"></span><span class="flag_txt">RSA</span></li>
+			<li class="flag_item"><span class="country RUS"></span><span class="flag_txt">RUS</span></li>
+			<li class="flag_item"><span class="country RWA"></span><span class="flag_txt">RWA</span></li>
+			<li class="flag_item"><span class="country SAM"></span><span class="flag_txt">SAM</span></li>
+			<li class="flag_item"><span class="country SCO"></span><span class="flag_txt">SCO</span></li>
+			<li class="flag_item"><span class="country SEN"></span><span class="flag_txt">SEN</span></li>
+			<li class="flag_item"><span class="country SEY"></span><span class="flag_txt">SEY</span></li>
+			<li class="flag_item"><span class="country SIN"></span><span class="flag_txt">SIN</span></li>
+			<li class="flag_item"><span class="country SKN"></span><span class="flag_txt">SKN</span></li>
+			<li class="flag_item"><span class="country SLE"></span><span class="flag_txt">SLE</span></li>
+			<li class="flag_item"><span class="country SLO"></span><span class="flag_txt">SLO</span></li>
+			<li class="flag_item"><span class="country SMR"></span><span class="flag_txt">SMR</span></li>
+			<li class="flag_item"><span class="country SOL"></span><span class="flag_txt">SOL</span></li>
+			<li class="flag_item"><span class="country SOM"></span><span class="flag_txt">SOM</span></li>
+			<li class="flag_item"><span class="country SOS"></span><span class="flag_txt">SOS</span></li>
+			<li class="flag_item"><span class="country SRB"></span><span class="flag_txt">SRB</span></li>
+			<li class="flag_item"><span class="country SRI"></span><span class="flag_txt">SRI</span></li>
+			<li class="flag_item"><span class="country STP"></span><span class="flag_txt">STP</span></li>
+			<li class="flag_item"><span class="country SUD"></span><span class="flag_txt">SUD</span></li>
+			<li class="flag_item"><span class="country SUI"></span><span class="flag_txt">SUI</span></li>
+			<li class="flag_item"><span class="country SUR"></span><span class="flag_txt">SUR</span></li>
+			<li class="flag_item"><span class="country SVK"></span><span class="flag_txt">SVK</span></li>
+			<li class="flag_item"><span class="country SWE"></span><span class="flag_txt">SWE</span></li>
+			<li class="flag_item"><span class="country SWZ"></span><span class="flag_txt">SWZ</span></li>
+			<li class="flag_item"><span class="country SYR"></span><span class="flag_txt">SYR</span></li>
+			<li class="flag_item"><span class="country TAN"></span><span class="flag_txt">TAN</span></li>
+			<li class="flag_item"><span class="country TCA"></span><span class="flag_txt">TCA</span></li>
+			<li class="flag_item"><span class="country TGA"></span><span class="flag_txt">TGA</span></li>
+			<li class="flag_item"><span class="country THA"></span><span class="flag_txt">THA</span></li>
+			<li class="flag_item"><span class="country TJK"></span><span class="flag_txt">TJK</span></li>
+			<li class="flag_item"><span class="country TKM"></span><span class="flag_txt">TKM</span></li>
+			<li class="flag_item"><span class="country TLS"></span><span class="flag_txt">TLS</span></li>
+			<li class="flag_item"><span class="country TOG"></span><span class="flag_txt">TOG</span></li>
+			<li class="flag_item"><span class="country TPE"></span><span class="flag_txt">TPE</span></li>
+			<li class="flag_item"><span class="country TTO"></span><span class="flag_txt">TTO</span></li>
+			<li class="flag_item"><span class="country TUN"></span><span class="flag_txt">TUN</span></li>
+			<li class="flag_item"><span class="country TUR"></span><span class="flag_txt">TUR</span></li>
+			<li class="flag_item"><span class="country TUV"></span><span class="flag_txt">TUV</span></li>
+			<li class="flag_item"><span class="country TWN"></span><span class="flag_txt">TWN</span></li>
+			<li class="flag_item"><span class="country UAE"></span><span class="flag_txt">UAE</span></li>
+			<li class="flag_item"><span class="country UGA"></span><span class="flag_txt">UGA</span></li>
+			<li class="flag_item"><span class="country UKR"></span><span class="flag_txt">UKR</span></li>
+			<li class="flag_item"><span class="country URU"></span><span class="flag_txt">URU</span></li>
+			<li class="flag_item"><span class="country USA"></span><span class="flag_txt">USA</span></li>
+			<li class="flag_item"><span class="country UZB"></span><span class="flag_txt">UZB</span></li>
+			<li class="flag_item"><span class="country VAN"></span><span class="flag_txt">VAN</span></li>
+			<li class="flag_item"><span class="country VAT"></span><span class="flag_txt">VAT</span></li>
+			<li class="flag_item"><span class="country VEN"></span><span class="flag_txt">VEN</span></li>
+			<li class="flag_item"><span class="country VIE"></span><span class="flag_txt">VIE</span></li>
+			<li class="flag_item"><span class="country VIN"></span><span class="flag_txt">VIN</span></li>
+			<li class="flag_item"><span class="country WAL"></span><span class="flag_txt">WAL</span></li>
+			<li class="flag_item"><span class="country XKV"></span><span class="flag_txt">XKV</span></li>
+			<li class="flag_item"><span class="country YEM"></span><span class="flag_txt">YEM</span></li>
+			<li class="flag_item"><span class="country ZAM"></span><span class="flag_txt">ZAM</span></li>
+			<li class="flag_item"><span class="country ZIM"></span><span class="flag_txt">ZIM</span></li>
+			</ul>
+
+			<h2 class="guide_title">선수 이미지</h2>
+			<h3 class="guide_title">이미지 있는 경우</h3>
+			<span class="player_photo_area">
+				<img src="img/@tmp_player1.jpg" alt="선수 이미지">
+			</span>
+			<h3 class="guide_title">이미지 없는 경우 적용 예 1</h3>
+			<ul class="txt_guide">
+			<li>이미지 태그 제거</li>
+			</ul>
+			<span class="player_photo_area">
+			</span>
+			<h3 class="guide_title">이미지 없는 경우 적용 예 2</h3>
+			<ul class="txt_guide">
+			<li>선수 없음 이미지 삽입</li>
+			</ul>
+			<span class="player_photo_area">
+				<img src="img/@tmp_player_empty.jpg" alt="선수 이미지 없음">
+			</span>
+			<h2 class="guide_title">조 별 상세 레이어</h2>
+			<h3 class="guide_title">조 1개</h3>
+			<ul class="txt_guide">
+			<li>조가 1개만 있는 경우 a태그 대신 span 태그 적용<br>&nbsp;&nbsp;예) &lt;span class="group_name"&gt;19조&lt;/span&gt;</li>
+			<li>로딩중 레이어 노출 필요시 layer_loading에 is_show 클래스 추가</li>
+			</ul>
+			<!-- 조 별 상세 레이어 -->
+			<div class="layer_marker_info">
+				<div class="title_wrap">
+					<span class="ico_area">
+						<span class="ico_maker ico_fairway"></span>
+					</span>
+					<div class="txt_area">
+						<h3 class="h_layer">11홀 페어웨이</h3>
+						<span class="desc_txt">Par 4, 431Yds</span>
+					</div>
+				</div>
+				<div class="layer_loading">
+					<span class="ico_area">
+						<img src="img/ico_spin.gif" alt="로딩 중">
+					</span>
+				</div>
+				<div class="nav_controll_wrap">
+					<div class="scroll_wrap">
+						<ul class="lst_group">
+						<li class="group">
+							<span class="group_name">19조</span>
+						</li>
+						</ul>
+						<button class="btn_prev">이전</button>
+						<button class="btn_next">다음</button>
+					</div>
+				</div>
+				<div class="layer_content_wrap">
+					<table class="tbl_player">
+					<caption><span class="blind">조 별 스코어 정보</span></caption>
+					<thead>
+					<tr>
+					<th scope="col">선수</th>
+					<th scope="col">Today</th>
+					<th scope="col">Total</th>
+					<th scope="col">순위</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+					<th scope="row" class="name">
+						<a href="#" class="link_player_detail">
+							<span class="player_photo_area">
+								<img src="img/@tmp_player1.jpg" alt="선수 이미지">
+							</span>
+							<em class="name_txt">김병준</em>
+						</a>
+					</th>
+					<td class="score_today">E</td>
+					<td>-9</td>
+					<td>12</td>
+					</tr>
+					<tr>
+					<th scope="row" class="name">
+						<a href="#" class="link_player_detail">
+							<span class="player_photo_area">
+							</span>
+							<em class="name_txt">이승택</em>
+						</a>
+					</th>
+					<td class="score_today is_plus">+1</td>
+					<td>-9</td>
+					<td>12</td>
+					</tr>
+					<tr>
+					<th scope="row" class="name">
+						<a href="#" class="link_player_detail">
+							<span class="player_photo_area">
+								<img src="img/@tmp_player3.jpg" alt="선수 이미지">
+							</span>
+							<em class="name_txt">김태우</em>
+						</a>
+					</th>
+					<td class="score_today is_minus">-1</td>
+					<td>-9</td>
+					<td>12</td>
+					</tr>
+					</tbody>
+					</table>
+				</div>
+				<div class="btn_wrap">
+					<a href="#" class="btn_group_detail">
+						<span class="btn_txt">조 정보 상세보기</span>
+					</a>
+				</div>
+			</div>
+			<div class="layer_marker_info">
+				<div class="title_wrap">
+					<span class="ico_area">
+						<span class="ico_maker ico_fairway"></span>
+					</span>
+					<div class="txt_area">
+						<h3 class="h_layer">11홀 페어웨이</h3>
+						<span class="desc_txt">Par 4, 431Yds</span>
+					</div>
+				</div>
+				<div class="layer_loading is_show"><!-- [D] 노출 필요시 layer_loading에 is_show 클래스 추가 -->
+					<span class="ico_area">
+						<img src="img/ico_spin.gif" alt="로딩 중">
+					</span>
+				</div>
+				<div class="nav_controll_wrap">
+					<div class="scroll_wrap">
+						<ul class="lst_group">
+						<li class="group">
+							<span class="group_name">19조</span>
+						</li>
+						</ul>
+						<button class="btn_prev">이전</button>
+						<button class="btn_next">다음</button>
+					</div>
+				</div>
+				<div class="layer_content_wrap">
+					<table class="tbl_player">
+					<caption><span class="blind">조 별 스코어 정보</span></caption>
+					<thead>
+					<tr>
+					<th scope="col">선수</th>
+					<th scope="col">Today</th>
+					<th scope="col">Total</th>
+					<th scope="col">순위</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+					<th scope="row" class="name">
+						<a href="#" class="link_player_detail">
+							<span class="player_photo_area">
+								<img src="img/@tmp_player1.jpg" alt="선수 이미지">
+							</span>
+							<em class="name_txt">김병준</em>
+						</a>
+					</th>
+					<td class="score_today">E</td>
+					<td>-9</td>
+					<td>12</td>
+					</tr>
+					<tr>
+					<th scope="row" class="name">
+						<a href="#" class="link_player_detail">
+							<span class="player_photo_area">
+							</span>
+							<em class="name_txt">이승택</em>
+						</a>
+					</th>
+					<td class="score_today is_plus">+1</td>
+					<td>-9</td>
+					<td>12</td>
+					</tr>
+					<tr>
+					<th scope="row" class="name">
+						<a href="#" class="link_player_detail">
+							<span class="player_photo_area">
+								<img src="img/@tmp_player3.jpg" alt="선수 이미지">
+							</span>
+							<em class="name_txt">김태우</em>
+						</a>
+					</th>
+					<td class="score_today is_minus">-1</td>
+					<td>-9</td>
+					<td>12</td>
+					</tr>
+					</tbody>
+					</table>
+				</div>
+				<div class="btn_wrap">
+					<a href="#" class="btn_group_detail">
+						<span class="btn_txt">조 정보 상세보기</span>
+					</a>
+				</div>
+			</div>
+			<!-- //조 별 상세 레이어 -->
+			<h3 class="guide_title">조 2~3개</h3>
+			<ul class="txt_guide">
+			<li>선택된 조의 group_name에 is_selected 클래스 추가</li>
+			</ul>
+			<!-- 조 별 상세 레이어 -->
+			<div class="layer_marker_info">
+				<div class="title_wrap">
+					<span class="ico_area">
+						<span class="ico_maker ico_fairway"></span>
+					</span>
+					<div class="txt_area">
+						<h3 class="h_layer">11홀 페어웨이</h3>
+						<span class="desc_txt">Par 4, 431Yds</span>
+					</div>
+				</div>
+				<div class="layer_loading">
+					<span class="ico_area">
+						<img src="img/ico_spin.gif" alt="로딩 중">
+					</span>
+				</div>
+				<div class="nav_controll_wrap">
+					<div class="scroll_wrap">
+						<ul class="lst_group">
+						<li class="group">
+							<a href="#" class="group_name is_selected">19조</a>
+						</li>
+						<li class="group">
+							<a href="#" class="group_name">20조</a>
+						</li>
+						<li class="group">
+							<a href="#" class="group_name">21조</a>
+						</li>
+						</ul>
+					</div>
+					<button class="btn_prev is_disabled">이전</button>
+					<button class="btn_next is_disabled">다음</button>
+				</div>
+				<div class="layer_content_wrap">
+					<table class="tbl_player">
+					<caption><span class="blind">조 별 스코어 정보</span></caption>
+					<thead>
+					<tr>
+					<th scope="col">선수</th>
+					<th scope="col">Today</th>
+					<th scope="col">Total</th>
+					<th scope="col">순위</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+					<th scope="row" class="name">
+						<a href="#" class="link_player_detail">
+							<span class="player_photo_area">
+								<img src="img/@tmp_player1.jpg" alt="선수 이미지">
+							</span>
+							<em class="name_txt">김병준</em>
+						</a>
+					</th>
+					<td class="score_today">E</td>
+					<td>-9</td>
+					<td>12</td>
+					</tr>
+					<tr>
+					<th scope="row" class="name">
+						<a href="#" class="link_player_detail">
+							<span class="player_photo_area">
+								<img src="img/@tmp_player2.jpg" alt="선수 이미지">
+							</span>
+							<em class="name_txt">이승택</em>
+						</a>
+					</th>
+					<td class="score_today is_plus">+1</td>
+					<td>-9</td>
+					<td>12</td>
+					</tr>
+					<tr>
+					<th scope="row" class="name">
+						<a href="#" class="link_player_detail">
+							<span class="player_photo_area">
+								<img src="img/@tmp_player3.jpg" alt="선수 이미지">
+							</span>
+							<em class="name_txt">김태우</em>
+						</a>
+					</th>
+					<td class="score_today is_minus">-1</td>
+					<td>-9</td>
+					<td>12</td>
+					</tr>
+					</tbody>
+					</table>
+				</div>
+				<div class="btn_wrap">
+					<a href="#" class="btn_group_detail">
+						<span class="btn_txt">조 정보 상세보기</span>
+					</a>
+				</div>
+			</div>
+			<!-- //조 별 상세 레이어 -->
+			<h3 class="guide_title">조 4개 이상</h3>
+			<ul class="txt_guide">
+			<li>4조 이상 노출되는 경우 btn_next, btn_prev에 is_show 클래스 추가</li>
+			<li>이전/다음 조가 더 이상 없는 경우 btn_next/btn_prev에 is_disabled 클래스 추가</li>
+			<li>이전/다음 버튼 클릭시 lst_group의 margin-left 값 80px씩 증감</li>
+			</ul>
+			<!-- 조 별 상세 레이어 -->
+			<div class="layer_marker_info">
+				<div class="title_wrap">
+					<span class="ico_area">
+						<span class="ico_maker ico_fairway"></span>
+					</span>
+					<div class="txt_area">
+						<h3 class="h_layer">11홀 페어웨이</h3>
+						<span class="desc_txt">Par 4, 431Yds</span>
+					</div>
+				</div>
+				<div class="layer_loading">
+					<span class="ico_area">
+						<img src="img/ico_spin.gif" alt="로딩 중">
+					</span>
+				</div>
+				<div class="nav_controll_wrap">
+					<div class="scroll_wrap">
+						<ul class="lst_group">
+						<li class="group">
+							<a href="#" class="group_name">19조</a>
+						</li>
+						<li class="group">
+							<a href="#" class="group_name is_selected">20조</a>
+						</li>
+						<li class="group">
+							<a href="#" class="group_name">21조</a>
+						</li>
+						<li class="group">
+							<a href="#" class="group_name">22조</a>
+						</li>
+						<li class="group">
+							<a href="#" class="group_name">23조</a>
+						</li>
+						<li class="group">
+							<a href="#" class="group_name">24조</a>
+						</li>
+						<li class="group">
+							<a href="#" class="group_name">25조</a>
+						</li>
+						</ul>
+					</div>
+					<button class="btn_prev is_show is_disabled">이전</button>
+					<button class="btn_next is_show">다음</button>
+				</div>
+				<div class="layer_content_wrap">
+					<table class="tbl_player">
+					<caption><span class="blind">조 별 스코어 정보</span></caption>
+					<thead>
+					<tr>
+					<th scope="col">선수</th>
+					<th scope="col">Today</th>
+					<th scope="col">Total</th>
+					<th scope="col">순위</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+					<th scope="row" class="name">
+						<a href="#" class="link_player_detail">
+							<span class="player_photo_area">
+								<img src="img/@tmp_player1.jpg" alt="선수 이미지">
+							</span>
+							<em class="name_txt">김병준</em>
+						</a>
+					</th>
+					<td class="score_today">E</td>
+					<td>-9</td>
+					<td>12</td>
+					</tr>
+					<tr>
+					<th scope="row" class="name">
+						<a href="#" class="link_player_detail">
+							<span class="player_photo_area">
+								<img src="img/@tmp_player2.jpg" alt="선수 이미지">
+							</span>
+							<em class="name_txt">이승택</em>
+						</a>
+					</th>
+					<td class="score_today is_plus">+1</td>
+					<td>-9</td>
+					<td>12</td>
+					</tr>
+					<tr>
+					<th scope="row" class="name">
+						<a href="#" class="link_player_detail">
+							<span class="player_photo_area">
+								<img src="img/@tmp_player3.jpg" alt="선수 이미지">
+							</span>
+							<em class="name_txt">김태우</em>
+						</a>
+					</th>
+					<td class="score_today is_minus">-1</td>
+					<td>-9</td>
+					<td>12</td>
+					</tr>
+					</tbody>
+					</table>
+				</div>
+				<div class="btn_wrap">
+					<a href="#" class="btn_group_detail">
+						<span class="btn_txt">조 정보 상세보기</span>
+					</a>
+				</div>
+			</div>
+			<!-- //조 별 상세 레이어 -->
+
+
+
+			<h2 class="guide_title">검색&amp;셀렉트 박스</h2>
+			<h3 class="guide_title">기본</h3>
+			<div class="search_bx">
+				<form>
+				<div class="inp_area">
+					<input class="inp inp_search" id="inp_player_search" placeholder="선수명 검색">
+					<button class="btn_delete" type="reset">검색어 삭제</button>
+				</div>
+				<div class="scroll_area">
+					<ul class="search_data_list">
+					<li class="data">
+						<span class="player_photo_area">
+							<img src="img/@tmp_player1.jpg" alt="선수 이미지">
+						</span>
+						<span class="search_txt">이경준 (Seungtaek LEE)</span>
+					</li>
+					<li class="data">
+						<span class="player_photo_area">
+							<img src="img/@tmp_player2.jpg" alt="선수 이미지">
+						</span>
+						<span class="search_txt">이승연 (Seungyon LEE)</span>
+					</li>
+					<li class="data">
+						<span class="player_photo_area">
+						</span>
+						<span class="search_txt">이승호 (Seungho LEE)</span>
+					</li>
+					</ul>
+				</div>
+				</form>
+			</div>
+
+			<h3 class="guide_title">활성</h3>
+			<ul class="txt_guide">
+			<li>선택시 search_bx에 has_value 클래스 추가</li>
+			</ul>
+			<div class="search_bx has_value">
+				<form>
+				<div class="inp_area">
+					<input class="inp inp_search" id="inp_player_search" placeholder="선수명 검색" value="김골프">
+					<button class="btn_delete" type="reset">검색어 삭제</button>
+				</div>
+				<div class="scroll_area">
+					<ul class="search_data_list">
+					<li class="data">
+						<a href="#" class="player">
+							<span class="player_photo_area">
+								<img src="img/@tmp_player1.jpg" alt="선수 이미지">
+							</span>
+							<span class="search_txt">이경준 (Seungtaek LEE)</span>
+						</a>
+					</li>
+					<li class="data">
+						<a href="#" class="player">
+							<span class="player_photo_area">
+								<img src="img/@tmp_player2.jpg" alt="선수 이미지">
+							</span>
+							<span class="search_txt">이승연 (Seungyon LEE)</span>
+						</a>
+					</li>
+					<li class="data">
+						<a href="#" class="player">
+							<span class="player_photo_area">
+								<img src="img/@tmp_player3.jpg" alt="선수 이미지">
+							</span>
+							<span class="search_txt">이승호 (Seungho LEE)</span>
+						</a>
+					</li>
+					</ul>
+				</div>
+				</form>
+			</div>
+
+			<h3 class="guide_title">검색 결과 선택</h3>
+			<ul class="txt_guide">
+			<li>검색결과 선택시 인풋 대체 마크업 적용</li>
+			</ul>
+			<div class="search_bx has_value">
+				<form>
+				<div class="inp_area">
+					<!-- 검색결과 선택시 인풋 대체 마크업 -->
+					<span class="search_keywords_area">
+						<span class="keywords">이승택 (Seungtaek LEE)</span>
+						<button class="btn_delete" type="button">키워드 삭제</button>
+					</span>
+					<!-- //검색결과 선택시 인풋 대체 마크업 -->
+					<button class="btn_delete" type="reset">검색어 삭제</button>
+				</div>
+				<div class="scroll_area">
+					<ul class="search_data_list">
+					<li class="data">
+						<a href="#" class="player">
+							<span class="player_photo_area">
+								<img src="img/@tmp_player1.jpg" alt="선수 이미지">
+							</span>
+							<span class="search_txt">이경준 (Seungtaek LEE)</span>
+						</a>
+					</li>
+					<li class="data">
+						<a href="#" class="player">
+							<span class="player_photo_area">
+								<img src="img/@tmp_player2.jpg" alt="선수 이미지">
+							</span>
+							<span class="search_txt">이승연 (Seungyon LEE)</span>
+						</a>
+					</li>
+					<li class="data">
+						<a href="#" class="player">
+							<span class="player_photo_area">
+							</span>
+							<span class="search_txt">이승호 (Seungho LEE)</span>
+						</a>
+					</li>
+					</ul>
+				</div>
+				</form>
+			</div>
+
+			<h3 class="guide_title">검색결과 없음</h3>
+			<ul class="txt_guide">
+			<li>검색 결과 없는 경우 search_data_list에 is_empty 클래스 추가 및 li.data 태그 안에 안내 텍스트 적용</li>
+			</ul>
+			<div class="search_bx has_value">
+				<form>
+				<div class="inp_area">
+					<input class="inp inp_search" id="inp_player_search" placeholder="선수명 검색" value="김골프">
+					<button class="btn_delete" type="reset">검색어 삭제</button>
+				</div>
+				<div class="scroll_area is_empty">
+					<ul class="search_data_list">
+					<li class="data">본 대회 참가 선수 중,<br>해당 이름을 찾을 수 없습니다.</li>
+					</ul>
+				</div>
+				</form>
+			</div>
+
+			<h2 class="guide_title">선수별 상세 맵</h2>
+			<h3 class="guide_title">가이드</h3>
+			<ul class="txt_guide">
+			<li>이미지 상단 왼쪽(0,0)을 기준으로 포인트까지의 가로, 세로 크기를 px 값으로 적용</li>
+			</ul>
+			<img src="img/course/@tmp_map_guide.jpg" alt="">
+			<h3 class="guide_title">마크업 샘플</h3>
+			<ul class="txt_guide">
+			<li>100/360*지점 좌표 x 값을 layer_player_info와 btn_marker의 left에, 100/550*지점 좌표 y 값을 top에 적용</li>
+			<li>is_show 클래스로 노출 제어(마커 클릭시 layer_player_info에 is_show 클래스 추가, layer_player_info에의 btn_close 클릭시 is_show 클래스 제거)</li>
+			<li>선수사진 프레임 테두리 색 제어 : 레이어에 해당하는 선수의 라인 클래스(ex:player3)를 player_photo_area에도 적용</li>
+			</ul>
+			<div class="player_map_wrap">
+				<div class="map_area">
+					<!-- 지도 위  라인을 클릭했을때 노출되는 샷 정보 레이어 -->
+					<div class="layer_player_info is_show" style="left:48.61%;top:29.09%"><!-- [D]100/360*지점 좌표 x 값을 left에, 100/550*지점 좌표 y 값을 top에 적용, is_show 클래스로 노출 제어 -->
+						<div class="cnt_wrap">
+							<span class="player_photo_area player3">
+								<img src="img/@tmp_player1.jpg" alt="선수 이미지">
+							</span><!-- [D]레이어에 해당하는 선수의 라인 클래스를 player_photo_area에도 적용 -->
+							<span class="txt_area">
+								<span class="name">김태우</span>
+								<span class="desc_txt">Shot 1 : 251.5Yds <br class="is_pc_show">(남은 거리 166Yds)</span>
+							</span>
+						</div>
+						<button class="btn_close">닫기</button><!-- [D]클릭시 layer_player_info에서 is_show 클래스 제거 -->
+					</div>
+					<!-- //지도 위  라인을 클릭했을때 노출되는 샷 정보 레이어 -->
+					<a href="#" class="btn_marker" style="left:61.94%;top:8%">선수1 샷1 정보</a><!-- [D] layer_player_info 위치 계산법과 동일. ex)left=100/360*223 top=100/550*44 -->
+					<a href="#" class="btn_marker" style="left:50.55%;top:32.36%">선수1 샷2 정보</a>
+					<a href="#" class="btn_marker" style="left:75%;top:91.82%">선수1 샷3 정보</a>
+					<a href="#" class="btn_marker" style="left:62.5%;top:8.36%">선수2 샷1 정보</a>
+					<a href="#" class="btn_marker" style="left:52.22%;top:30.91%">선수2 샷2 정보</a>
+					<a href="#" class="btn_marker" style="left:75.56%;top:92.36%">선수2 샷3 정보</a>
+					<a href="#" class="btn_marker" style="left:62.5%;top:5.82%">선수3 샷1 정보</a>
+					<a href="#" class="btn_marker" style="left:48.61%;top:29.09%">선수3 샷2 정보</a>
+					<a href="#" class="btn_marker" style="left:80.56%;top:89.09%">선수3 샷3 정보</a>
+					<img src="img/course/@tmp_map_hole11.jpg" alt="">
+					<svg class="map_point" viewBox="0 0 360 550" xmlns="http://www.w3.org/2000/svg">
+					<!-- 선수1 -->
+					<g class="player1">
+						<path d="M223 44 L182 178"></path><!-- 1번째 지점부터 2번째 지점까지 연결 선 -->
+						<path d="M182 178 L270 505"></path><!-- 2번째 지점부터 3번째 지점까지 연결 선 -->
+						<circle cx="223" cy="44" r="5"></circle><!-- 1번째 지점 포인트 -->
+						<circle cx="182" cy="178" r="5"></circle><!-- 2번째 지점 포인트 -->
+						<circle cx="270" cy="505" r="5"></circle><!-- 3번째 지점 포인트 -->
+					</g>
+					<!-- 선수2 -->
+					<g class="player2">
+						<path d="M225 46 L188 170"></path>
+						<path d="M188 170 L272 508"></path>
+						<circle cx="225" cy="46" r="5"></circle>
+						<circle cx="188" cy="170" r="5"></circle>
+						<circle cx="272" cy="508" r="5"></circle>
+					</g>
+					<!-- 선수3 -->
+					<g class="player3">
+						<path d="M225 32 L175 160"></path>
+						<path d="M175 160 L290 490"></path>
+						<circle cx="225" cy="32" r="5"></circle>
+						<circle cx="175" cy="160" r="5"></circle>
+						<circle cx="290" cy="490" r="5"></circle>
+					</g>
+					</svg>
+				</div>
+			</div>
+
+			<h2 class="guide_title">버튼 컨트롤 탭 케이스</h2>
+			<h3 class="guide_title">레이어 조 리스트</h3>
+			<ul class="txt_guide">
+			<li>4조 이상 노출되는 경우 btn_next, btn_prev에 is_show 클래스 추가</li>
+			<li>이전/다음 조가 더 이상 없는 경우 btn_next/btn_prev에 is_disabled 클래스 추가</li>
+			<li>이전/다음 버튼 클릭시 lst_group의 margin-left 값 80px씩 증감</li>
+			</ul>
+			<div class="layer_marker_info">
+				<div class="nav_controll_wrap">
+					<div class="scroll_wrap">
+						<ul class="lst_group">
+						<li class="group">
+							<a href="#" class="group_name">19조</a>
+						</li>
+						<li class="group">
+							<a href="#" class="group_name is_selected">20조</a>
+						</li>
+						<li class="group">
+							<a href="#" class="group_name">21조</a>
+						</li>
+						<li class="group">
+							<a href="#" class="group_name">22조</a>
+						</li>
+						<li class="group">
+							<a href="#" class="group_name">23조</a>
+						</li>
+						<li class="group">
+							<a href="#" class="group_name">24조</a>
+						</li>
+						<li class="group">
+							<a href="#" class="group_name">25조</a>
+						</li>
+						</ul>
+					</div>
+					<button class="btn_prev is_show is_disabled">이전</button>
+					<button class="btn_next is_show">다음</button>
+				</div>
+			</div>
+			<h3 class="guide_title">홀 리스트</h3>
+			<ul class="txt_guide">
+			<li>선택된 tab_item에 is_selected 클래스 추가(모바일에서는 좌우 버튼 노출, PC에서는 비활성화)</li>
+			<li>비활성인 tab_item에 is_disabled 클래스 추가</li>
+			</ul>
+			<div class="nav_controll_wrap lst_holl">
+				<div class="scroll_wrap">
+					<ul class="tab">
+					<li class="tab_item"><a href="#" class="btn_tab btn_holl1">1</a></li>
+					<li class="tab_item"><a href="#" class="btn_tab btn_holl2">2</a></li>
+					<li class="tab_item"><a href="#" class="btn_tab btn_holl3">3</a></li>
+					<li class="tab_item"><a href="#" class="btn_tab btn_holl4">4</a></li>
+					<li class="tab_item"><a href="#" class="btn_tab btn_holl5">5</a></li>
+					<li class="tab_item"><a href="#" class="btn_tab btn_holl6">6</a></li>
+					<li class="tab_item"><a href="#" class="btn_tab btn_holl7">7</a></li>
+					<li class="tab_item"><a href="#" class="btn_tab btn_holl8">8</a></li>
+					<li class="tab_item"><a href="#" class="btn_tab btn_holl9">9</a></li>
+					<li class="tab_item"><a href="#" class="btn_tab btn_holl10">10</a></li>
+					<li class="tab_item is_selected"><a href="#" class="btn_tab btn_holl11 ">11<span class="blind">선택 됨</span></a></li><!-- [D]선택된 tab_item에 is_selected 클래스 추가 -->
+					<li class="tab_item"><a href="#" class="btn_tab btn_holl12">12</a></li>
+					<li class="tab_item"><a href="#" class="btn_tab btn_holl13">13</a></li>
+					<li class="tab_item"><a href="#" class="btn_tab btn_holl14">14</a></li>
+					<li class="tab_item"><a href="#" class="btn_tab btn_holl15">15</a></li>
+					<li class="tab_item"><a href="#" class="btn_tab btn_holl16">16</a></li>
+					<li class="tab_item is_disabled"><a href="#" class="btn_tab btn_holl17">17</a></li><!-- [D]비활성인 tab_item에 is_disabled 클래스 추가 -->
+					<li class="tab_item is_disabled"><a href="#" class="btn_tab btn_holl18">18</a></li>
+					</ul>
+				</div>
+				<button class="btn_prev is_show is_disabled">이전</button>
+				<button class="btn_next is_show">다음</button>
+			</div>
+			<h2 class="guide_title">탭 케이스</h2>
+			<h3 class="guide_title">선수 기록 탭</h3>
+			<ul class="txt_guide">
+			<li>PC/모바일 너비 균등분할</li>
+			<li>선택된 tab_item에 is_selected 클래스 추가</li>
+			</ul>
+			<ul class="tab lst_player_record">
+			<li class="tab_item"><a href="#tab_player_history" class="btn_tab btn_player_record1">프로필<span class="blind">선택 됨</span></a></li>
+			<li class="tab_item"><a href="#tab_player_score" class="btn_tab btn_player_record2">스코어</a></li>
+			<li class="tab_item"><a href="#tab_player_stat" class="btn_tab btn_player_record3">스탯</a></li>
+			<li class="tab_item is_selected"><a href="#tab_player_tracker" class="btn_tab btn_player_record4">샷 트랙커</a></li>
+			</ul>
+
+			<h3 class="guide_title">라운드 탭(조별 상세)</h3>
+			<ul class="txt_guide">
+			<li>PC에서는 고정 px, 모바일에서는 균등분할</li>
+			<li>선택된 tab_item에 is_selected 클래스 추가</li>
+			</ul>
+			<ul class="tab lst_round">
+			<li class="tab_item"><a href="#" class="btn_tab btn_round1">Round 1</a></li>
+			<li class="tab_item"><a href="#" class="btn_tab btn_round2">Round 2</a></li>
+			<li class="tab_item"><a href="#" class="btn_tab btn_round3">Round 3</a></li>
+			<li class="tab_item is_selected"><a href="#" class="btn_tab btn_round4">Round 4<span class="blind">선택 됨</span></a></li>
+			</ul>
+			<h3 class="guide_title">라운드 탭(선수위치 상세)</h3>
+			<ul class="txt_guide">
+			<li>PC/모바일 너비 균등분할</li>
+			<li>선택된 tab_item에 is_selected 클래스 추가</li>
+			</ul>
+			<div class="tab_holl_content">
+				<ul class="tab lst_round">
+				<li class="tab_item"><a href="#" class="btn_tab btn_round1">Round 1</a></li>
+				<li class="tab_item"><a href="#" class="btn_tab btn_round2">Round 2</a></li>
+				<li class="tab_item"><a href="#" class="btn_tab btn_round3">Round 3</a></li>
+				<li class="tab_item is_selected"><a href="#" class="btn_tab btn_round4">Round 4<span class="blind">선택 됨</span></a></li>
+				</ul>
+			</div>
+
+			<h3 class="guide_title">선수 탭</h3>
+			<ul class="txt_guide">
+			<li>선택된 tab_item에 is_selected 클래스 추가</li>
+			</ul>
+			<ul class="tab lst_player">
+			<li class="tab_item">
+				<a href="#" class="btn_tab btn_player1">
+					<span class="player_photo_area">
+						<img src="img/@tmp_player1.jpg" alt="선수 이미지">
+					</span>
+					<span class="name">김병준</span>
+				</a>
+			</li>
+			<li class="tab_item">
+				<a href="#" class="btn_tab btn_player2">
+					<span class="player_photo_area">
+						<img src="img/@tmp_player2.jpg" alt="선수 이미지">
+					</span>
+					<span class="name">이승택</span>
+				</a>
+			</li>
+			<li class="tab_item">
+				<a href="#" class="btn_tab btn_player3">
+					<span class="player_photo_area">
+						<img src="img/@tmp_player3.jpg" alt="선수 이미지">
+					</span>
+					<span class="name">김태우</span>
+				</a>
+			</li>
+			</ul>
+			<ul class="tab lst_player">
+			<li class="tab_item is_selected">
+				<a href="#" class="btn_tab btn_player1">
+					<span class="player_photo_area">
+						<img src="img/@tmp_player1.jpg" alt="선수 이미지">
+					</span>
+					<span class="name">김병준</span>
+				</a>
+			</li>
+			<li class="tab_item is_selected">
+				<a href="#" class="btn_tab btn_player2">
+					<span class="player_photo_area">
+						<img src="img/@tmp_player2.jpg" alt="선수 이미지">
+					</span>
+					<span class="name">이승택</span>
+				</a>
+			</li>
+			<li class="tab_item is_selected">
+				<a href="#" class="btn_tab btn_player3">
+					<span class="player_photo_area">
+						<img src="img/@tmp_player3.jpg" alt="선수 이미지">
+					</span>
+					<span class="name">김태우</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

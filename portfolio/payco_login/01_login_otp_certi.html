@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<title>로그인 :: PAYCO 회원</title>
+<link rel="stylesheet" type="text/css" href="css/neid.css">
+<!-- for ie script -->
+<script type="text/javascript" src="js/html5.js"></script>
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+    <!-- header -->
+    <?php include 'inc/inc_header.html';?>
+    <!-- //header -->
+    <h1 class="blind">로그인</h1>
+    <!-- container -->
+    <div id="container" class="otp"> 
+        <div class="tit_area">
+            <h2 class="h_tit2">OTP 인증번호를 입력하세요.</h2>
+            <p class="sub_txt sub_type2">PAYCO 앱 실행 후 <em class="txt_point">[더보기 &gt; PAYCO OTP]</em> 메뉴에서<br>OTP 인증번호 6자리를 확인해주세요.</p>
+        </div>
+        <div class="content">
+            <span class="inp_bx"><!-- [D] 포커스 시 .is_focus 추가 -->
+                <span class="inp_txt">
+                    <span class="inp_placeholder">OTP 인증 번호 6자리 (예. 123456)</span>
+                    <input type="text" value="" class="inp" title="OTP 인증 번호">
+                    <button type="button" class="btn_del"><span class="ico_del">입력한 내용 지우기</span></button>
+                </span>
+                <p class="error_txt">유효성 체크 메시지입니다</p>
+            </span>
+            <div class="btn_area">
+                <button type="submit" class="btn btn_full btn_point">로그인</button>
+            </div>
+            <div class="btn_area small_btn">
+              <a href="#" class="btn btn_light">OTP 해제하기</a>
+            </div>
+        </div>
+    </div>
+    <!-- //container -->
+</div>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<title>본인인증 :: PAYCO 회원</title>
+<link rel="stylesheet" type="text/css" href="css/neid.css">
+<!-- for ie script -->
+<script type="text/javascript" src="js/html5.js"></script>
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+    <!-- header -->
+    <?php include 'inc/inc_header.html';?>
+    <!-- //header -->
+    
+    <!-- container -->
+    <div id="container">
+        <div class="content">
+            <div class="tit_area tit_area_adult">
+                <h2 class="h_tit">본인명의로 등록된 휴대폰으로 인증을 하시면 <br> 전체 아이디를 확인하실 수 있습니다.</h2>
+                <h2 class="h_tit tit_adult">해당 컨텐츠는 청소년에게 유해한 정보를<br>포함하고 있으므로, 성인인증 절차를 거쳐야 합니다.</h2>
+            </div>
+
+            <ul class="tab">
+            <li class="tab_item"><a href="#" class="tab_link">간편본인확인 (앱)</a></li>
+            <li class="tab_item is_selected"><a href="#" class="tab_link">휴대폰본인확인 (문자)</a></li>
+            </ul>
+          	<!-- [D] 휴대폰본인확인 선택 시 미 노출 -->
+            <span class="tooltip2 is_show" style="display:none"><em>통신사 인증앱 설치/가입 필요 (KT인증, T인증, U+인증)</em></span>
+
+            <span class="inp_bx">
+                <span class="inp_txt">
+                    <label for="name" class="inp_placeholder">이름</label>
+                    <input type="text" id="name" value="" class="inp">
+                    <button type="button" class="btn_del"><span class="ico_del">입력한 내용 지우기</span></button>
+                </span>
+                <p class="error_txt">유효성 체크 메시지입니다</p>
+            </span>
+
+      			<div class="inp_wrap">
+      			  <div class="inp_area">
+      			    <span class="inp_bx">
+      			      <span class="inp_txt">
+      			              <input type="text" class="inp" title="주민번호 앞부분" value="20170401">
+      			            </span>
+      			    </span>
+      			    <span class="txt_bar">-</span>
+      			    <span class="inp_bx">
+      			      <span class="inp_txt"><input type="text" class="inp" title="주민번호 뒷부분 첫자리" value="2"></span>
+      			    </span>
+      			    <span class="secret_num">
+      			      <span class="ico_bul"></span>
+      			      <span class="ico_bul"></span>
+      			      <span class="ico_bul"></span>
+      			      <span class="ico_bul"></span>
+      			      <span class="ico_bul"></span>
+      			      <span class="ico_bul"></span>
+      			    </span>
+      			  </div>
+    			    <p class="error_txt">유효성 체크 메시지입니다</p>
+      		  	</div>
+
+            <div class="checkbox_area">
+                <span class="inp_checkbox inp_bold">
+                    <input type="checkbox" class="inp_chk">
+                    <span class="inp_label has_lypop"><span class="ico_chk"></span><button type="button" class="txt_link">개인정보 수집이용</button> 및 <button type="button" class="txt_link">통신사/본인확인서비스 약관</button> 동의</span>
+                </span>
+            </div>
+			
+			<div class="radio_area">
+				<span class="btn_radio is_checked"><!--[D] 통신사 선택 시 .is_checked 클래스 추가, input 에 checked 속성 추가 -->
+					<label for="skt" class="inp_label">SKT</label>
+					<input type="radio" id="skt" name="phone" class="inp_radio" checked="">
+				</span>
+				<span class="btn_radio">
+					<label for="kt" class="inp_label">KT</label>
+					<input type="radio" id="kt" name="phone" class="inp_radio">
+				</span>
+				<span class="btn_radio">
+					<label for="lg" class="inp_label">LG U+</label>
+					<input type="radio" id="lg" name="phone" class="inp_radio">
+				</span>
+				<span class="btn_radio">
+					<label for="etc" class="inp_label">알뜰폰</label>
+					<input type="radio" id="etc" name="phone" class="inp_radio">
+				</span>
+			</div>
+
+			<div class="inp_group">
+				<span class="inp_bx is_disabled">
+					<span class="inp_txt">
+						<span class="inp_placeholder">휴대폰 번호</span>
+						<input type="text" class="inp" title="휴대폰 번호">
+					</span>
+				</span>
+				<a href="#" class="btn">인증번호 발송</a>
+			</div>
+			<span class="inp_bx time_add">
+				<span class="inp_txt">
+					<span class="inp_placeholder">인증번호 입력</span>
+					<input type="number" class="inp">
+					<span class="time_bx">유효시간 <em class="txt_point">03:00</em></span>
+          <button type="button" class="btn_del"><span class="ico_del">텍스트 지우기</span></button>
+				</span>
+			</span>
+            <p class="noti_txt">휴대폰 인증은 1일 5회까지 가능합니다.</p>
+
+            <div class="btn_area">
+                <button type="submit" class="btn btn_full btn_point">확인</button>
+            </div>
+        </div>
+    </div>
+    <!-- //container -->
+</div>
+
+<!-- 마크업 확인용입니다. -->
+<style>
+	#case_view,#case_view2{display:none;position:relative;width:100%;z-index:1000;padding:5px;background:#000;opacity:0.7}
+	#case_view2{display:inline-block;position:fixed;bottom:0;left:0;width:auto}
+	.btn_opt{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+	.btn_m-view{background:#22002e}
+</style>
+<div id="case_view2">
+	<a href="#" class="btn_opt btn_m-view">모바일 view</a>
+</div>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script>    
+$(function(){
+	$('#case_view2 .btn_m-view').click(function(e){
+		e.preventDefault();
+		$('body').toggleClass('m');		
+	});
+});
+</script>
+<!-- //마크업 확인용입니다. -->
+</body>
+</html>

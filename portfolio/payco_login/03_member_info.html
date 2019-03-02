@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<title>회원정보 :: PAYCO 회원</title>
+<link rel="stylesheet" type="text/css" href="css/neid.css">
+<!-- for ie script -->
+<script type="text/javascript" src="js/html5.js"></script>
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+    <!-- header -->
+    <?php include 'inc/inc_header.html';?>
+    <!-- //header -->
+    
+	<div id="container">
+		<div class="content">
+			<div class="tit_area">
+				<h2 class="h_tit">PAYCO 아이디 정보를 확인하고 수정할 수 있습니다.</h2>
+			</div>
+			
+			<form>
+			<fieldset>
+			<legend>회원정보 내역</legend>
+				<!-- [D]선택시 is_selected 사용 -->
+				<div class="info_bx right_pad">
+					<dl class="info_inner">
+					<dt class="info_tit">이메일 아이디</dt>
+					<dd class="info_txt is_unregistered">미등록</dd>
+					</dl>
+					<a href="#" class="btn btn_white">등록</a>
+				</div>
+				<div class="info_bx right_pad">
+					<dl class="info_inner">
+					<dt class="info_tit">휴대폰 아이디</dt>
+					<dd class="info_txt">010 8712 8724</dd>
+					</dl>
+					<a href="#" class="btn btn_gray">인증</a>
+				</div>
+        <div class="info_bx"><!-- 입력된 정보가 없을 경우 is_hide 클래스 추가 -->
+					<dl class="info_inner">
+					<dt class="info_tit">사업자 정보</dt>
+					<dd class="info_txt">NHN (사업자등록번호 : 111-11-111111)</dd>
+					</dl>
+				</div>
+				<div class="info_bx right_pad">
+					<dl class="info_inner">
+					<dt class="info_tit">이름/생년월일</dt>
+					<dd class="info_txt">배경진 (여자) 1987. 12.24</dd>
+          <dd class="info_txt"><a href="#" class="txt_link"><span class="txt">내 아이디 보기</span><span class="ico_arr_right"></span></a></dd>
+					</dl>
+					<a href="#" class="btn btn_white">변경</a>
+				</div>
+				<div class="info_bx right_pad">
+					<dl class="info_inner">
+					<dt class="info_tit">비밀번호</dt>
+					<dd class="info_txt">최종변경일: <em class="txt_point">2017. 04. 01 15:30</em></dd>
+					</dl>
+					<a href="#" class="btn btn_white">변경</a>
+				</div>
+        <div class="info_bx right_pad">
+					<dl class="info_inner">
+					<dt class="info_tit">연락처</dt>
+					<dd class="info_txt is_unregistered">미등록</dd>
+					</dl>
+					<a href="#" class="btn btn_white">등록</a>
+				</div>
+				<div class="info_bx right_pad">
+					<dl class="info_inner">
+					<dt class="info_tit">주소</dt>
+					<dd class="info_txt">경기도 성남시 분당구 삼평동 629 <br> 플레이뮤지엄</dd>
+					</dl>
+					<a href="#" class="btn btn_white">변경</a>
+				</div>
+				
+				<div class="info_bx">
+	                <dl class="info_inner info_check">
+	                <dt class="info_tit">홍보성 정보 수신동의</dt>
+	                <dd class="info_txt">
+        						<span class="inp_checkbox inp_checkbox1 is_checked">
+        							<input type="checkbox" id="agree1" class="inp_chk">
+        							<label for="agree1" class="inp_label"><span class="ico_chk"></span>이메일 수신동의</label>
+        						</span>
+                  </dd>
+                  <dd class="info_txt">
+                      <span class="inp_checkbox">
+        							<input type="checkbox" id="agree2" class="inp_chk">
+        							<label for="agree2" class="inp_label"><span class="ico_chk"></span>SMS 수신동의</label>
+        						</span>
+	                </dd>
+	                </dl>
+	            </div>
+
+				<div class="member_noti">
+					<p class="noti_txt">PAYCO 회원탈퇴는 payco.com 혹은 페이코앱에서 하실 수 있습니다.</p>
+					<p class="noti_txt" style="display:none">PAYCO 회원탈퇴는 <a href="#" class="txt_link">여기</a>를 눌러주세요.</p>
+				</div>
+			</fieldset>
+			</form>
+		</div>
+	</div>
+</div>
+
+<div class="dimmed" style="display:none"></div>
+<!-- [D]개인정보수집이용 재동의 팝업 -->
+<div class="ly_pop_wrap" style="display:none">
+	<div class="ly_pop">
+		<div class="ly_cont">
+			<h2 class="ly_tit">PAYCO 개인 정보 수집/이용 약관이<br>변경되었습니다.</h2>
+			<em class="ly_desc">안전한 서비스 이용과 개인 정보 관리를 위해<br>변경된 내용에 동의해 주세요.</em>
+			<a href="#" class="btn_link">개인 정보 수집/이용 약관 보기<span class="ico_arr"></span></a>
+		</div>
+		<div class="ly_btn_area is_btn_full">
+			<button type="button" class="btn">동의</button>
+		</div>
+	</div>
+	<span class="vmiddle"></span>
+</div>
+<!-- 마크업 확인용입니다. -->
+<style>
+	#case_view,#case_view2{display:none;position:relative;width:100%;z-index:1000;padding:5px;background:#000;opacity:0.7}
+	#case_view2{display:inline-block;position:fixed;bottom:0;left:0;width:auto}
+	.btn_opt{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+	.btn_m-view{background:#22002e}
+</style>
+<div id="case_view2">
+	<a href="#" class="btn_opt btn_m-view">모바일 view</a>
+  <a href="#" class="btn_opt" onclick="$('.member_noti .noti_txt:eq(0)').hide();$('.member_noti .noti_txt:eq(1)').show();return false;">하단 회원탈퇴 관련 텍스트2</a>
+  <a href="#" class="btn_opt" onclick="$('.dimmed,.ly_pop_wrap').hide();$('.dimmed,.ly_pop_wrap:eq(0)').show();return false;">개인정보수집이용 재동의 팝업</a>
+</div>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script>    
+$(function(){
+	$('#case_view2 .btn_m-view').click(function(e){
+		e.preventDefault();
+		$('body').toggleClass('m');		
+	});
+	$('.ly_pop_wrap a,.ly_pop_wrap button,.btn_close').click(function(e){
+			e.preventDefault();
+			$('.ly_pop_wrap,.dimmed').hide();
+		});
+});
+</script>
+<!-- //마크업 확인용입니다. -->
+</body>
+</html>

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="all">
+<meta name="format-detection" content="telephone=no">
+<title>메인 :: 한게임</title>
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" type="text/css" href="css/m_main.css">
+</head>
+<body><!-- [D] top 배너 닫을 경우 body 에 is_topbanner_close 클래스 추가 -->
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul class="skip">
+<li><a href="#header" onclick="document.getElementById('header').tabIndex=-1;document.getElementById('header').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+
+<div id="wrap" class="wrap main_wrap">
+	<!--[D] HEADER -->
+    <?php include 'inc/header.html';?>
+    <!--//[D] HEADER -->
+
+    <!-- [D] CONTENTS -->
+    <main id="content" class="content">
+        <div class="main_banner">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <a href="#" class="swiper-slide">
+                        <img src="img/img_main_slide1.png" width="290" height="280" alt="우파루팡 시즌2. 시즌2 이벤트 참여하고 아이템 받자!">
+                    </a>
+                    <a href="#" class="swiper-slide">
+                        <img src="img/img_main_slide2.png" width="290" height="280" alt="한게임 슬롯. 짜릿한 리얼 카지노를 즐겨라!">
+                    </a>
+                    <a href="#" class="swiper-slide">
+                        <img src="img/img_main_slide3.png" width="290" height="280" alt="크루세이더 퀘스트. 보석이 보석을! 보석2배 찬스">
+                    </a>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <section class="sec sec_webgame">
+            <div class="tit_wrap">
+                <h2 class="tit_category">웹 게임</h2>
+                <a href="01_webgame.html" class="btn btn_all_view">전체보기</a>
+            </div>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <a href="#" class="swiper-slide">
+                        <img src="img/img_webgame_slide1.png" width="200" height="135" alt="MMORPG 신들의 전쟁. PLAY">
+                    </a>
+                    <a href="#" class="swiper-slide">
+                        <img src="img/img_webgame_slide2.png" width="200" height="135" alt="리얼 RPG 공명 온라인. PLAY">
+                    </a>
+                    <a href="#" class="swiper-slide">
+                        <img src="img/img_webgame_slide1.png" width="200" height="135" alt="MMORPG 신들의 전쟁. PLAY">
+                    </a>
+                    <a href="#" class="swiper-slide">
+                        <img src="img/img_webgame_slide2.png" width="200" height="135" alt="리얼 RPG 공명 온라인. PLAY">
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="sec sec_mobilegame">
+            <div class="tit_wrap">
+                <h2 class="tit_category">모바일 게임</h2>
+                <a href="01_mobilegame.html" class="btn btn_all_view">전체보기</a>
+            </div>
+            <ul class="lst_mobilegame">
+            <li class="game_area">
+                <span class="game_icon_area">
+                    <img src="img/img_mobilegame_app1.png" alt="" width="60" height="60">
+                </span>
+                <a href="#" class="link_game" title="앱 스토어 링크">
+                    <span class="txt_area">
+                        <span class="category_txt">Strategy RPG</span>
+                        <em class="game_tit">킹덤 스토리</em>
+                    </span>
+                    <span class="blind">지원 OS</span>
+                    <ul class="support_device">
+                    <li class="device"><img src="img/ico_main_appstore1.png" alt="Google Play" width="24" height="24"></li>
+                    <li class="device"><img src="img/ico_main_appstore2.png" alt="Apple Store" width="24" height="24"></li>
+                    </ul>
+                </a>
+            </li>
+            <li class="game_area">
+                <span class="game_icon_area">
+                    <img src="img/img_mobilegame_app2.png" alt="" width="60" height="60">
+                </span>
+                <a href="#" class="link_game" title="앱 스토어 링크">
+                    <span class="txt_area">
+                        <span class="category_txt">Casino</span>
+                        <em class="game_tit">한게임 슬롯</em>
+                    </span>
+                    <span class="blind">지원 OS</span>
+                    <ul class="support_device">
+                    <li class="device"><img src="img/ico_main_appstore1.png" alt="Google Play" width="24" height="24"></li>
+                    <li class="device"><img src="img/ico_main_appstore2.png" alt="Apple Store" width="24" height="24"></li>
+                    </ul>
+                </a>
+            </li>
+            <li class="game_area">
+                <span class="game_icon_area">
+                    <img src="img/img_mobilegame_app3.png" alt="" width="60" height="60">
+                </span>
+                <a href="#" class="link_game" title="앱 스토어 링크">
+                    <span class="txt_area">
+                        <span class="category_txt">Puzzle</span>
+                        <em class="game_tit">프렌즈팝 : 시즌2<br>for kakao</em>
+                    </span>
+                    <span class="blind">지원 OS</span>
+                    <ul class="support_device">
+                    <li class="device"><img src="img/ico_main_appstore1.png" alt="Google Play" width="24" height="24"></li>
+                    <li class="device"><img src="img/ico_main_appstore2.png" alt="Apple Store" width="24" height="24"></li>
+                    </ul>
+                </a>
+            </li>
+            <li class="game_area">
+                <span class="game_icon_area">
+                    <img src="img/img_mobilegame_app4.png" alt="" width="60" height="60">
+                </span>
+                <a href="#" class="link_game" title="앱 스토어 링크">
+                    <span class="txt_area">
+                        <span class="category_txt">Puzzle</span>
+                        <em class="game_tit">라인팝2</em>
+                    </span>
+                    <span class="blind">지원 OS</span>
+                    <ul class="support_device">
+                    <li class="device"><img src="img/ico_main_appstore1.png" alt="Google Play" width="24" height="24"></li>
+                    <li class="device"><img src="img/ico_main_appstore2.png" alt="Apple Store" width="24" height="24"></li>
+                    </ul>
+                </a>
+            </li>
+            </ul>
+            <button class="btn_more">더 보기</button>
+        </section>
+        <section class="sec sec_hangame_toon">
+            <div class="tit_wrap">
+                <h2 class="tit_category">한게임 만화</h2>
+                <a href="#" class="btn btn_all_view">전체보기</a>
+            </div>
+            <h3 class="sub_tit"><a href="http://comics.hangame.com/webtoon/index" class="link_txt">웹툰</a></h3>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <a class="swiper-slide">
+                        <span class="toon_tit">그날에 우리는</span>
+                       <img src="img/@tmp_hangame_toon1_1.png" alt="" width="125" height="93">
+                    </a>
+                    <a class="swiper-slide">
+                        <span class="toon_tit">리라이프 Relife</span>
+                       <img src="img/@tmp_hangame_toon1_2.png" alt="" width="125" height="93">
+                    </a>
+                    <a class="swiper-slide">
+                        <span class="toon_tit">용감한 시민</span>
+                       <img src="img/@tmp_hangame_toon1_3.png" alt="" width="125" height="93">
+                    </a>
+                    <a class="swiper-slide last_slide">
+                        <span class="more_txt_wrap">
+                            <em class="more_number">+37</em>
+                            <span class="txt">더 보기</span>
+                        </span>
+                       <img src="img/@tmp_hangame_toon1_3.png" alt="" width="125" height="93">
+                    </a>
+                </div>
+            </div>
+            <h3 class="sub_tit"><a href="http://comics.hangame.com/book/index" class="link_txt">단행본 만화</a></h3>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <a class="swiper-slide">
+                        <span class="toon_tit">그마남 이야기</span>
+                       <img src="img/@tmp_hangame_toon2_1.png" alt="" width="125" height="93">
+                    </a>
+                    <a class="swiper-slide">
+                        <span class="toon_tit">반중력 소녀</span>
+                       <img src="img/@tmp_hangame_toon2_2.png" alt="" width="125" height="93">
+                    </a>
+                    <a class="swiper-slide">
+                        <span class="toon_tit">실례지만 잠시 지나갈게요</span>
+                       <img src="img/@tmp_hangame_toon2_3.png" alt="" width="125" height="93">
+                    </a>
+                    <a class="swiper-slide last_slide">
+                        <span class="more_txt_wrap">
+                            <em class="more_number">+999</em>
+                            <span class="txt">더 보기</span>
+                        </span>
+                       <img src="img/@tmp_hangame_toon2_3.png" alt="" width="125" height="93">
+                    </a>
+                </div>
+            </div>
+            <h3 class="sub_tit"><a href="http://comics.hangame.com/novel/index" class="link_txt">장르 소설</a></h3>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <a class="swiper-slide">
+                        <span class="toon_tit">상사동거보감</span>
+                       <img src="img/@tmp_hangame_toon3_1.png" alt="" width="125" height="93">
+                    </a>
+                    <a class="swiper-slide">
+                        <span class="toon_tit">낯선 배우</span>
+                       <img src="img/@tmp_hangame_toon3_2.png" alt="" width="125" height="93">
+                    </a>
+                    <a class="swiper-slide">
+                        <span class="toon_tit">영구 지명 부탁해</span>
+                       <img src="img/@tmp_hangame_toon3_3.png" alt="" width="125" height="93">
+                    </a>
+                    <a class="swiper-slide last_slide">
+                        <span class="more_txt_wrap">
+                            <em class="more_number">+51</em>
+                            <span class="txt">더 보기</span>
+                        </span>
+                       <img src="img/@tmp_hangame_toon3_3.png" alt="" width="125" height="93">
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="sec sec_divination">
+            <div class="tit_wrap">
+                <h2 class="tit_category">프리미엄 무료 운세</h2>
+            </div>
+            <div class="swiper-container"><!-- [D] 슬라이드 갯수 1개 이하일 때 swiper-container에 has_slide_one 클래스 추가  -->
+                <div class="swiper-wrapper">
+                    <a href="#" class="swiper-slide">
+                        <img src="img/banner_divination1.png" alt="오늘의 운세 무료보기">
+                    </a>
+                    <a href="#" class="swiper-slide">
+                        <img src="img/banner_divination2.png" alt="2018 토정비결 무료 보기">
+                    </a>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+        <section class="sec sec_noti">
+            <a href="01_notice_list.html" class="noti_tit"><h2 class="tit_txt">공지</h2></a>
+            <a href="01_notice_view.html" class="noti_txt">[안내] 내 개인정보 지키기 캠페인</a>
+        </section>
+        <a href="#wrap" class="btn_top"><img src="img/btn_go_top.png" alt="맨 위로"></a><!-- [D]노출 필요시 btn_top에 is_show 클래스 추가 -->
+    </main>
+	<!-- //[D] CONTENTS -->
+	
+	<!--[D] FOOTER -->
+        <?php include 'inc/footer.html';?>
+	<!--//[D] FOOTER -->
+</div>
+
+<!-- [D] LAYER -->
+<!-- [D] 레이어 팝업 노출시 body에 is_layer_show 추가 및 해당 layer_pop_wrap에 is_show 클래스 추가 -->
+<!-- [D] 생일 축하 팝업 -->
+<div class="layer_pop_wrap layer_birthday">
+    <div class="ly_pop">
+        <div class="ly_cont">
+            <div class="user_name_area"><span class="user_name">아이디는여덞글자</span>님</div>
+            <div class="img_wrap">
+            <img src="img/img_birthday.png" alt="Happy Birthday!" width="156" height="190">
+            </div>
+            <p class="evt_msg">한게임에서 마련한 작은 선물과 함께<br>행복한 생일 보내세요.</p>
+            <em class="noti_txt">PC한게임에서 로그인하신 후 선물을 수령해주세요.<br>생일로부터 일주일 이내 수령 가능합니다.</em>
+        </div>
+        <div class="bottom_wrap">
+            <span class="inp_checkbox">
+                <input type="checkbox" id="check1" class="inp_chk">
+                <label for="check1" class="inp_label">
+                    <span class="ico_checkbox"></span>
+                    <span class="label_text">다시 보지 않기</span>
+                </label>
+            </span>
+            <button type="button" class="btn_close_layer">닫기</button>
+        </div>
+    </div>
+</div>
+<!-- [D] 메인 스페셜 배너 팝업 -->
+<div class="layer_pop_wrap layer_special">
+    <div class="ly_pop">
+        <div class="ly_cont">
+            <a href="#" class="banner_link">
+                <img src="img/img_main_banner.jpg" alt="최대 9,900만 코인! 돌려 돌려 골든휠~" width="320" height="210">
+            </a>
+        </div>
+        <div class="bottom_wrap">
+            <span class="inp_checkbox">
+                <input type="checkbox" id="check2" class="inp_chk">
+                <label for="check2" class="inp_label">
+                    <span class="ico_checkbox"></span>
+                    <span class="label_text">다시 보지 않기</span>
+                </label>
+            </span>
+            <button type="button" class="btn_close_layer">닫기</button>
+        </div>
+    </div>
+</div>
+<!-- [D] 바로가기 추가 방법 팝업(ios) -->
+<div class="layer_pop_wrap layer_shortcut">
+    <div class="ly_pop">
+        <div class="ly_cont">
+            <h2 class="ly_tit">바로가기 추가 방법</h2>
+            <ol class="lst_guide">
+            <li class="step">
+                <span class="guide_txt">Safari에서 한게임에 접속하세요.</span>
+            </li>
+            <li class="step">
+                <div class="img_wrap">
+                    <img src="img/img_shortcut_ios1.png" alt="" width="260" height="20">
+                </div>
+                <span class="guide_txt">화면 하단 중앙의 <span class="point_txt">바로가기 버튼</span>을 터치하세요.</span>
+            </li>
+            <li class="step">
+                <div class="img_wrap">
+                    <img src="img/img_shortcut_ios2.png" alt="" width="260" height="84">
+                </div>
+               <span class="guide_txt"><span class="point_txt">홈 화면에 추가</span>를 터치하면 한게임 바로가기<br>아이콘을 생성할 수 있습니다.</span>
+            </li>
+            </ol>
+        </div>
+        <div class="bottom_wrap">
+            <button type="button" class="btn_close_layer">닫기</button>
+        </div>
+    </div>
+</div>
+<!-- [D] 바로가기 추가 방법 팝업(안드로이드) -->
+<div class="layer_pop_wrap layer_shortcut">
+    <div class="ly_pop">
+        <div class="ly_cont">
+            <h2 class="ly_tit">바로가기 추가 방법</h2>
+            <ol class="lst_guide">
+            <li class="step">
+                <span class="guide_txt">구글 크롬(Chrome) 혹은 삼성 인터넷 기본<br>브라우저에서 한게임에 접속하세요.</span>
+            </li>
+            <li class="step">
+                <div class="img_wrap">
+                    <img src="img/img_shortcut_android.png" alt="" width="260" height="46">
+                </div>
+                <span class="guide_txt">화면 우측 상단 <span class="point_txt">더보기 메뉴</span>를 터치하세요.</span>
+            </li>
+            <li class="step">
+               <span class="guide_txt">해당 탭에서 <span class="point_txt">홈 화면에 추가</span>를 터치하면<br>한게임 바로가기 아이콘을 생성할 수 있습니다.</span>
+            </li>
+            </ol>
+        </div>
+        <div class="bottom_wrap">
+            <button type="button" class="btn_close_layer">닫기</button>
+        </div>
+    </div>
+</div>
+<!-- [D] LAYER -->
+
+<!-- Javascript Area -->
+<script src="js/libs/jquery-1.12.4.min.js"></script>
+<script src="js/libs/swiper.min.js"></script>
+<script>
+var swiper_main = new Swiper('.main_banner .swiper-container', {
+  pagination: {
+    el: '.main_banner .swiper-pagination',
+  },
+  spaceBetween: 15,
+  autoplay: {
+    delay: 3000,
+  },
+});
+
+var swiper_webgame = new Swiper('.sec_webgame .swiper-container', {
+  slidesPerView: 'auto',
+  spaceBetween: 15,
+  pagination: {
+    el: '.sec_webgame .swiper-pagination',
+    clickable: true,
+  },
+});
+
+var swiper_hangame_toon = new Swiper('.sec_hangame_toon .swiper-container', {
+  slidesPerView: 'auto',
+  spaceBetween: 15,
+  pagination: {
+    el: '.sec_hangame_toon .swiper-pagination',
+    clickable: true,
+  },
+});
+
+var swiper_divination = new Swiper('.sec_divination .swiper-container', {
+    pagination: {
+    el: '.sec_divination .swiper-pagination',
+    type: 'fraction',
+    },
+    spaceBetween: 15,
+});
+
+</script>
+
+<!-- 마크업 확인용입니다. -->
+<style>
+.case_view{display:inline-block;position:fixed;bottom:0;left:0;z-index:1000;width:auto;padding:5px;background:#000;opacity:0.7}
+.case_view .btn{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+</style>
+<div class="case_view case_view1">
+    <a href="#" class="btn" onclick="$('body').toggleClass('is_gnb_show');return false;">GNB 열기/닫기</a>
+    <a href="#" class="btn" onclick="$('.lst_menu_other:eq(0)').hide();$('.lst_menu_other:eq(1),.member_data_wrap').show();$('footer .lst_func:eq(1)').show();$('footer .lst_func:eq(0)').hide();return false;">로그인 후</a>
+    <a href="#" class="btn" onclick="$('body').toggleClass('is_topbanner_close');return false;">top 배너 닫기</a>
+    <a href="#" class="btn" onclick="$('.top_menu .label').show();return false;">바로가기 라벨</a>
+    <a href="#" class="btn" onclick="$('.btn_top').toggleClass('is_show');return false;">위로가기 노출 제어</a>
+    <a href="#" class="btn" onclick="$('.sec_divination .swiper-container').addClass('has_slide_one');if($('.sec_divination .swiper-container .swiper-slide').length <= 1){$('.sec_divination .swiper-container').addClass('has_slide_one')};return false;">프리미엄 무료 운세 배너_1개일때</a>
+    <a href="#" class="btn" onclick="$('.layer_pop_wrap').removeClass('is_show');$('.layer_pop_wrap:eq(0)').addClass('is_show');return false;">생일축하 팝업</a>
+    <a href="#" class="btn" onclick="$('.layer_pop_wrap').removeClass('is_show');$('.layer_pop_wrap:eq(1)').addClass('is_show');return false;">메인 스페셜 배너 팝업</a>
+    <a href="#" class="btn" onclick="$('.layer_pop_wrap').removeClass('is_show');$('.layer_pop_wrap:eq(2)').addClass('is_show');return false;">바로가기 추가 팝업(ios)</a>
+    <a href="#" class="btn" onclick="$('.layer_pop_wrap').removeClass('is_show');$('.layer_pop_wrap:eq(3)').addClass('is_show');return false;">바로가기 추가 팝업(안드로이드)</a>
+    <a href="#" class="btn" onclick="$('.case_view1').hide();$('.case_view2').show();return false;">케이스뷰 닫기</a>
+</div>
+<div class="case_view case_view2" style="display:none">
+    <a href="#" class="btn" onclick="$('.case_view1').show(),$('.case_view2').hide();return false;">케이스뷰 열기</a>
+</div>
+<script src="js/case_view.js"></script>
+<!-- //마크업 확인용입니다. --> 
+</body>
+</html>
