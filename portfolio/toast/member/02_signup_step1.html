@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="all">
+<title>토스트 회원가입 :: TOAST Cloud</title>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/toast_member.css">
+<style>
+html,body{height:100%;margin:0;padding:0}/* 마크업 검수용 코드입니다. 개발시 삭제 부탁드립니다. */
+</style>
+</head>
+<body>
+<div class="tcm_wrap">
+	<!-- [D] CONTENTS -->
+	<div id="content" class="content signup_terms_content">
+		<div class="sub_title_wrap">
+			<p class="logo_area"><img src="img/logo_toast.svg" width="127" height="42" alt="NHN TOAST"></p>
+			<div class="step_wrap">
+			<ol class="step_area">
+			<li class="step is_active"><!--[D] 활성화된 step 에 .is_active 클래스 추가 -->
+			<span class="blind">현재단계</span><!--[D] 활성화된 단계에 .blind 처리된 '현재단계' 텍스트 추가 부탁드립니다.-->
+			<span class="step_txt">이용약관 동의</span>
+			</li>
+			<li class="step">
+			<span class="step_txt">회원정보 입력</span>
+			</li>
+			<li class="step">
+			<span class="step_txt">회원가입 완료</span>
+			</li>
+			</ol>
+			</div>
+		</div>
+		
+		<h2 class="blind">이용약관 동의</h2>
+		<div class="form_wrap terms_wrap">
+		<form>
+		<fieldset>
+		<legend>이용약관</legend>
+			<div class="all_check_wrap">
+				<span class="inp_checkbox">
+					<input type="checkbox" id="check_all" class="inp_chk">
+					<label for="check_all" class="inp_label">
+						<span class="ico_checkbox"></span>
+						<span class="label_text">TOAST 전체 약관에 동의합니다.</span>
+					</label>
+				</span>
+			</div>
+			<ul class="list_terms">
+			<li class="term_text">
+				<span class="inp_checkbox">
+					<input type="checkbox" id="check1" class="inp_chk">
+					<label for="check1" class="inp_label">
+						<span class="ico_checkbox"></span>
+						<span class="label_text">TOAST 이용약관 약관 동의 (필수)</span>
+					</label>
+				</span>
+				<a href="#" class="btn_view">보기</a>
+			</li>
+			<li class="term_text">
+				<span class="inp_checkbox">
+					<input type="checkbox" id="check2" class="inp_chk">
+					<label for="check2" class="inp_label">
+						<span class="ico_checkbox"></span>
+						<span class="label_text">개인정보 수집 및 이용 동의 (필수)</span>
+					</label>
+				</span>
+				<a href="#" class="btn_view">보기</a>
+			</li>
+			<li class="term_text">
+				<span class="inp_checkbox">
+					<input type="checkbox" id="check3" class="inp_chk">
+					<label for="check3" class="inp_label">
+						<span class="ico_checkbox"></span>
+						<span class="label_text">홍보성 정보 수신 (선택)</span>
+					</label>
+				</span>
+			</li>
+			</ul>
+		</fieldset>
+		</form>
+		</div>
+		
+		<div class="btn_area">
+			<button type="button" class="btn btn_point">동의</button>
+		</div>
+	</div>
+	<!-- //[D] CONTENTS -->
+</div>
+
+<!--[D] 레이어팝업 -->
+<div class="tcm_layer_dimmed"></div><!-- [D] 레이어 팝업 노출시 tcm_layer_dimmed와 해당 tcm_pop_wrap에 is_show 클래스 추가 -->
+<!-- [D] 이용약관 필수동의 팝업 -->
+<div class="tcm_pop_wrap">
+	<div class="ly_pop">
+		<div class="title_wrap">
+			<h3 class="ly_tit">이용약관 동의</h3>
+		</div>
+		<div class="desc_text_wrap">
+			<p class="desc_text">필수 약관에 모두 동의해주세요.</p>
+		</div>
+		<div class="btn_area">
+			<button class="btn btn_point">확인</button>
+		</div>
+		<button type="button" class="btn_close_layer">닫기</button>
+	</div>
+</div>
+<!-- [D] 필수서류 안내 팝업 -->
+<div class="tcm_pop_wrap">
+	<div class="ly_pop">
+		<div class="title_wrap">
+			<h3 class="ly_tit">이용약관 동의</h3>
+		</div>
+		<div class="desc_text_wrap">
+			<p class="desc_text">가입을 위한 필요 서류가 있습니다.<br>사업자등록증 사본을 미리 준비해주세요.</p>
+		</div>
+		<div class="btn_area">
+			<button class="btn btn_point">확인</button>
+		</div>
+		<button type="button" class="btn_close_layer">닫기</button>
+	</div>
+</div>
+<!--[D] //레이어팝업 -->
+
+<!-- 마크업 확인용입니다. -->
+<style>
+	#case_view{display:inline-block;position:fixed;bottom:0;left:0;z-index:1000;width:auto;padding:5px;background:#000;opacity:0.7}
+	#case_view .btn{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+</style>
+<div id="case_view">
+	<a href="#" class="btn" onclick="$('.tcm_pop_wrap,.tcm_layer_dimmed').removeClass('is_show');$('.tcm_layer_dimmed,.tcm_pop_wrap:eq(0)').addClass('is_show');return false;">이용약관 필수동의 팝업</a>
+	<a href="#" class="btn" onclick="$('.tcm_pop_wrap,.tcm_layer_dimmed').removeClass('is_show');$('.tcm_layer_dimmed,.tcm_pop_wrap:eq(1)').addClass('is_show');return false;">필수서류 안내 팝업</a>
+</div>
+<script src="js/libs/jquery-1.12.4.min.js"></script>
+<script>    
+$(function(){
+  $('.tcm_pop_wrap a,.tcm_pop_wrap button').click(function(e){
+    e.preventDefault();
+    $('.tcm_pop_wrap,.tcm_layer_dimmed').removeClass('is_show');
+  });
+});
+</script>
+<!-- //마크업 확인용입니다. -->
+</body>
+</html>

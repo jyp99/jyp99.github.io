@@ -76,7 +76,7 @@ input:-ms-input-placeholder{color:#999!important}
 .is_folding .portfolio_wrap:before{height:200px}
 .is_folding .portfolio_wrap .h_txt{position:absolute;top:150px;max-width:none;border-bottom:0;font-size:34px;color:#fff;text-shadow:1px 1px rgba(0, 0, 0, .5)}
 .portfolio_content .link_txt{color:blue;text-decoration:underline}
-.cover_wrap{position:relative;height:180px;background-size:cover}
+.cover_wrap{position:relative;height:180px;background:url(../img/img_cover_portfolio.jpg);background-size:cover}
 .cover_wrap .inner{display:block;position:relative;z-index:1;max-width:600px;height:100%;margin:auto;padding:0 60px}
 .cover_wrap .inner:before{display:inline-block;height:100%;vertical-align:bottom;content:''}
 .cover_wrap .h_txt{display:inline-block;position:relative;z-index:1;margin-bottom:20px;color:#fff;vertical-align:bottom;font-size:30px;font-weight:300}

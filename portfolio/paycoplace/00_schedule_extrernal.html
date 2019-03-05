@@ -1,0 +1,790 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" type="text/css" href="js/bower_components/tui-time-picker/dist/tui-time-picker.css">
+<link rel="stylesheet" type="text/css" href="js/bower_components/tui-date-picker/dist/tui-date-picker.css">
+<link rel="stylesheet" href="css/solution.css">
+<title>디자이너별 예약현황 :: Payco Place Shop</title>
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul class="skip">
+<li><a href="#nav" onclick="document.getElementById('nav').tabIndex=-1;document.getElementById('nav').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- [D] side menu 열릴 경우 .is_sidebar_opened 추가 -->
+<div class="wrap">
+	<!--[D] HEADER -->
+	<header id="header" class="header">
+		<div class="header_top">
+			<h1 class="logo"><a href="#" class="link"><img src="img/logo_payco_place.png" alt="PAYCO Place Shop" width="127" height="12" class="img"></a></h1>
+			<div class="top_menu">
+				<div class="setting_area">
+					<!-- [D] 선택 시 .is_open 추가, 추가 시 .settings 자동 열림. 요소 사이에 별도 태그 삽입할 경우 css 기능 동작하지 않습니다. -->
+					<button type="button" class="btn_setting">박승철 매니저님 안녕하세요.</button>
+					<div class="settings">			
+						<ul class="setting_lst">
+						<!-- [D] 선택 시 .is_selected 추가 -->
+						<li class="setting_item is_selected"><a href="#" class="setting">박승철 매니저</a></li>
+						<li class="setting_item"><a href="#" class="setting">박승철 서현점 원장</a></li>
+						<li class="setting_item"><a href="#" class="setting">박승철 판교점 원장</a></li>
+						<li class="setting_item"><a href="#" class="setting">박승철 판교점 원장</a></li>
+						<li class="setting_item"><a href="#" class="setting">박승철 판교점 원장</a></li>
+						<li class="setting_item"><a href="#" class="setting">박승철 판교점 원장</a></li>
+						<li class="setting_item"><a href="#" class="setting">박승철 판교점 원장</a></li>
+						<li class="setting_item"><a href="#" class="setting">박승철 판교점 원장</a></li>
+						</ul>
+						<a href="#" class="setting setting_logout">로그아웃</a>
+					</div>
+				</div>
+				<ul class="menu">				
+				<li class="menu_item"><a href="#" class="link">고객센터</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="header_store">
+			<h2 class="logo_store">
+				<a href="#" class="link"><span class="tit_logo">박승철 헤어스투디오</span><span class="tit_store">서현점</span></a>
+			</h2>
+			<nav class="nav_area">
+				<ul id="nav" class="nav">
+				<!-- [D] 선택 시 .is_selected 추가 -->
+				<li class="nav_item is_selected"><a href="#" class="link">예약관리</a></li>
+				<li class="nav_item"><a href="#" class="link">마케팅관리</a></li>
+				<li class="nav_item is_disabled"><a href="#" class="link">고객관리</a></li>
+				<li class="nav_item is_disabled"><a href="#" class="link">상품관리</a></li>
+				<li class="nav_item is_disabled"><a href="#" class="link">정산관리</a></li>
+				<li class="nav_item is_disabled"><a href="#" class="link">매장관리</a></li>
+				</ul>
+				<div class="search_area">
+					<form>
+					<fieldset>
+						<legend>매장검색</legend>
+						<div class="search">
+							<span class="inp_search"><input type="text" id="search" placeholder="매장검색" aria-label="매장검색" class="inp"></span>
+							<button type="submit" class="btn_search">검색</button>
+						</div>
+					</fieldset>
+					</form>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<!--[D] // HEADER -->
+	<div class="snb_wrap">
+		<ul class="snb">
+		<!-- [D] 선택 시 .is_selected 추가 -->
+		<li class="snb_item designer_item"><a href="#" class="link is_selected">디자이너별 예약현황</a></li>
+		<li class="snb_item contract_item"><a href="#" class="link">고객 예약 내역</a></li>
+		<li class="snb_item dsc_btn_item">
+			<a href="#" class="dsc_btn btn_reservation">외부 예약 변동</a>
+			<span class="ico_dsc">버튼 설명</span>
+		</li>
+		</ul>
+		<div class="legend">
+			<em class="legend_tit">서비스 범례</em>
+			<ul class="legend_lst">
+			<li class="legend_item color_paycoplace">페이코 플레이스</li>
+			<li class="legend_item color_naver">네이버 예약 파트너센터</li>
+			<li class="legend_item color_cacao">카카오 헤어샵</li>
+			</ul>
+		</div>
+	</div>
+	<span class="ly_tooltip ly_tooltip1"><!-- [D] 툴팁 활성시 ly_tooltip 에 is_show 클래스 추가 -->
+		<span class="tooltip_inner">[네이버 예약 파트너센터],<br>[카카오 헤어샵] 예약을<br><b>페이코 플레이스</b> 하나로 관리할 수 있습니다.</span>
+	</span>
+	<!-- [D] CONTENTS -->
+	<main id="content" class="content">
+		<div class="inner">
+			<div class="sub_wrap">
+				<h2 class="blind">오늘의 예약현황</h2>
+				<div class="pp_schedule_wrap">
+					<div class="pp_schedule_tit">
+						<div class="schedule_today">
+							<div class="tui-datepicker-area">
+								<div class="tui-datepicker-input tui-datetime-input inp_datepicker">
+									<input id="reserve-date-picker-input" type="text" aria-label="예약 현황" readonly>
+									<span class="tui-ico-date"></span>
+									<div id="reserve-date-picker-container" style="margin-left: -1px;"></div>
+								</div>
+							</div>
+							<button type="button" class="btn_event_view btn_prev_month">
+								<span class="ico">이전달 보기</span>
+							</button>
+							<button type="button" class="btn_event_view btn_prev">
+								<span class="ico">이전날 보기</span>
+							</button>
+							<button type="button" class="btn_event_view btn_next">
+								<span class="ico">다음날 보기</span>
+							</button>
+							<button type="button" class="btn_event_view btn_next_month">
+								<span class="ico">다음달 보기</span>
+							</button>
+						</div>
+						<button type="button" class="btn_today_view">오늘 <span class="blind">선택하기</span></button>
+						<ul class="lst_func_btn">
+							<li class="dsc_btn_item">
+								<a href="#" class="dsc_btn btn_refresh">최신예약 불러오기</a><span class="ico_dsc">버튼 설명</span>
+								<span class="ly_tooltip ly_tooltip2"><!-- [D] 툴팁 활성시 ly_tooltip 에 is_show 클래스 추가 -->
+									<span class="tooltip_inner">현황판의 예약을<br> 최신 상태로 새로고침 합니다.</span>
+								</span>
+							</li>
+							<li class="dsc_btn_item">
+								<a href="#" class="dsc_btn btn_add">신규예약 생성하기</a><span class="ico_dsc">버튼 설명</span>
+								<span class="ly_tooltip ly_tooltip3"><!-- [D] 툴팁 활성시 ly_tooltip 에 is_show 클래스 추가 -->
+									<span class="tooltip_inner">전화예약, 워크인 등 신규예약을 생성 합니다.<br>예약을 생성하면 고객에게 안내문자를 발송합니다.</span>
+								</span>
+							</li>
+						</ul>
+					</div>
+					<div class="pp_schedules">
+						<div class="pp_schedule pp_schedule_list">
+							<div class="top_info">
+								<div class="info_designer">
+									<h3 class="info_name">예약대기</h3>
+								</div>
+							</div>
+							<div class="events_wrap">
+								<div class="scroll_box">
+									<div class="timeline" aria-hidden="true">
+										<ul class="timeline_lst">
+										<li class="timeline_row"></li>
+										<li class="timeline_row"></li>
+										<li class="timeline_row"></li>
+										<li class="timeline_row"></li>
+										<li class="timeline_row"></li>
+										<li class="timeline_row"></li>
+										<li class="timeline_row"></li>
+										<li class="timeline_row"></li>
+										<li class="timeline_row"></li>
+										<li class="timeline_row"></li>
+										<li class="timeline_row"></li>
+										<li class="timeline_row"></li>
+										<li class="timeline_row"></li>
+										<li class="timeline_row"></li>
+										</ul>
+									</div>
+									<!-- .timeline -->
+									<div class="events">
+										<ul class="events_group">
+										<li class="s_event color_paycoplace">
+											<a href="#" class="event_cont">
+												<em class="event_tag tag_color">예약대기</em>
+												<em class="event_payment ico_payment_payco">페이코 플레이스</em>
+												<span class="event_txt_area">
+													<em class="event_name">임회원</em>
+													<span class="event_desc">여) 앞머리컷</span>
+												</span>
+											</a>
+										</li>
+										<li class="s_event color_paycoplace">
+											<a href="#" class="event_cont">
+												<em class="event_tag tag_color">예약대기</em>
+												<em class="event_payment ico_payment_payco">페이코 플레이스</em>
+												<span class="event_txt_area">
+													<em class="event_name">임회원</em>
+													<span class="event_desc">여) 앞머리컷</span>
+												</span>
+											</a>
+										</li>
+										<li class="s_event color_cacao">
+											<a href="#" class="event_cont">
+												<em class="event_tag tag_color">예약대기</em>
+												<em class="event_payment ico_payment_cacao">카카오 헤어샵</em>
+												<span class="event_txt_area">
+													<em class="event_name">임회원</em>
+													<span class="event_desc">여) 앞머리컷</span>
+												</span>
+											</a>
+										</li>
+										<li class="s_event color_naver">
+											<a href="#" class="event_cont">
+												<em class="event_tag tag_color">예약대기</em>
+												<em class="event_payment ico_payment_naver">네이버 예약 파트너센터</em>
+												<span class="event_txt_area">
+													<em class="event_name">임회원</em>
+													<span class="event_desc">여) 앞머리컷</span>
+												</span>
+											</a>
+										</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="pp_schedule pp_schedule_detail">
+							<div class="events_wrap">
+								<h3 class="blind">개인현황</h3>
+								<!-- [D] 인원수에 따라 길이적용 필요. 201px(1명 width) X 인원수 -->
+								<div class="events events_header" style="width:2000px;">
+									<ul class="events_lst">
+									<!-- [D] 디자이너 휴무인 경우 비활성화 .is_off -->
+									<li class="events_group is_off">
+										<a href="#" class="top_info">
+											<span class="info_designer">
+												<em class="info_name">규제</em>
+												<span class="info_offday">수 휴무</span>
+											</span>
+										</a>
+									</li>
+									<li class="events_group is_selected"><!-- [D] 선택된 열에 해당하는 events_group에 is_selected 클래스 추가 -->
+										<a href="#" class="top_info">
+											<span class="info_designer">
+												<em class="info_name">수정</em>
+												<span class="info_offday">화 휴무</span>
+											</span>
+										</a>
+									</li>
+									</ul>
+								</div>
+								<!-- [D] 인원수에 따라 길이적용 필요. 201px(1명 width) X 인원수 -->
+								<div class="events_list_area" style="width:2000px;">
+									<div class="timeline">
+										<ul class="timeline_lst">
+										<li class="timeline_row">
+											<span class="hour">09:00</span>
+										</li>
+										<li class="timeline_row">
+											<span class="hour">10:00</span>
+										</li>
+										<!-- [D] .timeline_selector 위치 적용에 따라 함게 선택 필요 (1시간 단위) -->
+										<li class="timeline_row is_selected">
+											<span class="hour">11:00</span>
+										</li>
+										<li class="timeline_row">
+											<span class="hour">12:00</span>
+										</li>
+										<li class="timeline_row">
+											<span class="hour">13:00</span>
+										</li>
+										<li class="timeline_row">
+											<span class="hour">14:00</span>
+										</li>
+										<li class="timeline_row">
+											<span class="hour">15:00</span>
+										</li>
+										<li class="timeline_row">
+											<span class="hour">16:00</span>
+										</li>
+										<li class="timeline_row">
+											<span class="hour">17:00</span>
+										</li>
+										<li class="timeline_row">
+											<span class="hour">18:00</span>
+										</li>
+										<li class="timeline_row">
+											<span class="hour">19:00</span>
+										</li>
+										<li class="timeline_row">
+											<span class="hour">20:00</span>
+										</li>
+										<li class="timeline_row">
+											<span class="hour">21:00</span>
+										</li>
+										<li class="timeline_row">
+											<span class="hour">22:00</span>
+										</li>
+										<li class="timeline_row">
+											<span class="hour">23:00</span>
+										</li>
+										</ul>
+									</div>
+									<!-- .timeline -->
+									<div class="events">
+										<!-- [D] 위치 적용은 예약일정 항목 높이 지정과 동일. ex) .s01~.s30 클래스 추가,
+										태그 상단 timeline 시간목록의 .is_selected와 함께 적용 -->									
+										<em class="timeline_selector s05" aria-label="현재 시각 11:00"></em>
+										<ul>
+										<li class="events_group">
+											<ul class="events_lst">
+											<li class="s_event color10 s01 h1" style="height:1139px">
+												<a href="#" class="event_cont">
+													<em class="blind">휴무</em>
+												</a>
+											</li>
+											</ul>
+										</li>
+										<li class="events_group events2 is_selected" aria-label="수정 디자이너 예약목록 선택"><!-- [D] 선택된 열에 해당하는 events_group에 is_selected 클래스 추가 -->
+											<ul class="events_lst">
+											<li class="s_event color_naver s01 m30">
+												<a href="#" class="event_cont">
+													<span class="event_tag tag_color3">결제완료</span>
+													<em class="event_payment ico_payment_naver">네이버 예약 파트너센터</em>
+													<span class="event_txt_area">
+														<em class="event_name">임회원</em>
+														<span class="event_desc">여) 앞머리컷앞머리컷</span>
+													</span>
+												</a>
+											</li>
+											<li class="s_event s02 m30">
+												<div class="event_cont is_lock"><!--[D]잠겨있을때 event_cont is_lock클래스 추가 -->
+													<span class="event_txt_area"><em class="event_desc">예약불가</em></span>
+													<a href="#" class="btn_reservation">스케쥴 잠금/해제</a>
+												</div>
+											</li>
+											<li class="s_event s03 m30">
+												<div class="event_cont is_lock"><!--[D]잠겨있을때 event_cont is_lock클래스 추가 -->
+													<span class="event_txt_area"><em class="event_desc">예약불가</em></span>
+													<a href="#" class="btn_reservation">스케쥴 잠금/해제</a>
+												</div>
+											</li>
+											<li class="s_event s04 m30">
+												<div class="event_cont is_lock"><!--[D]잠겨있을때 event_cont is_lock클래스 추가 -->
+													<span class="event_txt_area"><em class="event_desc">예약불가</em></span>
+													<a href="#" class="btn_reservation">스케쥴 잠금/해제</a>
+												</div>
+											</li>
+											<li class="s_event s05 m30">
+												<div class="event_cont is_empty">
+													<a href="#" class="btn_add_reservation">예약생성</a>
+													<a href="#" class="btn_reservation">스케쥴 잠금/해제</a>
+												</div>
+											</li>
+											<li class="s_event s06 m30">
+												<div class="event_cont is_empty">
+													<a href="#" class="btn_add_reservation">예약생성</a>
+													<a href="#" class="btn_reservation">스케쥴 잠금/해제</a>
+											</li>
+											<li class="s_event s07 m30">
+												<div class="event_cont is_empty">
+													<a href="#" class="btn_add_reservation">예약생성</a>
+													<a href="#" class="btn_reservation">스케쥴 잠금/해제</a>
+											</li>
+											<li class="s_event s08 m30">
+												<div class="event_cont is_empty">
+													<a href="#" class="btn_add_reservation">예약생성</a>
+													<a href="#" class="btn_reservation">스케쥴 잠금/해제</a>
+											</li>
+											<li class="s_event s09 m30">
+												<div class="event_cont is_empty">
+													<a href="#" class="btn_add_reservation">예약생성</a>
+													<a href="#" class="btn_reservation">스케쥴 잠금/해제</a>
+											</li>
+											<li class="s_event s10 m30">
+												<div class="event_cont is_empty">
+													<a href="#" class="btn_add_reservation">예약생성</a>
+													<a href="#" class="btn_reservation">스케쥴 잠금/해제</a>
+											</li>
+											<li class="s_event s11 m30">
+												<div class="event_cont is_empty">
+													<a href="#" class="btn_add_reservation">예약생성</a>
+													<a href="#" class="btn_reservation">스케쥴 잠금/해제</a>
+											</li>
+											<li class="s_event d_event color_cacao s12 h3m30">
+												<a href="#" class="event_cont">
+													<span class="event_tag tag_color2">예약확정</span>
+													<em class="event_payment ico_payment_cacao">카카오 헤어샵</em>
+													<span class="event_txt_area">
+														<em class="event_name">임회원</em>
+														<span class="event_desc">여) 앞머리컷</span>
+													</span>
+												</a>
+											</li>
+											<li class="s_event d_event color_naver s12 h3m30">
+												<a href="#" class="event_cont">
+													<span class="event_tag tag_color4">예약취소(매장)</span>
+													<em class="event_payment ico_payment_naver">네이버 예약 파트너센터</em>
+													<span class="event_txt_area">
+														<em class="event_name">임회원</em>
+														<span class="event_desc">여) 앞머리컷</span>
+													</span>
+												</a>
+											</li>
+											<li class="s_event s19 m30">
+												<div class="event_cont is_empty">
+													<a href="#" class="btn_add_reservation">예약생성</a>
+													<a href="#" class="btn_reservation">스케쥴 잠금/해제</a>
+											</li>
+											<li class="s_event s20 m30">
+												<div class="event_cont is_empty">
+													<a href="#" class="btn_add_reservation">예약생성</a>
+													<a href="#" class="btn_reservation">스케쥴 잠금/해제</a>
+											</li>
+											<li class="s_event s21 m30">
+												<div class="event_cont is_empty">
+													<a href="#" class="btn_add_reservation">예약생성</a>
+													<a href="#" class="btn_reservation">스케쥴 잠금/해제</a>
+											</li>
+											<li class="s_event s22 m30">
+												<div class="event_cont is_empty">
+													<a href="#" class="btn_add_reservation">예약생성</a>
+													<a href="#" class="btn_reservation">스케쥴 잠금/해제</a>
+											</li>
+											<li class="s_event s23 m30">
+												<div class="event_cont is_empty">
+													<a href="#" class="btn_add_reservation">예약생성</a>
+													<a href="#" class="btn_reservation">스케쥴 잠금/해제</a>
+											</li>
+											</ul>
+										</li>		
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<span class="ly_tooltip ly_schedule_tooltip tooltip_reservation_state">
+				<span class="tooltip_inner">예약불가 처리합니다.</span>
+			</span><!-- [D]btn_reservation 에 마우스 오버시 노출 되는 툴팁, 개발에서 위치 제어
+			.event_cont.is_empty .btn_reservation:hover 시 tooltip_inner 텍스트 : 예약불가 처리합니다.
+			.event_cont.is_lock .btn_reservation:hover 시 tooltip_inner 텍스트 : 예약가능 처리합니다. -->
+			<span class="ly_tooltip ly_schedule_tooltip tooltip_reservation_add">
+				<span class="tooltip_inner">예약생성</span>
+			</span><!-- [D].event_cont.is_empty의 btn_add_reservation에 마우스 오버시 노출 되는 툴팁, 개발에서 위치 제어 -->
+			<!-- [D] FOOTER -->	
+			<footer id="footer" class="footer">
+				<ul class="footer_menu_lst">
+				<li class="footer_menu_item"><a href="#" class="footer_link">이용약관</a></li>
+				<li class="footer_menu_item"><a href="#" class="footer_link"><strong class="menu_txt">개인정보취급방침</strong></a></li>
+				</ul>
+				<p class="address">© NHN Entertainment Corp. All Rights Reserved.  TEL : 1544-7967  E-mail : support@place.payco.com</p>
+			</footer>
+			<!-- [D] // FOOTER -->
+		</div>
+	</main>
+	<!--[D] // CONTENTS -->
+	<!--[D]디자이너별 예약현황 -->
+	<?php include 'inc/aside_designer.html';?>
+	<!-- [D]예약생성 레이어 -->
+	<div class="side_layer_wrap" style="display:none">
+		<div class="ly_aside creating_schedules_wrap"><!-- [D]스크롤 발생시 ly_aside에 has_scroll 클래스 추가 -->
+				<h3 class="aside_tit">예약생성</h3>
+				<h4 class="sub_tit">고객정보</h4>
+				<div class="tbl_wrap">
+					<table class="tbl tbl_row">
+					<caption><span class="blind">고객정보</span></caption>
+					<colgroup>
+						<col style="width:100px">					
+						<col>					
+					</colgroup>				
+					<tbody>
+					<tr>
+						<th scope="row"><div class="txt_inner"><em class="ico_required">필수 입력</em>예약자명</div></th>
+						<td>
+							<div class="search_box"><!-- [D]자동완성 리스트 노출 필요 시 search_box에 is_open 클래스 추가 적용 -->
+								<div class="search_inner">
+									<span class="inp_area">
+										<input type="text" id="txt" class="inp_txt" placeholder="예약자명을 입력해주세요." aria-label="예약자명을 입력해주세요." autocomplete="on">
+									</span>
+									<div class="auto_complete_area">
+										<ul class="opts">
+										<li class="opt is_selected">
+											<a href="#" class="opt_link">
+												<span class="opt_txt"><em class="same_txt">원정</em>일</span> <span class="opt_number">010-1234-1234</span>
+											</a>
+										</li><!-- [D]자동완성 글자 중 inp_txt에 입력되는 글자와 동일한 텍스트 부분에 same_txt 클래스 적용 -->
+										<li class="opt">
+											<a href="#" class="opt_link">
+												<span class="opt_txt"><em class="same_txt">원정</em>이삼사</span> <span class="opt_number">010-1234-1234</span>
+											</a>
+										</li>
+										<li class="opt">
+											<a href="#" class="opt_link">
+												<span class="opt_txt"><em class="same_txt">원정</em>삼사오육칠</span> <span class="opt_number">010-1234-1234</span>
+											</a>
+										</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"><div class="txt_inner"><em class="ico_required">필수 입력</em>전화번호</div></th>
+						<td>
+							<div class="search_box"><!-- [D]자동완성 리스트 노출 필요 시 search_box에 is_open 클래스 추가 적용 -->
+								<div class="search_inner">
+									<span class="inp_area">
+									<input type="text" id="txt2" class="inp_txt" placeholder="전화번호를 입력해주세요." aria-label="전화번호를 입력해주세요." autocomplete="off">
+									</span>
+									<div class="auto_complete_area">
+										<ul class="opts">
+										<li class="opt is_selected">
+											<a href="#" class="opt_link">
+												<span class="opt_txt">원정일</span> <span class="opt_number">010-1234-<em class="same_txt">1234</em></span>
+											</a>
+										</li><!-- [D]자동완성 글자 중 inp_txt에 입력되는 글자와 동일한 텍스트 부분에 same_txt 클래스 적용 -->
+										<li class="opt">
+											<a href="#" class="opt_link">
+												<span class="opt_txt">원정일</span> <span class="opt_number">010-1234-<em class="same_txt">1234</em></span>
+											</a>
+										</li>
+										<li class="opt">
+											<a href="#" class="opt_link">
+												<span class="opt_txt">원정일</span> <span class="opt_number">010-1234-<em class="same_txt">1234</em></span>
+											</a>
+										</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</td>
+					</tr>
+					</tbody>
+					</table>
+				</div>
+				<p class="error_txt is_error">이름 또는 전화번호 뒤 4자리로 고객 검색이 가능합니다.</p><!-- [D]인풋별 오류메세지 적용 : 예약자/전화번호 하나x -->
+				<h4 class="sub_tit">예약정보</h4>
+				<div class="tbl_wrap">
+					<table class="tbl tbl_row">
+					<caption><span class="blind">예약정보</span></caption>
+					<colgroup>
+					<col style="width:100px">					
+					<col>					
+					</colgroup>				
+					<tbody>
+					<tr>
+					<th scope="row">예약유형</th>
+					<td>
+						<div class="service_select">
+							<div class="select select_size">
+								<a href="#" class="btn btn_select">전화예약<span class="ico ico_sel">선택목록 가기</span></a>
+								<ul class="opts">
+								<li class="opt is_selected"><a href="#" class="opt_link">방문예약</a></li>
+								<li class="opt"><a href="#" class="opt_link">전화예약</a></li>
+								<li class="opt"><a href="#" class="opt_link">기타</a></li>
+								</ul>
+							</div>
+						</div>
+					</td>
+					</tr>
+					<tr>
+					<th scope="row"><div class="txt_inner"><em class="ico_required">필수 입력</em>담당자</div></th>
+					<td>
+						<a href="#" class="select_wrap_link">
+							<div class="inp_area">
+								<span class="inp_txt_area">
+									<!-- <span class="placeholder">담당 디자이너를 선택해주세요</span> -->
+									<span class="inp_txt">디자이너를 선택해주세요</span>
+								</span>
+							</div>
+						</a>
+					</td>
+					</tr>
+					<tr>
+					<th scope="row">방문일</th>
+					<td>
+						<div class="tui-datepicker-area">
+							<div class="tui-datepicker-input tui-datetime-input inp_datepicker2">
+								<input id="datetime-input2" type="text" aria-label="방문일">
+								<span class="tui-ico-date"></span>
+								<div id="datetime-container" style="margin-left: -1px;"></div>
+							</div>
+						</div>
+					</td>
+					</tr>
+					<tr>
+					<th scope="row">방문시간</th>
+					<td>
+						<div id="reserve-timepicker-selectbox-step" class="time_picker"></div>
+					</td>
+					</tr>
+					<tr>
+					<th scope="row">서비스</th>
+					<td>
+						<div class="free_form_row">
+							<button type="button" class="btn btn_type1">커트</button>
+							<button type="button" class="btn">펌</button>
+							<button type="button" class="btn">염색</button>
+							<button type="button" class="btn">가나다라마바가나다라마바가나다라마바</button>
+							<button type="button" class="btn">기타</button>
+							<button type="button" class="btn btn_type1">커트</button>
+							<button type="button" class="btn">펌</button>
+							<button type="button" class="btn">염색</button>
+							<button type="button" class="btn">클리닉</button>
+							<button type="button" class="btn">가나다라마바</button>
+						</div>
+					</td>
+					</tr>
+					<tr>
+					<th scope="row">기장</th>
+					<td>
+						<button type="button" class="btn btn_type1">short</button>
+						<button type="button" class="btn">medium</button>
+						<button type="button" class="btn">long</button>
+					</td>
+					</tr>
+					<tr>
+					<th scope="row" rowspan="2"><div class="txt_inner"><em class="ico_required">필수 입력</em>아이정보</div></th>
+					<td>
+						<span class="inp_area">
+							<input type="text" id="txt" class="inp_txt" placeholder="아이이름" aria-label="아이이름" autocomplete="on">
+						</span>
+					</td>
+					</tr>
+					<tr>
+					<td>
+						<span class="inp_area">
+							<input type="text" id="txt2" class="inp_txt" placeholder="종 (예:비숑프리제)" aria-label="종 (예:비숑프리제)" autocomplete="on">
+						</span>
+					</td>
+					</tr>
+					</tbody>
+					</table>
+				</div>
+				<p class="error_txt is_error">담당자를 선택해주세요.</p>
+				<div class="checkbox is_checked">
+					<span class="ico ico_checkbox"><input type="checkbox" id="check" tabindex="-1"></span>
+					<label for="check" class="lbl">생성된 예약 내용을 고객님께 SMS로 전송합니다.</label>
+				</div>
+				<div class="layer_btn_area">
+					<button type="button" class="btn btn_lg btn_type1">취소</button>
+					<button type="button" class="btn btn_lg btn_type2">생성</button>
+				</div>
+			<button type="button" class="btn_close"><span class="ico ico_close">레이어 닫기</span></button>
+		</div>
+	</div>	
+	<!-- //[D]예약생성 레이어 -->
+	
+</div>
+
+<!-- [D] 마크업 뷰를 위한 임시코드입니다. 개발적용 불가합니다 -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="js/bower_components/tui-code-snippet/dist/tui-code-snippet.js"></script>
+<script src="js/bower_components/tui-date-picker/dist/tui-date-picker.min.js"></script>
+<script src="js/bower_components/tui-time-picker/dist/tui-time-picker.min.js"></script>
+<style>
+.case_view{display:inline-block;position:fixed;bottom:0;left:0;z-index:1100;width:auto;padding:5px;background:#000;opacity:0.7}
+.case_view .btn{display:inline-block;margin:3px;padding:7px;border:none;background:#212121;color:#fff;line-height:normal}
+</style>
+<div class="case_view">
+  <a href="#" class="btn" onclick="$('.side_layer_wrap').toggle();return false;">예약생성 레이어</a>
+  <a href="#" class="btn" onclick="$('.creating_schedules_wrap .inp_area').removeClass('is_error');$('.creating_schedules_wrap .inp_area:eq(0)').addClass('is_error');$('.creating_schedules_wrap .error_txt:eq(0)').addClass('is_error').html('올바른 이름을 입력해 주세요.');return false;">예약자명 올바르지 않은 경우</a>
+  <a href="#" class="btn" onclick="$('.creating_schedules_wrap .inp_area').removeClass('is_error');$('.creating_schedules_wrap .inp_area:eq(1)').addClass('is_error');$('.creating_schedules_wrap .error_txt:eq(0)').addClass('is_error').html('올바른 전화번호를 입력해 주세요.');return false;">전화번호 올바르지 않은 경우</a>
+  <a href="#" class="btn" onclick="$('.creating_schedules_wrap .inp_area').removeClass('is_error');$('.creating_schedules_wrap .inp_area:eq(1)').addClass('is_error');$('.creating_schedules_wrap .error_txt:eq(0)').addClass('is_error').html('올바른 정보를 입력해주세요.');return false;">예약자/전화번호 둘중하나 올바르지 않은 경우</a>
+  <a href="#" class="btn" onclick="$('.side_layer_wrap .ly_aside').toggleClass('has_scroll');return false;">예약생성 레이어 컨텐츠가 긴 경우</a>
+</div>
+
+<script>
+	$(function(){
+		$('.btn_aside_fold').on('click',function(){
+			var btnText = $('.ico_fold').text(),
+				btnTrue = '펼치기',
+				btnFalse = '접기';
+			$('.wrap').toggleClass('is_sidebar_opened');
+
+			switch(btnText) {
+				case btnTrue:
+					$('.ico_fold').text(btnFalse);
+					return false;
+				case btnFalse:
+					$('.ico_fold').text(btnTrue);
+			}
+		});
+
+		$('.is_empty .btn_add_reservation').hover(function(){
+			var target = $(this);
+			target_top = target.offset().top - 115;
+			target_left = target.offset().left - 180;
+			$('.tooltip_reservation_add').addClass('is_show').css({'left':target_left,'top':target_top});
+		}, function() {
+			$(this).css({'border':'0'});
+    	$('.tooltip_reservation_add').removeClass('is_show');
+    });
+
+    $('.btn_reservation').hover(function(){
+    	var target = $(this);
+    	var target_parents = $(this).parents('.event_cont');
+			target_top = target.offset().top - 145;
+			target_left = target.offset().left - 199;
+			if(target_parents.hasClass('is_lock')){
+				$('.tooltip_reservation_state .tooltip_inner').html('예약가능 처리합니다.');
+			}else if(target_parents.hasClass('is_empty')){
+				$('.tooltip_reservation_state .tooltip_inner').html('예약불가 처리합니다.');
+			}
+			$('.tooltip_reservation_state').addClass('is_show').css({'left':target_left,'top':target_top});
+		}, function() {
+    	$('.tooltip_reservation_state').removeClass('is_show');
+    });
+
+		$('.btn_reservation+.ico_dsc').hover(function () {
+			$('.ly_tooltip1').show();
+			},function(){
+			$('.ly_tooltip1').hide();
+		});
+
+		$('.btn_refresh+.ico_dsc').hover(function () {
+			$('.ly_tooltip2').show();
+			},function(){
+			$('.ly_tooltip2').hide();
+		});
+
+		$('.btn_add+.ico_dsc').hover(function () {
+			$('.ly_tooltip3').show();
+			},function(){
+			$('.ly_tooltip3').hide();
+		});
+
+		$('.side_layer_wrap .btn_close').click(function(){
+			$('.side_layer_wrap').hide();
+    });
+
+		var today = new Date();
+		var targetDate = new Date('2017-12-04');
+		new tui.DatePicker('#reserve-date-picker-container', {
+			date: targetDate,
+			language: 'ko',
+			selectableRanges: [
+				[new Date('2017-01-03'), new Date(today.getFullYear(), today.getMonth() + 6, today.getDate())]
+			],
+			input: {
+				element: '#reserve-date-picker-input',
+				format: 'yyyy. MM. dd. (D)'
+			}
+		}).addOpener('.inp_datepicker');
+
+
+		var targetDate2 = new Date('2017-12-04');
+		new tui.DatePicker('#datetime-container', {
+			date: targetDate,
+			language: 'ko',
+			selectableRanges: [
+				[new Date('2017-01-03'), new Date(today.getFullYear(), today.getMonth() + 6, today.getDate())]
+			],
+			input: {
+				element: '#datetime-input2',
+				format: 'yyyy. MM. dd. (D)'
+			}
+		}).addOpener('.inp_datepicker2');
+
+
+
+	});
+	$(function(){
+		$('.select').click(function(e){
+			e.preventDefault();
+			 if($(this).hasClass('is_open')){
+				 $(this).removeClass('is_open');
+			 }else{
+				 $('.select').removeClass('is_open');
+				 $(this).addClass('is_open');
+			 }
+		 });
+
+    var tpSelectboxWithStep = new tui.TimePicker('#reserve-timepicker-selectbox-step', {
+        inputType: 'selectbox',
+        hourStep: 0,
+        minuteStep: 30,
+        showMeridiem: true,
+        language: 'ko'
+    });
+
+		$('.search_box').click(function(e){
+			e.preventDefault();
+			if($(this).hasClass('is_open')){
+				$(this).removeClass('is_open');
+			}else{
+				$('.select').removeClass('is_open');
+				$(this).addClass('is_open');
+			}
+		});
+
+	});
+</script>
+<!-- [D] // 마크업 뷰를 위한 임시코드입니다. -->
+</body>
+</html>

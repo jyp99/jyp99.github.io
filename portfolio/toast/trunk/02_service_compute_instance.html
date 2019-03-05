@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="all">
+<title>토스트(TOAST) 서비스</title>
+
+<meta name="description" content="NHN 엔터테인먼트에서 제공하는 토스트 클라우드 서비스. 오픈스택 기반의 클라우드 인프라, 게임솔루션, 보안, 문자/이메일/알림톡, 협업도구 Dooray, ERP 제공">
+<meta name="keywords" content="토스트, 토스트 클라우드, 클라우드 서비스, 토스트 닷컴, 클라우드, NHN엔터테인먼트, NHN엔터, NHN Entertainment, NHN Ent, TOAST, TOAST Cloud, TOAST CAM, TOAST PC, TOAST Analytics, toast, 토스트캠, 토스트피씨,토스트애널리틱스">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="토스트(TOAST) 서비스">
+<meta property="og:description" content="NHN 엔터테인먼트에서 제공하는 토스트 클라우드 서비스. 오픈스택 기반의 클라우드 인프라, 게임솔루션, 보안, 문자/이메일/알림톡, 협업도구 Dooray, ERP 제공">
+<meta property="og:keywords" content="토스트, 토스트 클라우드, 클라우드 서비스, 토스트 닷컴, 클라우드, NHN엔터테인먼트, NHN엔터, NHN Entertainment, NHN Ent, TOAST, TOAST Cloud, TOAST CAM, TOAST PC, TOAST Analytics, toast, 토스트캠, 토스트피씨,토스트애널리틱스">
+<meta property="og:image" content="http://images.toast.com/toast/com/web/common/toast.com.jpg">
+<meta property="og:image:secure_url" content="http://images.toast.com/toast/com/web/common/toast.com.jpg">
+<meta property="og:url" content="https://toast.com">
+<link rel="shortcut icon" href="https://toast.com/resources/img/favicons/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" sizes="180x180" href="/resources/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/resources/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/resources/img/favicons/favicon-16x16.png">
+<link rel="manifest" href="/resources/img/favicons/manifest.json">
+<link rel="mask-icon" href="/resources/img/favicons/safari-pinned-tab.svg">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="css/gnb.css">
+<link rel="stylesheet" type="text/css" href="css/toast.css">
+<link rel="stylesheet" type="text/css" href="css/gnb_mobile.css">
+<link rel="stylesheet" type="text/css" href="css/toast_mobile.css">
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul class="skip">
+<li><a href="#header" onclick="document.getElementById('header').tabIndex=-1;document.getElementById('header').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+
+<!--[D] noti_browser -->
+<?php include 'inc/noti_browser.html';?>
+<!--//[D] noti_browser -->
+<div class="wrap header_fixed_wrap">
+
+	<!--[D] HEADER -->
+	<?php include 'inc/header.html';?>
+	<!--//[D] HEADER -->
+	<div id="container" class="container has_snb_container"><!-- [D]snb 필요한 페이지는 container에 has_snb_container 클래스 추가 적용 -->
+		<!-- [D] CONTENTS -->
+		<?php include 'inc/snb_service.html';?>
+		<div id="content" class="content service_detail_content">
+			<div class="inner">
+				<div class="title_wrap">
+					<div class="title_area">
+						<i class="service_icon icon-ic-compute-instance"></i>
+						<h2 class="tit_txt">Instance</h2>
+						<em class="state_badge is_beta">BETA</em><!-- [D]BETA 라벨 적용 필요시 적용, ALPHA 라벨 적용 필요시 <em class="state_badge is_alpha">ALPHA</em> 적용 -->
+					</div>
+					<nav class="location" aria-label="breadcrumb">
+						<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="#" class="link_txt">Home</a></li>
+						<li class="breadcrumb-item"><a href="#" class="link_txt">서비스</a></li>
+						<li class="breadcrumb-item"><a href="#" class="link_txt">Compute</a></li>
+						<li class="breadcrumb-item active" aria-current="page">Instance</li>
+						</ol>
+					</nav>
+				</div>
+				<div class="sub_desc_wrap">
+					<p class="sub_txt">원하는 즉시 생성할 수 있는 가상 서버입니다.<br>예측하기 힘든 부하 상황에서 유연하게 대응할 수 있는 환경을 제공합니다.</p>
+					<div class="btn_wrap">
+						<a href="#" class="btn btn_service_use">서비스 이용하기</a>
+						<a href="#" class="btn btn_view_guide" target="_blank">사용 설명서 보기</a>
+					</div>
+				</div>
+				<div class="nav_scroll_wrap is_m_show">
+				<ul class="nav nav-tabs">
+				<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#tab_introduce">소개</a></li>
+				<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab_charge">요금</a></li>
+				</ul>
+				</div>
+				<div class="tab-content">
+				<section class="sec tab-pane active" id="tab_introduce">
+					<h3 class="h_section">Instance 소개</h3>
+					<div class="desc_group">
+						<h4 class="h_desc">주요 기능</h4>
+						<ul class="lst_desc">
+						<li class="desc_item">원하는 하드웨어 사양을 합리적인 가격으로 이용할 수 있습니다.</li>
+						<li class="desc_item">클릭 몇 번 만으로 빠르게 서버를 구축하고 증설할 수 있습니다.</li>
+						<li class="desc_item">24시간 365일 무중단 서비스를 제공합니다.</li>
+						<li class="desc_item">Monitoring 서비스를 통해 인스턴스의 상태를 확인할 수 있습니다.</li>
+						<li class="desc_item">i2 Instance는 고성능 High IOPS SSD를 사용하여 빠른 I/O 성능을 보장합니다(QoS 보장).</li>
+						<li class="desc_item">u2 Instance는 저렴한 비용으로 부담 없이 이용할 수 있는 인스턴스입니다.</li>
+						<li class="desc_item">MySQL Instance에는 MySQL이 설치돼 있어 쉽게 MySQL을 사용할 수 있습니다.
+						</li>
+						</ul>
+					</div>
+					<div class="desc_group">
+						<h4 class="h_desc">서비스 대상</h4>
+						<ul class="lst_desc">
+						<li class="desc_item">사용량 예측이 힘든 경우</li>
+						<li class="desc_item">프로모션, 이벤트 등 단기 트래픽 집중에 대한 해결책이 필요한 경우</li>
+						<li class="desc_item">일정 기간 대규모 인프라(인스턴스, 스토리지)가 필요한 경우</li>
+						<li class="desc_item">부족한 사내 인프라를 지원할 IT인프라가 필요한 경우</li>
+						<li class="desc_item">시스템 장애를 사전에 진단하고 대응할 수 있는 관리 인프라가 필요한 경우</li>
+						<li class="desc_item">신규 서비스 출시를 앞두고 유연한 인프라 증설이 필요한 경우</li>
+						<li class="desc_item">가상 서버를 신속하게 확장하고 부하 분산이 필요한 경우
+						</li>
+						</ul>
+					</div>
+				</section>
+				<section class="sec tab-pane fade" id="tab_charge">
+					<h3 class="h_section">Instance 요금</h3>
+					<div class="desc_group">
+						<h4 class="h_desc is_pc_ibshow">Instance</h4>
+						<span class="tbl_noti">(VAT 별도)</span>
+						<div class="tbl_wrap is_round">
+							<table class="tbl">
+							<caption><span>Instance 타입 별 서비스 사양 및 요금</span></caption>
+							<thead>
+							<tr>
+							<th scope="col" colspan="3">인스턴스 타입</th>
+							<th scope="col">vCPU</th>
+							<th scope="col">메모리</th>
+							<th scope="col">과금 기준</th>
+							<th scope="col">요금</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+							<td rowspan="5">Basic</td>
+							<td rowspan="5">u2</td>
+							<td>u2.nano</td>
+							<td>1개</td>
+							<td>1GB</td>
+							<td rowspan="26">사용 시간 누적</td>
+							<td>4.9원/시간</td>
+							</tr>
+							<tr>
+							<td>u2.micro</td>
+							<td>1개</td>
+							<td>2GB</td>
+							<td>9.7원/시간</td>
+							</tr>
+							<tr>
+							<td>u2.small</td>
+							<td>2개</td>
+							<td>2GB</td>
+							<td>16원/시간</td>
+							</tr>
+							<tr>
+							<td>u2.medium</td>
+							<td>2개</td>
+							<td>4GB</td>
+							<td>25원/시간</td>
+							</tr>
+							<tr>
+							<td>u2.large</td>
+							<td>4개</td>
+							<td>4GB</td>
+							<td>48.1원/시간</td>
+							</tr>
+							<tr>
+							<td rowspan="6">Standard</td>
+							<td>t2</td>
+							<td>t2.tiny</td>
+							<td>1개</td>
+							<td>1GB</td>
+							<td>24원/시간</td>
+							</tr>
+							<tr>
+							<td rowspan="5">m2</td>
+							<td>m2.small</td>
+							<td>1개</td>
+							<td>2GB</td>
+							<td>43원/시간</td>
+							</tr>
+							<tr>
+							<td>m2.medium</td>
+							<td>2개</td>
+							<td>4GB</td>
+							<td>93원/시간</td>
+							</tr>
+							<tr>
+							<td>m2.large</td>
+							<td>4개</td>
+							<td>8GB</td>
+							<td>196원/시간</td>
+							</tr>
+							<tr>
+							<td>m2.xlarge</td>
+							<td>8개</td>
+							<td>16GB</td>
+							<td>399원/시간</td>
+							</tr>
+							<tr>
+							<td>m2.2xlarge</td>
+							<td>16개</td>
+							<td>32GB</td>
+							<td>807원/시간</td>
+							</tr>
+							<tr>
+							<td rowspan="4">Compute Optimized</td>
+							<td rowspan="4">c2</td>
+							<td>c2.small</td>
+							<td>2개</td>
+							<td>2GB</td>
+							<td>57원/시간</td>
+							</tr>
+							<tr>
+							<td>c2.medium</td>
+							<td>4개</td>
+							<td>4GB</td>
+							<td>121원/시간</td>
+							</tr>
+							<tr>
+							<td>c2.large</td>
+							<td>8개</td>
+							<td>8GB</td>
+							<td>250원/시간</td>
+							</tr>
+							<tr>
+							<td>c2.xlarge</td>
+							<td>16개</td>
+							<td>16GB</td>
+							<td>509원/시간</td>
+							</tr>
+							<tr>
+							<td rowspan="4">Memory Optimized</td>
+							<td rowspan="4">r2</td>
+							<td>r2.small</td>
+							<td>2개</td>
+							<td>8GB</td>
+							<td>128원/시간</td>
+							</tr>
+							<tr>
+							<td>r2.medium</td>
+							<td>4개</td>
+							<td>16GB</td>
+							<td>264원/시간</td>
+							</tr>
+							<tr>
+							<td>r2.large</td>
+							<td>8개</td>
+							<td>32GB</td>
+							<td>534원/시간</td>
+							</tr>
+							<tr>
+							<td>r2.c8m64</td>
+							<td>8개</td>
+							<td>64GB</td>
+							<td>674원/시간</td>
+							</tr>
+							<tr>
+							<td rowspan="3">Storage Optimized</td>
+							<td rowspan="3">i2</td>
+							<td>i2.large</td>
+							<td>4개</td>
+							<td>8GB</td>
+							<td>593원/시간</td>
+							</tr>
+							<tr>
+							<td>i2.xlarge</td>
+							<td>8개</td>
+							<td>16GB</td>
+							<td>796원/시간</td>
+							</tr>
+							<tr>
+							<td>i2.2xlarge</td>
+							<td>16개</td>
+							<td>32GB</td>
+							<td>1,204원/시간</td>
+							</tr>
+							<tr>
+							<td rowspan="4">Performance Optimized</td>
+							<td rowspan="4">x1</td>
+							<td>x1.c16m64</td>
+							<td>16개</td>
+							<td>64GB</td>
+							<td>1,029원/시간</td>
+							</tr>
+							<tr>
+							<td>x1.c16m128</td>
+							<td>16개</td>
+							<td>128GB</td>
+							<td>1,345원/시간</td>
+							</tr>
+							<tr>
+							<td>x1.c32m128</td>
+							<td>32개</td>
+							<td>128GB</td>
+							<td>2,058원/시간</td>
+							</tr>
+							<tr>
+							<td>x1.c32m256</td>
+							<td>32개</td>
+							<td>256GB</td>
+							<td>2,775원/시간</td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+						<em class="noti_title">알림</em>
+						<ul class="lst_desc">
+						<li class="desc_item">Instance 요금은 네트워크 비용을 포함하지 않은 것으로, Network 과금 정책에 따라 비용이 청구됩니다.</li>
+						<li class="desc_item">Instance 요금은 스토리지 비용을 포함하지 않은 것으로, Block Storage 과금 정책에 따라 비용이 청구됩니다.</li>
+						<li class="desc_item">u2/i2 Instance 사용하려면 다음 서비스 정책을 참고하시기 바랍니다.
+							<ul>
+							<li class="desc_item">다른 사양으로 변경할 수 없습니다.</li>
+							<li class="desc_item">Linux 계열 OS만 선택이 가능합니다.</li>
+							<li class="desc_item">루트 볼륨을 로컬 디스크로 제공하며, 하드웨어 장애 시 데이터 복구가 불가능할 수 있습니다. 별도로 백업하거나 이중화할 것을 권장합니다.</li>
+							<li class="desc_item">Instance 생성 후에는 루트 볼륨 크기를 변경할 수 없으며, 필요할 경우 범용 HDD를 생성하여 연결할 수 있습니다.</li>
+							<li class="desc_item">u2 Instance는 u2 전용 스토리지를 루트 볼륨(OS 설치 공간)으로 사용합니다. Flavor에 따라 고정된 크기(u2.nano: 20GB, u2.micro: 20GB, u2.small: 50GB, u2.medium: 50GB, u2.large: 100GB)가 할당됩니다.</li>
+							<li class="desc_item">i2 Instance는 2018년 5월 15일 부터 신규 생성 할 수 없습니다.</li>
+							</ul>
+						</li>
+						</ul>
+						
+						<h4 class="h_desc">인스턴스 정지 시 요금 안내 (2018년 8월 1일부터 적용)</h4>
+						<ul class="lst_desc">
+						<li class="desc_item">정지 상태일 때 '90% 할인된' 금액을 90일 적용하고, 90일 초과되면 정지 상태를 유지하고 정상 과금으로 전환됩니다.</li>
+						<li class="desc_item">90%는 기존 적용되던 요금 대비 할인으로 적용됩니다. 약정 요금제를 사용중인경우 약점 요금제 기준 90%할인 적용됩니다.</li>
+						<li class="desc_item">90일 정지 기간은 인스턴스 단위로 누적하여 적용됩니다.</li>
+						<li class="desc_item">플로팅 IP, 로드밸런서,Block Storage,Windows라이센스등 서버에 연결된 다른 자원의 요금은 서버 정지 시에도 정상적으로 청구됩니다.</li>
+						<li class="desc_item">불필요한 요금 청구 문제가 발생하지 않도록 사용하지 않는 리소스는 꼭 반납 처리를 해주시기 바랍니다.</li>
+						</ul>
+					</div>
+
+					<div class="desc_group">
+						<h4 class="h_desc">MySQL Instance</h4>
+						<p class="pricing_txt_box">MySQL Instance는 Instance 요금과 동일합니다.</p>
+					</div>
+
+					<div class="desc_group">
+						<h4 class="h_desc">Network</h4>
+						<span class="tbl_noti">(VAT 별도)</span>
+						<div class="tbl_wrap is_round">
+							<table class="tbl">
+							<caption><span>Network 과금 구분 별 요금</span></caption>
+							<thead>
+							<tr>
+							<th scope="col">과금 구분</th>
+							<th scope="col">과금 구간</th>
+							<th scope="col">과금 기준</th>
+							<th scope="col">요금</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+							<td rowspan="2">Network</td>
+							<td>1GB 미만</td>
+							<td>무료 제공</td>
+							<td>0원</td>
+							</tr>
+							<tr>
+							<td>1GB 이상</td>
+							<td>1GB당</td>
+							<td>100원</td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+						
+						<em class="noti_title">알림</em>
+						<ul class="lst_desc">
+						<li class="desc_item">인스턴스에서 발생하는 네트워크 전송량은 인스턴스의 하이퍼바이저 관리 툴에서 측정한 네트워크 전송량(outbound)의 총합을 기준으로 합니다.</li>
+						<li class="desc_item">이용자 서버에서 발생하는 총 네트워크 전송량의 5% 이상 또는 20MB 이상의 국제 네트워크 전송량이 발생하면, 별도의 이용 요금을 협의하거나 국제 네트워크 전송을 제한할 수 있습니다.</li>
+						<li class="desc_item">회사는 이용자의 네트워크 제한 시 사전에 이를 이용자에게 통보하며, 이용자가 연락처를 적지 않았거나 잘못 적어서 통보를 받지 못했을 때 발생한 피해는 보상하지 않습니다.</li>
+						</ul>
+					</div>
+
+					<div class="desc_group">
+						<h4 class="h_desc">Operating System</h4>
+						<span class="tbl_noti">(VAT 별도)</span>
+						<div class="tbl_wrap is_round">
+							<table class="tbl">
+							<caption><span>Operating System 과금 구분 별 요금</span></caption>
+							<thead>
+							<tr>
+							<th scope="col" colspan="3">과금 구분</th>
+							<th scope="col">과금 기준</th>
+							<th scope="col">요금</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+							<td rowspan="5">Linux</td>
+							<td>CentOS 6.5</td>
+							<td rowspan="7">64bit</td>
+							<td rowspan="7">사용 시간 누적</td>
+							<td rowspan="5">0원/시간</td>
+							</tr>
+							<tr>
+							<td>CentOS 7.1</td>
+							</tr>
+							<tr>
+							<td>Debian 8.2.0</td>
+							</tr>
+							<tr>
+							<td>Ubuntu 14.04</td>
+							</tr>
+							<tr>
+							<td>Ubuntu 16.04 LTS</td>
+							</tr>
+							<tr>
+							<td rowspan="2">Windows</td>
+							<td>Windows Server 2008 R2 Standard</td>
+							<td rowspan="2">28원/시간</td>
+							</tr>
+							<tr>
+							<td>Windows Server 2012 R2 Standard</td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+						
+						<em class="noti_title">알림</em>
+						<ul class="lst_desc">
+						<li class="desc_item">Windows 2008을 이용하실때는 RAM은 32GB까지 사용 가능합니다.</li>
+						</ul>
+					</div>
+
+					<div class="desc_group">
+						<h4 class="h_desc">Monitoring</h4>
+						<span class="tbl_noti">(VAT 별도)</span>
+						<div class="tbl_wrap is_round">
+							<table class="tbl">
+							<caption><span>Monitoring 과금 구분 별 요금</span></caption>
+							<thead>
+							<tr>
+							<th scope="col">과금 구분</th>
+							<th scope="col">과금 기준</th>
+							<th scope="col">요금</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+							<td>Resource Monitoring</td>
+							<td>무료 제공</td>
+							<td>0원</td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+						
+						<em class="noti_title">알림</em>
+						<ul class="lst_desc">
+						<li class="desc_item">Monitoring을 사용하려면 에이전트를 설치해야 합니다.</li>
+						</ul>
+					</div>
+
+
+				</section>
+				</div>
+			</div>
+		</div>
+		<!-- //[D] CONTENTS -->
+		<a href="#container" class="btn_top">TOP</a>
+	</div>
+	<!--[D] FOOTER -->
+	<?php include 'inc/footer.html';?>
+	<!--//[D] FOOTER -->
+</div>
+
+<!--[D] widget -->
+	<?php include 'inc/widget.html';?>
+<!--//[D] widget -->
+
+<!-- [D] LAYER -->
+<?php include 'inc/layer_loading.html';?>
+<!-- [D] LAYER -->
+
+<!-- Javascript Area -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+<!-- 마크업 확인용입니다. -->
+<style>
+.case_view{display:inline-block;position:fixed;bottom:0;left:0;z-index:1000;width:auto;padding:5px;background:#000;opacity:0.7}
+.case_view .btn{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+</style>
+<div class="case_view">
+	<?php include 'inc/case_view_common.html';?>
+</div>
+
+
+<script src="js/case_view.js"></script>
+<!-- //마크업 확인용입니다. -->
+</body>
+</html>

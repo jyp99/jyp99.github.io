@@ -1,0 +1,351 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="css/solution.css">
+<title>layout :: Payco Place Shop</title>
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul class="skip">
+<li><a href="#nav" onclick="document.getElementById('nav').tabIndex=-1;document.getElementById('nav').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- [D] side menu 열릴 경우 .is_sidebar_opened 추가 -->
+<div class="wrap is_sidebar_opened">
+	<!--[D] HEADER -->
+	<header id="header" class="header">
+		<div class="header_top">
+			<h1 class="logo"><a href="#" class="link"><img src="img/logo_payco_place.png" alt="PAYCO Place Shop" width="127" height="12" class="img"></a></h1>
+			<div class="top_menu">
+				<div class="setting_area">
+					<!-- [D] btn_setting 클릭 시 .is_selected 추가 -->
+					<button type="button" class="btn_setting ">박승철 매니저님 안녕하세요.</button>					
+					<div class="settings">
+						<ul class="setting_lst">						
+						<li class="setting_item is_selected"><a href="#" class="setting">위치네일스 가로수길점 (입점) 매니저</a></li>
+						<li class="setting_item"><a href="#" class="setting">박승철헤어스투디오 이대점 (입점) 매니저</a></li>
+						<li class="setting_item"><a href="#" class="setting">위치네일스 강남1호점 (입점) 매니저</a></li>
+						<li class="setting_item"><a href="#" class="setting">박승철 판교점 원장</a></li>
+						<li class="setting_item"><a href="#" class="setting">이리온 송파점 (입점) PET_HOSPITAL 매니저</a></li>
+						<li class="setting_item"><a href="#" class="setting">이리온 송파점 (입점) PET_HOSPITAL 매니저</a></li>
+						<li class="setting_item"><a href="#" class="setting">이리온 송파점 (입점) PET_HOSPITAL 매니저</a></li>
+						<li class="setting_item"><a href="#" class="setting">박승철 판교점 원장</a></li>
+						<li class="setting_item"><a href="#" class="setting">박승철 판교점 원장</a></li>
+						<li class="setting_item"><a href="#" class="setting">박승철 판교점 원장</a></li>
+						<li class="setting_item"><a href="#" class="setting">박승철 판교점 원장</a></li>
+						</ul>
+						<a href="#" class="setting setting_logout">로그아웃</a>
+					</div>
+
+					<!-- 2차 스펙 (예정..) -->
+					
+					<div class="settings" style="display:none">
+						<div class="search_area">
+							<form>
+							<fieldset>
+								<legend>매장검색</legend>
+								<div class="search">
+									<span class="inp_search"><input type="text" id="search" placeholder="매장검색" aria-label="매장검색" class="inp"></span>
+									<button type="submit" class="btn_search">검색</button>
+									<!-- [D] 삭제버튼 필요시 노출 상위 .search 영역에 .is_focus 추가 -->
+									<button type="button" class="btn_search_del">입력내용 삭제</button>
+								</div>
+							</fieldset>
+							</form>
+						</div>
+						<ul class="setting_lst">
+						<!-- [D] 선택 시 .is_selected 추가 -->
+						<li class="setting_item"><a href="#" class="setting"><mark>위치네일스</mark> 가로수길점 (입점) 매니저</a></li>
+						<li class="setting_item"><a href="#" class="setting">박승철헤어스투디오 이대점 (입점) 매니저</a></li>
+						<li class="setting_item"><a href="#" class="setting"><mark>위치네일스</mark> 강남1호점 (입점) 매니저</a></li>
+						<li class="setting_item"><a href="#" class="setting">박승철 판교점 원장</a></li>
+						<li class="setting_item"><a href="#" class="setting">이리온 송파점 (입점) PET_HOSPITAL 매니저</a></li>
+						<li class="setting_item"><a href="#" class="setting">이리온 송파점 (입점) PET_HOSPITAL 매니저</a></li>
+						<li class="setting_item"><a href="#" class="setting">이리온 송파점 (입점) PET_HOSPITAL 매니저</a></li>
+						<li class="setting_item"><a href="#" class="setting">박승철 판교점 원장</a></li>
+						</ul>
+						<!-- [D] 매장없음 -->
+						<ul class="setting_lst" style="display:none">
+						<li class="setting_item is_none">해당하는 매장이 없습니다.</li>						
+						</ul>
+						<a href="#" class="setting setting_logout">로그아웃</a>
+					</div>
+					
+				</div>
+				<ul class="menu">				
+				<li class="menu_item"><a href="#" class="link">고객센터</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="header_store">
+			<h2 class="logo_store">
+				<a href="#" class="link"><span class="tit_logo">박승철 헤어스투디오</span><span class="tit_store">서현점</span></a>
+			</h2>
+			<nav class="nav_area">
+				<ul id="nav" class="nav">
+				<!-- [D] 선택 시 .is_selected 추가 -->
+				<li class="nav_item is_selected"><a href="#" class="link">예약관리</a></li>
+				<li class="nav_item"><a href="#" class="link">마케팅관리</a></li>
+				<li class="nav_item is_disabled"><a href="#" class="link">고객관리</a></li>
+				<li class="nav_item is_disabled"><a href="#" class="link">상품관리</a></li>
+				<li class="nav_item is_disabled"><a href="#" class="link">정산관리</a></li>
+				<li class="nav_item is_disabled"><a href="#" class="link">매장관리</a></li>
+				</ul>
+				<div class="search_area">
+					<form>
+					<fieldset>
+						<legend>매장검색</legend>
+						<div class="search">
+							<span class="inp_search"><input type="text" id="search" placeholder="매장검색" aria-label="매장검색" class="inp"></span>
+							<button type="submit" class="btn_search">검색</button>
+							<!-- [D] 삭제버튼 필요시 노출 상위 .search 영역에 .is_focus 추가 -->
+							<button type="button" class="btn_search_del">입력내용 삭제</button>
+						</div>
+					</fieldset>
+					</form>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<!--[D] // HEADER -->
+	<div class="snb_wrap">
+		<ul class="snb">
+		<!-- [D] 선택 시 .is_selected 추가 -->
+		<li class="snb_item designer_item"><a href="#" class="link is_selected">디자이너별 예약현황</a></li>
+		<li class="snb_item contract_item"><a href="#" class="link">고객 예약 내역</a></li>
+		<li class="snb_item dsc_btn_item">
+			<a href="#" class="dsc_btn btn_reservation">외부 예약 변동</a>
+			<span class="ico_dsc">버튼 설명</span>
+		</li>
+		</ul>
+		<ul class="banner_wrap">
+		<li class="banner_item"><a href="#" class="banner_link"><img src="img/img_snb_banner1.png" alt="고객님께 페이코 플레이스 주소(URL)를 보내주세요. 페이코 플레이스 보내기"></a></li>
+		<li class="banner_item"><a href="#" class="banner_link"><img src="img/img_snb_banner2.png" alt="PAYCO Place SHOP. 회식비 50만원 지원 이벤트"></a></li>
+		</ul>
+        <div class="legend">
+            <em class="legend_tit">카테고리 범례</em>
+            <ul class="legend_lst">
+            <li class="legend_item color0">디폴트</li>
+            <li class="legend_item color1">컷</li>
+            <li class="legend_item color2">펌</li>
+            <li class="legend_item color3">염색</li>
+            <li class="legend_item color4">클리닉</li>
+            <li class="legend_item color5">메이크업</li>
+            <li class="legend_item color6">추가</li>
+            <li class="legend_item color7">추가</li>
+            <li class="legend_item color8">추가</li>
+            <li class="legend_item color9">추가</li>
+            <li class="legend_item color10">기타</li>
+            </ul>
+        </div>
+	</div>
+	<span class="ly_tooltip ly_tooltip1"><!-- [D] 툴팁 활성시 ly_tooltip 에 is_show 클래스 추가 -->
+		<span class="tooltip_inner">[네이버 예약 파트너센터],<br>[카카오 헤어샵] 예약을<br><b>페이코 플레이스</b> 하나로 관리할 수 있습니다.</span>
+	</span>
+	<!-- [D] CONTENTS -->
+	<main id="content" class="content">
+		<div class="inner">
+			<h2 class="blind">디자이너별 예약현황</h2>
+			<div class="info_area">
+				<div class="total_bx">
+					<h3 class="tit_date">2017년 12월 04일</h3>
+					<ul class="lst_info">
+					<li class="total_item">
+						<span class="tit">예약대기</span>
+						<span class="txt">18</span>
+					</li>
+					<li class="total_item">
+						<span class="tit">예약완료</span>
+						<span class="txt">2</span>
+					</li>
+					<li class="total_item">
+						<span class="tit">시술중</span>
+						<span class="txt">4</span>
+					</li>
+					<li class="total_item">
+						<span class="tit">시술완료</span>
+						<span class="txt">6</span>
+					</li>
+					<li class="total_item item_noshow">
+						<span class="tit">No Show</span>
+						<span class="txt">1</span>
+					</li>
+					</ul>
+				</div>					
+			</div>
+			<div class="sub_wrap"></div>
+			<!-- [D] FOOTER -->	
+			<footer id="footer" class="footer">
+				<ul class="footer_menu_lst">
+				<li class="footer_menu_item"><a href="#" class="footer_link">이용약관</a></li>
+				<li class="footer_menu_item"><a href="#" class="footer_link"><strong class="menu_txt">개인정보취급방침</strong></a></li>
+				</ul>
+				<p class="address">© NHN Entertainment Corp. All Rights Reserved.  TEL : 1544-7967  E-mail : support@place.payco.com</p>
+			</footer>
+			<!-- [D] // FOOTER -->
+		</div>
+	</main>
+	<!--[D] // CONTENTS -->
+	<!--[D]디자이너별 예약현황 -->
+	<?php include 'inc/aside_designer.html';?>
+	<!-- [D] 레이어 팝업_오픈 감사이벤트 -->
+	<div class="layer_wrap" style="display:none">
+		<div class="layer layer_banner">				
+			<div class="layer_cont">
+				<img src="img/img_ly_banner.jpg" alt="PAYCO Place SHOP 오픈 감사 이벤트">
+				<div class="blind">
+					<h2>페이코 플레이스가 회식비 쏜다!!</h2>
+					<p>고객이 결제할수록 회식비가 쌓이는 슈퍼 그뤠잇 이벤트</p>
+					<p>이벤트 기간 : 2017.12.15 ~ 2018.1.15</p>
+					<p>최대 50만원</p>
+				</div>				
+				<a href="#" class="btn_go_event">이벤트 자세히 보러가기</a>
+			</div>
+			<div class="other_wrap">
+				<div class="checkbox is_checked">
+					<span class="ico ico_checkbox"><input type="checkbox" id="check" tabindex="-1"></span>
+					<label for="check" class="lbl">오늘 다시 보지 않기</label>
+				</div>				
+				<button type="button" class="btn btn_close">닫기</button>
+			</div>
+			<button type="button" class="btn_close"><span class="ico ico_close">레이어 닫기</span></button>
+		</div>
+	</div>
+	<!-- [D] // 레이어 팝업_오픈 감사이벤트 -->
+	<!-- [D] 레이어 팝업_SMS로 받기 -->
+	<div class="layer_wrap" style="display:none">
+		<div class="layer ly_place_sns">
+			<div class="layer_cont">
+				<h2 class="tit"><span class="tit_sms"><em class="blind">SMS로 받기</em></span></h2>
+				<p class="sms_txt1">
+					<img src="img/ly_sms_txt1.gif" alt="휴대폰 번호를 입력하신 후 전송 버튼을 누르면, 페이코 플레이스 이동 경로가 SMS로 전송됩니다.">
+				</p>
+				<div class="sms_place_area">
+					<span class="inp_bx"><label for="num1" class="blind">휴대폰 첫째자리</label><input type="text" id="num1" maxlength="3" value="010"></span><span class="bar"><span>&nbsp;</span></span><span class="inp_bx"><label for="num2" class="blind">휴대폰 둘째자리</label><input type="text" id="num2" maxlength="4"></span><span class="bar"><span>&nbsp;</span></span><span class="inp_bx"><label for="num3" class="blind">휴대폰 셋째자리</label><input type="text" id="num3" maxlength="4"></span><a href="#" class="btn_submit"><em class="blind">전송</em></a>
+				</div>
+				<span class="sms_place_chk_agree">
+					<span class="checkbox-applied" id="agree"><span class="checkbox-mark has_checked"></span><input type="checkbox" id="agree_chk"></span> <!-- [D]체크된 경우 .has_cheked 클래스 추가 -->
+					<label for="agree"><img src="img/ly_sms_chk_lable.gif" alt="아래 내용을 확인했습니다."></label>
+				</span>
+				<div class="sms_txt2">
+					<div class="blind">
+						<p>고객에게 문자를 발송하기 전에 아래 내용을 안내하고 고객의 동의를 받아 주시기 바랍니다. </p>
+						<dl>
+							<dt>문자 발송에 대한 동의</dt>
+							<dd>본 문자는 고객님의 요청에 따라 발송됩니다.</dd>
+							<dt>개인정보 수집 및 이용 동의</dt>
+							<dd>고객님의 휴대폰 번호는 페이코 플레이스 웹 주소(URL) 전송 목적으로만 <br> 수집 및 이용하며, 문자 전송 완료 시 즉시 파기합니다.</dd>
+							<dt>개인정보 처리 위탁 안내</dt>
+							<dd>문자는 NHN엔터테인먼트 시스템을 통해 전송됩니다.</dd>
+						</dl>
+					</div>
+					<img src="img/ly_sms_txt2.gif" alt="">
+				</div>
+			</div>
+			<div class="ly_place_close"><a href="#"><em class="blind">닫기</em></a></div>
+		</div>
+		<span class="align"></span>
+	</div>
+	<!-- [D] // 레이어 팝업_SMS로 받기 -->
+
+</div>
+
+<!-- [D] 마크업 뷰를 위한 임시코드입니다. 개발적용 불가합니다 -->
+<style>
+	.sample {
+		overflow: hidden;
+		position: fixed;
+		bottom: 55px;
+		left: 150px;
+		padding: 10px;
+		background: rgba(0, 0, 0, .6);
+		border: 2px solid #444;
+		z-index: 200000;
+		font-size: 11px;
+		color: #ccc;
+		line-height: 18px
+	}
+
+	.sample.sample-fold {
+		height: 10px;
+	}
+
+	.sample a {
+		display:block;
+		font-size: 11px;
+		color: #fff;
+		cursor: pointer
+	}
+
+	.sample-btn {
+		padding: 2px;
+		background-color: #fff;
+	}
+</style>
+<div class="sample">	
+	<a href="#" class="sample02">매장검색 2차</a>
+	<a href="#" class="sample03">매장검색 2차 - 검색어 입력</a>
+	<a href="#" class="sample04">매장검색 2차 - 매장없음</a>
+	<a href="#" class="pg_layer">레이어 팝업_오픈 감사이벤트</a>
+	<a href="#" class="pg_layer02">레이어 팝업_SMS로 받기</a>
+</div>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		$('.btn_aside_fold').on('click',function(){
+			var btnText = $('.ico_fold').text(),
+				btnTrue = '펼치기',
+				btnFalse = '접기';
+			$('.wrap').toggleClass('is_sidebar_opened');
+
+			switch(btnText) {
+				case btnTrue:
+					$('.ico_fold').text(btnFalse);
+					return false;
+				case btnFalse:
+					$('.ico_fold').text(btnTrue);
+			}
+		});
+
+		$('.btn_setting').on('click', function(){
+			$(this).toggleClass('is_selected');
+		});
+
+		$('.sample02').on('click', function(){
+			$('.settings').eq(0).hide();
+			$('.settings').eq(1).show();
+		});
+
+		$('.sample03').on('click', function(){
+			$('.settings').eq(0).hide();
+			$('.settings').eq(1).show();
+			$('.setting_area .search').addClass('is_focus');
+		});
+
+		$('.sample04').on('click', function(){
+			$('.settings').eq(0).hide();
+			$('.settings').eq(1).show().find('.setting_lst').eq(0).hide();
+			$('.settings').eq(1).show().find('.setting_lst').eq(1).show();
+		});
+		$('.pg_layer').on('click', function () {
+			$('.layer_wrap').eq(1).hide();
+			$('.layer_wrap').eq(0).show();
+		});	
+		$('.pg_layer02').on('click', function () {
+			$('.layer_wrap').eq(0).hide();
+			$('.layer_wrap').eq(1).show();
+		});	
+
+		$('.btn_reservation+.ico_dsc').hover(function () {
+			$('.ly_tooltip1').show();
+			},function(){
+			$('.ly_tooltip1').hide();
+		});
+		
+	});
+</script>
+<!-- [D] // 마크업 뷰를 위한 임시코드입니다. -->
+</body>
+</html>

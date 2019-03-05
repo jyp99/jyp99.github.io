@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="all">
+<title>회원가입 :: HANGAME</title>
+<link rel="stylesheet" type="text/css" href="css/hangame_join.css">
+<!--[if lt IE 9]>
+<script type="text/javascript" src="../js/html5.js"></script>
+<script type="text/javascript" src="../js/respond.min.js"></script>
+<![endif]-->
+</head>
+<body class="join_renewal is_pc"><!-- [D] body 에 사용 용도에 따른 클래스 추가 : PC 전체화면 = is_pc, PC 팝업 = 별도 클래스 사용 X, 모바일 = is_m -->
+
+<div class="wrap">
+	<header id="header" class="header">
+		<em class="logo_area">
+			<img src="img/logo_hangame.png" width="234" height="36" alt="HANGAME">
+		</em>
+	</header>
+	<div id="container">
+		<!-- [D] CONTENTS -->
+		<div class="content has_sec_twomore">
+			<div class="sec_wrap">
+				<div class="tit_wrap">
+					<h1 class="h_txt">회원가입을 하려면<br class="is_pc_skip"> <em class="point_txt">계속하기</em>를 눌러주세요</h1>
+				</div>
+				<p class="sub_txt">[계속하기]를 누르시면 회원가입을 진행할 수 있습니다.<br class="is_m_skip">직접 가입하지 않은 아이디는 PC 한게임에서 탈퇴신청 해 주세요</p>
+				<ul class="lst_use_id">
+				<li class="id_item">
+					<span class="dummy"></span>
+					<span class="txt_area">
+						<span class="user_id_wrap">
+							<span class="user_id">songyang1000</span>
+							<em class="state_txt is_using">[사용중]</em>
+						</span>
+					</span>
+				</li>
+				<li class="id_item">
+					<span class="dummy"></span>
+					<span class="txt_area">
+						<span class="user_id_wrap">
+							<span class="user_id">가나다라마법사</span>
+							<em class="state_txt is_using">[사용중]</em>
+						</span>
+					</span>
+				</li>
+				<li class="id_item">
+					<span class="dummy"></span>
+					<span class="txt_area">
+						<span class="user_id_wrap">
+							<span class="user_id">가나다라마법사</span>
+							<em class="state_txt is_using">[사용중]</em>
+						</span>
+					</span>
+				</li>
+				<li class="id_item">
+					<span class="dummy"></span>
+					<span class="txt_area">
+						<span class="user_id_wrap">
+							<span class="user_id">abc***@abc.com</span>
+							<em class="state_txt">[탈퇴신청중]</em>
+						</span>
+					</span>
+				</li>
+				<li class="id_item">
+					<span class="dummy"></span>
+					<span class="txt_area">
+						<span class="user_id_wrap">
+							<span class="sp ico_service ico_payco">PAYCO</span>
+							<!-- [D] 서비스별 아이콘 대체 사용
+							<span class="sp ico_service ico_facebook">페이스북</span>
+							<span class="sp ico_service ico_sayclub">세이클럽</span>
+							<span class="sp ico_service ico_google">구글</span>
+							<span class="sp ico_service ico_naver">네이버</span>
+							-->
+							<span class="user_id">abc***@naver.com</span>
+							<em class="state_txt">[90일 정지후 삭제]</em>
+						</span>
+					</span>
+				</li>
+				</ul>
+				<div class="btn_wrap">
+					<a href="#" class="btn">계속하기</a>
+				</div>
+			</div>
+
+			<div class="sec_wrap">
+				<div class="tit_wrap">
+					<h1 class="h_txt">휴면 아이디로<br class="is_pc_skip"> 분리보관된 아이디가 있습니다</h1>
+				</div>
+				<p class="sub_txt">[재사용하기]를 클릭하면 해당 아이디로 다시 로그인하실 수 있습니다<br class="is_m_skip">삭제일 이후에는 해당 아이디는 다시 사용하실 수 없습니다</p>
+				<ul class="lst_select_radio lst_use_id">
+				<li class="radio_item"><!-- [D]체크박스 체크시 radio_item에 is_checked 클래스 추가 -->
+					<input type="radio" name="authenti_method" id="sleep_id1" class="inp_check">
+					<div class="radio_wrap">
+						<span class="line"></span>
+						<div class="check_area">
+							<label for="sleep_id1" class="lb">
+								<span class="dummy"></span>
+								<span class="txt_area">
+									<span class="user_id_wrap">
+										<span class="user_id">songyang1000</span>
+									</span>
+								</span>
+								<span class="inp_radio sp"></span>
+							</label>
+						</div>
+					</div>
+				</li>
+				<li class="radio_item"><!-- [D]체크박스 체크시 radio_item에 is_checked 클래스 추가 -->
+					<input type="radio" name="authenti_method" id="sleep_id2" class="inp_check">
+					<div class="radio_wrap">
+						<span class="line"></span>
+						<div class="check_area">
+							<label for="sleep_id2" class="lb">
+								<span class="dummy"></span>
+								<span class="txt_area">
+									<span class="user_id_wrap">
+										<span class="sp ico_service ico_payco">PAYCO</span>
+										<span class="user_id">abc***@naver.com</span>
+									</span>
+								</span>
+								<span class="inp_radio sp"></span>
+							</label>
+						</div>
+					</div>
+				</li>
+				</ul>
+				<div class="btn_wrap">
+					<a href="#" class="btn btn_point2">재사용하기</a>
+				</div>
+			</div>
+
+		</div>
+		<!-- //[D] CONTENTS -->
+	</div>
+	
+	<footer id="footer" class="footer">
+		<p class="corp_txt">© NHN Entertainment Corp.</p>
+	</footer>
+</div>
+
+
+<!-- Javascript Area -->
+<script src="../js/jquery-1.8.3.min.js"></script>
+
+<!-- 마크업 확인용입니다. -->
+<style>
+.case_view{display:inline-block;position:fixed;bottom:0;left:0;z-index:1100;width:auto;padding:5px;background:#000;opacity:0.7}
+.case_view .btn{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+</style>
+<div class="case_view">
+	<a href="#" class="btn" onclick="$('body').attr('class','is_pc');return false;">피씨 화면</a>
+	<a href="#" class="btn" onclick="$('body').attr('class','');return false;">팝업 화면</a>
+	<a href="#" class="btn" onclick="$('body').attr('class','is_m');return false;">모바일 화면</a>
+</div>
+<script>
+$(function(){
+  $('.radio_item .lb').click(function(e){
+		$(this).parents('.lst_select_radio').find('.radio_item').removeClass('is_checked');
+		$(this).parents('.radio_item').addClass('is_checked');
+  });
+});
+</script>
+<!-- //마크업 확인용입니다. --> 
+</body>
+</html>

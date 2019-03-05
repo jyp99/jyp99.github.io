@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<title>이벤트페이지(1):신맞고 무료 충전소</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<div class="wrap main">
+	<div class="contents login">
+		<h3 class="logo"><img src="img/logo_collabo_gostop.png" alt="페이코 X 한게임 신맞고"></h3>
+		<h3 class="logo" style="display:none"><img src="img/logo_collabo_school.png" alt="페이코 X 2017 갓 오브 하이스쿨"></h3>
+		<h3 class="logo" style="display:none"><img src="img/logo_collabo_poker.png" alt="페이코 X 한게임 포커"></h3>
+		<h3 class="logo" style="display:none"><img src="img/logo_collabo_slots.png" alt="페이코 X 한게임 슬롯"></h3>
+		<p class="main_txt">PAYCO 모든 가맹점에서 결제하면 <strong class="big_txt">매일 신맞고 머니 100% 지급!</strong></p>
+		<p class="dsc_txt">무료충전을 위해 로그인 된 PAYCO ID 정보를 사용 합니다</p>
+		<div class="btn_wrap">
+			<a href="#" class="btn btn_login"><span class="blind">PAYCO 로그인</span></a>
+			<a href="#" class="btn btn_arr">PAYCO 가입하면 <strong class="point_txt">5000만냥 즉시 충전</strong></a>
+			<a href="#" class="btn btn_arr">PAYCO앱 설치하면 <strong class="point_txt">3억냥 즉시 충전</strong></a>
+		</div>
+	</div>
+</div>
+<!-- case review / [D] 마크업 검수용, 개발제외 -->
+<style>
+.case_view{position:fixed;top:30px;right:30px;padding:5px;background:rgba(0,0,0,.5);*background:#000;filter:alpha(opacity=50);color:#fff;z-index:1000}
+.case_view a{display:block;width:200px;font-size:12px;color:#fff;padding:5px}
+.case_view a:hover{color:yellow}
+</style>
+<script src="http://ui-dev.nhnent.com/svnview/hivelab/share/js/jquery-1.11.1.min.js"></script>
+<div class="case_view">
+	<a href="#none" onclick="$('.contents .logo').hide();$('.contents .logo:eq(0)').show();return false;">신맞고 로고</a>
+	<a href="#none" onclick="$('.contents .logo').hide();$('.contents .logo:eq(1)').show();return false;">갓오브 하이스쿨 로고</a>
+	<a href="#none" onclick="$('.contents .logo').hide();$('.contents .logo:eq(2)').show();return false;">포커 로고</a>
+	<a href="#none" onclick="$('.contents .logo').hide();$('.contents .logo:eq(3)').show();return false;">슬롯 로고</a>
+</div>
+<!-- //case review / [D] 마크업 검수용, 개발제외 -->
+</body>
+</html>

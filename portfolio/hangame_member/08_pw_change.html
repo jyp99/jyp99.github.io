@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="all">
+<title>비밀번호 변경 :: HANGAME</title>
+<link rel="stylesheet" type="text/css" href="css/hangame_join.css">
+<!--[if lt IE 9]>
+<script type="text/javascript" src="../js/html5.js"></script>
+<script type="text/javascript" src="../js/respond.min.js"></script>
+<![endif]-->
+</head>
+<body class="join_renewal is_pc"><!-- [D] body 에 사용 용도에 따른 클래스 추가 : PC 전체화면 = is_pc, PC 팝업 = 별도 클래스 사용 X, 모바일 = is_m -->
+
+<div class="wrap">
+	<header id="header" class="header">
+		<em class="logo_area">
+			<img src="img/logo_hangame.png" width="234" height="36" alt="HANGAME">
+		</em>
+	</header>
+	<div id="container">
+		<!-- [D] CONTENTS -->
+		<div class="content">
+			<div class="tit_wrap">
+				<h1 class="h_txt"><em class="point_txt">비밀번호</em>를 변경해 주세요</h1>
+			</div>
+			<!-- [D]비밀번호변경 90일 경과 -->
+			<p class="sub_txt">최근 90일 이상 비밀번호를 변경하지 않으셨습니다<br>안전한 이용을 위해 회원님의 비밀번호를 정기적으로 변경해 주세요</p>
+			<!-- [D]임시 비밀번호 로그인시 대체 적용 -->
+			<p class="sub_txt" style="display:none">임시 비밀번호로 로그인 하셨습니다<br>임시 비밀번호는 고객님이 기억할 수 있는 비밀번호로 변경하셔야 <br class="is_m_skip">한게임 이용이 가능합니다</p>
+			<div class="form_wrap input_info_wrap">
+				<form>
+					<ul class="lst_input_form">
+					<li class="input_item">
+						<div class="inp_wrap">
+							<label for="ip_pw" class="lb_placeholder">현재 비밀번호</label>
+							<input type="password" id="ip_pw" class="inp_txt">
+							<button type="button" class="btn_del"><span class="sp ico_del">입력한 내용 지우기</span></button>
+						</div>
+						<em class="error_txt">비밀번호가 일치하지 않습니다</em>
+					</li>
+					<li class="input_item">
+						<div class="inp_wrap">
+							<label for="ip_new_pw" class="lb_placeholder">새 비밀번호 (6-15자리 영문, 숫자, 특문 조합)</label>
+							<input type="password" id="ip_new_pw" class="inp_txt">
+							<button type="button" class="btn_del"><span class="sp ico_del">입력한 내용 지우기</span></button>
+						</div>
+						<em class="error_txt">영문, 숫자, 특수문자 조합으로 만들어 주세요</em>
+					</li>
+					<li class="input_item">
+						<div class="inp_wrap">
+							<label for="ip_new_pw2" class="lb_placeholder">새 비밀번호 확인</label>
+							<input type="password" id="ip_new_pw2" class="inp_txt">
+							<button type="button" class="btn_del"><span class="sp ico_del">입력한 내용 지우기</span></button>
+						</div>
+						<em class="error_txt">비밀번호가 일치하지 않습니다</em>
+					</li>
+					</ul>
+				</form>
+			</div>
+			<div class="btn_wrap">
+				<a href="#" class="btn">확인</a>
+			</div>
+			<div class="inp_area"><!-- [D] 체크박스 체크시 해당 inp_area에 is_checked 클래스 추가 -->
+				<input type="checkbox" id="check1" class="inp_check">
+				<div class="check_area">
+					<span class="ico_check sp"></span><label for="check1" class="lb">안전한 이용을 위해 다른 기기에서 모두 로그아웃 합니다.</label>
+				</div>
+			</div>
+		</div>
+		<!-- //[D] CONTENTS -->
+	</div>
+	
+	<footer id="footer" class="footer">
+		<p class="corp_txt">© NHN Entertainment Corp.</p>
+	</footer>
+</div>
+
+
+<!-- Javascript Area -->
+<script src="../js/jquery-1.8.3.min.js"></script>
+
+<!-- 마크업 확인용입니다. -->
+<style>
+.case_view{display:inline-block;position:fixed;bottom:0;left:0;z-index:1100;width:auto;padding:5px;background:#000;opacity:0.7}
+.case_view .btn{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+</style>
+<div class="case_view">
+	<a href="#" class="btn" onclick="$('body').attr('class','is_pc');return false;">피씨 화면</a>
+	<a href="#" class="btn" onclick="$('body').attr('class','');return false;">팝업 화면</a>
+	<a href="#" class="btn" onclick="$('body').attr('class','is_m');return false;">모바일 화면</a>
+  <a href="#" class="btn" onclick="$('.sub_txt:eq(0)').hide();$('.sub_txt:eq(1)').show();return false;">임시 비밀번호 로그인</a>
+  <a href="#" class="btn" onclick="$('.sub_txt:eq(1)').hide();$('.sub_txt:eq(0)').show();return false;">비밀번호 변경 90일 경과</a>
+  <a href="#" class="btn" onclick="$('.input_item').toggleClass('is_active');return false;">값 입력시</a>
+  <a href="#" class="btn" onclick="$('.input_item').toggleClass('is_error');return false;">에러 발생</a>
+</div>
+<script>
+$(function(){
+  $('.inp_area .lb').click(function(e){
+		$(this).parents('.inp_area').toggleClass('is_checked');
+  });
+});
+</script>
+<!-- //마크업 확인용입니다. --> 
+</body>
+</html>

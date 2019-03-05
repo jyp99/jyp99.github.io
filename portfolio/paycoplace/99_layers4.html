@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<title>UIO :: PAYCOPlace</title>
+<link rel="stylesheet" type="text/css" href="js/bower_components/tui-date-picker/dist/tui-date-picker.css">
+<link rel="stylesheet" type="text/css" href="js/bower_components/tui-pagination/dist/tui-pagination.css">
+
+<link rel="stylesheet" type="text/css" href="css/solution.css">
+<style type="text/css">
+body{background:#fff}
+.wrap{min-width:0;height:auto;min-height:100%;padding:15px;box-sizing:border-box}
+.content{height:auto;min-height:100%;padding:15px;border:1px solid #eee;background:#fff}
+h1{display:inline-block;margin-bottom:30px;padding:5px 10px;background:#ff0031;font-size:20px;color:#fff}
+.h2{margin-bottom:15px;padding:10px 0;border-bottom:1px solid #eee;font-size:16px}
+h3{margin-bottom:10px;font-size:12px;font-weight:normal;color:#777}
+/*h3:before{font-size:20px;padding-right:2px;vertical-align:middle;content:'·'}*/
+h4{margikn-bottom:10px;padding-left:10px;color:#666}
+h4:before{padding-right:5px;content:'-'}
+.desc{margin-bottom:10px;padding:10px;font-size:13px;letter-spacing:-0.03em;background:#f1f1f1;line-height:21px}
+.ui_area{padding:20px 0;}
+hr{margin:20px 0;border:0;}
+</style>
+</head>
+<body>
+<div class="wrap">
+	<!-- [D] 마크업 뷰 스타일입니다. 무시해주세요. -->
+	
+	<!-- // 마크업 뷰 스타일입니다. 무시해주세요. -->
+
+	<!-- [D] CONTENTS -->
+	<main class="">
+		<h1>PAYCOPlace - Shop web : Layer</h1>
+		<h2 class="h2">공통</h2>
+		<p class="desc">-</p>
+		
+		<div class="layer_wrap">
+			
+			<!-- 고객정보 -->
+			<div class="layer">				
+				<div class="layer_cont">
+					<div class="layer_h_cont">
+						<h2 class="layer_h_tit">고객정보</h2>	
+					</div>
+					<div class="search_form">
+						<div class="search_form_box">
+							<label for="txt2" class="inp_lbl">고객검색</label>
+							<!-- [D] 입력 시 .is_focus 추가 -->
+							<div class="search">
+								<input type="text" id="txt2" class="inp_txt" placeholder="이름을 입력하여 주세요." aria-label="이름을 입력하여 주세요.">
+								<button type="button" class="btn_del">입력내용 삭제</button>
+							</div>
+							<button type="button" class="btn btn_type1">검색</button>							
+						</div>
+					</div>
+					<p class="txt_search_result"><em class="color_point">승철</em>로 검색된 고객 <em class="color_point">4</em>명</p>
+					<div class="tbl_wrap tbl_client" style="">
+						<table class="tbl tbl_history">
+						<caption><span class="blind">고객정보</span></caption>
+						<colgroup>
+							<col style="width:98px">
+							<col style="width:102px">
+							<col style="width:157px">
+							<col style="width:154px">
+							<col style="">							
+						</colgroup>
+						<thead>
+						<tr>
+							<th scope="col">고객명</th>
+							<th scope="col">성별</th>
+							<th scope="col">연락처</th>
+							<th scope="col">최근방문일</th>
+							<th scope="col">최근시술</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>						
+						<td>박승철</td>
+						<td>여</td>
+						<td>010-****-1234</td>
+						<td>2017.09.09</td>
+						<td class="align_l txt_selector"><em class="color_clinic">여) 모발M클리닉여) 모발M클리닉여) 모발M클리닉여) 모발M클리닉여) 모발M클리닉여) 모발M클리닉</em></td>
+						</tr>
+						<tr>
+						<td>박승철</td>
+						<td>여</td>
+						<td>010-****-1234</td>
+						<td>2017.09.09</td>
+						<td class="align_l txt_selector"><em class="color_clinic">여) 모발M클리닉</em></td>
+						</tr>
+						<tr>
+						<td>박승철</td>
+						<td>여</td>
+						<td>010-****-1234</td>
+						<td>2017.09.09</td>
+						<td class="align_l txt_selector"><em class="color_clinic">여) 모발M클리닉</em></td>
+						</tr>
+						<tr>
+						<td>박승철</td>
+						<td>여</td>
+						<td>010-****-1234</td>
+						<td>2017.09.09</td>
+						<td class="align_l txt_selector"><em class="color_clinic">여) 모발M클리닉</em></td>
+						</tr>
+						<tr>
+						<td>박승철</td>
+						<td>여</td>
+						<td>010-****-1234</td>
+						<td>2017.09.09</td>
+						<td class="align_l txt_selector"><em class="color_clinic">여) 모발M클리닉</em></td>
+						</tr>
+						<tr>
+						<td>박승철</td>
+						<td>여</td>
+						<td>010-****-1234</td>
+						<td>2017.09.09</td>
+						<td class="align_l txt_selector"><em class="color_clinic">여) 모발M클리닉</em></td>
+						</tr>
+						<tr>
+						<td>박승철</td>
+						<td>여</td>
+						<td>010-****-1234</td>
+						<td>2017.09.09</td>
+						<td class="align_l txt_selector"><em class="color_clinic">여) 모발M클리닉</em></td>
+						</tr>
+						<tr>
+						<td>박승철</td>
+						<td>여</td>
+						<td>010-****-1234</td>
+						<td>2017.09.09</td>
+						<td class="align_l txt_selector"><em class="color_clinic">여) 모발M클리닉</em></td>
+						</tr>
+						</tbody>
+						</table>
+<hr>
+						<div class="tbl_wrap tbl_client" style="">
+							<table class="tbl tbl_history">
+							<caption><span class="blind">고객정보</span></caption>
+							<colgroup>
+								<col style="width:98px">
+								<col style="width:102px">
+								<col style="width:157px">
+								<col style="width:154px">
+								<col style="">							
+							</colgroup>
+							<thead>
+							<tr>
+								<th scope="col">고객명</th>
+								<th scope="col">성별</th>
+								<th scope="col">연락처</th>
+								<th scope="col">최근방문일</th>
+								<th scope="col">최근시술</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+							<td colspan="5" class="is_data_none">
+								<p class="txt">검색 결과가 없습니다.</p>
+							</td>							
+							</tr>
+							</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="layer_btn_area">
+					<div id="pagination1" class="tui-pagination"></div>
+				</div>
+				<button type="button" class="btn_close"><span class="ico ico_close">레이어 닫기</span></button>
+			</div>
+			
+			<hr>
+			
+			<!-- 고객정보 2 -->
+			<div class="layer">				
+				<div class="layer_cont">
+					<div class="layer_h_cont">
+						<h2 class="layer_h_tit">고객정보</h2>
+					</div>
+					<a href="#" class="btn btn_back"><span class="ico_back">목록</span></a>
+					
+					
+					<div class="tbl_wrap tbl_client">
+						<table class="tbl tbl_row">
+						<caption><span class="blind">예약내역</span></caption>
+						<colgroup>
+							<col style="width:150px">					
+							<col style="">				
+							<col style="width:150px">					
+							<col style="">					
+						</colgroup>				
+						<tbody>
+						<tr>
+							<th scope="row">고객명</th>
+							<td>박승철</td>
+							<th scope="row">성별</th>
+							<td>여자</td>
+						</tr>
+						<tr>
+							<th scope="row">연락처</th>
+							<td>010-1234-5678</td>
+							<th scope="row">생년월일</th>
+							<td>1990.01.01</td>
+						</tr>
+						<tr>
+							<th scope="row">고객번호</th>
+							<td>0001234</td>
+							<th scope="row">아이디</th>
+							<td>abc@defg.com</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="txtarea">메모</label></th>
+							<td colspan="3">
+								<div class="textedit">
+									<div class="inp_bx inp_bx_md">	
+										<textarea id="txtarea" class="inp_textarea" cols="30" rows="3" disabled>소개로?</textarea>
+									</div>
+									<a href="#" class="btn">수정</a>
+									<a href="#" class="btn">완료</a>
+									<a href="#" class="btn">취소</a>
+								</div>
+							</td>
+						</tr>
+						</tbody>
+						</table>
+					</div>
+					<p class="txt_search_result">예약내역 <em class="color_point">3</em>건</p>
+					<div class="tbl_wrap tbl_client" style="">
+						<table class="tbl tbl_history">
+						<caption><span class="blind">고객정보</span></caption>
+						<colgroup>								
+							<col>							
+							<col>							
+							<col>							
+							<col>
+						</colgroup>
+						<thead>
+						<tr>
+							<th scope="col">방문일</th>
+							<th scope="col">최근시술</th>
+							<th scope="col">담당디자이너</th>
+							<th scope="col">이용상태</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+						<td>박승철</td>
+						<td class="txt_selector2">C컬펌, 커팅 외 1건C컬펌, 커팅 외 1건C컬펌, 커팅 외 1건C컬펌, 커팅 외 1건</td>							
+						<td>규제 디자이너</td>
+						<td>예약취소(매장)</td>
+						</tr>
+						<tr>
+						<td>박승철</td>
+						<td class="txt_selector2">C컬펌, 커팅 외 1건</td>							
+						<td>규제 디자이너</td>
+						<td>예약취소(매장)</td>
+						</tr>
+						<tr>
+						<td>박승철</td>
+						<td class="txt_selector2">C컬펌, 커팅 외 1건</td>							
+						<td>규제 디자이너</td>
+						<td>예약취소(매장)</td>
+						</tr>
+						<tr>
+						<td>박승철</td>
+						<td class="txt_selector2">C컬펌, 커팅 외 1건</td>							
+						<td>규제 디자이너</td>
+						<td>예약취소(매장)</td>
+						</tr>
+						<tr>
+						<td>박승철</td>
+						<td class="txt_selector2">C컬펌, 커팅 외 1건</td>							
+						<td>규제 디자이너</td>
+						<td>예약취소(매장)</td>
+						</tr>
+						</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="layer_btn_area">
+					<div id="pagination2" class="tui-pagination"></div>
+				</div>
+				<button type="button" class="btn_close"><span class="ico ico_close">레이어 닫기</span></button>
+			</div>
+
+			<hr>
+			<!-- [D] 레이어 팝업_연동 예시 -->
+			<div class="layer layer_img_guide">
+				<div class="layer_cont">
+					<h2 class="layer_h_tit">외부 예약 연동 예시</h2>
+					<p class="layer_txt">
+						네이버 예약 파트너센터, 카카오 헤어샵을 연동하면 페이코 플레이스 하나로 모든 예약을 관리할 수 있습니다.
+					</p>
+					<div class="img_wrap">
+						<img src="img/img_reservation.png" alt="">
+					</div>
+				</div>	
+				<button type="button" class="btn_close"><span class="ico ico_close">레이어 닫기</span></button>
+			</div>
+
+			<hr>
+
+			<!-- [D] 레이어 팝업_연동 설정 -->
+				<div class="layer">
+					<div class="layer_cont">
+						<div class="layer_h_cont">
+							<h2 class="layer_h_tit">연동 설정</h2>
+							<p class="layer_h_sub tag_color2" style="display:none">승인요청</p><!-- [D]STEP3 탭 노출시에만 display:block -->
+						</div>
+						<ol class="lst_step">
+						<li class="step_item is_active"><a href="#step1" class="step_link">STEP1. ID/PW 입력</a></li><!-- [D]선택된 step_item에 is_active 클래스 추가 -->
+						<li class="step_item"><a href="#step2" class="step_link">STEP2. 매장 선택</a></li>
+						<li class="step_item"><a href="#step3" class="step_link">STEP3. 직원정보 연동</a></li>
+						</ol>
+						
+						<div class="step_cnt_wrap" id="step1" style="display:block">
+							<div class="tbl_wrap">
+								<table class="tbl tbl_row tbl_type">
+								<caption><span class="blind">연동 설정</span></caption>
+								<colgroup>
+									<col style="width:150px">
+									<col>
+								</colgroup>
+								<tbody>
+								<tr>
+									<th scope="row">서비스</th>
+									<td>네이버 예약 파트너센터</td>
+								</tr>
+								<tr>
+									<th scope="row"><div class="txt_inner"><em class="ico_required">필수 입력</em>ID</div></th>
+									<td>
+										<span class="inp_area is_no_line"><!-- [D]입력 안하고 넘어가려고하면 해당 inp_area에 is_error 클래스 추가 -->
+											<input type="text" id="txt3" class="inp_txt" placeholder="네이버 예약 파트너센터 아이디를 입력해주세요." aria-label="네이버 예약 파트너센터 아이디를 입력해주세요.">
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><div class="txt_inner"><em class="ico_required">필수 입력</em>PW</div></th>
+									<td>
+										<span class="inp_area is_no_line">
+											<input type="text" id="txt4" class="inp_txt" placeholder="네이버 예약 파트너센터 비밀번호를 입력해주세요." aria-label="네이버 예약 파트너센터 비밀번호를 입력해주세요.">		
+										</span>
+									</td>
+								</tr>
+								</tbody>
+								</table>
+							</div>
+							<p class="error_txt">네이버 예약 파트너센터 아이디와 패스워드는 필수 입력 입니다.</p><!-- [D]입력 안하고 넘어가려고하면 error_txt에 is_error 클래스 추가 -->
+							
+							<div class="noti_wrap">
+								<em class="ico ico_caution">유의사항</em>
+								<ul class="lst_noti">
+								<li class="noti_item txt_icon">연동 설정을 완료하면 [네이버 예약 파트너센터] 상의 정보를 페이코 플레이스에서 확인할 수 있으며,<br> 해당 정보의 소유권은 회원에게 있습니다.</li>
+								<li class="noti_item txt_icon">[네이버 예약 파트너센터]의 예약은 페이코 플레이스에서 예약 변경, 취소가 불가능합니다.<br>예약 변경, 취소는 해당 서비스에서 진행해야 합니다.</li>
+								</ul>
+							</div>
+							<div class="agree_wrap">
+								<div class="checkbox checkbox_inline is_checked">
+									<span class="ico ico_checkbox"><input type="checkbox" id="check" tabindex="-1"></span>
+									<label for="check" class="lbl">개인 정보 수집 이용동의</label>
+									<a href="#" class="agree_link">내용보기</a>
+								</div>
+							</div>
+						</div>
+						<div class="step_cnt_wrap" id="step2">
+							<!-- [D]등록된 매장이 있는 경우 노출 영역 -->
+							<div class="img_list_wrap">
+								<ul class="img_list"> 
+								<li class="img_list_item">
+									<div class="img_list_tit">
+										이젠 헤어 (010-1234-1234)
+									</div>
+									<div class="img_list_value">
+										<div class="radio radio_inline is_checked">
+											<span class="ico ico_radio"><input type="radio" id="check1" tabindex="-1"></span>
+										</div>
+									</div>
+									<!-- [D] label 선택 시 .radio 에 .is_checked 추가 부탁드립니다. -->
+									<label for="check1" class="img_list_label">디자이너</label>
+								</li>
+								<li class="img_list_item">
+									<div class="img_list_tit">
+										이젠 헤어 (010-1234-1234)
+									</div>
+									<div class="img_list_value">
+										<div class="radio radio_inline">
+											<span class="ico ico_radio"><input type="radio" id="check2" tabindex="-1"></span>
+										</div>
+									</div>
+									<label for="check2" class="img_list_label">디자이너</label>
+								</li>
+								<li class="img_list_item">
+									<div class="img_list_tit">
+										이젠 헤어 (010-1234-1234)
+									</div>
+									<div class="img_list_value">
+										<div class="radio radio_inline">
+											<span class="ico ico_radio"><input type="radio" id="check3" tabindex="-1"></span>
+										</div>
+									</div>
+									<label for="check3" class="img_list_label">디자이너</label>
+								</li>
+								</ul>
+							</div>
+							<p class="txt_icon"><em class="ico ico_caution"></em> 연동할 매장을 선택해 주세요.</p>
+							<!-- //[D]등록된 매장이 있는 경우 노출 영역 -->
+							<!-- [D]등록된 매장이 없는 경우 대체노출 영역 -->
+							<div class="img_list_wrap" style="display:none">
+								<ul class="img_list is_data_none"> 
+								<li class="img_list_item">
+									<div class="no_data_noti">
+										<em class="tit_msg">[네이버 예약 파트너센터]에 등록된 매장이 없습니다.</em>
+										<span class="sub_msg">[네이버 예약 파트너센터]에서 매장 등록 후 이용해 주세요.</span>
+									</div>
+								</li>
+								</ul>
+							</div>
+							<!-- //[D]등록된 매장이 없는 경우 대체노출 영역 -->
+
+						</div>
+						<div class="step_cnt_wrap" id="step3">
+							<div class="tbl_wrap">
+								<table class="tbl tbl_row tbl_interlock_setting">
+								<caption><span class="blind">직원정보 연동</span></caption>
+								<colgroup>	
+								<col>
+								<col style="width:203px">
+								<col style="width:337px">
+								</colgroup>
+								<thead>
+								<tr>
+								<th scope="col"></th>
+								<th scope="col">네이버 예약 파트너센터</th>
+								<th scope="col">페이코플레이스</th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr>
+								<th rowspan="4">연동 담당자 선택</th>
+								<td class="td_align"><span class="txt_elp">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</span></td>
+								<td class="td_align2"><span class="txt_elp">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</span> <a href="#" class="btn">담당자 변경</a></td>
+								</tr>
+								<tr>
+								<td class="td_align"><span class="txt_elp">원정일</span></td>
+								<td class="td_align2"><span class="txt_elp">원정일 (신규담당자 생성)</span> <a href="#" class="btn">담당자 변경</a></td>
+								</tr>
+								<tr>
+								<td class="td_align"><span class="txt_elp">새 상품_180130 16:43</span></td>
+								<td class="td_align2"><span class="txt_elp">원정일</span> <a href="#" class="btn">담당자 변경</a></td>
+								</tr>
+								<tr>
+								<td class="td_align"><span class="txt_elp">원정일</span></td>
+								<td class="td_align2"><span class="txt_elp">정주영 (신규 담당자 생성 신규 담당)</span> <a href="#" class="btn">담당자 변경</a></td>
+								</tr>
+								</tbody>
+								</table>
+							</div>
+							<div class="noti_wrap">
+								<em class="ico ico_caution">유의사항</em>
+								<ul class="lst_noti">
+								<li class="noti_item txt_icon">[네이버 예약 파트너센터]에 등록된 담당자와 페이코 플레이스에 등록된 담당자을 연결 시켜주세요.</li>
+								<li class="noti_item txt_icon">페이코 플레이스에서 선택된 담당자에게 네이버 예약 파트너센터에서 발생된 예약이 등록됩니다.</li>
+								<li class="noti_item txt_icon">[네이버 예약 파트너센터]에 등록된 담당자가 페이코 플레이스에 등록되어 있지 않은 경우 “신규 담당자 생성”를 선택해 주세요.</li>
+								</ul>
+							</div>
+
+						</div>
+						<div class="layer_btn_area">
+							<button type="button" class="btn btn_lg btn_type1">취소</button>
+							<button type="button" class="btn btn_lg btn_type1">다음</button><!-- [D]등록된 매장 없을경우 다음버튼에 disabled 속성 추가 -->
+						</div>
+						<button type="button" class="btn_close"><span class="ico ico_close">레이어 닫기</span></button>
+					</div>
+				</div>
+
+
+
+			
+		</div>
+
+		
+
+	</main>
+	<!-- //[D] CONTENTS -->
+</div>
+
+<!-- [D] 마크업용 임시 코드 -->
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/bower_components/tui-code-snippet/dist/tui-code-snippet.js"></script>
+<script src="js/bower_components/tui-date-picker/dist/tui-date-picker.min.js"></script>
+<script src="js/bower_components/tui-pagination/dist/tui-pagination.js"></script>
+
+<style>
+.case_view{display:inline-block;position:fixed;bottom:0;left:0;z-index:1100;width:auto;padding:5px;background:#000;opacity:0.7}
+.case_view .btn{display:inline-block;margin:3px;padding:7px;border:none;background:#212121;color:#fff;line-height:normal}
+</style>
+<div class="case_view">
+  <a href="#" class="btn" onclick="$('.inp_area,.error_txt').toggleClass('is_error');return false;">연동 설정 팝업_STEP1. 입력하지 않은 경우</a>
+  <a href="#" class="btn" onclick="$('.error_txt').addClass('is_error').html('아이디 또는 비밀번호를 다시 확인하세요. 등록되지 않은 아이디이거나, 아이디 또는 비밀번호를 잘못 입력하셨습니다.');return false;">아이디 잘못 입력</a>
+  <a href="#" class="btn" onclick="$('.step_cnt_wrap#step2 .img_list_wrap:eq(0),.step_cnt_wrap#step2 .txt_icon').toggle();$('.step_cnt_wrap#step2 .img_list_wrap:eq(1)').toggle();$('.layer_btn_area .btn:eq(1)').prop('disabled', function(i, v) { return !v; });return false;">연동 설정 팝업_STEP2. 매장선택_매장 없을 경우</a>
+  <a href="#" class="btn" onclick="$('.layer:eq(3) .layer_h_sub').toggle();return false;">연동 설정 팝업_STEP3. 제목 태그 노출</a>
+</div>
+
+<script >
+	$(function(){
+		$('.select').click(function(e){
+			e.preventDefault();
+			 if($(this).hasClass('is_open')){
+				 $(this).removeClass('is_open');
+			 }else{
+				 $('.select').removeClass('is_open');
+				 $(this).addClass('is_open');
+			 }
+		 });
+
+		var today = new Date();
+		var picker = tui.DatePicker.createRangePicker({	
+			language: 'ko',
+			calendar: {
+				showToday: false
+			},
+			input: {
+				element: '#startpicker-input',
+				format: 'yyyy.MM.dd'
+			},
+			startpicker: {
+				date: today,
+				input: '#startpicker-input',		
+				container: '#startpicker-container',
+			},
+			endpicker: {
+				date: today,
+				format: 'yyyy',
+				input: '#endpicker-input',
+				container: '#endpicker-container'		
+			},
+			selectableRanges: [
+				[today, new Date(today.getFullYear() + 1, today.getMonth(), today.getDate())]
+			]
+			
+		});
+
+		var pagination1 = new tui.Pagination('pagination1', {
+			totalItems: 500,
+			itemsPerPage: 10,
+			visiblePages: 5
+		});
+
+		var pagination2 = new tui.Pagination('pagination2', {
+			totalItems: 500,
+			itemsPerPage: 10,
+			visiblePages: 5
+		});
+
+		// [D] 테이블 row 선택 예시
+		// $('.tbl_client tr').on('click',function(){
+		// 	$(this).parents('.tbl_client').find('tr').removeClass('is_selected')
+		// 	$(this).toggleClass('is_selected');
+		// });
+
+		$('.search .inp_txt').focus(function(){
+			$(this).parent('.search').addClass('is_focus');
+		});
+
+		$('.search .inp_txt').blur(function(){
+			$(this).parent('.search').removeClass('is_focus');
+		});
+
+	$('.lst_step .step_item').click(function(e){
+		e.preventDefault();
+		$(this).parents('.lst_step').find('.step_item').removeClass('is_active');
+		$(this).addClass('is_active');
+		$('.step_cnt_wrap').hide();
+		var tabname = $(this).find('.step_link').attr('href').split('#')[1];
+		document.getElementById(tabname).style.display = 'block';
+	});
+
+});
+</script>
+<!-- // 마크업용 임시 코드 -->
+</body>
+</html>

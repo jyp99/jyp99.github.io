@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="th-TH">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>한게임 섯다 for PC 다운로드 : 한게임 mix</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<!-- [D] 게임 별 스타일 추가 되도록 개발 필요 -->
+<style>
+/* 스크린샷 버튼 */
+.slide_area .btn_prev:hover .bg,
+.slide_area .btn_next:hover .bg,
+.slide_area .btn_prev.click .bg,
+.slide_area .btn_next.click .bg{background-color:#d32418;}
+/* 스크롤바 */
+.cont_section .dsc_area .scroll_area{
+scrollbar-face-color:#d32418;		/* 스크롤 활성 영역 바 컬러 */
+scrollbar-track-color:#300000;		/* 스크롤 비활성 영역 컬러 */
+scrollbar-shadow-color:#300000;		/* 스크롤 활성 영역 바 테두리 컬러 */
+scrollbar-3dlight-color:#300000;	/* 스크롤 활성 영역 3D 컬러 (구버전 windows의 IE에서만 적용) */
+scrollbar-highlight-color:#d32418;	/* 스크롤 활성 영역 3D 컬러 (구버전 windows의 IE에서만 적용) */
+scrollbar-darkshadow-color:#300000;	/* 스크롤 활성 영역 3D 컬러 (구버전 windows의 IE에서만 적용) */
+}
+</style>
+<script>if (navigator.userAgent.indexOf("Windows NT 10.0") > -1) {document.write("<style>.cont_section .dsc_area .scroll_area{scrollbar-arrow-color:#d32418}</style>")}</script>
+<!-- scrollbar-arrow-color:#005dbc;  /* 상, 하 화살표 */ -->
+<!-- //[D] 게임 별 스타일 추가 되도록 개발 필요 -->
+<!-- [D] 마크업 리뷰용 css, 개발시 제거 -->
+<style>
+body{background:#232428}
+#wrap{position:fixed;top:0;right:0;bottom:0;left:0;margin:auto}
+</style>
+<!-- //[D] 마크업 리뷰용 css, 개발시 제거 -->
+
+</head>
+<body class="lang_th"><!--[D] 언어 선택 영어인 경우 body에 lang_en, 태국어의 경우 lang_th 클래스 추가 -->
+<div id="wrap" oncontextmenu="return false" ondragstart="return false" onselectstart="return false" style="background-image:url(img/@bg_ssudda.jpg)"><!-- [D] 어드민 입력 배경 이미지 삽입  -->
+	<!-- header -->
+	<div id="header">
+		<div class="bg"></div>
+		<h1 class="logo_hangame"><a href="#" class="sp" target="_blank">HANGAME mix</a></h1>
+		<div class="btn_area">
+			<a href="#" class="btn_set"><span class="sp">리액터 설정</span></a>
+			<a href="#" class="btn_small"><span class="sp">창 최소화</span></a>
+			<a href="#" class="btn_close"><span class="sp">창 닫기</span></a>
+		</div>
+	</div>
+	<!-- //header -->
+	<!-- sidebar (game list) -->
+	<div id="sidebar">
+		<ul class="lst_game">
+		<li class="game_item selected"><!-- [D] 현재 선택 된 게임에 .selected 클래스 추가 -->
+			<a href="#" class="game_item_lnk">
+				<span class="tit_area">
+					<span class="ico"><img src="img/@ico_poker.png" alt=""></span>
+					<em class="game_tit">ดของเกมกเกอ<br>์ที่แตกต่า</em><!-- [D]두줄 초과 출력시 말줄임 표시 적용  -->
+				</span>
+				<span class="dummy"></span>
+			</a>
+		</li>
+		<li class="game_item install"><!-- [D] 인스톨 중인 게임에 .install 클래스 추가 -->
+			<a href="#" class="game_item_lnk">
+				<span class="tit_area">
+					<span class="ico"><img src="img/@ico_ssudda.png" alt=""></span>
+					<em class="game_tit">เกมกเกอร์ที่แ</em>
+					<span class="progress_area">
+						<span class="gauge" style="width:50%"></span>
+					</span>
+				</span>
+				<span class="dummy"></span>
+			</a>
+		</li>
+		</ul>
+	</div>
+	<!-- //sidebar (game list) -->
+	<!-- container -->
+	<div id="container">
+		<div class="tit_section">
+			<span class="logo_game">
+				<img src="img/@logo_ssudda.png" alt=""><!-- [D] 어드민 입력 게임 로고 이미지 삽입, 세로 190*가로 자동 강제 리사이즈  -->
+			</span>
+			<h2 class="h_tx">Hangame ตอนนี้โป๊กเกี</h2>
+			<h2 class="h_tx" style="display:none">Hangame ตอนนี้โป๊กเกี<br>เพลิดเพลินไปกับควริง!</h2>
+			<span class="dummy"></span>
+		</div>
+		<div class="cont_section">
+			<div class="slide_area">
+				<div class="slide_wrap">
+					<div class="slide"><iframe width="450" height="254" src="https://www.youtube.com/embed/9GV-9QgobSM?wmode=transparent&amp;showinfo=0&amp;fs=0&amp;rel=0&amp;modestbranding=0" frameborder="0"></iframe></div>
+					<div class="slide"><img src="img/img_game2.jpg" alt=""></div>
+					<div class="slide"><img src="img/img_game1.jpg" alt=""></div>
+					<div class="slide"><img src="img/img_game2.jpg" alt=""></div>
+					<div class="slide"><img src="img/img_game1.jpg" alt=""></div>
+					<div class="slide"><img src="img/img_game2.jpg" alt=""></div>
+				</div>
+				<a href="#" class="btn_prev"><span class="bg"></span><span class="sp">이전</span></a>
+				<a href="#" class="btn_next"><span class="bg"></span><span class="sp">다음</span></a>
+			</div>
+			<div class="dsc_area">
+				<div class="bg"></div>
+				<div class="scroll_area">
+					<h3 class="h_tx">ตอนนี้โป๊กเกอร์พีซี Hangame<br>เพลิดเพลินไปกับควริง!</h3>
+					<div class="dsc_tx">
+						<p>
+							สี่ชนิดของเกมโป๊กเกอร์ที่แตกต่างกัน<br>
+							-7 โป๊กเกอร์ (7 โป๊กเกอร์): โป๊กเกอร์คลาส<br>
+							-Badugi ต่ำ (Low Badugi): บลายด์<br>
+							-ส่วนที่ดีที่สุดของการเดิมพัน<br>
+							-โฮลด์ (โฮลด์): 9 คนแม็กซ์ความตื่นเต้นข<br><br>
+							고퀄리티 카지노(casino) 게임 6종<br>
+							-블랙잭은 오직 한게임에서만!<br>
+							-잭팟 슬롯, 다이 사이, 빅 휠, 스크래치, 로얄 룰렛도 있어요!<br><br>
+							한게임 포커만의 재미있는 요소<br>
+							-매주 총상금 3조 칩! 흥미진진 랭킹전<br>
+							-2시간마다 지급되는 티켓으로 뽑는 재미 가득<br>
+							-업무 목표 달성하고 보너스 듬뿍<br>
+							-매일매일 출석 보너스는 덤
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- [D] 설치전 -->
+		<div class="setting_section">
+			<div class="stat_area">
+				<h4 class="h_tx">เส้นทางการติดตั้ง</h4>
+				<dl class="setting_data">
+				<dt class="blind">설치경로</dt>
+				<dd>100 MB | C:\Program Files (x86)\Hangame\KIngdomStory\KIngdomStory\KIngdomStory\KIngdomStory</dd>
+				</dl>
+				<a href="#" class="btn_change"><span class="blind">설치경로</span>เปลี่ยนแ</a>
+			</div>
+			<a href="#" class="btn_bx btn_setting"><span class="ico sp"></span>ติดตั้ง</a>
+		</div>
+		<!-- [D] 업데이트/설치 -->
+		<div class="setting_section" style="display:none;">
+			<div class="stat_area">
+				<div class="progress_area">
+					<h4 class="blind">설치 진행 현황</h4>
+					<div class="gauge" style="width:50%"></div>
+				</div>
+				<p class="dsc_tx progress">เวลาที่เหลือ : 2วินาที (<span class="blind">설치된 용량</span>7/<span class="blind">전체 용량</span>20MB)</p>
+			</div>
+			<a href="#" class="btn_bx btn_setting disabled">กำลังติดตั้ง...</a><!-- [D]업데이트시 문구만 수정('설치'를 '업데이트'로)-->
+		</div>
+		<!-- [D] 게임실행 -->
+		<div class="setting_section game_start" style="display:none;">
+			<div class="stat_area">
+				<h4 class="h_tx">เส้นทางการติดตั้ง</h4>
+				<dl class="setting_data">
+				<dt class="blind">설치경로</dt>
+				<dd>C:\Program Files (x86)\Hangame\KIngdomStory\KIngdomStory\KIngdomStory\KIngdomStory</dd>
+				</dl>
+			</div>
+			<a href="#" class="btn_bx btn_start">เริ่มเกม</a>
+		</div>
+	</div>
+	<!-- //container -->
+
+	<!-- [D] 예외케이스 : 인터넷 연결 안됨 -->
+	<!-- [D] .exc_cont가 display:block 될 때 #wrap에 .type_error 클래스 추가 -->
+	<div class="exc_cont error" style="display:none;">
+		<div class="bg">
+			<span class="dummy"></span>
+			<span class="noti_area">
+				<strong class="h_tx">현재 인터넷 접속이 되지 않습니다.</strong>
+				<p class="dsc_tx">인터넷 연결을 확인하신 후 재접속해 주세요.</p>
+			</span>
+		</div>
+	</div>
+
+	<!-- [D] 예외케이스 : 오류 발생 -->
+	<div class="exc_cont error2" style="display:none;">
+		<div class="bg">
+			<span class="dummy"></span>
+			<span class="noti_area">
+				<strong class="h_tx">오류가 발생하였습니다.</strong>
+				<p class="dsc_tx">
+					네크워크 문제로 설치파일 다운로드에 실패했습니다.<br>
+					네트워크 및 방화벽 설정을 확인해보시기 바랍니다. [-2011]
+				</p>
+			</span>
+		</div>
+	</div>
+
+	<!-- [D] 예외케이스 : 오류 발생 -->
+	<div class="exc_cont error3" style="display:none;">
+		<div class="bg">
+			<span class="dummy"></span>
+			<span class="noti_area">
+				<strong class="h_tx">국가 정보를 얻는데 실패하여<br>게임 리스트를 불러오지 못했습니다.</strong>
+				<p class="dsc_tx">프로그램을 다시 실행해주세요.</p>
+			</span>
+		</div>
+	</div>
+
+	<!-- [D] 예외케이스 : 점검중 -->
+	<div class="exc_cont maintenance" style="display:none;">
+		<div class="bg">
+			<span class="dummy"></span>
+			<span class="noti_area">
+				<strong class="h_tx">현재 서비스 점검 중입니다.</strong>
+				<span class="noti_bx">
+					<ul class="noti_lst">
+					<li>
+						<span class="tit">&middot; 점검 사유</span>
+						서비스 안정화를 위한 임시 점검
+					</li>
+					<li>
+						<span class="tit">&middot; 점검 시간</span>
+						<span class="color">2017년 2월 15일(토) 03:00 ~ 10:00 (7시간)</span>
+					</li>
+					</ul>
+					<p class="msg">회원님들이 보다 안정적인 환경에서 서비스를 즐기실 수 있도록  하기 위한 필수작업이오니 조금 불편하시더라도 회원님들의 너그러운 양해를 부탁 드리며,  약속된 시간 안에 작업이 마무리 될 수 있도록 최선을 다하겠습니다. 감사합니다.</p>
+				</span>
+			</span>
+		</div>
+	</div>
+
+	<!-- [D] dimmed -->
+	<div class="dimmed" style="display:none;"></div>
+
+	<!-- [D] 설정 팝업 -->
+	<div class="popup ly_set" style="display:none;">
+		<h3 class="popup_tit">ตั้งค่า</h3>
+		<ul class="lst_set">
+		<li class="set_item">
+			<div class="set_tit">ประเทศ</div>
+			<div class="set_txt">
+				<img src="img/flag_th.png" alt="태국">
+				<div class="set_txt" style="display:none">서비스 지역 아님</div><!-- [D] 국가 확인 시 국기 이미지 출력 50*34로 강제 리사이즈, 국가 확인 불가 시 이미지 없이 텍스트로 '서비스 지역 아님' 노출 -->
+			</div>
+		</li>
+		<li class="set_item">
+			<div class="set_tit">ภาษา</div>
+			<div class="set_txt">
+				<div class="select">
+					<!-- [D] .sel_tit 클릭 시 .select에 .on 클래스 추가 - .sel_lst 노출 -->
+					<a href="#" class="sel_tit"><span class="txt">언어선택</span><span class="ico"></span></a>
+					<ul class="sel_lst">
+					<li><a href="#" class="selected">한국어</a></li>
+					<li><a href="#">English</a></li>
+					<li><a href="#">태국어</a></li>
+					</ul>
+				</div>
+			</div>
+		</li>
+		</ul>
+		<a href="#" class="btn_close"><span class="sp">설정 팝업 닫기</span></a>
+	</div>
+</div>
+
+<!-- [D] 마크업 리뷰용 -->
+<script src="http://ui-dev.nhnent.com/svnview/hivelab/share/js/jquery-1.11.1.min.js"></script>
+<script>
+var speed = 300;
+function slider(selector) {
+	var $slider = $(selector),
+		$slide = $slider.find('.slide'),
+		$btnNext = $slider.find('.btn_next'),
+		$btnPrev = $slider.find('.btn_prev'),
+		currentIdx = 0;
+
+	$slider
+		.on('mouseenter', function () { btnCheck(); })
+		.on('mouseleave', function () {
+			$btnNext.fadeOut(speed);
+			$btnPrev.fadeOut(speed);
+		});
+
+	$btnNext
+		.on('click', function (e) {
+			e.preventDefault();
+			if (currentIdx < $slide.length - 1) {
+				$slide.eq(currentIdx).fadeOut(speed).next().fadeIn(speed);
+				currentIdx++;
+				btnCheck();
+			}
+		})
+		.on('mousedown', function () {
+			$(this).addClass('click');
+		})
+		.on('mouseup mouseleave', function () {
+			$(this).removeClass('click');
+		});
+
+	$btnPrev
+		.on('click', function (e) {
+			e.preventDefault();
+			if (currentIdx > 0) {
+				$slide.eq(currentIdx).fadeOut(speed).prev().fadeIn(speed);
+				currentIdx--;
+				btnCheck();
+			}
+		})
+		.on('mousedown', function () {
+			$(this).addClass('click');
+		})
+		.on('mouseup mouseleave', function () {
+			$(this).removeClass('click');
+		});
+
+	function btnCheck() {
+		if ( currentIdx == 0 ) {
+			$btnNext.fadeIn(speed);
+			$btnPrev.fadeOut(speed);
+		} else if ( currentIdx == $slide.length - 1 ) {
+			$btnNext.fadeOut(speed);
+			$btnPrev.fadeIn(speed);
+		} else {
+			$btnNext.fadeIn(speed);
+			$btnPrev.fadeIn(speed);
+		}
+	}
+}
+
+slider('.slide_area');
+
+$('.dsc_area')
+	.on('mouseenter', function () {
+		$(this).find('.bg').animate({ 'opacity': 0.5 }, speed).end().find('.dsc_tx .tx_cont').animate({ 'opacity': 0.5 }, speed);
+	})
+	.on('mouseleave', function () {
+		$(this).find('.bg').animate({ 'opacity': 0.3 }, speed).end().find('.dsc_tx .tx_cont').animate({ 'opacity': 0.3 }, speed);
+	});
+
+$('.btn_start:not(.disabled), .btn_setting:not(.disabled), .btn_change')
+	.on('mousedown', function () {
+		$(this).addClass('click');
+	})
+	.on('mouseup mouseleave', function () {
+		$(this).removeClass('click');
+	});
+
+$('.lst_game').on('click', '.game_item_lnk', function (e) {
+	e.preventDefault();
+	$(this).parent().addClass('selected').siblings().removeClass('selected');
+});
+
+$('.sel_tit').on('click', function (e) {
+	e.preventDefault();
+	$(this).parent().toggleClass('on');
+});
+
+$('.sel_lst').on('click', 'a', function (e) {
+	e.preventDefault();
+	$(this).addClass('selected').parent().siblings().find('a').removeClass('selected');
+	$('.sel_tit .txt').text( $(this).text() );
+	$('.select').removeClass('on');
+});
+
+$('.btn_set').on('click', function (e) {
+	$('.dimmed,.popup').show();
+});
+
+$('.btn_close').on('click', function (e) {
+	e.preventDefault();
+	$(this).closest('.popup').hide().siblings('.dimmed').hide();
+});
+</script>
+<div class="caseview" style="position:fixed;bottom:50px;right:50px;padding:5px;background:#fff;opacity:0.5;filter:alpha(opacity=50);z-index:100">
+	<a href="#" style="display:block;padding:5px;color:#000" onclick="$('.setting_section').eq(0).show().siblings('.setting_section').hide();return false;">설치전</a>
+	<a href="#" style="display:block;padding:5px;color:#000" onclick="$('.setting_section').eq(1).show().siblings('.setting_section').hide();return false;">업데이트/설치</a>
+	<a href="#" style="display:block;padding:5px;color:#000" onclick="$('.setting_section').eq(2).show().siblings('.setting_section').hide();return false;">게임시작</a>
+	<a href="#" style="display:block;padding:5px;color:#000" onclick="$('.exc_cont').hide();$('.error').show();$('#wrap').addClass('type_error');return false;">[예외] 인터넷 연결 안됨</a>
+	<a href="#" style="display:block;padding:5px;color:#000" onclick="$('.exc_cont').hide();$('.error2').show();$('#wrap').addClass('type_error');return false;">[예외] 오류 발생</a>
+	<a href="#" style="display:block;padding:5px;color:#000" onclick="$('.exc_cont').hide();$('.error3').show();$('#wrap').addClass('type_error');return false;">[예외] 국가 정보 오류</a>
+	<a href="#" style="display:block;padding:5px;color:#000" onclick="$('.exc_cont').hide();$('.maintenance').show();$('#wrap').addClass('type_error');return false;">[예외] 점검중</a>
+	<a href="#" style="display:block;padding:5px;color:#000" onclick="$('.exc_cont').hide();$('#wrap').removeClass('type_error');return false;">[예외] 예외케이스 닫기</a>
+	<a href="#" style="display:block;padding:5px;color:#000" onclick="$('.exc_cont').hide();$('.dimmed,.ly_set').show();$('#wrap').removeClass('type_error');return false;">설정 팝업</a>
+	<a href="#" style="display:block;padding:5px;color:#000" onclick="$('.ly_set .set_txt:eq(0)').hide();$('.ly_set .set_txt:eq(1)').show();$('#wrap').removeClass('type_error');return false;">설정 팝업_서비스 지역 아님</a>
+	<a href="#" style="display:block;padding:5px;color:#000" onclick="$('.tit_section .h_tx').eq(0).hide();$('.tit_section .h_tx').eq(1).show();return false;">제목 두줄</a>
+	<a href="#" style="display:block;padding:5px;color:#000" onclick="$('.tit_section .h_tx').eq(1).hide();$('.tit_section .h_tx').eq(0).show();return false;">제목 한줄</a>
+</div>
+<!-- //[D] 마크업 리뷰용 -->
+</body>
+</html>

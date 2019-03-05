@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>토스트닷컴_회원 : 마크업 산출물</title>
+<style>
+@charset "utf-8";
+/* Common */
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select{margin:0;padding:0}
+body,input,textarea,select,button,table{font-size:14px;font-family:'나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,'굴림',Gulim,Helvetica;line-height:1.25em}
+body{position:relative;background-color:#f4f4f4;color:#000;-webkit-text-size-adjust:none}
+img,fieldset{border:0}
+ul,ol{list-style:none}
+em,address{font-style:normal}
+a{color:#000;text-decoration:none}
+table{border-collapse:collapse}
+hr{display:none !important}
+.u_hc{visibility:hidden;overflow:hidden;position:absolute;left:-999em;width:0;height:0;font-size:0;line-height:0}
+.u_vc{position:absolute;*left:-9999em;z-index:-1;font-size:4px;line-height:1px;color:transparent}
+#ct{clear:both;width:100%;background-color:#fff}
+#ct:after{display:block;clear:both;height:1px;margin-top:-1px;content:''}
+
+/* index.html */
+body{padding:0 14px;background-color:#fff;word-wrap:break-word;word-break:break-all}
+header{padding:1em .1em .9em .1em;border-bottom:3px solid #222}
+header:after{display:block;clear:both;content:''}
+.hd_h1{position:relative;font-size:1.2em}
+.sec_h{clear:both;padding:2em .1em .4em;border-bottom:1px solid #000;font-size:1em}
+.sec_h2{clear:both;padding:1em .1em .4em;border-bottom:1px dotted #888;font-size:1em}
+.sec_h2::before{display:inline-block;margin-right:.25em;border:2px solid transparent;border-left-color:#000;vertical-align:3px;content:''}
+ul{font-size:.9em}
+li{border-bottom:1px solid #dfdfdf}
+li a{display:block;padding:.7em 31px .6em .1em;background:url(http://static.naver.com/www/m/cm/im/bu_lk.gif) no-repeat 100% 50%;_zoom:1}
+li span{margin-left:.4em;font-size:.86em;color:#909090}
+footer{clear:both;margin:2.5em 0 4em;padding:6px 2px 2px;background:#f4f4f4;font-size:.86em;line-height:1.6em;color:#333;text-align:center}
+dt,dd{display:inline;color:#333}
+dt:after{display:inline;content:': '}
+dd:last-of-type{display:block;color:#aaa}
+
+.new{display:inline-block;position:relative;top:-1px;height:14px;padding:3px;border-radius:3px;background:#fd3939;font-family:verdana;font-size:11px;font-weight:normal;color:#fff;line-height:14px;vertical-align:middle}
+.up{display:inline-block;position:relative;top:-1px;height:14px;background:#45a7fb;color:#fff;padding:3px;border-radius:3px;font-family:verdana;font-size:11px;font-weight:normal;line-height:14px;vertical-align:middle}
+.etc{display:inline-block;position:relative;top:-1px;height:14px;background:#2fbf6d;color:#fff;padding:3px;border-radius:3px;font-family:verdana;font-size:11px;font-weight:normal;line-height:14px;vertical-align:middle}
+.mobile{display:inline-block;position:relative;top:-1px;height:14px;margin-left:15px;padding:3px;border-radius:3px;background:#03862e;font-family:verdana;font-size:11px;font-weight:normal;color:#fff;line-height:14px;vertical-align:middle}
+</style>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script>
+$(function(){
+	$('#ct ul a').each(function(){
+		$('<span>/ '+$(this).attr('href')+'</span>').appendTo($(this));
+	});
+});
+</script>
+</head>
+
+<body>
+<header role="banner">
+	<h1 class="hd_h1">TOAST 닷컴_회원(마크업 개선)</h1>
+</header>
+<div id="ct">
+	<section role="main">
+		<h1 class="u_vc">마크업 산출물</h1>
+		
+		<h2 class="sec_h">UIO 가이드</h2>
+		<ul>
+		<li><a href="00_guide.html">UIO 가이드</a></li>
+		</ul>
+
+		<h2 class="sec_h">로그인</h2>
+		<ul>
+		<li><a href="01_login.html">로그인<span class="etc">PC&amp;모바일</span></a></li>
+		</ul>
+
+		<h2 class="sec_h">회원가입</h2>
+		<ul>
+		<li><a href="02_signup_select_type.html">회원유형(개인or사업자) 선택 화면</a></li>
+		<li><a href="02_signup_step1.html">단계1. 약관동의(개인)</a></li>
+		<li><a href="02_signup_step2.html">단계2. 회원정보 입력(개인)</a></li>
+		<li><a href="02_signup_step2_business.html">단계2. 회원정보 입력(사업자)</a></li>
+		<li><a href="02_signup_step3.html">단계3. 가입완료</a></li>
+		</ul>
+
+		<h2 class="sec_h">비밀번호 찾기</h2>
+		<ul>
+		<li><a href="03_password_find.html">비밀번호 찾기</a></li>
+		<li><a href="03_password_reset.html">비밀번호 재설정</a></li>
+		</ul>
+
+		<h2 class="sec_h">비밀번호 재확인</h2>
+		<ul>
+		<li><a href="04_password_reconfirm.html">비밀번호 재확인</a></li>
+		</ul>
+
+		<h2 class="sec_h">마이페이지</h2>
+		<ul>
+		<li><a href="05_my_info.html">회원정보 확인(개인회원)</a></li>
+		<li><a href="05_my_info_business.html">회원정보 확인(사업자회원)</a></li>
+		<li><a href="05_withdrawal.html">회원탈퇴 화면</a></li>
+		<li><a href="05_withdrawal_acceptance.html">탈퇴 신청 접수안내</a></li>
+		<li><a href="05_withdrawal_complete.html">탈퇴 완료안내</a></li>
+		</ul>
+
+		<h2 class="sec_h">회원전환</h2>
+		<ul>
+		<li><a href="06_account_transfer_step1.html">단계1. 전환 인증</a></li>
+		<li><a href="06_account_transfer_step2.html">단계2. 비밀번호 설정</a></li>
+		</ul>
+
+		<h2 class="sec_h">이메일 인증</h2>
+		<ul>
+		<li><a href="99_email_authentication.html">이메일 인증(EMS)</a></li>
+		<li><a href="07_email_authentication_complete.html">인증 완료</a></li>
+		<li><a href="07_email_authentication_fail.html">인증 실패</a></li>
+		</ul>
+
+		<h2 class="sec_h">결과 안내 <span class="new">NEW</span></h2>
+		<ul>
+		<li><a href="99_email_subscription_guide.html">서비스 가입 안내(EMS)</a></li>
+		<li><a href="99_email_verification_completed.html">사업자 회원 서류 인증 완료(EMS)</a></li>
+		<li><a href="99_email_withdrawal_guide.html">서비스 탈퇴 안내(EMS)</a></li>
+		</ul>
+
+		<h2 class="sec_h">오류 페이지</h2>
+		<ul>
+		<li><a href="10_error.html">공통 에러 페이지(브라우저 접속 제한)</a></li>
+		</ul>
+		
+	</section>
+</div>
+<footer role="contentinfo">
+	<dl>
+	<dt>마크업 담당자</dt>
+	<dd>하이브랩 UI 개발1팀</dd>
+	</dl>
+</footer>
+
+</body>
+</html>

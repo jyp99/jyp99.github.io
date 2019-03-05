@@ -1,0 +1,12 @@
+.signup_country_content{width:460px}
+.lst_country{margin-top:56px;padding:10px 0;border:1px solid #eee;border-width:1px 0;font-size:0}
+.lst_country .country_item{display:-webkit-flex;display:-moz-flex;display:-ms-flex;display:-o-flex;display:flex;height:40px}
+.lst_country .inp_radio{margin-left:0;-webkit-box-flex:1;-ms-flex:1;flex:1}
+.lst_country .inp_chk{left:9px}
+.lst_country .ico_checkbox{width:18px;height:18px;margin-right:14px}
+.lst_country .label_text{line-height:18px;color:#333}
+.lst_country .inp_radio .inp_chk:checked+.inp_label .ico_checkbox{border:0;background-color:#4b96e6}
+.lst_country .inp_radio .inp_chk:checked+.inp_label .ico_checkbox:before{width:8px;height:8px;background-color:#fff}
+.signup_country_content .select_bx{width:330px;height:40px}
+.signup_country_content .select_bx .inp_select{}
+.signup_country_content .list_noti{margin-top:10px}

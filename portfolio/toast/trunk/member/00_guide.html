@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>토스트닷컴 회원 UIO :: TOAST Cloud</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<base href="../">
+<link rel="stylesheet" type="text/css" href="css/gnb.css">
+<link rel="stylesheet" type="text/css" href="css/toast.css">
+<link rel="stylesheet" type="text/css" href="css/toast_member.css">
+</head>
+<!--[if lt IE 9]>
+<script src="js/html5shiv.min.js"></script>
+<![endif]-->
+<style>
+body{margin:0;padding:0}
+.tcm_wrap{text-align:left}
+h1, h2, h3, h4, h5, h6{font-family:"Noto Sans CJK", Notokr, 'Malgun Gothic','맑은고딕','Apple SD Gothic Neo',Dotum,'돋움',sans-serif}
+.gurde_wrap h1.guide_title{display:block;padding:10px;background:#000;color:#fff;font-size:28px}
+.gurde_wrap h2.guide_title{margin:20px 0 10px;padding:0 0 8px 5px;border-bottom:1px solid #000;font-size:20px}
+.gurde_wrap h2.guide_title:first-child{margin-top:0}
+.gurde_wrap h3.guide_title{margin:20px 0 10px;font-size:16px}
+.gurde_wrap .content{max-width:initial;margin:initial;padding:20px}
+.gurde_wrap .txt_guide{margin-bottom:15px;padding:10px;color:#333;font-size:14px}
+.gurde_wrap .txt_guide li:before{margin-right:4px;content:'-'}
+.gurde_wrap .setting_content{width:auto;padding-top:0}
+.gurde_wrap .step_wrap{display:block}
+.gurde_wrap .form_wrap{width:600px}
+.gurde_wrap div.lst_form .btn{position:static;float:none;margin-right:10px}
+.form_noti+.form_wrap{padding:20px}
+.gurde_wrap .modal{display:block;position:static}
+.gurde_wrap .modal-dialog-centered{height:500px}
+.gurde_wrap .list_noti{margin-top:0}
+.gurde_wrap .select_bx{height:40px}
+.gurde_wrap .btn_area{margin-top:0}
+</style>
+</head>
+<body class="gurde_wrap">
+<div class="wrap">
+	<h1 class="guide_title">TOAST Cloud 공통</h1>
+	<div class="content">
+		<h2 class="guide_title">기본</h2>
+		<ul class="txt_guide">
+		<li>toast.css : 토스트닷컴 + 마이페이지 + 레이어 팝업</li>
+		<li>toast_member.css : 회원에서만 사용하는 CSS만 분리, 디자인 수정한 파일</li>
+		<li>toast_member_old.css : 디자인 개선 전의 기존 CSS파일. 개선작업 진행되지 않은 페이지에서는 기존 CSS 적용</li>
+		</ul>
+
+		<h2 class="guide_title">셀렉트 박스</h2>
+		<h3 class="guide_title">기본</h3>
+		<span class="select_bx">
+			<span class="blind">국제전화 번호 선택</span>
+			<select class="inp_select" id="tel">
+				<option value="국가 검색" selected disabled >국가 검색 (국가번호, 국가명)</option>
+				<option value="미국">United States(+1)</option>
+				<option value="캐나다">Canada(+1)</option>
+				<option value="대한민국">Korea, Republic of(+82)</option>
+				<option value="일본">Japan(+81)</option>
+				<option value="중국">China(+86)</option>
+			</select>
+		</span>
+		<h3 class="guide_title">비활성</h3>
+		<span class="select_bx">
+			<span class="blind">국제전화 번호 선택</span>
+			<select class="inp_select" id="tel" disabled>
+				<option value="국가 검색" selected disabled >국가 검색 (국가번호, 국가명)</option>
+				<option value="미국">United States(+1)</option>
+				<option value="캐나다">Canada(+1)</option>
+				<option value="대한민국">Korea, Republic of(+82)</option>
+				<option value="일본">Japan(+81)</option>
+				<option value="중국">China(+86)</option>
+			</select>
+		</span>
+		<h2 class="guide_title">레이어 팝업</h2>
+		<div class="txt_guide">
+			<p>마이페이지와 공통 스타일 팝업 사용</p>
+		</div>
+		<!--[D] 레이어팝업 -->
+		<div class="modal pop_custom pop_member">
+			<div class="modal-dialog  modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">타이틀</h4>
+						<button type="button" class="btn_close" data-dismiss="modal">닫기</button>
+					</div>
+					<div class="modal-body">
+						<p class="ly_txt">팝업 내용</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn" data-dismiss="modal">확인</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--[D] //레이어팝업 -->
+	</div>
+</div>
+<!-- wrap -->
+<div class="tcm_wrap mypage_content">
+	<h1 class="guide_title">TOAST Cloud 회원</h1>
+	<div class="content">
+
+		<h2 class="guide_title">버튼</h2>
+		<ul class="txt_guide">
+		<li>버튼에는 btn 클래스 필수로 적용</li>
+		<li>버튼 비활성시에는 button요소에는 disabled 속성, a버튼에는 .disabled 클래스 적용</li>
+		</ul>
+		<h3 class="guide_title">button 태그 사용 시</h3>
+		<div class="btn_area">
+			<button type="button" class="btn">일반</button>
+			<button type="button" class="btn btn_cancel">취소</button>
+			<button type="button" class="btn" disabled>비활성</button>
+		</div>
+		<h3 class="guide_title">a 태그 사용 시</h3>
+		<div class="btn_area">
+			<a href="#" class="btn">일반</a>
+			<a href="#" class="btn btn_cancel">취소</a>
+			<a href="#" class="btn disabled">비활성</a>
+		</div>
+
+		<h2 class="guide_title">유의사항</h2>
+		<ul class="list_noti">
+		<li class="noti_text">체험이나 회사 내 담당자 추가를 위한 경우라면 개인회원을 선택하시면 편리합니다.</li>
+		<li class="noti_text">사업자 회원으로 가입하시려면 사업자등록증 사본을 미리 준비해주세요.</li>
+		</ul>
+	</div>
+</div>
+
+<!-- Javascript Area -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+</body>
+</html>

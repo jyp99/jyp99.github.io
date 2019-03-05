@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>토스트닷컴 : 마크업 산출물</title>
+<style>
+@charset "utf-8";
+/* Common */
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select{margin:0;padding:0}
+body,input,textarea,select,button,table{font-size:14px;font-family:'나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,'굴림',Gulim,Helvetica;line-height:1.25em}
+body{position:relative;background-color:#f4f4f4;color:#000;-webkit-text-size-adjust:none}
+img,fieldset{border:0}
+ul,ol{list-style:none}
+em,address{font-style:normal}
+a{color:#000;text-decoration:none}
+table{border-collapse:collapse}
+hr{display:none !important}
+.u_hc{visibility:hidden;overflow:hidden;position:absolute;left:-999em;width:0;height:0;font-size:0;line-height:0}
+.u_vc{position:absolute;*left:-9999em;z-index:-1;font-size:4px;line-height:1px;color:transparent}
+#ct{clear:both;width:100%;background-color:#fff}
+#ct:after{display:block;clear:both;height:1px;margin-top:-1px;content:''}
+
+/* index.html */
+body{padding:0 14px;background-color:#fff;word-wrap:break-word;word-break:break-all}
+header{padding:1em .1em .9em .1em;border-bottom:3px solid #222}
+header:after{display:block;clear:both;content:''}
+.hd_h1{position:relative;font-size:1.2em}
+.sec_h{clear:both;padding:2em .1em .4em;border-bottom:1px solid #000;font-size:1em}
+.sec_h2{clear:both;padding:1em .1em .4em;border-bottom:1px dotted #888;font-size:1em}
+.sec_h2::before{display:inline-block;margin-right:.25em;border:2px solid transparent;border-left-color:#000;vertical-align:3px;content:''}
+ul{font-size:.9em}
+li{border-bottom:1px solid #dfdfdf}
+li a{display:block;padding:.7em 31px .6em .1em;background:url(http://static.naver.com/www/m/cm/im/bu_lk.gif) no-repeat 100% 50%;_zoom:1}
+li span{margin-left:.4em;font-size:.86em;color:#909090}
+footer{clear:both;margin:2.5em 0 4em;padding:6px 2px 2px;background:#f4f4f4;font-size:.86em;line-height:1.6em;color:#333;text-align:center}
+dt,dd{display:inline;color:#333}
+dt:after{display:inline;content:': '}
+dd:last-of-type{display:block;color:#aaa}
+
+.new{display:inline-block;position:relative;top:-1px;height:14px;padding:3px;border-radius:3px;background:#fd3939;font-family:verdana;font-size:11px;font-weight:normal;color:#fff;line-height:14px;vertical-align:middle}
+.up{display:inline-block;position:relative;top:-1px;height:14px;background:#45a7fb;color:#fff;padding:3px;border-radius:3px;font-family:verdana;font-size:11px;font-weight:normal;line-height:14px;vertical-align:middle}
+.etc{display:inline-block;position:relative;top:-1px;height:14px;background:#2fbf6d;color:#fff;padding:3px;border-radius:3px;font-family:verdana;font-size:11px;font-weight:normal;line-height:14px;vertical-align:middle}
+.mobile{display:inline-block;position:relative;top:-1px;height:14px;margin-left:15px;padding:3px;border-radius:3px;background:#03862e;font-family:verdana;font-size:11px;font-weight:normal;color:#fff;line-height:14px;vertical-align:middle}
+</style>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script>
+$(function(){
+	$('#ct ul a').each(function(){
+		$('<span>/ '+$(this).attr('href')+'</span>').appendTo($(this));
+	});
+});
+</script>
+</head>
+
+<body>
+<header role="banner">
+	<h1 class="hd_h1">TOAST 닷컴(마크업 개선)</h1>
+</header>
+<div id="ct">
+	<section role="main">
+		<h1 class="u_vc">마크업 산출물</h1>
+		
+		<h2 class="sec_h">UIO 가이드</h2>
+		<ul>
+		<li><a href="00_guide.html">UIO 가이드</a></li>
+		<li><a href="00_guide_header.html">UIO 가이드_공통 헤더</a></li>
+		</ul>
+
+		<h2 class="sec_h">메인</h2>
+		<ul>
+		<li><a href="00_main.html">메인</a></li>
+		<li><a href="00_search_result.html">통합 검색 결과</a></li>
+		<li><a href="00_certification_mark.html">정보보호 인증 상세</a></li>
+		</ul>
+
+		<h2 class="sec_h">소개</h2>
+		<ul>
+		<li><a href="01_intro.html">소개</a></li>
+		</ul>
+
+		<h2 class="sec_h">서비스</h2>
+		<ul>
+		<li><a href="02_service.html">서비스</a></li>
+		<li><a href="02_service_compute_instance.html">서비스 상세(Compute&gt;Instance)</a></li>
+		<li><a href="02_service_storage_block-storage.html">서비스 상세(Storage&gt;Block Storage)</a></li>
+		<li><a href="02_service_game_gamebase.html">서비스 상세(Game&gt;Game Base)</a></li>
+		<li><a href="02_service_security_appguard.html">서비스 상세(Security&gt;Appguard)</a></li>
+		<li><a href="02_service_search_cloud-search.html">서비스 상세(Search&gt;cloud Search)</a></li>
+		</ul>
+
+		<h2 class="sec_h">요금</h2>
+		<ul>
+		<li><a href="03_priching.html">요금</a></li>
+		</ul>
+
+		<h2 class="sec_h">고객사례</h2>
+		<ul>
+		<li><a href="04_customer.html">고객사례</a></li>
+		<li><a href="04_customer_webservice.html">ㄴ 웹서비스</a></li>
+		<li><a href="04_customer_commerce.html">ㄴ 커머스</a></li>
+		<li><a href="04_customer_game.html">ㄴ 게임</a></li>
+		<li><a href="04_customer_public.html">ㄴ 공공 및 교육기관</a></li>
+		</ul>
+
+		<h2 class="sec_h">파트너</h2>
+		<ul>
+		<li><a href="05_partner.html">파트너</a></li>
+		</ul>
+
+		<h2 class="sec_h">고객센터</h2>
+		<ul>
+		<li><a href="06_support.html">고객센터</a></li>
+		<li><a href="06_support_faq.html">ㄴ FAQ</a></li>
+		<li><a href="06_support_inquiry.html">ㄴ 1:1 문의</a></li>
+		<li><a href="06_support_qna.html">ㄴ 문의 내역 조회</a></li>
+		<li><a href="06_support_notice.html">ㄴ 공지 사항</a></li>
+		</ul>
+
+		<h2 class="sec_h">마이페이지</h2>
+		<ul>
+		<li><a href="member/05_my_info.html">회원정보<span class="etc">회원</span></a></li>
+		<li><a href="member/05_my_info_business.html">사업자회원정보<span class="etc">회원</span></a></li>
+		<li><a href="07_mypage_payment.html">결제수단</a></li>
+		<li><a href="07_mypage_credit.html">크레딧</a></li>
+		<li><a href="07_mypage_api.html">API 보안 설정</a></li>
+		</ul>
+
+		<h2 class="sec_h">회원</h2>
+		<ul>
+		<li><a href="member/@index.html">회원<span class="etc">회원</span></a></li>
+		</ul>
+
+		<h2 class="sec_h">기타</h2>
+		<ul>
+		<li><a href="00_calculator.html">요금계산기</a></li>
+		<li><a href="00_term_privacy_policy.html">개인정보처리방침</a></li>
+		<li><a href="00_term_use_agree.html">개인정보 수집 및 이용 동의</a></li>
+		<li><a href="00_term_rules.html">이용약관</a></li>
+		</ul>
+		
+		<h2 class="sec_h">메일링</h2>
+		<ul>
+		<li><a href="99_ems_template.html">이메일 템플릿<span class="new">2019. 02. 26 NEW</span></a></li>
+		<li><a href="99_ems_template_jp.html">이메일 템플릿_jp<span class="new">2019. 02. 26 NEW</span></a></li>
+		</ul>
+		
+	</section>
+</div>
+<footer role="contentinfo">
+	<dl>
+	<dt>마크업 담당자</dt>
+	<dd>하이브랩 UI 개발1팀</dd>
+	</dl>
+</footer>
+
+</body>
+</html>

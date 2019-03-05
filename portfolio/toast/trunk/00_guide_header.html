@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>UIO :: 토스트닷컴</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="css/gnb.css">
+<link rel="stylesheet" type="text/css" href="css/toast.css">
+<!--[if lt IE 9]>
+<script src="js/html5shiv.min.js"></script>
+<![endif]-->
+<style>
+body{margin:0;padding:0;background-color:#ccc}
+.wrap{text-align:left}
+h1, h2, h3, h4, h5, h6{font-family:"Noto Sans CJK", Notokr, 'Malgun Gothic','맑은고딕','Apple SD Gothic Neo',Dotum,'돋움',sans-serif}
+h1.guide_title{display:block;padding:10px;background:#000;color:#fff;font-size:28px}
+h2.guide_title{margin:20px 0 10px;padding:0 0 8px 5px;border-bottom:1px solid #000;font-size:20px}
+h2.guide_title:first-child{margin-top:0}
+h3.guide_title{margin:20px 0 10px;font-size:15px;font-weight:400}
+h3.guide_title:after{margin:0 5px;content:':'}
+.content{width:auto;max-width:initial;margin:initial;padding:20px}
+.txt_guide{margin-bottom:15px;padding:10px;background-color:#eee;color:#333;font-size:14px}
+.txt_guide li:before{margin-right:4px;content:'-'}
+.title_wrap{margin-top:20px}
+#toast_header{position:static;margin:0 -20px}
+.content{height:100%}
+.txt_guide .link_txt{color:#4b96e6;text-decoration:underline;cursor:pointer}
+</style>
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+	<h1 class="guide_title">토스트 헤더</h1>
+	<div class="container">
+		<div class="content">
+			<h3 class="guide_title">TOAST</h3>
+			<ul class="txt_guide">
+			<li>메인 : 최상단 진입시 배경 투명, 마우스 오버/스크롤시 배경 흰색 적용, 위치 상단 고정</li>
+			<li>서브 : 최상단 진입시에도 배경 흰색</li>
+			</ul>
+
+			<header id="toast_header"><!-- [D]스크롤시 header에 is_fixed, 마우스 오버시 is_hover 클래스 추가 -->
+				<div class="inner">
+					<h1 class="logo service_logo">
+						<a href="00_main.html" class="link_txt">
+							<img src="img/logo_toast.svg" alt="NHN TOAST" class="logo_img is_white">
+							<img src="img/logo_toast_color.svg" alt="NHN TOAST" class="logo_img is_color">
+						</a>
+					</h1>
+					<!-- [D] global navigation bar -->
+					<nav class="gnb">
+						<ul class="lst_gnb">
+						<li class="gnb_menu"><a href="01_intro.html" class="link_menu"><span class="menu_txt">소개</span></a></li><!-- [D]link_menu 마우스 오버시 link_menu에 is_hover, 선택된 페이지인 경우 is_selected 클래스 추가 -->
+						<li class="gnb_menu">
+							<a href="02_service.html" class="link_menu"><span class="menu_txt">서비스</span></a>
+							<div class="drop_menu_wrap">
+								<div class="service_drop_menu">
+									<div class="scroll_wrap">
+										<div class="row_wrap">
+											<div class="col_group">
+												<em class="service_title">Compute</em>
+												<ul class="lst_service_menu">
+												<li class="service_menu"><a href="02_service_compute_instance.html" class="link_txt">Instance</a></li><!-- [D] 신규 서비스일 경우 service_menu에 is_new, 업데이트는 is_update 클래스 추가-->
+												<li class="service_menu"><a href="#" class="link_txt">Image</a></li>
+												<li class="service_menu is_new"><a href="#" class="link_txt">Auto Scale</a></li>
+												</ul>
+												<em class="service_title">Network</em>
+												<ul class="lst_service_menu">
+												<li class="service_menu"><a href="#" class="link_txt">VPC</a></li>
+												<li class="service_menu"><a href="#" class="link_txt">Load Balancer</a></li>
+												</ul>
+												<em class="service_title">Storage</em>
+												<ul class="lst_service_menu">
+												<li class="service_menu"><a href="#" class="link_txt">Block Storage</a></li>
+												<li class="service_menu"><a href="#" class="link_txt">NAS (offline)</a></li>
+												<li class="service_menu"><a href="#" class="link_txt">Object Storage</a></li>
+												<li class="service_menu is_new"><a href="#" class="link_txt">Backup</a></li>
+												</ul>
+												<em class="service_title">Database</em>
+												<ul class="lst_service_menu">
+												<li class="service_menu is_update"><a href="#" class="link_txt">RDS for MySQL</a></li>
+												</ul>
+											</div>
+											<div class="col_group">
+												<em class="service_title">Game</em>
+												<ul class="lst_service_menu">
+												<li class="service_menu"><a href="#" class="link_txt">Gamebase</a></li>
+												<li class="service_menu"><a href="#" class="link_txt">Leaderboard</a></li>
+												<li class="service_menu"><a href="#" class="link_txt">Launching</a></li>
+												<li class="service_menu"><a href="#" class="link_txt">Smart Downloader</a></li>
+												</ul>
+												<em class="service_title">Security</em>
+												<ul class="lst_service_menu">
+												<li class="service_menu"><a href="#" class="link_txt">AppGuard</a></li>
+												<li class="service_menu"><a href="#" class="link_txt">Security Check</a></li>
+												<li class="service_menu"><a href="#" class="link_txt">Security Monitoring</a></li>
+												<li class="service_menu"><a href="#" class="link_txt">Mal-URL Detector</a></li>
+												<li class="service_menu"><a href="#" class="link_txt">CAPTCHA</a></li>
+												<li class="service_menu"><a href="#" class="link_txt">OTP</a></li>
+												<li class="service_menu"><a href="#" class="link_txt">DBSafer</a></li>
+												<li class="service_menu is_new"><a href="#" class="link_txt">Web Firewall</a></li>
+												<li class="service_menu is_new"><a href="#" class="link_txt">Vaccine</a></li>
+												</ul>
+												<em class="service_title">Content Delivery</em>
+												<ul class="lst_service_menu">
+												<li class="service_menu"><a href="#" class="link_txt">CDN</a></li>
+												<li class="service_menu"><a href="#" class="link_txt">Image</a></li>
+												</ul>
+											</div>
+											<div class="col_group">
+												<em class="service_title">Notification</em>
+												<ul class="lst_service_menu">
+												<li class="service_menu"><a href="#" class="link_txt">Push</a></li>
+												<li class="service_menu"><a href="#" class="link_txt">SMS</a></li>
+												<li class="service_menu"><a href="#" class="link_txt">Email</a></li>
+												<li class="service_menu is_new"><a href="#" class="link_txt">KakaoTalk Bizmessage</a></li>
+												</ul>
+												<em class="service_title">Application Service</em>
+												<ul class="lst_service_menu">
+												<li class="service_menu"><a href="#" class="link_txt">Maps</a></li>
+												<li class="service_menu"><a href="#" class="link_txt">ROLE</a></li>
+												<li class="service_menu"><a href="#" class="link_txt">API Gateway</a></li>
+												<li class="service_menu"><a href="#" class="link_txt">RTCS</a></li>
+												<li class="service_menu"><a href="#" class="link_txt">CS &amp; BBS</a></li>
+												</ul>
+												<em class="service_title">Search</em>
+												<ul class="lst_service_menu">
+												<li class="service_menu"><a href="#" class="link_txt">Cloud Search</a></li>
+												<li class="service_menu"><a href="#" class="link_txt">Autocomplete</a></li>
+												<li class="service_menu"><a href="#" class="link_txt">Corporation Search</a></li>
+												<li class="service_menu is_new"><a href="#" class="link_txt">Address Search</a></li>
+												</ul>
+											</div>
+											<div class="col_group">
+												<em class="service_title">Analytics</em>
+												<ul class="lst_service_menu">
+												<li class="service_menu"><a href="#" class="link_txt">App Analytics</a></li>
+												<li class="service_menu"><a href="#" class="link_txt">Log &amp; Crash Search</a></li>
+												</ul>
+												<em class="service_title">Mobile Service</em>
+												<ul class="lst_service_menu">
+												<li class="service_menu"><a href="#" class="link_txt">IAP</a></li>
+												<li class="service_menu"><a href="#" class="link_txt">Mobile Device Info</a></li>
+												</ul>
+												<em class="service_title">Dev Tool</em>
+												<ul class="lst_service_menu">
+												<li class="service_menu"><a href="#" class="link_txt">Deploy</a></li>
+												</ul>
+												<em class="service_title">Management</em>
+												<ul class="lst_service_menu">
+												<li class="service_menu"><a href="#" class="link_txt">Managed</a></li>
+												</ul>
+												<em class="service_title">Bill</em>
+												<ul class="lst_service_menu">
+												<li class="service_menu is_new"><a href="#" class="link_txt">bill (e-Tax)</a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="row_wrap">
+											<div class="col_group">
+												<em class="service_title">Dooray</em>
+												<ul class="lst_service_menu">
+												<li class="service_menu"><a href="#" class="link_txt">Project</a></li>
+												<li class="service_menu"><a href="#" class="link_txt">Messenger</a></li>
+												<li class="service_menu"><a href="#" class="link_txt">Mail</a></li>
+												<li class="service_menu"><a href="#" class="link_txt">Calendar</a></li>
+												<li class="service_menu"><a href="#" class="link_txt">Drive</a></li>
+												<li class="service_menu"><a href="#" class="link_txt">Contacts</a></li>
+												</ul>
+											</div>
+											<div class="col_group">
+												<em class="service_title">ERP</em>
+												<ul class="lst_service_menu">
+												<li class="service_menu is_update"><a href="#" class="link_txt">Communication Board</a></li>
+												<li class="service_menu"><a href="#" class="link_txt">Workflow</a></li>
+												<li class="service_menu"><a href="#" class="link_txt">Human Resources</a></li>
+												<li class="service_menu"><a href="#" class="link_txt">Finance</a></li>
+												</ul>
+											</div>
+											<div class="col_group">
+												<em class="service_title">Contact Center</em>
+												<ul class="lst_service_menu">
+												<li class="service_menu"><a href="#" class="link_txt">Call</a></li>
+												<li class="service_menu"><a href="#" class="link_txt">Mail</a></li>
+												<li class="service_menu"><a href="#" class="link_txt">FAQ</a></li>
+												<li class="service_menu"><a href="#" class="link_txt">Front</a></li>
+												<li class="service_menu"><a href="#" class="link_txt">QnA</a></li>
+												</ul>
+											</div>
+											<div class="col_group">
+												<em class="service_title">IDC</em>
+												<ul class="lst_service_menu">
+												<li class="service_menu"><a href="#" class="link_txt">TCC</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="gnb_menu"><a href="03_pricing.html" class="link_menu"><span class="menu_txt">요금</span></a></li>
+						<li class="gnb_menu">
+							<a href="04_customer.html" class="link_menu"><span class="menu_txt">고객사례</span></a>
+							<div class="drop_menu_wrap customer_drop_menu">
+								<ul class="lst_gnb_sub">
+								<li class="gnb_sub_menu"><a href="04_customer_webservice.html" class="menu_txt">웹 서비스</a></li>
+								<li class="gnb_sub_menu"><a href="04_customer_commerce.html" class="menu_txt">커머스</a></li>
+								<li class="gnb_sub_menu"><a href="04_customer_game.html" class="menu_txt">게임</a></li>
+								<li class="gnb_sub_menu"><a href="04_customer_public.html" class="menu_txt">공공 및 교육기관</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="gnb_menu"><a href="05_partner.html" class="link_menu"><span class="menu_txt">파트너</span></a></li>
+						<li class="gnb_menu">
+							<a href="06_support.html" class="link_menu"><span class="menu_txt">고객센터</span></a>
+							<div class="drop_menu_wrap support_drop_menu">
+								<ul class="lst_gnb_sub">
+								<li class="gnb_sub_menu"><a href="06_support_faq.html" class="menu_txt">FAQ</a></li>
+								<li class="gnb_sub_menu"><a href="06_support_inquiry.html" class="menu_txt">1:1 문의</a></li>
+								<li class="gnb_sub_menu"><a href="06_support_qna.html" class="menu_txt">문의 내역 조회</a></li>
+								<li class="gnb_sub_menu"><a href="06_support_notice.html" class="menu_txt">공지사항</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="gnb_menu"><a href="#" class="link_menu"><span class="menu_txt">사용자가이드</span></a></li>
+						<li class="gnb_menu is_point has_left_gap"><a href="#" class="link_menu"><span class="menu_txt">CONSOLE</span></a></li><!-- [D] gnb_menu사이에 왼쪽 여백이 더 필요한 경우 has_left_gap, 파란 라운드 포인트 필요한 경우 is_point 클래스 추가 -->
+						</ul>
+					</nav>
+					<!-- //[D] global navigation bar -->
+					<div class="side_menu_area">
+						<div class="search_word_area">
+							<span class="blind">통합 검색</span>
+							<form>
+							<div class="sizing_wrap">
+								<label for="inp_search" class="btn_search">검색어 입력</label><!-- [D]btn_search 클릭시 search_word_area에 is_active 클래스 추가 -->
+								<input type="text" id="inp_search" class="inp_search" placeholder="검색어 입력">
+								<button type="reset" class="btn_search_reset">&#x2715;</button><!-- [D] inp_search에 값이 있을때만 노출 -->
+							</div>
+							</form>
+						</div>
+						<div class="lang_select_area">
+							<span class="blind">언어 선택</span>
+							<button class="btn_select_lang"><span class="blind">선택된 언어</span><span class="select_lang_txt">KOR</span></button><!-- [D]선택한 btn_lang의 value를 select_lang_txt의 value에 적용 -->
+							<ul class="lst_lang">
+							<li class="lang_item"><a href="#" class="btn_lang">KOR</a></li>
+							<li class="lang_item"><a href="#" class="btn_lang">ENG</a></li>
+							<li class="lang_item"><a href="#" class="btn_lang">JPN</a></li>
+							<li class="lang_item"><a href="#" class="btn_lang">CHN</a></li>
+							</ul>
+						</div>
+						<!-- [D] 로그인 전 노출 영역 -->
+						<ul class="lst_member_link">
+						<li class="link_item"><a href="#" class="link_txt">로그인</a></li>
+						<li class="link_item"><a href="#" class="link_txt">회원가입</a></li>
+						</ul>
+						<!-- [D] 로그인 후 노출 영역 -->
+
+						<div class="member_setting_area" style="display:none">
+							<a href="#" class="btn_member_setting">ne*****@nhnent.com</a>
+							<ul class="lst_member_setting"><!-- [D] btn_member_setting에 마우스 오버시 lst_member_setting에 is_show 클래스 추가 -->
+							<li class="setting_item"><a href="07_mypage_info.html" class="link_txt">회원정보</a></li>
+							<li class="setting_item"><a href="07_mypage_payment.html" class="link_txt">결제수단</a></li>
+							<li class="setting_item"><a href="07_mypage_credit.html" class="link_txt">크레딧</a></li>
+							<li class="setting_item"><a href="07_mypage_api.html" class="link_txt">API 보안 설정</a></li>
+							<li class="setting_item has_top_line"><a href="#" class="link_txt">결제 관리</a></li>
+							<li class="setting_item has_top_line"><a href="#" class="link_txt">로그아웃</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</header>
+
+
+			<h2 class="guide_title">헤더 동작 설명</h2>
+			<ul class="txt_guide">
+			<li>기본 : 투명 배경&상단 고정 안함</li>
+			<li>상단 고정 : header에 is_fixed 클래스 추가</li>
+			<li>불투명배경(흰색) 적용 : header에 is_hover 클래스 추가</li>
+			</ul>
+
+			<h2 class="guide_title">다른 사이트 공용 헤더 적용시 필요한 파일</h2>
+			<ul class="txt_guide">
+			<li>CSS 파일 : gnb.css</li>
+			<li>이미지 파일 : sp_gnb.png</li>
+			</ul>
+
+			<h2 class="guide_title">다른 사이트 마크업 적용 예</h2>
+
+			<h3 class="guide_title">하위메뉴 추가 가이드</h3>
+			<ul class="txt_guide">
+			<li>1. 서브메뉴가 필요한 헤더에 클래스 추가</li>
+			<li>2. 서브메뉴가 필요한 메뉴(link_txt)다음에 drop_menu_wrap 영역 추가 한 후 drop_menu_wrap에 클래스 추가</li>
+			<li>3. 서브메뉴 위치를 추가한 클래스의 padding-left 값으로 조정</li>
+			<li><a href="https://goo.gl/5EuLvv" target="_blank" class="link_txt">HTML DIFF 가이드</a></li>
+			<li><a href="https://goo.gl/QQsrxn" target="_blank" class="link_txt">CSS DIFF 가이드</a></li>
+			</ul>
+
+			<h3 class="guide_title">TOAST Anlytics</h3>
+			<ul class="txt_guide">
+			<li>메인 : 배경 흰색, 위치 고정 안함</li>
+			</ul>
+
+			<header id="toast_header" class="is_hover">
+				<div class="inner">
+					<h1 class="logo service_logo">
+						<a href="http://analytics.toast.com/index.nhn" class="link_txt">
+							<img src="img/logo_toast.svg" alt="NHN TOAST" class="logo_img is_white">
+							<img src="img/logo_toast_color.svg" alt="NHN TOAST" class="logo_img is_color">
+						</a>
+					</h1>
+					<!-- [D] global navigation bar -->
+					<nav class="gnb">
+						<ul class="lst_gnb">
+						<li class="gnb_menu is_point"><a href="http://analytics.toast.com/index.nhn" class="link_menu"><span class="menu_txt">ANALYTICS</span></a></li>
+						<li class="gnb_menu"><a href="http://analytics.toast.com/index.nhn" class="link_menu"><span class="menu_txt">Overview</span></a></li>
+						<li class="gnb_menu"><a href="http://analytics.toast.com/feature.nhn" class="link_menu"><span class="menu_txt">Feature</span></a></li>
+						<li class="gnb_menu"><a href="http://analytics.toast.com/resource.nhn" class="link_menu"><span class="menu_txt">Resource</span></a></li>
+						<li class="gnb_menu"><a href="http://analytics.toast.com/monitoring?appCode=p0HaZlgr" class="link_menu"><span class="menu_txt">Demo</span></a></li>
+						<li class="gnb_menu has_left_gap"><a href="http://analytics.toast.com/resource.nhn#contact-us" class="link_menu"><span class="menu_txt">Contact US</span></a></li>
+						</ul>
+					</nav>
+					<!-- //[D] global navigation bar -->
+					<div class="side_menu_area">
+						<div class="lang_select_area">
+							<span class="blind">언어 선택</span>
+							<button class="btn_select_lang"><span class="blind">선택된 언어</span><span class="select_lang_txt">KOR</span></button>
+							<ul class="lst_lang">
+							<li class="lang_item"><a href="#" class="btn_lang">KOR</a></li>
+							<li class="lang_item"><a href="#" class="btn_lang">ENG</a></li>
+							<li class="lang_item"><a href="#" class="btn_lang">JPN</a></li>
+							<li class="lang_item"><a href="#" class="btn_lang">CHN</a></li>
+							</ul>
+						</div>
+						<!-- [D] 로그인 전 노출 영역 -->
+						<ul class="lst_member_link">
+						<li class="link_item"><a href="#" class="link_txt">로그인</a></li>
+						<li class="link_item"><a href="#" class="link_txt">회원가입</a></li>
+						</ul>
+						<!-- [D] 로그인 후 노출 영역 -->
+
+						<div class="member_setting_area" style="display:none">
+							<a href="#" class="btn_member_setting">ne*****@nhnent.com</a>
+							<ul class="lst_member_setting">
+							<li class="setting_item"><a href="#" class="link_txt">회원정보</a></li>
+							<li class="setting_item"><a href="#" class="link_txt">결제수단</a></li>
+							<li class="setting_item"><a href="#" class="link_txt">크레딧</a></li>
+							<li class="setting_item"><a href="#" class="link_txt">API 보안 설정</a></li>
+							<li class="setting_item has_top_line"><a href="#" class="link_txt">결제 관리</a></li>
+							<li class="setting_item has_top_line"><a href="#" class="link_txt">로그아웃</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<h3 class="guide_title">TOAST Bill</h3>
+			<ul class="txt_guide">
+			<li>메인 : 최상단 진입시 배경 투명, 마우스 오버/스크롤시 배경 흰색 적용, 위치 상단 고정</li>
+			<li>서브 : 최상단 진입시에도 배경 흰색</li>
+			</ul>
+
+			<header id="toast_header">
+				<div class="inner">
+					<em class="logo">
+						<a href="https://toast.com/" class="link_txt">
+							<img src="img/header_logo/ico_toast.svg" alt="TOAST" class="logo_img is_white">
+							<img src="img/header_logo/ico_toast_color.svg" alt="TOAST" class="logo_img is_color">
+						</a>
+					</em>
+					<h1 class="logo service_logo">
+						<a href="https://bill.toast.com/" class="link_txt">
+							<img src="img/header_logo/logo_toastbill.png" alt="TOAST Bill" class="logo_img is_white">
+							<img src="img/header_logo/logo_toastbill_color.png" alt="TOAST Bill" class="logo_img is_color">
+						</a>
+					</h1>
+					<!-- [D] global navigation bar -->
+					<nav class="gnb">
+						<ul class="lst_gnb">
+						<li class="gnb_menu">
+							<a href="https://bill.toast.com/introduce" class="link_menu"><span class="menu_txt">체험하기</span></a>
+						</li>
+						<li class="gnb_menu">
+							<a href="https://bill.toast.com/service" class="link_menu"><span class="menu_txt">전자세금계산서</span></a>
+						</li>
+						<li class="gnb_menu">
+							<a href="https://bill.toast.com/certificate" class="link_menu"><span class="menu_txt">공인인증서</span></a>
+						</li>
+						<li class="gnb_menu">
+							<a href="https://bill.toast.com/support/faq" class="link_menu"><span class="menu_txt">고객센터</span></a>
+						</li>
+						</ul>
+					</nav>
+					<!-- //[D] global navigation bar -->
+					<div class="side_menu_area">
+						<!-- [D] 로그인 전 노출 영역 -->
+						<ul class="lst_member_link">
+						<li class="link_item"><a href="#" class="link_txt">로그인</a></li>
+						</ul>
+						<!-- [D] 로그인 후 노출 영역 -->
+						<div class="member_setting_area" style="display:none">
+							<a href="#" class="btn_member_setting">ne*****@nhnent.com</a>
+							<ul class="lst_member_setting">
+							<li class="setting_item"><a href="#" class="link_txt">회원정보</a></li>
+							<li class="setting_item"><a href="#" class="link_txt">결제수단</a></li>
+							<li class="setting_item"><a href="#" class="link_txt">크레딧</a></li>
+							<li class="setting_item"><a href="#" class="link_txt">API 보안 설정</a></li>
+							<li class="setting_item has_top_line"><a href="#" class="link_txt">결제 관리</a></li>
+							<li class="setting_item has_top_line"><a href="#" class="link_txt">로그아웃</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<h3 class="guide_title">TOAST Cloud Center</h3>
+			<ul class="txt_guide">
+			<li>메인 : 최상단 진입시 배경 투명, 마우스 오버/스크롤시 배경 흰색 적용, 위치 상단 고정</li>
+			<li>서브 : 최상단 진입시에도 배경 흰색</li>
+			</ul>
+			<header id="toast_header">
+				<div class="inner">
+					<em class="logo">
+						<a href="https://toast.com/" class="link_txt">
+							<img src="img/header_logo/ico_toast.svg" alt="TOAST" class="logo_img is_white">
+							<img src="img/header_logo/ico_toast_color.svg" alt="TOAST" class="logo_img is_color">
+						</a>
+					</em>
+					<h1 class="logo service_logo">
+						<a href="https://tcc.toast.com/" class="link_txt">
+							<img src="img/header_logo/logo_tcc.png" alt="TCC1" class="logo_img is_white">
+							<img src="img/header_logo/logo_tcc_color.png" alt="TCC1 Bill" class="logo_img is_color">
+						</a>
+					</h1>
+					<!-- [D] global navigation bar -->
+					<nav class="gnb">
+						<ul class="lst_gnb">
+						<li class="gnb_menu"><a href="https://tcc.toast.com/advantage" class="link_menu"><span class="menu_txt">특장점</span></a></li>
+						<li class="gnb_menu"><a href="https://tcc.toast.com/spec" class="link_menu"><span class="menu_txt">설계사양</span></a></li>
+						<li class="gnb_menu"><a href="https://tcc.toast.com/contact" class="link_menu"><span class="menu_txt">이용문의</span></a></li>
+						</ul>
+					</nav>
+					<!-- //[D] global navigation bar -->
+				</div>
+			</header>
+
+			<h3 class="guide_title">TOAST Meetup</h3>
+			<ul class="txt_guide">
+			<li>메인 : 배경 흰색, 위치 상단 고정</li>
+			</ul>
+			<header id="toast_header" class="is_hover">
+				<div class="inner">
+					<h1 class="logo service_logo">
+						<a href="http://meetup.toast.com/" class="link_txt">
+							<img src="img/header_logo/logo_meetup.png" alt="TOAST Meetup!" class="logo_img is_white">
+							<img src="img/header_logo/logo_meetup_color.png" alt="NHN Meetup!" class="logo_img is_color">
+						</a>
+					</h1>
+					<div class="side_menu_area">
+						<div class="search_word_area">
+							<span class="blind">통합 검색</span>
+							<form>
+							<div class="sizing_wrap">
+								<label for="inp_search" class="btn_search">검색어 입력</label>
+								<input type="text" id="inp_search" class="inp_search" placeholder="검색어 입력">
+								<button type="reset" class="btn_search_reset">&#x2715;</button>
+							</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</header>
+		</div>
+	</div>
+</div>
+<!-- Javascript Area -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script></script>
+<!-- 마크업 확인용입니다. -->
+<style>
+.case_view{display:inline-block;position:fixed;bottom:0;left:0;z-index:1000;width:auto;padding:5px;background:#000;opacity:0.7}
+.case_view .btn{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+</style>
+<div class="case_view">
+	<a href="#" class="btn" onclick="$('.lst_member_link').show();$('.member_setting_area').hide();return false;">로그인 전</a>
+	<a href="#" class="btn" onclick="$('.lst_member_link').hide();$('.member_setting_area').show();return false;">로그인 후</a>
+</div>
+<!-- <script src="js/case_view.js"></script> -->
+<!-- //마크업 확인용입니다. -->
+</body>
+</html>

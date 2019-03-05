@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="all">
+<title>토스트 회원가입 :: TOAST Cloud</title>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/toast_member.css">
+<style>
+html,body{height:100%;margin:0;padding:0}/* 마크업 검수용 코드입니다. 개발시 삭제 부탁드립니다. */
+</style>
+</head>
+<body>
+<div class="tcm_wrap">
+	<!-- [D] CONTENTS -->
+	<div id="content" class="content signup_form_content">
+		<div class="sub_title_wrap">
+			<p class="logo_area"><img src="img/logo_toast.svg" width="127" height="42" alt="NHN TOAST"></p>
+			<div class="step_wrap">
+				<ol class="step_area">
+				<li class="step">
+				<span class="step_txt">이용약관 동의</span>
+				</li>
+				<li class="step is_active"><!--[D] 활성화된 step 에 .is_active 클래스 추가 -->
+				<span class="blind">현재단계</span><!--[D] 활성화된 단계에 .blind 처리된 '현재단계' 텍스트 추가 부탁드립니다.-->
+				<span class="step_txt">회원정보 입력</span>
+				</li>
+				<li class="step">
+				<span class="step_txt">회원가입 완료</span>
+				</li>
+				</ol>
+			</div>
+		</div>
+		
+		<h2 class="blind">회원정보 입력</h2>
+		<div class="form_wrap signup_form_wrap">
+			<form>
+			<fieldset>
+			<legend>회원정보 입력</legend>
+			<dl class="lst_form">
+			<dt class="form_title"><label for="email">이메일</label><em class="ico_required_fields">필수 입력</em></dt>
+			<dd class="form_input_area">
+				<span class="error_control_area"><!-- [D]입력 오류시 해당 error_control_area에 is_error 클래스 추가 -->
+					<span class="inp_row">
+						<span class="inp_bx">
+							<input type="text" id="email"	class="inp" title="이메일" placeholder="이메일">
+						</span>
+						<button type="button" class="btn btn_action" disabled>인증메일 발송</button><!-- [D] 비활성 상태인 버튼에는 disabled 속성 추가 -->
+					</span>
+					<em class="error_txt">유효성 메시지 표시 영역</em>
+				</span>
+			</dd>
+			<dt class="form_title"><label for="pass">비밀번호</label><em class="ico_required_fields">필수 입력</em></dt>
+			<dd class="form_input_area">
+				<span class="error_control_area">
+					<span class="inp_row">
+						<span class="inp_bx">
+							<input type="password" id="pass" class="inp" title="비밀번호" placeholder="비밀번호 (영문/숫자/특수문자 조합하여 8자리 이상 입력)">
+						</span>
+					</span>
+					<em class="error_txt">유효성 메시지 표시 영역</em>
+					<span class="tcm_tooltip" role="tooltip"><!-- [D] 툴팁 활성시 tcm_tooltip 에 is_show 클래스 추가 -->
+						<span class="tooltip_arrow"></span>
+						<span class="tooltip_inner">Caps Lock이 켜져 있습니다.</span>
+					</span>
+				</span>
+				<span class="error_control_area">
+					<span class="inp_row">
+						<span class="inp_bx">
+							<input type="password" class="inp" title="비밀번호 확인" placeholder="비밀번호 확인">
+						</span>
+					</span>
+					<em class="error_txt">유효성 메시지 표시 영역</em>
+					<span class="tcm_tooltip" role="tooltip"><!-- [D] 툴팁 활성시 tcm_tooltip 에 is_show 클래스 추가 -->
+						<span class="tooltip_arrow"></span>
+						<span class="tooltip_inner">Caps Lock이 켜져 있습니다.</span>
+					</span>
+				</span>
+			</dd>
+			<dt class="form_title boder_line"><label for="name">이름</label><em class="ico_required_fields">필수 입력</em></dt>
+			<dd class="form_input_area boder_line"><!-- [D] 구분선 필요한 행 form_title, form_input_area에 boder_line 클래스 추가 -->
+				<span class="error_control_area">
+					<span class="inp_row">
+						<span class="inp_bx">
+							<input type="text" id="name" class="inp" title="이름" placeholder="이름">
+						</span>
+					</span>
+					<em class="error_txt">유효성 메시지 표시 영역</em>
+				</span>
+			</dd>
+			<dt class="form_title"><label for="phone">휴대폰 번호</label><em class="ico_required_fields">필수 입력</em></dt>
+			<dd class="form_input_area">
+				<div class="error_control_area"><!-- [D]국가번호 선택 미노출 시 해당 행error_control_area에 is_hide 클래스 추가 -->
+					<div class="inp_row">
+						<span class="select_bx">
+							<span class="blind">국제전화 번호 선택</span>
+							<select class="inp_select" id="tel">
+								<option value="국가 검색" selected disabled >국가 검색 (국가번호, 국가명)</option>
+								<option value="미국">(+1) 미국 / United States</option>
+								<option value="캐나다">(+1) 캐나다 / Canada</option>
+								<option value="대한민국">(+82) 대한민국 / Korea, Republic of</option>
+								<option value="일본">(+81) 일본 / Japan</option>
+								<option value="중국">(+86) 중국 / China</option>
+							</select>
+						</span>
+					</div>
+					<em class="error_txt">유효성 메시지 표시 영역</em>
+				</div>
+				<span class="error_control_area">
+					<span class="inp_row">
+						<span class="inp_bx">
+							<input type="text" class="inp" title="휴대폰 번호" placeholder="-없이 입력">
+						</span>
+						<button type="button" class="btn btn_action" disabled>인증번호 요청</button>
+					</span>
+					<em class="error_txt">유효성 메시지 표시 영역</em>
+				</span>
+				<span class="error_control_area">
+					<span class="inp_row">
+						<span class="inp_bx inp_valid_time">
+							<input type="text" class="inp" title="인증번호" placeholder="인증번호 (유효시간 3분)">
+							<span class="valid_time">유효시간 <em class="time_text">02:50</em></span>
+						</span>
+						<button type="button" class="btn btn_action" disabled>확인</button>
+					</span>
+					<em class="error_txt">유효성 메시지 표시 영역</em>
+				</span>
+			</dd>
+			<dt class="form_title"><label for="address">주소</label></dt>
+			<dd class="form_input_area">
+				<span class="error_control_area">
+					<span class="inp_row">
+						<span class="inp_bx">
+							<input type="text" id="address" class="inp" title="주소" placeholder="주소" disabled>
+						</span>
+						<button type="button" class="btn btn_action">주소 검색</button>
+					</span>
+					<span class="inp_row">
+						<span class="inp_bx">
+							<input type="text" class="inp" title="상세주소" placeholder="상세주소" disabled>
+						</span>
+					</span>
+					<em class="error_txt">유효성 메시지 표시 영역</em>
+				</span>
+			</dd>
+			<dt class="form_title"><label for="tel">유선전화</label></dt>
+			<dd class="form_input_area">
+				<div class="error_control_area"><!-- [D]국가번호 선택 미노출 시 해당 행error_control_area에 is_hide 클래스 추가 -->
+					<div class="inp_row">
+						<span class="select_bx">
+							<span class="blind">국제전화 번호 선택</span>
+							<select class="inp_select" id="tel">
+								<option value="국가 검색" selected disabled >국가 검색 (국가번호, 국가명)</option>
+								<option value="미국">(+1) 미국 / United States</option>
+								<option value="캐나다">(+1) 캐나다 / Canada</option>
+								<option value="대한민국">(+82) 대한민국 / Korea, Republic of</option>
+								<option value="일본">(+81) 일본 / Japan</option>
+								<option value="중국">(+86) 중국 / China</option>
+							</select>
+						</span>
+					</div>
+					<em class="error_txt">유효성 메시지 표시 영역</em>
+				</div>
+				<span class="error_control_area">
+					<span class="inp_row">
+						<span class="inp_bx">
+							<input type="text" class="inp" title="유선전화 번호" placeholder="-없이 입력">
+						</span>
+					</span>
+					<em class="error_txt">유효성 메시지 표시 영역</em>
+				</span>
+			</dd>
+			</dl>
+			</fieldset>
+			</form>
+		</div>
+		
+		<div class="btn_area">
+			<button type="button" class="btn">이전 단계</button>
+			<button type="button" class="btn btn_point">가입 완료</button>
+		</div>
+	</div>
+	<!-- //[D] CONTENTS -->
+</div>
+
+<!--[D] 레이어팝업 -->
+<div class="tcm_layer_dimmed"></div><!-- [D] 레이어 팝업 노출시 tcm_layer_dimmed와 해당 tcm_pop_wrap에 is_show 클래스 추가 -->
+<!-- [D] 인증메일 발송 확인 팝업 -->
+<div class="tcm_pop_wrap">
+	<div class="ly_pop">
+		<div class="title_wrap">
+			<h3 class="ly_tit">회원정보 입력</h3>
+		</div>
+		<div class="desc_text_wrap">
+			<p class="desc_text">인증메일이 발송되었습니다.</p>
+		</div>
+		<div class="btn_area">
+			<button class="btn btn_point">확인</button>
+		</div>
+		<button type="button" class="btn_close_layer">닫기</button>
+	</div>
+</div>
+<!-- [D] 인증번호 발송 확인 팝업 -->
+<div class="tcm_pop_wrap">
+	<div class="ly_pop">
+		<div class="title_wrap">
+			<h3 class="ly_tit">회원정보 입력</h3>
+		</div>
+		<div class="desc_text_wrap">
+			<p class="desc_text">인증번호가 발송되었습니다.</p>
+		</div>
+		<div class="btn_area">
+			<button class="btn btn_point">확인</button>
+		</div>
+		<button type="button" class="btn_close_layer">닫기</button>
+	</div>
+</div>
+<!-- [D] 이메일 인증 요청 팝업 -->
+<div class="tcm_pop_wrap">
+	<div class="ly_pop">
+		<div class="title_wrap">
+			<h3 class="ly_tit">회원정보 입력</h3>
+		</div>
+		<div class="desc_text_wrap">
+			<p class="desc_text">이메일이 인증되지 않았습니다.<br>이메일 인증을 먼저 완료해주세요.</p>
+		</div>
+		<div class="btn_area">
+			<button class="btn btn_point">확인</button>
+		</div>
+		<button type="button" class="btn_close_layer">닫기</button>
+	</div>
+</div>
+<!--[D] //레이어팝업 -->
+
+<!-- 마크업 확인용입니다. -->
+<style>
+	#case_view{display:inline-block;position:fixed;bottom:0;left:0;z-index:1000;widdt:auto;padding:5px;background:#000;opacity:0.7}
+	#case_view .btn{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+</style>
+<div id="case_view">
+	<a href="#" class="btn" onclick="$('.error_control_area').toggleClass('is_error');return false;">입력 오류 화면</a>
+	<a href="#" class="btn" onclick="$('.tcm_tooltip').toggleClass('is_show');return false;">툴팁 메세지</a>
+	<a href="#" class="btn" onclick="$('.tcm_pop_wrap,.tcm_layer_dimmed').removeClass('is_show');$('.tcm_layer_dimmed,.tcm_pop_wrap:eq(0)').addClass('is_show');return false;">인증메일 발송 확인 팝업</a>
+	<a href="#" class="btn" onclick="$('.tcm_pop_wrap,.tcm_layer_dimmed').removeClass('is_show');$('.tcm_layer_dimmed,.tcm_pop_wrap:eq(1)').addClass('is_show');return false;">인증번호 발송 확인 팝업</a>
+	<a href="#" class="btn" onclick="$('.tcm_pop_wrap,.tcm_layer_dimmed').removeClass('is_show');$('.tcm_layer_dimmed,.tcm_pop_wrap:eq(2)').addClass('is_show');return false;">이메일 인증 요청 팝업</a>
+</div>
+<script src="js/libs/jquery-1.12.4.min.js"></script>
+<script>    
+$(function(){
+  $('.tcm_pop_wrap a,.tcm_pop_wrap button').click(function(e){
+    e.preventDefault();
+    $('.tcm_pop_wrap,.tcm_layer_dimmed').removeClass('is_show');
+  });
+});
+</script>
+<!-- //마크업 확인용입니다. -->
+</body>
+</html>

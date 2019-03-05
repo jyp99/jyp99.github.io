@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="all">
+<title>회원탈퇴 :: TOAST Cloud</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<base href="../">
+<link rel="stylesheet" type="text/css" href="css/gnb.css">
+<link rel="stylesheet" type="text/css" href="css/toast.css">
+<link rel="stylesheet" type="text/css" href="css/toast_member.css">
+</head>
+<body>
+<div class="wrap header_fixed_wrap">
+	<!--[D] HEADER -->
+	<?php include '../inc/header.html';?>
+	<!--//[D] HEADER -->
+	<div id="container" class="container">
+		<!-- [D] CONTENTS -->
+		<div id="content" class="content mypage_content">
+			<section class="sec">
+				<div class="sec_inner">
+					<h2 class="main_title">마이페이지</h2>
+					<ul class="nav nav-justified member_nav">
+					<li class="nav-item word_item active"><a href="member/05_my_info.html" class="nav-link is_active"><span class="nav_txt">회원정보</span></a></li>
+					<li class="nav-item word_item"><a href="07_mypage_payment.html" class="nav-link"><span class="nav_txt">결제수단</span></a></li>
+					<li class="nav-item word_item"><a href="07_mypage_credit.html" class="nav-link"><span class="nav_txt">크레딧</span></a></li>
+					<li class="nav-item word_item"><a href="07_mypage_api.html" class="nav-link"><span class="nav_txt">API 보안 설정</span></a></li>
+					</ul>
+					<div class="tab-content">
+						<div class="title_wrap">
+							<h3 class="tit_txt">회원 탈퇴</h3>
+							<p class="sub_desc">그동안 TOAST 서비스를 이용해 주셔서 감사합니다. 회원 탈퇴 신청 전 아래 안내 사항을 꼭 확인해 주세요.</p>
+						</div>
+						<!-- [D]오류 전 화면 -->
+						<div class="form_wrap withdrawal_form_wrap">
+							<form>
+							<fieldset>
+							<legend>회원 탈퇴</legend>
+							<div class="notice_wrap">
+								<p class="txt">회원 탈퇴 신청을 위해서는 아래 사항이 모두 확인이 되어야 회원 탈퇴 신청 및 탈퇴가 진행/완료됩니다.</p>
+								<ul class="lst_noti">
+								<li class="noti_txt">이용 요금 내역이 남아 있는 경우, 결제 후 탈퇴가 가능합니다.</li>
+								<li class="noti_txt">모든 상품의 이용 종료 후 탈퇴가 가능합니다.</li>
+								<li class="noti_txt">상품 이용을 위해 생성된 프로젝트와 조직을 삭제 후 탈퇴가 가능합니다.</li>
+								</ul>
+								<p class="txt">회원 탈퇴 후 이용 기록은 모두 삭제 됩니다.<br>삭제된 데이터는 복구 되지 않기 때문에 필요한 데이터는 미리 백업해 주세요.</p>
+							</div>
+							<span class="inp_checkbox">
+								<input type="checkbox" id="check1" class="inp_chk">
+								<label for="check1" class="inp_label">
+									<span class="ico_checkbox"></span>
+									<span class="label_text">모든 유의사항을 확인하였습니다.</span>
+								</label>
+							</span>
+							<div class="btn_area is_align_right">
+								<button type="button" class="btn btn_strong">회원탈퇴</button>
+							</div>
+							</fieldset>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<!-- //[D] CONTENTS -->
+	</div>
+	<!--[D] FOOTER -->
+	<?php include '../inc/footer.html';?>
+	<!--//[D] FOOTER -->
+</div>
+<!-- Javascript Area -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+<!-- 마크업 확인용입니다. -->
+<script src="js/case_view.js"></script>
+<!-- //마크업 확인용입니다. -->
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="all">
+<title>회원 전환 :: TOAST IAM</title>
+<link rel="stylesheet" type="text/css" href="css/iam.css">
+</head>
+<body>
+<div class="wrap">
+	<!-- [D] CONTENTS -->
+	<div id="content" class="content setting_content">
+		<div class="form_wrap">
+			<div class="sub_title_wrap">
+				<h2 class="title_text">토스트 회원 전환</h2>
+				<p class="dsc_txt">토스트 아이디의 비밀번호를 설정해주세요.</p>
+			</div>
+			<form>
+			<fieldset>
+			<legend>전환 인증 메일 확인</legend>
+			<div class="input_wrap">
+				<span class="error_control_area">
+					<span class="inp_row">
+						<span class="inp_bx">
+							<input type="password" id="pass" class="inp" title="새 비밀번호" placeholder="새 비밀번호 (영문/숫자/특수문자 조합하여 8자리 이상 입력)">
+						</span>
+					</span>
+					<em class="error_txt">유효성 메시지 표시 영역</em>
+					<span class="tooltip" role="tooltip"><!-- [D] 툴팁 활성시 tooltip 에 is_show 클래스 추가 -->
+						<span class="tooltip_arrow"></span>
+						<span class="tooltip_inner">Caps Lock이 켜져 있습니다.</span>
+					</span>
+				</span>
+				<span class="error_control_area">
+					<span class="inp_row">
+						<span class="inp_bx">
+							<input type="password" class="inp" title="새 비밀번호 확인" placeholder="새 비밀번호 확인">
+						</span>
+					</span>
+					<em class="error_txt">유효성 메시지 표시 영역</em>
+					<span class="tooltip" role="tooltip"><!-- [D] 툴팁 활성시 tooltip 에 is_show 클래스 추가 -->
+						<span class="tooltip_arrow"></span>
+						<span class="tooltip_inner">Caps Lock이 켜져 있습니다.</span>
+					</span>
+				</span>
+			</div>
+			<ul class="list_terms">
+			<li class="term_text">
+				<span class="inp_checkbox">
+					<input type="checkbox" id="check2" class="inp_chk">
+					<label for="check2" class="inp_label">
+						<span class="ico_checkbox"></span>
+						<span class="label_text">개인정보 수집 및 이용 동의 (필수)</span>
+					</label>
+				</span>
+				<a href="#" class="btn_view">보기</a>
+			</li>
+			<li class="term_text">
+				<span class="inp_checkbox">
+					<input type="checkbox" id="check1" class="inp_chk">
+					<label for="check1" class="inp_label">
+						<span class="ico_checkbox"></span>
+						<span class="label_text">홍보성 정보 수신 (선택)</span>
+					</label>
+				</span>
+			</li>
+			</ul>
+			<div class="btn_area">
+				<button type="button" class="btn btn_point">비밀번호 저장</button>
+			</div>
+			</fieldset>
+			</form>
+		</div>
+	</div>
+	<!-- //[D] CONTENTS -->
+</div>
+
+<!--[D] 레이어팝업 -->
+<div class="layer_dimmed"></div><!-- [D] 레이어 팝업 노출시 layer_dimmed와 해당 ly_pop_wrap에 is_show 클래스 추가 -->
+<!-- [D]회원 전환 완료(홍보성 정보 수신동의) 팝업 -->
+<div class="ly_pop_wrap">
+	<div class="ly_pop">
+		<div class="title_wrap">
+			<h3 class="ly_tit">토스트 회원 전환</h3>
+		</div>
+		<div class="desc_text_wrap">
+			<p class="desc_text">TOAST 회원 전환이 완료되었습니다.<br>(2017. 01. 11 홍보성 정보 수신 동의)</p>
+			<p class="desc_text">로그인 화면으로 이동합니다.</p>
+		</div>
+		<div class="btn_area">
+			<button class="btn btn_point">확인</button>
+		</div>
+		<button type="button" class="btn_close_layer">닫기</button>
+	</div>
+</div>
+<!-- [D]회원 전환 완료(홍보성 정보 수신거부) 팝업 -->
+<div class="ly_pop_wrap">
+	<div class="ly_pop">
+		<div class="title_wrap">
+			<h3 class="ly_tit">토스트 회원 전환</h3>
+		</div>
+		<div class="desc_text_wrap">
+			<p class="desc_text">TOAST 회원 전환이 완료되었습니다.<br>(2017. 01. 11 홍보성 정보 수신 거부)</p>
+			<p class="desc_text">로그인 화면으로 이동합니다.</p>
+		</div>
+		<div class="btn_area">
+			<button class="btn btn_point">확인</button>
+		</div>
+		<button type="button" class="btn_close_layer">닫기</button>
+	</div>
+</div>
+
+<!-- 마크업 확인용입니다. -->
+<style>
+	#case_view{display:inline-block;position:fixed;bottom:0;left:0;z-index:1000;widdt:auto;padding:5px;background:#000;opacity:0.7}
+	#case_view .btn{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+</style>
+<div id="case_view">
+	<a href="#" class="btn" onclick="$('.error_control_area').toggleClass('is_error');return false;">입력 오류 화면</a>
+	<a href="#" class="btn" onclick="$('.tooltip').toggleClass('is_show');return false;">툴팁 메세지</a>
+	<a href="#" class="btn" onclick="$('.ly_pop_wrap,.layer_dimmed').removeClass('is_show');$('.layer_dimmed,.ly_pop_wrap:eq(0)').addClass('is_show');return false;">회원 전환 완료(홍보성 정보 수신동의) 팝업</a>
+	<a href="#" class="btn" onclick="$('.ly_pop_wrap,.layer_dimmed').removeClass('is_show');$('.layer_dimmed,.ly_pop_wrap:eq(1)').addClass('is_show');return false;">회원 전환 완료(홍보성 정보 수신거부) 팝업</a>
+</div>
+<script src="js/libs/jquery-1.12.4.min.js"></script>
+<script>    
+$(function(){
+  $('.ly_pop_wrap a,.ly_pop_wrap button').click(function(e){
+    e.preventDefault();
+    $('.ly_pop_wrap,.layer_dimmed').removeClass('is_show');
+  });
+});
+</script>
+<!-- //마크업 확인용입니다. -->
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="all">
+<title>토스트(TOAST) 고객센터</title>
+
+<meta name="description" content="NHN 엔터테인먼트에서 제공하는 토스트 클라우드 서비스. 오픈스택 기반의 클라우드 인프라, 게임솔루션, 보안, 문자/이메일/알림톡, 협업도구 Dooray, ERP 제공">
+<meta name="keywords" content="토스트, 토스트 클라우드, 클라우드 서비스, 토스트 닷컴, 클라우드, NHN엔터테인먼트, NHN엔터, NHN Entertainment, NHN Ent, TOAST, TOAST Cloud, TOAST CAM, TOAST PC, TOAST Analytics, toast, 토스트캠, 토스트피씨,토스트애널리틱스">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="토스트(TOAST) 고객사례">
+<meta property="og:description" content="NHN 엔터테인먼트에서 제공하는 토스트 클라우드 서비스. 오픈스택 기반의 클라우드 인프라, 게임솔루션, 보안, 문자/이메일/알림톡, 협업도구 Dooray, ERP 제공">
+<meta property="og:keywords" content="토스트, 토스트 클라우드, 클라우드 서비스, 토스트 닷컴, 클라우드, NHN엔터테인먼트, NHN엔터, NHN Entertainment, NHN Ent, TOAST, TOAST Cloud, TOAST CAM, TOAST PC, TOAST Analytics, toast, 토스트캠, 토스트피씨,토스트애널리틱스">
+<meta property="og:image" content="http://images.toast.com/toast/com/web/common/toast.com.jpg">
+<meta property="og:image:secure_url" content="http://images.toast.com/toast/com/web/common/toast.com.jpg">
+<meta property="og:url" content="https://toast.com">
+<link rel="shortcut icon" href="https://toast.com/resources/img/favicons/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" sizes="180x180" href="/resources/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/resources/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/resources/img/favicons/favicon-16x16.png">
+<link rel="manifest" href="/resources/img/favicons/manifest.json">
+<link rel="mask-icon" href="/resources/img/favicons/safari-pinned-tab.svg">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="css/gnb.css">
+<link rel="stylesheet" type="text/css" href="css/toast.css">
+<link rel="stylesheet" type="text/css" href="css/gnb_mobile.css">
+<link rel="stylesheet" type="text/css" href="css/toast_mobile.css">
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul class="skip">
+<li><a href="#header" onclick="document.getElementById('header').tabIndex=-1;document.getElementById('header').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+
+<!--[D] noti_browser -->
+<?php include 'inc/noti_browser.html';?>
+<!--//[D] noti_browser -->
+<div class="wrap header_fixed_wrap">
+
+	<!--[D] HEADER -->
+	<?php include 'inc/header.html';?>
+	<!--//[D] HEADER -->
+	<div id="container" class="container has_snb_container">
+		<!-- [D] CONTENTS -->
+		<?php include 'inc/snb_support.html';?>
+		<div id="content" class="content support_sub_content">
+			<div class="inner">
+				<div class="title_wrap">
+					<div class="title_area">
+						<h2 class="tit_txt">공지 사항</h2>
+					</div>
+					<nav class="location" aria-label="breadcrumb">
+						<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="#" class="link_txt">홈</a></li>
+						<li class="breadcrumb-item"><a href="#" class="link_txt">고객 센터</a></li>
+						<li class="breadcrumb-item active" aria-current="page">공지 사항</li>
+						</ol>
+					</nav>
+				</div>
+				<div class="sub_desc_wrap">
+					<p class="sub_txt">TOAST의 공지 사항 및 신규 서비스에 관련된 소식을 전해드립니다.</p>
+				</div>
+				<div class="support_content_wrap">
+					<ul class="nav nav-pills nav-justified lst_noti_category">
+					<li class="nav-item category_item">
+					<a data-toggle="tab" href="#notice_tab1" class="nav-link active">전체</a>
+					</li>
+					<li class="nav-item category_item">
+					<a data-toggle="tab" href="#notice_tab2" class="nav-link">안내</a>
+					</li>
+					<li class="nav-item category_item">
+					<a data-toggle="tab" href="#notice_tab3" class="nav-link">점검</a>
+					</li>
+					<li class="nav-item category_item">
+					<a data-toggle="tab" href="#notice_tab4" class="nav-link">장애</a>
+					</li>
+					<li class="nav-item category_item">
+					<a data-toggle="tab" href="#notice_tab5" class="nav-link">신규</a>
+					</li>
+					</ul>
+					<div class="notice_list_wrap tab-content">
+						<div id="notice_tab1" class="tab-pane fade active show" aria-expanded="true">
+							<div class="tbl_wrap is_round">
+								<table class="tbl_notice_list">
+									<caption><span>공지사항 게시글 리스트</span></caption>
+									<colgroup>
+									<col>
+									<col>
+									<col>
+									<col>
+									<col>
+									</colgroup>
+									<thead>
+									<tr>
+									<th>번호</th>
+									<th>제목</th>
+									<th>분류</th>
+									<th>상태</th>
+									<th>등록일</th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr>
+									<td class="post_number">504</td>
+									<td class="post_title">VPC 과금 정책 변경 안내2</td>
+									<td class="post_category"><em class="category_tag tag_new">신규</em>TOAST</td>
+									<td>완료</td>
+									<td>2018.08.01</td>
+									</tr>
+									<tr>
+									<td class="post_number">503</td>
+									<td class="post_title">VPC 과금 정책 변경 안내</td>
+									<td class="post_category"><em class="category_tag tag_noti">안내</em>TOAST</td>
+									<td>완료</td>
+									<td>2018.08.01</td>
+									</tr>
+									<tr>
+									<td class="post_number">502</td>
+									<td class="post_title">Infrastructure 임시점검</td>
+									<td class="post_category"><em class="category_tag tag_check">점검</em>Infrastructure</td>
+									<td>진행중</td>
+									<td>2018.08.01</td>
+									</tr>
+									<tr>
+									<td class="post_number">501</td>
+									<td class="post_title">CDN 서비스 장애 안내</td>
+									<td class="post_category"><em class="category_tag tag_error">장애</em>TOAST</td>
+									<td>완료</td>
+									<td>2018.08.01</td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+							<nav class="pagination_wrap" aria-label="Page navigation">
+								<ul class="pagination justify-content-center">
+								<li class="page-item first_item"><a class="page-link btn_first">처음으로</a></li>
+								<li class="page-item prev_item"><a class="page-link btn_prev">이전</a></li>
+								<li class="page-item active"><span class="page-link">1 <span class="sr-only">(current)</span></span></li>
+								<li class="page-item"><a href="#" class="page-link">2</a></li>
+								<li class="page-item"><a href="#" class="page-link">3</a></li>
+								<li class="page-item"><a href="#" class="page-link">4</a></li>
+								<li class="page-item"><a href="#" class="page-link">5</a></li><!-- [D] 가로 사이즈 별로 페이징 갯수 노출 차이 적용 필요(320인 경우 3개, 360인 경우 4개 노출) -->
+								<li class="page-item next_item"><a href="#" class="page-link btn_next">다음</a></li>
+								<li class="page-item last_item"><a href="#" class="page-link btn_last">끝으로</a></li>
+								</ul>
+							</nav>
+						</div>
+						<div id="notice_tab2" class="tab-pane fade" aria-expanded="false">
+							<!-- [D] 안내 리스트 -->
+						</div>
+						<div id="notice_tab3" class="tab-pane fade" aria-expanded="false">
+							<!-- [D] 점검 리스트 -->
+						</div>
+						<div id="notice_tab4" class="tab-pane fade" aria-expanded="false">
+							<!-- [D] 장애 리스트 -->
+						</div>
+						<div id="notice_tab5" class="tab-pane fade" aria-expanded="false">
+							<!-- [D] 신규 리스트 -->
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- //[D] CONTENTS -->
+		<a href="#container" class="btn_top">TOP</a>
+	</div>
+	<!--[D] FOOTER -->
+	<?php include 'inc/footer.html';?>
+	<!--//[D] FOOTER -->
+</div>
+
+<!--[D] widget -->
+	<?php include 'inc/widget.html';?>
+<!--//[D] widget -->
+
+<!-- [D] LAYER -->
+<?php include 'inc/layer_loading.html';?>
+<!-- [D] LAYER -->
+
+<!-- Javascript Area -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+<!-- 마크업 확인용입니다. -->
+<style>
+.case_view{display:inline-block;position:fixed;bottom:0;left:0;z-index:1000;width:auto;padding:5px;background:#000;opacity:0.7}
+.case_view .btn{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+</style>
+<div class="case_view">
+	<?php include 'inc/case_view_common.html';?>
+	<a href="06_support_notice.html" class="btn">공지사항 목록</a>
+	<a href="06_support_notice_detail.html" class="btn">공지사항 게시글</a>
+	<a href="#" class="btn" onclick="$(this).siblings('.btn').toggle();return false;">케이스뷰 토글</a>
+</div>
+
+
+<script src="js/case_view.js"></script>
+<!-- //마크업 확인용입니다. -->
+</body>
+</html>

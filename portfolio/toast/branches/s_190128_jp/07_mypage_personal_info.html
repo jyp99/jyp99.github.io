@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="all">
+<title>토스트(TOAST) 마이페이지</title>
+
+<meta name="description" content="NHN 엔터테인먼트에서 제공하는 토스트 클라우드 서비스. 오픈스택 기반의 클라우드 인프라, 게임솔루션, 보안, 문자/이메일/알림톡, 협업도구 Dooray, ERP 제공">
+<meta name="keywords" content="토스트, 토스트 클라우드, 클라우드 서비스, 토스트 닷컴, 클라우드, NHN엔터테인먼트, NHN엔터, NHN Entertainment, NHN Ent, TOAST, TOAST Cloud, TOAST CAM, TOAST PC, TOAST Analytics, toast, 토스트캠, 토스트피씨,토스트애널리틱스">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="토스트(TOAST) 마이페이지">
+<meta property="og:description" content="NHN 엔터테인먼트에서 제공하는 토스트 클라우드 서비스. 오픈스택 기반의 클라우드 인프라, 게임솔루션, 보안, 문자/이메일/알림톡, 협업도구 Dooray, ERP 제공">
+<meta property="og:keywords" content="토스트, 토스트 클라우드, 클라우드 서비스, 토스트 닷컴, 클라우드, NHN엔터테인먼트, NHN엔터, NHN Entertainment, NHN Ent, TOAST, TOAST Cloud, TOAST CAM, TOAST PC, TOAST Analytics, toast, 토스트캠, 토스트피씨,토스트애널리틱스">
+<meta property="og:image" content="http://images.toast.com/toast/com/web/common/toast.com.jpg">
+<meta property="og:image:secure_url" content="http://images.toast.com/toast/com/web/common/toast.com.jpg">
+<meta property="og:url" content="https://toast.com">
+<link rel="shortcut icon" href="https://toast.com/resources/img/favicons/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" sizes="180x180" href="/resources/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/resources/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/resources/img/favicons/favicon-16x16.png">
+<link rel="manifest" href="/resources/img/favicons/manifest.json">
+<link rel="mask-icon" href="/resources/img/favicons/safari-pinned-tab.svg">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="css/gnb.css">
+<link rel="stylesheet" type="text/css" href="css/toast.css">
+<link rel="stylesheet" href="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.css">
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul class="skip">
+<li><a href="#header" onclick="document.getElementById('header').tabIndex=-1;document.getElementById('header').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+
+<!--[D] noti_browser -->
+<!-- <?php include 'inc/noti_browser.html';?> -->
+<!--//[D] noti_browser -->
+<div class="wrap">
+
+	<!--[D] HEADER -->
+	<?php include 'inc/header.html';?>
+	<!--//[D] HEADER -->
+	<div id="container" class="container">
+		<!-- [D] CONTENTS -->
+		<div id="content" class="content mypage_content">
+			<section class="sec">
+				<div class="sec_inner">
+					<h2 class="main_title">마이페이지</h2>
+					<ul class="nav nav-justified member_nav">
+					<li class="nav-item word_item"><a href="member/05_my_info.html" class="nav-link"><span class="nav_txt">회원정보</span></a></li>
+					<li class="nav-item word_item"><a href="07_mypage_payment.html" class="nav-link"><span class="nav_txt">결제수단</span></a></li>
+					<li class="nav-item word_item"><a href="07_mypage_credit.html" class="nav-link"><span class="nav_txt">크레딧</span></a></li>
+					<li class="nav-item word_item"><a href="07_mypage_api.html" class="nav-link"><span class="nav_txt">API 보안 설정</span></a></li>
+					<li class="nav-item word_item"><a href="07_mypage_personal_info.html" class="nav-link is_active"><span class="nav_txt">개인정보 이용 내역</span></a></li>
+					</ul>
+					<div class="tab-content personal_info_wrap">
+						<div class="title_wrap">
+							<h3 class="tit_txt">개인정보 이용 내역</h3>
+							<p class="sub_desc">TOAST에 제공한 개인정보 이용 내역을 확인하실 수 있습니다.</p>
+						</div>
+						<ul class="lst_term">
+						<li class="term_item">
+							<div class="title_wrap">
+								<h4 class="h_term">수집한 개인정보 항목</h4>
+								<div class="btn_area">
+									<button class="btn btn_detail">자세히 보기</button>
+								</div>
+							</div>
+						</li>
+						<li class="term_item">
+							<div class="title_wrap">
+								<h4 class="h_term">개인정보 수집 및 이용 목적</h4>
+								<div class="btn_area">
+									<button class="btn btn_detail">자세히 보기</button>
+								</div>
+							</div>
+						</li>
+						<li class="term_item">
+							<div class="title_wrap">
+								<h4 class="h_term">개인정보 처리위탁 현황</h4>
+								<div class="btn_area">
+									<button class="btn btn_detail">자세히 보기</button>
+								</div>
+							</div>
+						</li>
+						<li class="term_item">
+							<div class="title_wrap">
+								<h4 class="h_term">개인정보 제3자 제공 현황</h4>
+								<div class="btn_area">
+									<button class="btn btn_detail_toggle">자세히 보기</button><!-- [D] btn_detail_toggle 클릭 시 부모 term_item에 is_show 클래스 적용 -->
+								</div>
+							</div>
+							<div class="cnt_wrap">
+								<div class="tbl_wrap">
+									<table class="tbl_history">
+										<caption><span>개인정보 제3자 제공 현황표</span></caption>
+										<colgroup>
+										<col style="width:195px">
+										<col style="width:355px">
+										<col style="width:auto">
+										</colgroup>
+										<thead>
+										<tr>
+										<th scope="col">업체명</th>
+										<th scope="col">목적</th>
+										<th scope="col">항목</th>
+										</tr>
+										</thead>
+										<tbody>
+										<tr>
+										<td>전체 파트너명</td>
+										<td>모집 고객 식별 및 관리, 수수료 정산</td>
+										<td>ID(이메일), 이름, 휴대폰 번호, 서비스 이용 및 결제 정보</td>
+										</tr>
+										<tr>
+										<td>전체 파트너명</td>
+										<td>모집 고객 식별 및 관리, 수수료 정산</td>
+										<td>ID(이메일), 이름, 휴대폰 번호, 서비스 이용 및 결제 정보</td>
+										</tr>
+										<tr>
+										<td>전체 파트너명</td>
+										<td>모집 고객 식별 및 관리, 수수료 정산</td>
+										<td>ID(이메일), 이름, 휴대폰 번호, 서비스 이용 및 결제 정보</td>
+										</tr>
+										</tbody>
+										<!-- [D]데이터 없는 경우 대체 노출 영역 -->
+										<tbody class="is_empty" style="display:none">
+										<tr>
+										<td colspan="3">제 3자 제공 내역이 없습니다.</td>
+										</tr>
+										<!-- //[D]데이터 없는 경우 대체 노출 영역 -->
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</li>
+						</li>
+						</ul>		
+						
+					</div>				
+				</div>
+			</section>
+		</div>
+		<!-- //[D] CONTENTS -->
+	</div>
+	<!--[D] FOOTER -->
+	<?php include 'inc/footer.html';?>
+	<!--//[D] FOOTER -->
+</div>
+
+<!--[D] widget -->
+	<?php include 'inc/widget.html';?>
+<!--//[D] widget -->
+
+<!-- [D] LAYER -->
+<?php include 'inc/layer_loading.html';?>
+<!-- [D] LAYER -->
+
+<!-- Javascript Area -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+<!-- 마크업 확인용입니다. -->
+<style>
+.case_view{display:inline-block;position:fixed;bottom:0;left:0;z-index:1050;width:auto;padding:5px;background:#000;opacity:0.7}
+.case_view .btn{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+</style>
+<div class="case_view">
+	<a href="#" class="btn" onclick="$('.tbl_history tbody').hide();$('.tbl_history tbody:eq(0)').show();return false;">개인정보 제3자 제공 현황_내용 있음</a>
+	<a href="#" class="btn" onclick="$('.tbl_history tbody').hide();$('.tbl_history tbody:eq(1)').show();return false;">개인정보 제3자 제공 현황_내역 없음</a>
+</div>
+
+<script src="js/case_view.js"></script>
+<!-- //마크업 확인용입니다. -->
+
+</body>
+</html>

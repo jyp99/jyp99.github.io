@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>INDEX :: PAYCOPlace</title>
+<style>
+@charset "utf-8";
+/* Common */
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select{margin:0;padding:0}
+body,input,textarea,select,button,table{font-size:14px;font-family:'나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,'굴림',Gulim,Helvetica;line-height:1.25em}
+body.s,.s input,.s textarea,.s select,.s button,.s table{font-family:Helvetica}
+body{position:relative;background-color:#f4f4f4;color:#000;-webkit-text-size-adjust:none}
+img,fieldset{border:0}
+ul,ol{list-style:none}
+em,address{font-style:normal}
+a{color:#000;text-decoration:none}
+table{border-collapse:collapse}
+hr{display:none !important}
+.u_hc{visibility:hidden;overflow:hidden;position:absolute;left:-999em;width:0;height:0;font-size:0;line-height:0}
+.u_vc,.u_skip{position:absolute;*left:-9999em;z-index:-1;font-size:4px;line-height:1px;color:transparent}
+.ct{clear:both;width:100%;background-color:#fff}
+.ct:after{display:block;clear:both;height:1px;margin-top:-1px;content:''}
+.blind{overflow:hidden;display:inline-block;text-indent:-9999px}
+/* index.html */
+body{padding:0 14px;background-color:#fff;word-wrap:break-word;word-break:break-all}
+header{padding:1em 4em .9em .1em;border-bottom:3px solid #222}
+.hd_h1{font-size:1.2em}
+.hd_svc{display:block;position:absolute;top:0;right:4px;width:3em;padding:.8em 24px .7em .6em;background:url(http://static.naver.com/www/m/cm/im/bu_lk.gif) no-repeat 100% 50%;font-size:.86em;line-height:1.1em;color:#666}
+.hd_wr{white-space:nowrap}
+.sec_h{clear:both;padding:2em .1em .4em;border-bottom:1px solid #000;font-size:1em}
+.sec_h2{clear:both;padding:1em .1em .4em;border-bottom:1px dotted #888;font-size:1em}
+.sec_h2::before{display:inline-block;margin-right:.25em;border:2px solid transparent;border-left-color:#000;vertical-align:3px;content:''}
+ul{font-size:.9em}
+li{border-bottom:1px solid #dfdfdf}
+li a{display:block;padding:.7em 31px .6em .1em;background:url(http://static.naver.com/www/m/cm/im/bu_lk.gif) no-repeat 100% 50%;_zoom:1}
+.lidv{margin-top:1px;border-top:1px solid #dfdfdf}
+li span{margin-left:.4em;font-size:.86em;color:#909090}
+li p{margin-top:10px;color:#999;}
+footer{clear:both;margin:2.5em 0 4em;padding:6px 2px 2px;background:#f4f4f4;font-size:.86em;line-height:1.6em;color:#333;text-align:center}
+dt,dd{display:inline;color:#333}
+dt:after{display:inline;content:': '}
+dd:last-of-type{display:block;color:#aaa}
+.ft_a{display:inline-block;padding:2px 2px 5px;color:#16d;letter-spacing:-1px;text-decoration:underline}
+.sub{margin-top:50px}
+.sub .sec_h2{font-size:12px}
+.history{margin-top:5px}
+.history li{font-size:11px;padding:4px;line-height:1.2;padding-left:0;text-indent:0;border:0}
+.history .date{display:inline-block;width:75px;margin-right:5px;padding:0 4px;background:#f1f1f1}
+.history a{display:inline;padding:0;background:none;text-decoration:underline}
+
+.gu_table{width:100%;border-collapse:collapse}
+.gu_table caption{padding:.7em 0 .6em .1em;text-align:left}
+.gu_table th,.gu_table td{height:2em;padding:.1em .6em;border:1px solid #ddd;text-align:center}
+.gu_table thead th{width:5em;background:#f1f1f1}
+.gu_table thead th.gu_mc{width:auto}
+.gu_table tbody th{color:#000}
+.gu_table tbody td{color:#06e}
+.gu_table tbody td.gu_mc{text-align:left}
+.gu_ept{color:#ccc}
+.new{display:inline-block;position:relative;top:-1px;height:14px;padding:1px 3px;border-radius:3px;background:#fd3939;font-family:verdana;font-size:11px;font-weight:normal;color:#fff;line-height:14px;vertical-align:middle}
+.up{display:inline-block;position:relative;top:-1px;height:14px;background:#45a7fb;color:#fff;padding:1px 3px;border-radius:3px;font-family:verdana;font-size:11px;font-weight:normal;line-height:14px;vertical-align:middle}
+.etc{display:inline-block;position:relative;top:-1px;height:14px;background:#2fbf6d;color:#fff;padding:1px 3px;border-radius:3px;font-family:verdana;font-size:11px;font-weight:normal;line-height:14px;vertical-align:middle}
+.slt{display:inline-block;position:relative;top:-1px;height:14px;border:1px solid #ecc200;background:#ffd200;color:#555;padding:1px 3px;border-radius:3px;font-family:verdana;font-size:11px;font-weight:normal;line-height:14px;vertical-align:middle}
+.edit{display:inline-block;position:relative;top:-1px;height:14px;background:#1bae6e;color:#fff;padding:1px 3px;border-radius:3px;font-family:verdana;font-size:11px;font-weight:normal;line-height:14px;vertical-align:middle}
+.description{margin-top:20px;color:#555;}
+.description ul{margin-top:10px;border:0;}
+.description ul li{margin-top:5px;font-weight:bold;color:#333;border:0;}
+.description ul li a{display:inline-block;padding:0;color:#4b96e6;background:none;}
+
+.sub_lst{padding-bottom:10px;}
+.sub_lst li{padding-left:20px;border-bottom:0;}
+p{line-height:1.5;}
+.em{font-weight:bold;color:#fa2828;}
+pre{tab-size:4;background-color:#333;}
+pre code{font-family:consolas,monospace;color:#fff;}
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+$(function(){
+	$('.ct ul a').each(function(){
+		$('<span>/ '+$(this).attr('href')+'</span>').appendTo($(this));
+	});
+});
+</script>
+</head>
+<body>
+<header role="banner">
+	<h1 class="hd_h1">PAYCOPlace Shop - 마크업 산출물</h1>
+</header>
+<div class="ct">
+	<section role="main">		
+		<h2 class="sec_h">레이아웃</h2>
+		<ul>
+		<li><a href="00_layout.html">레이아웃</a></li>
+		</ul>
+
+		<h2 class="sec_h">로그인 / 고객센터 관련</h2>
+		<ul>
+		<li><a href="01_login.html">로그인</a></li>
+		<li><a href="01_login_admin.html">로그인 - 관리자 권한</a>
+			<ul class="sub_lst">
+			<li>PG 계약 레이어</li>			
+			</ul>
+		</li>
+		<li><a href="01_contact.html">고객센터</a></li>
+		</ul>
+
+		<h2 class="sec_h">예약현황</h2>
+		<ul>
+		<li><a href="00_schedule_test3.html">디자이너별 예약현황</a></li>
+		<li><a href="00_schedule_extrernal.html">디자이너별 예약현황(외부예약연동)</a></li>
+		<li><a href="00_history.html">고객예약내역</a></li>
+		</ul>
+
+		<h2 class="sec_h">서브페이지</h2>
+		<ul>
+		<li><a href="01_external_reservation.html">예약 솔루션 연동</a></li>
+		</ul>
+
+		<h2 class="sec_h">레이어 팝업</h2>
+		<ul>
+		<li><a href="99_layers.html">1</a>
+			<ul class="sub_lst">
+			<li>예약상세_예약대기</li>
+			<li>예약상세_예약중_예약변경</li>
+			<li>예약상세</li>
+			<li>예약상세_서비스 중</li>
+			<li>예약취소_사유입력</li>
+			<li>예약변경_알림</li>
+			<li>예약변경</li>
+			<li>네이버예약_예약 대기</li>
+			<li>네이버예약_예약 확정</li>
+			<li>플레이스예약_예약 대기</li>
+			<li>플레이스예약_예약 확정</li>
+			<li>플레이스예약_예약 서비스 중</li>
+			</ul>
+		</li>
+		<li><a href="99_layers2.html">2</a>
+			<ul class="sub_lst">
+			<li>예약확인 - 예약완료</li>
+			<li>예약확인 - 예약중_예약변경</li>
+			<li>플레이스 예약 상세 - 예약 확정</li>
+			<li>시술메뉴</li>
+			<li>추가금액1</li>
+			<li>추가금액2</li>	
+			<li>네이버 예약 파트너 센터 로그인</li>			
+			</ul>
+		</li>
+		<li><a href="99_layers3.html">2</a>
+			<ul class="sub_lst">
+			<li>매출등록/확인</li>
+			<li>플레이스 예약_매출확인_페이코 결제완료</li>
+			<li>플레이스 예약_매출확인_카드/현금</li>
+			<li>플레이스 예약_매출확인_페이코 결제 요청 중</li>
+			<li>플레이스 예약_매출확인_매출확인_결제 취소</li>
+			<li>담당 디자이너 선택</li>	
+			<li>레이어 팝업 케이스</li>	
+			<li>레이어 팝업_연동 해제 확인</li>	
+			<li>페이코플레이스_현장결제_레이블 안내 팝업</li>
+			<li>페이코 결제 요청 불가 안내 팝업</li>
+			<li>개인정보 수집 이용동의 팝업</li>
+			</ul>
+		</li>
+		<li><a href="99_layers4.html">2</a>
+			<ul class="sub_lst">
+			<li>고객정보</li>			
+			<li>외부예약 연동 예시</li>			
+			<li>외부예약 연동 설정</li>			
+			</ul>
+		</li>
+		</ul>
+
+		<h2 class="sec_h">고객센터 관련</h2>
+		<ul>
+		<li><a href="01_contact.html">내부페이지</a></li>
+		<li><a href="http://ui-dev.nhnent.com/svnview/hivelab/paycoplace/shop_web/css/paycoplace_cs.css">고객센터 CSS 다운로드</a></li>
+		</ul>
+	</section>
+	<section>
+		<h2 class="sec_h">추가 적용 JS컴포넌트</h2>
+		<div class="description">
+			<p>추가 필요한 JS컴포넌트 입니다.<br>다운받아 제공되는 css도 함께 적용하시면 되고, css 재지정은 샵웹 마크업에서 이미 선언되어 있습니다.</p>
+			<ul>
+				<li>TUI Datepicker (Latest)
+					<a href="https://github.com/nhnent/tui.date-picker">https://github.com/nhnent/tui.date-picker</a>
+				</li>	
+				<li>TUI Pagination (Latest)
+					<a href="https://github.com/nhnent/tui.pagination">https://github.com/nhnent/tui.pagination</a>
+				</li>				
+			</ul>
+			<br>
+			<p class="em">css 로드 시 스타일 선언 순서로 인해 다음 예시와 같이 solution.css가 가장 마지막에 위치해야 합니다. </p>
+<pre>
+<code>
+	&lt;link rel="stylesheet" href="js/bower_components/tui-date-picker/dist/tui-date-picker.css"&gt;
+	&lt;link rel="stylesheet" href="js/bower_components/tui-pagination/dist/tui-pagination.css"&gt;
+	&lt;link rel="stylesheet" href="css/solution.css"&gt;
+</code>
+</pre>
+		</div>
+	</section>
+</div>
+<footer role="contentinfo">
+	<dl>
+	<dt>마크업 담당자</dt>
+	<dd>하이브랩 UI개발 3팀</dd>
+	</dl>
+</footer>
+</body>
+</html> 

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="all">
+<title>토스트(TOAST) 고객센터</title>
+
+<meta name="description" content="NHN 엔터테인먼트에서 제공하는 토스트 클라우드 서비스. 오픈스택 기반의 클라우드 인프라, 게임솔루션, 보안, 문자/이메일/알림톡, 협업도구 Dooray, ERP 제공">
+<meta name="keywords" content="토스트, 토스트 클라우드, 클라우드 서비스, 토스트 닷컴, 클라우드, NHN엔터테인먼트, NHN엔터, NHN Entertainment, NHN Ent, TOAST, TOAST Cloud, TOAST CAM, TOAST PC, TOAST Analytics, toast, 토스트캠, 토스트피씨,토스트애널리틱스">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="토스트(TOAST) 고객사례">
+<meta property="og:description" content="NHN 엔터테인먼트에서 제공하는 토스트 클라우드 서비스. 오픈스택 기반의 클라우드 인프라, 게임솔루션, 보안, 문자/이메일/알림톡, 협업도구 Dooray, ERP 제공">
+<meta property="og:keywords" content="토스트, 토스트 클라우드, 클라우드 서비스, 토스트 닷컴, 클라우드, NHN엔터테인먼트, NHN엔터, NHN Entertainment, NHN Ent, TOAST, TOAST Cloud, TOAST CAM, TOAST PC, TOAST Analytics, toast, 토스트캠, 토스트피씨,토스트애널리틱스">
+<meta property="og:image" content="http://images.toast.com/toast/com/web/common/toast.com.jpg">
+<meta property="og:image:secure_url" content="http://images.toast.com/toast/com/web/common/toast.com.jpg">
+<meta property="og:url" content="https://toast.com">
+<link rel="shortcut icon" href="https://toast.com/resources/img/favicons/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" sizes="180x180" href="/resources/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/resources/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/resources/img/favicons/favicon-16x16.png">
+<link rel="manifest" href="/resources/img/favicons/manifest.json">
+<link rel="mask-icon" href="/resources/img/favicons/safari-pinned-tab.svg">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="css/gnb.css">
+<link rel="stylesheet" type="text/css" href="css/toast.css">
+<link rel="stylesheet" type="text/css" href="css/gnb_mobile.css">
+<link rel="stylesheet" type="text/css" href="css/toast_mobile.css">
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul class="skip">
+<li><a href="#header" onclick="document.getElementById('header').tabIndex=-1;document.getElementById('header').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+
+<!--[D] noti_browser -->
+<?php include 'inc/noti_browser.html';?>
+<!--//[D] noti_browser -->
+<div class="wrap header_fixed_wrap">
+
+	<!--[D] HEADER -->
+	<?php include 'inc/header.html';?>
+	<!--//[D] HEADER -->
+	<div id="container" class="container has_snb_container">
+		<!-- [D] CONTENTS -->
+		<?php include 'inc/snb_support.html';?>
+		<div id="content" class="content support_sub_content">
+			<div class="inner">
+				<div class="title_wrap is_no_desc">
+					<div class="title_area">
+						<h2 class="tit_txt">FAQ</h2>
+					</div>
+					<nav class="location" aria-label="breadcrumb">
+						<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="#" class="link_txt">홈</a></li>
+						<li class="breadcrumb-item"><a href="#" class="link_txt">고객 센터</a></li>
+						<li class="breadcrumb-item active" aria-current="page">FAQ</li>
+						</ol>
+					</nav>
+				</div>
+				<div class="support_content_wrap is_pc_show">
+					<iframe width="100%" height="1166" frameborder="0" scrolling="no" title="FAQ" src="cs/cs_faq_empty.html"></iframe>
+					<iframe width="100%" height="1166" frameborder="0" scrolling="no" title="FAQ" src="cs/cs_faq.html" style="display:none"></iframe>
+				</div>
+				<div class="support_content_wrap is_m_show">
+					<iframe height="600" style="min-width:100%;width:100px" frameborder="0" scrolling="no" title="FAQ" src="cs/cs_faq_m.html"></iframe>
+				</div>
+			</div>
+		</div>
+		<!-- //[D] CONTENTS -->
+		<a href="#container" class="btn_top">TOP</a>
+	</div>
+	<!--[D] FOOTER -->
+	<?php include 'inc/footer.html';?>
+	<!--//[D] FOOTER -->
+</div>
+
+<!--[D] widget -->
+	<?php include 'inc/widget.html';?>
+<!--//[D] widget -->
+
+<!-- [D] LAYER -->
+<?php include 'inc/layer_loading.html';?>
+<!-- [D] LAYER -->
+
+<!-- Javascript Area -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+<!-- 마크업 확인용입니다. -->
+<style>
+.case_view{display:inline-block;position:fixed;bottom:0;left:0;z-index:1000;width:auto;padding:5px;background:#000;opacity:0.7}
+.case_view .btn{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+</style>
+<div class="case_view">
+	<?php include 'inc/case_view_common.html';?>
+	<a href="#" class="btn" onclick="$('.support_content_wrap iframe').hide();$('.support_content_wrap iframe:eq(0),.support_content_wrap iframe:eq(2)').show();return false;">검색 결과 없음</a>
+	<a href="#" class="btn" onclick="$('.support_content_wrap iframe').hide();$('.support_content_wrap iframe:eq(1)').show();return false;">검색 결과 노출</a>
+	<a href="#" class="btn" onclick="$(this).siblings('.btn').toggle();return false;">케이스뷰 토글</a>
+</div>
+<script src="js/case_view.js"></script>
+<!-- //마크업 확인용입니다. -->
+</body>
+</html>

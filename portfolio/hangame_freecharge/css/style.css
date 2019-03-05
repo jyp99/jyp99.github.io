@@ -1,0 +1,113 @@
+@charset "utf-8";
+
+@font-face {
+ font-family: 'NanumSquare';
+ font-weight: noraml;
+ src: url(../fonts/NanumSquareR.woff) format('woff'),
+	  url(../fonts/NanumSquareR.ttf) format('truetype');
+}
+@font-face {
+ font-family: 'NanumSquare';
+ font-weight: 700;
+ src: url(../fonts/NanumSquareB.woff) format('woff'),
+	  url(../fonts/NanumSquareB.ttf) format('truetype');
+}
+
+/* common */
+html{height:100%}
+body{height:100%;background:#fff;-webkit-text-size-adjust:none}
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select{margin:0;padding:0}
+body,input,textarea,select,button,table{font-family:'NanumSquare','Apple SD Gothic Neo',sans-serif;font-size:12px;font-weight:normal}
+img,fieldset{border:0}
+img{max-width:100%;vertical-align:top}
+ul,ol{list-style:none}
+em,address{font-style:normal}
+a{text-decoration:none}
+table{width:100%;border-collapse:collapse;border-spacing:0}
+input{border-radius:0;-webkit-appearance:none;-moz-appearance:none;appearance:none}
+button{border:0;border-radius:3px;background-color:transparent;cursor:pointer}
+button::-moz-focus-inner{padding:0;border:0}
+.blind{overflow:hidden;position:absolute;top:0;left:0;width:1px;height:1px;font-size:1px;line-height:100px;white-space:nowrap}
+.sp{display:inline-block;overflow:hidden;width:1px;height:1px;background:url(../img/sp.png) no-repeat;font-size:1px;text-indent:-999px;white-space:nowrap}
+
+.wrap{min-width:320px;text-align:center;}
+
+.wrap.main{display:table;width:100%;height:100%;text-align:center}
+.wrap.main .contents{display:table-cell;vertical-align:middle}
+
+.btn{display:inline-block;border-radius:3px;letter-spacing:-1px;box-sizing:border-box}
+.btn_red,.btn_login{height:43px;background-color:#fa2828;color:#fff;line-height:43px;font-weight:700}
+.btn_white,.btn_arr{border:1px solid #d1d1d1;background-color:#fff;color:#666}
+.btn_login{display:block;width:258px;height:53px;margin:0 auto;background:url(../img/btn_login.gif) left top no-repeat;background-size:258px 53px;}
+.btn_login .txt_payco{padding-left:63px;background:url(../img/payco_txt.png) 0 3px no-repeat;background-size:58px 14px}
+.btn_arr{width:172px;height:43px;margin:11px 3px 0 ;padding:5px 16px 4px;background:url(../img/ico_rgt_arr.png) 138px 11px no-repeat;background-size:19px 18px;text-align:left;font-size:13px;line-height:16px;letter-spacing:-0.8px}
+.btn_arr .point_txt{display:block;color:#3c3c3c}
+
+.main .logo{width:217px;height:52px;margin:0 auto}
+.main .main_txt{margin-top:15px;font-size:17px;color:#3c3c3c;line-height:18px}
+.main .dsc_txt{margin:21px 0 9px;text-align:center;font-size:11px;color:#9b684e;line-height:12px}
+
+.main .main_txt .big_txt{display:block;margin-top:6px;font-size:27px;font-weight:normal;line-height:28px}
+.main .login .btn_wrap{font-size:0}
+.main .agree .dsc_txt{margin-top:21px}
+.main .agree .btn_wrap{margin-top:8px}
+.main .agree .btn{display:block;width:217px;height:43px;margin:0 auto;line-height:43px}
+.main .agree .btn_red{font-size:15px}
+.main .agree .btn_white{margin-top:7px;font-size:12px;text-align:center}
+
+.charging_station{width:100%;margin:0 auto;padding:15px 24px 18px;box-sizing:border-box}
+.charging_station .banner_wrap{display:block;width:100%;height:57px;margin-bottom:22px;background:#2b2b2b}
+.charging_station .banner_wrap img{width:auto;height:100%}
+.charging_station .dsc_txt{margin-bottom:21px;padding-left:1px;font-size:17px;color:#333;letter-spacing:-1.2px;text-align:left}
+.charging_station .section{margin-top:27px}
+.charging_station .section:first-of-type{margin-top:0}
+.charging_station .btn_more{margin:1px 0 0;padding:5px;font-size:11px;color:#333;letter-spacing:-1px}
+
+.tit_wrap{margin-bottom:5px;font-size:0;text-align:left}
+.tit_wrap .h_txt{display:inline-block;padding-left:2px;vertical-align:middle;font-size:12px;color:#333;letter-spacing:-1px}
+.tit_wrap .btn_refresh{display:inline-block;width:18px;height:19px;margin-left:2px;padding:3px;background:url(../img/btn_refresh.png) 3px 3px no-repeat;background-size:12px 13px;vertical-align:middle}
+.tit_wrap .rgt_area{float:right}
+.tit_wrap .rgt_area .btn_go{display:inline-block;margin-left:7px;padding:4px;font-size:10px;line-height:12px;color:#666}
+.tit_wrap .rgt_area .btn_go:first-child{margin:0}
+
+.payment_history{font-size:11px}
+.payment_history tbody tr{height:50px}
+.payment_history tbody th,.payment_history tbody td{border-bottom:1px solid #262729}
+.payment_history tbody tr:first-child th,.payment_history tbody tr:first-child td{border-top:1px solid #262729}
+.payment_history tbody th{padding-left:12px;color:#333;letter-spacing:-1px;text-align:left}
+.payment_history tbody td{color:#333}
+.payment_history .price{padding-left:26px;color:#fa2828;text-align:left}
+.payment_history .no_result{height:70px;background-color:#f1f1f1;font-size:11px;color:#333}
+.payment_history .no_result td{border-bottom:none}
+.payment_history .no_result .point_txt{display:block;font-size:15px;color:#478cff;letter-spacing:-1px}
+.payment_history .btn_get{width:110px;height:31px;background-color:#b9b9b9;color:#fff;font-weight:bold;letter-spacing:normal}
+.payment_history .btn_get.active{background-color:#fa2828}
+
+.compensation_guide{font-size:11px}
+.compensation_guide tbody tr{height:40px}
+.compensation_guide tbody th,.compensation_guide tbody td{border-top:1px solid #c0c0c1;border-bottom:1px solid #c0c0c1}
+.compensation_guide tbody tr:first-child th,.compensation_guide tbody tr:first-child td{border-top:1px solid #262729}
+.compensation_guide tbody th{padding-left:10px;background-color:#f1f1f1;color:#666;text-align:left;font-weight:normal}
+.compensation_guide tbody td{padding-left:15px;font-weight:bold;color:#333;text-align:left}
+
+.lst_noti{margin-top:17px;text-align:left}
+.lst_noti li{position:relative;margin-top:15px;padding-left:9px;font-size:10px;line-height:15px;color:#666}
+.lst_noti li:before{position:absolute;top:6px;left:3px;width:2px;height:2px;border-radius:100%;background-color:#666;content:''}
+.lst_noti li:first-child{margin:0}
+
+.dimmed{position:fixed;display:none;top:0;left:0;z-index:50;width:100%;height:100%;background-color:rgba(0,0,0,0.8)}
+.ly_pop{position:absolute;display:none;top:50%;left:50%;z-index:55;width:402px;height:267px;margin:-133px 0 0 -201px;padding:16px 30px 0;background-color:#fff;box-sizing:border-box}
+
+.charging_history{margin:0 auto;padding:17px 24px 0}
+.charging_history .h_txt{display:inline-block;font-size:16px;font-weight:normal;color:#333}
+.charging_history .h_txt.txt_payco2{padding-left:58px;background:url(../img/payco_txt2.png) 0 4px no-repeat;background-size:54px 12px}
+.charging_history .dsc_txt{display:block;margin:2px auto 0;font-size:10px;color:#666;text-align:center}
+.charging_history .scroll_wrap{overflow-y:scroll;height:227px;margin-top:14px;border-top:1px solid #262729;-webkit-overflow-scrolling:touch}
+.charging_history .payment_history tr{height:45px}
+.charging_history .payment_history td{padding:8px 0 9px 10px;border-bottom:1px solid #c0c0c1;font-size:10px;color:#666;text-align:left}
+.charging_history .payment_history tbody tr:first-child td{border-top:none}
+.charging_history .payment_history .state{padding:0;font-weight:bold;font-size:11px;color:#333;text-align:center}
+.charging_history .payment_history .state.ok{color:#478cff}
+.charging_history .txt_name{display:block;font-size:11px;line-height:15px;color:#333;}
+
+.btn_back{overflow:hidden;position:absolute;right:8px;bottom:14px;width:56px;height:56px;background:url(../img/btn_back.png) no-repeat;background-size:100%;line-height:999px;z-index:10}

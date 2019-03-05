@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="all">
+<title>로그인 :: TOAST Cloud</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<base href="../">
+<link rel="stylesheet" type="text/css" href="css/gnb.css">
+<link rel="stylesheet" type="text/css" href="css/toast.css">
+<link rel="stylesheet" type="text/css" href="css/toast_member.css">
+<link rel="stylesheet" type="text/css" href="css/gnb_mobile.css">
+<link rel="stylesheet" type="text/css" href="css/toast_mobile.css">
+</head>
+<body><!-- [D] 모바일 뷰 : body에 is_m 클래스 추가 -->
+<div class="wrap tcm_wrap header_fixed_wrap">
+	<!--[D] HEADER -->
+	<?php include '../inc/header.html';?>
+	<!--//[D] HEADER -->
+	<div id="container" class="container">
+		<!-- [D] CONTENTS -->
+		<div id="content" class="content login_content">
+			<h2 class="title_text is_m_show">
+				<span class="logo_area"><img src="img/member/logo_toast.svg" width="182" height="60" alt="NHN TOAST"></span>
+				<span class="blind">로그인</span>
+			</h2>
+			<h2 class="title_text is_pc_show"><span class="service_name">TOAST</span> 로그인</h2>
+			<div class="form_wrap simple_form_wrap login_bx">
+				<form>
+				<fieldset>
+				<legend>로그인 정보 입력</legend>
+				<em class="alert_txt" style="display:none">등록되지 않은 아이디이거나<br>아이디 또는 비밀번호가 일치하지 않습니다.</em>
+				<!-- [D] alert_txt 대체 문구
+					이메일/비밀번호 잘못입력 : '등록되지 않은 아이디이거나<br>아이디 또는 비밀번호가 일치하지 않습니다.'
+					로그인 허용횟수 5회 초과 : '비밀번호가 5회 이상 잘못 입력되었습니다.<br>안전한 이용을 위하여 자동입력 방지 문자를 입력해 주세요.' -->
+				<div class="input_wrap">
+					<div class="error_control_area"><!-- [D]입력 오류시 error_control_area에 is_error 클래스 추가 -->
+						<div class="inp_row">
+							<span class="inp_bx">
+								<input type="text" class="inp" title="이메일주소" placeholder="이메일주소">
+							</span>
+						</div>
+						<em class="error_txt">잘못 입력하였습니다.</em>
+					</div>
+					<div class="error_control_area">
+						<div class="inp_row">
+							<span class="inp_bx">
+								<input type="password" class="inp" title="비밀번호" placeholder="비밀번호">
+							</span>
+						</div>
+						<em class="error_txt">잘못 입력하였습니다.</em>
+						<span class="tooltip_custom" role="tooltip"><!-- [D] 툴팁 활성시 tooltip 에 is_show 클래스 추가 -->
+							<span class="tooltip_inner">Caps Lock이 켜져 있습니다.</span>
+						</span>
+					</div>
+				</div>
+				<div class="other_func_area">
+					<span class="inp_checkbox">
+						<input type="checkbox" id="check1" class="inp_chk">
+						<label for="check1" class="inp_label">
+							<span class="ico_checkbox"></span>
+							<span class="label_text">아이디 저장</span>
+						</label>
+					</span>
+					<a href="#" class="btn_find_pass">비밀번호 찾기</a>
+				</div>
+				<div class="captcha_wrap" style="display:none"><!-- [D] 캡차 : 이미지로 보기 선택시 노출 영역 -->
+					<p class="guide_text">아래 이미지를 보이는 대로 입력해주세요.</p>
+					<div class="captcha_area">
+						<div class="captcha_content">
+							<div class="captcha_img">
+							<img src="img/member/@tmp_captcha.png" width="223" height="62" alt="캡차이미지">
+							</div>
+						</div>
+						<div class="captcha_ctrl">
+							<a href="#" class="captcha_btn ico_refresh"><span class="btn_text">새로고침</span></a>
+							<a href="#" class="captcha_btn ico_voice is_pc_show"><span class="btn_text">음성듣기</span></a>
+						</div>
+					</div>
+					<div class="error_control_area">
+						<div class="inp_row">
+							<span class="inp_bx">
+								<input type="text" class="inp" title="자동입력 방지문자" placeholder="자동입력 방지문자">
+							</span>
+						</div>
+						<em class="error_txt">잘못 입력하였습니다.</em>
+					</div>
+				</div>
+				<div class="captcha_wrap voice is_pc_show" style="display:none"><!-- [D] 캡차 : 음성으로 듣기 선택시 노출 영역, 모바일에서 노출 안함 -->
+					<p class="guide_text">소리를 듣고 문자열을 입력해주세요.</p>
+					<div class="captcha_area">
+						<div class="captcha_content">
+							<span class="guide_text">음성으로 안내중</span>
+						</div>
+						<div class="captcha_ctrl">
+							<a href="#" class="captcha_btn ico_refresh"><span class="btn_text">새로고침</span></a>
+							<a href="#" class="captcha_btn ico_image"><span class="btn_text">이미지 보기</span></a>
+						</div>
+					</div>
+					<div class="error_control_area">
+						<div class="inp_row">
+							<span class="inp_bx">
+								<input type="text" class="inp" title="보안문자 입력" placeholder="보안문자 입력">
+							</span>
+						</div>
+						<em class="error_txt">잘못 입력하였습니다.</em>
+					</div>
+				</div>
+				<div class="btn_area">
+					<button type="button" class="btn is_full">로그인</button>
+				</div>
+				</fieldset>
+				</form>
+				<div class="signup_link_area">
+					<span class="guide_text">계정이 없으신가요?</span><a href="#" class="btn_sign_up">회원가입</a>
+				</div>
+			</div>
+			<p class="other_guide_text is_pc_show">페이코 아이디로 클라우드 서비스를 이용하셨다면<br><a href="#" class="btn_link">여기</a>를 눌러 회원 전환을 완료해 주세요.</p>
+		</div>
+		<!-- //[D] CONTENTS -->
+	</div>
+	<!--[D] FOOTER -->
+	<?php include '../inc/footer.html';?>
+	<!--//[D] FOOTER -->
+</div>
+<!-- Javascript Area -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+<!-- 마크업 확인용입니다. -->
+<style>
+	.case_view{display:inline-block;position:fixed;bottom:0;left:0;z-index:1000;width:auto;padding:5px;background:#000;opacity:0.7}
+	.case_view .btn{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+</style>
+<div class="case_view"><!-- PC 노출 케이스뷰 -->
+	<a href="#" class="btn btn_device_change" onclick="$('body').toggleClass('is_m');return false;">모바일/PC 화면 전환</a>
+  <a href="#" class="btn btn_error" onclick="$('.captcha_wrap').hide();$('.login_bx .alert_txt').html('등록되지 않은 아이디이거나<br>아이디 또는 비밀번호가 일치하지 않습니다.');return false;">입력 오류 화면</a>
+  <a href="#" class="btn btn_error" onclick="$('.captcha_wrap:eq(1)').hide();$('.captcha_wrap:eq(0)').show();$('.login_bx .alert_txt').html('비밀번호가 5회 이상 잘못 입력되었습니다.<br>안전한 이용을 위하여 자동입력 방지 문자를 입력해 주세요.');return false;">오류 5회 초과</a>
+  <a href="#" class="btn btn_error is_pc_show" onclick="$('.captcha_wrap:eq(0)').hide();$('.captcha_wrap:eq(1)').show();$('.login_bx .alert_txt');return false;">음성으로 듣기 선택</a>
+  <a href="#" class="btn btn_tooltip_toggle is_pc_show" onclick="$('.tooltip_custom').toggleClass('is_show');return false;">툴팁 메세지</a>	
+	<a href="#" class="btn btn_state_reset">초기화면 리셋</a>
+	<a href="#" class="btn btn_toggle_caseview">케이스뷰 열기/닫기</a>
+</div>
+<script>
+$(".case_view .btn").click(function(e) {
+	e.preventDefault();
+});	
+$(".case_view .btn_state_reset").click(function() {
+	$('.login_bx .alert_txt').hide();
+	$('.error_control_area').removeClass('is_error');
+	$('.captcha_wrap').hide();
+	$('.tooltip_custom').removeClass('is_show');
+});
+$(".case_view .btn_error").click(function() {
+	$('.login_bx .alert_txt').show();
+	$('.error_control_area').addClass('is_error');
+});
+</script>
+<script src="js/case_view.js"></script>
+<!-- //마크업 확인용입니다. -->
+</body>
+</html>

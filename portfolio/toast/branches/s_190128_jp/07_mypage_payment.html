@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="all">
+<title>토스트(TOAST) 마이페이지</title>
+
+<meta name="description" content="NHN 엔터테인먼트에서 제공하는 토스트 클라우드 서비스. 오픈스택 기반의 클라우드 인프라, 게임솔루션, 보안, 문자/이메일/알림톡, 협업도구 Dooray, ERP 제공">
+<meta name="keywords" content="토스트, 토스트 클라우드, 클라우드 서비스, 토스트 닷컴, 클라우드, NHN엔터테인먼트, NHN엔터, NHN Entertainment, NHN Ent, TOAST, TOAST Cloud, TOAST CAM, TOAST PC, TOAST Analytics, toast, 토스트캠, 토스트피씨,토스트애널리틱스">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="토스트(TOAST) 마이페이지">
+<meta property="og:description" content="NHN 엔터테인먼트에서 제공하는 토스트 클라우드 서비스. 오픈스택 기반의 클라우드 인프라, 게임솔루션, 보안, 문자/이메일/알림톡, 협업도구 Dooray, ERP 제공">
+<meta property="og:keywords" content="토스트, 토스트 클라우드, 클라우드 서비스, 토스트 닷컴, 클라우드, NHN엔터테인먼트, NHN엔터, NHN Entertainment, NHN Ent, TOAST, TOAST Cloud, TOAST CAM, TOAST PC, TOAST Analytics, toast, 토스트캠, 토스트피씨,토스트애널리틱스">
+<meta property="og:image" content="http://images.toast.com/toast/com/web/common/toast.com.jpg">
+<meta property="og:image:secure_url" content="http://images.toast.com/toast/com/web/common/toast.com.jpg">
+<meta property="og:url" content="https://toast.com">
+<link rel="shortcut icon" href="https://toast.com/resources/img/favicons/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" sizes="180x180" href="/resources/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/resources/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/resources/img/favicons/favicon-16x16.png">
+<link rel="manifest" href="/resources/img/favicons/manifest.json">
+<link rel="mask-icon" href="/resources/img/favicons/safari-pinned-tab.svg">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="css/gnb.css">
+<link rel="stylesheet" type="text/css" href="css/toast.css">
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul class="skip">
+<li><a href="#header" onclick="document.getElementById('header').tabIndex=-1;document.getElementById('header').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+
+<!--[D] noti_browser -->
+<!-- <?php include 'inc/noti_browser.html';?> -->
+<!--//[D] noti_browser -->
+<div class="wrap">
+
+	<!--[D] HEADER -->
+	<?php include 'inc/header.html';?>
+	<!--//[D] HEADER -->
+	<div id="container" class="container">
+		<!-- [D] CONTENTS -->
+		<div id="content" class="content mypage_content">
+			<section class="sec">
+				<div class="sec_inner">
+					<h2 class="main_title">마이페이지</h2>
+					<ul class="nav nav-justified member_nav">
+					<li class="nav-item word_item"><a href="member/05_my_info.html" class="nav-link"><span class="nav_txt">회원정보</span></a></li>
+					<li class="nav-item word_item active"><a href="07_mypage_payment.html" class="nav-link is_active"><span class="nav_txt">결제수단</span></a></li>
+					<li class="nav-item word_item"><a href="07_mypage_credit.html" class="nav-link"><span class="nav_txt">크레딧</span></a></li>
+					<li class="nav-item word_item"><a href="07_mypage_api.html" class="nav-link"><span class="nav_txt">API 보안 설정</span></a></li>
+					<li class="nav-item word_item"><a href="07_mypage_personal_info.html" class="nav-link"><span class="nav_txt">개인정보 이용 내역</span></a></li>
+					</ul>
+					<div class="tab-content">
+						<div class="title_wrap">
+							<h3 class="tit_txt">결제 수단</h3>
+							<p class="sub_desc">이곳에서 회원님의 결제에 대한 정보들을 추가 및 수정하실 수 있습니다.</p>
+						</div>
+						<!-- [D]정보 확인 시 폼 구조 -->
+						<div class="form_wrap info_form_wrap">
+							<form>
+							<fieldset>
+							<legend>회원정보 관리</legend>
+							<div class="lst_form_wrap">
+								<dl class="lst_form">
+								<dt class="form_title">결제수단</dt>
+								<dd class="form_input_area">
+									<div class="error_control_area">
+										<span class="inp_row">
+											<span class="inp_bx">
+												<em class="payment_info">[현대카드] ***-***-***-4505</em>
+											</span>
+											<button type="button" class="btn">결제수단 변경</button>
+										</span>
+										<ul class="lst_noti">
+										<li class="noti_item">팝업이 차단된 경우, "팝업을 항상 허용" 옵션을 열어주신 후 결제 수단 추가/변경을 부탁드립니다.</li>
+										<li class="noti_item">결제 수단은 TOAST 서비스를 이용하기 위하여 반드시 등록해야 합니다.</li>
+										<li class="noti_item">결제 수단 등록 시, 크레딧(이용 대금 결제 가능)을 제공받을 수 있습니다.</li>
+										<li class="noti_item is_warning">[PAYCO 신용카드]를 결제 수단으로 선택하면 카드 유효성을 검증하기 위해 1,000원을 결제한 후, 자동으로 결제가 취소됩니다. '1,000원 결제 후 취소'를 원하지 않으시면, [신용카드]를 결제 수단으로 선택하세요.</li>
+										<li class="noti_item is_warning">단, 결제 수단을 등록해도 무료 서비스를 이용하는 경우에는 과금되지 않습니다.</li>
+										</ul>
+									</div>
+								</dd>
+								</dl>
+							</div>
+							<div class="lst_form_wrap">
+								<dl class="lst_form">
+								<dt class="form_title">결제수단</dt>
+								<dd class="form_input_area">
+									<div class="error_control_area">
+										<span class="inp_row">
+											<span class="inp_bx">
+												<span class="payment_info is_empty">결제수단이 없습니다.</span>
+											</span>
+											<button type="button" class="btn">결제수단 등록</button>
+										</span>
+										<ul class="lst_noti">
+										<li class="noti_item">팝업이 차단된 경우, "팝업을 항상 허용" 옵션을 열어주신 후 결제 수단 추가/변경을 부탁드립니다.</li>
+										<li class="noti_item">결제 수단은 TOAST 서비스를 이용하기 위하여 반드시 등록해야 합니다.</li>
+										<li class="noti_item">결제 수단 등록 시, 크레딧(이용 대금 결제 가능)을 제공받을 수 있습니다.</li>
+										<li class="noti_item is_warning">[PAYCO 신용카드]를 결제 수단으로 선택하면 카드 유효성을 검증하기 위해 1,000원을 결제한 후, 자동으로 결제가 취소됩니다. '1,000원 결제 후 취소'를 원하지 않으시면, [신용카드]를 결제 수단으로 선택하세요.</li>
+										<li class="noti_item is_warning">단, 결제 수단을 등록해도 무료 서비스를 이용하는 경우에는 과금되지 않습니다.</li>
+										</ul>
+									</div>
+								</dd>
+								</dl>
+							</div>
+							<div class="lst_form_wrap">
+								<dl class="lst_form">
+									<dt class="form_title">결제 단위 설정</dt>
+									<dd class="form_input_area">
+										<div class="error_control_area">
+											<span class="inp_row">
+												<span class="inp_bx">
+													<span class="inp_radio">
+														<input type="radio" id="check3" name="ad_data_check2" class="inp_chk">
+														<label for="check3" class="inp_label">
+															<span class="ico_checkbox"></span>
+															<span class="label_text">한번에 결제</span>
+														</label>
+													</span>
+													<span class="inp_radio">
+														<input type="radio" id="check4" name="ad_data_check2" class="inp_chk" checked>
+														<label for="check4" class="inp_label">
+															<span class="ico_checkbox"></span>
+															<span class="label_text">요금 약정제별로 결제</span>
+														</label>
+													</span>
+												</span>
+												<button type="button" class="btn btn_sm disabled">저장</button>
+											</span>
+											<em class="error_txt">유효성 메시지 영역 입니다.</em>
+										</div>
+									</dd>
+								</dl>
+							</div>
+							<div class="lst_form_wrap">
+								<dl class="lst_form">									
+								<dt class="form_title"><label for="email">명세서 수신 주소</label></dt>
+								<dd class="form_input_area">
+									<div class="error_control_area">
+										<span class="inp_row">
+											<span class="inp_bx">
+												<input type="text" id="email" class="inp" title="명세서 수신 주소" placeholder="명세서를 수신할 이메일 주소를 입력해 주세요." value="">
+											</span>
+											<button type="button" class="btn btn_sm">추가</button>
+										</span>
+										<ul class="lst_added_email">
+										<li class="email_item">
+											<span class="inp_row">
+												<span class="inp_bx">juanjungsu@naver.com</span>
+												<button type="button" class="btn btn_sm btn_delete">삭제</button>
+											</span>
+										</li>
+										<li class="email_item">
+											<span class="inp_row">
+												<span class="inp_bx">juagsu.lim@nhnent.com</span>
+												<button type="button" class="btn btn_sm btn_delete">삭제</button>
+											</span>
+										</li>
+										</ul>
+										<em class="error_txt">유효성 메시지 영역 입니다.</em>
+									</div>
+								</dd>
+								</dl>								
+							</div>
+							</fieldset>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<!-- //[D] CONTENTS -->
+	</div>
+	<!--[D] FOOTER -->
+	<?php include 'inc/footer.html';?>
+	<!--//[D] FOOTER -->
+</div>
+
+<!--[D] widget -->
+	<?php include 'inc/widget.html';?>
+<!--//[D] widget -->
+
+<!-- [D] LAYER -->
+<?php include 'inc/layer_loading.html';?>
+<!-- [D] LAYER -->
+
+<!--[D] 레이어팝업 -->
+<!-- [D] 결제수단 선택 팝업 -->
+<div class="modal pop_custom pop_member" id="modal_alert1">
+	<div class="modal-dialog  modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">알림</h4>
+				<button type="button" class="btn_close" data-dismiss="modal">닫기</button>
+			</div>
+			<div class="modal-body">
+				<p class="ly_txt">PAYCO 신용카드를 결제수단으로 선택시 카드의 유효성 검증을 위해 1,000원 결제후, 자동 취소됩니다.</p>
+				<p class="ly_txt">'1,000원 결제 후 취소'를 원하지 않으시면, 신용카드를 결제수단으로 선택하세요.</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn_cancel" data-dismiss="modal">취소</button>
+				<button type="button" class="btn" data-dismiss="modal">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- [D] 결제 단위 설정 팝업 -->
+<div class="modal pop_custom pop_member" id="modal_alert2">
+	<div class="modal-dialog  modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">알림</h4>
+				<button type="button" class="btn_close" data-dismiss="modal">닫기</button>
+			</div>
+			<div class="modal-body">
+				<p class="ly_txt">결제 단위 설정이 저장되었습니다.</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn" data-dismiss="modal">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- [D] 유효한 형식 메일 주소 팝업 -->
+<div class="modal pop_custom pop_member" id="modal_alert3">
+	<div class="modal-dialog  modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">알림</h4>
+				<button type="button" class="btn_close" data-dismiss="modal">닫기</button>
+			</div>
+			<div class="modal-body">
+				<p class="ly_txt">유효한 형식의 메일 주소를 입력해 주세요.</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn" data-dismiss="modal">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--[D] //레이어팝업 -->
+
+<!-- Javascript Area -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+<!-- 마크업 확인용입니다. -->
+<style>
+.case_view{display:inline-block;position:fixed;bottom:0;left:0;z-index:1000;width:auto;padding:5px;background:#000;opacity:0.7}
+.case_view .btn{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+</style>
+<div class="case_view">
+	<?php include 'inc/case_view_common.html';?>
+	<a href="#" class="btn" onclick="$('.error_control_area').toggleClass('is_error');return false;">입력 오류 화면</a>
+	<a href="#" class="btn" data-toggle="modal" data-target="#modal_alert1">결제수단 확인</a>
+	<a href="#" class="btn" data-toggle="modal" data-target="#modal_alert2">결제단위 설정</a>
+	<a href="#" class="btn" data-toggle="modal" data-target="#modal_alert3">유효한 형식의 메일</a>
+</div>
+
+<script src="js/case_view.js"></script>
+<!-- //마크업 확인용입니다. -->
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>UIO :: TOAST IAM</title>
+<link rel="stylesheet" type="text/css" href="css/iam.css">
+<link rel="stylesheet" type="text/css" href="css/case_view.css">
+<!--[if lt IE 9]>
+<script src="js/html5shiv.min.js"></script>
+<![endif]-->
+<style>
+body{margin:0;padding:0}
+.wrap{padding-bottom:50px;text-align:left}
+h1, h2, h3, h4, h5, h6{font-family:"Noto Sans CJK", Notokr, 'Malgun Gothic','맑은고딕','Apple SD Gothic Neo',Dotum,'돋움',sans-serif}
+.gurde_wrap h1.guide_title{display:block;padding:10px;background:#000;color:#fff;font-size:28px}
+.gurde_wrap h2.guide_title{margin:20px 0 10px;padding:0 0 8px 5px;border-bottom:1px solid #000;font-size:20px}
+.gurde_wrap h2.guide_title:first-child{margin-top:0}
+.gurde_wrap h3.guide_title{margin:20px 0 10px;font-size:16px}
+.gurde_wrap .content{max-width:initial;margin:initial;padding:20px}
+.gurde_wrap .txt_guide{margin-bottom:15px;padding:10px;color:#333;font-size:14px;}
+.gurde_wrap .btn_area .btn{margin-left:0}
+</style>
+</head>
+<body class="gurde_wrap">
+<!-- wrap -->
+<div class="wrap">
+	<h1 class="guide_title">TOAST IAM 회원</h1>
+	<div class="content">
+		<h2 class="guide_title">텍스트</h2>
+		<h2 class="title_text">타이틀 스타일</h2>
+		<p class="dsc_txt">서브텍스트 스타일</p>
+		<span class="guide_text">가이드 텍스트 스타일</span>
+		<h2 class="guide_title">인풋</h2>
+		<ul class="txt_guide">
+		<li>입력 오류시 inp_bx에 is_error 클래스 추가</li>
+		</ul>
+		<div class="login_bx">
+			<div class="input_wrap">
+				<div class="error_control_area"><!-- [D]입력 오류시 error_control_area에 is_error 클래스 추가 -->
+					<div class="inp_row">
+						<span class="inp_bx">
+							<input type="text" class="inp" title="이메일" placeholder="이메일">
+						</span>
+					</div>
+					<em class="error_txt">이메일을 입력해주세요.</em>
+				</div>
+				<div class="error_control_area">
+					<div class="inp_row">
+						<span class="inp_bx">
+							<input type="password" class="inp" title="비밀번호" placeholder="비밀번호">
+						</span>
+						<span class="tooltip is_show" role="tooltip"><!-- [D] 툴팁 활성시 tooltip 에 is_show 클래스 추가 -->
+							<span class="tooltip_arrow"></span>
+							<span class="tooltip_inner">Caps Lock이 켜져 있습니다.</span>
+						</span>
+					</div>
+					<em class="error_txt">비밀번호를 입력해주세요.</em>
+				</div>
+				<div class="error_control_area is_error"><!-- [D]입력 오류시 error_control_area에 is_error 클래스 추가 -->
+					<div class="inp_row">
+						<span class="inp_bx">
+							<input type="text" class="inp" title="이메일" placeholder="이메일">
+						</span>
+					</div>
+					<em class="error_txt">이메일을 입력해주세요.</em>
+				</div>
+			</div>
+		</div>
+		<h2 class="guide_title">체크박스</h2>
+		<span class="inp_checkbox">
+			<input type="checkbox" id="check1" class="inp_chk">
+			<label for="check1" class="inp_label">
+				<span class="ico_checkbox"></span>
+				<span class="label_text">체크박스</span>
+			</label>
+		</span>
+
+		<h2 class="guide_title">버튼</h2>
+		<ul class="txt_guide">
+		<li>버튼을 감싸는 영역에 btn_area 클래스, 버튼에는 btn 클래스 필수로 적용</li>
+		<li>버튼 비활성시에는 button요소에는 disabled 속성, a버튼에는 .disabled 클래스 적용</li>
+		</ul>
+		<h3 class="guide_title">button 태그 사용 시</h3>
+		<div class="btn_area">
+			<button type="button" class="btn">일반</button>
+			<button type="button" class="btn btn_point">포인트</button>
+			<button type="button" class="btn btn_point" disabled>비활성</button>
+		</div>
+		<h3 class="guide_title">a 태그 사용 시</h3>
+		<div class="btn_area">
+			<a href="#" class="btn">일반</a>
+			<a href="#" class="btn btn_point">포인트</a>
+			<a href="#" class="btn btn_point disabled">비활성</a>
+		</div>
+		<h2 class="guide_title">링크 텍스트</h2>
+		<a href="#" class="btn_link">로그인으로 돌아가기</a>
+		<h2 class="guide_title">브라우저 대응 범위</h2>
+		<ul class="txt_guide">
+		<li>PC : ie10</li>
+		<li>모바일 : AOS 4.*, IOS 이상</li>
+		</ul>
+	</div>
+</div>
+<!-- 마크업 확인용입니다. -->
+<div class="case_view">
+	<a href="#" class="btn btn_device_change">모바일 화면 전환</a>
+	<a href="#" class="btn btn_toggle_caseview">케이스뷰 열기/닫기</a>
+</div>
+<script src="js/libs/jquery-1.12.4.min.js"></script>
+<script src="js/case_view.js"></script>
+<!-- //마크업 확인용입니다. -->
+</body>
+</html>

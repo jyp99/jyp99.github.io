@@ -1,0 +1,703 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" type="text/css" href="js/bower_components/tui-date-picker/dist/tui-date-picker.css">
+<link rel="stylesheet" type="text/css" href="js/bower_components/tui-pagination/dist/tui-pagination.css">
+<link rel="stylesheet" href="css/solution.css">
+<title>고객예약내역 :: Payco Place Shop</title>
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul class="skip">
+<li><a href="#nav" onclick="document.getElementById('nav').tabIndex=-1;document.getElementById('nav').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- [D] side menu 열릴 경우 .is_sidebar_opened 추가 -->
+<div class="wrap is_sidebar_opened">
+	<!--[D] HEADER -->
+	<header id="header" class="header">
+		<div class="header_top">
+			<h1 class="logo"><a href="#" class="link"><img src="img/logo_payco_place.png" alt="PAYCO Place Shop" width="127" height="12" class="img"></a></h1>
+			<div class="top_menu">
+				<div class="setting_area">
+					<!-- [D] 선택 시 .is_open 추가, 추가 시 .settings 자동 열림. 요소 사이에 별도 태그 삽입할 경우 css 기능 동작하지 않습니다. -->
+					<button type="button" class="btn_setting">박승철 매니저님 안녕하세요.</button>
+					<div class="settings">
+						<ul class="setting_lst">
+						<!-- [D] 선택 시 .is_selected 추가 -->
+						<li class="setting_item is_selected"><a href="#" class="setting">위치네일스 가로수길점 (입점) 매니저</a></li>
+						<li class="setting_item"><a href="#" class="setting">박승철헤어스투디오 이대점 (입점) 매니저</a></li>
+						<li class="setting_item"><a href="#" class="setting">위치네일스 강남1호점 (입점) 매니저</a></li>
+						<li class="setting_item"><a href="#" class="setting">박승철 판교점 원장</a></li>
+						<li class="setting_item"><a href="#" class="setting">이리온 송파점 (입점) PET_HOSPITAL 매니저</a></li>
+						<li class="setting_item"><a href="#" class="setting">이리온 송파점 (입점) PET_HOSPITAL 매니저</a></li>
+						<li class="setting_item"><a href="#" class="setting">이리온 송파점 (입점) PET_HOSPITAL 매니저</a></li>
+						<li class="setting_item"><a href="#" class="setting">박승철 판교점 원장</a></li>
+						</ul>
+						<a href="#" class="setting setting_logout">로그아웃</a>
+					</div>
+				</div>
+				<ul class="menu">				
+				<li class="menu_item"><a href="#" class="link">고객센터</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="header_store">
+			<h2 class="logo_store">
+				<a href="#" class="link"><span class="tit_logo">박승철 헤어스투디오</span><span class="tit_store">서현점</span></a>
+			</h2>
+			<nav class="nav_area">
+				<ul id="nav" class="nav">
+				<!-- [D] 선택 시 .is_selected 추가 -->
+				<li class="nav_item is_selected"><a href="#" class="link">예약관리</a></li>
+				<li class="nav_item"><a href="#" class="link">마케팅관리</a></li>
+				<li class="nav_item is_disabled"><a href="#" class="link">고객관리</a></li>
+				<li class="nav_item is_disabled"><a href="#" class="link">상품관리</a></li>
+				<li class="nav_item is_disabled"><a href="#" class="link">정산관리</a></li>
+				<li class="nav_item is_disabled"><a href="#" class="link">매장관리</a></li>
+				</ul>
+				<div class="search_area">
+					<form>
+					<fieldset>
+						<legend>매장검색</legend>
+						<div class="search">
+							<span class="inp_search"><input type="text" id="search" placeholder="매장검색" aria-label="매장검색" class="inp"></span>
+							<button type="submit" class="btn_search">검색</button>
+							<!-- [D] 삭제버튼 필요시 노출 상위 .search 영역에 .is_focus 추가 -->
+							<button type="button" class="btn_search_del">입력내용 삭제</button>
+						</div>
+					</fieldset>
+					</form>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<!--[D] // HEADER -->
+	<div class="snb_wrap">
+		<ul class="snb">
+		<!-- [D] 선택 시 .is_selected 추가 -->
+		<li class="snb_item designer_item"><a href="#" class="link is_selected">디자이너별 예약현황</a></li>
+		<li class="snb_item contract_item"><a href="#" class="link">고객 예약 내역</a></li>
+		<li class="snb_item dsc_btn_item">
+			<a href="#" class="dsc_btn btn_reservation">외부 예약 변동</a>
+			<span class="ico_dsc">버튼 설명</span>
+		</li>
+		</ul>
+        <div class="legend">
+            <em class="legend_tit">서비스 범례</em>
+						<ul class="legend_lst">
+						<li class="legend_item color_paycoplace">페이코 플레이스</li>
+						<li class="legend_item color_naver">네이버 예약 파트너센터</li>
+						<li class="legend_item color_cacao">카카오 헤어샵</li>
+						</ul>
+        </div>
+	</div>
+	<span class="ly_tooltip ly_tooltip1"><!-- [D] 툴팁 활성시 ly_tooltip 에 is_show 클래스 추가 -->
+		<span class="tooltip_inner">[네이버 예약 파트너센터],<br>[카카오 헤어샵] 예약을<br><b>페이코 플레이스</b> 하나로 관리할 수 있습니다.</span>
+	</span>
+	<!-- [D] CONTENTS -->
+	<main id="content" class="content">
+		<div class="inner">
+			<div class="sub_wrap">
+				<h2 class="h_sub">고객 예약 내역</h2>
+				<div class="form_cols">
+					<div class="form_col">
+						<h3 class="form_tit">기간</h3>
+						<div class="form_row">
+							<button type="button" class="btn">오늘</button>
+							<button type="button" class="btn btn_type1">내일</button>
+							<button type="button" class="btn">1주일</button>
+							<button type="button" class="btn">1개월</button>
+							<button type="button" class="btn">6개월</button>
+						</div>
+						<div class="form_row">
+							<div class="tui-datepicker-area">							
+								<div class="tui-datepicker-input tui-datetime-input inp_datepicker">
+									<input id="startpicker-input" type="text" aria-label="시작일">
+									<span class="tui-ico-date"></span>
+									<div id="startpicker-container" style="margin-left: -1px;"></div>
+								</div>
+								<div class="txt_bar">~</div>
+								<div class="tui-datepicker-input tui-datetime-input inp_datepicker">
+									<input id="endpicker-input" type="text" aria-label="종료일">
+									<span class="tui-ico-date"></span>
+									<div id="endpicker-container" style="margin-left: -1px;"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form_col">
+						<h3 class="form_tit">상태</h3>
+						<div class="form_row">
+							<button type="button" class="btn">예약 대기</button>
+							<button type="button" class="btn">예약 확정</button>
+							<button type="button" class="btn">취소(고객)</button>
+						</div>
+						<div class="form_row">
+							<button type="button" class="btn">취소(매장)</button>
+							<button type="button" class="btn">No Show</button>
+							<button type="button" class="btn">서비스 완료</button>
+						</div>
+					</div>
+					<div class="form_col">
+						<h3 class="form_tit">서비스</h3>
+						<div class="service_select">
+							<div class="select select_size">
+								<a href="#" class="btn btn_select">담당자이름은열자인가<span class="ico ico_sel">선택목록 가기</span></a>
+								<ul class="opts">
+								<li class="opt is_selected"><a href="#" class="opt_link">담당자이름은몇자인가</a></li>
+								<li class="opt"><a href="#" class="opt_link">담당자이름은몇자인가요?</a></li>
+								<li class="opt"><a href="#" class="opt_link">담당자</a></li>
+								<li class="opt"><a href="#" class="opt_link">담당자</a></li>
+								<li class="opt"><a href="#" class="opt_link">담당자</a></li>
+								</ul>
+							</div>
+							<div class="select select_size">
+								<a href="#" class="btn btn_select">결제<span class="ico ico_sel">선택목록 가기</span></a>
+								<ul class="opts">
+								<li class="opt is_selected"><a href="#" class="opt_link">선택없음</a></li>
+								<li class="opt"><a href="#" class="opt_link">결제</a></li>
+								<li class="opt"><a href="#" class="opt_link">미결제</a></li>
+								<li class="opt"><a href="#" class="opt_link">결제대기</a></li>
+								<li class="opt"><a href="#" class="opt_link">결제완료</a></li>
+								<li class="opt"><a href="#" class="opt_link">결제취소</a></li>
+								</ul>
+							</div>														
+						</div>
+						<div class="service_select">
+							<span class="inp_area">
+								<input type="text" id="txt" class="inp_txt" placeholder="예약자 이름, 전화번호, 예약번호 입력" aria-label="예약자 이름, 전화번호, 예약번호" autocomplete="off">
+							</span>
+						</div>
+						<button type="button" class="btn btn_type2 btn_search">검색</button>
+					</div>
+				</div>
+				<!-- [D] 뷰티 -->
+				<div class="tbl_wrap">
+					<table class="tbl tbl_history">
+					<caption><span class="blind">고객예약내역</span></caption>
+					<colgroup>
+						<col style="width:7.4%"> <!-- 예약번호 -->
+						<col style="width:13.4%"> <!-- 방문일자 -->
+						<col style="width:10.31%"> <!-- 상태 -->
+						<col style="width:10.31%"> <!-- 고객명 -->
+						<col style="width:7.94%"> <!-- 분류 -->
+						<col> <!-- 메뉴 -->
+						<col style="width:8.76%"> <!-- 담당 -->
+						<col style="width:9.48%"> <!-- 등록일 -->
+						<col style="width:5.15%"> <!-- 결제 -->
+						<col style="width:8.25%"> <!-- 결제상태 -->
+						<col style="width:8.25%"> <!-- 상세보기 -->
+					</colgroup>
+					<thead>
+					<tr>
+						<th scope="col"><button type="button" class="btn_filter">예약번호 <span class="ico_sort_up">최신순 정렬</span></button></th>
+						<th scope="col"><button type="button" class="btn_filter">방문일자 <span class="ico_sort_down">최신순 정렬</span></button></th>
+						<th scope="col">상태</th>
+						<th scope="col">고객명</th>						
+						<th scope="col">분류</th>
+						<th scope="col">메뉴</th>
+						<th scope="col">담당</th>
+						<th scope="col">등록일</th>
+						<th scope="col">결제</th>
+						<th scope="col">결제상태</th>
+						<th scope="col">상세보기</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+					<td class="align_l2">1001</td>
+					<td><a href="#" class="txt_line">2017.12.05 화 00:00</a></td>
+					<td class="align_l"><em class="event_tag tag_color4">예약 취소(매장)</em></td>
+					<td><a hre="#" class="txt_line">박승철박승</a></td>					
+					<td class="align_l">펌</td>
+					<td class="align_l"><em class="color4">여)모발 M클리닉</em></td>
+					<td class="align_l">승호</td>
+					<td>2017.07.18</td>
+					<td><em class="ico_payment">즉시결제</em></td>
+					<td>환불완료</td>
+					<td><a href="#" class="btn">상세보기</a></td>
+					</tr>
+					<tr>
+					<td class="align_l2">1001</td>
+					<td><a href="#" class="txt_line">2017.12.05 화 00:00</a></td>
+					<td class="align_l"><em class="event_tag tag_color3">결제완료</em></td>
+					<td><a hre="#" class="txt_line">박승철</a></td>					
+					<td class="align_l">펌</td>
+					<td class="align_l"><em class="color4">여)모발 M클리닉</em></td>
+					<td class="align_l">승호</td>
+					<td>2017.07.18</td>
+					<td><em class="ico_payment">즉시결제</em></td>
+					<td>환불완료</td>
+					<td><a href="#" class="btn">상세보기</a></td>
+					</tr>
+					<tr>
+					<td class="align_l2">1001</td>
+					<td><a href="#" class="txt_line">2017.12.05 화 00:00</a></td>
+					<td class="align_l"><em class="event_tag tag_color3">결제완료</em></td>
+					<td><a hre="#" class="txt_line">박승철</a></td>					
+					<td class="align_l">펌</td>
+					<td class="align_l"><em class="color4">여)모발 M클리닉</em></td>
+					<td class="align_l">승호</td>
+					<td>2017.07.18</td>
+					<td><em class="ico_payment">즉시결제</em></td>
+					<td>환불완료</td>
+					<td><a href="#" class="btn">상세보기</a></td>
+					</tr>
+					<tr>
+					<td class="align_l2">1001</td>
+					<td><a href="#" class="txt_line">2017.12.05 화 00:00</a></td>
+					<td class="align_l"><em class="event_tag tag_color3">결제완료</em></td>
+					<td><a hre="#" class="txt_line">박승철</a></td>					
+					<td class="align_l">펌</td>
+					<td class="align_l"><em class="color4">여)모발 M클리닉</em></td>
+					<td class="align_l">승호</td>
+					<td>2017.07.18</td>
+					<td><em class="ico_payment">즉시결제</em></td>
+					<td>환불완료</td>
+					<td><a href="#" class="btn">상세보기</a></td>
+					</tr>
+					<tr>
+					<td class="align_l2">1001</td>
+					<td><a href="#" class="txt_line">2017.12.05 화 00:00</a></td>
+					<td class="align_l"><em class="event_tag tag_color3">결제완료</em></td>
+					<td><a hre="#" class="txt_line">박승철</a></td>					
+					<td class="align_l">펌</td>
+					<td class="align_l"><em class="color4">여)모발 M클리닉</em></td>
+					<td class="align_l">승호</td>
+					<td>2017.07.18</td>
+					<td><em class="ico_payment">즉시결제</em></td>
+					<td>환불완료</td>
+					<td><a href="#" class="btn">상세보기</a></td>
+					</tr>
+					<tr>
+					<td class="align_l2">1001</td>
+					<td><a href="#" class="txt_line">2017.12.05 화 00:00</a></td>
+					<td class="align_l"><em class="event_tag tag_color3">결제완료</em></td>
+					<td><a hre="#" class="txt_line">박승철</a></td>					
+					<td class="align_l">펌</td>
+					<td class="align_l"><em class="color4">여)모발 M클리닉</em></td>
+					<td class="align_l">승호</td>
+					<td>2017.07.18</td>
+					<td><em class="ico_payment">즉시결제</em></td>
+					<td>환불완료</td>
+					<td><a href="#" class="btn">상세보기</a></td>
+					</tr>
+					<tr>
+					<td class="align_l2">1001</td>
+					<td><a href="#" class="txt_line">2017.12.05 화 00:00</a></td>
+					<td class="align_l"><em class="event_tag tag_color3">결제완료</em></td>
+					<td><a hre="#" class="txt_line">박승철</a></td>					
+					<td class="align_l">펌</td>
+					<td class="align_l"><em class="color4">여)모발 M클리닉</em></td>
+					<td class="align_l">승호</td>
+					<td>2017.07.18</td>
+					<td><em class="ico_payment">즉시결제</em></td>
+					<td>환불완료</td>
+					<td><a href="#" class="btn">상세보기</a></td>
+					</tr>
+									
+					<!-- [D] 데이터 없을 경우 -->
+					<tr style="display:none">
+					<td class="is_data_none" colspan="11">
+						<p class="txt">검색 결과가 없습니다.</p>
+					</td>
+					</tr>
+					</tbody>
+					</table>
+				</div>
+				<!-- [D] // 뷰티 -->
+				<!-- [D] 펫 -->
+				<div class="tbl_wrap" style="display:none">
+					<table class="tbl tbl_history">
+					<caption><span class="blind">고객예약내역</span></caption>
+					<colgroup>
+						<col style="width:7.4%"> <!-- 예약번호 -->
+						<col style="width:13.4%"> <!-- 방문일자 -->
+						<col style="width:10.31%"> <!-- 상태 -->
+						<col style="width:10.31%"> <!-- 고객명 -->
+						<col> <!-- 분류 -->
+						<col style="width:7.94%"> <!-- 메뉴 -->
+						<col style="width:8.76%"> <!-- 담당 -->
+						<col style="width:9.48%"> <!-- 등록일 -->
+						<col style="width:5.15%"> <!-- 결제 -->
+						<col style="width:8.25%"> <!-- 결제상태 -->
+						<col style="width:8.25%"> <!-- 상세보기 -->
+					</colgroup>						
+					<thead>
+					<tr>
+						<th scope="col"><button type="button" class="btn_filter">예약번호 <span class="ico_sort_up">최신순 정렬</span></button></th>
+						<th scope="col"><button type="button" class="btn_filter">방문일자 <span class="ico_sort_down">최신순 정렬</span></button></th>
+						<th scope="col">상태</th>
+						<th scope="col">고객명</th>						
+						<th scope="col">대상</th>
+						<th scope="col">분류</th>
+						<th scope="col">담당</th>
+						<th scope="col">등록일</th>
+						<th scope="col">결제</th>
+						<th scope="col">결제상태</th>
+						<th scope="col">상세보기</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+					<td class="align_l2">1001</td>
+					<td><a href="#" class="txt_line">2017.12.05 화 00:00</a></td>
+					<td class="align_l"><em class="event_tag tag_color3">예약 취소(고객)</em></td>
+					<td><a hre="#" class="txt_line">박승철</a></td>					
+					<td>새이, 아메리칸컬, 9개월</td>
+					<td class="align_l">그루밍</td>
+					<td class="align_l">승호</td>
+					<td>2017.07.18</td>
+					<td><em class="ico_payment">즉시결제</em></td>
+					<td>환불완료</td>
+					<td><a href="#" class="btn">상세보기</a></td>
+					</tr>
+					<tr>
+					<td class="align_l2">1001</td>
+					<td><a href="#" class="txt_line">2017.12.05 화 00:00</a></td>
+					<td class="align_l"><em class="event_tag tag_color">결제 요청 중</em></td>
+					<td><a hre="#" class="txt_line">박승철</a></td>					
+					<td>새이, 아메리칸컬, 9개월</td>
+					<td class="align_l">그루밍</td>
+					<td class="align_l">승호</td>
+					<td>2017.07.18</td>
+					<td><em class="ico_payment">즉시결제</em></td>
+					<td>환불완료</td>
+					<td><a href="#" class="btn">상세보기</a></td>
+					</tr>
+					<tr>
+					<td class="align_l2">1001</td>
+					<td><a href="#" class="txt_line">2017.12.05 화 00:00</a></td>
+					<td class="align_l"><em class="event_tag tag_color3">결제완료</em></td>
+					<td><a hre="#" class="txt_line">박승철</a></td>					
+					<td>새이, 아메리칸컬, 9개월</td>
+					<td class="align_l">그루밍</td>
+					<td class="align_l">승호</td>
+					<td>2017.07.18</td>
+					<td><em class="ico_payment">즉시결제</em></td>
+					<td>환불완료</td>
+					<td><a href="#" class="btn">상세보기</a></td>
+					</tr>
+					<tr>
+					<td class="align_l2">1001</td>
+					<td><a href="#" class="txt_line">2017.12.05 화 00:00</a></td>
+					<td class="align_l"><em class="event_tag tag_color3">결제완료</em></td>
+					<td><a hre="#" class="txt_line">박승철</a></td>					
+					<td>새이, 아메리칸컬, 9개월</td>
+					<td class="align_l">그루밍</td>
+					<td class="align_l">승호</td>
+					<td>2017.07.18</td>
+					<td><em class="ico_payment">즉시결제</em></td>
+					<td>환불완료</td>
+					<td><a href="#" class="btn">상세보기</a></td>
+					</tr>
+					<tr>
+					<td class="align_l2">1001</td>
+					<td><a href="#" class="txt_line">2017.12.05 화 00:00</a></td>
+					<td class="align_l"><em class="event_tag tag_color3">결제완료</em></td>
+					<td><a hre="#" class="txt_line">박승철</a></td>					
+					<td>새이, 아메리칸컬, 9개월</td>
+					<td class="align_l">그루밍</td>
+					<td class="align_l">승호</td>
+					<td>2017.07.18</td>
+					<td><em class="ico_payment">즉시결제</em></td>
+					<td>환불완료</td>
+					<td><a href="#" class="btn">상세보기</a></td>
+					</tr>
+					<tr>
+					<td class="align_l2">1001</td>
+					<td><a href="#" class="txt_line">2017.12.05 화 00:00</a></td>
+					<td class="align_l"><em class="event_tag tag_color3">결제완료</em></td>
+					<td><a hre="#" class="txt_line">박승철</a></td>					
+					<td>새이, 아메리칸컬, 9개월</td>
+					<td class="align_l">그루밍</td>
+					<td class="align_l">승호</td>
+					<td>2017.07.18</td>
+					<td><em class="ico_payment">즉시결제</em></td>
+					<td>환불완료</td>
+					<td><a href="#" class="btn">상세보기</a></td>
+					</tr>
+					<tr>
+					<td class="align_l2">1001</td>
+					<td><a href="#" class="txt_line">2017.12.05 화 00:00</a></td>
+					<td class="align_l"><em class="event_tag tag_color3">결제완료</em></td>
+					<td><a hre="#" class="txt_line">박승철</a></td>					
+					<td>새이, 아메리칸컬, 9개월</td>
+					<td class="align_l">그루밍</td>
+					<td class="align_l">승호</td>
+					<td>2017.07.18</td>
+					<td><em class="ico_payment">즉시결제</em></td>
+					<td>환불완료</td>
+					<td><a href="#" class="btn">상세보기</a></td>
+					</tr>
+					<!-- [D] // 펫 -->	
+					<!-- [D] 데이터 없을 경우 -->
+					<tr style="display:none">
+					<td class="is_data_none" colspan="11">
+						<p class="txt">검색 결과가 없습니다.</p>
+					</td>
+					</tr>
+					</tbody>
+					</table>
+				</div>
+				<div id="pagination1" class="tui-pagination"></div>
+			</div>
+			<!-- [D] FOOTER -->	
+			<footer id="footer" class="footer">
+		        <ul class="footer_menu_lst">
+		        <li class="footer_menu_item"><a href="#" class="footer_link">이용약관</a></li>
+		        <li class="footer_menu_item"><a href="#" class="footer_link"><strong class="menu_txt">개인정보취급방침</strong></a></li>
+		        </ul>
+		        <p class="address">© NHN Entertainment Corp. All Rights Reserved.  TEL : 1544-7967  E-mail : support@place.payco.com</p>
+		    </footer>
+			<!-- [D] // FOOTER -->
+		</div>
+	</main>
+	<!--[D] // CONTENTS -->
+	<aside class="aside">
+		<button type="button" class="btn_aside_fold"><span class="ico_fold">접기</span></button>
+		<div class="notification">
+			<div class="tit_wrap">
+				<h3 class="aside_tit">예약알림</h3>
+				<span class="noti_txt">미확인 <em class="color_point">142</em>건</span>
+				<a href="#" class="btn">모두읽음</a>
+			</div>
+			<div class="scroll_box">
+				<p class="sub_txt">예약을 확인하고 결제(매출등록) 처리해주세요.</p>
+				<ul class="noti_event_lst">
+				<!-- [D] 미처리 .is_untreated -->
+				<li class="noti_event is_untreated">
+					<a href="#" class="noti_event_link">
+						<div class="noti_tit_area">
+							<em class="event_tag tag_color3">결제완료</em>
+							<span class="event_date">17.12.09.(토) 오전 10:30</span><!-- [D]결제취소, 예약취소, NO Show 의 경우 span 대신 del 태그 적용 -->
+						</div>
+						<p class="noti_txt">‘회원명’님의 <em class="service_name">‘분류명’</em>을 예약 및 <em class="color_point">미리결제</em> 하였습니다.</p>
+					</a>
+				</li>
+				<li class="noti_event is_untreated">
+					<a href="#" class="noti_event_link">
+						<div class="noti_tit_area">
+							<em class="event_tag tag_color3">결제완료</em>
+							<span class="event_date">17.12.09.(토) 오전 10:30</span>
+						</div>
+						<p class="noti_txt">‘회원명’님의 <em class="service_name">‘분류명’</em>을 예약 및 <em class="color_point">미리결제</em> 하였습니다.</p>
+					</a>
+				</li>
+				</ul>
+				<p class="sub_txt">알림을 확인해주세요.</p>
+				<ul class="noti_event_lst">
+				<!-- [D] 미확인 .is_untreated -->
+				<li class="noti_event is_unidentified">
+					<a href="#" class="noti_event_link">
+						<div class="noti_tit_area">
+							<em class="event_tag tag_color4">예약취소 (고객)</em>
+							<del class="event_date">17.12.09.(토) 오전 10:30</del><!-- [D]결제취소, 예약취소, NO Show 의 경우 span 대신 del 태그 적용 -->
+							<em class="ico_payment2">일반결제</em>
+						</div>
+						<p class="noti_txt">‘회원명’님의 <em class="service_name">‘분류명’</em> 예약을 <em class="color_point">취소</em>하였습니다.</p>
+					</a>
+				</li>
+				<li class="noti_event is_unidentified">
+					<a href="#" class="noti_event_link">
+						<div class="noti_tit_area">
+							<em class="event_tag tag_color2">예약확정</em>
+							<span class="event_date">17.12.09.(토) 오전 10:30</span>
+							<em class="ico_payment2">일반결제</em>
+						</div>					
+						<p class="noti_txt">‘회원명’님의 <em class="service_name">‘분류명’</em> 예약을 <em class="color_point">취소</em>하였습니다.</p>
+					</a>
+				</li>
+				<li class="noti_event">
+					<a href="#" class="noti_event_link">
+						<div class="noti_tit_area">
+							<em class="event_tag tag_color4">결제취소</em>
+							<del class="event_date">17.12.09.(토) 오전 10:30</del>
+							<em class="ico_payment_naver">네이버 예약 파트너센터</em>
+						</div>					
+						<p class="noti_txt">‘회원명’님의 <em class="service_name">‘시술명/메뉴명’</em> 예약을 <em class="color_point">결제취소</em>하였습니다.</p>
+					</a>
+				</li>
+				<li class="noti_event is_unidentified">
+					<a href="#" class="noti_event_link">
+						<div class="noti_tit_area">
+							<em class="event_tag tag_color4">예약취소(매장)</em>
+							<del class="event_date">17.12.09.(토) 오전 10:30</del>
+							<em class="ico_payment2">일반결제</em>
+							<em class="ico_payment_cacao">카카오 헤어샵</em>
+						</div>					
+						<p class="noti_txt">‘회원명’님의 <em class="service_name">‘분류명’</em> 예약을 <em class="color_point">취소</em>하였습니다.</p>
+					</a>
+				</li>
+				<li class="noti_event">
+					<a href="#" class="noti_event_link">
+						<div class="noti_tit_area">
+							<em class="event_tag tag_color2">서비스중</em>
+							<span class="event_date">17.12.09.(토) 오전 10:30</span>
+							<em class="ico_payment_payco">페이코 플레이스</em>
+						</div>					
+						<p class="noti_txt">‘회원명’님이 서비스를 받고 계십니다.<br>고객님과 <em class="color_point">상담 후 확정된 결제 금액을 요청</em>해주세요.</p>
+					</a>
+				</li>
+				<li class="noti_event">
+					<a href="#" class="noti_event_link">
+						<div class="noti_tit_area">
+							<em class="event_tag tag_color2">예약확정</em>
+							<span class="event_date">17.12.09.(토) 오전 10:30</span>
+						</div>					
+						<p class="noti_txt">‘회원명’님의 <em class="service_name">‘분류명’</em> 예약을 <em class="color_point">승인</em>하였습니다.</p>
+					</a>
+				</li>
+				<li class="noti_event">
+					<a href="#" class="noti_event_link">
+						<div class="noti_tit_area">
+							<em class="event_tag tag_color2">서비스중</em>
+							<span class="event_date">17.12.09.(토) 오전 10:30</span>
+						</div>					
+						<p class="noti_txt">‘나회원’님이 서비스를 받고 계십니다.<br> 고객님과 <em class="color_point">상담 후 확정된 결제금액을 요청</em>해주세요.</p>
+					</a>
+				</li>
+				<li class="noti_event">
+					<a href="#" class="noti_event_link">
+						<div class="noti_tit_area">
+							<em class="event_tag tag_color2">서비스중</em>
+							<span class="event_date">17.12.09.(토) 오전 10:30</span>
+						</div>					
+						<p class="noti_txt">‘나회원’님이 서비스를 받고 계십니다.<br> 고객님과 <em class="color_point">상담 후 확정된 결제금액을 요청</em>해주세요.</p>
+					</a>
+				</li>
+				</ul>
+			</div>
+		</div>
+	</aside>
+</div>
+
+<!-- [D] 마크업 뷰를 위한 임시코드입니다. 개발적용 불가합니다 ㅜㅜ -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<style>
+	.sample {
+		overflow: hidden;
+		position: fixed;
+		bottom: 55px;
+		left: 150px;
+		padding: 10px;
+		background: rgba(0, 0, 0, .6);
+		border: 2px solid #444;
+		z-index: 200000;
+		font-size: 11px;
+		color: #ccc;
+		line-height: 18px
+	}
+
+	.sample.sample-fold {
+		height: 10px;
+	}
+
+	.sample a {
+		display:block;
+		font-size: 11px;
+		color: #fff;
+		cursor: pointer
+	}
+
+	.sample-btn {
+		padding: 2px;
+		background-color: #fff;
+	}
+</style>
+<div class="sample">	
+	<a href="#" class="test">테이블 데이터 없음</a>
+	<a href="#" class="test_date">데이터 - 뷰티</a>
+	<a href="#" class="test_date">데이터 - 펫</a>
+</div>
+<script src="js/bower_components/tui-code-snippet/dist/tui-code-snippet.js"></script>
+<script src="js/bower_components/tui-date-picker/dist/tui-date-picker.min.js"></script>
+<script src="js/bower_components/tui-pagination/dist/tui-pagination.js"></script>
+<script>
+	$(function () {
+		$('.btn_aside_fold').on('click',function(){
+			var btnText = $('.ico_fold').text(),
+				btnTrue = '펼치기',
+				btnFalse = '접기';
+			$('.wrap').toggleClass('is_sidebar_opened');
+
+			switch(btnText) {
+				case btnTrue:
+					$('.ico_fold').text(btnFalse);
+					return false;
+				case btnFalse:
+					$('.ico_fold').text(btnTrue);
+			}
+		});
+
+		$('.btn_reservation+.ico_dsc').hover(function () {
+			$('.ly_tooltip1').show();
+			},function(){
+			$('.ly_tooltip1').hide();
+		});
+
+		$('.select').click(function (e) {
+			e.preventDefault();
+			if ($(this).hasClass('is_open')) {
+				$(this).removeClass('is_open');
+			} else {
+				$('.select').removeClass('is_open');
+				$(this).addClass('is_open');
+			}
+		});
+
+		var today = new Date();
+		var picker = tui.DatePicker.createRangePicker({
+			language: 'ko',
+			calendar: {
+				showToday: false
+			},
+			input: {
+				element: '#startpicker-input',
+				format: 'yyyy.MM.dd'
+			},
+			startpicker: {
+				date: today,
+				input: '#startpicker-input',
+				container: '#startpicker-container',
+			},
+			endpicker: {
+				date: today,
+				format: 'yyyy',
+				input: '#endpicker-input',
+				container: '#endpicker-container'
+			},
+			selectableRanges: [
+				[today, new Date(today.getFullYear() + 1, today.getMonth(), today.getDate())]
+			]
+
+		});
+
+		$('.test').on('click',function(){
+			$('.tbl_history tbody tr').hide();
+			$('.tbl_history:eq(0) tbody tr:last-child').show();
+
+		});
+
+		$('.test_date').each(function(){
+			$(this).on('click',function(){
+				var tIndex = $(this).index() - 1;
+				$('.tbl_wrap').hide();
+				$('.tbl_wrap').eq(tIndex).show();
+			});
+		});
+
+		var pagination1 = new tui.Pagination('pagination1', {
+			totalItems: 500,
+			itemsPerPage: 10,
+			visiblePages: 5
+		});
+
+	});
+</script>
+<!-- [D] // 마크업 뷰를 위한 임시코드입니다. -->
+</body>
+</html>

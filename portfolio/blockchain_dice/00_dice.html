@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="all">
+<title>다이스 :: 블록체인</title>
+<link rel="stylesheet" type="text/css" href="css/dice.css">
+</head>
+<body>
+
+<div class="wrap">
+	<h1 class="blind">다이스</h1>
+	<div class="top_wrap">
+		<div class="inner">
+			<h2 class="blind">유저 정보</h2>
+			<ul class="user_info">
+			<li class="user_data">
+				<div class="avatar_area">
+					<img src="img/@tmp_user_avatar.png" alt="user avatar" width="50" height="50">
+				</div>
+			</li>
+			<li class="user_data">
+				<span class="blind">유저 아이디</span>
+				<div class="name">HEYBROoooo</div>
+			</li>
+			<li class="user_data">
+				<span class="blind">보유 금액</span>
+				<div class="amount_area">
+					<div class="number">8,900,000,000</div>
+					<div class="unit">KRW</div>
+				</div>
+			</li>
+			</ul>
+		</div>
+	</div>
+	<!-- [D] CONTENTS -->
+	<div id="content" class="content">
+		<div class="betting_wrap">
+			<h2 class="blind">베팅 영역</h2>
+			<div class="bet_amount_wrap">
+				<h3 class="h_txt">BET AMOUNT</h3>
+				<div class="bet_amount_area">
+					<div class="amount_area">
+						<input type="text" class="inp_txt number" value="777,777,777,777">
+						<span class="unit">KRW</span>
+					</div>
+					<ul class="lst_bet_unit">
+					<li class="unit_item"><button class="btn_unit">1/2</button></li><!-- [D] btn에 마우스 오버시 is_hover, 클릭시 is_click 클래스 추가  -->
+					<li class="unit_item"><button class="btn_unit">X2</button></li>
+					<li class="unit_item"><button class="btn_unit">MAX</button></li>
+					</ul>
+				</div>
+			</div>
+			<div class="potential_winnings_wrap">
+				<h3 class="h_txt">POTENTIAL WINNINGS</h3>
+				<div class="amount_area">
+					<span class="number">800,800,978,980</span>
+					<span class="unit">KRW</span>
+				</div>
+			</div>
+			<div class="bet_wrap">
+				<div class="gage_wrap">
+					<div class="gage" style="left:0;right:0"><!-- [D] start_point_area 의 위치를 gage의 left에, end_point_area의 수치를 right 에 적용(right 수치는 0px가 100%))
+					1280 너비이면서 left, right 각각 40을 입력할 경우
+					left : 692/100*40 = 276.8px, right : 692/100*(100-40) = 415.2px
+					1000 너비이면서 left, right 각각 40을 입력할 경우
+					left : 532/100*40 = 212.8px, right : 532/100*(100-40) = 319.2px
+					-->
+						<div class="point_btn_area start_point_area">
+							<button class="btn_gage btn_from">min range</button>
+							<span class="gage_value">0.00</span>
+						</div>
+						<div class="point_btn_area end_point_area">
+							<button class="btn_gage btn_to">max range</button>
+							<span class="gage_value">0.00</span>
+						</div>
+					</div>
+					<div class="gage_unit">
+						<ol class="lst_gage_unit">
+						<li class="unit_item"><span class="number_txt">0</span></li>
+						<li class="unit_item"><span class="number_txt">10</span></li>
+						<li class="unit_item"><span class="number_txt">20</span></li>
+						<li class="unit_item"><span class="number_txt">30</span></li>
+						<li class="unit_item"><span class="number_txt">40</span></li>
+						<li class="unit_item"><span class="number_txt">50</span></li>
+						<li class="unit_item"><span class="number_txt">60</span></li>
+						<li class="unit_item"><span class="number_txt">70</span></li>
+						<li class="unit_item"><span class="number_txt">80</span></li>
+						<li class="unit_item"><span class="number_txt">90</span></li>
+						<li class="unit_item"><span class="number_txt">100</span></li>
+						</ol>
+					</div>
+				</div>
+
+				<div class="direct_input_wrap">
+					<div class="direct_input_item">
+						<h4 class="h_txt">SELECT RANGE</h4>
+						<div class="inp_wrap start_point">
+							<input type="text" class="inp_txt" value="0.00">
+						</div>
+						<span class="wave_txt">~</span>
+						<div class="inp_wrap end_point">
+							<input type="text" class="inp_txt" value="50.02">
+						</div>
+					</div>
+					<div class="direct_input_item">
+						<h4 class="h_txt">WIN CHANCE</h4>
+						<div class="inp_wrap">
+							<input type="text" class="inp_txt" value="50.02" readonly>
+						</div>
+					</div>
+					<div class="direct_input_item">
+						<h4 class="h_txt">ODDS</h4>
+						<div class="inp_wrap">
+							<input type="text" class="inp_txt" value="1.08" readonly>
+						</div>
+					</div>
+				</div>
+				<div class="roll_btn_wrap">
+					<button class="btn">ROLL AUTO</button><!-- [D] btn에 마우스 오버시 is_hover, 클릭시 is_click, 클릭후 is_active 클래스 추가  -->
+					<button class="btn">ROLL</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="auto_setting_wrap">
+			<h2 class="h_txt">AUTO ROLL SETTING</h2>
+			<div class="settion_item_wrap">
+				<h3 class="option_tit">NUMBER OF ROLLS</h3>
+				<ul class="lst_option">
+				<li class="option_item">
+					<input type="radio" name="option1" id="option1_1" class="inp_radio">
+					<label for="option1_1" class="lb"><span class="ico_radio"></span>∞</label>
+				</li>
+				<li class="option_item">
+					<input type="radio" name="option1" id="option1_2" class="inp_radio">
+					<label for="option1_2" class="lb"><span class="ico_radio"></span>Enter manually</label>
+					<div class="inp_wrap">
+						<input type="text" class="inp_txt" value="10">
+					</div>
+				</li>
+				</ul>
+			</div>
+			<div class="settion_item_wrap">
+				<h3 class="option_tit">ON PROFIT</h3>
+				<span class="sub_txt">Stop at</span>
+				<ul class="lst_option">
+				<li class="option_item">
+					<input type="radio" name="option2" id="option2_1" class="inp_radio">
+					<label for="option2_1" class="lb"><span class="ico_radio"></span>Return to base bet</label>
+					<div class="inp_wrap amount_area">
+						<input type="text" class="inp_txt number" value="243,950,000,000">
+						<span class="unit">KRW</span>
+					</div>
+				</li>
+				<li class="option_item">
+					<input type="radio" name="option2" id="option2_2" class="inp_radio">
+					<label for="option2_2" class="lb"><span class="ico_radio"></span>Increase by</label>
+					<div class="inp_wrap">
+						<input type="text" class="inp_txt" value="10%">
+					</div>
+				</li>
+				</ul>
+			</div>
+			<div class="settion_item_wrap">
+				<h3 class="option_tit">ON LOSS</h3>
+				<span class="sub_txt">Stop at</span>
+				<ul class="lst_option">
+				<li class="option_item">
+					<input type="radio" name="option3" id="option3_1" class="inp_radio">
+					<label for="option3_1" class="lb"><span class="ico_radio"></span>Return to base bet</label>
+					<div class="inp_wrap amount_area">
+						<input type="text" class="inp_txt number" value="950,000,000">
+						<span class="unit">KRW</span>
+					</div>
+				</li>
+				<li class="option_item">
+					<input type="radio" name="option3" id="option3_2" class="inp_radio">
+					<label for="option3_2" class="lb"><span class="ico_radio"></span>Increase by</label>
+					<div class="inp_wrap">
+						<input type="text" class="inp_txt" value="10%">
+					</div>
+				</li>
+				</ul>
+			</div>
+		</div>
+			
+		<div class="provably_fair_wrap">
+			<h2 class="h_txt">PROVABLY FAIR</h2>
+			<a href="#" class="btn_detail" title="PROVABLY FAIR?">?</a>
+			<dl class="lst_seed">
+			<dt class="seed_tit">SERVER SEED HASH</dt>
+			<dd class="seed_dsc"><input type="text" class="inp_txt" value="MERRYCHRISTMASNE" readonly></dd>
+			<dt class="seed_tit">CLIENT SEED</dt>
+			<dd class="seed_dsc"><input type="text" class="inp_txt" value="HAPPYNEWY"></dd>
+			</dl>
+		</div>
+
+		<div class="history_wrap">
+			<h2 class="blind">히스토리 노출 영역</h2>
+			<ul class="lst_tab">
+			<li class="tab_item is_active"><a href="#tab_all" class="tab_link">ALL BETS</a></li><!-- [D]탭 선택시 해당 tab_item에 is_active 클래스 추가 -->
+			<li class="tab_item"><a href="#tab_my" class="tab_link">MY BETS</a></li>
+			</ul>
+			<div class="tab_cont" id="tab_all" style="display:block"><!-- [D] 해당 탭 display:block -->
+				<h3 class="blind">ALL BETS</h3>
+				<div class="scroll_wrap">
+					<table class="tbl_history">
+					<caption><span>ALL BETS HISTORY</span></caption>
+					<colgroup>
+					<col>
+					<col>
+					<col>
+					<col>
+					<col>
+					<col>
+					<col>
+					<col>
+					</colgroup>	
+					<thead>
+					<tr>
+					<th scope="col">ID</th>
+					<th scope="col">TIME</th>
+					<th scope="col">BET</th>
+					<th scope="col">GAME</th>
+					<th scope="col">ROLL</th>
+					<th scope="col">ODDS</th>
+					<th scope="col">PROFIT</th>
+					<th scope="col">
+						<button class="btn btn_history_show">Auto</button>
+						<button class="btn btn_history_show is_pause" style="display:none">Pause</button><!-- [D]히스토리 노출방식 변경 시 대체 적용 -->
+					</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+					<td class="id">AACHARACTERS</td>
+					<td>00:00:00</td>
+					<td class="amount">2,000,000,000 KRW</td>
+					<td>00.00~50.02</td>
+					<td>50.02</td>
+					<td>00.24</td>
+					<td class="amount is_win">+200,000,000,000 KRW</td><!-- [D]승리시 amount에 is_win, 패배시 is_lose 클래스 추가 -->
+					<td><a href="#" class="btn btn_ly_validation">Show result validation popup</a></td>
+					</tr>
+					<tr>
+					<td class="id">WAIKIKI</td>
+					<td>00:00:00</td>
+					<td class="amount">5,000,000 KRW</td>
+					<td>00.00~50.02</td>
+					<td>50.02</td>
+					<td>00.24</td>
+					<td class="amount is_win">+5,000,000 KRW</td>
+					<td><a href="#" class="btn btn_ly_validation">Show result validation popup</a></td>
+					</tr>
+					<tr>
+					<td class="id">IAMDREAMING</td>
+					<td>00:00:00</td>
+					<td class="amount">2,000,000 KRW</td>
+					<td>00.00~50.02</td>
+					<td>50.02</td>
+					<td>00.24</td>
+					<td class="amount is_lose">-2,000,000 KRW</td>
+					<td><a href="#" class="btn btn_ly_validation">Show result validation popup</a></td>
+					</tr>
+					<tr>
+					<td class="id">OFAWHITE</td>
+					<td>00:00:00</td>
+					<td class="amount">2,000 KRW</td>
+					<td>00.00~50.02</td>
+					<td>50.02</td>
+					<td>00.24</td>
+					<td class="amount is_win">+2,000 KRW</td>
+					<td><a href="#" class="btn btn_ly_validation">Show result validation popup</a></td>
+					</tr>
+					<tr>
+					<td class="id">CHRISTMAS</td>
+					<td>00:00:00</td>
+					<td class="amount">1,000 KRW</td>
+					<td>00.00~50.02</td>
+					<td>50.02</td>
+					<td>00.24</td>
+					<td class="amount is_lose">-1,000 KRW</td>
+					<td><a href="#" class="btn btn_ly_validation">Show result validation popup</a></td>
+					</tr>
+					<tr>
+					<td class="id">ASJUSTLIKE</td>
+					<td>00:00:00</td>
+					<td class="amount">900,000,000 KRW</td>
+					<td>00.00~50.02</td>
+					<td>50.02</td>
+					<td>00.24</td>
+					<td class="amount is_win">+900,000,000 KRW</td>
+					<td><a href="#" class="btn btn_ly_validation">Show result validation popup</a></td>
+					</tr>
+					<tr>
+					<td class="id">THEONESIUSED</td>
+					<td>00:00:00</td>
+					<td class="amount">5,000,000 KRW</td>
+					<td>00.00~50.02</td>
+					<td>50.02</td>
+					<td>00.24</td>
+					<td class="amount is_lose">-5,000,000 KRW</td>
+					<td><a href="#" class="btn btn_ly_validation">Show result validation popup</a></td>
+					</tr>
+					<tr>
+					<td class="id">TOKNOW</td>
+					<td>00:00:00</td>
+					<td class="amount">700,000,000 KRW</td>
+					<td>00.00~50.02</td>
+					<td>50.02</td>
+					<td>00.24</td>
+					<td class="amount is_win">+700,000,000 KRW</td>
+					<td><a href="#" class="btn btn_ly_validation">Show result validation popup</a></td>
+					</tr>
+					<tr>
+					<td class="id">WHERETHE</td>
+					<td>00:00:00</td>
+					<td class="amount">20 KRW</td>
+					<td>00.00~50.02</td>
+					<td>50.02</td>
+					<td>00.24</td>
+					<td class="amount is_win">+480,800,000 KRW</td>
+					<td><a href="#" class="btn btn_ly_validation">Show result validation popup</a></td>
+					</tr>
+					<tr>
+					<td class="id">TREETIOS</td>
+					<td>00:00:00</td>
+					<td class="amount">910,000 KRW</td>
+					<td>00.00~50.02</td>
+					<td>50.02</td>
+					<td>00.24</td>
+					<td class="amount is_lose">-20 KRW</td>
+					<td><a href="#" class="btn btn_ly_validation">Show result validation popup</a></td>
+					</tr>
+					<tr>
+					<td class="id">GLISTEN</td>
+					<td>00:00:00</td>
+					<td class="amount">463,000 KRW</td>
+					<td>00.00~50.02</td>
+					<td>50.02</td>
+					<td>00.24</td>
+					<td class="amount is_win">+910,000 KRW</td>
+					<td><a href="#" class="btn btn_ly_validation">Show result validation popup</a></td>
+					</tr>
+					<tr>
+					<td class="id">ANDCHILDREN</td>
+					<td>00:00:00</td>
+					<td class="amount">970,000,000 KRW</td>
+					<td>00.00~50.02</td>
+					<td>50.02</td>
+					<td>00.24</td>
+					<td class="amount is_lose">-970,000,000 KRW</td>
+					<td><a href="#" class="btn btn_ly_validation">Show result validation popup</a></td>
+					</tr>
+					<tr>
+					<td class="id">LISTEN</td>
+					<td>00:00:00</td>
+					<td class="amount">3,000,000 KRW</td>
+					<td>00.00~50.02</td>
+					<td>50.02</td>
+					<td>00.24</td>
+					<td class="amount is_win">+3,000,000 KRW</td>
+					<td><a href="#" class="btn btn_ly_validation">Show result validation popup</a></td>
+					</tr>
+					<tr>
+					<td class="id">TOHEAR</td>
+					<td>00:00:00</td>
+					<td class="amount">2,000,000 KRW</td>
+					<td>00.00~50.02</td>
+					<td>50.02</td>
+					<td>00.24</td>
+					<td class="amount is_win">+200,000,000,000 KRW</td>
+					<td><a href="#" class="btn btn_ly_validation">Show result validation popup</a></td>
+					</tr>
+					<tr>
+					<td class="id">SLEGHBELLS</td>
+					<td>00:00:00</td>
+					<td class="amount">2,000 KRW</td>
+					<td>00.00~50.02</td>
+					<td>50.02</td>
+					<td>00.24</td>
+					<td class="amount is_lose">-2,000 KRW</td>
+					<td><a href="#" class="btn btn_ly_validation">Show result validation popup</a></td>
+					</tr>
+					</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="tab_cont" id="tab_my">
+				<h3 class="blind">MY BETS</h3>
+				<div class="scroll_wrap">
+					<table class="tbl_history">
+					<caption><span>MY BETS HISTORY</span></caption>
+					<colgroup>
+					<col>
+					<col>
+					<col>
+					<col>
+					<col>
+					<col>
+					<col>
+					<col>
+					</colgroup>	
+					<thead>
+					<tr>
+					<th scope="col">ID</th>
+					<th scope="col">TIME</th>
+					<th scope="col">BET</th>
+					<th scope="col">GAME</th>
+					<th scope="col">ROLL</th>
+					<th scope="col">ODDS</th>
+					<th scope="col">PROFIT</th>
+					<th scope="col">
+						<button class="btn btn_history_show">Auto</button>
+						<button class="btn btn_history_show is_pause" style="display:none">Pause</button><!-- [D]히스토리 노출방식 변경 시 대체 적용 -->
+					</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+					<td class="id">AACHARACTERS2</td>
+					<td>00:00:00</td>
+					<td class="amount">2,000,000,000 KRW</td>
+					<td>00.00~50.02</td>
+					<td>50.02</td>
+					<td>00.24</td>
+					<td class="amount is_win">+200,000,000,000 KRW</td><!-- [D]승리시 amount에 is_win, 패배시 is_lose 클래스 추가 -->
+					<td><a href="#" class="btn btn_ly_validation">Show result validation popup</a></td>
+					</tr>
+					<tr>
+					<td class="id">WAIKIKI2</td>
+					<td>00:00:00</td>
+					<td class="amount">5,000,000 KRW</td>
+					<td>00.00~50.02</td>
+					<td>50.02</td>
+					<td>00.24</td>
+					<td class="amount is_win">+5,000,000 KRW</td>
+					<td><a href="#" class="btn btn_ly_validation">Show result validation popup</a></td>
+					</tr>
+					<tr>
+					<td class="id">IAMDREAMING2</td>
+					<td>00:00:00</td>
+					<td class="amount">2,000,000 KRW</td>
+					<td>00.00~50.02</td>
+					<td>50.02</td>
+					<td>00.24</td>
+					<td class="amount is_lose">-2,000,000 KRW</td>
+					<td><a href="#" class="btn btn_ly_validation">Show result validation popup</a></td>
+					</tr>
+					<tr>
+					<td class="id">OFAWHITE</td>
+					<td>00:00:00</td>
+					<td class="amount">2,000 KRW</td>
+					<td>00.00~50.02</td>
+					<td>50.02</td>
+					<td>00.24</td>
+					<td class="amount is_win">+2,000 KRW</td>
+					<td><a href="#" class="btn btn_ly_validation">Show result validation popup</a></td>
+					</tr>
+					<tr>
+					<td class="id">CHRISTMAS</td>
+					<td>00:00:00</td>
+					<td class="amount">1,000 KRW</td>
+					<td>00.00~50.02</td>
+					<td>50.02</td>
+					<td>00.24</td>
+					<td class="amount is_lose">-1,000 KRW</td>
+					<td><a href="#" class="btn btn_ly_validation">Show result validation popup</a></td>
+					</tr>
+					<tr>
+					<td class="id">ASJUSTLIKE</td>
+					<td>00:00:00</td>
+					<td class="amount">900,000,000 KRW</td>
+					<td>00.00~50.02</td>
+					<td>50.02</td>
+					<td>00.24</td>
+					<td class="amount is_win">+900,000,000 KRW</td>
+					<td><a href="#" class="btn btn_ly_validation">Show result validation popup</a></td>
+					</tr>
+					<tr>
+					<td class="id">THEONESIUSED</td>
+					<td>00:00:00</td>
+					<td class="amount">5,000,000 KRW</td>
+					<td>00.00~50.02</td>
+					<td>50.02</td>
+					<td>00.24</td>
+					<td class="amount is_lose">-5,000,000 KRW</td>
+					<td><a href="#" class="btn btn_ly_validation">Show result validation popup</a></td>
+					</tr>
+					<tr>
+					<td class="id">TOKNOW</td>
+					<td>00:00:00</td>
+					<td class="amount">700,000,000 KRW</td>
+					<td>00.00~50.02</td>
+					<td>50.02</td>
+					<td>00.24</td>
+					<td class="amount is_win">+700,000,000 KRW</td>
+					<td><a href="#" class="btn btn_ly_validation">Show result validation popup</a></td>
+					</tr>
+					<tr>
+					<td class="id">WHERETHE</td>
+					<td>00:00:00</td>
+					<td class="amount">20 KRW</td>
+					<td>00.00~50.02</td>
+					<td>50.02</td>
+					<td>00.24</td>
+					<td class="amount is_win">+480,800,000 KRW</td>
+					<td><a href="#" class="btn btn_ly_validation">Show result validation popup</a></td>
+					</tr>
+					<tr>
+					<td class="id">TREETIOS</td>
+					<td>00:00:00</td>
+					<td class="amount">910,000 KRW</td>
+					<td>00.00~50.02</td>
+					<td>50.02</td>
+					<td>00.24</td>
+					<td class="amount is_lose">-20 KRW</td>
+					<td><a href="#" class="btn btn_ly_validation">Show result validation popup</a></td>
+					</tr>
+					<tr>
+					<td class="id">GLISTEN</td>
+					<td>00:00:00</td>
+					<td class="amount">463,000 KRW</td>
+					<td>00.00~50.02</td>
+					<td>50.02</td>
+					<td>00.24</td>
+					<td class="amount is_win">+910,000 KRW</td>
+					<td><a href="#" class="btn btn_ly_validation">Show result validation popup</a></td>
+					</tr>
+					<tr>
+					<td class="id">ANDCHILDREN</td>
+					<td>00:00:00</td>
+					<td class="amount">970,000,000 KRW</td>
+					<td>00.00~50.02</td>
+					<td>50.02</td>
+					<td>00.24</td>
+					<td class="amount is_lose">-970,000,000 KRW</td>
+					<td><a href="#" class="btn btn_ly_validation">Show result validation popup</a></td>
+					</tr>
+					<tr>
+					<td class="id">LISTEN</td>
+					<td>00:00:00</td>
+					<td class="amount">3,000,000 KRW</td>
+					<td>00.00~50.02</td>
+					<td>50.02</td>
+					<td>00.24</td>
+					<td class="amount is_win">+3,000,000 KRW</td>
+					<td><a href="#" class="btn btn_ly_validation">Show result validation popup</a></td>
+					</tr>
+					<tr>
+					<td class="id">TOHEAR</td>
+					<td>00:00:00</td>
+					<td class="amount">2,000,000 KRW</td>
+					<td>00.00~50.02</td>
+					<td>50.02</td>
+					<td>00.24</td>
+					<td class="amount is_win">+200,000,000,000 KRW</td>
+					<td><a href="#" class="btn btn_ly_validation">Show result validation popup</a></td>
+					</tr>
+					<tr>
+					<td class="id">SLEGHBELLS</td>
+					<td>00:00:00</td>
+					<td class="amount">2,000 KRW</td>
+					<td>00.00~50.02</td>
+					<td>50.02</td>
+					<td>00.24</td>
+					<td class="amount is_lose">-2,000 KRW</td>
+					<td><a href="#" class="btn btn_ly_validation">Show result validation popup</a></td>
+					</tr>
+					<tr>
+					<td class="id">LISTEN</td>
+					<td>00:00:00</td>
+					<td class="amount">3,000,000 KRW</td>
+					<td>00.00~50.02</td>
+					<td>50.02</td>
+					<td>00.24</td>
+					<td class="amount is_win">+3,000,000 KRW</td>
+					<td><a href="#" class="btn btn_ly_validation">Show result validation popup</a></td>
+					</tr>
+					<tr>
+					<td class="id">TOHEAR</td>
+					<td>00:00:00</td>
+					<td class="amount">2,000,000 KRW</td>
+					<td>00.00~50.02</td>
+					<td>50.02</td>
+					<td>00.24</td>
+					<td class="amount is_win">+200,000,000,000 KRW</td>
+					<td><a href="#" class="btn btn_ly_validation">Show result validation popup</a></td>
+					</tr>
+					<tr>
+					<td class="id">SLEGHBELLS</td>
+					<td>00:00:00</td>
+					<td class="amount">2,000 KRW</td>
+					<td>00.00~50.02</td>
+					<td>50.02</td>
+					<td>00.24</td>
+					<td class="amount is_lose">-2,000 KRW</td>
+					<td><a href="#" class="btn btn_ly_validation">Show result validation popup</a></td>
+					</tr>
+					</tbody>
+					</table>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- //[D] CONTENTS -->
+	<!-- [D] LAYER -->
+	<div class="ly_pop" style="display:none">
+		<div class="ly_cont">
+			<div class="ly_msg_wrap">
+				<p class="msg_txt">You don’t have enough chips to enter the channel.</p>
+			</div>
+			<div class="ly_btn_wrap">
+				<button class="btn">OK</button>
+			</div>
+		</div>
+	</div>
+	<!-- [D] LAYER -->
+	<!-- [D] LAYER : Provably Fair -->
+	<div class="ly_pop ly_provably_fair" style="display:none">
+		<div class="ly_cont">
+			<div class="ly_tit_wrap">
+				<h3 class="ly_tit">PROVABLY FAIR</h3>
+			</div>
+			<div class="ly_msg_wrap">
+				<p class="msg_txt">You can check the integrity of every roll and make sure they are not manipulated.<br>Our random numbers are generated from two seeds, these are the Server Seed and the Client Seed.</p>
+				<ul class="lst_rule_guide">
+				<li class="rule_item">
+					<em class="rule_tit">Generating Server Seed</em>
+					<span class="rule_dsc">We generate Server Seed everty time before you roll.</span>
+				</li>
+				<li class="rule_item">
+					<em class="rule_tit">Generating Server Seed Hash</em>
+					<span class="rule_dsc">sha256Hex(serverSeed)</span>
+				</li>
+				<li class="rule_item">
+					<em class="rule_tit">Generating Client Seed</em>
+					<span class="rule_dsc">By default it’s generated as random number 0 and 2^31, you can change it before you roll.</span>
+				</li>
+				<li class="rule_item">
+					<em class="rule_tit">Generating Roll Number</em>
+					<span class="rule_dsc">
+						<span class="scroll_wrap">CALL FUNCTION 'QF05_RANDOM_INTEGER'<br>&nbsp;EXPORTING<br>&nbsp;&nbsp;ran_int_max   = 99999999 "max number<br>&nbsp;&nbsp;ran_int_min   = 10000000 "min number&nbsp;IMPORTING</span>
+					</span>
+				</li>
+				</ul>
+				<dl class="lst_seed">
+				<dt class="seed_tit">Server Seed Hash</dt>
+				<dd class="seed_dsc"><input type="text" class="inp_txt" value="1234567890abcdefghijklmn"></dd>
+				<dt class="seed_tit">Client Seed</dt>
+				<dd class="seed_dsc"><input type="text" class="inp_txt" value="1234567890abcdefghijklmn"></dd>
+				</dl>
+				<span class="generated_result_area">Generated Roll Number <span class="generated_number"></span></span>
+			</div>
+			<div class="ly_btn_wrap">
+				<button class="btn">I See</button>
+			</div>
+			<button class="btn btn_close">Close</button>
+		</div>
+	</div>
+	<!-- [D] LAYER : Provably Fair -->
+	<!-- [D] LAYER : validation_result -->
+	<div class="ly_pop ly_validation" style="display:none">
+		<div class="ly_cont">
+			<h3 class="blind">validation_result</h3>
+			<div class="ly_msg_wrap">
+				<ul class="lst_validation_result">
+				<li class="result_item">
+					<em class="result_tit">Bet ID</em>
+					<span class="result_dsc">123456789</span>
+				</li>
+				<li class="result_item">
+					<em class="result_tit">User ID</em>
+					<span class="result_dsc">Player123456</span>
+				</li>
+				<li class="result_item">
+					<em class="result_tit">Time</em>
+					<span class="result_dsc">00:00:00</span>
+				</li>
+				<li class="result_item">
+					<em class="result_tit">Bet</em>
+					<span class="result_dsc">123,456,789,000</span>
+				</li>
+				<li class="result_item">
+					<em class="result_tit">Game</em>
+					<span class="result_dsc">00.~00</span>
+				</li>
+				<li class="result_item">
+					<em class="result_tit">Roll</em>
+					<span class="result_dsc generated_number">12.34</span>
+				</li>
+				<li class="result_item">
+					<em class="result_tit">Odds</em>
+					<span class="result_dsc">12.34</span>
+				</li>
+				<li class="result_item">
+					<em class="result_tit">Profit</em>
+					<span class="result_dsc profit">+200,000,000,000 KRW</span>
+				</li>
+				</ul>
+				<ul class="lst_validation_result">
+				<li class="result_item">
+					<em class="result_tit">Sever Seed Hash</em>
+					<span class="result_dsc seed_txt">1234567890abcdefghijklmn</span>
+				</li>
+				<li class="result_item">
+					<em class="result_tit">Client Seed</em>
+					<span class="result_dsc seed_txt">1234567890abcdefghijklmn</span>
+				</li>
+				</ul>
+				<ul class="lst_validation_result" style="display:none">
+				<li class="result_item">
+					<em class="result_tit">Using Sever Seed</em>
+					<span class="result_dsc seed_txt">1234567890abcdefghijklmn</span>
+				</li>
+				<li class="result_item">
+					<em class="result_tit">Using Clinet Seed</em>
+					<span class="result_dsc seed_txt">1234567890abcdefghijklmn</span>
+				</li>
+				<li class="result_item">
+					<em class="result_tit">Gnerated Roll</em>
+					<span class="result_dsc generated_number">12.34</span>
+				</li>
+				</ul>
+			</div>
+			<div class="ly_btn_wrap">
+				<button class="btn">Verify</button>
+			</div>
+			<button class="btn btn_close">Close</button>
+		</div>
+	</div>
+	<!-- [D] LAYER : validation_result -->
+	<!-- [D] LAYER : 이중접속안내 -->
+	<div class="ly_pop ly_pop_sm" style="display:none">
+		<div class="ly_cont">
+			<div class="ly_msg_wrap">
+				<p class="msg_txt">You have been logged in elsewhere.<br>This session has been closed.</p>
+			</div>
+		</div>
+	</div>
+	<!-- [D] LAYER : 이중접속안내 -->
+	<!-- [D] LAYER : 페이지변경확인 -->
+	<div class="ly_pop ly_pop_sm" style="display:none">
+		<div class="ly_cont">
+			<div class="ly_msg_wrap">
+				<p class="msg_txt">Are you sure want to leave this page?<br>(You’re in ‘Auto Roll’ mode now.)<br>If you leave, your game will be stopped.</p>
+			</div>
+			<div class="ly_btn_wrap">
+				<button class="btn">Leave</button>
+				<button class="btn">Cancel</button>
+			</div>
+		</div>
+	</div>
+	<!-- [D] LAYER : 페이지변경확인 -->
+</div>
+
+
+<!-- Javascript Area -->
+<script src="js/libs/jquery-1.12.4.min.js"></script>
+<!-- 마크업 확인용입니다. -->
+<style>
+.case_view{display:inline-block;position:fixed;bottom:0;left:0;z-index:1000;width:auto;padding:5px;background:#000;opacity:0.7}
+.case_view .btn{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+</style>
+<div class="case_view">
+    <a href="#" class="btn" onclick="$('.btn_unit').attr('class','btn_unit');return false;">베팅 단위 버튼_기본</a>
+    <a href="#" class="btn" onclick="$('.btn_unit').attr('class','btn_unit is_hover');return false;">베팅 단위 버튼_마우스 오버</a>
+    <a href="#" class="btn" onclick="$('.btn_unit').attr('class','btn_unit is_click');return false;">베팅 단위 버튼_마우스 클릭</a>
+    <a href="#" class="btn" onclick="$('.roll_btn_wrap .btn').attr('class','btn');return false;">베팅 버튼_기본</a>
+    <a href="#" class="btn" onclick="$('.roll_btn_wrap .btn').attr('class','btn is_hover');return false;">베팅 버튼_마우스 오버</a>
+    <a href="#" class="btn" onclick="$('.roll_btn_wrap .btn').attr('class','btn is_click');return false;">베팅 버튼_마우스 클릭</a>
+    <a href="#" class="btn" onclick="$('.roll_btn_wrap .btn').attr('class','btn is_active');return false;">베팅 버튼_마우스 클릭 후</a>
+    <a href="#" class="btn" onclick="$('.gage').css({'left':'0%','right':'100%'});return false;">게이지 조정 예_0~0</a>
+    <a href="#" class="btn" onclick="$('.gage').css({'left':'10%','right':'30%'});return false;">게이지 조정 예_10~70</a>
+    <a href="#" class="btn" onclick="$('.ly_pop').hide();$('.ly_pop:eq(0)').show();return false;">기본 팝업</a>
+    <a href="#" class="btn" onclick="$('.ly_btn_wrap .btn').attr('class','btn');return false;">팝업 버튼_기본</a>
+    <a href="#" class="btn" onclick="$('.ly_btn_wrap .btn').attr('class','btn is_hover');return false;">팝업 버튼_마우스 오버</a>
+    <a href="#" class="btn" onclick="$('.ly_btn_wrap .btn').attr('class','btn is_click');return false;">팝업 버튼_마우스 클릭</a>
+    <a href="#" class="btn" onclick="$('.ly_pop').hide();$('.ly_provably_fair').show();return false;">공정성 입증 안내 팝업</a>
+    <a href="#" class="btn" onclick="$('.ly_provably_fair .generated_result_area .generated_number').html('12.34');return false;">공정성 입증 안내 팝업_결과노출</a>
+    <a href="#" class="btn" onclick="$('.ly_pop').hide();$('.ly_validation').show();$('.ly_validation .ly_btn_wrap .btn').attr('class','btn').html('Verify');$('.ly_validation .lst_validation_result:eq(2)').hide();return false;">결과검증팝업</a>
+    <a href="#" class="btn" onclick="$('.ly_validation .ly_btn_wrap .btn').attr('class','btn is_disabled');return false;">결과검증팝업_마우스 비활성화</a>
+    <a href="#" class="btn" onclick="$('.ly_validation .ly_btn_wrap .btn').attr('class','btn is_confirm').html('Verified');$('.ly_validation .lst_validation_result:eq(2)').show();return false;">결과검증팝업_확장</a>
+    <a href="#" class="btn" onclick="$('.btn_history_show').toggle();return false;">히스토리 노출 방식 변경</a>
+    <a href="#" class="btn" onclick="$('.ly_pop').hide();$('.ly_pop:eq(3)').show();return false;">이중접속안내 팝업</a>
+    <a href="#" class="btn" onclick="$('.ly_pop').hide();$('.ly_pop:eq(4)').show();return false;">페이지변경확인 팝업</a>
+</div>
+<script>
+$(function(){
+	$('.lst_option .lb').click(function(e){
+		$(this).parents('.lst_option').find('.option_item').removeClass('is_checked');
+		$(this).parents('.option_item').addClass('is_checked');
+	});
+	$('.lst_tab .tab_item').click(function(e){
+		e.preventDefault();
+		$(this).parents('.lst_tab').find('.tab_item').removeClass('is_active');
+		$(this).addClass('is_active');
+		$('.tab_cont').hide();
+		var tabname = $(this).find('.tab_link').attr('href').split('#')[1];
+		document.getElementById(tabname).style.display = 'block';
+	});
+	$('.ly_pop .btn').click(function(e){
+		e.preventDefault();
+		$('.ly_pop').hide();
+	});
+});
+</script>
+<!-- //마크업 확인용입니다. -->
+</body>
+</html>

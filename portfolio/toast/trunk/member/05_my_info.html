@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="all">
+<title>회원정보 :: TOAST Cloud</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<base href="../">
+<link rel="stylesheet" type="text/css" href="css/gnb.css">
+<link rel="stylesheet" type="text/css" href="css/toast.css">
+<link rel="stylesheet" type="text/css" href="css/toast_member.css">
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul class="skip">
+<li><a href="#header" onclick="document.getElementById('header').tabIndex=-1;document.getElementById('header').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+
+<!--[D] noti_browser -->
+<?php include '../inc/noti_browser.html';?>
+<!--//[D] noti_browser -->
+<div class="wrap"><!-- [D] 마이페이지쪽은 tcm_wrap 적용 안함 -->
+	<!--[D] HEADER -->
+	<?php include '../inc/header.html';?>
+	<!--//[D] HEADER -->
+	<div id="container" class="container">
+		<!-- [D] CONTENTS -->
+		<div id="content" class="content mypage_content">
+			<section class="sec">
+				<div class="sec_inner">
+					<h2 class="main_title">마이페이지</h2>
+					<ul class="nav nav-justified member_nav">
+					<li class="nav-item word_item active"><a href="member/05_my_info.html" class="nav-link is_active"><span class="nav_txt">회원정보</span></a></li>
+					<li class="nav-item word_item"><a href="07_mypage_payment.html" class="nav-link"><span class="nav_txt">결제수단</span></a></li>
+					<li class="nav-item word_item"><a href="07_mypage_credit.html" class="nav-link"><span class="nav_txt">크레딧</span></a></li>
+					<li class="nav-item word_item"><a href="07_mypage_api.html" class="nav-link"><span class="nav_txt">API 보안 설정</span></a></li>
+					<li class="nav-item word_item"><a href="07_mypage_personal_info.html" class="nav-link"><span class="nav_txt">개인정보 이용 내역</span></a></li>
+					</ul>
+					<div class="tab-content">
+						<div class="title_wrap">
+							<h3 class="tit_txt">개인 회원정보</h3>
+							<p class="sub_desc">안녕하세요. 이곳에서 회원님의 아이디, 비밀번호 등 개인정보에 대한 내용을 수정하실 수 있습니다.</p>
+						</div>
+
+						<!-- [D]정보 확인 시 폼 구조 -->
+						<div class="form_wrap info_form_wrap">
+							<form>
+							<fieldset>
+							<legend>회원정보 관리</legend>
+							<div class="lst_form_wrap">
+								<dl class="lst_form">
+								<dt class="form_title"><label for="id">아이디</label><em class="ico_required_fields">필수 입력</em></dt>
+								<dd class="form_input_area">
+									<span class="error_control_area"><!-- [D]입력 오류시 해당 error_control_area에 is_error 클래스 추가 -->
+										<span class="inp_row">
+											<span class="inp_bx">
+												<input type="text" id="id"	class="inp" title="아이디" placeholder="아이디" value="nhn•••@nhnent.com" disabled>
+											</span>
+											<button type="button" class="btn">아이디 변경</button><!-- [D] 비활성 상태인 버튼에는 disabled 속성 추가 -->
+										</span>
+										<em class="error_txt">유효성 메시지 표시 영역</em>
+									</span>
+								</dd>
+								<dt class="form_title">비밀번호<em class="ico_required_fields">필수 입력</em></dt>
+								<dd class="form_input_area">
+									<span class="error_control_area">
+										<span class="inp_row">
+											<span class="inp_bx">
+												<span class="desc_text">최종 변경일 : 2017년 7월 1일</span>
+											</span>
+											<button type="button" class="btn">비밀번호 변경</button>
+										</span>
+										<em class="error_txt">유효성 메시지 표시 영역</em>
+									</span>
+								</dd>
+								</dl>
+							</div>
+							<div class="lst_form_wrap">
+								<dl class="lst_form">
+								<dt class="form_title"><label for="name">이름</label><em class="ico_required_fields">필수 입력</em></dt>
+								<dd class="form_input_area">
+									<span class="error_control_area">
+										<span class="inp_row">
+											<span class="inp_bx">
+												<input type="text" id="name" class="inp" title="이름" placeholder="이름" value="김담당" disabled>
+											</span>
+										</span>
+										<em class="error_txt">유효성 메시지 표시 영역</em>
+									</span>
+								</dd>
+								<dt class="form_title"><label for="phone">휴대폰 번호</label><em class="ico_required_fields">필수 입력</em></dt>
+								<dd class="form_input_area">
+									<span class="error_control_area">
+										<span class="inp_row">
+											<span class="inp_bx">
+												<input type="text" id="phone" class="inp" title="휴대폰 번호" placeholder="-없이 입력" value="(+82) 01091294505" disabled>
+											</span>
+											<button type="button" class="btn">번호 변경</button>
+										</span>
+										<em class="error_txt">유효성 메시지 표시 영역</em>
+									</span>
+								</dd>
+								<dt class="form_title"><label for="address">주소</label></dt>
+								<dd class="form_input_area">
+									<span class="error_control_area">
+										<span class="inp_row">
+											<span class="inp_bx">
+												<input type="text" id="address" class="inp" title="주소" placeholder="주소" value="경기도 성남시 분당구 대왕판교로 645번길 16 (삼평동)" disabled>
+											</span>
+											<button type="button" class="btn">주소 변경</button>
+										</span>
+										<span class="inp_row">
+											<span class="inp_bx">
+												<input type="text" class="inp" title="상세주소" placeholder="상세주소" value="NHN엔터테인먼트 플레이뮤지엄" disabled>
+											</span>
+										</span>
+										<em class="error_txt">유효성 메시지 표시 영역</em>
+									</span>
+								</dd>
+								<dt class="form_title"><label for="tel">전화</label></dt>
+								<dd class="form_input_area">
+									<span class="error_control_area">
+										<span class="inp_row">
+											<span class="inp_bx">
+												<input type="text" id="tel" class="inp" title="전화" placeholder="전화" value="(+82) 1544-6891" disabled>
+											</span>
+											<button type="button" class="btn">번호 변경</button>
+										</span>
+										<em class="error_txt">유효성 메시지 표시 영역</em>
+									</span>
+								</dd>
+								<dt class="form_title">홍보성 정보 수신</dt>
+								<dd class="form_input_area">
+									<span class="error_control_area">
+										<span class="inp_row">
+											<span class="inp_radio">
+												<input type="radio" id="check1" name="ad_data_check" class="inp_chk" checked>
+												<label for="check1" class="inp_label">
+													<span class="ico_checkbox"></span>
+													<span class="label_text">동의</span>
+												</label>
+											</span>
+											<span class="inp_radio">
+												<input type="radio" id="check2" name="ad_data_check" class="inp_chk">
+												<label for="check2" class="inp_label">
+													<span class="ico_checkbox"></span>
+													<span class="label_text">동의안함</span>
+												</label>
+											</span>
+										</span>
+										<em class="error_txt">유효성 메시지 표시 영역</em>
+									</span>
+								</dd>
+								</dl>
+							</div>
+							</fieldset>
+							</form>
+						</div>
+						<!-- [D]정보 변경 시 폼 구조 -->
+						<div class="form_wrap info_form_wrap" style="display:none">
+							<form>
+							<fieldset>
+							<legend>회원정보 관리</legend>
+							<div class="lst_form_wrap">
+								<dl class="lst_form">
+								<dt class="form_title"><label for="id2">아이디</label><em class="ico_required_fields">필수 입력</em></dt>
+								<dd class="form_input_area">
+									<span class="error_control_area">
+										<span class="inp_row">
+											<span class="inp_bx">
+												<input type="text" id="id2" class="inp" title="현재 이메일 주소" placeholder="현재 이메일 주소">
+											</span>
+										</span>
+										<em class="error_txt">유효성 메시지 표시 영역</em>
+									</span>
+									<span class="error_control_area">
+										<span class="inp_row">
+											<span class="inp_bx">
+												<input type="text" class="inp" title="변경할 이메일 주소" placeholder="변경할 이메일 주소">
+											</span>
+											<button type="button" class="btn" disabled>인증메일 발송</button><!-- [D] 비활성 상태인 버튼에는 disabled 속성 추가 -->
+										</span>
+										<em class="error_txt">유효성 메시지 표시 영역</em>
+									</span>
+									<span class="inp_row right_btn_wrap">
+										<button type="button" class="btn" disabled>저장</button>
+										<button type="button" class="btn btn_cancel">취소</button>
+									</span>
+								</dd>
+								<dt class="form_title"><label for="pass">비밀번호</label><em class="ico_required_fields">필수 입력</em></dt>
+								<dd class="form_input_area">
+									<span class="error_control_area">
+										<span class="inp_row">
+											<span class="desc_text">최종 변경일 : 2017년 7월 1일</span>
+										</span>
+									</span>
+									<span class="error_control_area">
+										<span class="inp_row">
+											<span class="inp_bx">
+												<input type="password" id="pass" class="inp" title="새 비밀번호" placeholder="새 비밀번호(영문, 숫자, 특수문자를 2개 이상 조합하여 8-15자)">
+											</span>
+										</span>
+										<em class="error_txt">유효성 메시지 표시 영역</em>
+										<span class="tooltip_custom" role="tooltip"><!-- [D] 툴팁 활성시 tooltip 에 is_show 클래스 추가 -->
+											<span class="tooltip_inner">Caps Lock이 켜져 있습니다.</span>
+										</span>
+									</span>
+									<span class="error_control_area">
+										<span class="inp_row">
+											<span class="inp_bx">
+												<input type="password" class="inp" title="새 비밀번호 확인" placeholder="새 비밀번호 확인">
+											</span>
+										</span>
+										<em class="error_txt">유효성 메시지 표시 영역</em>
+										<span class="tooltip_custom" role="tooltip">
+											<span class="tooltip_inner">Caps Lock이 켜져 있습니다.</span>
+										</span>
+									</span>
+									<span class="inp_row right_btn_wrap">
+										<button type="button" class="btn">저장</button>
+										<button type="button" class="btn btn_cancel">취소</button>
+									</span>
+								</dd>
+								</dl>
+							</div>
+							<div class="lst_form_wrap">
+								<dl class="lst_form">
+								<dt class="form_title"><label for="name2">이름</label><em class="ico_required_fields">필수 입력</em></dt>
+								<dd class="form_input_area">
+									<span class="error_control_area">
+										<span class="inp_row">
+											<span class="inp_bx">
+												<input type="text" id="name2" class="inp" title="이름" placeholder="이름" value="김담당" disabled>
+											</span>
+										</span>
+										<em class="error_txt">유효성 메시지 표시 영역</em>
+									</span>
+								</dd>
+								<dt class="form_title"><label for="phone2">휴대폰 번호</label><em class="ico_required_fields">필수 입력</em></dt>
+								<dd class="form_input_area">
+									<div class="error_control_area">
+										<div class="inp_row">
+											<span class="select_bx">
+												<span class="blind">국제전화 번호 선택</span>
+												<select class="inp_select" id="phone2">
+													<option value="국가 검색" selected disabled >국가 검색 (국가번호, 국가명)</option>
+													<option value="미국">United States(+1)</option>
+													<option value="캐나다">Canada(+1)</option>
+													<option value="대한민국">Korea, Republic of(+82)</option>
+													<option value="일본">Japan(+81)</option>
+													<option value="중국">China(+86)</option>
+												</select>
+											</span>
+										</div>
+										<div class="error_txt">유효성 메시지 표시 영역</div>
+									</div>
+									<span class="error_control_area">
+										<span class="inp_row">
+											<span class="inp_bx">
+												<input type="text" class="inp" title="휴대폰 번호" placeholder="-없이 입력">
+											</span>
+											<button type="button" class="btn" disabled>인증번호 요청</button>
+										</span>
+										<em class="error_txt">유효성 메시지 표시 영역</em>
+									</span>
+									<div class="error_control_area">
+										<div class="inp_row">
+											<span class="inp_bx inp_valid_time">
+												<input type="text" class="inp" title="인증번호" placeholder="인증번호 (유효시간 3분)">
+												<span class="valid_time">유효시간 <em class="time_text">02:50</em></span>
+											</span>
+											<button type="button" class="btn" disabled>확인</button>
+										</div>
+										<em class="error_txt">유효성 메시지 표시 영역</em>
+									</div>
+									<span class="inp_row right_btn_wrap">
+										<button type="button" class="btn">저장</button>
+										<button type="button" class="btn btn_cancel">취소</button>
+									</span>
+									<span class="inp_row is_empty"></span><!-- [D] 빈줄 삽입 -->
+								</dd>
+								<dt class="form_title"><label for="address2">주소</label></dt>
+								<dd class="form_input_area">
+									<span class="error_control_area">
+										<span class="inp_row">
+											<span class="inp_bx">
+												<input type="text" id="address2" class="inp" title="주소" placeholder="주소" value="경기도 성남시 분당구 대왕판교로 645번길 16 (삼평동)" disabled>
+											</span>
+											<button type="button" class="btn">주소 변경</button>
+										</span>
+										<span class="inp_row">
+											<span class="inp_bx">
+												<input type="text" class="inp" title="상세주소" placeholder="상세주소" value="NHN엔터테인먼트 플레이뮤지엄" disabled>
+											</span>
+										</span>
+										<em class="error_txt">유효성 메시지 표시 영역</em>
+									</span>
+								</dd>
+								<dt class="form_title"><label for="tel2">전화</label></dt>
+								<dd class="form_input_area">
+									<div class="error_control_area">
+										<div class="inp_row">
+											<span class="select_bx">
+												<span class="blind">국제전화 번호 선택</span>
+												<select class="inp_select" id="tel2">
+													<option value="국가 검색" selected disabled >국가 검색 (국가번호, 국가명)</option>
+													<option value="미국">United States(+1)</option>
+													<option value="캐나다">Canada(+1)</option>
+													<option value="대한민국">Korea, Republic of(+82)</option>
+													<option value="일본">Japan(+81)</option>
+													<option value="중국">China(+86)</option>
+												</select>
+											</span>
+										</div>
+										<em class="error_txt">유효성 메시지 표시 영역</em>
+									</div>
+									<span class="error_control_area">
+										<span class="inp_row">
+											<span class="inp_bx">
+												<input type="text" class="inp" title="유선전화 번호" placeholder="-없이 입력">
+											</span>
+										</span>
+										<em class="error_txt">유효성 메시지 표시 영역</em>
+									</span>
+									<span class="inp_row right_btn_wrap">
+										<button type="button" class="btn">저장</button>
+										<button type="button" class="btn btn_cancel">취소</button>
+									</span>
+								</dd>
+								<dt class="form_title">홍보성 정보 수신</dt>
+								<dd class="form_input_area">
+									<span class="error_control_area">
+										<span class="inp_row">
+											<span class="inp_radio">
+												<input type="radio" id="check2_1" name="ad_data_check2" class="inp_chk" checked>
+												<label for="check2_1" class="inp_label">
+													<span class="ico_checkbox"></span>
+													<span class="label_text">동의</span>
+												</label>
+											</span>
+											<span class="inp_radio">
+												<input type="radio" id="check2_2" name="ad_data_check2" class="inp_chk">
+												<label for="check2_2" class="inp_label">
+													<span class="ico_checkbox"></span>
+													<span class="label_text">동의안함</span>
+												</label>
+											</span>
+										</span>
+										<em class="error_txt">유효성 메시지 표시 영역</em>
+									</span>
+								</dd>
+								</dl>
+							</div>
+							</fieldset>
+							</form>
+						</div>
+						<div class="withdrawal_btn_area">
+							<p class="desc_text">TOAST를 더 이상 이용하지 않는다면?</p>
+							<button type="button" class="btn btn_secession">회원탈퇴</button>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<!-- //[D] CONTENTS -->
+	</div>
+	<!--[D] FOOTER -->
+	<?php include '../inc/footer.html';?>
+	<!--//[D] FOOTER -->
+</div>
+
+<!-- [D] LAYER -->
+<?php include '../inc/layer_loading.html';?>
+<!-- [D] LAYER -->
+
+<!--[D] 레이어팝업 -->
+<!-- [D] 인증메일 발송 팝업 -->
+<div class="modal pop_custom pop_member" id="modal_email">
+	<div class="modal-dialog  modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">회원정보</h4>
+				<button type="button" class="btn_close" data-dismiss="modal">닫기</button>
+			</div>
+			<div class="modal-body">
+				<p class="ly_txt">인증메일이 발송되었습니다.<br>이메일 인증 후 저장버튼을 클릭해주세요.</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn" data-dismiss="modal">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- [D] 비밀번호 발송 팝업 -->
+<div class="modal pop_custom pop_member" id="modal_password">
+	<div class="modal-dialog  modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">회원정보</h4>
+				<button type="button" class="btn_close" data-dismiss="modal">닫기</button>
+			</div>
+			<div class="modal-body">
+				<p class="ly_txt">비밀번호가 변경되었습니다.</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn" data-dismiss="modal">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- [D] 아이디 변경 팝업 -->
+<div class="modal pop_custom pop_member" id="modal_id">
+	<div class="modal-dialog  modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">회원정보</h4>
+				<button type="button" class="btn_close" data-dismiss="modal">닫기</button>
+			</div>
+			<div class="modal-body">
+				<p class="ly_txt">아이디가 변경되었습니다.</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn" data-dismiss="modal">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- [D] 휴대폰 번호 변경 팝업 -->
+<div class="modal pop_custom pop_member" id="modal_tel">
+	<div class="modal-dialog  modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">회원정보</h4>
+				<button type="button" class="btn_close" data-dismiss="modal">닫기</button>
+			</div>
+			<div class="modal-body">
+				<p class="ly_txt">휴대폰 번호가 변경되었습니다.</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn" data-dismiss="modal">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- [D] 인증번호 발송 팝업 -->
+<div class="modal pop_custom pop_member" id="modal_num">
+	<div class="modal-dialog  modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">회원정보</h4>
+				<button type="button" class="btn_close" data-dismiss="modal">닫기</button>
+			</div>
+			<div class="modal-body">
+				<p class="ly_txt">인증번호가 발송되었습니다.</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn" data-dismiss="modal">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- [D] 유선전화 발송 팝업 -->
+<div class="modal pop_custom pop_member" id="modal_tel2">
+	<div class="modal-dialog  modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">회원정보</h4>
+				<button type="button" class="btn_close" data-dismiss="modal">닫기</button>
+			</div>
+			<div class="modal-body">
+				<p class="ly_txt">유선전화가 변경되었습니다.</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn" data-dismiss="modal">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--[D] //레이어팝업 -->
+
+<!-- Javascript Area -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+<!-- 마크업 확인용입니다. -->
+<style>
+.case_view{display:inline-block;position:fixed;bottom:0;left:0;z-index:1000;width:auto;padding:5px;background:#000;opacity:0.7}
+.case_view .btn{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+</style>
+<div class="case_view">
+	<a href="#" class="btn" onclick="$('.info_form_wrap:eq(1)').hide();$('.info_form_wrap:eq(0)').show();return false;">회원 정보 확인 화면</a>
+	<a href="#" class="btn" onclick="$('.info_form_wrap:eq(0)').hide();$('.info_form_wrap:eq(1)').show();return false;">회원 정보 수정 화면</a>
+	<a href="#" class="btn" onclick="$('.error_control_area').toggleClass('is_error');return false;">입력 오류 화면</a>
+	<a href="#" class="btn" onclick="$('.tooltip_custom').toggleClass('is_show');return false;">툴팁 메세지</a>
+	<a href="#" class="btn" data-toggle="modal" data-target="#modal_email">인증번호 메일 발송</a>
+	<a href="#" class="btn" data-toggle="modal" data-target="#modal_password">비밀번호 변경</a>
+	<a href="#" class="btn" data-toggle="modal" data-target="#modal_id">아이디 변경</a>
+	<a href="#" class="btn" data-toggle="modal" data-target="#modal_tel">휴대폰 번호 변경</a>
+	<a href="#" class="btn" data-toggle="modal" data-target="#modal_num">인증번호 발송</a>
+	<a href="#" class="btn" data-toggle="modal" data-target="#modal_tel2">유선전화 변경</a>
+</div>
+<script src="js/case_view.js"></script>
+<!-- //마크업 확인용입니다. -->
+</body>
+</html>

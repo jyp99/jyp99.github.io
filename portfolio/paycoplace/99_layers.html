@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<title>UIO :: PAYCOPlace</title>
+<link rel="stylesheet" type="text/css" href="js/bower_components/tui-time-picker/dist/tui-time-picker.css">
+<link rel="stylesheet" type="text/css" href="js/bower_components/tui-date-picker/dist/tui-date-picker.css">
+<link rel="stylesheet" type="text/css" href="css/solution.css">
+<style type="text/css">
+body{background:#fff}
+.wrap{min-width:0;height:auto;min-height:100%;padding:15px;box-sizing:border-box}
+.content{height:auto;min-height:100%;padding:15px;border:1px solid #eee;background:#fff}
+h1{display:inline-block;margin-bottom:30px;padding:5px 10px;background:#ff0031;font-size:20px;color:#fff}
+.h2{margin-bottom:15px;padding:10px 0;border-bottom:1px solid #eee;font-size:16px}
+h3{margin-bottom:10px;font-size:12px;font-weight:normal;color:#777}
+/*h3:before{font-size:20px;padding-right:2px;vertical-align:middle;content:'·'}*/
+h4{margin-bottom:10px;padding-left:10px;color:#666}
+h4:before{padding-right:5px;content:'-'}
+.desc{margin-bottom:10px;padding:10px;font-size:13px;letter-spacing:-0.03em;background:#f1f1f1;line-height:21px}
+.ui_area{padding:20px 0;}
+hr{margin:20px 0;border:0;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+	<!-- [D] CONTENTS -->
+	<main class="">
+		<h1>PAYCOPlace - Shop web : Layer</h1>
+		<h2 class="h2">공통</h2>
+		<p class="desc">-</p>
+
+		<style type="text/css">
+			
+		</style>
+		<div class="layer_wrap">
+			
+			<!-- 예약중_승인요청 -->
+			<div class="layer">				
+				<div class="layer_cont">
+					<div class="layer_h_cont">
+						<h2 class="layer_h_tit">예약상세</h2>
+						<p class="layer_h_sub tag_color">예약대기</p>
+					</div>
+					<div class="tbl_top_info">
+						<ul class="add_info_lst">
+						<li class="add_info">예약번호 12345</li>
+						<li class="add_info">2017.09.09</li>
+						</ul>
+					</div>
+					<div class="tbl_wrap">
+						<table class="tbl tbl_row tbl_type">
+						<caption><span class="blind">예약내역</span></caption>
+						<colgroup>
+							<col style="width:150px">					
+							<col style="">					
+						</colgroup>				
+						<tbody>
+						<tr>
+							<th scope="row">시술일</th>
+							<td>2017.05.05(금) 15:00</td>
+						</tr>
+						<tr>
+							<th scope="row">메뉴</th>
+							<td><span class="color2">펌</span></td>
+						</tr>
+						<tr>
+							<th scope="row">기장</th>
+							<td>
+								<button type="button" class="btn btn_type1">short</button>
+								<button type="button" class="btn">medium</button>
+								<button type="button" class="btn">long</button>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">메뉴</th>
+							<td><span class="txt_selector">미지정<a href="#" class="btn">담당자 선택</a></span></td>
+						</tr>
+						</tbody>
+						</table>
+					</div>
+
+					<div class="tbl_info_wrap">
+						<table class="tbl_info">
+						<caption><span class="blind">결제정보</span></caption>
+						<colgroup>
+							<col style="width:92px">					
+							<col style="">					
+						</colgroup>				
+						<tbody>
+						<tr>
+							<th scope="row">예약자명</th>
+							<td><a href="#" class="tbl_link">김정은(회원)</a></td>
+						</tr>
+						<tr>
+							<th scope="row">시술일</th>
+							<td>2017.05.05(금) 15:00</td>
+						</tr>
+						<tr>
+							<th scope="row" class="vt">메뉴</th>
+							<td>머리카락이 많이 상했어요. <br> 신경많이 써주세요. </td>
+						</tr>
+						</tbody>
+						</table>			
+					</div>
+				</div>
+				<div class="layer_btn_area">
+					<button type="button" class="btn btn_lg btn_type1">예약취소</button>
+					<button type="button" class="btn btn_lg btn_type1">예약변경</button>
+					<button type="button" class="btn btn_lg btn_type2">승인</button>
+				</div>
+				<button type="button" class="btn_close"><span class="ico ico_close">레이어 닫기</span></button>
+			</div>
+			
+			<hr>	
+
+			<!-- 예약중_예약변경 -->
+			<div class="layer">				
+				<div class="layer_cont">
+					<div class="layer_h_cont">
+						<h2 class="layer_h_tit">예약상세</h2>
+						<p class="layer_h_sub tag_color2">예약중_예약변경</p>
+					</div>
+					<div class="tbl_top_info">
+						<ul class="add_info_lst">
+						<li class="add_info">예약번호 12345</li>
+						<li class="add_info">2017.09.09</li>
+						</ul>
+					</div>
+					<div class="tbl_wrap">
+						<table class="tbl tbl_row tbl_type">
+						<caption><span class="blind">예약내역</span></caption>
+						<colgroup>
+							<col style="width:150px">					
+							<col style="">					
+						</colgroup>				
+						<tbody>
+						<tr>
+							<th scope="row">시술일</th>
+							<td>
+								<div class="tui-datepicker-area">
+									<div class="tui-datepicker-input tui-datetime-input inp_datepicker">
+										<input id="reserve-date-picker-input" type="text" aria-label="시술일">
+										<span class="tui-ico-date"></span>
+										<div id="reserve-date-picker-container" style="margin-left: -1px;"></div>
+									</div>
+								</div>
+								<div id="reserve-timepicker-selectbox-step" class="time_picker"></div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">메뉴</th>
+							<td>
+								<button type="button" class="btn btn_type1">컷</button>
+								<button type="button" class="btn">펌</button>
+								<button type="button" class="btn">염색</button>
+								<button type="button" class="btn">클리닉</button>
+								<button type="button" class="btn">드라이</button>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">기장</th>
+							<td>
+								<button type="button" class="btn btn_type1">short</button>
+								<button type="button" class="btn">medium</button>
+								<button type="button" class="btn">long</button>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">메뉴</th>
+							<td><span class="txt_selector">미지정<a href="#" class="btn">담당자 선택</a></span></td>
+						</tr>
+						</tbody>
+						</table>
+					</div>
+
+					<div class="tbl_info_wrap">
+						<table class="tbl_info">
+						<caption><span class="blind">예약내역</span></caption>
+						<colgroup>
+							<col style="width:92px">					
+							<col style="">					
+						</colgroup>				
+						<tbody>
+						<tr>
+							<th scope="row">예약자명</th>
+							<td><a href="#" class="tbl_link">김정은(비회원)</a></td>
+						</tr>
+						<tr>
+							<th scope="row">시술일</th>
+							<td>2017.05.05(금) 15:00</td>
+						</tr>
+						<tr>
+							<th scope="row" class="vt">메뉴</th>
+							<td>머리카락이 많이 상했어요. <br> 신경많이 써주세요. </td>
+						</tr>
+						</tbody>
+						</table>			
+					</div>
+					<p class="txt_icon color_point"><em class="ico ico_caution"></em> 예약자에게 변경적용 내용이 안내됩니다.</p>
+				</div>
+				<div class="layer_btn_area">
+					<button type="button" class="btn btn_lg btn_type1">변경취소</button>
+					<button type="button" class="btn btn_lg btn_type2">변경적용</button>
+				</div>
+				<button type="button" class="btn_close"><span class="ico ico_close">레이어 닫기</span></button>
+			</div>
+
+			<hr>
+			<!-- 방문예정 -->
+			<div class="layer">				
+				<div class="layer_cont">
+					<div class="layer_h_cont">
+						<h2 class="layer_h_tit">예약상세</h2>
+					</div>
+					<div class="tbl_top_info">
+						<ul class="add_info_lst">
+						<li class="add_info">예약번호 12345</li>
+						<li class="add_info">2017.09.09</li>
+						</ul>
+					</div>
+					<div class="tbl_wrap">
+						<table class="tbl tbl_row tbl_type">
+						<caption><span class="blind">예약내역</span></caption>
+						<colgroup>
+							<col style="width:150px">					
+							<col style="">					
+						</colgroup>				
+						<tbody>
+						<tr>
+							<th scope="row">시술일</th>
+							<td>2017.05.05(금) 15:00</td>
+						</tr>
+						<tr>
+							<th scope="row">메뉴</th>
+							<td><span class="color2">펌</span></td>
+						</tr>
+						<tr>
+							<th scope="row">기장</th>
+							<td>
+								<button type="button" class="btn btn_type1">short</button>
+								<button type="button" class="btn">medium</button>
+								<button type="button" class="btn">long</button>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">메뉴</th>
+							<td><span class="txt_selector">미지정<a href="#" class="btn">담당자 선택</a></span></td>
+						</tr>
+						</tbody>
+						</table>
+					</div>
+
+					<div class="tbl_info_wrap">
+						<table class="tbl_info">
+						<caption><span class="blind">예약내역</span></caption>
+						<colgroup>
+							<col style="width:92px">					
+							<col style="">					
+						</colgroup>				
+						<tbody>
+						<tr>
+							<th scope="row">예약자명</th>
+							<td><a href="#" class="tbl_link">김정은(회원)</a></td>
+						</tr>
+						<tr>
+							<th scope="row">시술일</th>
+							<td>2017.05.05(금) 15:00</td>
+						</tr>
+						<tr>
+							<th scope="row" class="vt">메뉴</th>
+							<td>머리카락이 많이 상했어요. <br> 신경많이 써주세요. </td>
+						</tr>
+						</tbody>
+						</table>			
+					</div>
+				</div>
+				<div class="layer_btn_area">
+					<button type="button" class="btn btn_lg btn_type1">예약취소</button>
+					<button type="button" class="btn btn_lg btn_type1">예약변경</button>
+					<button type="button" class="btn btn_lg btn_type1">확인</button>
+				</div>
+				<button type="button" class="btn_close"><span class="ico ico_close">레이어 닫기</span></button>
+			</div>
+
+			<hr>
+			<!-- 시술중 -->
+			<div class="layer">				
+				<div class="layer_cont">
+					<div class="layer_h_cont">
+						<h2 class="layer_h_tit">예약상세</h2>
+						<p class="layer_h_sub tag_color2">서비스 중</p>
+					</div>
+					<div class="tbl_top_info">
+						<ul class="add_info_lst">
+						<li class="add_info">예약번호 12345</li>
+						<li class="add_info">2017.09.09</li>
+						</ul>
+					</div>
+					<div class="tbl_wrap">
+						<table class="tbl tbl_row tbl_type">
+						<caption><span class="blind">예약내역</span></caption>
+						<colgroup>
+							<col style="width:150px">					
+							<col style="">					
+						</colgroup>				
+						<tbody>
+						<tr>
+							<th scope="row">시술일</th>
+							<td>2017.05.05(금) 15:00</td>
+						</tr>
+						<tr>
+							<th scope="row">메뉴</th>
+							<td><span class="color2">펌</span></td>
+						</tr>
+						<tr>
+							<th scope="row">기장</th>
+							<td>
+								<button type="button" class="btn btn_type1">short</button>
+								<button type="button" class="btn">medium</button>
+								<button type="button" class="btn">long</button>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">메뉴</th>
+							<td><span class="txt_selector">미지정<a href="#" class="btn">담당자 선택</a></span></td>
+						</tr>
+						</tbody>
+						</table>
+					</div>
+
+					<div class="tbl_info_wrap">
+						<table class="tbl_info">
+						<caption><span class="blind">예약내역</span></caption>
+						<colgroup>
+							<col style="width:92px">					
+							<col style="">					
+						</colgroup>				
+						<tbody>
+						<tr>
+							<th scope="row">예약자명</th>
+							<td><a href="#" class="tbl_link">김정은(회원)</a></td>
+						</tr>
+						<tr>
+							<th scope="row">시술일</th>
+							<td>2017.05.05(금) 15:00</td>
+						</tr>
+						<tr>
+							<th scope="row" class="vt">메뉴</th>
+							<td>머리카락이 많이 상했어요. <br> 신경많이 써주세요. </td>
+						</tr>
+						</tbody>
+						</table>			
+					</div>
+				</div>
+				<div class="layer_btn_area">
+					<button type="button" class="btn btn_lg btn_type1">예약취소</button>
+					<button type="button" class="btn btn_lg btn_type1">예약변경</button>
+					<button type="button" class="btn btn_lg btn_type1">No Show</button>
+					<button type="button" class="btn btn_lg btn_type2">결제(매출등록)</button>
+				</div>
+				<button type="button" class="btn_close"><span class="ico ico_close">레이어 닫기</span></button>
+			</div>
+				
+			<hr>
+			<!-- 예약취소 사유입력 -->
+			<div class="layer">
+				<div class="layer_cont">
+					<div class="layer_h_cont">
+						<h2 class="layer_h_tit">예약취소</h2>
+						<p class="layer_h_txt">예약 취소 시, 취소된 내용이 고객님께 전달됩니다.</p>
+					</div>
+					<h3 class="reserve_noti_txt">예약일시 :  2017.04.19 11:00</h3>
+					<div class="inp_bx">	
+						<textarea class="inp_textarea" cols="30" rows="2" placeholder="취소 사유를 입력해주세요.&#10; 예) 매장사정으로 인하여, 해당 시간에는 예약을 받을 수 없습니다." aria-label="취소 사유를 입력해주세요."></textarea>
+					</div>
+				</div>
+				<div class="layer_btn_area">
+					<button type="button" class="btn btn_lg btn_type1">닫기</button>
+					<button type="button" class="btn btn_lg btn_type1">예약취소</button>					
+				</div>
+				<button type="button" class="btn_close"><span class="ico ico_close">레이어 닫기</span></button>
+			</div>
+				
+			<hr>
+			<!-- 예약변경 알림 -->
+			<div class="layer">
+				<div class="layer_cont">
+					<div class="layer_h_cont">
+						<h2 class="layer_h_tit">예약변경</h2>
+						<p class="layer_h_txt color_point">고객님께 먼저 변경 내용을 알려주세요!</p>
+					</div>					
+					<p class="reserve_noti_txt is_multiline">
+						시간 변경이 필요하다면 예약시간 변경 이전에, <br>
+						<em class="color_point">고객님께 변경 안내 후 예약 시간을 변경해주세요.</em><br>
+						미리 안내하신 시간으로 변경 하시겠습니까?
+					</p>					
+				</div>
+				<div class="layer_btn_area">
+					<button type="button" class="btn btn_lg btn_type1">닫기</button>
+					<button type="button" class="btn btn_lg btn_type1">예약변경</button>
+				</div>
+				<button type="button" class="btn_close"><span class="ico ico_close">레이어 닫기</span></button>
+			</div>
+
+			<hr>
+			<!-- 예약변경 -->
+			<div class="layer">				
+				<div class="layer_cont">
+					<div class="layer_h_cont">
+						<h2 class="layer_h_tit">예약상세</h2>
+						<p class="layer_h_sub tag_color2">서비스 중</p>
+					</div>
+					<div class="tbl_top_info">
+						<ul class="add_info_lst">
+						<li class="add_info">예약번호 12345</li>
+						<li class="add_info">2017.09.09</li>
+						</ul>
+					</div>
+					<div class="cols">
+						<div class="col_1_2">
+							<h3 class="form_tit">변경전</h3>
+							<div class="tbl_wrap">
+								<table class="tbl tbl_row">
+								<caption><span class="blind">변경전 예약내역</span></caption>
+								<colgroup>
+									<col style="width:150px">					
+									<col style="">					
+								</colgroup>				
+								<tbody>
+								<tr>
+									<th scope="row">시술일</th>
+									<td>2017.04.19 11:00</td>
+								</tr>
+								<tr>
+									<th scope="row">디자이너</th>
+									<td>수정 디자이너</td>
+								</tr>
+								<tr>
+									<th scope="row">메뉴</th>
+									<td><span class="color2">펌</span></td>
+								</tr>
+								</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="col_1_2">
+							<h3 class="form_tit">변경후</h3>
+							<div class="tbl_wrap">
+								<table class="tbl tbl_row tbl_after">
+								<caption><span class="blind">변경후 예약내역</span></caption>
+								<colgroup>
+									<col style="width:150px">					
+									<col style="">					
+								</colgroup>				
+								<tbody>
+								<tr>
+									<th scope="row">시술일</th>
+									<td>2017.04.19 11:00</td>
+								</tr>
+								<tr>
+									<th scope="row">디자이너</th>
+									<td>제니 디자이너</td>
+								</tr>
+								<tr>
+									<th scope="row">메뉴</th>
+									<td><span class="color2">펌</span></td>
+								</tr>
+								</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="inp_bx">	
+						<textarea class="inp_textarea" cols="30" rows="2" placeholder="변경 사유를 입력해주세요." aria-label="변경 사유를 입력해주세요."></textarea>
+					</div>
+				</div>
+				<div class="layer_btn_area">
+					<button type="button" class="btn btn_lg btn_type1">닫기</button>
+					<button type="button" class="btn btn_lg btn_type1">예약변경</button>				</div>
+				<button type="button" class="btn_close"><span class="ico ico_close">레이어 닫기</span></button>
+			</div>
+
+			<hr>
+			<!-- 네이버예약_예약 대기 -->
+			<div class="layer">
+				<div class="layer_cont">
+					<div class="layer_h_cont">
+						<h2 class="layer_h_tit">예약 상세</h2>
+						<p class="layer_h_sub tag_color">예약 대기</p>
+					</div>
+					<div class="tbl_top_info">
+						<ul class="add_info_lst">
+						<li class="add_info">예약번호 12345</li>
+						</ul>
+					</div>
+					<div class="tbl_wrap">
+						<table class="tbl tbl_row tbl_type">
+						<caption><span class="blind">예약 상세</span></caption>
+						<colgroup>
+						<col style="width:150px">
+						<col>
+						</colgroup>
+						<tbody>
+						<tr>
+						<th scope="row">예약 유형</th>
+						<td>네이버 예약 파트너센터(방문예약)</td>
+						</tr>
+						<tr>
+						<th scope="row">방문일</th>
+						<td>2018. 02. 01. (목) 오후 05:30</td>
+						</tr>
+						<tr>
+						<th scope="row">서비스</th>
+						<td>스타일리스트 컷</td>
+						</tr>
+						<tr>
+						<th scope="row">결제상태</th>
+						<td>미결제</td>
+						</tr>
+						<tr>
+						<th scope="row">담당자</th>
+						<td>하주상실장 디자이너</td>
+						</tr>
+						</tbody>
+						</table>
+					</div>
+
+					<div class="tbl_info_wrap">
+						<table class="tbl_info">
+						<caption><span class="blind">예약 정보</span></caption>
+						<colgroup>
+						<col style="width:92px">
+						<col>
+						</colgroup>
+						<tbody>
+						<tr>
+						<th scope="row">예약자명</th>
+						<td><a href="#" class="tbl_link">이완재(회원)</a></td>
+						</tr>
+						<tr>
+						<th scope="row">시술일</th>
+						<td>2017.05.05(금) 15:00</td>
+						</tr>
+						<tr>
+						<th scope="row" class="vt">메뉴</th>
+						<td>머리카락이 많이 상했어요. <br> 신경많이 써주세요. </td>
+						</tr>
+						</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="layer_btn_area">
+					<button type="button" class="btn btn_lg btn_type1">닫기</button>
+					<button type="button" class="btn btn_lg btn_type3">예약 확정 하기</button>
+				</div>
+				<button type="button" class="btn_close"><span class="ico ico_close">레이어 닫기</span></button>
+			</div>
+
+			<hr>
+
+				<!-- 네이버예약_예약 확정 -->
+				<div class="layer">
+					<div class="layer_cont">
+						<div class="layer_h_cont">
+							<h2 class="layer_h_tit">예약 상세</h2>
+							<p class="layer_h_sub tag_color">예약 대기</p>
+						</div>
+						<div class="tbl_top_info">
+							<ul class="add_info_lst">
+							<li class="add_info">예약번호 12345</li>
+							</ul>
+						</div>
+						<div class="tbl_wrap">
+							<table class="tbl tbl_row tbl_type">
+							<caption><span class="blind">예약 상세</span></caption>
+							<colgroup>
+							<col style="width:150px">
+							<col>
+							</colgroup>
+							<tbody>
+							<tr>
+							<th scope="row">예약 유형</th>
+							<td>네이버 예약 파트너센터(일반) <em class="event_payment ico_payment_naver">네이버 예약 파트너센터</em></td>
+							</tr>
+							<tr>
+							<th scope="row">방문일</th>
+							<td>2018. 02. 01. (목) 오후 05:30</td>
+							</tr>
+							<tr>
+							<th scope="row">서비스</th>
+							<td>스타일리스트 컷</td>
+							</tr>
+							<tr>
+							<th scope="row">결제상태</th>
+							<td>미결제</td>
+							</tr>
+							<tr>
+							<th scope="row">담당자</th>
+							<td>하주상실장 디자이너</td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+
+						<div class="tbl_info_wrap">
+						<table class="tbl_info">
+						<caption><span class="blind">예약 정보</span></caption>
+						<colgroup>
+						<col style="width:92px">
+						<col>
+						</colgroup>
+						<tbody>
+						<tr>
+						<th scope="row">예약자명</th>
+						<td><a href="#" class="tbl_link">이완재(회원)</a></td>
+						</tr>
+						<tr>
+						<th scope="row">시술일</th>
+						<td>2017.05.05(금) 15:00</td>
+						</tr>
+						<tr>
+						<th scope="row" class="vt">메뉴</th>
+						<td>머리카락이 많이 상했어요. <br> 신경많이 써주세요. </td>
+						</tr>
+						</tbody>
+						</table>
+						</div>
+					</div>
+					<div class="layer_btn_area">
+						<button type="button" class="btn btn_lg btn_type1">닫기</button>
+						<button type="button" class="btn btn_lg btn_type3">네이버 예약에서 확인하기</button>
+					</div>
+					<button type="button" class="btn_close"><span class="ico ico_close">레이어 닫기</span></button>
+				</div>
+				
+				<hr>
+				<!-- 플레이스예약_예약 대기 -->
+				<div class="layer">
+					<div class="layer_cont">
+						<div class="layer_h_cont">
+							<h2 class="layer_h_tit">예약 상세</h2>
+							<p class="layer_h_sub tag_color">예약 대기</p>
+						</div>
+						<div class="tbl_top_info">
+							<ul class="add_info_lst">
+							<li class="add_info">예약번호 12345</li>
+							</ul>
+						</div>
+						<div class="tbl_wrap">
+							<table class="tbl tbl_row tbl_type">
+							<caption><span class="blind">예약 상세</span></caption>
+							<colgroup>
+							<col style="width:150px">
+							<col>
+							</colgroup>
+							<tbody>
+							<tr>
+							<th scope="row">예약 유형</th>
+							<td>페이코 플레이스(온라인 예약)</td>
+							</tr>
+							<tr>
+							<th scope="row">방문일</th>
+							<td>2018. 02. 01. (목) 오후 05:30</td>
+							</tr>
+							<tr>
+							<th scope="row">서비스</th>
+							<td>스타일리스트 컷</td>
+							</tr>
+							<tr>
+							<th scope="row">기장</th>
+							<td>
+							<button type="button" class="btn btn_type1">short</button>
+							<button type="button" class="btn">medium</button>
+							<button type="button" class="btn">long</button>
+							</td>
+							</tr>
+							<tr>
+							<th scope="row">담당자</th>
+							<td><span class="txt_selector">담당자 미지정<a href="#" class="btn">담당자 선택</a></span></td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+
+						<div class="tbl_info_wrap">
+							<table class="tbl_info">
+							<caption><span class="blind">예약 정보</span></caption>
+							<colgroup>
+							<col style="width:92px">
+							<col>
+							</colgroup>
+							<tbody>
+							<tr>
+							<th scope="row">예약자명</th>
+							<td><a href="#" class="tbl_link">이완재(회원)</a></td>
+							</tr>
+							<tr>
+							<th scope="row">시술일</th>
+							<td>2017.05.05(금) 15:00</td>
+							</tr>
+							<tr>
+							<th scope="row" class="vt">메뉴</th>
+							<td>머리카락이 많이 상했어요. <br> 신경많이 써주세요. </td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="layer_btn_area">
+						<button type="button" class="btn btn_lg btn_type1">예약 취소</button>
+						<button type="button" class="btn btn_lg btn_type1">예약 변경</button>
+						<button type="button" class="btn btn_lg btn_type2">승인</button>
+					</div>
+					<button type="button" class="btn_close"><span class="ico ico_close">레이어 닫기</span></button>
+				</div>
+				
+				<hr>
+				<!-- 플레이스예약_예약 확정 -->
+				<div class="layer">
+					<div class="layer_cont">
+						<div class="layer_h_cont">
+							<h2 class="layer_h_tit">예약 상세</h2>
+							<p class="layer_h_sub tag_color2">예약 확정</p>
+						</div>
+						<div class="tbl_top_info">
+							<ul class="add_info_lst">
+							<li class="add_info">예약번호 12345</li>
+							</ul>
+						</div>
+						<div class="tbl_wrap">
+							<table class="tbl tbl_row tbl_type">
+							<caption><span class="blind">예약 상세</span></caption>
+							<colgroup>
+							<col style="width:150px">
+							<col>
+							</colgroup>
+							<tbody>
+							<tr>
+							<th scope="row">예약 유형</th>
+							<td>페이코 플레이스(온라인 예약)</td>
+							</tr>
+							<tr>
+							<th scope="row">방문일</th>
+							<td>2018. 02. 01. (목) 오후 05:30</td>
+							</tr>
+							<tr>
+							<th scope="row">서비스</th>
+							<td>스타일리스트 컷</td>
+							</tr>
+							<tr>
+							<th scope="row">기장</th>
+							<td>
+							<button type="button" class="btn btn_type1">short</button>
+							<button type="button" class="btn">medium</button>
+							<button type="button" class="btn">long</button>
+							</td>
+							</tr>
+							<tr>
+							<th scope="row">담당자</th>
+							<td>하주상 실장</td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+
+						<div class="tbl_info_wrap">
+						<table class="tbl_info">
+						<caption><span class="blind">예약 정보</span></caption>
+						<colgroup>
+						<col style="width:92px">
+						<col>
+						</colgroup>
+						<tbody>
+						<tr>
+						<th scope="row">예약자명</th>
+						<td><a href="#" class="tbl_link">이완재(회원)</a></td>
+						</tr>
+						<tr>
+						<th scope="row">시술일</th>
+						<td>2017.05.05(금) 15:00</td>
+						</tr>
+						<tr>
+						<th scope="row" class="vt">메뉴</th>
+						<td>머리카락이 많이 상했어요. <br> 신경많이 써주세요. </td>
+						</tr>
+						</tbody>
+						</table>
+						</div>
+					</div>
+					<div class="layer_btn_area">
+						<button type="button" class="btn btn_lg btn_type1">예약 취소</button>
+						<button type="button" class="btn btn_lg btn_type1">예약 변경</button>
+						<button type="button" class="btn btn_lg btn_type2">결제(매출등록)</button>
+					</div>
+					<button type="button" class="btn_close"><span class="ico ico_close">레이어 닫기</span></button>
+				</div>
+				
+				<hr>
+				<!-- 플레이스예약_서비스 중 -->
+					<div class="layer">
+						<div class="layer_cont">
+							<div class="layer_h_cont">
+								<h2 class="layer_h_tit">예약 상세</h2>
+								<p class="layer_h_sub tag_color2">서비스 중</p>
+							</div>
+							<div class="tbl_top_info">
+								<ul class="add_info_lst">
+								<li class="add_info">예약번호 12345</li>
+								</ul>
+							</div>
+							<div class="tbl_wrap">
+								<table class="tbl tbl_row tbl_type">
+								<caption><span class="blind">예약 상세</span></caption>
+								<colgroup>
+								<col style="width:150px">
+								<col>
+								</colgroup>
+								<tbody>
+								<tr>
+								<th scope="row">예약 유형</th>
+								<td>페이코 플레이스(온라인 예약)</td>
+								</tr>
+								<tr>
+								<th scope="row">방문일</th>
+								<td>2018. 02. 01. (목) 오후 05:30</td>
+								</tr>
+								<tr>
+								<th scope="row">서비스</th>
+								<td>스타일리스트 컷</td>
+								</tr>
+								<tr>
+								<th scope="row">기장</th>
+								<td>
+								<button type="button" class="btn btn_type1">short</button>
+								<button type="button" class="btn">medium</button>
+								<button type="button" class="btn">long</button>
+								</td>
+								</tr>
+								<tr>
+								<th scope="row">담당자</th>
+								<td>하주상 실장</td>
+								</tr>
+								</tbody>
+								</table>
+							</div>
+
+							<div class="tbl_info_wrap">
+								<table class="tbl_info">
+								<caption><span class="blind">예약 정보</span></caption>
+								<colgroup>
+								<col style="width:92px">
+								<col>
+								</colgroup>
+								<tbody>
+								<tr>
+								<th scope="row">예약자명</th>
+								<td><a href="#" class="tbl_link">이완재(회원)</a></td>
+								</tr>
+								<tr>
+								<th scope="row">시술일</th>
+								<td>2017.05.05(금) 15:00</td>
+								</tr>
+								<tr>
+								<th scope="row" class="vt">메뉴</th>
+								<td>머리카락이 많이 상했어요. <br> 신경많이 써주세요. </td>
+								</tr>
+								</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="layer_btn_area">
+							<button type="button" class="btn btn_lg btn_type1">예약 취소</button>
+							<button type="button" class="btn btn_lg btn_type1">예약 변경</button>
+							<button type="button" class="btn btn_lg btn_type1">No Show</button>
+							<button type="button" class="btn btn_lg btn_type2">결제(매출등록)</button>
+						</div>
+						<button type="button" class="btn_close"><span class="ico ico_close">레이어 닫기</span></button>
+					</div>			
+		</div>
+
+		
+
+	</main>
+	<!-- //[D] CONTENTS -->
+</div>
+
+<!-- [D] 마크업용 임시 코드 -->
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/bower_components/tui-code-snippet/dist/tui-code-snippet.js"></script>
+<script src="js/bower_components/tui-time-picker/dist/tui-time-picker.min.js"></script>
+<script src="js/bower_components/tui-date-picker/dist/tui-date-picker.min.js"></script>
+<script >
+	$(function(){
+		$('.select').click(function(e){
+			e.preventDefault();
+			 if($(this).hasClass('is_open')){
+				 $(this).removeClass('is_open');
+			 }else{
+				 $('.select').removeClass('is_open');
+				 $(this).addClass('is_open');
+			 }
+		 });
+
+			
+	    var today = new Date();
+	    var targetDate = new Date('2017-12-06');
+	    new tui.DatePicker('#reserve-date-picker-container', {
+	        date: targetDate,
+	        language: 'ko',
+	        selectableRanges: [
+	            [new Date('2017-01-03'), new Date(today.getFullYear(), today.getMonth() + 6, today.getDate())]
+	        ],
+	        input: {
+	            element: '#reserve-date-picker-input',
+	            format: 'yyyy-MM-dd'
+	        }
+	    }).addOpener('.inp_datepicker');
+
+	    var tpSelectboxWithStep = new tui.TimePicker('#reserve-timepicker-selectbox-step', {
+	        inputType: 'selectbox',
+	        hourStep: 1,
+	        minuteStep: 30,
+	        showMeridiem: true
+	    });
+
+
+	});
+</script>
+<!-- // 마크업용 임시 코드 -->
+</body>
+</html>

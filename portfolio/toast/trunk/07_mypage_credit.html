@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="all">
+<title>토스트(TOAST) 마이페이지</title>
+
+<meta name="description" content="NHN 엔터테인먼트에서 제공하는 토스트 클라우드 서비스. 오픈스택 기반의 클라우드 인프라, 게임솔루션, 보안, 문자/이메일/알림톡, 협업도구 Dooray, ERP 제공">
+<meta name="keywords" content="토스트, 토스트 클라우드, 클라우드 서비스, 토스트 닷컴, 클라우드, NHN엔터테인먼트, NHN엔터, NHN Entertainment, NHN Ent, TOAST, TOAST Cloud, TOAST CAM, TOAST PC, TOAST Analytics, toast, 토스트캠, 토스트피씨,토스트애널리틱스">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="토스트(TOAST) 마이페이지">
+<meta property="og:description" content="NHN 엔터테인먼트에서 제공하는 토스트 클라우드 서비스. 오픈스택 기반의 클라우드 인프라, 게임솔루션, 보안, 문자/이메일/알림톡, 협업도구 Dooray, ERP 제공">
+<meta property="og:keywords" content="토스트, 토스트 클라우드, 클라우드 서비스, 토스트 닷컴, 클라우드, NHN엔터테인먼트, NHN엔터, NHN Entertainment, NHN Ent, TOAST, TOAST Cloud, TOAST CAM, TOAST PC, TOAST Analytics, toast, 토스트캠, 토스트피씨,토스트애널리틱스">
+<meta property="og:image" content="http://images.toast.com/toast/com/web/common/toast.com.jpg">
+<meta property="og:image:secure_url" content="http://images.toast.com/toast/com/web/common/toast.com.jpg">
+<meta property="og:url" content="https://toast.com">
+<link rel="shortcut icon" href="https://toast.com/resources/img/favicons/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" sizes="180x180" href="/resources/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/resources/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/resources/img/favicons/favicon-16x16.png">
+<link rel="manifest" href="/resources/img/favicons/manifest.json">
+<link rel="mask-icon" href="/resources/img/favicons/safari-pinned-tab.svg">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="css/gnb.css">
+<link rel="stylesheet" type="text/css" href="css/toast.css">
+<link rel="stylesheet" href="js/libs/tui-date-picker.css">
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul class="skip">
+<li><a href="#header" onclick="document.getElementById('header').tabIndex=-1;document.getElementById('header').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+
+<!--[D] noti_browser -->
+<!-- <?php include 'inc/noti_browser.html';?> -->
+<!--//[D] noti_browser -->
+<div class="wrap">
+
+	<!--[D] HEADER -->
+	<?php include 'inc/header.html';?>
+	<!--//[D] HEADER -->
+	<div id="container" class="container">
+		<!-- [D] CONTENTS -->
+		<div id="content" class="content mypage_content">
+			<section class="sec">
+				<div class="sec_inner">
+					<h2 class="main_title">마이페이지</h2>
+					<ul class="nav nav-justified member_nav">
+					<li class="nav-item word_item"><a href="member/05_my_info.html" class="nav-link"><span class="nav_txt">회원정보</span></a></li>
+					<li class="nav-item word_item"><a href="07_mypage_payment.html" class="nav-link"><span class="nav_txt">결제수단</span></a></li>
+					<li class="nav-item word_item active"><a href="07_mypage_credit.html" class="nav-link is_active"><span class="nav_txt">크레딧</span></a></li>
+					<li class="nav-item word_item"><a href="07_mypage_api.html" class="nav-link"><span class="nav_txt">API 보안 설정</span></a></li>
+					<li class="nav-item word_item"><a href="07_mypage_personal_info.html" class="nav-link"><span class="nav_txt">개인정보 이용 내역</span></a></li>
+					</ul>
+					<div class="tab-content">
+						<div class="title_wrap">
+							<h3 class="tit_txt">크레딧</h3>
+							<p class="sub_desc">이곳에서 회원님의 충전 및 사용크레딧 정보를 보실 수 있습니다.</p>
+						</div>
+						<div class="credit_info_wrap">
+							<dl class="lst_info">
+							<dt class="info_tit">사용 가능한 크레딧</dt>
+							<dd class="info_cont">0원</dd>
+							</dl>
+							<button type="button" class="btn btn_register">크레딧 쿠폰 등록</button>
+						</div>
+						<div class="search_wrap">
+							<span class="date">날짜</span>
+							<div class="tui-datepicker-input tui-datetime-input">
+								<input type="text" id="datepicker-input-start" aria-label="Date-Time">
+								<span class="tui-ico-date"></span>
+							</div>
+							<div id="wrapper1" class="calender_show_area" style="margin-top: -1px;"></div>
+							<span class="txt_bar">~</span>
+							<div class="tui-datepicker-input tui-datetime-input">
+								<input type="text" id="datepicker-input-end" aria-label="Date-Time">
+								<span class="tui-ico-date"></span>
+							</div>
+							<div id="wrapper2" class="calender_show_area" style="margin-top: -1px;"></div>
+							<span class="select_bx">
+								<select class="sel" id="periodType" name="periodType" onchange="" title="검색할 기간">
+									<option value="전체" selected="selected">전체</option>
+									<option value="1">1주일</option>
+									<option value="2">1개월</option>
+									<option value="3">3개월</option>
+									<option value="4">6개월</option>
+									<option value="5">1년</option>
+									<option value="6">3년</option>
+								</select>
+							</span>
+							<button type="button" class="btn btn_sm">조회</button>
+						</div>			
+						<div class="tbl_wrap">
+							<table class="tbl_history tbl_credit">
+								<caption><span>충전 및 사용한 크레딧 리스트</span></caption>
+								<colgroup>
+								<col>
+								<col>
+								<col>
+								<col>
+								<col>
+								<col>
+								</colgroup>
+								<thead>
+								<tr>
+								<th scope="col">크레딧유형</th>
+								<th scope="col">내용</th>
+								<th scope="col">일자</th>
+								<th scope="col">구분</th>
+								<th scope="col">사용 크레딧</th>
+								<th scope="col">남은 크레딧</th>
+								</tr>
+								</thead>
+								<tbody class="is_detail_show">
+								<tr class="summary_row">
+								<th scope="row" colspan="4"><em class="point_txt">전체 상품형</em></th>
+								<td colspan="2">
+									<em class="point_txt">150,000원</em>
+									<div class="btn_area">
+										<a href="#" class="btn_history_toggle">크레딧 내역</a>
+									</div><!-- [D] btn_history_toggle 클릭시 해당 버튼 부모 tbody에 is_detail_show 적용 -->
+								</td>
+								</tr>
+								<tr class="detail_row">
+								<th scope="row">&nbsp;</th>
+								<td>TOAST 서비스 이용약관 변경 안내</td>
+								<td>2018.05.25</td>
+								<td><span class="state_use">사용</span></td>
+								<td>-15,000원</td>
+								<td>100,000원</td>
+								</tr>
+								<tr class="detail_row">
+								<th scope="row">&nbsp;</th>
+								<td>Network 서비스 임시 점검</td>
+								<td>2018.05.25</td>
+								<td><span class="state_charge">충전</span></td>
+								<td>5,000원</td>
+								<td>3,000원</td>
+								</tr>
+								<tr class="detail_row">
+								<th scope="row">&nbsp;</th>
+								<td>TOAST 서비스 이용약관 변경 안내</td>
+								<td>2018.05.25</td>
+								<td><span class="state_use">사용</span></td>
+								<td>-1,000원</td>
+								<td>10,000원</td>
+								</tr>
+								<tr class="detail_row">
+								<th scope="row">&nbsp;</th>
+								<td>Intel CPU 보안 취약점 관련 안내 (Windows)</td>
+								<td>2018.05.25</td>
+								<td><span class="state_charge">충전</span></td>
+								<td>-15,000원</td>
+								<td>100,000원</td>
+								</tr>
+								<tr class="detail_row">
+								<th scope="row">&nbsp;</th>
+								<td>AppGuard 상품 SDK 변경 사항 안내</td>
+								<td>2018.05.25</td>
+								<td><span class="state_use">사용</span></td>
+								<td>-15,000원</td>
+								<td>100,000원</td>
+								</tr>
+								</tbody>
+								<tbody>
+								<tr class="summary_row">
+								<th scope="row" colspan="4"><em class="point_txt">상품 제한형</em></th>
+								<td colspan="2">
+									<em class="point_txt">33,518원</em>
+									<div class="btn_area">
+										<a href="#" class="btn_history_toggle">크레딧 내역</a>
+									</div><!-- [D] btn_history_toggle 클릭시 해당 버튼 부모 tbody에 is_detail_show 적용 -->
+								</td>
+								</tr>
+								<tr class="detail_row">
+								<th scope="row">&nbsp;</th>
+								<td>TOAST 서비스 이용약관 변경 안내</td>
+								<td>2018.05.25</td>
+								<td><span class="state_use">사용</span></td>
+								<td>-15,000원</td>
+								<td>100,000원</td>
+								</tr>
+								<tr class="detail_row">
+								<th scope="row">&nbsp;</th>
+								<td>TOAST 서비스 이용약관 변경 안내</td>
+								<td>2018.05.25</td>
+								<td><span class="state_use">사용</span></td>
+								<td>-15,000원</td>
+								<td>100,000원</td>
+								</tr>
+								<tr class="detail_row">
+								<th scope="row">&nbsp;</th>
+								<td>TOAST 서비스 이용약관 변경 안내</td>
+								<td>2018.05.25</td>
+								<td><span class="state_use">사용</span></td>
+								<td>-15,000원</td>
+								<td>100,000원</td>
+								</tr>
+								<tr class="detail_row">
+								<th scope="row">&nbsp;</th>
+								<td>TOAST 서비스 이용약관 변경 안내</td>
+								<td>2018.05.25</td>
+								<td><span class="state_use">사용</span></td>
+								<td>-15,000원</td>
+								<td>100,000원</td>
+								</tr>
+								<tr class="detail_row">
+								<th scope="row">&nbsp;</th>
+								<td>TOAST 서비스 이용약관 변경 안내</td>
+								<td>2018.05.25</td>
+								<td><span class="state_use">사용</span></td>
+								<td>-15,000원</td>
+								<td>100,000원</td>
+								</tr>
+
+								</tbody>
+							</table>		
+						</div>					
+					</div>
+				</div>
+			</section>
+		</div>
+		<!-- //[D] CONTENTS -->
+	</div>
+	<!--[D] FOOTER -->
+	<?php include 'inc/footer.html';?>
+	<!--//[D] FOOTER -->
+</div>
+
+<!--[D] widget -->
+	<?php include 'inc/widget.html';?>
+<!--//[D] widget -->
+
+<!-- [D] LAYER -->
+<?php include 'inc/layer_loading.html';?>
+<!-- [D] LAYER -->
+
+<!--[D] 레이어팝업 -->
+<!-- [D] 쿠폰 코드 입력 팝업 -->
+<div class="modal pop_custom pop_member" id="modal_alert1">
+	<div class="modal-dialog  modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">쿠폰 코드 입력</h4>
+				<button type="button" class="btn_close" data-dismiss="modal">닫기</button>
+			</div>
+			<div class="modal-body">
+				<div class="form_wrap">
+					<form>
+					<span class="error_control_area">
+						<span class="inp_row">
+							<span class="inp_bx">
+								<input type="text" class="inp" placeholder="쿠폰코드">
+							</span>
+						</span>
+						<em class="error_txt">인증번호가 일치하지 않습니다.</em>
+					</span>
+					<p class="ly_txt">보유하고 계신 쿠폰을 등록하시면, 크레딧을 지급받을 수 있습니다.</p>
+					</form>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn_cancel" data-dismiss="modal">취소</button>
+				<button type="button" class="btn" data-dismiss="modal">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- [D] 쿠폰 코드 유효기간 확인 팝업 -->
+<div class="modal pop_custom pop_member" id="modal_alert2">
+	<div class="modal-dialog  modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">알림</h4>
+				<button type="button" class="btn_close" data-dismiss="modal">닫기</button>
+			</div>
+			<div class="modal-body">
+				<p class="ly_txt">쿠폰 코드를 정확하게 입력해 주세요.<br>쿠폰 등록 기간 및 유효기간을 확인해 주세요.</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn" data-dismiss="modal">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--[D] //레이어팝업 -->
+
+<!-- Javascript Area -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+<script src="js/libs/tui-code-snippet.min.js"></script>
+<script src="js/libs/tui-date-picker.min.js"></script>
+<script>
+var datepicker = new tui.DatePicker('#wrapper1', {
+	language: 'ko',
+	date: new Date('2018-12-04'),
+	input: {
+		element: '#datepicker-input-start',
+		format: 'yyyy.MM.dd'
+	}
+});
+
+var datepicker2 = new tui.DatePicker('#wrapper2', {
+	language: 'ko',
+	date: new Date('2018-12-08'),
+	input: {
+		element: '#datepicker-input-end',
+		format: 'yyyy.MM.dd'
+	}
+});
+</script>
+
+<!-- 마크업 확인용입니다. -->
+<style>
+.case_view{display:inline-block;position:fixed;bottom:0;left:0;z-index:1050;width:auto;padding:5px;background:#000;opacity:0.7}
+.case_view .btn{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+</style>
+<div class="case_view">
+	<?php include 'inc/case_view_common.html';?>
+	<a href="#" class="btn" onclick="$('.error_control_area').toggleClass('is_error');return false;">입력 오류 화면</a>
+	<a href="#" class="btn" data-toggle="modal" data-target="#modal_alert1">쿠폰 코드 입력</a>
+	<a href="#" class="btn" data-toggle="modal" data-target="#modal_alert2">쿠폰 코드 알림</a>
+</div>
+
+<script src="js/case_view.js"></script>
+<!-- //마크업 확인용입니다. -->
+
+</body>
+</html>

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>INDEX :: PAYCOPlace</title>
+<link rel="stylesheet" href="css/solution.css">
+<style>
+@charset "utf-8";
+/* Common */
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select{margin:0;padding:0}
+/*body,input,textarea,select,button,table{font-size:18px;font-family:'나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,'굴림',Gulim,Helvetica;line-height:1.25em}*/
+body.s,.s input,.s textarea,.s select,.s button,.s table{font-family:Helvetica}
+body{position:relative;background-color:#f4f4f4;color:#000;-webkit-text-size-adjust:none}
+img,fieldset{border:0}
+ul,ol{list-style:none}
+em,address{font-style:normal}
+a{color:#000;text-decoration:none}
+table{border-collapse:collapse}
+hr{display:none !important}
+.u_hc{visibility:hidden;overflow:hidden;position:absolute;left:-999em;width:0;height:0;font-size:0;line-height:0}
+.u_vc,.u_skip{position:absolute;*left:-9999em;z-index:-1;font-size:4px;line-height:1px;color:transparent}
+.ct{clear:both;width:100%;background-color:#fff}
+.ct:after{display:block;clear:both;height:1px;margin-top:-1px;content:''}
+.blind{overflow:hidden;display:inline-block;text-indent:-9999px}
+/* index.html */
+body{padding:30px 14px;background-color:#fff;word-wrap:break-word;word-break:break-all}
+header{padding:1em 4em .9em .1em;border-bottom:3px solid #222}
+.hd_h1{font-size:1.2em}
+.hd_svc{display:block;position:absolute;top:0;right:4px;width:3em;padding:.8em 24px .7em .6em;background:url(http://static.naver.com/www/m/cm/im/bu_lk.gif) no-repeat 100% 50%;font-size:.86em;line-height:1.1em;color:#666}
+.hd_wr{white-space:nowrap}
+.sec_h{clear:both;padding:2em .1em .4em;border-bottom:1px solid #000;font-size:1em}
+.sec_h2{clear:both;padding:1em .1em .4em;border-bottom:1px dotted #888;font-size:1em}
+.sec_h2::before{display:inline-block;margin-right:.25em;border:2px solid transparent;border-left-color:#000;vertical-align:3px;content:''}
+ul{font-size:.9em}
+li a{display:block;padding:.7em 31px .6em .1em;background:url(http://static.naver.com/www/m/cm/im/bu_lk.gif) no-repeat 100% 50%;_zoom:1}
+.lidv{margin-top:1px;border-top:1px solid #dfdfdf}
+li span{margin-left:.4em;font-size:.86em;color:#909090}
+li p{margin-top:10px;color:#999;}
+footer{clear:both;margin:2.5em 0 4em;padding:6px 2px 2px;background:#f4f4f4;font-size:.86em;line-height:1.6em;color:#333;text-align:center}
+dt,dd{display:inline;color:#333}
+dt:after{display:inline;content:': '}
+dd:last-of-type{display:block;color:#aaa}
+.ft_a{display:inline-block;padding:2px 2px 5px;color:#16d;letter-spacing:-1px;text-decoration:underline}
+.sub{margin-top:50px}
+.sub .sec_h2{font-size:12px}
+.history{margin-top:5px}
+.history li{font-size:11px;padding:4px;line-height:1.2;padding-left:0;text-indent:0;border:0}
+.history .date{display:inline-block;width:75px;margin-right:5px;padding:0 4px;background:#f1f1f1}
+.history a{display:inline;padding:0;background:none;text-decoration:underline}
+
+.gu_table{width:100%;border-collapse:collapse}
+.gu_table caption{padding:.7em 0 .6em .1em;text-align:left}
+.gu_table th,.gu_table td{height:2em;padding:.1em .6em;border:1px solid #ddd;text-align:center}
+.gu_table thead th{width:5em;background:#f1f1f1}
+.gu_table thead th.gu_mc{width:auto}
+.gu_table tbody th{color:#000}
+.gu_table tbody td{color:#06e}
+.gu_table tbody td.gu_mc{text-align:left}
+.gu_ept{color:#ccc}
+.new{display:inline-block;position:relative;top:-1px;height:14px;padding:1px 3px;border-radius:3px;background:#fd3939;font-family:verdana;font-size:11px;font-weight:normal;color:#fff;line-height:14px;vertical-align:middle}
+.up{display:inline-block;position:relative;top:-1px;height:14px;background:#45a7fb;color:#fff;padding:1px 3px;border-radius:3px;font-family:verdana;font-size:11px;font-weight:normal;line-height:14px;vertical-align:middle}
+.etc{display:inline-block;position:relative;top:-1px;height:14px;background:#2fbf6d;color:#fff;padding:1px 3px;border-radius:3px;font-family:verdana;font-size:11px;font-weight:normal;line-height:14px;vertical-align:middle}
+.slt{display:inline-block;position:relative;top:-1px;height:14px;border:1px solid #ecc200;background:#ffd200;color:#555;padding:1px 3px;border-radius:3px;font-family:verdana;font-size:11px;font-weight:normal;line-height:14px;vertical-align:middle}
+.edit{display:inline-block;position:relative;top:-1px;height:14px;background:#1bae6e;color:#fff;padding:1px 3px;border-radius:3px;font-family:verdana;font-size:11px;font-weight:normal;line-height:14px;vertical-align:middle}
+.description{margin-top:20px;color:#555;}
+.description ul{margin-top:10px;border:0;}
+.description ul li{margin-top:5px;font-weight:bold;color:#333;border:0;}
+.description ul li a{display:inline-block;padding:0;color:#4b96e6;background:none;}
+
+.sub_lst{padding-bottom:10px;}
+.sub_lst li{padding-left:20px;border-bottom:0;}
+p{line-height:1.5;}
+.em{font-weight:bold;color:#fa2828;}
+pre{tab-size:4;background-color:#333;}
+pre code{font-family:consolas,monospace;color:#fff;}
+.txt{font-size:18px;}
+
+.events{margin:0}
+.events .events_group{float:none;width:auto;}
+.events .s_event{position:static;display: inline-block;}
+.legend_item{border:0;}
+.cat_tag{color:#333 !important;}
+
+h3{margin:50px 0 15px;}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+$(function(){
+	$('.ct ul a').each(function(){
+		$('<span>/ '+$(this).attr('href')+'</span>').appendTo($(this));
+	});
+});
+</script>
+</head>
+<body>
+<div class="ct">
+	<style>
+		.color_set{display:flex;}
+		.color_box{display:flex;flex:1;width:50px;height:50px;margin-bottom:20px;justify-content: center;align-items: center;font-size:16px;}
+	</style>
+	<h2 class="hd_h1">Color code : Payco place - Shop web </h2>
+	<br>
+	<h3>페이지 정렬</h3>	
+	<ul class="btn_filters">
+	<li class="btn_filter_item"><button type="button" class="btn_filter">예약번호 최신순 <span class="ico_sort_up">정렬</span></button></li>
+	<li class="btn_filter_item"><button type="button" class="btn_filter is_disabled">방문일자 최신순</button></li>
+	<li class="btn_filter_item"><button type="button" class="btn_filter is_disabled">예약일 오래된순</button></li>
+	</ul>
+
+	<h3>카테고리 범례</h3>	
+	<ul class="legend_lst">
+	<li class="legend_item color0">디폴트</li>
+	<li class="legend_item color1">컷</li>
+	<li class="legend_item color2">펌</li>
+	<li class="legend_item color3">염색</li>
+	<li class="legend_item color4">클리닉</li>
+	<li class="legend_item color5">메이크업</li>
+	<li class="legend_item color6">추가 </li>
+	<li class="legend_item color7">추가 </li>
+	<li class="legend_item color8">추가 </li>
+	<li class="legend_item color9">추가 </li>
+	<li class="legend_item color10">기타</li>
+	</ul>
+	<h3>서비스 범례</h3>	
+	<ul class="legend_lst">
+	<li class="legend_item color_paycoplace">페이코 플레이스</li>
+	<li class="legend_item color_naver">네이버 예약 파트너센터</li>
+	<li class="legend_item color_cacao">카카오 헤어샵</li>
+	</ul>
+<pre>
+<code>
+	&lt;li class="legend_item color1"&gt;컷&lt;/li&gt;
+</code>
+</pre>
+	<h3>텍스트</h3>
+	<em class="color0">color0 디폴트</em>
+	<em class="color1">color1 컷</em>
+	<em class="color2">color2 펌</em>
+	<em class="color3">color3 염색</em>
+	<em class="color4">color4 클리닉</em>
+	<em class="color5">color5 메이크업</em>
+	<em class="color6">color6 추가</em>
+	<em class="color7">color7 추가</em>
+	<em class="color8">color8 추가</em>
+	<em class="color9">color9 추가</em>
+	<em class="color10">color10 기타</em>
+<pre>
+<code>
+	&lt;em class="color1"&gt;컷&lt;/em&gt;
+</code>
+</pre>
+	<h3>태그</h3>
+	<span class="cat_tag color0">디폴트</span>
+	<span class="cat_tag color1">컷</span>
+	<span class="cat_tag color2">펌</span>
+	<span class="cat_tag color3">염색</span>
+	<span class="cat_tag color4">클리닉</span>
+	<span class="cat_tag color5">메이크업</span>
+	<span class="cat_tag color6">추가</span>
+	<span class="cat_tag color7">추가</span>
+	<span class="cat_tag color8">추가</span>
+	<span class="cat_tag color9">추가</span>
+	<span class="cat_tag color10">기타</span>
+<pre>
+<code>
+	&lt;span class="cat_tag color1"&gt;컷&lt;/span&gt;
+</code>
+</pre>
+
+	<h3>예약현황</h3>
+	<div class="events">
+	<ul class="events_group">
+	<li class="s_event color0">
+		<a href="#" class="event_cont">
+			<span class="event_time">11:00</span>
+			<em class="event_tag tag_color3">예약완료</em>
+			<em class="event_name">임회원</em>
+			<span class="event_desc">여) 앞머리 디폴트</span>
+		</a>
+	</li>
+	<li class="s_event color1">
+		<a href="#" class="event_cont">
+			<span class="event_time">10:00</span>
+			<em class="event_tag tag_color3">예약완료</em>
+			<em class="event_name">임회원</em>
+			<span class="event_desc">여) 앞머리 컷</span>
+		</a>
+	</li>
+	<li class="s_event color2">
+		<a href="#" class="event_cont">
+			<span class="event_time">11:00</span>
+			<em class="event_tag tag_color3">예약완료</em>
+			<em class="event_name">임회원</em>
+			<span class="event_desc">여) 앞머리 펌</span>
+		</a>
+	</li>
+	<li class="s_event color3">
+		<a href="#" class="event_cont">
+			<span class="event_time">11:00</span>
+			<em class="event_tag tag_color3">예약완료</em>
+			<em class="event_name">임회원</em>
+			<span class="event_desc">여) 앞머리 염색 </span>
+		</a>
+	</li>
+	<li class="s_event color4">
+		<a href="#" class="event_cont">
+			<span class="event_time">11:00</span>
+			<em class="event_tag tag_color3">예약완료</em>
+			<em class="event_name">임회원</em>
+			<span class="event_desc">여) 앞머리 메이크업</span>
+		</a>
+	</li>
+	<li class="s_event color5">
+		<a href="#" class="event_cont">
+			<span class="event_time">11:00</span>
+			<em class="event_tag tag_color3">예약완료</em>
+			<em class="event_name">임회원</em>
+			<span class="event_desc">여) 앞머리컷</span>
+		</a>
+	</li>
+	<li class="s_event color6">
+		<a href="#" class="event_cont">
+			<span class="event_time">11:00</span>
+			<em class="event_tag tag_color3">예약완료</em>
+			<em class="event_name">임회원</em>
+			<span class="event_desc">여) 앞머리컷</span>
+		</a>
+	</li>
+	<li class="s_event color7">
+		<a href="#" class="event_cont">
+			<span class="event_time">11:00</span>
+			<em class="event_tag tag_color3">예약완료</em>
+			<em class="event_name">임회원</em>
+			<span class="event_desc">여) 앞머리컷</span>
+		</a>
+	</li>
+	<li class="s_event color8">
+		<a href="#" class="event_cont">
+			<span class="event_time">11:00</span>
+			<em class="event_tag tag_color3">예약완료</em>
+			<em class="event_name">임회원</em>
+			<span class="event_desc">여) 앞머리컷</span>
+		</a>
+	</li>
+	<li class="s_event color9">
+		<a href="#" class="event_cont">
+			<span class="event_time">11:00</span>
+			<em class="event_tag tag_color3">예약완료</em>
+			<em class="event_name">임회원</em>
+			<span class="event_desc">여) 앞머리컷</span>
+		</a>
+	</li>
+	<li class="s_event color10">
+		<a href="#" class="event_cont">
+			<span class="event_time">11:00</span>
+			<em class="event_tag tag_color3">예약완료</em>
+			<em class="event_name">임회원</em>
+			<span class="event_desc">여) 앞머리컷</span>
+		</a>
+	</li>
+	</ul>
+<pre>
+<code>
+	&lt;li class="s_event color1"&gt;컷&lt;/li&gt;
+</code>
+</pre>
+	<h3>고객예약내역, 현황판, 알림 태그</h3>
+	<em class="event_tag tag_color">예약대기</em>
+	<em class="event_tag tag_color">예약변경(고객)</em>
+	<br><br>
+	<em class="event_tag tag_color2">예약확정</em>
+	<em class="event_tag tag_color2">결제요청중</em>
+	<em class="event_tag tag_color2">예약변경(매장)</em>
+	<em class="event_tag tag_color2">서비스중</em>
+	<br><br>
+	<em class="event_tag tag_color3">결제완료</em>
+	<em class="event_tag tag_color3">서비스 완료</em>
+	<br><br>
+	<em class="event_tag tag_color4">예약취소(매장)</em>
+	<em class="event_tag tag_color4">예약취소(고객)</em>
+	<em class="event_tag tag_color4">카드/현금 결제</em>
+	<em class="event_tag tag_color4">No Show</em>
+	<em class="event_tag tag_color4">결제취소</em>
+	<em class="event_tag tag_color4">예약시간 종료</em>
+	<em class="event_tag tag_color4">미처리</em>
+	<em class="event_tag tag_color4">결제요청 취소</em>
+<pre>
+<code>
+	&lt;em class="event_tag tag_color"&gt;예약대기&lt;/em&gt;
+</code>
+</pre>
+
+	<h3>제목 상태표시</h3>
+	<div class="layer_h_cont">
+		<h2 class="layer_h_tit">예약 상세</h2>
+		<p class="layer_h_sub tag_color">예약 대기</p>
+	</div>
+	<br><br>
+	<div class="layer_h_cont">
+		<h2 class="layer_h_tit">예약 상세</h2>
+		<p class="layer_h_sub tag_color2">예약 확정</p>
+	</div>
+	<br><br>
+	<div class="layer_h_cont">
+		<h2 class="layer_h_tit">예약 상세</h2>
+		<p class="layer_h_sub tag_color4">예약 취소(매장)</p>
+	</div>
+	<br><br>
+	<div class="layer_h_cont">
+		<h2 class="layer_h_tit">예약 상세</h2>
+		<p class="layer_h_sub tag_color4">예약 취소(고객)</p>
+	</div>
+	<br><br>
+	<div class="layer_h_cont">
+		<h2 class="layer_h_tit">예약 상세</h2>
+		<p class="layer_h_sub tag_color4">예약 시간 종료</p>
+	</div>
+	<br><br>
+	<div class="layer_h_cont">
+		<h2 class="layer_h_tit">예약 상세</h2>
+		<p class="layer_h_sub tag_color4">No-Show</p>
+	</div>
+	<br><br><br>
+	<div class="layer_h_cont">
+		<h2 class="layer_h_tit">매출 확인</h2>
+		<p class="layer_h_sub tag_color3">PAYCO 결제완료</p>
+	</div>
+	<br><br>
+	<div class="layer_h_cont">
+		<h2 class="layer_h_tit">매출 확인</h2>
+		<p class="layer_h_sub tag_color4">카드/현금결제</p>
+	</div>
+	<br><br>
+	<div class="layer_h_cont">
+		<h2 class="layer_h_tit">매출 확인</h2>
+		<p class="layer_h_sub tag_color4">결제 취소</p>
+	</div>
+	<br><br>
+	<div class="layer_h_cont">
+		<h2 class="layer_h_tit">매출 확인</h2>
+		<p class="layer_h_sub tag_color2">PAYCO 결제 요청 중</p>
+	</div>
+	<br><br>
+	<div class="layer_h_cont">
+		<h2 class="layer_h_tit">매출 확인</h2>
+		<p class="layer_h_sub tag_color2">서비스 중</p>
+	</div>
+	<br><br>
+	<div class="layer_h_cont">
+		<h2 class="layer_h_tit">매출 확인</h2>
+		<p class="layer_h_sub tag_color3">서비스 완료</p>
+	</div>
+	<br><br>
+	<pre>
+	<code>
+	&lt;div class="layer_h_cont"&gt;
+		&lt;h2 class="layer_h_tit"&gt;예약 상세&lt;/h2&gt;
+		&lt;p class="layer_h_sub tag_color"&gt;예약 대기&lt;/p&gt;
+	&lt;/div&gt;
+	</code>
+	</pre>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+</body>
+</html> 

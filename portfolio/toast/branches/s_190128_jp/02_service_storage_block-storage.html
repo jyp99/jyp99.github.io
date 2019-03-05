@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="all">
+<title>토스트(TOAST) 서비스</title>
+
+<meta name="description" content="NHN 엔터테인먼트에서 제공하는 토스트 클라우드 서비스. 오픈스택 기반의 클라우드 인프라, 게임솔루션, 보안, 문자/이메일/알림톡, 협업도구 Dooray, ERP 제공">
+<meta name="keywords" content="토스트, 토스트 클라우드, 클라우드 서비스, 토스트 닷컴, 클라우드, NHN엔터테인먼트, NHN엔터, NHN Entertainment, NHN Ent, TOAST, TOAST Cloud, TOAST CAM, TOAST PC, TOAST Analytics, toast, 토스트캠, 토스트피씨,토스트애널리틱스">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="토스트(TOAST) 서비스">
+<meta property="og:description" content="NHN 엔터테인먼트에서 제공하는 토스트 클라우드 서비스. 오픈스택 기반의 클라우드 인프라, 게임솔루션, 보안, 문자/이메일/알림톡, 협업도구 Dooray, ERP 제공">
+<meta property="og:keywords" content="토스트, 토스트 클라우드, 클라우드 서비스, 토스트 닷컴, 클라우드, NHN엔터테인먼트, NHN엔터, NHN Entertainment, NHN Ent, TOAST, TOAST Cloud, TOAST CAM, TOAST PC, TOAST Analytics, toast, 토스트캠, 토스트피씨,토스트애널리틱스">
+<meta property="og:image" content="http://images.toast.com/toast/com/web/common/toast.com.jpg">
+<meta property="og:image:secure_url" content="http://images.toast.com/toast/com/web/common/toast.com.jpg">
+<meta property="og:url" content="https://toast.com">
+<link rel="shortcut icon" href="https://toast.com/resources/img/favicons/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" sizes="180x180" href="/resources/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/resources/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/resources/img/favicons/favicon-16x16.png">
+<link rel="manifest" href="/resources/img/favicons/manifest.json">
+<link rel="mask-icon" href="/resources/img/favicons/safari-pinned-tab.svg">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="css/gnb.css">
+<link rel="stylesheet" type="text/css" href="css/toast.css">
+<link rel="stylesheet" type="text/css" href="css/gnb_mobile.css">
+<link rel="stylesheet" type="text/css" href="css/toast_mobile.css">
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul class="skip">
+<li><a href="#header" onclick="document.getElementById('header').tabIndex=-1;document.getElementById('header').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+
+<!--[D] noti_browser -->
+<?php include 'inc/noti_browser.html';?>
+<!--//[D] noti_browser -->
+<div class="wrap header_fixed_wrap">
+
+	<!--[D] HEADER -->
+	<?php include 'inc/header.html';?>
+	<!--//[D] HEADER -->
+	<div id="container" class="container has_snb_container">
+		<!-- [D] CONTENTS -->
+		<?php include 'inc/snb_service.html';?>
+		<div id="content" class="content service_detail_content">
+			<div class="inner">
+				<div class="title_wrap">
+					<div class="title_area">
+						<i class="service_icon icon-ic-storage-block-storage"></i>
+						<h2 class="tit_txt">Block Storage</h2>
+					</div>
+					<nav class="location" aria-label="breadcrumb">
+						<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="#" class="link_txt">Home</a></li>
+						<li class="breadcrumb-item"><a href="#" class="link_txt">서비스</a></li>
+						<li class="breadcrumb-item"><a href="#" class="link_txt">Storage</a></li>
+						<li class="breadcrumb-item active" aria-current="page">Block Storage</li>
+						</ol>
+					</nav>
+				</div>
+				<div class="sub_desc_wrap">
+					<p class="sub_txt">인스턴스에 할당하여 사용할 수 있는 블록 레벨 스토리지입니다.<br>쉽게 복제하여 여러 인스턴스에 할당할 수 있습니다.</p>
+					<div class="btn_wrap">
+						<a href="#" class="btn btn_service_use">서비스 이용하기</a>
+						<a href="#" class="btn btn_view_guide" target="_blank">사용 설명서 보기</a>
+					</div>
+				</div>
+				<div class="nav_scroll_wrap is_m_show">
+				<ul class="nav nav-tabs">
+				<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#tab_introduce">소개</a></li>
+				<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab_charge">요금</a></li>
+				</ul>
+				</div>
+				<div class="tab-content">
+				<section class="sec tab-pane mo_tab_sec active" id="tab_introduce">
+					<h3 class="h_section">Block Storage 소개</h3>
+					<div class="desc_group">
+						<h4 class="h_desc">주요 기능</h4>
+						<ul class="lst_desc">
+						<li class="desc_item">인스턴스를 삭제해도 데이터를 보관할 수 있습니다.</li>
+						<li class="desc_item">추가적인 디스크 공간을 확보할 수 있습니다.</li>
+						<li class="desc_item">스냅샷을 이용해 특정 시점의 블록 스토리지 상태를 저장 및 복구할 수 있습니다.</li>
+						<li class="desc_item">인스턴스에 연결된 블록 스토리지를 연결을 해제한 후 다른 인스턴스에 연결할 수 있습니다.</li>
+						<li class="desc_item">스냅샷을 생성해 블록 스토리지를 복제할 수 있습니다.</li>
+						</ul>
+					</div>
+				</section>
+				<section class="sec tab-pane mo_tab_sec fade" id="tab_charge">
+					<h3 class="h_section">Block Storage 요금</h3>
+					<div class="desc_group">
+						<span class="tbl_noti">(VAT 별도)</span>
+						<div class="tbl_wrap is_round">
+							<table class="tbl">
+							<caption><span>Block Storage 과금 구분 별 요금</span></caption>
+							<thead><tr><th scope="col">과금 구분</th><th scope="col">IOPS</th><th scope="col">과금 기준</th><th scope="col">요금</th></tr></thead><tbody><tr><td>범용 HDD</td><td>-</td><td rowspan="4">10GB당 사용 시간 누적</td><td>1.4원/시간</td></tr><tr><td>범용 SSD</td><td>-</td><td>1.6원/시간</td></tr><tr><td>u2 전용 스토리지</td><td>2,000 IOPS 이하</td><td>1원/시간</td></tr><tr><td>i2 전용 스토리지</td><td>10,000~20,000(QoS 보장)</td><td>1.8원/시간</td></tr></tbody>
+							</table>
+						</div>
+						<ul class="lst_desc">
+						<li class="desc_item">1GB = 1024^3바이트입니다.</li>
+						</ul>
+						<em class="noti_title">알림</em>
+						<ul class="lst_desc">
+						<li class="desc_item">범용 HDD는 최대 1,000GB까지 크기를 지정할 수 있습니다. 단, 최소 크기는 선택한 OS 이미지에 따라 다를 수 있습니다.</li>
+						<li class="desc_item">u2 전용 스토리지와 i2 전용 스트로지를 사용하려면 다음과 같은 서비스 정책을 참고하시기 바랍니다.
+							<ul class="lst_desc">
+							<li class="desc_item">로컬 디스크를 사용하며, 하드웨어 장애가 발생하면 데이터를 복구하지 못할 수도 있습니다. 별도로 백업하거나 이중화할 것을 권장합니다.</li>
+							<li class="desc_item">인스턴스를 생성한 후 루트 볼륨(OS 설치 공간)으로만 사용되며, 크기를 변경할 수 없습니다. 필요할 경우 HDD를 생성하여 Instance에 연결할 수 있습니다.</li>
+							<li class="desc_item">u2 전용 스토리지는 Flavor에 따라 고정된 크기(u2.nano: 20GB, u2.micro: 20GB, u2.small: 50GB, u2.medium: 50GB, u2.large: 100GB)가 할당됩니다.</li>
+							<li class="desc_item">i2 전용 스토리지는 300GB 또는 600GB 중 선택할 수 있습니다.</li>
+							</ul>
+						</li>
+						<li class="desc_item">중요한 데이터를 저장하거나 프로그램을 설치하려면 범용 HDD 사용을 권장합니다.</li>
+						</ul>
+					</div>
+				</section>
+				</div>
+			</div>
+		</div>
+		<!-- //[D] CONTENTS -->
+		<a href="#container" class="btn_top">TOP</a>
+	</div>
+	<!--[D] FOOTER -->
+	<?php include 'inc/footer.html';?>
+	<!--//[D] FOOTER -->
+</div>
+
+<!--[D] widget -->
+	<?php include 'inc/widget.html';?>
+<!--//[D] widget -->
+
+<!-- [D] LAYER -->
+<?php include 'inc/layer_loading.html';?>
+<!-- [D] LAYER -->
+
+<!-- Javascript Area -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+<!-- 마크업 확인용입니다. -->
+<style>
+.case_view{display:inline-block;position:fixed;bottom:0;left:0;z-index:1000;width:auto;padding:5px;background:#000;opacity:0.7}
+.case_view .btn{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+</style>
+<div class="case_view">
+	<?php include 'inc/case_view_common.html';?>
+</div>
+
+
+<script src="js/case_view.js"></script>
+<!-- //마크업 확인용입니다. -->
+</body>
+</html>

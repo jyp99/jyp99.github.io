@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>UIO :: TOAST Cloud G</title>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/toast_member.css">
+<!--[if lt IE 9]>
+<script src="js/html5shiv.min.js"></script>
+<![endif]-->
+<style>
+body{margin:0;padding:0}
+.tcm_wrap{text-align:left}
+h1, h2, h3, h4, h5, h6{font-family:"Noto Sans CJK", Notokr, 'Malgun Gothic','맑은고딕','Apple SD Gothic Neo',Dotum,'돋움',sans-serif}
+.gurde_wrap h1.guide_title{display:block;padding:10px;background:#000;color:#fff;font-size:28px}
+.gurde_wrap h2.guide_title{margin:20px 0 10px;padding:0 0 8px 5px;border-bottom:1px solid #000;font-size:20px}
+.gurde_wrap h2.guide_title:first-child{margin-top:0}
+.gurde_wrap h3.guide_title{margin:20px 0 10px;font-size:16px}
+.gurde_wrap .content{max-width:initial;margin:initial;padding:20px}
+.gurde_wrap .txt_guide{margin-bottom:15px;padding:10px;color:#333;font-size:14px;}
+.gurde_wrap .txt_guide li:before{margin-right:4px;content:'-';}
+.gurde_wrap .step_wrap{display:block}
+.gurde_wrap .form_wrap{width:600px;}
+.gurde_wrap div.lst_form .btn{position:static;float:none;margin-right:10px}
+.form_noti+.form_wrap{padding:20px}
+.gurde_wrap .tcm_pop_wrap{position:static;display:inline-block;}
+.tcm_layer_pop_wrap{background-color: rgba(0,0,0,0.5);}
+
+.gurde_wrap .search_bx.is_selected{margin-bottom:220px}
+.gurde_wrap .scroll_area{position:static;margin-top:8px}
+</style>
+</head>
+<body class="gurde_wrap">
+<!-- wrap -->
+<div class="tcm_wrap">
+	<h1 class="guide_title">TOAST Cloud 회원</h1>
+	<div class="content">
+		<h2 class="guide_title">타이틀 기본</h2>
+		<h2 class="title_text">토스트 회원가입</h2>
+		<h2 class="guide_title">로그인 화면 인풋</h2>
+		<h3 class="guide_title">기본</h3>
+		<ul class="txt_guide">
+		<li>상위 컨텐츠 분기에 따라 인풋의 높이 값은 100%로 적용됨</li>
+		<li>로그인은 login_bx, </li>
+		<li>비활성 인풋은 input에 disabled 속성 적용</li>
+		<li>입력 오류시 inp_bx에 is_error 클래스 추가</li>
+		</ul>
+		<div class="login_bx">
+			<div class="input_wrap">
+				<div class="error_control_area"><!-- [D]입력 오류시 error_control_area에 is_error 클래스 추가 -->
+					<div class="inp_row">
+						<span class="inp_bx">
+							<input type="text" class="inp" title="이메일" placeholder="이메일">
+						</span>
+					</div>
+					<em class="error_txt">이메일을 입력해주세요.</em>
+				</div>
+				<div class="error_control_area" style="margin-top:70px">
+					<div class="inp_row">
+						<span class="inp_bx">
+							<input type="password" class="inp" title="비밀번호" placeholder="비밀번호">
+						</span>
+						<span class="tcm_tooltip is_show" role="tooltip"><!-- [D] 툴팁 활성시 tcm_tooltip 에 is_show 클래스 추가 -->
+							<span class="tooltip_arrow"></span>
+							<span class="tooltip_inner">Caps Lock이 켜져 있습니다.</span>
+						</span>
+					</div>
+					<em class="error_txt">비밀번호를 입력해주세요.</em>
+				</div>
+				<div class="error_control_area"><!-- [D]입력 오류시 error_control_area에 is_error 클래스 추가 -->
+					<div class="inp_row">
+						<span class="inp_bx">
+							<input type="text" class="inp" title="이메일" placeholder="이메일" disabled>
+						</span>
+					</div>
+					<em class="error_txt">이메일을 입력해주세요.</em>
+				</div>
+				<div class="error_control_area is_error"><!-- [D]입력 오류시 error_control_area에 is_error 클래스 추가 -->
+					<div class="inp_row">
+						<span class="inp_bx">
+							<input type="text" class="inp" title="이메일" placeholder="이메일">
+						</span>
+					</div>
+					<em class="error_txt">이메일을 입력해주세요.</em>
+				</div>
+			</div>
+		</div>
+		<h2 class="guide_title">체크박스</h2>
+		<span class="inp_checkbox">
+			<input type="checkbox" id="check1" class="inp_chk">
+			<label for="check1" class="inp_label">
+				<span class="ico_checkbox"></span>
+				<span class="label_text">체크박스</span>
+			</label>
+		</span>
+		<h2 class="guide_title">파일 첨부 버튼</h2>
+		<div class="is_file_row">
+			<span class="inp_row">
+				<span class="inp_file_wrap">
+					<input type="file" id="business_registration" class="inp_file" name="파일 첨부">		
+					<span class="inp_file_shape">
+						<span class="btn_file btn_action">파일 첨부</span>
+						<span class="input_file_status">선택된 파일 없음</span><!-- [D] 파일 선택시 첨부된 파일명 노출되도록 개발 적용 부탁드립니다 -->
+					</span>
+				</span>
+			</span>
+			<span class="desc_text">jpeg, png, gif, tiff, pdf 포맷으로 등록해주세요. (최대용량 5MB)</span>
+			<em class="error_txt">유효성 메시지 표시 영역</em>
+		</div>
+		<h2 class="guide_title">버튼</h2>
+		<ul class="txt_guide">
+		<li>버튼을 감싸는 영역에 btn_area 클래스, 버튼에는 btn 클래스 필수로 적용</li>
+		<li>버튼 비활성시에는 button요소에는 disabled 속성, a버튼에는 .disabled 클래스 적용</li>
+		</ul>
+		<h3 class="guide_title">button 태그 사용 시</h3>
+		<div class="btn_area">
+			<button type="button" class="btn">일반</button>
+			<button type="button" class="btn btn_point">포인트</button>
+			<button type="button" class="btn btn_action">기능</button>
+			<button type="button" class="btn btn_white">흰색</button>
+			<button type="button" class="btn btn_border">투명</button>
+			<button type="button" class="btn btn_point" disabled>비활성</button>
+		</div>
+		<h3 class="guide_title">a 태그 사용 시</h3>
+		<div class="btn_area">
+			<a href="#" class="btn">일반</a>
+			<a href="#" class="btn btn_point">포인트</a>
+			<a href="#" class="btn btn_action">기능</a>
+			<a href="#" class="btn btn_white">흰색</a>
+			<a href="#" class="btn btn_border">투명</a>
+			<a href="#" class="btn btn_point disabled">비활성</a>
+		</div>
+
+		<h2 class="guide_title">셀렉트 박스</h2>
+		<span class="select_bx">
+			<span class="blind">국제전화 번호 선택</span>
+			<select class="inp_select" id="tel">
+				<option value="국가 검색" selected disabled >국가 검색 (국가번호, 국가명)</option>
+				<option value="미국">(+1) 미국 / United States</option>
+				<option value="캐나다">(+1) 캐나다 / Canada</option>
+				<option value="대한민국">(+82) 대한민국 / Korea, Republic of</option>
+				<option value="일본">(+81) 일본 / Japan</option>
+				<option value="중국">(+86) 중국 / China</option>
+			</select>
+		</span>
+
+		<h2 class="guide_title">검색&amp;셀렉트 박스</h2>
+		<h3 class="guide_title">비활성</h3>
+		<div class="search_bx"><!-- [D]선택시 search_bx에 is_selected 클래스 추가 -->
+			<span class="inp_area">
+				<input class="inp inp_search" id="phone" name="국제전화 번호" placeholder="국가 검색 (국가번호, 국가명)">
+				<button class="btn_search" type="button">검색</button>
+			</span>
+			<div class="scroll_area">
+				<ul class="search_data_list">
+				<li class="data">
+					<span class="country_code">(+1)</span>
+					<span class="country_text">미국 / United States</span>
+				</li>
+				<li class="data">
+					<span class="country_code">(+1)</span>
+					<span class="country_text">캐나다 / Canada</span>
+				</li>
+				<li class="data">
+					<span class="country_code">(+82)</span>
+					<span class="country_text">대한민국 / Korea, Republic of</span>
+				</li>
+				<li class="data">
+					<span class="country_code">(+81)</span>
+					<span class="country_text">일본 / Japan</span>
+				</li>
+				<li class="data">
+					<span class="country_code">(+86)</span>
+					<span class="country_text">중국 / China</span>
+				</li>
+				<li class="data">
+					<span class="country_code">(+86)</span>
+					<span class="country_text">중국 / China</span>
+				</li>
+				<li class="data">
+					<span class="country_code">(+86)</span>
+					<span class="country_text">중국 / China</span>
+				</li>
+				</ul>
+			</div>
+		</div>
+
+		<h3 class="guide_title">활성</h3>
+		<div class="search_bx is_selected"><!-- [D]선택시 search_bx에 is_selected 클래스 추가 -->
+			<span class="inp_area">
+				<input class="inp inp_search" id="phone" name="국제전화 번호" placeholder="국가 검색 (국가번호, 국가명)">
+				<button class="btn_search" type="button">검색</button>
+			</span>
+			<div class="scroll_area">
+				<ul class="search_data_list">
+				<li class="data">
+					<span class="country_code">(+1)</span>
+					<span class="country_text">미국 / United States</span>
+				</li>
+				<li class="data">
+					<span class="country_code">(+1)</span>
+					<span class="country_text">캐나다 / Canada</span>
+				</li>
+				<li class="data">
+					<span class="country_code">(+82)</span>
+					<span class="country_text">대한민국 / Korea, Republic of</span>
+				</li>
+				<li class="data">
+					<span class="country_code">(+81)</span>
+					<span class="country_text">일본 / Japan</span>
+				</li>
+				<li class="data">
+					<span class="country_code">(+86)</span>
+					<span class="country_text">중국 / China</span>
+				</li>
+				<li class="data">
+					<span class="country_code">(+86)</span>
+					<span class="country_text">중국 / China</span>
+				</li>
+				<li class="data">
+					<span class="country_code">(+86)</span>
+					<span class="country_text">중국 / China</span>
+				</li>
+				</ul>
+			</div>
+		</div>
+
+
+		<h2 class="guide_title">캡차</h2>
+		<ul class="txt_guide">
+		<li>이미지로 보기가 기본</li>
+		<li>음성으로 듣기 시 captcha_wrap에 voice클래스 추가 및 마크업 세부 내용 교체 필요</li>
+		<li>모바일에서는 음성으로 듣기 사용 안함</li>
+		</ul>
+		<h3 class="guide_title">이미지로 보기</h3>
+		<div class="captcha_wrap" style=""><!-- [D] 캡차 : 이미지로 보기 선택시 노출 영역 -->
+			<p class="guide_text">아래 이미지를 보이는 대로 입력해주세요.</p>
+			<div class="captcha_area">
+				<div class="captcha_content">
+					<div class="captcha_img">
+					<img src="img/@tmp_captcha.png" width="223" height="62" alt="캡차이미지">
+					</div>
+				</div>
+				<div class="captcha_ctrl">
+					<a href="#" class="captcha_btn ico_refresh"><span class="btn_text">새로고침</span></a>
+					<a href="#" class="captcha_btn ico_voice is_pc_show"><span class="btn_text">음성으로 듣기</span></a>
+				</div>
+			</div>
+		</div>
+		<h3 class="guide_title is_pc_show">음성으로 듣기</h3>
+		<div class="captcha_wrap voice is_pc_show" style=""><!-- [D] 캡차 : 음성으로 듣기 선택시 노출 영역 -->
+			<p class="guide_text">스피커로 들리는 내용을 입력해 주세요.</p>
+			<div class="captcha_area">
+				<div class="captcha_content">
+					<span class="text">음성으로 안내중</span>
+				</div>
+				<div class="captcha_ctrl">
+					<a href="#" class="captcha_btn ico_refresh"><span class="btn_text">새로고침</span></a>
+					<a href="#" class="captcha_btn ico_image"><span class="btn_text">이미지로 보기</span></a>
+				</div>
+			</div>
+		</div>
+
+		<h2 class="guide_title">유의사항</h2>
+		<h3 class="guide_title">독립적인 형태</h3>
+		<ul class="list_noti">
+		<li class="noti_text">체험이나 회사 내 담당자 추가를 위한 경우라면 개인회원을 선택하시면 편리합니다.</li>
+		<li class="noti_text">사업자 회원으로 가입하시려면 사업자등록증 사본을 미리 준비해주세요.</li>
+		</ul>
+		
+		<h3 class="guide_title form_noti">폼 영역 안에 위치</h3>
+		<div class="form_wrap">
+			<ul class="list_noti">
+			<li class="noti_text">체험이나 회사 내 담당자 추가를 위한 경우라면 개인회원을 선택하시면 편리합니다.</li>
+			<li class="noti_text">사업자 회원으로 가입하시려면 사업자등록증 사본을 미리 준비해주세요.</li>
+			</ul>
+		</div>
+
+		<h2 class="guide_title">단계</h2>
+		<ul class="txt_guide">
+		<li>활성화된 step 에 .is_active 클래스 추가</li>
+		<li>활성화된 단계에 .blind 처리된 '현재단계' 텍스트 추가</li>
+		</ul>
+		<div class="step_wrap">
+			<ol class="step_area">
+			<li class="step is_active"><!--[D] 활성화된 step 에 .is_active 클래스 추가 -->
+			<span class="blind">현재단계</span><!--[D] 활성화된 단계에 .blind 처리된 '현재단계' 텍스트 추가 부탁드립니다.-->
+			<span class="step_txt">이용약관 동의</span>
+			</li>
+			<li class="step">
+			<span class="step_txt">회원정보 입력</span>
+			</li>
+			<li class="step">
+			<span class="step_txt">회원가입 완료</span>
+			</li>
+			</ol>
+		</div>
+		<div class="step_wrap">
+			<ol class="step_area">
+			<li class="step"><!--[D] 활성화된 step 에 .is_active 클래스 추가 -->
+			<span class="step_txt">이용약관 동의</span>
+			</li>
+			<li class="step is_active">
+			<span class="blind">현재단계</span><!--[D] 활성화된 단계에 .blind 처리된 '현재단계' 텍스트 추가 부탁드립니다.-->
+			<span class="step_txt">회원정보 입력</span>
+			</li>
+			<li class="step">
+			<span class="step_txt">회원가입 완료</span>
+			</li>
+			</ol>
+		</div>
+		<div class="step_wrap">
+			<ol class="step_area">
+			<li class="step"><!--[D] 활성화된 step 에 .is_active 클래스 추가 -->
+			<span class="step_txt">이용약관 동의</span>
+			</li>
+			<li class="step">
+			<span class="step_txt">회원정보 입력</span>
+			</li>
+			<li class="step is_active">
+			<span class="blind">현재단계</span><!--[D] 활성화된 단계에 .blind 처리된 '현재단계' 텍스트 추가 부탁드립니다.-->
+			<span class="step_txt">회원가입 완료</span>
+			</li>
+			</ol>
+		</div>
+
+		<h2 class="guide_title">폼</h2>
+		<ul class="txt_guide">
+		<li>입력 오류시 form_input_area에 is_error 클래스 추가</li>
+		<li>회원가입 폼은 사업자용 폼의 너비가 더 큰 관계로 때문에 signup_form_wrap 에 business클래스 추가 필요</li>
+		<li>구분선이 필요한 행의 form_title, form_input_area에 boder_line 클래스 추가</li>
+		<li>파일첨부 있는 행에는 form_title, form_input_area에 is_file_row 클래스 추가</li>
+		<li></li>
+		</ul>
+		<h3 class="guide_title">개인용</h3>
+		<div class="form_wrap signup_form_wrap">
+			<form>
+			<fieldset>
+			<legend>회원정보 입력</legend>
+			<dl class="lst_form">
+			<dt class="form_title"><label for="email">이메일</label><em class="ico_required_fields">필수 입력</em></dt>
+			<dd class="form_input_area">
+				<span class="error_control_area"><!-- [D]입력 오류시 해당 error_control_area에 is_error 클래스 추가 -->
+					<span class="inp_row">
+						<span class="inp_bx">
+							<input type="text" id="email"	class="inp" title="이메일" placeholder="이메일">
+						</span>
+						<button type="button" class="btn btn_action" disabled>인증메일 발송</button><!-- [D] 비활성 상태인 버튼에는 disabled 속성 추가 -->
+					</span>
+					<em class="error_txt">유효성 메시지 표시 영역</em>
+				</span>
+			</dd>
+			<dt class="form_title"><label for="pass">비밀번호</label><em class="ico_required_fields">필수 입력</em></dt>
+			<dd class="form_input_area">
+				<span class="error_control_area">
+					<span class="inp_row">
+						<span class="inp_bx">
+							<input type="password" id="pass" class="inp" title="비밀번호" placeholder="비밀번호 (영문/숫자/특수문자 조합하여 8자리 이상 입력)">
+						</span>
+					</span>
+					<em class="error_txt">유효성 메시지 표시 영역</em>
+					<span class="tcm_tooltip" role="tooltip"><!-- [D] 툴팁 활성시 tcm_tooltip 에 is_show 클래스 추가 -->
+						<span class="tooltip_arrow"></span>
+						<span class="tooltip_inner">Caps Lock이 켜져 있습니다.</span>
+					</span>
+				</span>
+				<span class="error_control_area">
+					<span class="inp_row">
+						<span class="inp_bx">
+							<input type="password" class="inp" title="비밀번호 확인" placeholder="비밀번호 확인">
+						</span>
+					</span>
+					<em class="error_txt">유효성 메시지 표시 영역</em>
+					<span class="tcm_tooltip" role="tooltip"><!-- [D] 툴팁 활성시 tcm_tooltip 에 is_show 클래스 추가 -->
+						<span class="tooltip_arrow"></span>
+						<span class="tooltip_inner">Caps Lock이 켜져 있습니다.</span>
+					</span>
+				</span>
+			</dd>
+			<dt class="form_title boder_line"><label for="name">이름</label><em class="ico_required_fields">필수 입력</em></dt>
+			<dd class="form_input_area boder_line"><!-- [D] 구분선 필요한 행 form_title, form_input_area에 boder_line 클래스 추가 -->
+				<span class="error_control_area">
+					<span class="inp_row">
+						<span class="inp_bx">
+							<input type="text" id="name" class="inp" title="이름" placeholder="이름">
+						</span>
+					</span>
+					<em class="error_txt">유효성 메시지 표시 영역</em>
+				</span>
+			</dd>
+			<dt class="form_title"><label for="phone">휴대폰 번호</label><em class="ico_required_fields">필수 입력</em></dt>
+			<dd class="form_input_area">
+				<div class="error_control_area"><!-- [D]국가번호 선택 미노출 시 해당 행error_control_area에 is_hide 클래스 추가 -->
+					<div class="inp_row">
+						<span class="select_bx">
+							<span class="blind">국제전화 번호 선택</span>
+							<select class="inp_select" id="tel">
+								<option value="국가 검색" selected disabled >국가 검색 (국가번호, 국가명)</option>
+								<option value="미국">(+1) 미국 / United States</option>
+								<option value="캐나다">(+1) 캐나다 / Canada</option>
+								<option value="대한민국">(+82) 대한민국 / Korea, Republic of</option>
+								<option value="일본">(+81) 일본 / Japan</option>
+								<option value="중국">(+86) 중국 / China</option>
+							</select>
+						</span>
+					</div>
+					<em class="error_txt">유효성 메시지 표시 영역</em>
+				</div>
+				<span class="error_control_area">
+					<span class="inp_row">
+						<span class="inp_bx">
+							<input type="text" class="inp" title="휴대폰 번호" placeholder="-없이 입력">
+						</span>
+						<button type="button" class="btn btn_action" disabled>인증번호 요청</button>
+					</span>
+					<em class="error_txt">유효성 메시지 표시 영역</em>
+				</span>
+				<span class="error_control_area">
+					<span class="inp_row">
+						<span class="inp_bx inp_valid_time">
+							<input type="text" class="inp" title="인증번호" placeholder="인증번호 (유효시간 3분)">
+							<span class="valid_time">유효시간 <em class="time_text">02:50</em></span>
+						</span>
+						<button type="button" class="btn btn_action" disabled>확인</button>
+					</span>
+					<em class="error_txt">유효성 메시지 표시 영역</em>
+				</span>
+			</dd>
+			<dt class="form_title"><label for="address">주소</label></dt>
+			<dd class="form_input_area">
+				<span class="error_control_area">
+					<span class="inp_row">
+						<span class="inp_bx">
+							<input type="text" id="address" class="inp" title="주소" placeholder="주소" disabled>
+						</span>
+						<button type="button" class="btn btn_action">주소 검색</button>
+					</span>
+					<span class="inp_row">
+						<span class="inp_bx">
+							<input type="text" class="inp" title="상세주소" placeholder="상세주소" disabled>
+						</span>
+					</span>
+					<em class="error_txt">유효성 메시지 표시 영역</em>
+				</span>
+			</dd>
+			<dt class="form_title"><label for="tel">유선전화</label></dt>
+			<dd class="form_input_area">
+				<div class="error_control_area"><!-- [D]국가번호 선택 미노출 시 해당 행error_control_area에 is_hide 클래스 추가 -->
+					<div class="inp_row">
+						<span class="select_bx">
+							<span class="blind">국제전화 번호 선택</span>
+							<select class="inp_select" id="tel">
+								<option value="국가 검색" selected disabled >국가 검색 (국가번호, 국가명)</option>
+								<option value="미국">(+1) 미국 / United States</option>
+								<option value="캐나다">(+1) 캐나다 / Canada</option>
+								<option value="대한민국">(+82) 대한민국 / Korea, Republic of</option>
+								<option value="일본">(+81) 일본 / Japan</option>
+								<option value="중국">(+86) 중국 / China</option>
+							</select>
+						</span>
+					</div>
+					<em class="error_txt">유효성 메시지 표시 영역</em>
+				</div>
+				<span class="error_control_area">
+					<span class="inp_row">
+						<span class="inp_bx">
+							<input type="text" class="inp" title="유선전화 번호" placeholder="-없이 입력">
+						</span>
+					</span>
+					<em class="error_txt">유효성 메시지 표시 영역</em>
+				</span>
+			</dd>
+			</dl>
+			</fieldset>
+			</form>
+		</div>
+
+		<h3 class="guide_title">사업자용</h3>
+		<div class="form_wrap signup_form_wrap business">
+			<form>
+			<fieldset>
+			<dl class="lst_form">
+			<dt class="form_title"><label for="email">이메일</label><em class="ico_required_fields">필수 입력</em></dt>
+			<dd class="form_input_area">
+				<span class="error_control_area"><!-- [D]입력 오류시 해당 error_control_area에 is_error 클래스 추가 -->
+					<span class="inp_row">
+						<span class="inp_bx">
+							<input type="text" id="email" class="inp" title="이메일" placeholder="이메일">
+						</span>
+						<button type="button" class="btn btn_action" disabled>인증메일 발송</button><!-- [D] 비활성 상태인 버튼에는 disabled 속성 추가 -->
+					</span>
+					<em class="error_txt">유효성 메시지 표시 영역</em>
+				</span>
+			</dd>
+			<dt class="form_title"><label for="pass">비밀번호</label><em class="ico_required_fields">필수 입력</em></dt>
+			<dd class="form_input_area">
+				<span class="error_control_area">
+					<span class="inp_row">
+						<span class="inp_bx">
+							<input type="password" id="pass" class="inp" title="비밀번호" placeholder="비밀번호 (영문/숫자/특수문자 조합하여 8자리 이상 입력)">
+						</span>
+					</span>
+					<em class="error_txt">유효성 메시지 표시 영역</em>
+					<span class="tcm_tooltip" role="tooltip"><!-- [D] 툴팁 활성시 tcm_tooltip 에 is_show 클래스 추가 -->
+						<span class="tooltip_arrow"></span>
+						<span class="tooltip_inner">Caps Lock이 켜져 있습니다.</span>
+					</span>
+				</span>
+				<span class="error_control_area">
+					<span class="inp_row">
+						<span class="inp_bx">
+							<input type="password" class="inp" title="비밀번호 확인" placeholder="비밀번호 확인">
+						</span>
+					</span>
+					<em class="error_txt">유효성 메시지 표시 영역</em>
+					<span class="tcm_tooltip" role="tooltip"><!-- [D] 툴팁 활성시 tcm_tooltip 에 is_show 클래스 추가 -->
+						<span class="tooltip_arrow"></span>
+						<span class="tooltip_inner">Caps Lock이 켜져 있습니다.</span>
+					</span>
+				</span>
+			</dd>
+			<dt class="form_title boder_line"><label for="name">담당자 이름</label><em class="ico_required_fields">필수 입력</em></dt>
+			<dd class="form_input_area boder_line"><!-- [D] 구분선 필요한 행 form_title, form_input_area에 boder_line 클래스 추가 -->
+				<span class="error_control_area">
+					<span class="inp_row">
+						<span class="inp_bx">
+							<input type="text" id="name" class="inp" title="담당자 이름" placeholder="담당자 이름">
+						</span>
+					</span>
+					<em class="error_txt">유효성 메시지 표시 영역</em>
+				</span>
+			</dd>
+			<dt class="form_title"><label for="phone">휴대폰 번호</label><em class="ico_required_fields">필수 입력</em></dt>
+			<dd class="form_input_area">
+				<div class="error_control_area"><!-- [D]국가번호 선택 미노출 시 해당 행error_control_area에 is_hide 클래스 추가 -->
+					<div class="inp_row">
+						<span class="select_bx">
+							<span class="blind">국제전화 번호 선택</span>
+							<select class="inp_select" id="tel">
+								<option value="국가 검색" selected disabled >국가 검색 (국가번호, 국가명)</option>
+								<option value="미국">(+1) 미국 / United States</option>
+								<option value="캐나다">(+1) 캐나다 / Canada</option>
+								<option value="대한민국">(+82) 대한민국 / Korea, Republic of</option>
+								<option value="일본">(+81) 일본 / Japan</option>
+								<option value="중국">(+86) 중국 / China</option>
+							</select>
+						</span>
+					</div>
+					<div class="error_txt">유효성 메시지 표시 영역</div>
+				</div>
+				<div class="error_control_area">
+					<div class="inp_row">
+						<span class="inp_bx">
+							<input type="text" class="inp" title="휴대폰 번호" placeholder="-없이 입력">
+						</span>
+						<button type="button" class="btn btn_action" disabled>인증번호 요청</button>
+					</div>
+					<em class="error_txt">유효성 메시지 표시 영역</em>
+				</div>
+				<div class="error_control_area">
+					<span class="inp_row">
+						<span class="inp_bx inp_valid_time">
+							<input type="text" class="inp" title="인증번호" placeholder="인증번호 (유효시간 3분)">
+							<span class="valid_time">유효시간 <em class="time_text">02:50</em></span>
+						</span>
+						<button type="button" class="btn btn_action" disabled>확인</button>
+					</span>
+					<em class="error_txt">유효성 메시지 표시 영역</em>
+				</div>
+			</dd>
+			<dt class="form_title boder_line"><label for="business_num">사업자등록번호</label><em class="ico_required_fields">필수 입력</em></dt>
+			<dd class="form_input_area boder_line">
+				<span class="error_control_area">
+					<span class="inp_row">
+						<span class="inp_bx">
+							<input type="text" id="business_num" class="inp" title="사업자등록번호" placeholder="-없이 입력 (예시 : 1448115549)">
+						</span>
+					</span>
+					<em class="error_txt">유효성 메시지 표시 영역</em>
+				</span>
+			</dd>
+			<dt class="form_title"><label for="business_name">사업자명</label><em class="ico_required_fields">필수 입력</em></dt>
+			<dd class="form_input_area">
+				<span class="error_control_area">
+					<span class="inp_row">
+						<span class="inp_bx">
+							<input type="text" id="business_name" class="inp" title="사업자명" placeholder="사업자명">
+						</span>
+					</span>
+					<em class="error_txt">유효성 메시지 표시 영역</em>
+				</span>
+			</dd>
+			<dt class="form_title"><label for="representative_name">대표자명</label><em class="ico_required_fields">필수 입력</em></dt>
+			<dd class="form_input_area">
+				<span class="error_control_area">
+					<span class="inp_row">
+						<span class="inp_bx">
+							<input type="text" id="representative_name" class="inp" title="대표자명" placeholder="대표자명">
+						</span>
+					</span>
+					<em class="error_txt">유효성 메시지 표시 영역</em>
+				</span>
+			</dd>
+			<dt class="form_title"><label for="industry">업종 / 업태</label><em class="ico_required_fields">필수 입력</em></dt>
+			<dd class="form_input_area">
+				<span class="error_control_area">
+					<span class="inp_row">
+						<span class="inp_bx">
+							<input type="text" id="industry" class="inp" title="업종" placeholder="업종">
+						</span>
+						<span class="inp_bx">
+							<input type="text" class="inp" title="업태" placeholder="업태">
+						</span>
+					</span>
+					<em class="error_txt">유효성 메시지 표시 영역</em>
+				</span>
+			</dd>
+			<dt class="form_title"><label for="business_address">사업장 주소</label><em class="ico_required_fields">필수 입력</em></dt>
+			<dd class="form_input_area">
+				<span class="error_control_area">
+					<span class="inp_row">
+						<span class="inp_bx">
+							<input type="text" id="business_address" class="inp" title="사업장 주소" placeholder="주소" disabled>
+						</span>
+						<button type="button" class="btn btn_action">주소 검색</button>
+					</span>
+					<span class="inp_row">
+						<span class="inp_bx">
+							<input type="text" class="inp" title="상세주소" placeholder="상세주소" disabled>
+						</span>
+					</span>
+					<em class="error_txt">유효성 메시지 표시 영역</em>
+				</span>
+			</dd>
+			<dt class="form_title"><label for="business_tel">유선전화</label></dt>
+			<dd class="form_input_area">
+				<div class="error_control_area"><!-- [D]국가번호 선택 미노출 시 해당 행error_control_area에 is_hide 클래스 추가 -->
+					<div class="inp_row">
+						<span class="select_bx">
+							<span class="blind">국제전화 번호 선택</span>
+							<select class="inp_select" id="tel">
+								<option value="국가 검색" selected disabled >국가 검색 (국가번호, 국가명)</option>
+								<option value="미국">(+1) 미국 / United States</option>
+								<option value="캐나다">(+1) 캐나다 / Canada</option>
+								<option value="대한민국">(+82) 대한민국 / Korea, Republic of</option>
+								<option value="일본">(+81) 일본 / Japan</option>
+								<option value="중국">(+86) 중국 / China</option>
+							</select>
+						</span>
+					</div>
+					<em class="error_txt">유효성 메시지 표시 영역</em>
+				</div>
+				<span class="error_control_area">
+					<span class="inp_row">
+						<span class="inp_bx">
+							<input type="text" class="inp" title="유선전화 번호" placeholder="-없이 입력">
+						</span>
+					</span>
+					<em class="error_txt">유효성 메시지 표시 영역</em>
+				</span>
+			</dd>
+			<dt class="form_title is_file_row"><label for="business_registration">사업자등록증 첨부</label><em class="ico_required_fields">필수 입력</em></dt><!-- [D] 파일첨부 있는 행에는 form_title와 form_input_area에 is_file_row 클래스 추가 -->
+			<dd class="form_input_area is_file_row">
+				<span class="error_control_area">
+					<span class="inp_row">
+						<span class="inp_file_wrap">
+							<input type="file" id="business_registration" class="inp_file" name="파일 첨부">		
+							<span class="inp_file_shape">
+								<span class="btn_file btn_action">파일 첨부</span>
+								<span class="input_file_status">선택된 파일 없음</span><!-- [D] 파일 선택시 첨부된 파일명 노출되도록 개발 적용 부탁드립니다 -->
+							</span>
+						</span>
+					</span>
+					<span class="desc_text">jpeg, png, gif, tiff, pdf 포맷으로 등록해주세요. (최대용량 5MB)</span>
+					<em class="error_txt">유효성 메시지 표시 영역</em>
+				</span>
+			</dd>
+			</dl>
+			</fieldset>
+			</form>
+		</div>
+
+	</div>
+</div>
+<div class="tcm_layer_pop_wrap">
+	<div class="content">
+		<h2 class="guide_title">레이어 팝업</h2>
+		<div class="txt_guide">
+			<p>레이어 팝업 노출시 tcm_layer_dimmed와 해당 tcm_pop_wrap에 is_show 클래스 추가</p>
+		</div>
+		<div class="tcm_layer_dimmed"></div><!-- [D] 레이어 팝업 노출시 tcm_layer_dimmed와 해당 tcm_pop_wrap에 is_show 클래스 추가 -->
+		<div class="tcm_pop_wrap">
+			<div class="ly_pop">
+				<div class="title_wrap">
+					<h3 class="ly_tit">타이틀</h3>
+				</div>
+				<div class="desc_text_wrap">
+					<p class="desc_text">팝업 내용</p>
+				</div>
+				<div class="btn_area">
+					<button class="btn btn_point">확인</button>
+				</div>
+				<button type="button" class="btn_close_layer">닫기</button>
+			</div>
+		</div>
+	</div>
+
+</div>
+<!-- 마크업 확인용입니다. -->
+<style>
+	.case_view{display:inline-block;position:fixed;bottom:0;left:0;z-index:1000;width:auto;padding:5px;background:#000;opacity:0.7}
+	.case_view .btn{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+</style>
+<div class="case_view"><!-- PC 노출 케이스뷰 -->
+	<a href="#" class="btn btn_device_change">모바일 화면 전환</a>
+	<a href="#" class="btn btn_toggle_caseview">케이스뷰 열기/닫기</a>
+</div>
+
+<div class="case_view" style="display:none"><!-- 모바일 노출 케이스뷰 -->
+	<a href="#" class="btn btn_device_change">PC 화면 전환</a>
+	<a href="#" class="btn btn_toggle_caseview">케이스뷰 열기/닫기</a>
+</div>
+<script src="js/libs/jquery-1.12.4.min.js"></script>
+<script>
+$(".case_view .btn_toggle_caseview").click(function() {
+	$(this).siblings('.btn').toggle();
+});
+$(".case_view .btn_device_change").click(function() {
+	$('.case_view').toggle();
+	$('body').toggleClass('is_m');
+});
+</script>
+<!-- //마크업 확인용입니다. -->
+</body>
+</html>

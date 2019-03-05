@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="all">
+<title>토스트 회원가입 :: TOAST Cloud</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<base href="../">
+<link rel="stylesheet" type="text/css" href="css/gnb.css">
+<link rel="stylesheet" type="text/css" href="css/toast.css">
+<link rel="stylesheet" type="text/css" href="css/toast_member.css">
+</head>
+<body>
+<div class="wrap tcm_wrap header_fixed_wrap">
+	<!--[D] HEADER -->
+	<?php include '../inc/header.html';?>
+	<!--//[D] HEADER -->
+	<div id="container" class="container">
+		<!-- [D] CONTENTS -->
+		<div id="content" class="content signup_form_content">
+			<h2 class="title_text"><span class="service_name">TOAST</span> 회원가입</h2>
+			<div class="signup_step_wrap">
+				<ol class="step_area">
+				<li class="step">
+				<span class="step_txt">이용 약관 동의</span>
+				</li>
+				<li class="step is_active"><!--[D] 활성화된 step 에 .is_active 클래스 추가 -->
+				<span class="blind">현재단계</span><!--[D] 활성화된 단계에 .blind 처리된 '현재단계' 텍스트 추가 부탁드립니다.-->
+				<span class="step_txt">회원 정보 입력</span>
+				</li>
+				<li class="step">
+				<span class="step_txt">회원 가입 완료</span>
+				</li>
+				</ol>
+			</div>
+			
+			<h3 class="blind">회원정보 입력</h3>
+			<div class="form_wrap signup_form_wrap">
+				<form>
+				<fieldset>
+				<legend>회원정보 입력</legend>
+				<div class="lst_form_wrap">
+				<dl class="lst_form">
+				<dt class="form_title"><label for="email">이메일</label><em class="ico_required_fields">필수 입력</em></dt>
+				<dd class="form_input_area">
+					<span class="error_control_area"><!-- [D]입력 오류시 해당 error_control_area에 is_error 클래스 추가 -->
+						<span class="inp_row">
+							<span class="inp_bx">
+								<input type="text" id="email" class="inp" title="이메일" placeholder="이메일">
+							</span>
+							<button type="button" class="btn" disabled>메일 인증</button><!-- [D] 비활성 상태인 버튼에는 disabled 속성 추가 -->
+						</span>
+						<em class="error_txt">유효성 메시지 표시 영역</em>
+					</span>
+				</dd>
+				<dt class="form_title"><label for="pass">비밀번호</label><em class="ico_required_fields">필수 입력</em></dt>
+				<dd class="form_input_area">
+					<span class="error_control_area">
+						<span class="inp_row">
+							<span class="inp_bx">
+								<input type="password" id="pass" class="inp" title="비밀번호" placeholder="비밀번호 (영문,숫자,특수문자를 2개 이상 조합)">
+							</span>
+						</span>
+						<em class="error_txt">유효성 메시지 표시 영역</em>
+						<span class="tooltip_custom" role="tooltip"><!-- [D] 툴팁 활성시 tooltip 에 is_show 클래스 추가 -->
+							<span class="tooltip_inner">Caps Lock이 켜져 있습니다.</span>
+						</span>
+					</span>
+					<span class="error_control_area">
+						<span class="inp_row">
+							<span class="inp_bx">
+								<input type="password" class="inp" title="비밀번호 확인" placeholder="비밀번호 확인">
+							</span>
+						</span>
+						<em class="error_txt">유효성 메시지 표시 영역</em>
+						<span class="tooltip_custom" role="tooltip"><!-- [D] 툴팁 활성시 tooltip 에 is_show 클래스 추가 -->
+							<span class="tooltip_inner">Caps Lock이 켜져 있습니다.</span>
+						</span>
+					</span>
+				</dd>
+				</dl>
+			</div>
+			<div class="lst_form_wrap">
+			<dl class="lst_form">
+				<dt class="form_title"><label for="name">담당자 이름</label><em class="ico_required_fields">필수 입력</em></dt>
+				<dd class="form_input_area">
+					<span class="error_control_area">
+						<span class="inp_row">
+							<span class="inp_bx">
+								<input type="text" id="name" class="inp" title="담당자 이름" placeholder="담당자 이름">
+							</span>
+						</span>
+						<em class="error_txt">유효성 메시지 표시 영역</em>
+					</span>
+				</dd>
+				<dt class="form_title"><label for="phone">휴대폰 번호</label><em class="ico_required_fields">필수 입력</em></dt>
+				<dd class="form_input_area">
+					<div class="error_control_area"><!-- [D]국가번호 선택 미노출 시 해당 행error_control_area에 is_hide 클래스 추가 -->
+						<div class="inp_row">
+							<span class="select_bx">
+								<span class="blind">국제전화 번호 선택</span>
+								<select class="inp_select" id="tel">
+									<option value="국가 검색" selected disabled >국가 검색 (국가번호, 국가명)</option>
+									<option value="미국">United States(+1)</option>
+									<option value="캐나다">Canada(+1)</option>
+									<option value="대한민국">Korea, Republic of(+82)</option>
+									<option value="일본">Japan(+81)</option>
+									<option value="중국">China(+86)</option>
+								</select>
+							</span>
+						</div>
+						<div class="error_txt">유효성 메시지 표시 영역</div>
+					</div>
+					<div class="error_control_area">
+						<div class="inp_row">
+							<span class="inp_bx">
+								<input type="text" class="inp" title="휴대폰 번호" placeholder="- 없이 입력">
+							</span>
+							<button type="button" class="btn" disabled>인증 번호 받기</button>
+						</div>
+						<em class="error_txt">유효성 메시지 표시 영역</em>
+					</div>
+					<div class="error_control_area">
+						<span class="inp_row">
+							<span class="inp_bx inp_valid_time">
+								<input type="text" class="inp" title="인증번호" placeholder="인증번호">
+								<span class="valid_time">유효시간 <em class="time_text">02:50</em></span>
+							</span>
+							<button type="button" class="btn">확인</button>
+						</span>
+						<em class="error_txt">유효성 메시지 표시 영역</em>
+					</div>
+				</dd>
+				</dl>
+			</div>
+			<div class="lst_form_wrap">
+				<dl class="lst_form">
+				<dt class="form_title boder_line"><label for="business_num">사업자등록번호</label><em class="ico_required_fields">필수 입력</em></dt>
+				<dd class="form_input_area boder_line">
+					<span class="error_control_area">
+						<span class="inp_row">
+							<span class="inp_bx">
+								<input type="text" id="business_num" class="inp" title="사업자등록번호" placeholder="- 없이 입력">
+							</span>
+						</span>
+						<em class="error_txt">유효성 메시지 표시 영역</em>
+					</span>
+				</dd>
+				<dt class="form_title"><label for="business_name">사업자명</label><em class="ico_required_fields">필수 입력</em></dt>
+				<dd class="form_input_area">
+					<span class="error_control_area">
+						<span class="inp_row">
+							<span class="inp_bx">
+								<input type="text" id="business_name" class="inp" title="사업자명" placeholder="사업자명">
+							</span>
+						</span>
+						<em class="error_txt">유효성 메시지 표시 영역</em>
+					</span>
+				</dd>
+				<dt class="form_title"><label for="representative_name">대표자명</label><em class="ico_required_fields">필수 입력</em></dt>
+				<dd class="form_input_area">
+					<span class="error_control_area">
+						<span class="inp_row">
+							<span class="inp_bx">
+								<input type="text" id="representative_name" class="inp" title="대표자명" placeholder="대표자명">
+							</span>
+						</span>
+						<em class="error_txt">유효성 메시지 표시 영역</em>
+					</span>
+				</dd>
+				<dt class="form_title"><label for="industry">업태 / 종목</label><em class="ico_required_fields">필수 입력</em></dt>
+				<dd class="form_input_area">
+					<span class="error_control_area">
+						<span class="inp_row">
+							<span class="inp_bx">
+								<input type="text" id="industry" class="inp" title="업태" placeholder="업태">
+							</span>
+							<span class="inp_bx">
+								<input type="text" class="inp" title="종목" placeholder="종목">
+							</span>
+						</span>
+						<em class="error_txt">유효성 메시지 표시 영역</em>
+					</span>
+				</dd>
+				<dt class="form_title"><label for="business_address">사업장 주소</label><em class="ico_required_fields">필수 입력</em></dt>
+				<dd class="form_input_area">
+					<span class="error_control_area">
+						<span class="inp_row">
+							<span class="inp_bx">
+								<input type="text" id="business_address" class="inp" title="주소 입력" placeholder="주소 입력" disabled>
+							</span>
+							<button type="button" class="btn">주소 검색</button>
+						</span>
+						<span class="inp_row">
+							<span class="inp_bx">
+								<input type="text" class="inp" title="상세 주소 입력" placeholder="상세 주소 입력" disabled>
+							</span>
+						</span>
+						<em class="error_txt">유효성 메시지 표시 영역</em>
+					</span>
+				</dd>
+				<dt class="form_title"><label for="business_tel">유선전화</label></dt>
+				<dd class="form_input_area">
+					<div class="error_control_area"><!-- [D]국가번호 선택 미노출 시 해당 행error_control_area에 is_hide 클래스 추가 -->
+						<div class="inp_row">
+							<span class="select_bx">
+								<span class="blind">국제전화 번호 선택</span>
+								<select class="inp_select" id="tel">
+									<option value="국가 검색" selected disabled >국가 검색 (국가번호, 국가명)</option>
+									<option value="미국">United States(+1)</option>
+									<option value="캐나다">Canada(+1)</option>
+									<option value="대한민국">Korea, Republic of(+82)</option>
+									<option value="일본">Japan(+81)</option>
+									<option value="중국">China(+86)</option>
+								</select>
+							</span>
+						</div>
+						<em class="error_txt">유효성 메시지 표시 영역</em>
+					</div>
+					<span class="error_control_area">
+						<span class="inp_row">
+							<span class="inp_bx">
+								<input type="text" class="inp" title="유선전화 번호" placeholder="- 없이 입력">
+							</span>
+						</span>
+						<em class="error_txt">유효성 메시지 표시 영역</em>
+					</span>
+				</dd>
+				<dt class="form_title is_file_row"><label for="business_registration">첨부</label><em class="ico_required_fields">필수 입력</em></dt><!-- [D] 파일첨부 있는 행에는 form_title와 form_input_area에 is_file_row 클래스 추가 -->
+				<dd class="form_input_area is_file_row">
+					<span class="error_control_area">
+						<span class="inp_row">
+							<span class="inp_file_wrap">
+								<input type="file" id="business_registration" class="inp_file" name="파일 첨부">		
+								<span class="inp_file_shape">
+									<span class="btn btn_file">파일 첨부</span>
+									<span class="input_file_status">선택된 파일 없음</span><!-- [D] 파일 선택시 첨부된 파일명 노출되도록 개발 적용 부탁드립니다 -->
+								</span>
+							</span>
+						</span>
+						<span class="desc_text">jpg, png 형식으로 등록해 주세요. (최대 용량 : 5MB)</span>
+						<em class="error_txt">유효성 메시지 표시 영역</em>
+					</span>
+				</dd>
+				</dl>
+			</div>
+				</fieldset>
+				</form>
+			</div>
+			
+			<div class="btn_area">
+				<button type="button" class="btn btn_cancel">취소</button>
+				<button type="button" class="btn">완료</button>
+			</div>
+		</div>
+		<!-- //[D] CONTENTS -->
+	</div>
+	<!--[D] FOOTER -->
+	<?php include '../inc/footer.html';?>
+	<!--//[D] FOOTER -->
+</div>
+
+<!--[D] 레이어팝업 -->
+<!-- [D] 사업장 주소 입력 요청 팝업 -->
+<div class="modal pop_custom pop_member" id="modal_pop6">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">회원정보 입력</h4>
+				<button type="button" class="btn_close" data-dismiss="modal">닫기</button>
+			</div>
+			<div class="modal-body">
+				<p class="ly_txt">사업장 주소를 입력해주세요.</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn" data-dismiss="modal">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--[D] //레이어팝업 -->
+<!-- Javascript Area -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+<!-- 마크업 확인용입니다. -->
+<style>
+	#case_view{display:inline-block;position:fixed;bottom:0;left:0;z-index:1000;widdt:auto;padding:5px;background:#000;opacity:0.7}
+	#case_view .btn{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+</style>
+<div id="case_view">
+	<a href="#" class="btn" onclick="$('.form_input_area, .error_control_area').toggleClass('is_error');return false;">입력 오류 화면</a>
+	<a href="#" class="btn" onclick="$('.tooltip_custom').toggleClass('is_show');return false;">툴팁 메세지</a>
+	<a href="#" class="btn" data-toggle="modal" data-target="#modal_pop6">사업장 주소 입력 안내 팝업</a>
+</div>
+<script src="js/case_view.js"></script>
+<!-- //마크업 확인용입니다. -->
+</body>
+</html>

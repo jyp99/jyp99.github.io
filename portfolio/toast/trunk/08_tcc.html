@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="all">
+<title>토스트(TOAST) TCC</title>
+
+<meta name="description" content="NHN 엔터테인먼트에서 제공하는 토스트 클라우드 서비스. 오픈스택 기반의 클라우드 인프라, 게임솔루션, 보안, 문자/이메일/알림톡, 협업도구 Dooray, ERP 제공">
+<meta name="keywords" content="토스트, 토스트 클라우드, 클라우드 서비스, 토스트 닷컴, 클라우드, NHN엔터테인먼트, NHN엔터, NHN Entertainment, NHN Ent, TOAST, TOAST Cloud, TOAST CAM, TOAST PC, TOAST Analytics, toast, 토스트캠, 토스트피씨,토스트애널리틱스">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="토스트(TOAST) TCC">
+<meta property="og:description" content="NHN 엔터테인먼트에서 제공하는 토스트 클라우드 서비스. 오픈스택 기반의 클라우드 인프라, 게임솔루션, 보안, 문자/이메일/알림톡, 협업도구 Dooray, ERP 제공">
+<meta property="og:keywords" content="토스트, 토스트 클라우드, 클라우드 서비스, 토스트 닷컴, 클라우드, NHN엔터테인먼트, NHN엔터, NHN Entertainment, NHN Ent, TOAST, TOAST Cloud, TOAST CAM, TOAST PC, TOAST Analytics, toast, 토스트캠, 토스트피씨,토스트애널리틱스">
+<meta property="og:image" content="http://images.toast.com/toast/com/web/common/toast.com.jpg">
+<meta property="og:image:secure_url" content="http://images.toast.com/toast/com/web/common/toast.com.jpg">
+<meta property="og:url" content="https://toast.com">
+<link rel="shortcut icon" href="https://toast.com/resources/img/favicons/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" sizes="180x180" href="/resources/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/resources/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/resources/img/favicons/favicon-16x16.png">
+<link rel="manifest" href="/resources/img/favicons/manifest.json">
+<link rel="mask-icon" href="/resources/img/favicons/safari-pinned-tab.svg">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="css/gnb.css">
+<link rel="stylesheet" type="text/css" href="css/toast.css">
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul class="skip">
+<li><a href="#header" onclick="document.getElementById('header').tabIndex=-1;document.getElementById('header').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+
+<!--[D] noti_browser -->
+<?php include 'inc/noti_browser.html';?>
+<!--//[D] noti_browser -->
+<div class="wrap">
+
+	<!--[D] HEADER -->
+	<?php include 'inc/header.html';?>
+	<!--//[D] HEADER -->
+	<div id="container" class="container">
+		<!-- [D] CONTENTS -->
+		<div id="content" class="content tcc_content">
+			<!-- [D] 서브 비쥬얼 이미지 영역 -->
+			<div class="cover_wrap">
+				<div class="inner">
+					<em class="main_txt">클라우드 시대의 인터넷 데이터 센터</em>
+					<a href="#" class="btn_detail_view">소개 영상 보기</a>
+				</div>
+			</div>
+			<!-- //[D] 서브 비쥬얼 이미지 영역 -->
+			<section class="sec sec_tcc_intro">
+				<div class="sec_inner">
+					<h2 class="h_section"><span class="sub_txt">도심형 인터넷 데이터 센터</span>TOAST Cloud Center</h2>
+					<p class="sub_txt">TCC(TOAST Cloud Center)는 NHN엔터테인먼트의 자체 기술력으로 경기도 판교에 설계·구축한 도심형 인터넷 데이터 센터입니다.<br>장기간의 대규모 인프라 운영경험을 바탕으로 빠르고 안정적인 IT 서비스를 제공할 수 있는 설비를 갖추고 있습니다.</p>
+					<ul class="lst_intro">
+					<li class="intro_item">
+						<span class="dest_txt">Technology</span>
+					</li>
+					<li class="intro_item">
+						<span class="dest_txt">도심형 IDC</span>
+					</li>
+					<li class="intro_item">
+						<span class="dest_txt">Cloud 최적화</span>
+					</li>
+					<li class="intro_item">
+						<span class="dest_txt">비용 효율</span>
+					</li>
+					</ul>
+				</div>
+			</section>
+			<section class="sec sec_tcc_advantage">
+				<div class="sec_inner">
+					<h2 class="blind">특장점</h2>
+					<ul class="nav nav-justified lst_tcc_advantage">
+					<li class="nav-item advantage_item"><a data-toggle="tab" href="#advantage_tab1" class="nav-link active"><span class="nav_txt">접근성</span></a></li>
+					<li class="nav-item advantage_item"><a data-toggle="tab" href="#advantage_tab2" class="nav-link"><span class="nav_txt">망중립 데이터센터</span></a></li>
+					<li class="nav-item advantage_item"><a data-toggle="tab" href="#advantage_tab3" class="nav-link"><span class="nav_txt">고집적 운영환경</span></a></li>
+					<li class="nav-item advantage_item"><a data-toggle="tab" href="#advantage_tab4" class="nav-link"><span class="nav_txt">그린에너지</span></a></li>
+					<li class="nav-item advantage_item"><a data-toggle="tab" href="#advantage_tab5" class="nav-link"><span class="nav_txt">높은 신뢰성</span></a></li>
+					<li class="nav-item advantage_item"><a data-toggle="tab" href="#advantage_tab6" class="nav-link"><span class="nav_txt">운영 편의성 향상</span></a></li>
+					</ul>
+					<div class="tab-content">
+  					<div id="advantage_tab1" class="tab-pane fade show active">
+  						<h3 class="title_txt">접근성</h3>
+  						<div class="desc_wrap">
+  							<p class="desc_txt">TCC는 국가 IT 혁신의 중심지인 판교 테크노밸리에 있습니다.<br>판교 인근 사무실에서 도보로 5분 내에 방문할 수 있는 거리에 있어 접근이 쉽고 서울 중심에서 DR Center로<br>구성할 수 있는 거리에 위치해 있습니다.</p>
+  							<ul class="lst_point">
+								<li class="point_item">판교 인근 사무실 5분거리</li>
+								<li class="point_item">서울 중심에서 DR Center 구성 가능</li>
+  							</ul>
+  						</div>
+						</div>
+						<div id="advantage_tab2" class="tab-pane fade">
+							<h3 class="title_txt">망중립<br>데이터센터</h3>
+  						<div class="desc_wrap">
+  							<p class="desc_txt">인터넷 회선 및 전용선 공급자를 사용자가 신뢰하는 공급자로 자유롭게 선택할 수 있습니다.</p>
+  							<ul class="lst_point">
+								<li class="point_item">인터넷회선 및 전용선 공급자 선택 가능</li>
+  							</ul>
+  						</div>
+						</div>
+						<div id="advantage_tab3" class="tab-pane fade">
+							<h3 class="title_txt">고집적<br>운영환경</h3>
+  						<div class="desc_wrap">
+  							<p class="desc_txt">고집적 Rack으로 평균 40A(8.8kw, 220V 기준)를 사용할 수 있어 타 데이터센터 대비 상면 사용량을 줄일 수 있습니다.<br>또한 Public/Private Cloud 컴퓨팅 환경을 구축할 수 있도록 충분한 전력과 공조를 제공됩니다.</p>
+  							<ul class="lst_point">
+								<li class="point_item">고집적 Rack으로 상면 절감</li>
+								<li class="point_item">Cloud 컴퓨팅 환경에 최적화</li>
+  							</ul>
+  						</div>
+						</div>
+						<div id="advantage_tab4" class="tab-pane fade">
+							<h3 class="title_txt">그린 에너지</h3>
+  						<div class="desc_wrap">
+  							<p class="desc_txt">인체의 온도 유지 방식과 유사한 간접기화냉각(Indirect Evaporative Cooling)을 국내 최초(특허등록)로 도입하여<br>에너지 소비는 줄이면서 외기에서 유입되는 오염, 습도로 인한 피해를 예방하고 있습니다.<br>공조설비를 서버실 별로 독립 구성하여 온, 습도 등의 운영조건을 개별 설정할 수 있습니다.<br>ASHRAE(미국냉난방공조기술자학회)가 권장하는 class1을 기준으로 온, 습도를 엄격하게 관리하고 있습니다.</p>
+  							<ul class="lst_point">
+								<li class="point_item">친환경 기술 적용</li>
+  							</ul>
+  						</div>
+						</div>
+						<div id="advantage_tab5" class="tab-pane fade">
+							<h3 class="title_txt">높은 신뢰성</h3>
+  						<div class="desc_wrap">
+  							<p class="desc_txt">데이터 센터 등급 분류 기준인 Tier III를 모두 준수했고 일부는 Tier IV 기준을 적용하였습니다.<br>동판교 변전소와 서판교 변전소로 이중화된 전력으로 구성하였고, 공용 선로가 아닌 전용 선로를 사용하여 안정성을 높였습니다.</p>
+  							<ul class="lst_point">
+								<li class="point_item">Tier III 모두 만족, 일부는 Tier IV 기준으로 신뢰할 수 있는 안정성을 확보</li>
+  							</ul>
+  						</div>
+						</div>
+						<div id="advantage_tab6" class="tab-pane fade">
+							<h3 class="title_txt">운영 편의성<br>향상</h3>
+  						<div class="desc_wrap">
+  							<p class="desc_txt">이중마루(Raised floor)가 없어 장비 하중 분산을 고려할 필요가 없습니다.<br>가변폭 랙을 사용하여, 표준 19인치 장비 외 OCP규격 서버도 설치할 수 있으며,<br>원격운영관리를 위한 별도의 네트워크 망을 구성하여, 데이터센터 방문을 최소화하였습니다.</p>
+  							<ul class="lst_point">
+								<li class="point_item">가변폭 랙 사용</li>
+								<li class="point_item">원격관리 환경 제공</li>
+  							</ul>
+  						</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="sec sec_tcc_equipment">
+				<div class="sec_inner">
+					<h2 class="h_section">The Newest, Efficient & Intelligent</h2>
+					<ul class="nav nav-justified lst_equipment">
+					<li class="nav-item equipment_item"><a data-toggle="tab" href="#equipment_tab1" class="nav-link active">서버실</a></li>
+					<li class="nav-item equipment_item"><a data-toggle="tab" href="#equipment_tab2" class="nav-link">전력장치</a></li>
+					<li class="nav-item equipment_item"><a data-toggle="tab" href="#equipment_tab3" class="nav-link">공조장치</a></li>
+					<li class="nav-item equipment_item"><a data-toggle="tab" href="#equipment_tab4" class="nav-link">상황실</a></li>
+					</ul>
+					<div class="tab-content">
+  					<div id="equipment_tab1" class="tab-pane fade show active">
+  						<h3 class="blind">서버실</h3>
+  						<img src="img/tcc/img_equipment1.png" alt="서버실">
+							<ul class="lst_photo">
+							<li class="photo_item"><a href="#" class="link_img" data-toggle="modal" data-target="#modal_equipment1">서버실 이미지1</a></li>
+							<li class="photo_item"><a href="#" class="link_img" data-toggle="modal" data-target="#modal_equipment1">서버실 이미지2</a></li>
+							<li class="photo_item"><a href="#" class="link_img" data-toggle="modal" data-target="#modal_equipment1">서버실 이미지3</a></li>
+							<li class="photo_item"><a href="#" class="link_img" data-toggle="modal" data-target="#modal_equipment1">서버실 이미지4</a></li>
+							<li class="photo_item"><a href="#" class="link_img" data-toggle="modal" data-target="#modal_equipment1">서버실 이미지5</a></li>
+							</ul>
+						</div>
+						<div id="equipment_tab2" class="tab-pane fade">
+							<h3 class="blind">전력장치</h3>
+							<img src="img/tcc/img_equipment2.png" alt="전력장치">
+							<ul class="lst_photo">
+							<li class="photo_item"><a href="#" class="link_img" data-toggle="modal" data-target="#modal_equipment2">전력장치 이미지1</a></li>
+							<li class="photo_item"><a href="#" class="link_img" data-toggle="modal" data-target="#modal_equipment2">전력장치 이미지2</a></li>
+							<li class="photo_item"><a href="#" class="link_img" data-toggle="modal" data-target="#modal_equipment2">전력장치 이미지3</a></li>
+							<li class="photo_item"><a href="#" class="link_img" data-toggle="modal" data-target="#modal_equipment2">전력장치 이미지4</a></li>
+							<li class="photo_item"><a href="#" class="link_img" data-toggle="modal" data-target="#modal_equipment2">전력장치 이미지5</a></li>
+							</ul>
+						</div>
+						<div id="equipment_tab3" class="tab-pane fade">
+							<h3 class="blind">공조장치</h3>
+							<img src="img/tcc/img_equipment3.png" alt="공조장치">
+							<ul class="lst_photo">
+							<li class="photo_item"><a href="#" class="link_img" data-toggle="modal" data-target="#modal_equipment3">공조장치 이미지1</a></li>
+							<li class="photo_item"><a href="#" class="link_img" data-toggle="modal" data-target="#modal_equipment3">공조장치 이미지2</a></li>
+							<li class="photo_item"><a href="#" class="link_img" data-toggle="modal" data-target="#modal_equipment3">공조장치 이미지3</a></li>
+							<li class="photo_item"><a href="#" class="link_img" data-toggle="modal" data-target="#modal_equipment3">공조장치 이미지4</a></li>
+							<li class="photo_item"><a href="#" class="link_img" data-toggle="modal" data-target="#modal_equipment3">공조장치 이미지5</a></li>
+							</ul>
+						</div>
+						<div id="equipment_tab4" class="tab-pane fade">
+							<h3 class="blind">상황실</h3>
+							<img src="img/tcc/img_equipment4.png" alt="상황실">
+							<ul class="lst_photo">
+							<li class="photo_item"><a href="#" class="link_img" data-toggle="modal" data-target="#modal_equipment4">상황실 이미지1</a></li>
+							<li class="photo_item"><a href="#" class="link_img" data-toggle="modal" data-target="#modal_equipment4">상황실 이미지2</a></li>
+							<li class="photo_item"><a href="#" class="link_img" data-toggle="modal" data-target="#modal_equipment4">상황실 이미지3</a></li>
+							<li class="photo_item"><a href="#" class="link_img" data-toggle="modal" data-target="#modal_equipment4">상황실 이미지4</a></li>
+							<li class="photo_item"><a href="#" class="link_img" data-toggle="modal" data-target="#modal_equipment4">상황실 이미지5</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="sec sec_tcc_spec">
+				<div class="sec_inner">
+					<h2 class="blind">설계사양</h2>
+					<h3 class="h_txt">설계기준</h3>
+					<div class="cnt_box spec_basic_wrap">
+						<div class="cnt_group">
+							<h4 class="h_cnt">Tier III 기준 및 집적 정보 통신시설 보호지침의 기준을 충족합니다.</h4>
+							<ul class="lst_desc">
+							<li class="desc_item">Uptime / TIA-942 Tier-3 이상의 설계 등급 충족</li>
+							<li class="desc_item">철근콘크리트 구조 조건 및 불연/난연 조건 충족</li>
+							<li class="desc_item">시간당 200mm 이상의 배수 설비 (최근 10년간 최대 강우량의 20% 여유를 둠)</li>
+							<li class="desc_item">지진 규모 7.0 이상의 내진 설계</li>
+							<li class="desc_item">상부공조, 상부 케이블링 방식 적용</li>
+							<li class="desc_item">전기 공급 중단없이 차단기 교체 가능</li>
+							<li class="desc_item">서버실별 온습도를 다르게 운영 가능한 독립형 공조장치를 설치</li>
+							<li class="desc_item">1RU 서버 3500대를 설치할수 있는 서버실 8개 보유</li>
+							<li class="desc_item">각 서버실 출입문마다 지문인식기 채택</li>
+							</ul>
+						</div>
+					</div>
+					<h3 class="h_txt">서버실/전력구성/상황실</h3>
+					<div class="cnt_box spec_desc_wrap">
+						<div class="cnt_group">
+							<h4 class="h_cnt">서버실</h4>
+							<ul class="lst_desc">
+							<li class="desc_item">Raised floor(이중마루)가 없는 방식</li>
+							<li class="desc_item">1.1 ton/㎡로 Raised Floor(이중마루)의 재배치 및 하중분산 고려없이 장비 배치가 용이함</li>
+							<li class="desc_item">Rack당 평균 40A(8.8kw)를 사용할수 있어 Rack 수량을 줄일수 있음</li>
+							<li class="desc_item">Blade 서버도 운영할수 있는 전력 및 충분한 공조 풍량 제공</li>
+							<li class="desc_item">다양한 규격을 고려한 가변폭(19~23인치) Rack</li>
+							</ul>
+						</div>
+						<div class="cnt_group">
+							<h4 class="h_cnt">전력구성</h4>
+							<ul class="lst_desc">
+							<li class="desc_item">동판교 변전소와 서판교 변전소를 이중화 구성</li>
+							<li class="desc_item">공용선로가 아닌 전용선로를 사용하여 안정성 향상</li>
+							<li class="desc_item point_item">순간 정전이 반복되는 사고에도 안전한 Dynamic UPS
+								<ul class="lst_ups">
+								<li class="ups_advantage">
+									<p class="desc_txt">높은 에너지 효율<span class="sub_desc">96% 이상</span></p>
+								</li>
+								<li class="ups_advantage">
+									<p class="desc_txt">높은 신뢰성<span class="sub_desc">전기접점을 줄임</span></p>
+								</li>
+								<li class="ups_advantage">
+									<p class="desc_txt">공간의 효율성<span class="sub_desc">적은 설치 면적</span></p>
+								</li>
+								<li class="ups_advantage">
+									<p class="desc_txt">자체보관 연료</p>
+								</li>
+								</ul>
+							</li>
+							</ul>
+						</div>
+						<div class="cnt_group">
+							<h4 class="h_cnt">상황실</h4>
+							<ul class="lst_desc">
+							<li class="desc_item">IDC 및 건물 전체의 설비 모니터링</li>
+							<li class="desc_item">전체 IT 운영상황 모니터링</li>
+							</ul>
+						</div>
+					</div>
+					<h3 class="h_txt">설계사양</h3>
+					<div class="cnt_box spec_table_wrap">
+						<div class="tbl_wrap">
+							<table class="tbl tbl_type2">
+							<caption><span>설계사양 세부항목 및 스펙 내용</span></caption>
+							<colgroup>
+							<col style="width:199px">
+							<col style="width:319px">
+							<col>
+							</colgroup>
+							<thead>
+							<tr>
+							<th scope="col">항목</th>
+							<th scope="col">세부항목</th>
+							<th scope="col">spec.</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+							<th rowspan="3" scope="row">접근제어 및 감시</th>
+							<td>출입통제장치</td>
+							<td>출입자통제, 카드키+지문인식</td>
+							</tr>
+							<tr>
+							<td>중앙감시실</td>
+							<td>중앙감시실 24x365 상주 근무</td>
+							</tr>
+							<tr>
+							<td>CCTV</td>
+							<td>주요지점 및 서버실 각 Rack열 모두 감시</td>
+							</tr>
+							<tr>
+							<th rowspan="3" scope="row">가용성</th>
+							<td>무정전 전원공급장치</td>
+							<td rowspan="2">N+1구성 (기준:20분이상, 연료보충없이 2시간 이상 발전)</td>
+							</tr>
+							<tr>
+							<td>자가 발전설비</td>
+							</tr>
+							<tr>
+							<td>항온항습기</td>
+							<td>3+1 구성으로 운영, 주요 전원은 UPS에서 공급</td>
+							</tr>
+							<tr>
+							<th rowspan="5" scope="row">방제성</th>
+							<td>하중안정성</td>
+							<td>1.1 ton/㎡</td>
+							</tr>
+							<tr>
+							<td>건축자재</td>
+							<td>철근콘크리트 구조 조건 및 불연/난연 조건 충족</td>
+							</tr>
+							<tr>
+							<td>화재감지</td>
+							<td>조기연기감지시스템(VESDA)</td>
+							</tr>
+							<tr>
+							<td>내진설계</td>
+							<td>지진규모 7.0 이상의 내진 설계</td>
+							</tr>
+							<tr>
+							<td>배수설계</td>
+							<td>시간당 200mm 이상의 배수 설비<br>(최근 10년간 최대 강우량을 고려하여 설계)</td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="sec sec_tcc_partners">
+				<div class="sec_inner">
+					<div class="h_area">
+						<h2 class="h_section">Partners</h2>
+					</div>
+					<div class="partners_wrap">
+						<ul class="lst_partners">
+						<li class="partner_item"><a href="http://www.ticketmonster.co.kr" target="_blank" class="link_logo"><img src="img/tcc/logo_tmon.png" alt="TMON"></a></li>
+						<li class="partner_item"><a href="http://www.bugs.co.kr" target="_blank" class="link_logo"><img src="img/tcc/logo_bugs.png" alt="Bugs"></a></li>
+						<li class="partner_item"><a href="http://www.kcp.co.kr" target="_blank" class="link_logo"><img src="img/tcc/logo_nhn_kcp.png" alt="NHN KCP"></a></li>
+						<li class="partner_item"><a href="http://www.entermate.com" target="_blank" class="link_logo"><img src="img/tcc/logo_entermate.png" alt="ENTERMATE"></a></li>
+						<li class="partner_item"><a href="http://www.payco.com" target="_blank" class="link_logo"><img src="img/tcc/logo_payco.png" alt="PAYCO"></a></li>
+						<li class="partner_item"><a href="http://www.hangame.com" target="_blank" class="link_logo"><img src="img/tcc/logo_hangame.png" alt="HANGAME"></a></li>
+						<li class="partner_item"><a href="http://www.godo.co.kr" target="_blank" class="link_logo"><img src="img/tcc/logo_nhn_godo.png" alt="NHN godo"></a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section class="sec sec_tcc_location">
+				<div class="sec_inner">
+					<h2 class="h_section">Location</h2>
+					<p class="location_txt">
+						경기도 성남시 분당구 대왕판교로712번길 11 (삼평동)<br>NHN엔터테인먼트 플레이허브<span class="small_txt">(경기도 성남시 분당구 삼평동 695 NHN엔터테인먼트 플레이허브)</span>
+						<span class="en_txt">NHN Ent. PlayHub, 11, Daewangpangyo-ro 712beon-gil,<br>Bundang-gu, Seongnam-si, Gyeonggi-do</span>
+					</p>
+					<div class="map_area">
+						<img src="img/tcc/map_nhn_playhub.jpg" alt="NHN 엔터테인먼트 플레이허브 위치">
+					</div>
+				</div>
+			</section>
+			<section class="sec sec_tcc_service">
+				<div class="sec_inner">
+					<h2 class="h_section">TCC<span class="ico_collabo">X</span>TOAST 서비스</h2>
+					<ul class="lst_tcc_service">
+					<li class="service_item">
+						<h3 class="title_txt">TOAST Service & Product</h3>
+						<p class="desc_txt">TOward Art, Science & Technology를<br>모토로 NHN Entertainment의<br>개발 노하우가 담긴 기술 기반 상품과 서비스를  제공합니다.</p>
+					</li>
+					<li class="service_item">
+						<h3 class="title_txt">TOAST Cloud</h3>
+						<p class="desc_txt">Convenient, Fast, Efficient! TOAST Cloud!<br>복잡한 인프라와 운영 업무는 TOAST Cloud에 맡기고<br>컨텐츠 개발에만 집중하세요.</p>
+					</li>
+					</ul>
+				</div>
+			</section>
+			<div class="full_banner tcc_inquiry_banner">
+				<div class="inner">
+					<em class="main_title">TCC는 IT 사업 운영을 위한 최적의 인프라를 제공하고 있습니다.<br>TCC의 네트웍 전문가에게 자세한 컨설팅을 받아보세요!</em>
+					<div class="btn_wrap">
+						<a href="#" class="btn_link">서비스 신청 문의</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //[D] CONTENTS -->
+	</div>
+	<!--[D] FOOTER -->
+	<?php include 'inc/footer.html';?>
+	<!--//[D] FOOTER -->
+</div>
+
+<!--[D] widget -->
+	<?php include 'inc/widget.html';?>
+<!--//[D] widget -->
+
+<!-- [D] LAYER -->
+<?php include 'inc/layer_loading.html';?>
+<!-- [D] 시설_서버룸 사진 슬라이드 팝업 -->
+<div class="modal pop_photo_slide" id="modal_equipment1">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title blind">시설 사진</h4>
+				<button type="button" class="btn_close" data-dismiss="modal">닫기</button>
+			</div>
+			<div class="modal-body">
+				<!-- [D] 이미지 슬라이드 -->
+				<div id="tccCarousel1" class="big_img_slide carousel slide" data-ride="carousel">
+					<ol class="carousel-indicators">
+					<li data-target="#tccCarousel1" data-slide-to="0" class="active"></li>
+					<li data-target="#tccCarousel1" data-slide-to="1"></li>
+					<li data-target="#tccCarousel1" data-slide-to="2"></li>
+					<li data-target="#tccCarousel1" data-slide-to="3"></li>
+					<li data-target="#tccCarousel1" data-slide-to="4"></li>
+					</ol>
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img src="img/tcc/equipment_tab_img.jpg" alt="">
+						</div>
+						<div class="carousel-item">
+							<img src="img/tcc/equipment_tab_img2.jpg" alt="">
+						</div>
+						<div class="carousel-item">
+							<img src="img/tcc/equipment_tab_img3.jpg" alt="">
+						</div>
+						<div class="carousel-item">
+							<img src="img/tcc/equipment_tab_img4.jpg" alt="">
+						</div>
+						<div class="carousel-item">
+							<img src="img/tcc/equipment_tab_img5.jpg" alt="">
+						</div>
+					</div>
+					<a class="carousel-control-prev" href="#tccCarousel1" data-slide="prev">
+						<span class="carousel-control-prev-icon"></span>
+					</a>
+					<a class="carousel-control-next" href="#tccCarousel1" data-slide="next">
+						<span class="carousel-control-next-icon"></span>
+					</a>
+				</div>
+				<!-- //[D] 이미지 슬라이드 -->
+			</div>
+		</div>
+	</div>
+</div>
+<!-- [D] 시설_전력장치 사진 슬라이드 팝업 -->
+<div class="modal pop_photo_slide" id="modal_equipment2">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title blind">시설 사진</h4>
+				<button type="button" class="btn_close" data-dismiss="modal">닫기</button>
+			</div>
+			<div class="modal-body">
+				<!-- [D] 이미지 슬라이드 -->
+				<div id="tccCarousel2" class="big_img_slide carousel slide" data-ride="carousel">
+					<ol class="carousel-indicators">
+					<li data-target="#tccCarousel2" data-slide-to="0" class="active"></li>
+					<li data-target="#tccCarousel2" data-slide-to="1"></li>
+					<li data-target="#tccCarousel2" data-slide-to="2"></li>
+					<li data-target="#tccCarousel2" data-slide-to="3"></li>
+					<li data-target="#tccCarousel2" data-slide-to="4"></li>
+					</ol>
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img src="img/tcc/equipment_tab2_img.jpg" alt="">
+						</div>
+						<div class="carousel-item">
+							<img src="img/tcc/equipment_tab2_img2.jpg" alt="">
+						</div>
+						<div class="carousel-item">
+							<img src="img/tcc/equipment_tab2_img3.jpg" alt="">
+						</div>
+						<div class="carousel-item">
+							<img src="img/tcc/equipment_tab2_img4.jpg" alt="">
+						</div>
+						<div class="carousel-item">
+							<img src="img/tcc/equipment_tab2_img5.jpg" alt="">
+						</div>
+					</div>
+					<a class="carousel-control-prev" href="#tccCarousel2" data-slide="prev">
+						<span class="carousel-control-prev-icon"></span>
+					</a>
+					<a class="carousel-control-next" href="#tccCarousel2" data-slide="next">
+						<span class="carousel-control-next-icon"></span>
+					</a>
+				</div>
+				<!-- //[D] 이미지 슬라이드 -->
+			</div>
+		</div>
+	</div>
+</div>
+<!-- [D] 시설_공조장치 사진 슬라이드 팝업 -->
+<div class="modal pop_photo_slide" id="modal_equipment3">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title blind">시설 사진</h4>
+				<button type="button" class="btn_close" data-dismiss="modal">닫기</button>
+			</div>
+			<div class="modal-body">
+				<!-- [D] 이미지 슬라이드 -->
+				<div id="tccCarousel3" class="big_img_slide carousel slide" data-ride="carousel">
+					<ol class="carousel-indicators">
+					<li data-target="#tccCarousel3" data-slide-to="0" class="active"></li>
+					<li data-target="#tccCarousel3" data-slide-to="1"></li>
+					<li data-target="#tccCarousel3" data-slide-to="2"></li>
+					<li data-target="#tccCarousel3" data-slide-to="3"></li>
+					<li data-target="#tccCarousel3" data-slide-to="4"></li>
+					</ol>
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img src="img/tcc/equipment_tab3_img.jpg" alt="">
+						</div>
+						<div class="carousel-item">
+							<img src="img/tcc/equipment_tab3_img2.jpg" alt="">
+						</div>
+						<div class="carousel-item">
+							<img src="img/tcc/equipment_tab3_img3.jpg" alt="">
+						</div>
+						<div class="carousel-item">
+							<img src="img/tcc/equipment_tab3_img4.jpg" alt="">
+						</div>
+						<div class="carousel-item">
+							<img src="img/tcc/equipment_tab3_img5.jpg" alt="">
+						</div>
+					</div>
+					<a class="carousel-control-prev" href="#tccCarousel3" data-slide="prev">
+						<span class="carousel-control-prev-icon"></span>
+					</a>
+					<a class="carousel-control-next" href="#tccCarousel3" data-slide="next">
+						<span class="carousel-control-next-icon"></span>
+					</a>
+				</div>
+				<!-- //[D] 이미지 슬라이드 -->
+			</div>
+		</div>
+	</div>
+</div>
+<!-- [D] 시설_상황실 사진 슬라이드 팝업 -->
+<div class="modal pop_photo_slide" id="modal_equipment4">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title blind">시설 사진</h4>
+				<button type="button" class="btn_close" data-dismiss="modal">닫기</button>
+			</div>
+			<div class="modal-body">
+				<!-- [D] 이미지 슬라이드 -->
+				<div id="tccCarousel4" class="big_img_slide carousel slide" data-ride="carousel">
+					<ol class="carousel-indicators">
+					<li data-target="#tccCarousel4" data-slide-to="0" class="active"></li>
+					<li data-target="#tccCarousel4" data-slide-to="1"></li>
+					<li data-target="#tccCarousel4" data-slide-to="2"></li>
+					<li data-target="#tccCarousel4" data-slide-to="3"></li>
+					<li data-target="#tccCarousel4" data-slide-to="4"></li>
+					</ol>
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img src="img/tcc/equipment_tab4_img.jpg" alt="">
+						</div>
+						<div class="carousel-item">
+							<img src="img/tcc/equipment_tab4_img2.jpg" alt="">
+						</div>
+						<div class="carousel-item">
+							<img src="img/tcc/equipment_tab4_img3.jpg" alt="">
+						</div>
+						<div class="carousel-item">
+							<img src="img/tcc/equipment_tab4_img4.jpg" alt="">
+						</div>
+						<div class="carousel-item">
+							<img src="img/tcc/equipment_tab4_img5.jpg" alt="">
+						</div>
+					</div>
+					<a class="carousel-control-prev" href="#tccCarousel4" data-slide="prev">
+						<span class="carousel-control-prev-icon"></span>
+					</a>
+					<a class="carousel-control-next" href="#tccCarousel4" data-slide="next">
+						<span class="carousel-control-next-icon"></span>
+					</a>
+				</div>
+				<!-- //[D] 이미지 슬라이드 -->
+			</div>
+		</div>
+	</div>
+</div>
+<!-- [D] LAYER -->
+
+<!-- Javascript Area -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+<!-- 마크업 확인용입니다. -->
+<style>
+.case_view{display:inline-block;position:fixed;bottom:0;left:0;z-index:1000;width:auto;padding:5px;background:#000;opacity:0.7}
+.case_view .btn{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+</style>
+<div class="case_view">
+	<?php include 'inc/case_view_common.html';?>
+</div>
+
+
+<script src="js/case_view.js"></script>
+<!-- //마크업 확인용입니다. -->
+</body>
+</html>

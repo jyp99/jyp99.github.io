@@ -1,0 +1,254 @@
+<header id="toast_header"><!-- [D]스크롤시 header에 is_fixed, 마우스 오버시 is_hover 클래스 추가 -->
+	<div class="inner">
+		<h1 class="logo service_logo">
+			<a href="00_main.html" class="link_txt">
+				<img src="img/logo_toast.svg" alt="NHN TOAST" class="logo_img is_white">
+				<img src="img/logo_toast_color.svg" alt="NHN TOAST" class="logo_img is_color">
+			</a>
+		</h1>
+
+		<!-- [D] global navigation bar -->
+		<nav class="gnb">
+			<!-- [D] 로그인 전 노출되는 영역 -->
+			<div class="top_wrap is_non_login">
+				<a href="#" class="btn_login">로그인</a>
+				<button type="button" class="btn_gnb">전체 메뉴 펼치기</button>
+			</div>
+			<!-- [D] 로그인 전 노출되는 영역 -->
+			<!-- [D] 로그인 시 노출되는 영역 -->
+			<div class="top_wrap is_login">
+				<span class="member_id">Mirae.lim@nhnent.com</span>
+				<a href="#" class="btn_logout">로그아웃</a>
+				<button type="button" class="btn_gnb_close">전체 메뉴 닫기</button>
+			</div>
+			<!-- [D] 로그인 시 노출되는 영역 -->
+			<div class="gnb_srcoll_wrap">
+			<ul class="lst_gnb">
+			<li class="gnb_menu"><a href="01_intro.html" class="link_menu"><span class="menu_txt">소개</span></a></li><!-- [D]link_menu 마우스 오버시 link_menu에 is_hover, 선택된 페이지인 경우 is_selected 클래스 추가 -->
+			<li class="gnb_menu">
+				<a href="#gnb_menu_collapse1" data-toggle="collapse" class="link_menu is_m_show"><span class="menu_txt">서비스</span></a>
+				<a href="02_service.html" class="link_menu is_pc_show"><span class="menu_txt">서비스</span></a>
+				<div id="gnb_menu_collapse1" class="drop_menu_wrap collapse" data-parent="#accordion">
+					<div class="service_drop_menu">
+						<div class="scroll_wrap">
+							<div class="row_wrap">
+								<div class="col_group">
+									<a class="service_title is_m_show" href="02_service.html">전체 서비스 보기</a>
+									<a class="service_title" data-toggle="collapse" href="#gnb_servicemenu_collapse1">Compute</a>
+									<ul id="gnb_servicemenu_collapse1" class="lst_service_menu collapse" data-parent="#accordion">
+									<li class="service_menu"><a href="02_service_compute_instance.html" class="link_txt">Instance</a></li><!-- [D] 신규 서비스일 경우 service_menu에 is_new, 업데이트는 is_update 클래스 추가-->
+									<li class="service_menu"><a href="#" class="link_txt">Image</a></li>
+									<li class="service_menu is_new"><a href="#" class="link_txt">Auto Scale</a></li>
+									</ul>
+									<a class="service_title" data-toggle="collapse" href="#gnb_servicemenu_collapse2">Network</a>
+									<ul id="gnb_servicemenu_collapse2" class="lst_service_menu collapse" data-parent="#accordion">
+									<li class="service_menu"><a href="#" class="link_txt">VPC</a></li>
+									<li class="service_menu"><a href="#" class="link_txt">Load Balancer</a></li>
+									</ul>
+									<a class="service_title" data-toggle="collapse" href="#gnb_servicemenu_collapse3">Storage</a>
+									<ul id="gnb_servicemenu_collapse3" class="lst_service_menu collapse" data-parent="#accordion">
+									<li class="service_menu"><a href="#" class="link_txt">Block Storage</a></li>
+									<li class="service_menu"><a href="#" class="link_txt">NAS (offline)</a></li>
+									<li class="service_menu"><a href="#" class="link_txt">Object Storage</a></li>
+									<li class="service_menu is_new"><a href="#" class="link_txt">Backup</a></li>
+									</ul>
+									<a class="service_title" data-toggle="collapse" href="#gnb_servicemenu_collapse4">Database</a>
+									<ul id="gnb_servicemenu_collapse4" class="lst_service_menu collapse" data-parent="#accordion">
+									<li class="service_menu is_update"><a href="#" class="link_txt">RDS for MySQL</a></li>
+									</ul>
+								</div>
+								<div class="col_group">
+									<a class="service_title" data-toggle="collapse" href="#gnb_servicemenu_collapse5">Game</a>
+									<ul id="gnb_servicemenu_collapse5" class="lst_service_menu collapse" data-parent="#accordion">
+									<li class="service_menu"><a href="#" class="link_txt">Gamebase</a></li>
+									<li class="service_menu"><a href="#" class="link_txt">Leaderboard</a></li>
+									<li class="service_menu"><a href="#" class="link_txt">Launching</a></li>
+									<li class="service_menu"><a href="#" class="link_txt">Smart Downloader</a></li>
+									</ul>
+									<a class="service_title" data-toggle="collapse" href="#gnb_servicemenu_collapse6">Security</a>
+									<ul id="gnb_servicemenu_collapse6" class="lst_service_menu collapse" data-parent="#accordion">
+									<li class="service_menu"><a href="#" class="link_txt">AppGuard</a></li>
+									<li class="service_menu"><a href="#" class="link_txt">Security Check</a></li>
+									<li class="service_menu"><a href="#" class="link_txt">Security Monitoring</a></li>
+									<li class="service_menu"><a href="#" class="link_txt">Mal-URL Detector</a></li>
+									<li class="service_menu"><a href="#" class="link_txt">CAPTCHA</a></li>
+									<li class="service_menu"><a href="#" class="link_txt">OTP</a></li>
+									<li class="service_menu"><a href="#" class="link_txt">DBSafer</a></li>
+									<li class="service_menu is_new"><a href="#" class="link_txt">Web Firewall</a></li>
+									<li class="service_menu is_new"><a href="#" class="link_txt">Vaccine</a></li>
+									</ul>
+									<a class="service_title" data-toggle="collapse" href="#gnb_servicemenu_collapse7">Content Delivery</a>
+									<ul id="gnb_servicemenu_collapse7" class="lst_service_menu collapse" data-parent="#accordion">
+									<li class="service_menu"><a href="#" class="link_txt">CDN</a></li>
+									<li class="service_menu"><a href="#" class="link_txt">Image</a></li>
+									</ul>
+								</div>
+								<div class="col_group">
+									<a class="service_title" data-toggle="collapse" href="#gnb_servicemenu_collapse8">Notification</a>
+									<ul id="gnb_servicemenu_collapse8" class="lst_service_menu collapse" data-parent="#accordion">
+									<li class="service_menu"><a href="#" class="link_txt">Push</a></li>
+									<li class="service_menu"><a href="#" class="link_txt">SMS</a></li>
+									<li class="service_menu"><a href="#" class="link_txt">Email</a></li>
+									<li class="service_menu is_new"><a href="#" class="link_txt">KakaoTalk Bizmessage</a></li>
+									</ul>
+									<a class="service_title" data-toggle="collapse" href="#gnb_servicemenu_collapse9">Application Service</a>
+									<ul id="gnb_servicemenu_collapse9" class="lst_service_menu collapse" data-parent="#accordion">
+									<li class="service_menu"><a href="#" class="link_txt">Maps</a></li>
+									<li class="service_menu"><a href="#" class="link_txt">ROLE</a></li>
+									<li class="service_menu"><a href="#" class="link_txt">API Gateway</a></li>
+									<li class="service_menu"><a href="#" class="link_txt">RTCS</a></li>
+									<li class="service_menu"><a href="#" class="link_txt">CS &amp; BBS</a></li>
+									</ul>
+									<a class="service_title" data-toggle="collapse" href="#gnb_servicemenu_collapse10">Search</a>
+									<ul id="gnb_servicemenu_collapse10" class="lst_service_menu collapse" data-parent="#accordion">
+									<li class="service_menu"><a href="#" class="link_txt">Cloud Search</a></li>
+									<li class="service_menu"><a href="#" class="link_txt">Autocomplete</a></li>
+									<li class="service_menu"><a href="#" class="link_txt">Corporation Search</a></li>
+									<li class="service_menu is_new"><a href="#" class="link_txt">Address Search</a></li>
+									</ul>
+								</div>
+								<div class="col_group">
+									<a class="service_title" data-toggle="collapse" href="#gnb_servicemenu_collapse11">Analytics</a>
+									<ul id="gnb_servicemenu_collapse11" class="lst_service_menu collapse" data-parent="#accordion">
+									<li class="service_menu"><a href="#" class="link_txt">App Analytics</a></li>
+									<li class="service_menu"><a href="#" class="link_txt">Log &amp; Crash Search</a></li>
+									</ul>
+									<a class="service_title" data-toggle="collapse" href="#gnb_servicemenu_collapse12">Mobile Service</a>
+									<ul id="gnb_servicemenu_collapse12" class="lst_service_menu collapse" data-parent="#accordion">
+									<li class="service_menu"><a href="#" class="link_txt">IAP</a></li>
+									<li class="service_menu"><a href="#" class="link_txt">Mobile Device Info</a></li>
+									</ul>
+									<a class="service_title" data-toggle="collapse" href="#gnb_servicemenu_collapse13">Dev Tool</a>
+									<ul id="gnb_servicemenu_collapse13" class="lst_service_menu collapse" data-parent="#accordion">
+									<li class="service_menu"><a href="#" class="link_txt">Deploy</a></li>
+									</ul>
+									<a class="service_title" data-toggle="collapse" href="#gnb_servicemenu_collapse14">Management</a>
+									<ul id="gnb_servicemenu_collapse14" class="lst_service_menu collapse" data-parent="#accordion">
+									<li class="service_menu"><a href="#" class="link_txt">Managed</a></li>
+									</ul>
+									<a class="service_title" data-toggle="collapse" href="#gnb_servicemenu_collapse15">Bill</a>
+									<ul id="gnb_servicemenu_collapse15" class="lst_service_menu collapse" data-parent="#accordion">
+									<li class="service_menu is_new"><a href="#" class="link_txt">bill (e-Tax)</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="row_wrap">
+								<div class="col_group">
+									<a class="service_title" data-toggle="collapse" href="#gnb_servicemenu_collapse16">Dooray</a>
+									<ul id="gnb_servicemenu_collapse16" class="lst_service_menu collapse" data-parent="#accordion">
+									<li class="service_menu"><a href="#" class="link_txt">Project</a></li>
+									<li class="service_menu"><a href="#" class="link_txt">Messenger</a></li>
+									<li class="service_menu"><a href="#" class="link_txt">Mail</a></li>
+									<li class="service_menu"><a href="#" class="link_txt">Calendar</a></li>
+									<li class="service_menu"><a href="#" class="link_txt">Drive</a></li>
+									<li class="service_menu"><a href="#" class="link_txt">Contacts</a></li>
+									</ul>
+								</div>
+								<div class="col_group">
+									<a class="service_title" data-toggle="collapse" href="#gnb_servicemenu_collapse17">ERP</a>
+									<ul id="gnb_servicemenu_collapse17" class="lst_service_menu collapse" data-parent="#accordion">
+									<li class="service_menu is_update"><a href="#" class="link_txt">Communication Board</a></li>
+									<li class="service_menu"><a href="#" class="link_txt">Workflow</a></li>
+									<li class="service_menu"><a href="#" class="link_txt">Human Resources</a></li>
+									<li class="service_menu"><a href="#" class="link_txt">Finance</a></li>
+									</ul>
+								</div>
+								<div class="col_group">
+									<a class="service_title" data-toggle="collapse" href="#gnb_servicemenu_collapse18">Contact Center</a>
+									<ul id="gnb_servicemenu_collapse18" class="lst_service_menu collapse" data-parent="#accordion">
+									<li class="service_menu"><a href="#" class="link_txt">Call</a></li>
+									<li class="service_menu"><a href="#" class="link_txt">Mail</a></li>
+									<li class="service_menu"><a href="#" class="link_txt">FAQ</a></li>
+									<li class="service_menu"><a href="#" class="link_txt">Front</a></li>
+									<li class="service_menu"><a href="#" class="link_txt">QnA</a></li>
+									</ul>
+								</div>
+								<div class="col_group">
+									<a class="service_title" data-toggle="collapse" href="#gnb_servicemenu_collapse19">IDC</a>
+									<ul id="gnb_servicemenu_collapse19" class="lst_service_menu collapse" data-parent="#accordion">
+									<li class="service_menu"><a href="#" class="link_txt">TCC</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="gnb_menu"><a href="03_pricing.html" class="link_menu"><span class="menu_txt">요금</span></a></li>
+			<li class="gnb_menu">
+				<a href="#gnb_menu_collapse2" data-toggle="collapse" class="link_menu is_m_show"><span class="menu_txt">고객사례</span></a>
+				<a href="04_customer.html"class="link_menu is_pc_show"><span class="menu_txt">고객사례</span></a>
+				<div id="gnb_menu_collapse2" class="drop_menu_wrap customer_drop_menu collapse" data-parent="#accordion">
+					<ul class="lst_gnb_sub">
+					<li class="gnb_sub_menu is_m_show"><a href="04_customer.html" class="menu_txt">전체 고객사례 보기</a></li>
+					<li class="gnb_sub_menu"><a href="04_customer_webservice.html" class="menu_txt">웹 서비스</a></li>
+					<li class="gnb_sub_menu"><a href="04_customer_commerce.html" class="menu_txt">커머스</a></li>
+					<li class="gnb_sub_menu"><a href="04_customer_game.html" class="menu_txt">게임</a></li>
+					<li class="gnb_sub_menu"><a href="04_customer_public.html" class="menu_txt">공공 및 교육기관</a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="gnb_menu is_pc_ibshow"><a href="05_partner.html" class="link_menu"><span class="menu_txt">파트너</span></a></li>
+			<li class="gnb_menu">
+				<a href="#gnb_menu_collapse3" data-toggle="collapse" class="link_menu is_m_show"><span class="menu_txt">고객센터</span></a>
+				<a href="06_support.html" class="link_menu is_pc_show"><span class="menu_txt">고객센터</span></a>
+				<div id="gnb_menu_collapse3" class="drop_menu_wrap support_drop_menu collapse" data-parent="#accordion">
+					<ul class="lst_gnb_sub">
+					<li class="gnb_sub_menu is_m_show"><a href="06_support.html" class="menu_txt">전체 고객센터 보기</a></li>
+					<li class="gnb_sub_menu"><a href="06_support_faq.html" class="menu_txt">FAQ</a></li>
+					<li class="gnb_sub_menu"><a href="06_support_inquiry.html" class="menu_txt">1:1 문의</a></li>
+					<li class="gnb_sub_menu"><a href="06_support_qna.html" class="menu_txt">문의 내역 조회</a></li>
+					<li class="gnb_sub_menu"><a href="06_support_notice.html" class="menu_txt">공지사항</a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="gnb_menu"><a href="#" class="link_menu"><span class="menu_txt">사용자가이드</span></a></li>
+			<li class="gnb_menu is_point has_left_gap is_pc_ibshow"><a href="#" class="link_menu"><span class="menu_txt">CONSOLE</span></a></li>
+			<li class="gnb_menu is_m_show"><a href="https://meetup.toast.com/" class="link_menu"><span class="menu_txt">Meetup</span></a></li>
+			</ul>
+			</div>
+		</nav>
+		<!-- //[D] global navigation bar -->
+		<div class="side_menu_area">
+			<div class="search_word_area">
+				<span class="blind">통합 검색</span>
+				<form>
+				<div class="sizing_wrap">
+					<label for="inp_search" class="btn_search">검색어 입력</label><!-- [D]btn_search 클릭시 search_word_area에 is_active 클래스 추가 -->
+					<input type="text" id="inp_search" class="inp_search" placeholder="검색어 입력">
+					<button type="reset" class="btn_search_reset">&#x2715;</button><!-- [D] inp_search에 값이 있을때만 노출 -->
+				</div>
+				</form>
+			</div>
+			<div class="lang_select_area">
+				<span class="blind">언어 선택</span>
+				<button class="btn_select_lang"><span class="blind">선택된 언어</span><span class="select_lang_txt">KOR</span></button><!-- [D]선택한 btn_lang의 value를 select_lang_txt의 value에 적용 -->
+				<ul class="lst_lang">
+				<li class="lang_item"><a href="#" class="btn_lang">KOR</a></li>
+				<li class="lang_item"><a href="#" class="btn_lang">ENG</a></li>
+				<li class="lang_item"><a href="#" class="btn_lang">JPN</a></li>
+				<li class="lang_item"><a href="#" class="btn_lang">CHN</a></li>
+				</ul>
+			</div>
+			<!-- [D] 로그인 전 노출 영역 -->
+			<ul class="lst_member_link">
+			<li class="link_item"><a href="#" class="link_txt">로그인</a></li>
+			<li class="link_item"><a href="#" class="link_txt">회원가입</a></li>
+			</ul>
+			<!-- [D] 로그인 후 노출 영역 -->
+
+			<div class="member_setting_area" style="display:none">
+				<a href="#" class="btn_member_setting">ne*****@nhnent.com</a>
+				<ul class="lst_member_setting"><!-- [D] btn_member_setting에 마우스 오버시 lst_member_setting에 is_show 클래스 추가 -->
+				<li class="setting_item"><a href="07_mypage_info.html" class="link_txt">회원정보</a></li>
+				<li class="setting_item"><a href="07_mypage_payment.html" class="link_txt">결제수단</a></li>
+				<li class="setting_item"><a href="07_mypage_credit.html" class="link_txt">크레딧</a></li>
+				<li class="setting_item"><a href="07_mypage_api.html" class="link_txt">API 보안 설정</a></li>
+				<li class="setting_item has_top_line"><a href="#" class="link_txt">결제 관리</a></li>
+				<li class="setting_item has_top_line"><a href="#" class="link_txt">로그아웃</a></li>
+				</ul>
+			</div>
+		</div>
+		<button type="button" class="btn_gnb">전체 메뉴 펼치기</button>
+	</div>
+</header>

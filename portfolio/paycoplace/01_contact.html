@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="css/solution.css">
+<title>contact :: Payco Place Shop</title>
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul class="skip">
+<li><a href="#nav" onclick="document.getElementById('nav').tabIndex=-1;document.getElementById('nav').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- [D] side menu 열릴 경우 .is_sidebar_opened 추가 -->
+<div class="wrap contact_wrap">
+	<!--[D] HEADER -->
+	<header id="header" class="header">
+		<div class="header_top">
+			<h1 class="logo"><a href="#" class="link"><img src="img/logo_payco_place.png" alt="PAYCO Place Shop" width="127" height="12" class="img"></a></h1>
+			<div class="top_menu">
+				<div class="setting_area">
+					<!-- [D] 선택 시 .is_open 추가, 추가 시 .settings 자동 열림. 요소 사이에 별도 태그 삽입할 경우 css 기능 동작하지 않습니다. -->
+					<button type="button" class="btn_setting">박승철 매니저님 안녕하세요.</button>
+					<div class="settings">						
+						<ul class="setting_lst">
+						<!-- [D] 선택 시 .is_selected 추가 -->
+						<li class="setting_item is_selected"><a href="#" class="setting">박승철 매니저</a></li>
+						<li class="setting_item"><a href="#" class="setting">박승철 서현점 원장</a></li>
+						<li class="setting_item"><a href="#" class="setting">박승철 판교점 원장</a></li>
+						<li class="setting_item"><a href="#" class="setting">박승철 판교점 원장</a></li>
+						<li class="setting_item"><a href="#" class="setting">박승철 판교점 원장</a></li>
+						<li class="setting_item"><a href="#" class="setting">박승철 판교점 원장</a></li>
+						<li class="setting_item"><a href="#" class="setting">박승철 판교점 원장</a></li>
+						<li class="setting_item"><a href="#" class="setting">박승철 판교점 원장</a></li>
+						</ul>
+						<a href="#" class="setting setting_logout">로그아웃</a>
+					</div>
+				</div>
+				<ul class="menu">				
+				<li class="menu_item"><a href="#" class="link">고객센터</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="header_store">
+			<h2 class="logo_store">
+				<a href="#" class="link"><span class="tit_logo">박승철 헤어스투디오</span><span class="tit_store">서현점</span></a>
+			</h2>
+			<nav class="nav_area">
+				<ul id="nav" class="nav">
+				<!-- [D] 선택 시 .is_selected 추가 -->
+				<li class="nav_item is_selected"><a href="#" class="link">예약관리</a></li>
+				<li class="nav_item"><a href="#" class="link">마케팅관리</a></li>
+				<li class="nav_item is_disabled"><a href="#" class="link">고객관리</a></li>
+				<li class="nav_item is_disabled"><a href="#" class="link">상품관리</a></li>
+				<li class="nav_item is_disabled"><a href="#" class="link">정산관리</a></li>
+				<li class="nav_item is_disabled"><a href="#" class="link">매장관리</a></li>
+				</ul>
+				<div class="search_area">
+					<form>
+					<fieldset>
+						<legend>매장검색</legend>
+						<div class="search">
+							<span class="inp_search"><input type="text" id="search" placeholder="매장검색" aria-label="매장검색" class="inp"></span>
+							<button type="submit" class="btn_search">검색</button>
+						</div>
+					</fieldset>
+					</form>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<!--[D] // HEADER -->
+	<div class="snb_wrap">
+		<ul class="snb">
+		<!-- [D] 선택 시 .is_selected 추가 -->
+		<li class="snb_item cs0_item"><a href="#" class="link">공지사항 (예정)</a></li>
+		<li class="snb_item cs1_item"><a href="#" class="link is_selected">1:1문의</a></li>
+		<li class="snb_item cs2_item"><a href="#" class="link">문의내역 확인</a></li>
+		<li class="snb_item cs3_item"><a href="#" class="link">FAQ</a></li>
+		</ul>
+		<div class="snb_info snb_contact">
+			<dl class="cs_contact">
+			<dt class="info_tit">고객센터</dt>
+			<dd class="num">1588-7967</dd>
+			<dd class="info_txt">support@place.payco.com</dd>
+			</dl>
+			<div class="ad_txt_area">
+				<em class="ico_catalk_plus">Plus친구</em>
+				<p class="info_txt"><span class="point_txt">페이코플레이스</span> 친구추가해주세요</p>
+			</div>
+		</div>
+	</div>
+	<!-- [D] CONTENTS -->
+	<main id="content" class="content">
+		<div class="inner">
+			<h2 class="h_sub">1:1문의</h2>
+			<div class="iframe_wrap">
+				<!-- <iframe src="01_cs_faq_iframe.html" title="1:1문의 리스트" scrolling="no" height="978"></iframe> -->
+			</div>
+		</div>
+			
+	</main>
+	<!--[D] // CONTENTS -->
+	<!-- [D] FOOTER -->	
+	<footer id="footer" class="footer">
+		<ul class="footer_menu_lst">
+		<li class="footer_menu_item"><a href="#" class="footer_link">이용약관</a></li>
+		<li class="footer_menu_item"><a href="#" class="footer_link"><strong class="menu_txt">개인정보취급방침</strong></a></li>
+		</ul>
+		<p class="address">© NHN Entertainment Corp. All Rights Reserved.  TEL : 1544-7967  E-mail : support@place.payco.com</p>
+	</footer>
+	<!-- [D] // FOOTER -->
+</div>
+
+<!-- [D] 마크업 뷰를 위한 임시코드입니다. 개발적용 불가합니다 ㅜㅜ -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		$('.btn_aside_fold').on('click',function(){
+			var btnText = $('.ico_fold').text(),
+				btnTrue = '펼치기',
+				btnFalse = '접기';
+			$('.wrap').toggleClass('is_sidebar_opened');
+
+			switch(btnText) {
+				case btnTrue:
+					$('.ico_fold').text(btnFalse);
+					return false;
+				case btnFalse:
+					$('.ico_fold').text(btnTrue);
+			}
+		});
+	});
+</script>
+<!-- [D] // 마크업 뷰를 위한 임시코드입니다. -->
+</body>
+</html>

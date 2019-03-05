@@ -1,0 +1,122 @@
+/* 요금 계산기 */
+.has_region_select{padding-top:70px}
+.has_region_select .snb{margin-top:47px}
+
+/* region 선택 */
+.region_select_area{position:relative;width:100%;height:66px;line-height:65px;border-bottom:1px solid #4b96e6;font-size:0;}
+.region_select_area:after{display:block;position:absolute;right:35px;top:50%;z-index:2;width:10px;height:5px;background:url(../img/sp_mypage.png) -34px 0 no-repeat;margin-top:-2.5px;content:'';}
+.region_select_area .selected_region,.region_select_area .link_region{padding-left:60px;font-size:16px;color:#333;font-weight:400;}
+.region_select_area .sub_txt{font-weight:300;}
+.region_select_area .selected_region:before,.region_select_area .link_region:before{display:inline-block;width:30px;height:30px;border-radius:100%;vertical-align:middle;margin-right:20px;margin-top:-6px;background:url(../img/sp_calculator.png) 0 -48px no-repeat;content:''}
+.region_select_area .region_jp:before{background-position:-32px -48px;}
+.btn_region_select{display:block;position:absolute;top:0;left:0;width:100%;height:100%;overflow:hidden;line-height:999px;}
+.region_select_area .lst_select_region{position:absolute;top:0;z-index:1;width:100%;background:#fff;border-bottom:1px solid #4b96e6;}
+.region_select_area .link_region{display:block;font-size:16px;color:#333;padding-left:60px;}
+.region_select_area .link_region:hover{color:#4b96e6;}
+
+
+.calculator_content{padding-top:70px}
+/* 총 예상 요금 */
+.total_pricing_wrap{background-color:#383d47}
+.total_pricing_wrap .inner{position:relative;max-width:1220px;margin:0 auto;padding:35px 30px 34px;font-size:0}
+.total_pricing_wrap .tit_txt{margin-left:4px;font-size:24px;color:#fff;font-weight:400;vertical-align:middle}
+.total_pricing_wrap .sub_txt{font-weight:300}
+.lst_radio{display:inline-block;margin-left:60px;vertical-align:middle}
+.lst_radio .inp_item{display:inline-block;margin-left:21px}
+.lst_radio .inp_item:first-of-type{margin-left:0}
+.lst_radio .inp_radio{width:17px;height:17px;margin-right:10px;margin-left:0;background:url(../img/sp_calculator.png) -88px 0 no-repeat;vertical-align:middle}
+.lst_radio .inp_radio:checked{background-position:-108px 0;}
+.lst_radio .lb_txt{font-size:14px;color:#fff;vertical-align:middle;}
+.total_pricing{position:absolute;top:23px;right:30px;font-size:40px;color:#fff;font-weight:400}
+.total_pricing .num_txt{margin-right:4px;font-family:roboto}
+
+.total_pricing_wrap .btn_wrap{margin-top:13px;padding-top:24px;border-top:1px solid rgba(221, 221, 221, 0.1);text-align:left}
+.total_pricing_wrap .btn_wrap .btn{height:32px;margin-left:4px;padding:0 10px 0 7px;border:0;background-color:#fff;border-radius:2px;font-size:13px;font-weight:400;color:#333;text-align:left;line-height:32px}
+.total_pricing_wrap .btn_wrap .btn:first-of-type{margin-left:0}
+.total_pricing_wrap .btn_wrap .btn:before{display:inline-block;width:20px;height:20px;background-color:#fff;margin-top:-5px;margin-right:3px;background-image:url(../img/sp_calculator.png);background-repeat:no-repeat;vertical-align:middle;content:'';}
+.total_pricing_wrap .btn_wrap .btn:hover{background-color:#3d5d86}
+.btn_save_excel:before{background-position:0 0}
+.btn_send_email:before{background-position:-22px 0}
+.btn_print:before{background-position:-44px 0}
+.btn_recalculate:before{background-position:-66px 0}
+.calculator_content .btn_calculation_detail{z-index:1;height:60px;background-color:#4b96e6;color:#fff;font-size:18px;padding:0 30px;letter-spacing:-0.04em;line-height:60px;position:absolute;right:0;border-radius:0;bottom:-60px;}
+.calculator_content .btn_calculation_detail:before{display:inline-block;width:24px;height:24px;background-color:#fff;margin-top:-7px;margin-right:10px;background:url(../img/sp_calculator.png) no-repeat;background-position:0 -22px;vertical-align:middle;content:'';}
+
+.calculator_content .sec{position:relative}
+.calculator_content .sec .inner{max-width:1220px;margin:0 auto;padding:44px 30px 160px}
+
+.product_group{margin-top:35px;border:0;background-color:#fcfcfc;padding:30px 30px 60px}
+.product_group:first-of-type{margin-top:52px}
+.product_group .product_title{display:inline-block;font-size:26px;font-weight:400;color:#333;vertical-align:bottom}
+.product_group .link_service_intro{display:inline-block;height:24px;border-radius:2px;background-color:#fff;border:1px solid #ddd;margin-left:10px;padding:0 8px;font-size:13px;color:#333;line-height:24px;vertical-align:bottom}
+.product_group .tbl_wrap{margin-top:25px}
+.product_group .tbl{width:auto;margin-top:0;border:0;table-layout:fixed;box-sizing:border-box}
+.product_group .is_not_full .tbl{width:auto}
+.product_group .tbl th,.product_group .tbl td{border:0;background-color:transparent;font-size:14px}
+.product_group .tbl thead th{padding-left:0;font-weight:400}
+.product_group .tbl tbody td{padding:10px 10px 10px 0}
+.product_group .tbl tr td:last-of-type{padding-right:0}
+.product_group .tbl .total_row td{height:44px;padding-left:20px;background-color:#F1F3F6;font-size:16px;font-weight:400}
+.product_group .select_bx{height:40px;border:0;vertical-align:middle}
+.product_group .select_bx .inp_select{padding:9px 14px;border:1px solid #ddd;background-color:#fff;font-size:14px;font-weight:400;color:#333}
+.product_group .select_bx:after{right:12px}
+.product_group .inp_area{position:relative}
+.product_group .inp_bx{display:block;height:40px;border:1px solid #ddd;border-radius:0;background-color:#fff;line-height:40px;color:#333;vertical-align:middle}
+.product_group .inp{width:100%;height:100%;padding:0 44px 0 12px;border:0;background-color:transparent;line-height:40px;font-size:14px;font-weight:400;color:#333}
+.product_group .txt,.product_group .label_text{display:inline-block;font-size:14px;font-weight:300;color:#313338;vertical-align:middle}
+.product_group .inp_area .unit_txt{position:absolute;top:0;right:15px;line-height:40px;font-weight:400;}
+.product_group .result_wrap{border-top:1px solid #eee;margin-top:10px;padding-top:14px}
+.product_group .result_wrap .h_result{font-size:14px;color:#333;font-weight:400}
+.product_group .result_wrap .total_price{display:block;font-size:34px;color:#4b96e6;font-weight:400}
+.product_group .result_wrap .total_price .number_txt{font-family:roboto;font-weight:500;letter-spacing:-0.04em}
+.product_group .result_wrap .total_price .unit_txt{font-size:30px}
+
+.product_group .result_wrap .btn_wrap{margin-top:16px;text-align:left}
+.product_group .result_wrap .btn_wrap .btn{min-width:190px;height:40px;margin-left:8px;padding:0 12px;border-radius:1px;background-color:#4b96e6;font-size:14px;line-height:normal;color:#fff}
+.product_group .result_wrap .btn_wrap .btn:first-of-type{margin-left:0}
+.product_group .result_wrap .btn_wrap .btn_reset{background-color:#aaa}
+.product_group .lst_noti{margin-top:20px;font-size:0}
+.product_group .lst_noti .noti_txt{position:relative;margin-top:5px;padding-left:11px;font-size:14px;font-weight:400;line-height:20px;color:#333}
+.product_group .lst_noti .noti_txt:before{display:inline-block;position:absolute;top:50%;left:0;width:3px;height:3px;margin-top:-2px;background-color:#4b96e6;content:''}
+.product_group .lst_noti .link_txt{color:#4b96e6;}
+
+.calculator_detail_wrap{display:none;position:absolute;left:0;top:0;z-index:2;width:100%;height:100%;background-color:#fff}
+.calculator_detail_wrap.is_show{display:block}
+.calculator_content .calculator_detail_wrap .inner{position:relative;padding-top:100px;overflow-y:auto;height:100%;}
+.btn_detail_close{display:inline-block;overflow:hidden;position:absolute;right:52px;top:22px;width:36px;height:36px;background:url(../img/sp_calculator.png) 0 -80px no-repeat;line-height:999px;}
+.lst_region_price{font-size:0;}
+.lst_region_price .region_item{display:inline-block;width:370px;height:72px;border:1px solid #ddd;margin-left:10px;box-sizing:border-box;}
+.lst_region_price .region_item:first-of-type{margin-left:0;}
+.lst_region_price .btn_region{display:block;overflow:hidden;padding:0 20px 0 18px;line-height:70px;font-size:20px;color:#333;font-weight:400;}
+.lst_region_price .price_txt{float:right;font-size:24px;}
+.lst_region_price .price_txt .number_txt{letter-spacing:-0.04em;font-family:roboto;}
+.lst_region_price .price_txt .unit_txt{margin-left:2px;}
+.lst_region_price .region_item.is_selected{border-color:#4b96e6;background-color:#e3f0ff;}
+.lst_region_price .region_item.is_selected .price_txt{color:#4b96e6}
+.calculator_detail_wrap .product_group{margin-top:81px;padding:0;background-color:transparent;}
+.calculator_detail_wrap .product_group:first-of-type{margin-top:65px}
+.calculator_detail_wrap .product_group .product_title_wrap{position:relative;}
+.calculator_detail_wrap .product_group .h_txt{display:inline-block;font-size:24px;color:#333;font-weight:400;}
+.calculator_detail_wrap .product_group .total_price_wrap{position:absolute;top:0;right:0;line-height:28px;color:#333;font-size:24px;}
+.calculator_detail_wrap .product_group .number_txt{font-family:roboto;font-weight:500;}
+.calculator_detail_wrap .product_group .unit_txt{margin-left:2px;font-size:20px;font-weight:500;}
+.calculator_detail_wrap .product_group .sub_txt{margin-left:4px;font-size:20px;font-weight:400;}
+.calculator_detail_wrap .product_group .tbl_wrap{margin-top:10px;overflow-x:auto}
+.calculator_detail_wrap .product_group .tbl{width:1160px;}
+.calculator_detail_wrap .product_group .tbl th,.calculator_detail_wrap .product_group .tbl td{height:50px;border-left:1px solid #eee;text-align:center;padding:0 14px}
+.calculator_detail_wrap .product_group .tbl th{width:auto;border-top:1px solid #aaa;background-color:#fafafa;font-size:13px;color:#222;font-weight:500;}
+.calculator_detail_wrap .product_group .tbl td{border-top:1px solid #eee;font-size:13px;color:#333;font-weight:400;}
+.calculator_detail_wrap .product_group .tbl tr:last-of-type td{border-bottom:1px solid #aaa;}
+.calculator_detail_wrap .product_group .tbl tr th:first-of-type,.calculator_detail_wrap .product_group .tbl tr td:first-of-type{border-left:0;}
+.calculator_detail_wrap .btn{min-width:64px;height:24px;margin-left:2px;padding:0;border-radius:2px;font-size:13px;color:#333;font-weight:400;line-height:22px;box-sizing:border-box;}
+.calculator_detail_wrap .btn_modify{border:1px solid #ddd;background-color:#fff;}
+.calculator_detail_wrap .btn_complete{border:1px solid #ddd;background-color:#f9f9f9;}
+.calculator_detail_wrap .btn_delete{border:1px solid #f00;background-color:#f00;color:#fff;}
+.calculator_detail_wrap td .btn:first-of-type{margin-left:0}
+.calculator_detail_wrap .product_group .tbl .align_left_cell{text-align:left}
+.calculator_detail_wrap .product_group .tbl .align_right_cell{text-align:right}
+
+.modal .form_wrap{margin-top:-12px;margin-bottom:-12px}
+.modal .form_wrap .lb_txt{font-size:14px;color:#555;}
+.modal .form_wrap .error_control_area{margin-top:9px;}
+.modal .form_wrap .inp{border-color:#ddd;background-color:#f9f9f9;color:#333;}

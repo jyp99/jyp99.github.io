@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="all">
+<title>회원 전환 :: TOAST IAM</title>
+<link rel="stylesheet" type="text/css" href="css/iam.css">
+</head>
+<body>
+<div class="wrap">
+	<!-- [D] CONTENTS -->
+	<div id="content" class="content setting_content">
+		<div class="form_wrap">
+			<div class="sub_title_wrap">
+				<h2 class="title_text">토스트 회원 전환</h2>
+				<p class="dsc_txt">NHN TOAST 서비스를 이용하려면<br>전환을 위한 인증을 완료해주셔야 합니다.</p>
+			</div>
+			<form>
+			<fieldset>
+			<legend>전환 인증 메일 확인</legend>
+			<div class="input_wrap">
+				<div class="error_control_area"><!-- [D]입력 오류시 error_control_area에 is_error 클래스 추가 -->
+					<div class="inp_row">
+						<span class="inp_bx">
+							<input type="text" class="inp" title="페이코 이메일" placeholder="페이코 이메일">
+						</span>
+						<button type="button" class="btn btn_point" disabled>인증메일 발송</button>
+					</div>
+					<em class="error_txt">유효성 메세지 표시 영역</em>
+				</div>
+			</div>
+			<div class="btn_area">
+				<button type="button" class="btn btn_point">다음</button>
+			</div>
+			</fieldset>
+			</form>
+		</div>
+		<ul class="list_noti">
+		<li class="noti_text">기존에 사용하시던 페이코 이메일 주소로 토스트 아이디가 설정됩니다.<br>페이코 이메일 주소를 입력해주세요.</li>
+		</ul>
+	</div>
+	<!-- //[D] CONTENTS -->
+</div>
+
+<!--[D] 레이어팝업 -->
+<div class="layer_dimmed"></div><!-- [D] 레이어 팝업 노출시 layer_dimmed와 해당 ly_pop_wrap에 is_show 클래스 추가 -->
+<!-- [D]이미 가입된 회원 팝업 -->
+<div class="ly_pop_wrap">
+	<div class="ly_pop">
+		<div class="title_wrap">
+			<h3 class="ly_tit">토스트 회원 전환</h3>
+		</div>
+		<div class="desc_text_wrap">
+			<p class="desc_text">이미 TOAST에 가입하셨습니다!<br>로그인 하신 후 이용하실 수 있습니다.</p>
+		</div>
+		<div class="btn_area">
+			<button class="btn btn_point">확인</button>
+		</div>
+		<button type="button" class="btn_close_layer">닫기</button>
+	</div>
+</div>
+
+<!-- [D]인증메일 발송 팝업 -->
+<div class="ly_pop_wrap">
+	<div class="ly_pop">
+		<div class="title_wrap">
+			<h3 class="ly_tit">토스트 회원 전환</h3>
+		</div>
+		<div class="desc_text_wrap">
+			<p class="desc_text">인증메일이 발송되었습니다.</p>
+		</div>
+		<div class="btn_area">
+			<button class="btn btn_point">확인</button>
+		</div>
+		<button type="button" class="btn_close_layer">닫기</button>
+	</div>
+</div>
+
+<!-- [D]전환 대상자 아님 팝업 -->
+<div class="ly_pop_wrap">
+	<div class="ly_pop">
+		<div class="title_wrap">
+			<h3 class="ly_tit">토스트 회원 전환</h3>
+		</div>
+		<div class="desc_text_wrap">
+			<p class="desc_text">전환 대상자가 아닙니다.<br>TOAST에 가입하신 후 이용해주세요.</p>
+		</div>
+		<div class="btn_area">
+			<button class="btn btn_point">확인</button>
+		</div>
+		<button type="button" class="btn_close_layer">닫기</button>
+	</div>
+</div>
+<!-- [D]이메일 인증되지 않음 팝업 -->
+<div class="ly_pop_wrap">
+	<div class="ly_pop">
+		<div class="title_wrap">
+			<h3 class="ly_tit">토스트 회원 전환</h3>
+		</div>
+		<div class="desc_text_wrap">
+			<p class="desc_text">이메일이 인증되지 않았습니다.<br>이메일 인증을 먼저 완료해주세요.</p>
+		</div>
+		<div class="btn_area">
+			<button class="btn btn_point">확인</button>
+		</div>
+		<button type="button" class="btn_close_layer">닫기</button>
+	</div>
+</div>
+
+
+<!-- 마크업 확인용입니다. -->
+<style>
+	#case_view{display:inline-block;position:fixed;bottom:0;left:0;z-index:1000;widdt:auto;padding:5px;background:#000;opacity:0.7}
+	#case_view .btn{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+</style>
+<div id="case_view">
+	<a href="#" class="btn" onclick="$('.error_control_area').toggleClass('is_error');return false;">입력 오류 화면</a>
+	<a href="#" class="btn" onclick="$('.ly_pop_wrap,.layer_dimmed').removeClass('is_show');$('.layer_dimmed,.ly_pop_wrap:eq(0)').addClass('is_show');return false;">이미 가입된 회원 팝업</a>
+	<a href="#" class="btn" onclick="$('.ly_pop_wrap,.layer_dimmed').removeClass('is_show');$('.layer_dimmed,.ly_pop_wrap:eq(1)').addClass('is_show');return false;">인증메일 발송 팝업</a>
+	<a href="#" class="btn" onclick="$('.ly_pop_wrap,.layer_dimmed').removeClass('is_show');$('.layer_dimmed,.ly_pop_wrap:eq(2)').addClass('is_show');return false;">전환 대상자 아님 팝업</a>
+	<a href="#" class="btn" onclick="$('.ly_pop_wrap,.layer_dimmed').removeClass('is_show');$('.layer_dimmed,.ly_pop_wrap:eq(3)').addClass('is_show');return false;">이메일 인증되지 않음 팝업</a>
+</div>
+<script src="js/libs/jquery-1.12.4.min.js"></script>
+<script>    
+$(function(){
+  $('.ly_pop_wrap a,.ly_pop_wrap button').click(function(e){
+    e.preventDefault();
+    $('.ly_pop_wrap,.layer_dimmed').removeClass('is_show');
+  });
+});
+</script>
+<!-- //마크업 확인용입니다. -->
+</body>
+</html>

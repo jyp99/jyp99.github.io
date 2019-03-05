@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="all">
+<title>토스트(TOAST)</title>
+
+<meta name="description" content="NHN 엔터테인먼트에서 제공하는 토스트 클라우드 서비스. 오픈스택 기반의 클라우드 인프라, 게임솔루션, 보안, 문자/이메일/알림톡, 협업도구 Dooray, ERP 제공">
+<meta name="keywords" content="토스트, 토스트 클라우드, 클라우드 서비스, 토스트 닷컴, 클라우드, NHN엔터테인먼트, NHN엔터, NHN Entertainment, NHN Ent, TOAST, TOAST Cloud, TOAST CAM, TOAST PC, TOAST Analytics, toast, 토스트캠, 토스트피씨,토스트애널리틱스">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="토스트(TOAST)">
+<meta property="og:description" content="NHN 엔터테인먼트에서 제공하는 토스트 클라우드 서비스. 오픈스택 기반의 클라우드 인프라, 게임솔루션, 보안, 문자/이메일/알림톡, 협업도구 Dooray, ERP 제공">
+<meta property="og:keywords" content="토스트, 토스트 클라우드, 클라우드 서비스, 토스트 닷컴, 클라우드, NHN엔터테인먼트, NHN엔터, NHN Entertainment, NHN Ent, TOAST, TOAST Cloud, TOAST CAM, TOAST PC, TOAST Analytics, toast, 토스트캠, 토스트피씨,토스트애널리틱스">
+<meta property="og:image" content="http://images.toast.com/toast/com/web/common/toast.com.jpg">
+<meta property="og:image:secure_url" content="http://images.toast.com/toast/com/web/common/toast.com.jpg">
+<meta property="og:url" content="https://toast.com">
+<link rel="shortcut icon" href="https://toast.com/resources/img/favicons/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" sizes="180x180" href="/resources/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/resources/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/resources/img/favicons/favicon-16x16.png">
+<link rel="manifest" href="/resources/img/favicons/manifest.json">
+<link rel="mask-icon" href="/resources/img/favicons/safari-pinned-tab.svg">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="css/gnb.css">
+<link rel="stylesheet" type="text/css" href="css/toast.css">
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul class="skip">
+<li><a href="#header" onclick="document.getElementById('header').tabIndex=-1;document.getElementById('header').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+
+<!--[D] noti_browser -->
+<?php include 'inc/noti_browser.html';?>
+<!--//[D] noti_browser -->
+<div class="wrap header_fixed_wrap"><!-- [D]헤더가 필수인 페이지인 경우 wrap에 header_fixed_wrap 클래스 추가 -->
+
+	<!--[D] HEADER -->
+	<?php include 'inc/header.html';?>
+	<!--//[D] HEADER -->
+	<div id="container" class="container">
+		<!-- [D] CONTENTS -->
+		<div id="content" class="content calculator_content">
+			<div class="total_pricing_wrap">
+				<div class="inner">
+					<dl class="lst_total_pricing">
+					<dt class="tit_txt">총 예상 요금 (VAT 별도)</dt>
+					<dd class="total_pricing">
+						<em class="point_txt">662,716,512원</em>
+					</dd>
+					</dl>
+					<div class="btn_wrap">
+						<button class="btn btn_save" type="button">예상 요금 저장</button>
+						<button class="btn btn_history" type="button">내역 보기</button><!-- [D]btn_history 클릭시 calculator_content에 estimated_wrap_show, body에 is_show_modal 클래스 추가 -->
+					</div>
+				</div>
+			</div>
+			<div class="sec">
+				<div class="title_wrap">
+					<h2 class="tit_txt">요금 계산기</h2>
+					<nav class="location" aria-label="breadcrumb">
+						<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="#" class="link_txt">Home</a></li>
+						<li class="breadcrumb-item"><a href="#" class="link_txt">요금</a></li>
+						<li class="breadcrumb-item active" aria-current="page">요금 계산기</li>
+						</ol>
+					</nav>
+				</div>
+				<div class="sub_desc_wrap">
+					<p class="sub_txt">TOAST 서비스 요금을 간편하게 계산해 보실 수 있습니다(월 예상 요금 기준: 30일).<br>
+					무료 사용량 혹은 무료 이용 기간을 제공 중인 서비스는 현재 기준으로 무료 혜택을 포함하여 월 예상 요금을 표시합니다.<br>
+					무료 혜택이 변경되면 변경된 과금 정책에 따라 월 예상 요금이 계산됩니다.<br>
+					보다 자세한 내용은 <a href="#" class="link_txt">요금</a>에서 확인할 수 있습니다.<br>
+					컨설팅 및 무료 혜택 지원은 <a href="#" class="link_txt">TOAST 고객센터</a>로 연락 주시면 빠르게 답변드리겠습니다.</p>
+				</div>
+				<div class="service_check_wrap">
+					<h3 class="h_txt">원하는 서비스를 선택하세요.</h3>
+					<ul class="lst_check is_button_type">
+					<li class="check_item">
+						<span class="inp_checkbox">
+							<input type="checkbox" id="check1" class="inp_chk">
+							<label for="check1" class="inp_label">
+								<span class="label_text">Compute</span>
+							</label>
+						</span>
+					</li>
+					<li class="check_item">
+						<span class="inp_checkbox">
+							<input type="checkbox" id="check2" class="inp_chk">
+							<label for="check2" class="inp_label">
+								<span class="label_text">Network</span>
+							</label>
+						</span>
+					</li>
+					<li class="check_item">
+						<span class="inp_checkbox">
+							<input type="checkbox" id="check3" class="inp_chk">
+							<label for="check3" class="inp_label">
+								<span class="label_text">Storage</span>
+							</label>
+						</span>
+					</li>
+					<li class="check_item">
+						<span class="inp_checkbox">
+							<input type="checkbox" id="check4" class="inp_chk">
+							<label for="check4" class="inp_label">
+								<span class="label_text">Database</span>
+							</label>
+						</span>
+					</li>
+					</ul>
+				</div>
+				<div class="selected_service_wrap">
+					<h3 class="h_txt">선택한 서비스</h3>
+					<div class="empty_service_wrap">
+						<p class="guide_txt">선택한 서비스가 없습니다.</p>
+					</div>
+				</div>
+
+				<div class="selected_service_wrap">
+					<h3 class="h_txt">선택한 서비스</h3>
+					<ul class="nav lst_selected_service">
+					<li class="nav-item service_item"><a data-toggle="tab" href="#service_calc_tab1" class="nav-link active">Compute</a></li>
+					<li class="nav-item service_item"><a data-toggle="tab" href="#service_calc_tab2" class="nav-link">Network</a></li>
+					<li class="nav-item service_item"><a data-toggle="tab" href="#service_calc_tab3" class="nav-link">Storage</a></li>
+					<li class="nav-item service_item"><a data-toggle="tab" href="#service_calc_tab4" class="nav-link">Database</a></li>
+					</ul>
+					<div class="tab-content sec_calc">
+						<div id="service_calc_tab1" class="tab-pane fade show active">
+							<div class="product_group">
+								<h4 class="product_title">Server</h4>
+								<div class="tbl_wrap is_round">
+									<table class="tbl">
+									<caption><span class="blind">Server 요금 계산 표</span></caption>
+									<colgroup>
+									<col style="width:64px">
+									<col style="width:241px">
+									<col style="width:193px">
+									<col style="width:100%">
+									<col style="width:108px">
+									<col style="width:132px">
+									<col style="width:75px">
+									</colgroup>
+									<thead>
+									<tr>
+									<th scope="col">번호</th>
+									<th scope="col">OS</th>
+									<th scope="col">인스턴스 타입</th>
+									<th scope="col">루트 볼륨</th>
+									<th scope="col">서버 수량</th>
+									<th scope="col">월 예상 요금</th>
+									<th scope="col"><span class="blind">항목 삭제</span></th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr>
+									<td>1</td>
+									<td>
+										<span class="select_bx">
+											<select class="inp_select">
+												<option value="" disabled selected>선택하세요</option>
+												<option value="cent_os_6_5">CentOS 6.5 – 64bit</option>
+												<option value="cent_os_7_1">CentOS 7.1 – 64bit</option>
+											</select>
+										</span>
+									</td>
+									<td>
+										<span class="select_bx">
+											<select class="inp_select">
+												<option value="" disabled selected>선택하세요</option>
+												<option value="u2.nano">u2.nano(1core*1GB)</option>
+												<option value="u2.micro">u2.micro(1core*2GB)</option>
+											</select>
+										</span>
+									</td>
+									<td class="align_right_cell">
+										<div class="inp_row">
+											<span class="select_bx is_sm">
+												<select class="inp_select">
+													<option value="tcc_volume" selected>범용 HD</option>
+													<option value="tcc_volume_ssd">범용 SSD</option>
+												</select>
+											</span>
+											<span class="inp_bx is_sm">
+												<input type="text" class="inp" title="unit" value="20">
+											</span>
+											<span class="txt">20 GB(GB당 0.10원/시간)</span>
+										</div>
+									</td>
+									<td class="align_right_cell">
+										<div class="inp_row">
+											<span class="inp_bx is_md">
+												<input type="text" class="inp" title="unit" value="20">
+											</span>
+											<span class="txt">VM</span>
+										</div>
+									</td>
+									<td class="align_right_cell">
+										0원
+									</td>
+									<td>
+										<button class="btn btn_delete" type="button">삭제</button>
+									</td>
+									</tr>
+									<tr>
+									<td>1</td>
+									<td>
+										<span class="select_bx">
+											<select class="inp_select">
+												<option value="" disabled selected>선택하세요</option>
+												<option value="cent_os_6_5">CentOS 6.5 – 64bit</option>
+												<option value="cent_os_7_1">CentOS 7.1 – 64bit</option>
+											</select>
+										</span>
+									</td>
+									<td>
+										<span class="select_bx">
+											<select class="inp_select">
+												<option value="" disabled selected>선택하세요</option>
+												<option value="u2.nano">u2.nano(1core*1GB)</option>
+												<option value="u2.micro">u2.micro(1core*2GB)</option>
+											</select>
+										</span>
+									</td>
+									<td class="align_right_cell">
+										<span class="txt">20 GB(GB당 0.10원/시간)</span>
+									</td>
+									<td class="align_right_cell">
+										<div class="inp_row">
+											<span class="inp_bx is_md">
+												<input type="text" class="inp" title="unit" value="20">
+											</span>
+											<span class="txt">VM</span>
+										</div>
+									</td>
+									<td class="align_right_cell">0원</td>
+									<td>
+										<button class="btn btn_delete" type="button">삭제</button>
+									</td>
+									</tr>
+									<tr class="total_row">
+									<td colspan="4">합계</td>
+									<td class="align_right_cell">0VM</td>
+									<td class="align_right_cell">0원</td>
+									<td></td>
+									</tr>
+									</tbody>
+									</table>
+								</div>
+								<div class="btn_wrap">
+									<button class="btn btn_add" type="button">항목 추가</button>
+								</div>
+								<ul class="lst_noti">
+								<li class="noti_txt">t2,m2,c2,r2는 최대 1,000GB까지 Root Volume 지정이 가능합니다. 단 최소 사이즈는 선택한 OS 이미지에 따라 다를 수 있습니다.</li>
+								<li class="noti_txt">u2 Instance는 u2 전용 스토리지를 Root Volume(OS 설치공간)으로 사용합니다. Flavor에 따라 고정된 크기(u2.nano: 20GB, u2.micro: 20GB, u2.small: 50GB, u2.medium: 50GB, u2.large: 100GB)가 할당됩니다.</li>
+								</ul>
+							</div>
+							<div class="product_group">
+								<h4 class="product_title">Image</h4>
+								<div class="tbl_wrap is_round">
+									<table class="tbl">
+									<caption><span class="blind">Image 요금 계산 표</span></caption>
+									<colgroup>
+									<col style="width:888px">
+									<col style="width:242px">
+									</colgroup>
+									<thead>
+									<tr>
+									<th scope="col">월 사용량</th>
+									<th scope="col">월 예상 요금</th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr>
+									<td>
+										<div class="inp_row">
+											<span class="inp_bx">
+												<input type="text" class="inp" title="unit" value="20">
+											</span>
+											<span class="txt">GB(GB당 0.14원/시간)</span>
+										</div>
+									</td>
+									<td class="align_right_cell">0원</td>
+									</tr>
+									</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="product_group">
+								<h4 class="product_title">Network(Outbound)</h4>
+								<div class="tbl_wrap is_round">
+									<table class="tbl">
+									<caption><span class="blind">Network(Outbound) 요금 계산 표</span></caption>
+									<colgroup>
+									<col style="width:888px">
+									<col style="width:242px">
+									</colgroup>
+									<thead>
+									<tr>
+									<th scope="col">월 사용량</th>
+									<th scope="col">월 예상 요금</th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr>
+									<td>
+										<div class="inp_row">
+											<span class="inp_bx">
+												<input type="text" class="inp" title="unit" value="20">
+											</span>
+											<span class="txt">GB(GB당 100원)</span>
+										</div>
+									</td>
+									<td class="align_right_cell">0원</td>
+									</tr>
+									</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div id="service_calc_tab2" class="tab-pane fade">
+							<div class="product_group">
+								<h4 class="product_title">VPC</h4>
+								<div class="tbl_wrap is_round">
+									<table class="tbl">
+									<caption><span class="blind">VPC 요금 계산 표</span></caption>
+									<colgroup>
+									<col style="width:888px">
+									<col style="width:242px">
+									</colgroup>
+									<thead>
+									<tr>
+									<th scope="col">월 사용량</th>
+									<th scope="col">월 예상 요금</th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr>
+									<td>
+										<div class="inp_row">
+											<span class="inp_bx">
+												<input type="text" class="inp" title="unit" value="0">
+											</span>
+											<span class="txt">개(25원/시간)</span>
+										</div>
+									</td>
+									<td class="align_right_cell">0원</td>
+									</tr>
+									</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="product_group">
+								<h4 class="product_title">Floating IP</h4>
+								<div class="tbl_wrap is_round">
+									<table class="tbl">
+									<caption><span class="blind">Floating IP 요금 계산 표</span></caption>
+									<colgroup>
+									<col style="width:888px">
+									<col style="width:242px">
+									</colgroup>
+									<thead>
+									<tr>
+									<th scope="col">월 사용량</th>
+									<th scope="col">월 예상 요금</th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr>
+									<td>
+										<div class="inp_row">
+											<span class="inp_bx">
+												<input type="text" class="inp" title="unit" value="0">
+											</span>
+											<span class="txt">개(IP당 5.6원/시간)</span>
+										</div>
+									</td>
+									<td class="align_right_cell">0원</td>
+									</tr>
+									</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="product_group">
+								<h4 class="product_title">Load Balancer</h4>
+								<div class="tbl_wrap is_round">
+									<table class="tbl">
+									<caption><span class="blind">Load Balancer 요금 계산 표</span></caption>
+									<colgroup>
+									<col style="width:888px">
+									<col style="width:242px">
+									</colgroup>
+									<thead>
+									<tr>
+									<th scope="col">월 사용량</th>
+									<th scope="col">월 예상 요금</th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr>
+									<td>
+										<div class="inp_row">
+											<span class="inp_bx">
+												<input type="text" class="inp" title="unit" value="0">
+											</span>
+											<span class="txt">LB(LB당 20원/시간)</span>
+										</div>
+									</td>
+									<td class="align_right_cell">0원</td>
+									</tr>
+									</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div id="service_calc_tab3" class="tab-pane fade">
+							<div class="product_group">
+								<h4 class="product_title">Block Storage(HDD)</h4>
+								<div class="tbl_wrap is_round">
+									<table class="tbl">
+									<caption><span class="blind">Block Storage(HDD) 요금 계산 표</span></caption>
+									<colgroup>
+									<col style="width:888px">
+									<col style="width:242px">
+									</colgroup>
+									<thead>
+									<tr>
+									<th scope="col">월 사용량</th>
+									<th scope="col">월 예상 요금</th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr>
+									<td>
+										<div class="inp_row">
+											<span class="inp_bx">
+												<input type="text" class="inp" title="unit" value="0">
+											</span>
+											<span class="txt">GB(GB당 0.14원/시간)</span>
+										</div>
+									</td>
+									<td class="align_right_cell">0원</td>
+									</tr>
+									</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="product_group">
+								<h4 class="product_title">Block Storage(SSD)</h4>
+								<div class="tbl_wrap is_round">
+									<table class="tbl">
+									<caption><span class="blind">Block Storage(SSD) 요금 계산 표</span></caption>
+									<colgroup>
+									<col style="width:888px">
+									<col style="width:242px">
+									</colgroup>
+									<thead>
+									<tr>
+									<th scope="col">월 사용량</th>
+									<th scope="col">월 예상 요금</th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr>
+									<td>
+										<div class="inp_row">
+											<span class="inp_bx">
+												<input type="text" class="inp" title="unit" value="0">
+											</span>
+											<span class="txt">GB(GB당 0.16원/시간)</span>
+										</div>
+									</td>
+									<td class="align_right_cell">0원</td>
+									</tr>
+									</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="product_group">
+								<h4 class="product_title">NAS(Offline)</h4>
+								<div class="tbl_wrap is_round">
+									<table class="tbl">
+									<caption><span class="blind">NAS(Offline) 요금 계산 표</span></caption>
+									<colgroup>
+									<col style="width:888px">
+									<col style="width:242px">
+									</colgroup>
+									<thead>
+									<tr>
+									<th scope="col">월 사용량</th>
+									<th scope="col">월 예상 요금</th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr>
+									<td>
+										<div class="inp_row">
+											<span class="inp_bx">
+												<input type="text" class="inp" title="unit" value="0">
+											</span>
+											<span class="txt">GB(100GB당 6000원/월)</span>
+										</div>
+									</td>
+									<td class="align_right_cell">0원</td>
+									</tr>
+									</tbody>
+									</table>
+								</div>
+								<ul class="lst_noti">
+								<li class="noti_txt">NAS (Offline)는 최소 300GB를 신청할 수 있으며 100GB 단위로 추가할 수 있습니다.</li>
+								</ul>
+							</div>
+							<div class="product_group">
+								<h4 class="product_title">Object Storage</h4>
+								<div class="tbl_wrap is_round">
+									<table class="tbl">
+									<colgroup>
+									<col style="width:244px">
+									<col style="width:100%">
+									<col style="width:198px">
+									</colgroup>
+									<thead>
+									<tr>
+									<th scope="col">서비스 이름</th>
+									<th scope="col">월 사용량</th>
+									<th scope="col">월 예상 요금</th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr>
+									<th>
+										<span class="txt">Network 전송량</span>
+									</th>
+									<td>
+										<div class="inp_row">
+											<span class="inp_bx" style="width:387px">
+												<input type="text" class="inp" title="unit" value="0">
+											</span>
+											<span class="txt">GB(GB당 100원)</span>
+										</div>
+									</td>
+									<td class="align_right_cell">0원</td>
+									</tr>
+									<tr>
+									<th>
+										<span class="txt">Storage</span>
+									</th>
+									<td>
+										<div class="inp_row">
+											<span class="inp_bx" style="width:387px">
+												<input type="text" class="inp" title="unit" value="0">
+											</span>
+											<span class="txt">GB(GB당 0.04원/시간)</span>
+										</div>
+									</td>
+									<td class="align_right_cell">0원</td>
+									</tr>
+									<tr class="total_row">
+									<td colspan="2">합계</td>
+									<td class="align_right_cell">0원</td>
+									</tr>
+									</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div id="service_calc_tab4" class="tab-pane fade">
+							<div class="product_group">
+								<h4 class="product_title">RDS for MySQL</h4>
+								<div class="tbl_wrap is_round">
+									<table class="tbl">
+									<caption><span class="blind">RDS for MySQL 요금 계산 표</span></caption>
+									<colgroup>
+									<col style="width:65px">
+									<col style="width:192px">
+									<col style="width:277px">
+									<col style="width:100%">
+									<col style="width:108px">
+									<col style="width:148px">
+									<col style="width:77px">
+									</colgroup>
+									<thead>
+									<tr>
+									<th scope="col">번호</th>
+									<th scope="col">Flavor</th>
+									<th scope="col">Data Volume</th>
+									<th scope="col">Backup Volume</th>
+									<th scope="col">서버 수량</th>
+									<th scope="col">월 예상 요금</th>
+									<th scope="col"><span class="blind">항목 삭제</span></th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr>
+									<td>1</td>
+									<td>
+										<span class="select_bx">
+											<select class="inp_select">
+												<option value="" disabled selected>선택하세요</option>
+												<option value="cent_os_6_5">CentOS 6.5 – 64bit</option>
+											</select>
+										</span>
+									</td>
+									<td class="align_right_cell">
+										<div class="inp_row">
+											<span class="inp_bx is_sm">
+												<input type="text" class="inp" title="unit" value="20">
+											</span>
+											<span class="txt">GB (GB당 0.14원/시간)</span>
+										</div>
+									</td>
+									<td>
+										<div class="check_item">
+											<span class="inp_checkbox">
+												<input type="checkbox" id="backup_check1" class="inp_chk">
+												<label for="backup_check1" class="inp_label">
+												<span class="label_text">자동 백업 사용</span>
+											</label>
+											</span>
+										</div>
+									</td>
+									<td class="align_right_cell">
+										<div class="inp_row">
+											<span class="inp_bx is_md">
+												<input type="text" class="inp" title="unit" value="20">
+											</span>
+											<span class="txt">VM</span>
+										</div>
+									</td>
+									<td class="align_right_cell">
+										0원
+									</td>
+									<td>
+										<button class="btn btn_delete" type="button">삭제</button>
+									</td>
+									</tr>
+									<tr class="total_row">
+									<td colspan="4">합계</td>
+									<td class="align_right_cell">0VM</td>
+									<td class="align_right_cell">0원</td>
+									<td></td>
+									</tr>
+									</tbody>
+									</table>
+								</div>
+								<div class="btn_wrap">
+									<button class="btn btn_add" type="button">항목 추가</button>
+								</div>
+								<ul class="lst_noti">
+								<li class="noti_txt">t2,m2,c2,r2는 최대 1,000GB까지 Root Volume 지정이 가능합니다. 단 최소 사이즈는 선택한 OS 이미지에 따라 다를 수 있습니다.</li>
+								<li class="noti_txt">u2 Instance는 u2 전용 스토리지를 Root Volume(OS 설치공간)으로 사용합니다. Flavor에 따라 고정된 크기(u2.nano: 20GB, u2.micro: 20GB, u2.small: 50GB, u2.medium: 50GB, u2.large: 100GB)가 할당됩니다.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!-- [D]예상 요금 내역 -->
+			<div class="sec estimated_wrap">
+				<div class="inner">
+					<div class="title_wrap">
+						<h2 class="tit_txt">예상 요금 내역</h2>
+					</div>
+					<div class="estimated_total_wrap">
+						<span class="sub_txt">선택한 서비스: 1 개</span>
+						<dl class="total_result">
+						<dt class="tit_txt">총 예상 요금 (VAT 별도)</dt>
+						<dd class="result_txt">45,18,488원</dd>
+						</dl>
+					</div>
+					
+					<dl class="current_area">
+					<dt class="tit_txt">현재 지역</dt>
+					<dd class="cnt_txt"><span class="ico_country country_kr">대한민국</span> TCC1 (Pangyo)</dd><!-- [D]국가 별 클래스 적용 : 대한민국 : country_kr, 일본 : country_jp, 미국 : country_usa, 중국 : country_cn -->
+					</dl>
+					
+					<div class="product_group">
+						<h3 class="product_title"><span class="category_name">Compute</span> - <em class="service_name">Server</em></h3>
+						<div class="tbl_wrap is_round">
+							<table class="tbl">
+							<caption><span class="blind">Server 요금 계산 표</span></caption>
+							<colgroup>
+							<col style="width:56px">
+							<col style="width:260px">
+							<col style="width:212px">
+							<col style="width:260px">
+							<col style="width:108px">
+							<col>
+							</colgroup>
+							<thead>
+							<tr>
+							<th scope="col">번호</th>
+							<th scope="col">OS</th>
+							<th scope="col">인스턴스 타입</th>
+							<th scope="col">루트 볼륨</th>
+							<th scope="col">서버 수량</th>
+							<th scope="col">월 예상 요금</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+							<td>1</td>
+							<td>Ubuntu 14.04 – 64bit</td>
+							<td>r2.small(2core*8GB)</td>
+							<td class="align_right_cell">HDD: 20 GB(GB당 0.14원/시간)</td>
+							<td class="align_right_cell">30 VM</td>
+							<td class="align_right_cell">2,825,280원</td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+					</div>
+					
+					<div class="product_group">
+						<h3 class="product_title"><span class="category_name">Compute</span> - <em class="service_name">Image</em></h3>
+						<div class="tbl_wrap is_round">
+							<table class="tbl">
+							<caption><span class="blind">Image 요금 계산 표</span></caption>
+							<colgroup>
+							<col style="width:420px">
+							<col style="width:476px">
+							<col style="width:100%">
+							</colgroup>
+							<thead>
+							<tr>
+							<th scope="col" colspan="2">월 사용량</th>
+							<th scope="col">월 예상 요금</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+							<td class="align_right_cell">10</td>
+							<td>GB(GB당 0.14원/시간)</td>
+							<td class="align_right_cell">1,008원</td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //[D]예상 요금 내역 -->
+		</div>
+		<!-- //[D] CONTENTS -->
+	</div>
+	<!--[D] FOOTER -->
+	<?php include 'inc/footer.html';?>
+	<!--//[D] FOOTER -->
+</div>
+
+<!--[D] widget -->
+	<?php include 'inc/widget.html';?>
+<!--//[D] widget -->
+
+<!-- [D] LAYER -->
+<?php include 'inc/layer_loading.html';?>
+<!-- [D] LAYER -->
+
+<!-- Javascript Area -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+<!-- 마크업 확인용입니다. -->
+<style>
+.case_view{display:inline-block;position:fixed;bottom:0;left:0;z-index:1000;width:auto;padding:5px;background:#000;opacity:0.7}
+.case_view .btn{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+</style>
+<div class="case_view">
+	<?php include 'inc/case_view_common.html';?>
+</div>
+
+
+<script src="js/case_view.js"></script>
+<!-- //마크업 확인용입니다. -->
+</body>
+</html>

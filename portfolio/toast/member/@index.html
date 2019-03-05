@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>TOAST Cloud : 마크업 산출물</title>
+<style>
+@charset "utf-8";
+/* Common */
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select{margin:0;padding:0}
+body,input,textarea,select,button,table{font-size:14px;font-family:'나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,'굴림',Gulim,Helvetica;line-height:1.25em}
+body.s,.s input,.s textarea,.s select,.s button,.s table{font-family:Helvetica}
+body{position:relative;background-color:#f4f4f4;color:#000;-webkit-text-size-adjust:none}
+img,fieldset{border:0}
+ul,ol{list-style:none}
+em,address{font-style:normal}
+a{color:#000;text-decoration:none}
+table{border-collapse:collapse}
+hr{display:none !important}
+.u_hc{visibility:hidden;overflow:hidden;position:absolute;left:-999em;width:0;height:0;font-size:0;line-height:0}
+.u_vc,.u_skip{position:absolute;*left:-9999em;z-index:-1;font-size:4px;line-height:1px;color:transparent}
+#ct{clear:both;width:100%;background-color:#fff}
+#ct:after{display:block;clear:both;height:1px;margin-top:-1px;content:''}
+
+/* index.html */
+body{padding:0 14px;background-color:#fff;word-wrap:break-word;word-break:break-all}
+header{padding:1em .1em .9em .1em;border-bottom:3px solid #222}
+header:after{display:block;clear:both;content:''}
+.hd_h1{position:relative;font-size:1.2em}
+.quick{display:inline-block;margin-left:15px;background:#fd3939;font-weight:bold;color:#fff}
+.hd_svc{display:block;position:absolute;top:0;right:4px;width:3em;padding:.8em 24px .7em .6em;background:url(http://static.naver.com/www/m/cm/im/bu_lk.gif) no-repeat 100% 50%;font-size:.86em;line-height:1.1em;color:#666}
+.hd_wr{white-space:nowrap}
+.sec_h{clear:both;padding:2em .1em .4em;border-bottom:1px solid #000;font-size:1em}
+.sec_h2{clear:both;padding:1em .1em .4em;border-bottom:1px dotted #888;font-size:1em}
+.sec_h2::before{display:inline-block;margin-right:.25em;border:2px solid transparent;border-left-color:#000;vertical-align:3px;content:''}
+ul{font-size:.9em}
+li{border-bottom:1px solid #dfdfdf}
+li a{display:block;padding:.7em 31px .6em .1em;background:url(http://static.naver.com/www/m/cm/im/bu_lk.gif) no-repeat 100% 50%;_zoom:1}
+.lidv{margin-top:1px;border-top:1px solid #dfdfdf}
+li span{margin-left:.4em;font-size:.86em;color:#909090}
+footer{clear:both;margin:2.5em 0 4em;padding:6px 2px 2px;background:#f4f4f4;font-size:.86em;line-height:1.6em;color:#333;text-align:center}
+dt,dd{display:inline;color:#333}
+dt:after{display:inline;content:': '}
+dd:last-of-type{display:block;color:#aaa}
+.ft_a{display:inline-block;padding:2px 2px 5px;color:#16d;letter-spacing:-1px;text-decoration:underline}
+
+.gu_table{width:100%;border-collapse:collapse}
+.gu_table caption{padding:.7em 0 .6em .1em;text-align:left}
+.gu_table th,.gu_table td{height:2em;padding:.1em .6em;border:1px solid #ddd;text-align:center}
+.gu_table thead th{width:5em;background:#f1f1f1}
+.gu_table thead th.gu_mc{width:auto}
+.gu_table tbody th{color:#000}
+.gu_table tbody td{color:#06e}
+.gu_table tbody td.gu_mc{text-align:left}
+.gu_ept{color:#ccc}
+.partner_id{color:#fa2828;}
+.new{display:inline-block;position:relative;top:-1px;height:14px;padding:3px;border-radius:3px;background:#fd3939;font-family:verdana;font-size:11px;font-weight:normal;color:#fff;line-height:14px;vertical-align:middle}
+.up{display:inline-block;position:relative;top:-1px;height:14px;background:#45a7fb;color:#fff;padding:3px;border-radius:3px;font-family:verdana;font-size:11px;font-weight:normal;line-height:14px;vertical-align:middle}
+.etc{display:inline-block;position:relative;top:-1px;height:14px;background:#2fbf6d;color:#fff;padding:3px;border-radius:3px;font-family:verdana;font-size:11px;font-weight:normal;line-height:14px;vertical-align:middle}
+.mobile{display:inline-block;position:relative;top:-1px;height:14px;margin-left:15px;padding:3px;border-radius:3px;background:#03862e;font-family:verdana;font-size:11px;font-weight:normal;color:#fff;line-height:14px;vertical-align:middle}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+$(function(){
+	$('#ct ul a').each(function(){
+		$('<span>/ '+$(this).attr('href')+'</span>').appendTo($(this));
+	});
+});
+</script>
+</head>
+
+<body>
+<header role="banner">
+	<h1 class="hd_h1">TOAST Cloud 회원</h1>
+</header>
+<div id="ct">
+	<section role="main">
+		<h1 class="u_vc">마크업 산출물</h1>
+		
+		<h2 class="sec_h">UIO 가이드</h2>
+		<ul>
+		<li><a href="00_guide.html">UIO 가이드</a></li>
+		</ul>
+
+		<h2 class="sec_h">로그인</h2>
+		<ul>
+		<li><a href="01_login.html">로그인<span class="up">18.03.30 UP</span><span class="etc">PC&amp;모바일</span></a></li>
+		</ul>
+
+		<h2 class="sec_h">회원가입</h2>
+		<ul>
+		<li><a href="02_signup_select_type.html">회원유형(개인or사업자) 선택 화면</a></li>
+		<li><a href="02_signup_step1.html">단계1. 약관동의(개인)</a></li>
+		<li><a href="02_signup_step2.html">단계2. 회원정보 입력(개인)</a></li>
+		<li><a href="02_signup_step2_business.html">단계2. 회원정보 입력(사업자)</a></li>
+		<li><a href="02_signup_step3.html">단계3. 가입완료</a></li>
+		</ul>
+
+		<h2 class="sec_h">비밀번호 찾기</h2>
+		<ul>
+		<li><a href="03_password_find.html">비밀번호 찾기</a></li>
+		<li><a href="03_password_reset.html">비밀번호 재설정</a></li>
+		</ul>
+
+		<h2 class="sec_h">비밀번호 재확인</h2>
+		<ul>
+		<li><a href="04_password_reconfirm.html">비밀번호 재확인</a></li>
+		</ul>
+
+		<h2 class="sec_h">마이페이지</h2>
+		<ul>
+		<li><a href="05_my_info.html">회원정보 확인(개인회원)</a></li>
+		<li><a href="05_my_info_business.html">회원정보 확인(사업자회원)</a></li>
+		<li><a href="05_withdrawal.html">회원탈퇴 화면</a></li>
+		<li><a href="05_withdrawal_acceptance.html">탈퇴 신청 접수안내</a></li>
+		<li><a href="05_withdrawal_complete.html">탈퇴 완료안내</a></li>
+		</ul>
+
+		<h2 class="sec_h">회원전환</h2>
+		<ul>
+		<li><a href="06_account_transfer_step1.html">단계1. 전환 인증</a></li>
+		<li><a href="06_account_transfer_step2.html">단계2. 비밀번호 설정</a></li>
+		</ul>
+
+		<h2 class="sec_h">이메일 인증</h2>
+		<ul>
+		<li><a href="99_email_authentication.html">이메일 인증(EMS)</a></li>
+		<li><a href="07_email_authentication_complete.html">인증 완료</a></li>
+		<li><a href="07_email_authentication_fail.html">인증 실패</a></li>
+		</ul>
+
+		<h2 class="sec_h">오류 페이지</h2>
+		<ul>
+		<li><a href="10_error.html">공통 에러 페이지(브라우저 접속 제한)</a></li>
+		</ul>
+
+		<h2 class="sec_h">고객센터(iframe 영역)</h2>
+		<ul>
+		<li><a href="cs/cs_faq.html">FAQ목록</a></li>
+		<li><a href="cs/cs_qus.html">1:1문의</a></li>
+		<li><a href="cs/cs_qna.html">문의내역조회_목록</a></li>
+		<li><a href="cs/cs_qna2.html">문의내역조회_내역</a></li>
+
+		</ul>
+
+	</section>
+</div>
+<footer role="contentinfo">
+	<dl>
+	<dt>마크업 담당자</dt>
+	<dd>하이브랩 UI 개발3팀</dd>
+	</dl>
+</footer>
+
+</body>
+</html>

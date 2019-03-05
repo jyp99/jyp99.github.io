@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="all">
+<title>토스트(TOAST) 마이페이지</title>
+
+<meta name="description" content="NHN 엔터테인먼트에서 제공하는 토스트 클라우드 서비스. 오픈스택 기반의 클라우드 인프라, 게임솔루션, 보안, 문자/이메일/알림톡, 협업도구 Dooray, ERP 제공">
+<meta name="keywords" content="토스트, 토스트 클라우드, 클라우드 서비스, 토스트 닷컴, 클라우드, NHN엔터테인먼트, NHN엔터, NHN Entertainment, NHN Ent, TOAST, TOAST Cloud, TOAST CAM, TOAST PC, TOAST Analytics, toast, 토스트캠, 토스트피씨,토스트애널리틱스">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="토스트(TOAST) 마이페이지">
+<meta property="og:description" content="NHN 엔터테인먼트에서 제공하는 토스트 클라우드 서비스. 오픈스택 기반의 클라우드 인프라, 게임솔루션, 보안, 문자/이메일/알림톡, 협업도구 Dooray, ERP 제공">
+<meta property="og:keywords" content="토스트, 토스트 클라우드, 클라우드 서비스, 토스트 닷컴, 클라우드, NHN엔터테인먼트, NHN엔터, NHN Entertainment, NHN Ent, TOAST, TOAST Cloud, TOAST CAM, TOAST PC, TOAST Analytics, toast, 토스트캠, 토스트피씨,토스트애널리틱스">
+<meta property="og:image" content="http://images.toast.com/toast/com/web/common/toast.com.jpg">
+<meta property="og:image:secure_url" content="http://images.toast.com/toast/com/web/common/toast.com.jpg">
+<meta property="og:url" content="https://toast.com">
+<link rel="shortcut icon" href="https://toast.com/resources/img/favicons/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" sizes="180x180" href="/resources/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/resources/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/resources/img/favicons/favicon-16x16.png">
+<link rel="manifest" href="/resources/img/favicons/manifest.json">
+<link rel="mask-icon" href="/resources/img/favicons/safari-pinned-tab.svg">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="css/gnb.css">
+<link rel="stylesheet" type="text/css" href="css/toast.css">
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul class="skip">
+<li><a href="#header" onclick="document.getElementById('header').tabIndex=-1;document.getElementById('header').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+
+<!--[D] noti_browser -->
+<!-- <?php include 'inc/noti_browser.html';?> -->
+<!--//[D] noti_browser -->
+<div class="wrap">
+
+	<!--[D] HEADER -->
+	<?php include 'inc/header.html';?>
+	<!--//[D] HEADER -->
+	<div id="container" class="container">
+		<!-- [D] CONTENTS -->
+		<div id="content" class="content mypage_content">
+			<section class="sec">
+				<div class="sec_inner">
+					<h2 class="main_title">마이페이지</h2>
+					<ul class="nav nav-justified member_nav">
+					<li class="nav-item word_item"><a href="member/05_my_info.html" class="nav-link"><span class="nav_txt">회원정보</span></a></li>
+					<li class="nav-item word_item"><a href="07_mypage_payment.html" class="nav-link"><span class="nav_txt">결제수단</span></a></li>
+					<li class="nav-item word_item"><a href="07_mypage_credit.html" class="nav-link"><span class="nav_txt">크레딧</span></a></li>
+					<li class="nav-item word_item active"><a href="07_mypage_api.html" class="nav-link is_active"><span class="nav_txt">API 보안 설정</span></a></li>
+					<li class="nav-item word_item"><a href="07_mypage_personal_info.html" class="nav-link"><span class="nav_txt">개인정보 이용 내역</span></a></li>
+					</ul>
+					<div class="tab-content">
+						<div class="title_wrap">
+							<h3 class="tit_txt">API 보안 설정</h3>
+							<p class="sub_desc">API 보안 설정은 User Access Key ID (TOAST 서비스 이용시, 사용자 인증을 위해 필요한 사용자 설정 키) 를 발급하는 기능입니다. User Access Key ID 는 TOAST ID 에 1개만 발급 가능합니다. 보안을 위해 발급된 키는 안전한 장소에 보관해 주세요.<span class="point_txt">User Access Key ID 는 90일마다 변경하기를 권장합니다.</span></p>
+						</div>
+						<div class="btn_wrap is_align_right">
+							<button type="button" class="btn btn_strong">User Access Key ID 삭제</button>
+						</div>			
+						<div class="tbl_wrap">
+							<table class="tbl_history tbl_api_list">
+								<caption><span>API 보안 설정 게시글 리스트</span></caption>
+								<colgroup>
+								<col>
+								<col>
+								<col>
+								<col>
+								<col>
+								<col>
+								<col>
+								</colgroup>
+								<thead>
+								<tr>
+								<th scope="col">User Access Key ID</th>
+								<th scope="col">Secret Access Key</th>
+								<th scope="col">상태</th>
+								<th scope="col">생성일자</th>
+								<th scope="col">마지막 사용일자</th>
+								<th scope="col">재발급 일자</th>
+								<th scope="col">Actions</th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr>
+								<td>IuzPezQGMk7qLf2rsLqc</td>
+								<td>q*************** <a href="#" class="link_txt">재발급</a></td>
+								<td>사용</td>
+								<td>2018.05.25</td>
+								<td>2018.05.25</td>
+								<td>2018.05.25</td>
+								<td><a href="#" class="link_txt">비활성화</a></td>
+								</tr>
+								<tr>
+								<td>IuzPezQGMk7qLf2rsLqc</td>
+								<td>q*************** <a href="#" class="link_txt">재발급</a></td>
+								<td>사용</td>
+								<td>2018.05.25</td>
+								<td>2018.05.25</td>
+								<td>2018.05.25</td>
+								<td><a href="#" class="link_txt">비활성화</a></td>
+								</tr>
+								<tr>
+								<td>IuzPezQGMk7qLf2rsLqc</td>
+								<td>q*************** <a href="#" class="link_txt">재발급</a></td>
+								<td>사용</td>
+								<td>2018.05.25</td>
+								<td>2018.05.25</td>
+								<td>2018.05.25</td>
+								<td><a href="#" class="link_txt">비활성화</a></td>
+								</tr>
+								<tr>
+								<td>IuzPezQGMk7qLf2rsLqc</td>
+								<td>q*************** <a href="#" class="link_txt">재발급</a></td>
+								<td>사용</td>
+								<td>2018.05.25</td>
+								<td>2018.05.25</td>
+								<td>2018.05.25</td>
+								<td><a href="#" class="link_txt">비활성화</a></td>
+								</tr>
+								<tr>
+								<td>IuzPezQGMk7qLf2rsLqc</td>
+								<td>q*************** <a href="#" class="link_txt">재발급</a></td>
+								<td>사용</td>
+								<td>2018.05.25</td>
+								<td>2018.05.25</td>
+								<td>2018.05.25</td>
+								<td><a href="#" class="link_txt">비활성화</a></td>
+								</tr>
+								<tr>
+								<td>IuzPezQGMk7qLf2rsLqc</td>
+								<td>q*************** <a href="#" class="link_txt">재발급</a></td>
+								<td>사용</td>
+								<td>2018.05.25</td>
+								<td>2018.05.25</td>
+								<td>2018.05.25</td>
+								<td><a href="#" class="link_txt">비활성화</a></td>
+								</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>				
+				</div>
+			</section>
+		</div>
+		<!-- //[D] CONTENTS -->
+	</div>
+	<!--[D] FOOTER -->
+	<?php include 'inc/footer.html';?>
+	<!--//[D] FOOTER -->
+</div>
+
+<!--[D] widget -->
+	<?php include 'inc/widget.html';?>
+<!--//[D] widget -->
+
+<!-- [D] LAYER -->
+<?php include 'inc/layer_loading.html';?>
+<!-- [D] LAYER -->
+
+<!--[D] 레이어팝업 -->
+<!-- [D] 사용자 엑세스 키 ID 삭제 시 유의사항 팝업 -->
+<div class="modal pop_custom pop_member" id="modal_alert1">
+	<div class="modal-dialog  modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">사용자 액세스 키 ID 삭제 시 유의사항</h4>
+				<button type="button" class="btn_close" data-dismiss="modal">닫기</button>
+			</div>
+			<div class="modal-body">
+				<p class="ly_txt"><span class="point_txt">User Access Key ID</span>를 <span class="point_txt">삭제</span>할 경우<br>기존의 User Access Key ID는 사용할 수 없으므로 유의하시기 바랍니다.</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn_cancel" data-dismiss="modal">취소</button>
+				<button type="button" class="btn btn_strong" data-dismiss="modal">삭제</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- [D] 비밀 키 재발급시 유의사항 팝업 -->
+<div class="modal pop_custom pop_member" id="modal_alert2">
+	<div class="modal-dialog  modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">비밀 키 재발급시 유의 사항</h4>
+				<button type="button" class="btn_close" data-dismiss="modal">닫기</button>
+			</div>
+			<div class="modal-body">
+				<p class="ly_txt"><span class="point_txt">비밀 키</span>를 <span class="point_txt">재발급</span>받을 경우<br>기존의 비밀 키는 사용할 수 없으므로 유의하시기 바랍니다.</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn_cancel" data-dismiss="modal">취소</button>
+				<button type="button" class="btn btn_strong" data-dismiss="modal">재발급</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- [D] 수정 완료 팝업 -->
+<div class="modal pop_custom pop_member" id="modal_alert3">
+		<div class="modal-dialog  modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">수정 완료</h4>
+					<button type="button" class="btn_close" data-dismiss="modal">닫기</button>
+				</div>
+				<div class="modal-body">
+					<p class="ly_txt">사용자 액세스 키가 정상적으로 수정되었습니다.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn_point" data-dismiss="modal">확인</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!--[D] //레이어팝업 -->
+
+<!-- Javascript Area -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+<!-- 마크업 확인용입니다. -->
+<style>
+.case_view{display:inline-block;position:fixed;bottom:0;left:0;z-index:1000;width:auto;padding:5px;background:#000;opacity:0.7}
+.case_view .btn{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+</style>
+<div class="case_view">
+	<?php include 'inc/case_view_common.html';?>
+	<a href="#" class="btn" data-toggle="modal" data-target="#modal_alert1">사용자 엑세스 키 ID 삭제</a>
+	<a href="#" class="btn" data-toggle="modal" data-target="#modal_alert2">비밀 키 재발급 시 유의 사항</a>
+	<a href="#" class="btn" data-toggle="modal" data-target="#modal_alert3">수정 완료</a>
+</div>
+
+
+<script src="js/case_view.js"></script>
+<!-- //마크업 확인용입니다. -->
+</body>
+</html>

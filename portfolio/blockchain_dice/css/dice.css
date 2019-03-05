@@ -1,0 +1,252 @@
+@charset "utf-8";
+/* HIVELAB (http://www.hivelab.co.kr) */
+
+@font-face {
+font-family:'Roboto';
+font-weight:normal;
+src:local(*);
+src:url(font/Roboto-Medium-webfont.woff) format('woff'),url(font/Roboto-Medium-webfont.ttf) format('truetype');
+}
+
+/* Reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,p,table,th,td,form,fieldset,legend,textarea,input,select,textarea,button,article,aside,dialog,footer,header,section,footer,nav,figure,main{margin:0;padding:0}
+article,aside,dialog,footer,header,section,footer,nav,figure,main{display:block}
+html,body{height:100%;-webkit-text-size-adjust:none;-ms-text-size-adjust:none}
+body,input,select,textarea,button{font-family:'Roboto','Roboto Thin',Helvetica,tahoma,sans-serif;font-size:12px}
+fieldset,li,img{border:0;vertical-align:top}
+ul,ol{list-style:none}
+button{overflow:visible;border:0;background-color:transparent;cursor:pointer}
+button::-moz-focus-inner{padding:0;border:0}
+address,caption,em{font-style:normal}
+a,a:focus,a:active,a:hover{text-decoration:none}
+table{border-collapse:collapse;border-spacing:0}
+input::-ms-clear{display:none}
+input::-ms-reveal{display:none}
+.blind,caption span,legend{overflow:hidden;position:absolute;top:0;left:0;width:1px;height:1px;font-size:1px;line-height:100px;white-space:nowrap}
+.sp,.user_info .amount_area:before,.gage .gage_value,.gage .btn_gage,.gage_wrap .unit_item:before,.roll_btn_wrap .btn,.provably_fair_wrap .btn_detail,.btn_history_show,.btn_ly_validation{display:inline-block;overflow:hidden;background:url(../img/sp.png) no-repeat;background-size:306px auto;line-height:999px;vertical-align:top}
+
+body{background:url(../img/bg_body.jpg) repeat}
+.wrap{position:relative}
+.content{position:relative;width:1280px;height:1000px;margin:0 auto;padding-top:492px;background:url(../img/bg_wrap.png) no-repeat;box-sizing:border-box}
+
+/* 유저 정보 */
+.top_wrap{position:absolute;top:0;z-index:10;width:100%;height:57px;background:url(../img/bg_header.png) repeat-x}
+.top_wrap .inner{width:1280px;margin:0 auto}
+.top_wrap .user_info{padding:6px 44px;font-size:0}
+.user_info .user_data{display:inline-block;height:53px}
+.user_info .user_data:before{display:inline-block;height:100%;vertical-align:middle;content:''}
+.user_info .avatar_area{display:inline-block;position:relative;margin-right:10px;padding:4px;vertical-align:middle}
+.user_info .avatar_area:before{display:inline-block;position:absolute;top:0;left:0;z-index:10;width:58px;height:58px;background:url(../img/bg_avata.png) no-repeat;content:''}
+.user_info .avatar_area img{overflow:hidden;width:50px;height:50px;border-radius:100%}
+.user_info .name{display:inline-block;margin-right:12px;font-size:22px;color:#fff;letter-spacing:-.035em;vertical-align:middle;text-shadow:1px 2px 3px #000}
+.user_info .amount_area{display:inline-block;margin-top:-6px;color:#ffc968;vertical-align:middle}
+.user_info .amount_area:before{width:28px;height:28px;margin-right:4px;background-position:0 0;vertical-align:middle;content:''}
+.user_info .amount_area .number{display:inline-block;font-size:24px;vertical-align:middle;text-shadow:1px 2px 3px #000}
+.user_info .amount_area .unit{display:inline-block;margin-left:7px;margin-top:2px;font-size:20px;letter-spacing:-.035em;vertical-align:middle;text-shadow:1px 2px 3px #000}
+
+/* 베팅 영역 */
+.betting_wrap{position:absolute;top:72px;left:22px;width:760px;height:420px;padding:22px 30px 24px;font-size:0;box-sizing:border-box}
+.betting_wrap .h_txt{font-size:16px;font-weight:normal;line-height:1;color:#828282;letter-spacing:-.03em}
+.bet_amount_wrap{float:left;width:400px;box-sizing:border-box}
+.bet_amount_wrap .bet_amount_area{position:relative;margin-top:8px}
+.bet_amount_area .amount_area{position:relative;width:194px;height:38px;padding:0 46px 0 0;line-height:38px;box-sizing:border-box}
+.bet_amount_area .amount_area .number{width:193px;height:100%;padding:0 49px 0 7px;border:none;background-color:transparent;font-size:18px;color:#fff;box-sizing:border-box}
+.bet_amount_area .amount_area .unit{position:absolute;top:0;left:141px;margin-left:7px;font-size:14px;color:#828282}
+.bet_amount_area .lst_bet_unit{position:absolute;top:2px;right:2px}
+.bet_amount_area .lst_bet_unit .unit_item{display:inline-block}
+.bet_amount_area .lst_bet_unit .btn_unit{position:relative;width:68px;height:34px;border:1px solid #251d15;background-color:#3f3431;font-size:18px;color:#9d8861}
+.bet_amount_area .lst_bet_unit .btn_unit:before{position:absolute;top:0;left:0;width:100%;height:1px;background-color:#463b38;content:''}
+.bet_amount_area .lst_bet_unit .btn_unit.is_hover{background-color:#51433a}
+.bet_amount_area .lst_bet_unit .btn_unit.is_hover:before{background-color:#574a41}
+.bet_amount_area .lst_bet_unit .btn_unit.is_click{background-color:#2c2422}
+.bet_amount_area .lst_bet_unit .btn_unit.is_click:before{background-color:#332c2a}
+
+.potential_winnings_wrap{float:right;width:180px}
+.potential_winnings_wrap .amount_area{display:block;position:relative;margin-top:13px;border-bottom:1px solid #76623d;line-height:24px;box-sizing:border-box}
+.potential_winnings_wrap .amount_area .number{font-size:18px;color:#ffc968}
+.potential_winnings_wrap .amount_area .unit{position:absolute;right:0;font-size:14px;color:#9d8861;text-align:right}
+.bet_wrap{clear:both;position:relative}
+.gage_wrap{position:absolute;top:69px;right:0;left:0;height:12px;padding:4px;box-sizing:border-box}
+.gage_wrap .gage{display:inline-block;position:absolute;height:4px;margin:0 4px;background:url(../img/gage.jpg);background-size:100%}
+.gage_wrap .gage .btn_gage{width:22px;height:22px;margin-top:-8px;background-position:-74px 0}
+.gage_wrap .gage .gage_value{display:inline-block;position:absolute;top:-48px;left:50%;width:62px;height:38px;margin-left:-31px;background-position:-122px 0;font-size:16px;line-height:31px;color:#fff;text-align:center}
+.gage_wrap .gage .point_btn_area{display:inline-block;position:absolute}
+.gage_wrap .gage .start_point_area{left:0;margin-left:-11px}
+.gage_wrap .gage .end_point_area{right:0;margin-right:-11px}
+.gage_wrap .gage_unit{margin:14px -10px 0;font-size:0}
+.gage_wrap .lst_gage_unit{margin:0 11px;}
+.gage_wrap .unit_item{display:inline-block;position:relative;margin-left:10%}
+.gage_wrap .unit_item .number_txt{position:absolute;top:10px;left:50%;width:20px;margin-left:-10px;font-size:14px;color:#828282;text-align:center}
+.gage_wrap .unit_item:before{position:absolute;top:0;left:50%;width:2px;height:8px;margin-left:-1px;background-position:0 -30px;content:''}
+.gage_wrap .unit_item:first-child{margin-left:0}
+.direct_input_wrap{position:absolute;top:145px}
+.direct_input_wrap .direct_input_item{display:inline-block;width:160px;margin-left:35px;text-align:center;vertical-align:top}
+.direct_input_wrap .direct_input_item:first-child{width:310px;margin-left:0}
+.direct_input_wrap .direct_input_item .inp_wrap{display:inline-block;margin-top:8px}
+.direct_input_wrap .direct_input_item .inp_txt{width:100%;height:38px;border:none;background-color:transparent;font-size:18px;color:#fff;text-align:center;box-sizing:border-box}
+.direct_input_wrap .direct_input_item .start_point{width:140px}
+.direct_input_wrap .direct_input_item .end_point{width:140px}
+.direct_input_wrap .direct_input_item .wave_txt{display:inline-block;width:30px;font-size:16px;color:#a0a0a0;text-align:center}
+
+.bet_wrap .roll_btn_wrap{position:absolute;top:244px;width:100%;text-align:center}
+.bet_wrap .roll_btn_wrap .btn{width:220px;height:64px;margin-left:21px;background-position:0 -40px;font-size:22px;line-height:normal;color:#f4d090;letter-spacing:-.04em}
+.bet_wrap .roll_btn_wrap .btn:first-child{margin-left:0}
+.bet_wrap .roll_btn_wrap .btn.is_hover{background-position:0 -106px}
+.bet_wrap .roll_btn_wrap .btn.is_click{background-position:0 -172px}
+.bet_wrap .roll_btn_wrap .btn.is_active{height:72px;margin-top:-4px;background-position:0 -238px}
+
+/* 자동 배팅 설정 */
+.auto_setting_wrap{position:absolute;top:72px;right:22px;width:460px;height:420px;padding:22px 30px;box-sizing:border-box}
+.auto_setting_wrap .h_txt{font-size:16px;font-weight:normal;line-height:1;color:#f4d090;letter-spacing:-.04em}
+.auto_setting_wrap .settion_item_wrap{padding:17px 0 15px;border-top:2px solid #26262b;line-height:1}
+.auto_setting_wrap .settion_item_wrap:first-of-type{padding-top:20px;padding-bottom:14px;border-top:none}
+.auto_setting_wrap .settion_item_wrap .option_tit{font-size:16px;font-weight:normal;color:#9d8861;letter-spacing:-.04em}
+.auto_setting_wrap .settion_item_wrap .lst_option{font-size:0}
+.auto_setting_wrap .settion_item_wrap .option_item{position:relative;height:20px;margin-top:8px}
+.auto_setting_wrap .settion_item_wrap .lb{display:inline-block;font-size:16px;line-height:20px;color:#828282;vertical-align:middle}
+.auto_setting_wrap .settion_item_wrap .inp_radio{position:absolute;left:-9999px}
+.auto_setting_wrap .settion_item_wrap .ico_radio{display:inline-block;width:20px;height:20px;margin-right:9px;background:url(../img/sp.png) no-repeat;background-position:-30px 0;vertical-align:middle}
+.auto_setting_wrap .settion_item_wrap .option_item.is_checked .ico_radio{background-position:-52px 0}
+.auto_setting_wrap .settion_item_wrap .inp_wrap{position:absolute;top:-5px;right:0;width:200px;height:30px;box-sizing:border-box}
+.auto_setting_wrap .settion_item_wrap .inp_txt{display:inline-block;width:100%;height:100%;padding:0 13px;border:none;background-color:transparent;font-size:18px;color:#828282;text-align:center;box-sizing:border-box}
+.auto_setting_wrap .settion_item_wrap .option_item.is_checked .inp_txt{color:#fff}
+.auto_setting_wrap .settion_item_wrap .sub_txt{display:block;margin-top:12px;font-size:16px;color:#828282}
+.auto_setting_wrap .settion_item_wrap .amount_area{top:-32px}
+.auto_setting_wrap .settion_item_wrap .amount_area .inp_txt.number{text-align:left}
+.auto_setting_wrap .settion_item_wrap .amount_area .unit{display:inline-block;position:absolute;top:10px;right:13px;font-size:14px;line-height:1;color:#828282}
+.auto_setting_wrap .settion_item_wrap .amount_area .inp_txt{padding:0 50px 0 13px}
+
+/* 공정성 입증 */
+.provably_fair_wrap{height:48px;padding:14px 50px 16px;font-size:0;box-sizing:border-box}
+.provably_fair_wrap .h_txt{display:inline-block;font-size:16px;font-weight:normal;color:#9d8861;letter-spacing:-.025em;vertical-align:middle}
+.provably_fair_wrap .btn_detail{width:22px;height:22px;margin-left:6px;background-position:-98px 0;vertical-align:middle}
+.provably_fair_wrap .lst_seed{display:inline-block;margin-left:14px;vertical-align:middle}
+.provably_fair_wrap .lst_seed .seed_tit{display:inline-block;margin-left:25px;font-size:16px;color:#828282;letter-spacing:-.07em}
+.provably_fair_wrap .lst_seed .seed_tit:first-of-type{margin-left:0}
+.provably_fair_wrap .lst_seed .seed_dsc{display:inline-block;position:relative;height:26px;margin-left:13px;padding-left:3px;padding-right:3px;background:url(../img/sp_input_txt.png) repeat-x;background-position:0 -28px}
+.provably_fair_wrap .lst_seed .seed_dsc:before,.provably_fair_wrap .lst_seed .seed_dsc:after{display:inline-block;position:absolute;top:0;height:26px;background:url(../img/sp_input_txt.png) no-repeat;content:'';}
+.provably_fair_wrap .lst_seed .seed_dsc:before{left:0;width:3px;background-position:0 0}
+.provably_fair_wrap .lst_seed .seed_dsc:after{right:0;width:2px;background-position:0 -56px}
+.provably_fair_wrap .lst_seed .seed_dsc .inp_txt{width:107px;height:24px;padding:0 5px;border:none;background-color:transparent;font-size:16px;line-height:24px;color:#828282;letter-spacing:-.03em;box-sizing:border-box}
+.provably_fair_wrap .lst_seed .seed_dsc:first-of-type .inp_txt{width:178px}
+
+/* 히스토리 노출 영역 */
+.history_wrap{padding:0 22px}
+.history_wrap .lst_tab{height:50px;font-size:0}
+.history_wrap .lst_tab .tab_item{width:50%;background:url(../img/bg_tab.png) no-repeat}
+.history_wrap .lst_tab .tab_item:nth-child(1){background-position:0 -50px}
+.history_wrap .lst_tab .tab_item:nth-child(1).is_active{background-position:0 0}
+.history_wrap .lst_tab .tab_item:nth-child(2){background-position:-618px 0}
+.history_wrap .lst_tab .tab_item:nth-child(2).is_active{background-position:-618px -50px}
+.history_wrap .lst_tab .tab_item .tab_link{color:#837254}
+.history_wrap .lst_tab .tab_item.is_active .tab_link{color:#f4d090}
+.history_wrap .lst_tab .tab_item{display:inline-block;width:50%}
+.history_wrap .lst_tab .tab_item .tab_link{display:block;font-size:18px;line-height:50px;color:#837254;letter-spacing:-.03em;text-align:center}
+.tab_cont{display:none}
+.tab_cont .scroll_wrap{overflow-y:auto;height:399px}
+.tbl_history{width:100%;margin-top:3px;table-layout:fixed}
+.tbl_history col:nth-child(1){width:182px}
+.tbl_history col:nth-child(2){width:174px}
+.tbl_history col:nth-child(3){width:199px}
+.tbl_history col:nth-child(4){width:203px}
+.tbl_history col:nth-child(5){width:96px}
+.tbl_history col:nth-child(7){width:227px}
+.tbl_history col:nth-child(8){width:30px}
+.tbl_history thead th{height:36px;font-size:16px;font-weight:normal;color:#9d8861}
+.tbl_history tbody tr:nth-child(odd){background-color:#323236}
+.tbl_history tbody td{height:24px;font-size:16px;color:#a0a0a0;text-align:center}
+.tbl_history td.id{padding-left:30px;letter-spacing:-.04em;text-align:left}
+.tbl_history td.amount{padding-right:10px;text-align:right}
+.tbl_history td.amount.is_win{color:#7bdea0}
+.tbl_history td.amount.is_lose{color:#e15656}
+.btn_history_show{width:30px;height:30px;background-position:-186px 0;}
+.btn_history_show.is_pause{background-position:-218px 0;}
+.btn_ly_validation{width:16px;height:16px;background-position:-48px -22px;}
+
+/* 레이어팝업 */
+.ly_pop{position:fixed;top:0;right:0;left:0;bottom:0;font-size:0;text-align:center}
+.ly_pop:before{display:inline-block;height:100%;vertical-align:middle;content:''}
+.ly_cont{display:inline-block;position:relative;width:570px;height:auto;padding:0 30px;border:2px solid #a48566;background-color:#413a38;vertical-align:middle;box-shadow:0 0 3px 1px;box-sizing:border-box}
+.ly_msg_wrap{height:180px}
+.ly_msg_wrap:before{display:inline-block;height:100%;vertical-align:middle;content:''}
+.ly_msg_wrap .msg_txt{display:inline-block;font-size:16px;line-height:20px;color:#fff;vertical-align:middle}
+.ly_btn_wrap{padding:14px 0;border-top:1px solid #4e4543}
+.ly_btn_wrap .btn{display:inline-block;width:172px;height:52px;margin-left:8px;background:url(../img/sp.png) no-repeat;background-position:0 -312px;font-size:16px;color:#f3deba}
+.ly_btn_wrap .btn:first-child{margin-left:0}
+.ly_btn_wrap .btn.is_click{background-position:0 -366px}
+.ly_btn_wrap .btn.is_hover{background-position:0 -420px}
+.ly_pop .btn_close{display:inline-block;overflow:hidden;position:absolute;top:0;right:0;width:36px;height:36px;padding:10px;line-height:999px}
+.ly_pop .btn_close:before{position:absolute;top:9px;right:9px;width:16px;height:16px;background:url(../img/sp.png) no-repeat;background-position:-30px -22px;content:''}
+
+/* 레이어팝업_작은 사이즈 */
+.ly_pop_sm .ly_cont{width:500px}
+.ly_pop_sm .ly_msg_wrap{height:130px}
+
+/* 공정성 입증 안내 팝업 */
+.ly_provably_fair .ly_cont{overflow:hidden;width:640px;height:auto;padding:0 26px}
+.ly_provably_fair .ly_tit_wrap{height:48px;margin:0 8px;border-bottom:2px solid #4e4543}
+.ly_provably_fair .ly_tit{font-size:16px;line-height:48px;font-weight:normal;color:#9d8861}
+.ly_provably_fair .ly_msg_wrap{height:auto}
+.ly_provably_fair .msg_txt{margin-top:16px;font-size:16px;line-height:20px;color:#a0a0a0;text-align:left}
+.ly_provably_fair .lst_rule_guide{display:table;margin:19px -8px 0;text-align:left;table-layout:auto}
+.ly_provably_fair .lst_rule_guide .rule_item{display:table-row}
+.ly_provably_fair .lst_rule_guide .rule_item:nth-child(even){background-color:#383231}
+.ly_provably_fair .lst_rule_guide .rule_tit{display:table-cell;padding:4px 5px 4px 9px;font-size:16px;line-height:20px;color:#fff;white-space:nowrap}
+.ly_provably_fair .lst_rule_guide .rule_dsc{display:table-cell;position:relative;padding:4px 11px;font-size:16px;line-height:20px;color:#a0a0a0}
+.ly_provably_fair .lst_rule_guide .rule_dsc:before{display:inline-block;position:absolute;top:5px;left:0;bottom:5px;width:2px;background-color:#463b38;content:''}
+.ly_provably_fair .lst_rule_guide .scroll_wrap{display:block;max-height:90px;overflow-y:auto}
+.ly_provably_fair .lst_rule_guide .scroll_wrap::-webkit-scrollbar{width:4px;background-color:#272321}
+.ly_provably_fair .lst_rule_guide .scroll_wrap::-webkit-scrollbar-thumb{background-color:#62503e}
+
+.ly_provably_fair .lst_seed{margin:10px -8px 0;font-size:0;text-align:left}
+.ly_provably_fair .lst_seed .seed_tit{display:inline-block;width:230px;height:24px;margin-top:0;padding-left:10px;font-size:16px;line-height:24px;color:#a0a0a0;vertical-align:top;box-sizing:border-box}
+.ly_provably_fair .lst_seed .seed_dsc{display:inline-block;position:relative;width:370px;height:24px;margin-top:0;font-size:16px;line-height:24px;color:#a0a0a0;vertical-align:top;box-sizing:border-box}
+.ly_provably_fair .lst_seed .inp_txt{width:100%;height:100%;padding:0 10px;border:none;background:url(../img/bg_input_txt.png) no-repeat;font-size:16px;line-height:24px;color:#a0a0a0;box-sizing:border-box}
+.ly_provably_fair .generated_result_area{display:inline-block;position:relative;width:240px;height:34px;margin-top:13px;border:1px solid #251d15;background-color:#3f3431;font-size:16px;line-height:32px;color:#9d8861;text-align:center;box-sizing:border-box}
+.ly_provably_fair .generated_result_area .generated_number{color:#ffc968}
+.ly_provably_fair .ly_btn_wrap{border-top:0}
+
+/* 결과검증팝업 */
+.ly_validation .ly_cont{width:410px;height:auto;padding:0 13px}
+.ly_validation .ly_msg_wrap{height:auto}
+.ly_validation .lst_validation_result{display:table;width:100%;margin-top:13px;padding-top:10px;border-top:2px solid #4e4543;text-align:left;table-layout:fixed}
+.ly_validation .lst_validation_result:first-child{padding-top:0;border-top:0}
+.ly_validation .lst_validation_result .result_item{display:table-row}
+.ly_validation .lst_validation_result .result_item:nth-child(even){background-color:#383231}
+.ly_validation .lst_validation_result .result_tit{display:table-cell;width:140px;padding-left:10px;font-size:16px;line-height:24px;color:#a0a0a0;box-sizing:border-box}
+.ly_validation .lst_validation_result .result_dsc{display:table-cell;padding-left:10px;font-size:16px;line-height:24px;color:#a0a0a0}
+.ly_validation .lst_validation_result .generated_number{color:#ffc968}
+.ly_validation .lst_validation_result .profit{color:#7bdea0}
+.ly_validation .lst_validation_result .seed_txt{color:#fff}
+.ly_validation .ly_btn_wrap{padding:12px 0;border-top:0}
+.ly_validation .ly_btn_wrap .btn{width:132px;background-position:-174px -312px}
+.ly_validation .ly_btn_wrap .btn.is_hover{background-position:-174px -366px}
+.ly_validation .ly_btn_wrap .btn.is_click{background-position:-174px -420px}
+.ly_validation .ly_btn_wrap .btn.is_disabled{background-position:-134px -474px}
+.ly_validation .ly_btn_wrap .btn.is_confirm{padding-right:29px;background-position:0 -474px}
+
+@media only screen and (max-width:1280px){
+	.content{width:1000px;background-image:url(../img/bg_wrap_1000.png)}
+	.top_wrap .inner{width:1000px}
+	.betting_wrap{width:600px}
+	.bet_amount_wrap{width:340px}
+	.bet_amount_area .amount_area{width:193px}
+	.bet_amount_area .lst_bet_unit .btn_unit{width:48px}
+	.auto_setting_wrap{width:338px}
+	.auto_setting_wrap .settion_item_wrap .inp_wrap{width:102px}
+	.auto_setting_wrap .settion_item_wrap .amount_area{width:202px}
+	.direct_input_wrap .direct_input_item{width:120px}
+	.direct_input_wrap .direct_input_item:first-child{width:230px}
+	.direct_input_wrap .direct_input_item .start_point{width:100px}
+	.direct_input_wrap .direct_input_item .wave_txt{width:30px}
+	.direct_input_wrap .direct_input_item .end_point{width:100px}
+	.history_wrap .lst_tab .tab_item:nth-child(1){background-position:0 -150px}
+	.history_wrap .lst_tab .tab_item:nth-child(1).is_active{background-position:0 -100px}
+	.history_wrap .lst_tab .tab_item:nth-child(2).is_active{background-position:-478px -150px}
+	.tbl_history col:nth-child(1){width:172px}
+	.tbl_history col:nth-child(2){width:101px}
+	.tbl_history col:nth-child(3){width:178px}
+	.tbl_history col:nth-child(4){width:130px}
+	.tbl_history col:nth-child(5){width:78px}
+	.tbl_history col:nth-child(7){width:219px}
+}

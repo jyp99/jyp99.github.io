@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="all">
+<title>토스트 회원가입 :: TOAST Cloud</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<base href="../">
+<link rel="stylesheet" type="text/css" href="css/gnb.css">
+<link rel="stylesheet" type="text/css" href="css/toast.css">
+<link rel="stylesheet" type="text/css" href="css/toast_member.css">
+</head>
+<body>
+<div class="wrap tcm_wrap header_fixed_wrap">
+	<!--[D] HEADER -->
+	<?php include '../inc/header.html';?>
+	<!--//[D] HEADER -->
+	<div id="container" class="container">
+		<!-- [D] CONTENTS -->
+		<div id="content" class="content signup_country_content">
+			<h2 class="title_text"><span class="service_name">TOAST</span> 회원가입</h2>
+			<div class="form_wrap">
+				<form>
+				<fieldset>
+				<legend>국가 정보 선택</legend>
+					<ul class="lst_country">
+					<li class="country_item">
+						<span class="inp_radio">
+							<input type="radio" id="country_kr" name="country_select" class="inp_chk" checked="">
+							<label for="country_kr" class="inp_label">
+								<span class="ico_checkbox"></span>
+								<span class="label_text">대한민국</span>
+							</label>
+						</span>
+					</li>
+					<li class="country_item">
+						<span class="inp_radio">
+							<input type="radio" id="country_jp" name="country_select" class="inp_chk">
+							<label for="country_jp" class="inp_label">
+								<span class="ico_checkbox"></span>
+								<span class="label_text">일본</span>
+							</label>
+						</span>
+					</li>
+					<li class="country_item">
+						<span class="inp_radio">
+							<input type="radio" id="country_other" name="country_select" class="inp_chk">
+							<label for="country_other" class="inp_label">
+								<span class="ico_checkbox"></span>
+								<span class="label_text">그외</span>
+							</label>
+						</span>
+						<span class="select_bx">
+							<select class="inp_select" id="tel" disabled="">
+								<option value="다른 국가 또는 지역" selected="" disabled="">다른 국가 또는 지역</option>
+								<option value="미국">United States</option>
+								<option value="캐나다">Canada</option>
+								<option value="대한민국">Korea, Republic of</option>
+								<option value="일본">Japan</option>
+								<option value="중국">China</option>
+							</select>
+						</span>
+					</li>
+					</ul>
+				</fieldset>
+				</form>
+			</div>
+
+			<ul class="list_noti">
+			<li class="noti_text">서비스를 이용하시는 국가 정보를 선택해주세요.</li>
+			<li class="noti_text">국가 정보에 따라 요구되는 회원 정보 및 이용할 수 있는 결제 수단이 달라질 수 있습니다.</li>
+			<li class="noti_text">국가 정보는 한번 선택 후 변경할 수 없으니 신중히 선택해주세요.</li>
+			</ul>
+			
+			<div class="btn_area">
+				<button type="button" class="btn is_full">다음</button>
+			</div>
+		</div>
+		<!-- //[D] CONTENTS -->
+	</div>
+	<!--[D] FOOTER -->
+	<?php include '../inc/footer.html';?>
+	<!--//[D] FOOTER -->
+</div>
+
+<!-- Javascript Area -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+<!-- 마크업 확인용입니다. -->
+<script src="js/case_view.js"></script>
+<!-- //마크업 확인용입니다. -->
+</body>
+</html>

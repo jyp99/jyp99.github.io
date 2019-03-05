@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no"> -->
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<title>ERROR : ERROR : PUBG e스포츠</title>
+
+<!-- SEO meta tag -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="pubgesports e스포츠 공식 사이트">
+<meta property="og:description" content="pubgesports.kr e스포츠에 대한 정보를 얻어보세요">
+<!-- // SEO meta tag -->
+
+<!-- Icon & Favicon -->
+<link rel="shortcut icon" href="../img/new_favicon_16x16.ico">
+<link rel="shortcut icon" href="../img/new_favicon_32x32.ico">
+<!-- // Icon & Favicon -->
+
+<link rel="stylesheet" href="../css/libs.min.css">
+<!-- <link rel="stylesheet" href="../css/swiper.min.css"> -->
+<link rel="stylesheet" href="../css/pubg.css">
+<!-- <link rel="stylesheet" href="../css/pubg.min.css"> -->
+</head>
+<body>
+<!-- Skip Navigation -->
+<ul class="skip">
+<li><a href="#header" onclick="document.getElementById('header').tabIndex=-1;document.getElementById('header').focus();return false;">Skip to navigation</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">Skip to content</a></li>
+</ul>
+<!-- // Skip Navigation -->
+	<div class="wrap" id="wrap">
+		<div id="container" class="container">
+			<!-- [D] CONTENTS -->
+			<div id="content" class="content error_content">
+				<span class="logo_area"><img src="../img/pubg_logo2.png" alt="pubg"></span>
+				<h1 class="title_txt">ERROR</h1>
+				<p class="desc_txt">페이지에 접근이 불가합니다.<br>관리자에게 권한을 문의하여 주세요.</p>
+				<!-- [D] 오류 케이스별로 노출 문구 대체하여 적용 -->
+				<p class="desc_txt" style="display:none">서버 오류가 발생하여<br class="only_mo">페이지를 표시 할 수 없습니다.</p>
+				<p class="desc_txt" style="display:none">현재 찾을 수 없는 페이지를 요청하셨습니다.<br>존재하지 않는 주소를 입력하셨거나, <br class="only_mo">요청하신 페이지의 주소가 변경, 삭제되어 찾을 수 없습니다.</p>
+				<!-- [D] 오류 케이스별로 노출 문구 대체하여 적용 -->
+				<a href="01_main.html" class="btn_link"><span class="txt">메인으로 이동</span></a>
+			</div>
+			<!-- // [D] CONTENTS -->
+		</div>
+	</div>
+	<!-- Javascript -->
+	<script defer src="../js/libs/vendor.min.js"></script>
+	<script defer src="../js/libs/swiper.min.js"></script>
+	<script defer src="../js/apps/common.js"></script>
+	<script defer src="../js/apps/main.js"></script>
+	<!-- <script src="/js/project-name.min.js"></script> -->
+	<!-- // Javascript -->
+<!-- 마크업 확인용입니다. -->
+<style>
+.case_view{display:inline-block;position:fixed;bottom:0;left:0;z-index:1000;width:auto;padding:5px;background:#000;opacity:0.7}
+.case_view .btn{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+</style>
+<div class="case_view">
+	<a href="#" class="btn" onclick="$('.desc_txt').hide();$('.desc_txt:eq(0)').show();return false;">페이지 접근 불가</a>
+	<a href="#" class="btn" onclick="$('.desc_txt').hide();$('.desc_txt:eq(1)').show();return false;">서버 오류</a>
+	<a href="#" class="btn" onclick="$('.desc_txt').hide();$('.desc_txt:eq(2)').show();return false;">찾을 수 없는 페이지</a>
+</div>
+<!-- //마크업 확인용입니다. -->
+</body>
+</html>

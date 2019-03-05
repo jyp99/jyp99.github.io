@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="all">
+<title>토스트(TOAST) 서비스</title>
+
+<meta name="description" content="NHN 엔터테인먼트에서 제공하는 토스트 클라우드 서비스. 오픈스택 기반의 클라우드 인프라, 게임솔루션, 보안, 문자/이메일/알림톡, 협업도구 Dooray, ERP 제공">
+<meta name="keywords" content="토스트, 토스트 클라우드, 클라우드 서비스, 토스트 닷컴, 클라우드, NHN엔터테인먼트, NHN엔터, NHN Entertainment, NHN Ent, TOAST, TOAST Cloud, TOAST CAM, TOAST PC, TOAST Analytics, toast, 토스트캠, 토스트피씨,토스트애널리틱스">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="토스트(TOAST) 서비스">
+<meta property="og:description" content="NHN 엔터테인먼트에서 제공하는 토스트 클라우드 서비스. 오픈스택 기반의 클라우드 인프라, 게임솔루션, 보안, 문자/이메일/알림톡, 협업도구 Dooray, ERP 제공">
+<meta property="og:keywords" content="토스트, 토스트 클라우드, 클라우드 서비스, 토스트 닷컴, 클라우드, NHN엔터테인먼트, NHN엔터, NHN Entertainment, NHN Ent, TOAST, TOAST Cloud, TOAST CAM, TOAST PC, TOAST Analytics, toast, 토스트캠, 토스트피씨,토스트애널리틱스">
+<meta property="og:image" content="http://images.toast.com/toast/com/web/common/toast.com.jpg">
+<meta property="og:image:secure_url" content="http://images.toast.com/toast/com/web/common/toast.com.jpg">
+<meta property="og:url" content="https://toast.com">
+<link rel="shortcut icon" href="https://toast.com/resources/img/favicons/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" sizes="180x180" href="/resources/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/resources/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/resources/img/favicons/favicon-16x16.png">
+<link rel="manifest" href="/resources/img/favicons/manifest.json">
+<link rel="mask-icon" href="/resources/img/favicons/safari-pinned-tab.svg">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="css/gnb.css">
+<link rel="stylesheet" type="text/css" href="css/toast.css">
+<link rel="stylesheet" type="text/css" href="css/gnb_mobile.css">
+<link rel="stylesheet" type="text/css" href="css/toast_mobile.css">
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul class="skip">
+<li><a href="#header" onclick="document.getElementById('header').tabIndex=-1;document.getElementById('header').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+
+<!--[D] noti_browser -->
+<?php include 'inc/noti_browser.html';?>
+<!--//[D] noti_browser -->
+<div class="wrap">
+
+	<!--[D] HEADER -->
+	<?php include 'inc/header.html';?>
+	<!--//[D] HEADER -->
+	<div id="container" class="container">
+		<!-- [D] CONTENTS -->
+		<div id="content" class="content service_content">
+			<!-- [D] 서브 비쥬얼 이미지 영역 -->
+			<div class="cover_wrap">
+				<div class="inner">
+					<em class="main_txt">TOAST 서비스</em>
+					<p class="sub_txt">기업의 운영과 서비스 개발을 위해 필요한 모든 것을 제공합니다.</p>
+				</div>
+			</div>
+			<!-- //[D] 서브 비쥬얼 이미지 영역 -->
+			<section class="sec service_sec" id="service_sec">
+				<div class="sec_inner">
+					<h2 class="h_section">다양한 서비스를 체험해보세요.</h2>
+					<div class="row_wrap">
+						<div class="col_group">
+							<div class="service_group">
+								<div class="service_title_area">
+									<i class="service_icon ic-compute"></i>
+									<h3 class="service_title">Compute</h3>
+								</div>
+								<ul class="lst_service">
+								<li class="service_item is_new"><!-- [D]NEW 라벨 필요한 service_item에 is_new 클래스 추가 -->
+									<a href="/service/compute/instance" class="service_link">
+										<i class="service_icon ic-compute-instance"></i>
+										<h4 class="service_name">Instance</h4>
+										<p class="desc_txt">원하는 즉시 생성할 수 있는 가상 서버입니다.</p>
+									</a>
+								</li>
+								<li class="service_item is_update"><!-- [D]UPDATE 라벨 필요한 service_item에 is_update 클래스 추가 -->
+									<a href="/service/compute/image" class="service_link">
+										<i class="service_icon ic-compute-image"></i>
+										<h4 class="service_name">Image</h4>
+										<p class="desc_txt">OS와 함께 기본적으로 설치 제공하는 애플리케이션 템플릿입니다.</p>
+									</a>
+								</li>
+								<li class="service_item">
+									<a href="/service/compute/auto_scale" class="service_link">
+										<i class="service_icon ic-compute-auto-scale"></i>
+										<h4 class="service_name">Auto Scale</h4>
+										<p class="desc_txt">다양한 이벤트에 따라 인프라 증설이 가능한 서비스입니다.</p>
+									</a>
+								</li>
+								</ul>
+							</div>
+							<div class="service_group">
+								<div class="service_title_area">
+									<i class="service_icon ic-network"></i>
+									<h3 class="service_title">Network</h3>
+								</div>
+								<ul class="lst_service">
+								<li class="service_item">
+									<a href="/service/network/vpc" class="service_link">
+										<i class="service_icon ic-network-vpc"></i>
+										<h4 class="service_name">VPC</h4>
+										<p class="desc_txt">가상 사설 네트워크를 제공합니다.</p>
+									</a>
+								</li>
+								<li class="service_item">
+									<a href="/service/network/load_balancer" class="service_link">
+										<i class="service_icon ic-network-load-balancer"></i>
+										<h4 class="service_name">Load Balancer</h4>
+										<p class="desc_txt">대규모 트래픽 분산 기능을 제공합니다.</p>
+									</a>
+								</li>
+								</ul>
+							</div>
+							<div class="service_group">
+								<div class="service_title_area">
+									<i class="service_icon ic-storage"></i>
+									<h3 class="service_title">Storage</h3>
+								</div>
+								<ul class="lst_service">
+								<li class="service_item">
+									<a href="/service/storage/block_storage" class="service_link">
+										<i class="service_icon ic-storage-block-storage"></i>
+										<h4 class="service_name">Block Storage</h4>
+										<p class="desc_txt">Instance에 할당하여 사용할 수 있는 블록 레벨 스토리지입니다.</p>
+									</a>
+								</li>
+								<li class="service_item">
+									<a href="/service/storage/nas" class="service_link">
+										<i class="service_icon ic-storage-nas-offline"></i>
+										<h4 class="service_name">NAS (offline)</h4>
+										<p class="desc_txt">여러 개의 인스턴스에서 네트워크를 통해 액세스할 수 있는 스토리지입니다.</p>
+									</a>
+								</li>
+								<li class="service_item">
+									<a href="/service/storage/object_storage" class="service_link">
+										<i class="service_icon ic-storage-object-storage"></i>
+										<h4 class="service_name">Object Storage</h4>
+										<p class="desc_txt">REST API 기반의 확장 가능한 대용량 오브젝트 스토리지입니다.</p>
+									</a>
+								</li>
+								<li class="service_item is_new">
+									<a href="/service/storage/backup" class="service_link">
+										<i class="service_icon ic-storage-backup"></i>
+										<h4 class="service_name">Backup</h4>
+										<p class="desc_txt">높은 신뢰성과 안정성을 가진 백업 서비스입니다.</p>
+									</a>
+								</li>
+								</ul>
+							</div>
+							<div class="service_group">
+								<div class="service_title_area">
+									<i class="service_icon ic-database"></i>
+									<h3 class="service_title">Database</h3>
+								</div>
+								<ul class="lst_service">
+								<li class="service_item">
+									<a href="/service/database/rds_for_mysql" class="service_link">
+									<i class="service_icon ic-database-rds-for-mysql"></i>
+									<h4 class="service_name">RDS for MySQL</h4>
+									<p class="desc_txt">복잡한 설치 및 설정 과정 없이, 클라우드 환경에서 관계형 데이터베이스를 사용할 수 있습니다.</p>
+									</a>
+								</li>
+								</ul>
+							</div>
+							<div class="service_group">
+								<div class="service_title_area">
+									<i class="service_icon ic-analytics"></i>
+									<h3 class="service_title">Analytics</h3>
+								</div>
+								<ul class="lst_service">
+								<li class="service_item">
+									<a href="/service/analytics/app_analytics" class="service_link">
+										<i class="service_icon ic-analytics-app-analytics"></i>
+										<h4 class="service_name">App Analytics</h4>
+										<p class="desc_txt">Forecasting Engine을 기반으로 신뢰성 있는 예측 데이터를 제공합니다.</p>
+									</a>
+								</li>
+								<li class="service_item">
+									<a href="/service/analytics/log_crash_search" class="service_link">
+										<i class="service_icon ic-analytics-log-crash-search"></i>
+										<h4 class="service_name">Log &amp; Crash Search</h4>
+										<p class="desc_txt">클라이언트와 서버의 로그를 수집하여 사용자가 원하는 로그를 검색하고 조회할 수 있습니다.</p>
+									</a>
+								</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col_group">
+							<div class="service_group">
+								<div class="service_title_area">
+									<i class="service_icon ic-game"></i>
+									<h3 class="service_title">Game</h3>
+								</div>
+								<ul class="lst_service">
+								<li class="service_item">
+									<a href="/service/game/gamebase" class="service_link">
+										<i class="service_icon ic-game-gamebase"></i>
+										<h4 class="service_name">Gamebase</h4>
+										<p class="desc_txt">손쉽고 효율적으로 게임을 개발할 수 있게 돕는 서비스입니다.</p>
+									</a>
+								</li>
+								<li class="service_item">
+									<a href="/service/game/leaderboard" class="service_link">
+										<i class="service_icon ic-game-leaderboard"></i>
+										<h4 class="service_name">Leaderboard</h4>
+										<p class="desc_txt">대규모 트래픽에서도 안정적으로 동작하는 실시간 랭킹 서비스입니다.</p>
+									</a>
+								</li>
+								<li class="service_item">
+									<a href="/service/game/launching" class="service_link">
+										<i class="service_icon ic-game-launching"></i>
+										<h4 class="service_name">Launching</h4>
+										<p class="desc_txt">모바일 앱을 서비스할 때 필요한 론칭 관리 서비스입니다.</p>
+									</a>
+								</li>
+								<li class="service_item">
+									<a href="/service/game/smart_downloader" class="service_link">
+										<i class="service_icon ic-game-smart-downloader"></i>
+										<h4 class="service_name">Smart Downloader</h4>
+										<p class="desc_txt">게임을 개발할 때 리소스를 효율적으로 다운로드하고, 다운로드 통계 데이터를 수집해서 다양한 정보를 확인할 수 있습니다.</p>
+									</a>
+								</li>
+								</ul>
+							</div>
+							<div class="service_group">
+								<div class="service_title_area">
+									<i class="service_icon ic-security"></i>
+									<h3 class="service_title">Security</h3>
+								</div>
+								<ul class="lst_service">
+								<li class="service_item">
+									<a href="/service/security/appguard" class="service_link">
+										<i class="service_icon ic-security-appguard"></i>
+										<h4 class="service_name">AppGuard</h4>
+										<p class="desc_txt">애플리케이션의 코드 조작을 방지할 수 있습니다.</p>
+									</a>
+								</li>
+								<li class="service_item">
+									<a href="/service/security/security_check" class="service_link">
+										<i class="service_icon ic-security-security-check"></i>
+										<h4 class="service_name">Security Check</h4>
+										<p class="desc_txt">보안 취약점 검수를 수행하고 취약점에 대한 대응 방법을 제공하는 서비스입니다.</p>
+									</a>
+								</li>
+								<li class="service_item">
+									<a href="/service/security/security_monitoring" class="service_link">
+										<i class="service_icon ic-security-security-monitoring"></i>
+										<h4 class="service_name">Security Monitoring</h4>
+										<p class="desc_txt">검증된 IDS/SIEM 패턴 및 위협 관리 대응 체계를 기반으로 한 보안 관제 서비스입니다.</p>
+									</a>
+								</li>
+								<li class="service_item">
+									<a href="/service/security/mal_url_detector" class="service_link">
+										<i class="service_icon ic-security-mal-url-detector"></i>
+										<h4 class="service_name">Mal-URL Detector</h4>
+										<p class="desc_txt">웹 사이트 해킹을 통해 악성코드를 유포하거나 경유 사이트로 악용되는 것을 사전에 탐지하고, 이를 대응할 수 있도록 서비스를 제공합니다.</p>
+									</a>
+								</li>
+								<li class="service_item">
+									<a href="/service/security/captcha" class="service_link">
+										<i class="service_icon ic-security-captcha"></i>
+										<h4 class="service_name">CAPTCHA</h4>
+										<p class="desc_txt">이미지 CAPTCHA, 음성 CAPTCHA를 사용할 수 있도록 API를 제공합니다.</p>
+									</a>
+								</li>
+								<li class="service_item">
+									<a href="/service/security/otp" class="service_link">
+										<i class="service_icon ic-security-otp"></i>
+										<h4 class="service_name">OTP</h4>
+										<p class="desc_txt">OTP 인증을 위한 API를 제공합니다.</p>
+									</a>
+								</li>
+								<li class="service_item">
+									<a href="/service/security/dbsafer" class="service_link">
+										<i class="service_icon ic-security-dbsafer"></i>
+										<h4 class="service_name">DBSafer</h4>
+										<p class="desc_txt">접근 통제, 권한 통제, SQL 감사 및 로깅 등을 수행하는 서비스입니다.</p>
+									</a>
+								</li>
+								<li class="service_item is_new">
+									<a href="/service/security/web_firewall" class="service_link">
+										<i class="service_icon ic-security-web-firewall"></i>
+										<h4 class="service_name">Web Firewall</h4>
+										<p class="desc_txt">고객 클라우드 영역에 웹 방화벽이 구성되며, 독립적인 운영 환경을 제공합니다.</p>
+									</a>
+								</li>
+								<li class="service_item is_new">
+									<a href="/service/security/vaccine" class="service_link">
+										<i class="service_icon ic-security-vaccine"></i>
+										<h4 class="service_name">Vaccine</h4>
+										<p class="desc_txt">기술력을 인정받은 Trend Micro Deep Security 제품을 통해 악성코드로부터 이용자의 서버를 보호합니다.</p>
+									</a>
+								</li>
+								</ul>
+							</div>
+							<div class="service_group">
+								<div class="service_title_area">
+									<i class="service_icon ic-content-delivery"></i>
+									<h3 class="service_title">Content Delivery</h3>
+								</div>
+								<ul class="lst_service">
+								<li class="service_item">
+									<a href="/service/content_delivery/cdn" class="service_link">
+										<i class="service_icon ic-content-delivery-cdn"></i>
+										<h4 class="service_name">CDN</h4>
+										<p class="desc_txt">빠른 속도로 콘텐츠를 배포할 수 있습니다.</p>
+									</a>
+								</li>
+								<li class="service_item">
+									<a href="/service/content_delivery/image" class="service_link">
+										<i class="service_icon ic-content-delivery-image"></i>
+										<h4 class="service_name">Image</h4>
+										<p class="desc_txt">이미지 저장, 편집, 전송까지 아우르는 이미지 시스템입니다.</p>
+									</a>
+								</li>
+								</ul>
+							</div>
+							<div class="service_group">
+								<div class="service_title_area">
+									<i class="service_icon ic-mobile-service"></i>
+									<h3 class="service_title">Mobile Service</h3>
+								</div>
+								<ul class="lst_service">
+								<li class="service_item">
+									<a href="/service/mobile_service/iap" class="service_link">
+										<i class="service_icon ic-mobile-service-iap"></i>
+										<h4 class="service_name">IAP</h4>
+										<p class="desc_txt">모바일 통합 인앱 결제 서비스를 제공합니다.</p>
+									</a>
+								</li>
+								<li class="service_item">
+									<a href="/service/mobile_service/mobile_device_info" class="service_link">
+										<i class="service_icon ic-mobile-service-mobile-device-info"></i>
+										<h4 class="service_name">Mobile Device Info</h4>
+										<p class="desc_txt">다양한 디바이스를 모델 코드, 모델명으로 조회할 수 있습니다.</p>
+									</a>
+								</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col_group">
+							<div class="service_group">
+								<div class="service_title_area">
+									<i class="service_icon ic-notification"></i>
+									<h3 class="service_title">Notification</h3>
+								</div>
+								<ul class="lst_service">
+								<li class="service_item">
+									<a href="/service/notification/push" class="service_link">
+										<i class="service_icon ic-notification-push"></i>
+										<h4 class="service_name">Push</h4>
+										<p class="desc_txt">다양한 전송 방법으로 메시지를 전송하고 그 결과를 조회할 수 있습니다.</p>
+									</a>
+								</li>
+								<li class="service_item">
+									<a href="/service/notification/sms" class="service_link">
+										<i class="service_icon ic-notification-sms"></i>
+										<h4 class="service_name">SMS</h4>
+										<p class="desc_txt">SMS/MMS 발송, 예약 발송, 조회, 템플릿 관리까지 아우르는 SMS 발송 시스템입니다.</p>
+									</a>
+								</li>
+								<li class="service_item">
+									<a href="/service/notification/email" class="service_link">
+										<i class="service_icon ic-notification-email"></i>
+										<h4 class="service_name">Email</h4>
+										<p class="desc_txt">메일 발송, 예약 발송, 조회, 템플릿 관리까지 아우르는 메일 발송 시스템입니다.</p>
+									</a>
+								</li>
+								<li class="service_item is_new">
+									<a href="/service/notification/alimtalk" class="service_link">
+										<i class="service_icon ic-notification-kakaotalk-bizmessage"></i>
+										<h4 class="service_name">KakaoTalk Bizmessage</h4>
+										<p class="desc_txt">카카오톡 사용자에게 배송, 예약 시간 등의 정보성 메시지를 발송할 수 있는 알림톡과 광고성 메시지를 발송할 수 있는 친구톡을 함께 제공하는 서비스입니다.</p>
+									</a>
+								</li>
+								</ul>
+							</div>
+							<div class="service_group">
+								<div class="service_title_area">
+									<i class="service_icon ic-application-service"></i>
+									<h3 class="service_title">Application Service</h3>
+								</div>
+								<ul class="lst_service">
+								<li class="service_item">
+									<a href="/service/application_service/maps" class="service_link">
+										<i class="service_icon ic-application-service-maps"></i>
+										<h4 class="service_name">Maps</h4>
+										<p class="desc_txt">웹 지도, 통합 검색, 경로 탐색을 제공하는 API 웹 지도 서비스입니다.</p>
+									</a>
+								</li>
+								<li class="service_item">
+									<a href="/service/application_service/role" class="service_link">
+										<i class="service_icon ic-application-service-role"></i>
+										<h4 class="service_name">ROLE</h4>
+										<p class="desc_txt">역할 기반 접근 제어(role-based access control, RBAC)를 쉽게 사용할 수 있도록 UI 및 REST API를 제공합니다.</p>
+									</a>
+								</li>
+								<li class="service_item">
+									<a href="/service/application_service/api_gateway" class="service_link">
+										<i class="service_icon ic-application-service-api-gateway"></i>
+										<h4 class="service_name">API Gateway</h4>
+										<p class="desc_txt">API를 생성, 관리, 배포, 모니터링할 수 있습니다.</p>
+									</a>
+								</li>
+								<li class="service_item">
+									<a href="/service/application_service/rtcs" class="service_link">
+										<i class="service_icon ic-application-service-rtcs"></i>
+										<h4 class="service_name">RTCS</h4>
+										<p class="desc_txt">Socket.IO 기반으로 웹과 모바일 등을 사용하는 사용자와 서비스 간 실시간 메시지를 주고받을 수 있습니다.</p>
+									</a>
+								</li>
+								<li class="service_item">
+									<a href="/service/application_service/cs_bbs" class="service_link">
+										<i class="service_icon ic-application-service-cs-bbs"></i>
+										<h4 class="service_name">CS &amp; BBS</h4>
+										<p class="desc_txt">고객을 위한 기본 CS 화면(공지 사항, FAQ, 1:1 문의)을 제공하고 CS 콘텐츠 관리 기능을 제공합니다.</p>
+									</a>
+								</li>
+								</ul>
+							</div>
+							<div class="service_group">
+								<div class="service_title_area">
+									<i class="service_icon ic-search"></i>
+									<h3 class="service_title">Search</h3>
+								</div>
+								<ul class="lst_service">
+								<li class="service_item">
+									<a href="/service/search/cloud_search" class="service_link">
+										<i class="service_icon ic-search-cloud-search"></i>
+										<h4 class="service_name">Cloud Search</h4>
+										<p class="desc_txt">DBMS 검색과 정보 검색의 단점을 보완한 서비스입니다.</p>
+									</a>
+								</li>
+								<li class="service_item">
+									<a href="/service/search/autocomplete" class="service_link">
+										<i class="service_icon ic-search-autocomplete"></i>
+										<h4 class="service_name">Autocomplete</h4>
+										<p class="desc_txt">자동 완성 서비스를 합리적인 비용으로 손쉽게 구축할 수 있습니다.</p>
+									</a>
+								</li>
+								<li class="service_item">
+									<a href="/service/search/corporation_search" class="service_link">
+										<i class="service_icon ic-search-corporation-search"></i>
+										<h4 class="service_name">Corporation Search</h4>
+										<p class="desc_txt">사업자등록번호에 대하여 과세 유형 및 신규 등록, 휴/폐업 여부를 조회할 수 있습니다.</p>
+									</a>
+								</li>
+								<li class="service_item is_new">
+									<a href="/service/search/address_search" class="service_link">
+										<i class="service_icon ic-search-address-search"></i>
+										<h4 class="service_name">Address Search</h4>
+										<p class="desc_txt">도로명주소, 지번주소 등을 편리하게 검색할 수 있는 API를 제공합니다.</p>
+									</a>
+								</li>
+								</ul>
+							</div>
+							<div class="service_group">
+								<div class="service_title_area">
+									<i class="service_icon ic-dev-tools"></i>
+									<h3 class="service_title">Dev Tool</h3>
+								</div>
+								<ul class="lst_service">
+								<li class="service_item">
+									<a href="/service/dev_tool/deploy" class="service_link">
+										<i class="service_icon ic-dev-tools-deploy"></i>
+										<h4 class="service_name">Deploy</h4>
+										<p class="desc_txt">서버 애플리케이션과 클라이언트(스마트폰) 설치 애플리케이션의 배포 서비스를 제공합니다.</p>
+									</a>
+								</li>
+								</ul>
+							</div>
+							<div class="service_group">
+								<div class="service_title_area">
+									<i class="service_icon ic-management"></i>
+									<h3 class="service_title">Management</h3>
+								</div>
+								<ul class="lst_service">
+								<li class="service_item">
+									<a href="/service/management/managed" class="service_link">
+										<i class="service_icon ic-management-managed"></i>
+										<h4 class="service_name">Managed</h4>
+										<p class="desc_txt">전문 지식을 겸비한 전담 엔지니어가 구축부터 운영, 백업까지 서비스를 안정적으로 관리합니다.</p>
+									</a>
+								</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="row_wrap">
+						<div class="col_group">
+							<div class="service_group">
+								<div class="service_title_area">
+									<i class="service_icon ic-dooray"></i>
+									<h3 class="service_title">Dooray!</h3>
+								</div>
+								<ul class="lst_service">
+								<li class="service_item">
+									<a href="/service/dooray/project" class="service_link">
+										<i class="service_icon ic-dooray-project"></i>
+										<h4 class="service_name">Project</h4>
+										<p class="desc_txt">자동 분류 규칙을 이용해 쉽게 관리할 수 있으며 자동으로 업무를 등록할 수도 있습니다.</p>
+									</a>
+								</li>
+								<li class="service_item">
+									<a href="/service/dooray/messenger" class="service_link">
+										<i class="service_icon ic-dooray-messenger"></i>
+										<h4 class="service_name">Messenger</h4>
+										<p class="desc_txt">업무의 속도를 높이는 실시간 커뮤니케이션 서비스입니다.</p>
+									</a>
+								</li>
+								<li class="service_item">
+									<a href="/service/dooray/mail" class="service_link">
+										<i class="service_icon ic-dooray-mail"></i>
+										<h4 class="service_name">Mail</h4>
+										<p class="desc_txt">업무에 최적화된 똑똑한 메일 서비스입니다.</p>
+									</a>
+								</li>
+								<li class="service_item">
+									<a href="/service/dooray/calendar" class="service_link">
+										<i class="service_icon ic-dooray-calendar"></i>
+										<h4 class="service_name">Calendar</h4>
+										<p class="desc_txt">업무 일정을 관리할 수 있는 캘린더 서비스입니다.</p>
+									</a>
+								</li>
+								<li class="service_item">
+									<a href="/service/dooray/drive" class="service_link">
+										<i class="service_icon ic-dooray-drive"></i>
+										<h4 class="service_name">Drive</h4>
+										<p class="desc_txt">내 드라이브뿐 아니라, 프로젝트 드라이브를 제공해 멤버들이 함께 파일을 저장하고 관리할 수 있습니다.</p>
+									</a>
+								</li>
+								<li class="service_item">
+									<a href="/service/dooray/contacts" class="service_link">
+										<i class="service_icon ic-dooray-contacts"></i>
+										<h4 class="service_name">Contacts</h4>
+										<p class="desc_txt">개인/공용 주소록 서비스를 제공합니다.</p>
+									</a>
+								</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col_group">
+							<div class="service_group">
+								<div class="service_title_area">
+									<i class="service_icon ic-erp"></i>
+									<h3 class="service_title">ERP</h3>
+								</div>
+								<ul class="lst_service">
+								<li class="service_item">
+									<a href="/service/erp/communication_board" class="service_link">
+										<i class="service_icon ic-erp-communication-board"></i>
+										<h4 class="service_name">Communication Board</h4>
+										<p class="desc_txt">양방향 소통을 지원하는 그룹 기반의 커뮤니케이션 서비스입니다.</p>
+									</a>
+								</li>
+								<li class="service_item">
+									<a href="/service/erp/workflow" class="service_link">
+										<i class="service_icon ic-erp-workflow"></i>
+										<h4 class="service_name">Workflow</h4>
+										<p class="desc_txt">업무 환경의 효율성을 높이는 ERP 기반의 전자 결재 서비스입니다.</p>
+									</a>
+								</li>
+								<li class="service_item">
+									<a href="/service/erp/human_resources" class="service_link">
+										<i class="service_icon ic-erp-human-resources"></i>
+										<h4 class="service_name">Human Resources</h4>
+										<p class="desc_txt">효과적인 인사 관리를 위한 쉽고 편리한 인사 시스템입니다.</p>
+									</a>
+								</li>
+								<li class="service_item">
+									<a href="/service/erp/finance" class="service_link">
+										<i class="service_icon ic-erp-finance"></i>
+										<h4 class="service_name">Finance</h4>
+										<p class="desc_txt">회계 업무의 솔루션을 담은 재무 회계 시스템입니다.</p>
+									</a>
+								</li>
+								</ul>
+							</div>
+							<div class="service_group">
+								<div class="service_title_area">
+									<i class="service_icon ic-bill"></i>
+									<h3 class="service_title">Bill</h3>
+								</div>
+								<ul class="lst_service">
+								<li class="service_item is_new">
+									<a href="/service/bill/bill" class="service_link">
+										<i class="service_icon ic-bill-bill-e-tax"></i>
+										<h4 class="service_name">Bill (e-Tax)</h4>
+										<p class="desc_txt">쉽고 편리하게 세금계산서를 발행할 수 있습니다.</p>
+									</a>
+								</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col_group">
+							<div class="service_group">
+								<div class="service_title_area">
+									<i class="service_icon ic-contact-center"></i>
+									<h3 class="service_title">Contact Center</h3>
+								</div>
+								<ul class="lst_service">
+								<li class="service_item">
+									<a href="/service/contact_center/omni_contact" class="service_link">
+										<i class="service_icon ic-contact-center-omni-contact"></i>
+										<h4 class="service_name">Omni Contact</h4>
+										<p class="desc_txt">콜센터 통합 상담 솔루션입니다.</p>
+									</a>
+								</li>
+								<li class="service_item">
+									<a href="/service/contact_center/mobile_contact" class="service_link">
+										<i class="service_icon ic-contact-center-mobile-contact"></i>
+										<h4 class="service_name">Mobile Contact</h4>
+										<p class="desc_txt">고객 문의에 보다 체계적, 탄력적, 전문적으로 대응할 수 있습니다.</p>
+									</a>
+								</li>
+								<li class="service_item">
+									<a href="/service/contact_center/online_contact" class="service_link">
+										<i class="service_icon ic-contact-center-online-contact"></i>
+										<h4 class="service_name">Online Contact</h4>
+										<p class="desc_txt">유형별 분류를 통해 고객 센터 웹 페이지에 다양한 형태로 정보를 제공하고 관리하는 시스템입니다.</p>
+									</a>
+								</li>
+								</ul>
+							</div>
+							<div class="service_group">
+								<div class="service_title_area">
+									<i class="service_icon ic-idc"></i>
+									<h3 class="service_title">IDC</h3>
+								</div>
+								<ul class="lst_service">
+								<li class="service_item">
+									<a href="/service/idc/tcc" class="service_link">
+										<i class="service_icon ic-idc-tcc"></i>
+										<h4 class="service_name">TCC</h4>
+										<p class="desc_txt">자체 기술력으로 경기도 판교에 설계, 구축한 도심형 인터넷 데이터 센터입니다.</p>
+									</a>
+								</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<!-- //[D] CONTENTS -->
+		<a href="#container" class="btn_top">TOP</a>
+	</div>
+	<!--[D] FOOTER -->
+	<?php include 'inc/footer.html';?>
+	<!--//[D] FOOTER -->
+</div>
+
+<!--[D] widget -->
+	<?php include 'inc/widget.html';?>
+<!--//[D] widget -->
+
+<!-- [D] LAYER -->
+<?php include 'inc/layer_loading.html';?>
+<!-- [D] LAYER -->
+
+<!-- Javascript Area -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+<!-- 마크업 확인용입니다. -->
+<style>
+.case_view{display:inline-block;position:fixed;bottom:0;left:0;z-index:1000;width:auto;padding:5px;background:#000;opacity:0.7}
+.case_view .btn{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+</style>
+<div class="case_view">
+	<?php include 'inc/case_view_common.html';?>
+</div>
+
+
+<script src="js/case_view.js"></script>
+<!-- //마크업 확인용입니다. -->
+</body>
+</html>

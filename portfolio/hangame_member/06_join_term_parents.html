@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="all">
+<title>회원가입 :: HANGAME</title>
+<link rel="stylesheet" type="text/css" href="css/hangame_join.css">
+<!--[if lt IE 9]>
+<script type="text/javascript" src="../js/html5.js"></script>
+<script type="text/javascript" src="../js/respond.min.js"></script>
+<![endif]-->
+</head>
+<body class="join_renewal is_pc"><!-- [D] body 에 사용 용도에 따른 클래스 추가 : PC 전체화면 = is_pc, PC 팝업 = 별도 클래스 사용 X, 모바일 = is_m -->
+
+<div class="wrap">
+	<header id="header" class="header">
+		<em class="logo_area">
+			<img src="img/logo_hangame.png" width="234" height="36" alt="HANGAME">
+		</em>
+	</header>
+	<div id="container">
+		<!-- [D] CONTENTS -->
+		<div class="content">
+			<div class="tit_wrap is_underline">
+				<h1 class="h_txt">회원가입과 게임서비스 이용에 동의해 주세요</h1>
+			</div>
+			<div class="form_wrap term_wrap">
+				<form>
+				<h2 class="sub_tit">개인정보 수집 및 이용 안내</h2>
+				<div class="scroll_wrap">
+					<iframe src="http://m.id.hangame.com/terms.nhn?m=privacyHangame" frameborder="0"></iframe>
+				</div>
+				<h2 class="sub_tit">보호자(법정대리인) 동의에 대한 안내</h2>
+				<ul class="lst_noti">
+				<li class="noti_item"><span class="sp ico_bult"></span>보호자(법정대리인)의 본인인증으로 만 18세 미만 어린이/청소년<br>회원가입과 게임 서비스 이용에 동의합니다.</li>
+				<li class="noti_item"><span class="sp ico_bult"></span>아래의 동의 버튼을 눌러 의사를 표현하는 행위는 만 18세 미만<br>어린이/청소년의 회원가입에 따른 개인정보 수집 및 이용,<br>게임 서비스 이용에 대한 동의와 이를 위해 보호자의 개인정보가<br>수집되는 것에 대한 동의 의사를 모두 표현하는 것입니다.</li>
+				<li class="noti_item"><span class="sp ico_bult"></span>보호자(법정대리인)의 나이는 만20세 이상이어야 합니다.</li>
+				<li class="noti_item"><span class="sp ico_bult"></span>보호자(법정대리인) 정보는 어린이/청소년이 성년이 될 때까지<br>보관합니다.</li>
+				</ul>
+				</form>
+			</div>
+			<div class="btn_wrap">
+				<a href="#" class="btn">동의</a>
+			</div>
+		</div>
+		<!-- //[D] CONTENTS -->
+	</div>
+	
+	<footer id="footer" class="footer">
+		<p class="corp_txt">© NHN Entertainment Corp.</p>
+	</footer>
+</div>
+
+
+<!-- Javascript Area -->
+<script src="../js/jquery-1.8.3.min.js"></script>
+
+<!-- 마크업 확인용입니다. -->
+<style>
+.case_view{display:inline-block;position:fixed;bottom:0;left:0;z-index:1100;width:auto;padding:5px;background:#000;opacity:0.7}
+.case_view .btn{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+</style>
+<div class="case_view">
+	<a href="#" class="btn" onclick="$('body').attr('class','is_pc');return false;">피씨 화면</a>
+	<a href="#" class="btn" onclick="$('body').attr('class','');return false;">팝업 화면</a>
+	<a href="#" class="btn" onclick="$('body').attr('class','is_m');return false;">모바일 화면</a>
+</div>
+<!-- //마크업 확인용입니다. --> 
+</body>
+</html>

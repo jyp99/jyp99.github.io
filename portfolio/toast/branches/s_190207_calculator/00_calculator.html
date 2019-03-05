@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="all">
+<title>토스트(TOAST) 요금계산기</title>
+
+<meta name="description" content="NHN 엔터테인먼트에서 제공하는 토스트 클라우드 서비스. 오픈스택 기반의 클라우드 인프라, 게임솔루션, 보안, 문자/이메일/알림톡, 협업도구 Dooray, ERP 제공">
+<meta name="keywords" content="토스트, 토스트 클라우드, 클라우드 서비스, 토스트 닷컴, 클라우드, NHN엔터테인먼트, NHN엔터, NHN Entertainment, NHN Ent, TOAST, TOAST Cloud, TOAST CAM, TOAST PC, TOAST Analytics, toast, 토스트캠, 토스트피씨,토스트애널리틱스">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="토스트(TOAST) 요금계산기">
+<meta property="og:description" content="NHN 엔터테인먼트에서 제공하는 토스트 클라우드 서비스. 오픈스택 기반의 클라우드 인프라, 게임솔루션, 보안, 문자/이메일/알림톡, 협업도구 Dooray, ERP 제공">
+<meta property="og:keywords" content="토스트, 토스트 클라우드, 클라우드 서비스, 토스트 닷컴, 클라우드, NHN엔터테인먼트, NHN엔터, NHN Entertainment, NHN Ent, TOAST, TOAST Cloud, TOAST CAM, TOAST PC, TOAST Analytics, toast, 토스트캠, 토스트피씨,토스트애널리틱스">
+<meta property="og:image" content="http://images.toast.com/toast/com/web/common/toast.com.jpg">
+<meta property="og:image:secure_url" content="http://images.toast.com/toast/com/web/common/toast.com.jpg">
+<meta property="og:url" content="https://toast.com">
+<link rel="shortcut icon" href="https://toast.com/resources/img/favicons/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" sizes="180x180" href="/resources/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/resources/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/resources/img/favicons/favicon-16x16.png">
+<link rel="manifest" href="/resources/img/favicons/manifest.json">
+<link rel="mask-icon" href="/resources/img/favicons/safari-pinned-tab.svg">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="css/gnb.css">
+<link rel="stylesheet" type="text/css" href="css/toast.css">
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul class="skip">
+<li><a href="#header" onclick="document.getElementById('header').tabIndex=-1;document.getElementById('header').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+
+<!--[D] noti_browser -->
+<?php include 'inc/noti_browser.html';?>
+<!--//[D] noti_browser -->
+<div class="wrap header_fixed_wrap"><!-- [D]헤더가 필수인 페이지인 경우 wrap에 header_fixed_wrap 클래스 추가 -->
+
+	<!--[D] HEADER -->
+	<?php include 'inc/header.html';?>
+	<!--//[D] HEADER -->
+	<div id="container" class="container has_snb_container">
+		<?php include 'inc/snb_calculator.html';?>
+		<!-- [D] CONTENTS -->
+		<div id="content" class="content calculator_content">
+			<!-- [D]예상 요금 내역 -->
+			<div class="total_pricing_wrap">
+				<div class="inner">
+					<em class="tit_txt">총 예상요금 <span class="sub_txt">(부가세 제외)</span></em>
+					<ul class="lst_radio">
+					<li class="inp_item">
+						<input type="radio" class="inp_radio" name="term" id="month1" checked>
+						<label class="lb_txt" for="month1">1개월</label>
+					</li>
+					<li class="inp_item">
+						<input type="radio" class="inp_radio" name="term" id="month2">
+						<label class="lb_txt" for="month2">2개월</label>
+					</li>
+					<li class="inp_item">
+						<input type="radio" class="inp_radio" name="term" id="month3">
+						<label class="lb_txt" for="month3">3개월</label>
+					</li>
+					<li class="inp_item">
+						<input type="radio" class="inp_radio" name="term" id="year1">
+						<label class="lb_txt" for="year1">1년</label>
+					</li>
+					</ul>
+					<em class="total_pricing">
+						<span class="num_txt">662,716,512</span><span class="unit_txt">원</span>
+					</em>
+					<div class="btn_wrap">
+						<button class="btn btn_save_excel" type="button">엑셀저장</button>
+						<button class="btn btn_send_email" type="button">이메일발송</button>
+						<button class="btn btn_print" type="button">인쇄</button>
+						<button class="btn btn_recalculate" type="button">다시계산</button>
+					</div>
+					<button class="btn btn_calculation_detail" type="button"><span class="btn_txt">계산내역 자세히 보기</span></button><!-- [D]btn_calculation_detail 클릭시 calculator_detail_wrap에 is_show 클래스 추가 -->
+				</div>
+			</div>
+			<div class="sec">
+				<div class="inner">
+					<div class="title_wrap">
+						<h2 class="tit_txt">요금 계산기</h2>
+					</div>
+					<div class="sub_desc_wrap">
+						<p class="sub_txt">모든 상품에 대해 예상 요금을 미리 계산해 보세요. (실제 청구된 요금과 다를 수 있습니다.)</p>
+					</div>
+					<form action="">
+					<div class="product_group">
+						<h4 class="product_title">Instance</h4>
+						<a href="#" class="link_service_intro">서비스 소개</a>
+						<div class="tbl_wrap">
+							<table class="tbl">
+							<caption><span class="blind">Instance 요금 계산 표</span></caption>
+							<colgroup>
+							<col style="width:270px"><!-- [D] 마지막 col을 제외한 나머지는 노출 원하는 인풋 사이즈보다 10px 더 추가하여 적용 -->
+							<col style="width:270px">
+							<col style="width:200px">
+							<col style="width:185px">
+							<col>
+							</colgroup>
+							<thead>
+							<tr>
+							<th scope="col">운영체제(OS)</th>
+							<th scope="col">인스턴스 타입</th>
+							<th scope="col">루트 볼륨 타입</th>
+							<th scope="col">루트 볼륨 크기</th>
+							<th scope="col">수량</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+							<td>
+								<span class="select_bx is_error"><!-- [D] 오류값 선택 케이스 select_bx에 is_error 클래스 적용 -->
+									<select class="inp_select"><!-- [D] 선택된 inp_select 부모 select_bx에 is_focus 클래스 적용 -->
+										<option value="" disabled selected>OS를 선택하세요.</option>
+										<option value="OS1">OS1</option>
+										<option value="OS2">OS2</option>
+									</select>
+								</span>
+							</td>
+							<td>
+								<span class="select_bx">
+									<select class="inp_select">
+										<option value="" disabled selected>인스턴스 타입을 선택</option>
+										<option value="인스턴스 타입1">인스턴스 타입1</option>
+										<option value="인스턴스 타입2">인스턴스 타입2</option>
+									</select>
+								</span>
+							</td>
+							<td>
+								<span class="select_bx is_disabled"><!-- [D] 비활성 케이스 select_bx에 is_disabled 클래스 적용 -->
+									<select class="inp_select">
+										<option value="" disabled selected>HDD</option>
+										<option value="루트 볼륨 타입1">루트 볼륨 타입1</option>
+										<option value="루트 볼륨 타입2">루트 볼륨 타입2</option>
+									</select>
+								</span>
+							</td>
+							<td>
+								<div class="inp_area is_error">
+									<span class="inp_bx">
+										<input type="text" class="inp">
+									</span>
+									<span class="unit_txt">GB</span>
+								</div>
+							</td>
+							<td>
+								<div class="inp_area is_disabled">
+									<span class="inp_bx">
+										<input type="text" class="inp" value="2">
+									</span>
+									<span class="unit_txt">대</span>
+								</div>
+							</td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+						<div class="result_wrap">
+							<span class="h_result">예상 요금 (부가세 제외)</span>
+							<em class="total_price"><span class="number_txt">300,000</span><span class="unit_txt">원</span></em>
+							<div class="btn_wrap">
+								<button class="btn btn_add" type="button">계산기에 이 상품 추가</button>
+								<button class="btn btn_reset" type="reset">초기화하고 다시 계산</button>
+							</div>
+						</div>
+						<ul class="lst_noti">
+						<li class="noti_txt">Network 및 데이터 스토리지 요금은 기본 요금에 포함되지 않습니다. 각 서비스 과금 정책에 따라 요금을 과금합니다. <a href="#" class="link_txt">[Network 요금 보기]</a> <a href="#" class="link_txt">[스토리지 요금 보기]</a></li>
+						<li class="noti_txt">Windows OS 요금은 기본 요금에 포함됩니다.</li>
+						<li class="noti_txt">u2 Instance는 u2 전용 스토리지를 루트 볼륨(OS) 설치 공간으로 사용합니다. 인스턴스 타입에 따라 고정된 크기가 할당됩니다.</li>
+						</ul>
+					</div>
+					<div class="product_group">
+						<h4 class="product_title">Network</h4>
+						<em class="state_badge is_beta">BETA</em>
+						<a href="#" class="link_service_intro">서비스 소개</a>
+						<div class="tbl_wrap is_not_full"><!-- [D] 테이블사이즈가 100% 미만으로 노출되는것을 원하는 경우 tbl_wrap에 is_not_full 클래스 적용 -->
+							<table class="tbl">
+							<caption><span class="blind">Network 요금 계산 표</span></caption>
+							<colgroup>
+							<col style="width:180px">
+							</colgroup>
+							<thead>
+							<tr>
+							<th scope="col">전송량</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+							<td>
+								<div class="inp_area">
+									<span class="inp_bx">
+										<input type="text" class="inp">
+									</span>
+									<span class="unit_txt">GB</span>
+								</div>
+							</td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+						<div class="result_wrap">
+							<span class="h_result">예상 요금 (부가세 제외)</span>
+							<em class="total_price"><span class="number_txt">300,000</span><span class="unit_txt">원</span></em>
+							<div class="btn_wrap">
+								<button class="btn btn_add" type="button">계산기에 이 상품 추가</button>
+								<button class="btn btn_reset" type="reset">초기화하고 다시 계산</button>
+							</div>
+						</div>
+						<ul class="lst_noti">
+						<li class="noti_txt">아웃바운드 트래픽만 과금되며, 총합을 기준으로 합니다.</li>
+						<li class="noti_txt">Network전송량의 5% 이상 또는 20MB 이상의 국제 Network전송량이 발생하면 별도의 이용 요금을 협의하거나 국제 Network전송을 제한할 수 있습니다. </li>
+						</ul>
+					</div>
+					<div class="product_group">
+						<h4 class="product_title">Auto Scale</h4>
+						<a href="#" class="link_service_intro">서비스 소개</a>
+						<div class="tbl_wrap is_not_full">
+							<table class="tbl">
+							<caption><span class="blind">Auto Scale 요금 계산 표</span></caption>
+							<colgroup>
+							<col style="width:190px">
+							</colgroup>
+							<thead>
+							<tr>
+							<th scope="col">사용 여부 선택</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+							<td>
+								<span class="select_bx">
+									<select class="inp_select">
+										<option value="사용">사용</option>
+									</select>
+								</span>
+							</td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+						<div class="result_wrap">
+							<span class="h_result">예상 요금 (부가세 제외)</span>
+							<em class="total_price">무료</em>
+						</div>
+					</div>
+					<div class="product_group">
+						<h4 class="product_title">RDS for MySQL</h4>
+						<a href="#" class="link_service_intro">서비스 소개</a>
+						<div class="tbl_wrap">
+							<table class="tbl">
+							<caption><span class="blind">RDS for MySQL 요금 계산 표</span></caption>
+							<colgroup>
+							<col>
+							<col style="width:200px">
+							<col style="width:185px">
+							<col style="width:135px">
+							<col style="width:185px">
+							<col style="width:125px">
+							</colgroup>
+							<thead>
+							<tr>
+							<th scope="col">인스턴스 타입</th>
+							<th scope="col">데이터 스토리지 타입</th>
+							<th scope="col">데이터 스토리지 용량</th>
+							<th scope="col">백업형태</th>
+							<th scope="col">백업 스토리지 용량</th>
+							<th scope="col">수량</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+							<td>
+								<span class="select_bx">
+									<select class="inp_select">
+										<option value="" disabled selected>인스턴스 타입을 선택</option>
+										<option value="인스턴스 타입1">인스턴스 타입1</option>
+										<option value="인스턴스 타입2">인스턴스 타입2</option>
+									</select>
+								</span>
+							</td>
+							<td>
+								<span class="select_bx">
+									<select class="inp_select">
+										<option value="HDD">HDD</option>
+									</select>
+								</span>
+							</td>
+							<td>
+								<div class="inp_area">
+									<span class="inp_bx">
+										<input type="text" class="inp" value="0">
+									</span>
+									<span class="unit_txt">GB</span>
+								</div>
+							</td>
+							<td>
+								<span class="select_bx">
+									<select class="inp_select">
+										<option value="자동">자동</option>
+									</select>
+								</span>
+							</td>
+							<td>
+								<div class="inp_area">
+									<span class="inp_bx">
+										<input type="text" class="inp">
+									</span>
+									<span class="unit_txt">GB</span>
+								</div>
+							</td>
+							<td>
+								<div class="inp_area">
+									<span class="inp_bx">
+										<input type="text" class="inp">
+									</span>
+									<span class="unit_txt">대</span>
+								</div>
+							</td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+						<div class="result_wrap">
+							<span class="h_result">예상 요금 (부가세 제외)</span>
+							<em class="total_price"><span class="number_txt">300,000</span><span class="unit_txt">원</span></em>
+							<div class="btn_wrap">
+								<button class="btn btn_add" type="button">계산기에 이 상품 추가</button>
+								<button class="btn btn_reset" type="reset">초기화하고 다시 계산</button>
+							</div>
+						</div>
+						<ul class="lst_noti">
+						<li class="noti_txt">Network요금은 포함되지 않습니다. 과금 정책에 따라 요금을 과금합니다. <a href="#" class="link_txt">[Network 요금 보기]</a></li>
+						<li class="noti_txt">자동 백업은 데이터를 Block Storage에 저장하며, 과금 정책에 따라 요금을 과금합니다. <a href="#" class="link_txt">[Block Storage 요금 보기]</a></li>
+						<li class="noti_txt">Block Storage에 백업된 데이터 용량이 일정 용량을 초과하면 Object Storage에 이관하며, 과금정책에 따라 요금을 과금합니다. <a href="#" class="link_txt">[Object Storage 요금 보기]</a></li>
+						<li class="noti_txt">[복제본 생성], [복원] 기능이 수행되는 동안 bin log file의 크기만큼 Object Storage 요금이 발생할 수 있습니다.</li>
+						<li class="noti_txt">수동 백업은 데이터를 Object Storage에 저장하며, 과금 정책에 따라 요금을 과금합니다. <a href="#" class="link_txt">[Object Storage 요금 보기]</a></li>
+						</ul>
+						</ul>
+					</div>
+					</form>
+				</div>
+				<div class="calculator_detail_wrap">
+					<div class="inner">
+						<h3 class="blind">계산내역 자세히 보기</h2>
+						<button class="btn_detail_close">자세히 보기 레이어 닫기</button>
+						<ul class="lst_region_price">
+						<li class="region_item is_selected">
+							<a href="#" class="btn_region">한국리전(KR) <span class="price_txt"><span class="number_txt">300,000</span><span class="unit_txt">원</span></span></a>
+						</li>
+						<li class="region_item">
+							<a href="#" class="btn_region">일본리전(JP) <span class="price_txt">100,000원</span></a>
+						</li>
+						</ul>
+						<div class="product_group">
+							<div class="product_title_wrap">
+								<h3 class="h_txt">Instance</h3>
+								<div class="total_price_wrap">
+									<em class="number_txt">300,000</em><span class="unit_txt">원</span>
+									<span class="sub_txt">(부가세 제외)</span>
+								</div>
+							</div>
+							<div class="tbl_wrap">
+								<table class="tbl">
+								<caption><span class="blind">서비스 요금 계산 표</span></caption>
+								<colgroup>
+								<col>
+								<col style="width:190px">
+								<col style="width:130px">
+								<col style="width:130px">
+								<col style="width:110px">
+								<col style="width:171px">
+								<col style="width:174px">
+								</colgroup>
+								<thead>
+								<tr>
+								<th scope="col">OS(운영체제)</th>
+								<th scope="col">인스턴스 타입</th>
+								<th scope="col">루트 볼륨 종류</th>
+								<th scope="col">루트 볼륨 크기</th>
+								<th scope="col">수량</th>
+								<th scope="col">월 예상 요금</th>
+								<th scope="col">편집</th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr>
+								<td class="align_left_cell">Ubuntu Server 16.04 LTS – 64bit</td>
+								<td class="align_left_cell">c2.large</td>
+								<td>HDD</td>
+								<td class="align_right_cell">20GB</td>
+								<td>2</td>
+								<td class="align_right_cell">000,000원</td>
+								<td><button class="btn btn_modify">수정</button><button class="btn btn_delete">삭제</button></td>
+								</tr>
+								<tr>
+								<td class="align_left_cell">Widows</td>
+								<td class="align_left_cell">%Type%</td>
+								<td>SDD</td>
+								<td class="align_right_cell">50GB</td>
+								<td>1</td>
+								<td class="align_right_cell">000,000원</td>
+								<td><button class="btn btn_complete">수정완료</button><button class="btn btn_delete">삭제</button></td>
+								</tr>
+								</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="product_group">
+							<div class="product_title_wrap">
+								<h3 class="h_txt">VPC</h3>
+								<div class="total_price_wrap">
+									<em class="number_txt">300,000</em><span class="unit_txt">원</span>
+									<span class="sub_txt">(부가세 제외)</span>
+								</div>
+							</div>
+							<div class="tbl_wrap">
+								<table class="tbl">
+								<caption><span class="blind">서비스 요금 계산 표</span></caption>
+								<colgroup>
+								<col>
+								<col style="width:171px">
+								<col style="width:174px">
+								</colgroup>
+								<thead>
+								<tr>
+								<th scope="col">월 사용량</th>
+								<th scope="col">월 예상 요금</th>
+								<th scope="col">편집</th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr>
+								<td>222개</td>
+								<td class="align_right_cell">000,000원</td>
+								<td><button class="btn btn_modify">수정</button><button class="btn btn_delete">삭제</button></td>
+								</tr>
+								</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //[D]예상 요금 내역 -->
+			</div>
+				
+			</div>
+		</div>
+		<!-- //[D] CONTENTS -->
+	</div>
+	<!--[D] FOOTER -->
+	<?php include 'inc/footer.html';?>
+	<!--//[D] FOOTER -->
+</div>
+
+<!--[D] widget -->
+	<?php include 'inc/widget.html';?>
+<!--//[D] widget -->
+
+<!-- [D] LAYER -->
+<?php include 'inc/layer_loading.html';?>
+<!-- //[D] LAYER -->
+<!-- [D] 레이어팝업 -->
+<div class="modal pop_custom pop_member" id="modal_email">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">이메일 발송</h4>
+				<button type="button" class="btn_close" data-dismiss="modal">닫기</button>
+			</div>
+			<div class="modal-body">
+				<form action="" class="form_wrap">
+					<label for="user_email" class="lb_txt">수신 이메일</label>
+					<span class="error_control_area">
+						<span class="inp_row">
+							<span class="inp_bx">
+								<input type="text" id="user_email" class="inp" value="juanjungsu@nhnent.com" disabled>
+							</span>
+						</span>
+					</span>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn_cancel">취소</button>
+				<button type="button" class="btn" data-dismiss="modal">보내기</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //[D] 레이어팝업 -->
+<!-- Javascript Area -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+<!-- 마크업 확인용입니다. -->
+<style>
+.case_view{display:inline-block;position:fixed;bottom:0;left:0;z-index:1000;width:auto;padding:5px;background:#000;opacity:0.7}
+.case_view .btn{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+</style>
+<div class="case_view">
+	<a href="#" class="btn" data-toggle="modal" data-target="#modal_email">이메일 발송 팝업</a>
+</div>
+
+
+<script src="js/case_view.js"></script>
+<!-- //마크업 확인용입니다. -->
+</body>
+</html>

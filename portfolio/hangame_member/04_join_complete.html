@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="all">
+<title>회원가입 :: HANGAME</title>
+<link rel="stylesheet" type="text/css" href="css/hangame_join.css">
+<!--[if lt IE 9]>
+<script type="text/javascript" src="../js/html5.js"></script>
+<script type="text/javascript" src="../js/respond.min.js"></script>
+<![endif]-->
+</head>
+<body class="join_renewal is_pc"><!-- [D] body 에 사용 용도에 따른 클래스 추가 : PC 전체화면 = is_pc, PC 팝업 = 별도 클래스 사용 X, 모바일 = is_m -->
+
+<div class="wrap">
+	<header id="header" class="header">
+		<em class="logo_area">
+			<img src="img/logo_hangame.png" width="234" height="36" alt="HANGAME">
+		</em>
+	</header>
+	<div id="container">
+		<!-- [D] CONTENTS -->
+		<div class="content">
+			<div class="tit_wrap">
+				<h1 class="h_txt"><em class="point_txt">한게임 회원가입</em>이 완료되었습니다</h1>
+			</div>
+			<div class="join_complete_wrap">
+				<ul class="lst_noti">
+				<li class="noti_item"><span class="sp ico_bult"></span>한게임 홍보성 정보 수신 동의 2017.00.00 처리 되었습니다</li>
+				<li class="noti_item"><span class="sp ico_bult"></span>가입 축하 선물로 게임 아이템 무료 쿠폰이 지급 되었습니다.<br>내 쿠폰함에서 확인해 주세요.<br><a href="#" class="btn_link point_txt">선물 자세히 보기</a><a href="#" class="btn_link point_txt">내 쿠폰함 가기</a></li>
+				<li class="noti_item noti_m"><span class="sp ico_bult"></span>PC한게임에 로그인하시면 PAYCO 신규가입 특별 혜택을 확인하실 수 있습니다.</li>
+				</ul>
+			</div>
+			<div class="reward_wrap">
+				<h2 class="reward_tit">PAYCO ID 신규 가입 특별 혜택</h2>
+				<p class="reward_txt">지급 받을 아이템을 선택 후 <em class="point">확인</em>버튼을 눌러주세요</p>
+				<ul class="lst_want_item">
+				<li class="item item1 selected"><!-- [D]선택시 item에 selected 클래스 추가 -->
+					<span class="game_bx">도시락 3000</span>
+					<div class="item_txt">
+						<p class="item_name"><em class="point">고스톱</em> 도시락 3000</p>
+						<span class="item_info">(6,000만x3회 or 1.8억)</span>
+					</div>
+					<span class="chk_wrap">
+					<input type="radio" name="item" id="rdo_box1" value="" class="inp_rdo">
+					<label for="rdo_box1" class="lbl"><span class="checkbox"></span>선택하기</label>
+					</span>
+				</li>
+				<li class="item item2">
+					<span class="game_bx">바둑 만방부채</span>
+					<div class="item_txt">
+						<p class="item_name"><em class="point">바둑</em> 만방 부채</p>
+						<span class="item_info">(300만M~최대7억)</span>
+					</div>
+					<span class="chk_wrap">
+					<input type="radio" name="item" id="rdo_box2" value="" class="inp_rdo">
+					<label for="rdo_box2" class="lbl"><span class="checkbox"></span>선택하기</label>
+					</span>
+				</li>
+				</ul>
+			</div>
+			<div class="btn_wrap">
+				<a href="#" class="btn">확인</a>
+			</div>
+		</div>
+		<!-- //[D] CONTENTS -->
+	</div>
+	
+	<footer id="footer" class="footer">
+		<p class="corp_txt">© NHN Entertainment Corp.</p>
+	</footer>
+</div>
+
+
+<!-- Javascript Area -->
+<script src="../js/jquery-1.8.3.min.js"></script>
+
+<!-- 마크업 확인용입니다. -->
+<style>
+.case_view{display:inline-block;position:fixed;bottom:0;left:0;z-index:1100;width:auto;padding:5px;background:#000;opacity:0.7}
+.case_view .btn{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+</style>
+<div class="case_view">
+	<a href="#" class="btn" onclick="$('body').attr('class','is_pc');return false;">피씨 화면</a>
+	<a href="#" class="btn" onclick="$('body').attr('class','');return false;">팝업 화면</a>
+	<a href="#" class="btn" onclick="$('body').attr('class','is_m');return false;">모바일 화면</a>
+</div>
+<!-- //마크업 확인용입니다. --> 
+</body>
+</html>

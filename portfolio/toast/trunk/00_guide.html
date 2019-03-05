@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>UIO :: 토스트닷컴</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="css/gnb.css">
+<link rel="stylesheet" type="text/css" href="css/toast.css">
+<!--[if lt IE 9]>
+<script src="js/html5shiv.min.js"></script>
+<![endif]-->
+<style>
+body{margin:0;padding:0}
+.wrap{text-align:left}
+h1, h2, h3, h4, h5, h6{font-family:"Noto Sans CJK", Notokr, 'Malgun Gothic','맑은고딕','Apple SD Gothic Neo',Dotum,'돋움',sans-serif}
+h1.guide_title{display:block;padding:10px;background:#000;color:#fff;font-size:28px}
+h2.guide_title{margin:20px 0 10px;padding:0 0 8px 5px;border-bottom:1px solid #000;font-size:20px}
+h2.guide_title:first-child{margin-top:0}
+h3.guide_title{margin:20px 0 10px;font-size:15px;font-weight:400}
+h3.guide_title:after{margin:0 5px;content:':'}
+.content{width:auto;max-width:initial;margin:initial;padding:20px}
+.has_snb_container{display:block}
+.has_snb_container .content{width:100%;background-color:#fff;}
+.txt_guide{margin-bottom:15px;padding:10px;background-color:#eee;color:#333;font-size:14px}
+.txt_guide li:before{margin-right:4px;content:'-'}
+.title_wrap{margin-top:20px}
+.lst_ico .item_ico{display:inline-block;width:265px;height:118px;padding:10px;text-align:center;border:1px solid #eee;margin-left:-1px;margin-top:-1px}
+.lst_ico .service_icon{width:40px;height:40px;margin-right:0}
+.lst_ico .ico_name{display:block;margin-top:5px;font-size:12px}
+.lst_ico.service_group .item_ico{position:relative;padding:45px 0 0;width:220px;height:118px}
+.lst_ico.service_group .service_icon{position:absolute;left:50%}
+.service_content .service_group .title_item .service_icon{top:5px;width:40px;height:40px;margin-left:-20px;background-image:url(img/sp_service.png)}
+.lst_ico.service_group .service_icon{top:15px;width:20px;height:20px;margin-left:-10px;background-image:url(img/sp_common.png)}
+.lst_ico .ico_name{font-weight:500;line-height:16px}
+.lst_ico .class_name{display:block;font-size:12px;font-weight:500;color:#4b96e6;line-height:16px}
+.service_snb_wrap{width:auto}
+.service_snb_wrap .service_group .service_icon{top:20px;width:20px;height:20px;margin-left:-10px;background-image:url(img/sp_service.png)}
+</style>
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+	<h1 class="guide_title">토스트닷컴</h1>
+	<div class="container">
+		<div class="content">
+
+			<h2 class="guide_title">페이지네이션</h2>
+			<ul class="txt_guide">
+			<li>선택된 페이지의 링크(page-link)는 span 태그로 대체하여 사용</li>
+			</ul>
+			<h3 class="guide_title">기본</h3>
+			<nav class="pagination_wrap" aria-label="Page navigation">
+				<ul class="pagination justify-content-center">
+				<li class="page-item first_item"><a class="page-link btn_first">처음으로</a></li>
+				<li class="page-item prev_item"><a class="page-link btn_prev">이전</a></li>
+				<li class="page-item active"><span class="page-link">1 <span class="sr-only">(current)</span></span></li><!-- [D] 선택된 페이지 처리 방식 -->
+				<li class="page-item"><a href="#" class="page-link">2</a></li>
+				<li class="page-item"><a href="#" class="page-link">3</a></li>
+				<li class="page-item"><a href="#" class="page-link">4</a></li>
+				<li class="page-item"><a href="#" class="page-link">5</a></li>
+				<li class="page-item next_item"><a href="#" class="page-link btn_next">다음</a></li>
+				<li class="page-item last_item"><a href="#" class="page-link btn_last">끝으로</a></li>
+				</ul>
+			</nav>
+
+			<h3 class="guide_title">비활성</h3>
+			<ul class="txt_guide">
+			<li>비활성 상태인 버튼에는 page-item disabled 클래스 추가</li>
+			</ul>
+			<nav class="pagination_wrap" aria-label="Page navigation">
+				<ul class="pagination justify-content-center">
+				<li class="page-item first_item disabled"><a class="page-link btn_first">처음으로</a></li>
+				<li class="page-item prev_item disabled"><a class="page-link btn_prev">이전</a></li>
+				<li class="page-item"><a href="#" class="page-link">1</a></li>
+				<li class="page-item active"><span class="page-link">2 <span class="sr-only">(current)</span></span></li>
+				<li class="page-item"><a href="#" class="page-link">3</a></li>
+				<li class="page-item"><a href="#" class="page-link">4</a></li>
+				<li class="page-item"><a href="#" class="page-link">5</a></li>
+				<li class="page-item next_item disabled"><a href="#" class="page-link btn_next">다음</a></li>
+				<li class="page-item last_item disabled"><a href="#" class="page-link btn_last">끝으로</a></li>
+				</ul>
+			</nav>
+			<h2 class="guide_title">서비스 아이콘</h2>
+			<ul class="txt_guide">
+			<li>메인/서비스 메인 등에서 공통으로 쓰이는 서비스 아이콘</li>
+			</ul>
+			<div class="service_content">
+				<ul class="lst_ico service_group">
+				<li class="item_ico title_item">
+					<i class="service_icon ic-compute"></i>
+					<span class="ico_name">Compute</span>
+					<span class="class_name">ic-compute</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-compute-instance"></i>
+					<span class="ico_name">Instance</span>
+					<span class="class_name">ic-compute-instance</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-compute-image"></i>
+					<span class="ico_name">Image</span>
+					<span class="class_name">ic-compute-image</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-compute-auto-scale"></i>
+					<span class="ico_name">Auto Scale</span>
+					<span class="class_name">ic-compute-auto-scale</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-compute-monitoring"></i>
+					<span class="ico_name">Monitoring</span>
+					<span class="class_name">ic-compute-monitoring</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-compute-monitoring-v2"></i>
+					<span class="ico_name">Monitoring V2</span>
+					<span class="class_name">ic-compute-monitoring-v2</span>
+				</li>
+				<li class="item_ico title_item">
+					<i class="service_icon ic-network"></i>
+					<span class="ico_name">Network</span>
+					<span class="class_name">ic-network</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-network-vpc"></i>
+					<span class="ico_name">VPC</span>
+					<span class="class_name">ic-network-vpc</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-network-load-balancer"></i>
+					<span class="ico_name">Load Balancer</span>
+					<span class="class_name">ic-network-load-balancer</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-network-ipsec-vpn"></i>
+					<span class="ico_name">Ipsec Vpn</span>
+					<span class="class_name">ic-network-ipsec-vpn</span>
+				</li>
+				<li class="item_ico title_item">
+					<i class="service_icon ic-storage"></i>
+					<span class="ico_name">Storage</span>
+					<span class="class_name">ic-storage</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-storage-block-storage"></i>
+					<span class="ico_name">Block Storage</span>
+					<span class="class_name">ic-storage-block-storage</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-storage-nas-offline"></i>
+					<span class="ico_name">NAS (offline)</span>
+					<span class="class_name">ic-storage-nas-offline</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-storage-object-storage"></i>
+					<span class="ico_name">Object Storage</span>
+					<span class="class_name">ic-storage-object-storage</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-storage-backup"></i>
+					<span class="ico_name">Backup</span>
+					<span class="class_name">ic-storage-backup</span>
+				</li>
+				<li class="item_ico title_item">
+					<i class="service_icon ic-database"></i>
+					<span class="ico_name">Database</span>
+					<span class="class_name">ic-database</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-database-rds-for-mysql"></i>
+					<span class="ico_name">RDS for MySQL</span>
+					<span class="class_name">ic-database-rds-for-mysql</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-database-ms-sql-instance"></i>
+					<span class="ico_name">Ms-sql instance</span>
+					<span class="class_name">ic-database-ms-sql-instance</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-database-mysql-instance"></i>
+					<span class="ico_name">Mssql instance</span>
+					<span class="class_name">ic-database-mysql-instance</span>
+				</li>
+				<li class="item_ico title_item">
+					<i class="service_icon ic-analytics"></i>
+					<span class="ico_name">Analytics</span>
+					<span class="class_name">ic-analytics</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-analytics-app-analytics"></i>
+					<span class="ico_name">App Analytics</span>
+					<span class="class_name">ic-analytics-app-analytics</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-analytics-log-crash-search"></i>
+					<span class="ico_name">Log &amp; Crash Search</span>
+					<span class="class_name">ic-analytics-log-crash-search</span>
+				</li>
+				<li class="item_ico title_item">
+					<i class="service_icon ic-game"></i>
+					<span class="ico_name">Game</span>
+					<span class="class_name">ic-game</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-game-gamebase"></i>
+					<span class="ico_name">Gamebase</span>
+					<span class="class_name">ic-game-gamebase</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-game-leaderboard"></i>
+					<span class="ico_name">Leaderboard</span>
+					<span class="class_name">ic-game-leaderboard</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-game-launching"></i>
+					<span class="ico_name">Launching</span>
+					<span class="class_name">ic-game-launching</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-game-smart-downloader"></i>
+					<span class="ico_name">Smart Downloader</span>
+					<span class="class_name">ic-game-smart-downloader</span>
+				</li>
+				<li class="item_ico title_item">
+					<i class="service_icon ic-security"></i>
+					<span class="ico_name">Security</span>
+					<span class="class_name">ic-security</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-security-appguard"></i>
+					<span class="ico_name">AppGuard</span>
+					<span class="class_name">ic-security-appguard</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-security-security-check"></i>
+					<span class="ico_name">Security Check</span>
+					<span class="class_name">ic-security-security-check</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-security-security-monitoring"></i>
+					<span class="ico_name">Security Monitoring</span>
+					<span class="class_name">ic-security-security-monitoring</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-security-mal-url-detector"></i>
+					<span class="ico_name">Mal-URL Detector</span>
+					<span class="class_name">ic-security-mal-url-detector</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-security-captcha"></i>
+					<span class="ico_name">CAPTCHA</span>
+					<span class="class_name">ic-security-captcha</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-security-otp"></i>
+					<span class="ico_name">OTP</span>
+					<span class="class_name">ic-security-otp</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-security-dbsafer"></i>
+					<span class="ico_name">DBSafer</span>
+					<span class="class_name">ic-security-dbsafer</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-security-web-firewall"></i>
+					<span class="ico_name">Web Firewall</span>
+					<span class="class_name">ic-security-web-firewall</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-security-vaccine"></i>
+					<span class="ico_name">Vaccine</span>
+					<span class="class_name">ic-security-vaccine</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-security-datacrypto"></i>
+					<span class="ico_name">Datacrypto</span>
+					<span class="class_name">ic-security-datacrypto</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-security-network-acl"></i>
+					<span class="ico_name">Network Acl</span>
+					<span class="class_name">ic-security-network-acl</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-security-ssl-vpn"></i>
+					<span class="ico_name">Ssl-vpn</span>
+					<span class="class_name">ic-security-ssl-vpn</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-security-basic-security"></i>
+					<span class="ico_name">Basic Security</span>
+					<span class="class_name">ic-security-basic-security</span>
+				</li>
+				<li class="item_ico title_item">
+					<i class="service_icon ic-content-delivery"></i>
+					<span class="ico_name">Content Delivery</span>
+					<span class="class_name">ic-content-delivery</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-content-delivery-cdn"></i>
+					<span class="ico_name">CDN</span>
+					<span class="class_name">ic-content-delivery-cdn</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-content-delivery-image"></i>
+					<span class="ico_name">Image</span>
+					<span class="class_name">ic-content-delivery-image</span>
+				</li>
+				<li class="item_ico title_item">
+					<i class="service_icon ic-mobile-service"></i>
+					<span class="ico_name">Mobile Service</span>
+					<span class="class_name">ic-mobile-service</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-mobile-service-iap"></i>
+					<span class="ico_name">IAP</span>
+					<span class="class_name">ic-mobile-service-iap</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-mobile-service-mobile-device-info"></i>
+					<span class="ico_name">Mobile Device Info</span>
+					<span class="class_name">ic-mobile-service-mobile-device-info</span>
+				</li>
+				<li class="item_ico title_item">
+					<i class="service_icon ic-notification"></i>
+					<span class="ico_name">Notification</span>
+					<span class="class_name">ic-notification</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-notification-push"></i>
+					<span class="ico_name">Push</span>
+					<span class="class_name">ic-notification-push</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-notification-sms"></i>
+					<span class="ico_name">SMS</span>
+					<span class="class_name">ic-notification-sms</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-notification-email"></i>
+					<span class="ico_name">Email</span>
+					<span class="class_name">ic-notification-email</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-notification-kakaotalk-bizmessage"></i>
+					<span class="ico_name">KakaoTalk Bizmessage</span>
+					<span class="class_name">ic-notification-kakaotalk-bizmessage</span>
+				</li>
+				<li class="item_ico title_item">
+					<i class="service_icon ic-application-service"></i>
+					<span class="ico_name">Application Service</span>
+					<span class="class_name">ic-application-service</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-application-service-maps"></i>
+					<span class="ico_name">Maps</span>
+					<span class="class_name">ic-application-service-maps</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-application-service-role"></i>
+					<span class="ico_name">ROLE</span>
+					<span class="class_name">ic-application-service-role</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-application-service-api-gateway"></i>
+					<span class="ico_name">API Gateway</span>
+					<span class="class_name">ic-application-service-api-gateway</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-application-service-rtcs"></i>
+					<span class="ico_name">RTCS</span>
+					<span class="class_name">ic-application-service-rtcs</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-application-service-cs-bbs"></i>
+					<span class="ico_name">CS &amp; BBS</span>
+					<span class="class_name">ic-application-service-cs-bbs</span>
+				</li>
+				<li class="item_ico title_item">
+					<i class="service_icon ic-search"></i>
+					<span class="ico_name">Search</span>
+					<span class="class_name">ic-search</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-search-cloud-search"></i>
+					<span class="ico_name">Cloud Search</span>
+					<span class="class_name">ic-search-cloud-search</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-search-autocomplete"></i>
+					<span class="ico_name">Autocomplete</span>
+					<span class="class_name">ic-search-autocomplete</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-search-corporation-search"></i>
+					<span class="ico_name">Corporation Search</span>
+					<span class="class_name">ic-search-corporation-search</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-search-address-search"></i>
+					<span class="ico_name">Address Search</span>
+					<span class="class_name">ic-search-address-search</span>
+				</li>
+				<li class="item_ico title_item">
+					<i class="service_icon ic-dev-tools"></i>
+					<span class="ico_name">Dev Tool</span>
+					<span class="class_name">ic-dev-tools</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-dev-tools-deploy"></i>
+					<span class="ico_name">Deploy</span>
+					<span class="class_name">ic-dev-tools-deploy</span>
+				</li>
+				<li class="item_ico title_item">
+					<i class="service_icon ic-management"></i>
+					<span class="ico_name">Management</span>
+					<span class="class_name">ic-management</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-management-managed"></i>
+					<span class="ico_name">Managed</span>
+					<span class="class_name">ic-management-managed</span>
+				</li>
+				<li class="item_ico title_item">
+					<i class="service_icon ic-dooray"></i>
+					<span class="ico_name">Dooray!</span>
+					<span class="class_name">ic-dooray</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-dooray-project"></i>
+					<span class="ico_name">Project</span>
+					<span class="class_name">ic-dooray-project</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-dooray-messenger"></i>
+					<span class="ico_name">Messenger</span>
+					<span class="class_name">ic-dooray-messenger</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-dooray-mail"></i>
+					<span class="ico_name">Mail</span>
+					<span class="class_name">ic-dooray-mail</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-dooray-calendar"></i>
+					<span class="ico_name">Calendar</span>
+					<span class="class_name">ic-dooray-calendar</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-dooray-drive"></i>
+					<span class="ico_name">Drive</span>
+					<span class="class_name">ic-dooray-drive</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-dooray-contacts"></i>
+					<span class="ico_name">Contacts</span>
+					<span class="class_name">ic-dooray-contacts</span>
+				</li>
+				<li class="item_ico title_item">
+					<i class="service_icon ic-erp"></i>
+					<span class="ico_name">ERP</span>
+					<span class="class_name">ic-erp</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-erp-communication-board"></i>
+					<span class="ico_name">Communication Board</span>
+					<span class="class_name">ic-erp-communication-board</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-erp-workflow"></i>
+					<span class="ico_name">Workflow</span>
+					<span class="class_name">ic-erp-workflow</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-erp-human-resources"></i>
+					<span class="ico_name">Human Resources</span>
+					<span class="class_name">ic-erp-human-resources</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-erp-finance"></i>
+					<span class="ico_name">Finance</span>
+					<span class="class_name">ic-erp-finance</span>
+				</li>
+				<li class="item_ico title_item">
+					<i class="service_icon ic-bill"></i>
+					<span class="ico_name">Bill</span>
+					<span class="class_name">ic-bill</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-bill-bill-e-tax"></i>
+					<span class="ico_name">Bill (e-Tax)</span>
+					<span class="class_name">ic-bill-bill-e-tax</span>
+				</li>
+				<li class="item_ico title_item">
+					<i class="service_icon ic-contact-center"></i>
+					<span class="ico_name">Contact Center</span>
+					<span class="class_name">ic-contact-center</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-contact-center-omni-contact"></i>
+					<span class="ico_name">Omni Contact</span>
+					<span class="class_name">ic-contact-center-omni-contact</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-contact-center-mobile-contact"></i>
+					<span class="ico_name">Mobile Contact</span>
+					<span class="class_name">ic-contact-center-mobile-contact</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-contact-center-online-contact"></i>
+					<span class="ico_name">Online Contact</span>
+					<span class="class_name">ic-contact-center-online-contact</span>
+				</li>
+				<li class="item_ico title_item">
+					<i class="service_icon ic-idc"></i>
+					<span class="ico_name">IDC</span>
+					<span class="class_name">ic-idc</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-idc-tcc"></i>
+					<span class="ico_name">TCC</span>
+					<span class="class_name">ic-idc-tcc</span>
+				</li>
+				<li class="item_ico title_item">
+					<i class="service_icon ic-cloudtrail"></i>
+					<span class="ico_name">CloudTrail</span>
+					<span class="class_name">ic-cloudtrail</span>
+				</li>
+				<li class="item_ico service_link">
+					<i class="service_icon ic-cloudtrail-cloudtrail"></i>
+					<span class="ico_name">CloudTrail-CloudTrail</span>
+					<span class="class_name">ic-cloudtrail-cloudtrail</span>
+				</li>
+				</ul>
+			</div>
+			<h2 class="guide_title">서비스 LNB 아이콘</h2>
+			<ul class="txt_guide">
+			<li>서비스 LNB에서 쓰이는 서비스 아이콘</li>
+			</ul>
+			<div class="service_content service_snb_wrap">
+				<ul class="lst_ico service_group">
+				<li class="item_ico link_category">
+					<i class="service_icon icon-ic-m-compute"></i>
+					<span class="ico_name">Compute</span>
+					<span class="class_name">icon-ic-m-compute</span>
+				</li>
+				<li class="item_ico link_category">
+					<i class="service_icon icon-ic-m-network"></i>
+					<span class="ico_name">Network</span>
+					<span class="class_name">icon-ic-m-network</span>
+				</li>
+				<li class="item_ico link_category">
+					<i class="service_icon icon-ic-m-storage"></i>
+					<span class="ico_name">Storage</span>
+					<span class="class_name">icon-ic-m-storage</span>
+				</li>
+				<li class="item_ico link_category">
+					<i class="service_icon icon-ic-m-database"></i>
+					<span class="ico_name">Database</span>
+					<span class="class_name">icon-ic-m-database</span>
+				</li>
+				<li class="item_ico link_category">
+					<i class="service_icon icon-ic-m-analytics"></i>
+					<span class="ico_name">Analytics</span>
+					<span class="class_name">icon-ic-m-analytics</span>
+				</li>
+				<li class="item_ico link_category">
+					<i class="service_icon icon-ic-m-game"></i>
+					<span class="ico_name">Game</span>
+					<span class="class_name">icon-ic-m-game</span>
+				</li>
+				<li class="item_ico link_category">
+					<i class="service_icon icon-ic-m-security"></i>
+					<span class="ico_name">Security</span>
+					<span class="class_name">icon-ic-m-security</span>
+				</li>
+				<li class="item_ico link_category">
+					<i class="service_icon icon-ic-m-content-delivery"></i>
+					<span class="ico_name">Content Delivery</span>
+					<span class="class_name">icon-ic-m-content-delivery</span>
+				</li>
+				<li class="item_ico link_category">
+					<i class="service_icon icon-ic-m-mobile-service"></i>
+					<span class="ico_name">Mobile Service</span>
+					<span class="class_name">icon-ic-m-mobile-service</span>
+				</li>
+				<li class="item_ico link_category">
+					<i class="service_icon icon-ic-m-notification"></i>
+					<span class="ico_name">Notification</span>
+					<span class="class_name">icon-ic-m-notification</span>
+				</li>
+				<li class="item_ico link_category">
+					<i class="service_icon icon-ic-m-application-service"></i>
+					<span class="ico_name">Application Service</span>
+					<span class="class_name">icon-ic-m-application-service</span>
+				</li>
+				<li class="item_ico link_category">
+					<i class="service_icon icon-ic-m-search"></i>
+					<span class="ico_name">Search</span>
+					<span class="class_name">icon-ic-m-search</span>
+				</li>
+				<li class="item_ico link_category">
+					<i class="service_icon icon-ic-m-dev-tools"></i>
+					<span class="ico_name">Dev Tool</span>
+					<span class="class_name">icon-ic-m-dev-tools</span>
+				</li>
+				<li class="item_ico link_category">
+					<i class="service_icon icon-ic-m-management"></i>
+					<span class="ico_name">Management</span>
+					<span class="class_name">icon-ic-m-management</span>
+				</li>
+				<li class="item_ico link_category">
+					<i class="service_icon icon-ic-m-dooray"></i>
+					<span class="ico_name">Dooray!</span>
+					<span class="class_name">icon-ic-m-dooray</span>
+				</li>
+				<li class="item_ico link_category">
+					<i class="service_icon icon-ic-m-erp"></i>
+					<span class="ico_name">ERP</span>
+					<span class="class_name">icon-ic-m-erp</span>
+				</li>
+				<li class="item_ico link_category">
+					<i class="service_icon icon-ic-m-bill"></i>
+					<span class="ico_name">Bill</span>
+					<span class="class_name">icon-ic-m-bill</span>
+				</li>
+				<li class="item_ico link_category">
+					<i class="service_icon icon-ic-m-contact-center"></i>
+					<span class="ico_name">Contact Center</span>
+					<span class="class_name">icon-ic-m-contact-center</span>
+				</li>
+				<li class="item_ico link_category">
+					<i class="service_icon icon-ic-m-idc"></i>
+					<span class="ico_name">IDC</span>
+					<span class="class_name">icon-ic-m-idc</span>
+				</li>
+				<li class="item_ico link_category">
+					<i class="service_icon icon-ic-m-cloudtrail"></i>
+					<span class="ico_name">CloudTrail</span>
+					<span class="class_name">icon-ic-m-cloudtrail</span>
+				</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+		<div class="has_snb_container">
+			<div class="content">
+				<h2 class="guide_title">SNB</h2>
+				<h3 class="guide_title">SNB 있는 페이지 공통</h3>
+				<ul class="txt_guide">
+				<li>container에 has_snb_container 클래스 추가 필수</li>
+				</ul>
+				<h3 class="guide_title">서비스 SNB</h3>
+				<ul class="txt_guide">
+				<li>토글기능 유</li>
+				<li>페이지 스크롤에 상관없이 고정 위치</li>
+				<li>snb_wrap에 is_fixed 클래스 없음</li>
+				</ul>
+				<h3 class="guide_title">고객사례, 고객센터  SNB</h3>
+				<ul class="txt_guide">
+				<li>토글기능 무</li>
+				<li>페이지 스크롤에 따라 상하로 움직임</li>
+				<li>snb_wrap에 is_fixed 클래스 적용 필요</li>
+				</ul>
+				<h2 class="guide_title">제목</h2>
+				<h3 class="guide_title">고객사례, 고객센터 제목</h3>
+				<div class="title_wrap">
+					<div class="title_area">
+						<h2 class="tit_txt">Instance</h2>
+					</div>
+				</div>
+				
+				<h3 class="guide_title">서비스 상세 제목</h3>
+				<ul class="txt_guide">
+				<li>BETA, ALPHA 라벨 추가 적용 가능</li>
+				</ul>
+				<div class="title_wrap">
+					<div class="title_area">
+						<i class="service_icon icon-ic-compute-instance"></i>
+						<h2 class="tit_txt">Instance</h2>
+					</div>
+				</div>
+				<div class="title_wrap">
+					<div class="title_area">
+						<i class="service_icon icon-ic-compute-instance"></i>
+						<h2 class="tit_txt">Instance</h2>
+						<em class="state_badge is_beta">BETA</em><!-- [D]BETA 라벨 적용 필요시 적용 -->
+					</div>
+				</div>
+				<div class="title_wrap">
+					<div class="title_area">
+						<i class="service_icon icon-ic-compute-instance"></i>
+						<h2 class="tit_txt">Instance</h2>
+						<em class="state_badge is_alpha">ALPHA</em><!-- [D]ALPHA 라벨 적용 필요시 적용 -->
+					</div>
+				</div>
+				<h3 class="guide_title">타이틀 아이콘</h3>
+				<ul class="txt_guide">
+				<li>서비스 상세 페이지에서만 쓰이는 제목 아이콘</li>
+				</ul>
+				<ul class="lst_ico service_detail_content">
+				<li class="item_ico">
+					<i class="service_icon icon-ic-compute-instance"></i>
+					<span class="class_name">icon-ic-compute-instance</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-compute-image"></i>
+					<span class="class_name">icon-ic-compute-image</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-compute-auto-scale"></i>
+					<span class="class_name">icon-ic-compute-auto-scale</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-compute-monitoring"></i>
+					<span class="class_name">icon-ic-compute-monitoring</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-compute-monitoring-v2"></i>
+					<span class="class_name">icon-ic-compute-monitoring-v2</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-database-rds-for-mysql"></i>
+					<span class="class_name">icon-ic-database-rds-for-mysql</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-database-ms-sql-instance"></i>
+					<span class="class_name">icon-ic-database-ms-sql-instance</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-database-mysql-instance"></i>
+					<span class="class_name">icon-ic-database-mysql-instance</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-storage-block-storage"></i>
+					<span class="class_name">icon-ic-storage-block-storage</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-storage-nas-offline"></i>
+					<span class="class_name">icon-ic-storage-nas-offline</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-storage-object-storage"></i>
+					<span class="class_name">icon-ic-storage-object-storage</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-storage-backup"></i>
+					<span class="class_name">icon-ic-storage-backup</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-network-vpc"></i>
+					<span class="class_name">icon-ic-network-vpc</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-network-load-balancer"></i>
+					<span class="class_name">icon-ic-network-load-balancer</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-network-ipsec-vpn"></i>
+					<span class="class_name">icon-ic-network-ipsec-vpn</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-content-delivery-cdn"></i>
+					<span class="class_name">icon-ic-content-delivery-cdn</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-content-delivery-image"></i>
+					<span class="class_name">icon-ic-content-delivery-image</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-management-managed"></i>
+					<span class="class_name">icon-ic-management-managed</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-game-gamebase"></i>
+					<span class="class_name">icon-ic-game-gamebase</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-game-leaderboard"></i>
+					<span class="class_name">icon-ic-game-leaderboard</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-game-launching"></i>
+					<span class="class_name">icon-ic-game-launching</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-game-smart-downloader"></i>
+					<span class="class_name">icon-ic-game-smart-downloader</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-mobile-service-iap"></i>
+					<span class="class_name">icon-ic-mobile-service-iap</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-mobile-service-mobile-device-info"></i>
+					<span class="class_name">icon-ic-mobile-service-mobile-device-info</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-analytics-app-analytics"></i>
+					<span class="class_name">icon-ic-analytics-app-analytics</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-analytics-log-crash-search"></i>
+					<span class="class_name">icon-ic-analytics-log-crash-search</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-security-appguard"></i>
+					<span class="class_name">icon-ic-security-appguard</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-security-security-check"></i>
+					<span class="class_name">icon-ic-security-security-check</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-security-security-monitoring"></i>
+					<span class="class_name">icon-ic-security-security-monitoring</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-security-mal-url-detector"></i>
+					<span class="class_name">icon-ic-security-mal-url-detector</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-security-captcha"></i>
+					<span class="class_name">icon-ic-security-captcha</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-security-otp"></i>
+					<span class="class_name">icon-ic-security-otp</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-security-dbsafer"></i>
+					<span class="class_name">icon-ic-security-dbsafer</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-security-web-firewall"></i>
+					<span class="class_name">icon-ic-security-web-firewall</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-security-vaccine"></i>
+					<span class="class_name">icon-ic-security-vaccine</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-security-datacrypto"></i>
+					<span class="class_name">icon-ic-security-datacrypto</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-security-network-acl"></i>
+					<span class="class_name">icon-ic-security-network-acl</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-security-ssl-vpn"></i>
+					<span class="class_name">icon-ic-security-ssl-vpn</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-security-basic-security"></i>
+					<span class="class_name">icon-ic-security-basic-security</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-notification-push"></i>
+					<span class="class_name">icon-ic-notification-push</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-notification-sms"></i>
+					<span class="class_name">icon-ic-notification-sms</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-notification-email"></i>
+					<span class="class_name">icon-ic-notification-email</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-notification-kakaotalk-bizmessage"></i>
+					<span class="class_name">icon-ic-notification-kakaotalk-bizmessage</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-application-service-maps"></i>
+					<span class="class_name">icon-ic-application-service-maps</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-application-service-role"></i>
+					<span class="class_name">icon-ic-application-service-role</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-application-service-api-gateway"></i>
+					<span class="class_name">icon-ic-application-service-api-gateway</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-application-service-rtcs"></i>
+					<span class="class_name">icon-ic-application-service-rtcs</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-application-service-cs-bbs"></i>
+					<span class="class_name">icon-ic-application-service-cs-bbs</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-search-cloud-search"></i>
+					<span class="class_name">icon-ic-search-cloud-search</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-search-autocomplete"></i>
+					<span class="class_name">icon-ic-search-autocomplete</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-search-corporation-search"></i>
+					<span class="class_name">icon-ic-search-corporation-search</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-search-address-search"></i>
+					<span class="class_name">icon-ic-search-address-search</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-dev-tools-deploy"></i>
+					<span class="class_name">icon-ic-dev-tools-deploy</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-erp-communication-board"></i>
+					<span class="class_name">icon-ic-erp-communication-board</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-erp-workflow"></i>
+					<span class="class_name">icon-ic-erp-workflow</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-erp-human-resources"></i>
+					<span class="class_name">icon-ic-erp-human-resources</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-erp-finance"></i>
+					<span class="class_name">icon-ic-erp-finance</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-dooray-project"></i>
+					<span class="class_name">icon-ic-dooray-project</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-dooray-messenger"></i>
+					<span class="class_name">icon-ic-dooray-messenger</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-dooray-mail"></i>
+					<span class="class_name">icon-ic-dooray-mail</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-dooray-calendar"></i>
+					<span class="class_name">icon-ic-dooray-calendar</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-dooray-drive"></i>
+					<span class="class_name">icon-ic-dooray-drive</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-dooray-contacts"></i>
+					<span class="class_name">icon-ic-dooray-contacts</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-contact-center-omni-contact"></i>
+					<span class="class_name">icon-ic-contact-center-omni-contact</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-contact-center-mobile-contact"></i>
+					<span class="class_name">icon-ic-contact-center-mobile-contact</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-contact-center-online-contact"></i>
+					<span class="class_name">icon-ic-contact-center-online-contact</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-bill-bill-e-tax"></i>
+					<span class="class_name">icon-ic-bill-bill-e-tax</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-idc-tcc"></i>
+					<span class="class_name">icon-ic-idc-tcc</span>
+				</li>
+				<li class="item_ico">
+					<i class="service_icon icon-ic-cloudtrail-cloudtrail"></i>
+					<span class="class_name">icon-ic-cloudtrail-cloudtrail</span>
+				</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Javascript Area -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script></script>
+<!-- 마크업 확인용입니다. -->
+<style>
+.case_view{display:inline-block;position:fixed;bottom:0;left:0;z-index:1000;width:auto;padding:5px;background:#000;opacity:0.7}
+.case_view .btn{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+</style>
+<div class="case_view">
+	<a href="#" class="btn" onclick="$('btn').toggleClass('is_show');return false;">샘플</a>
+</div>
+<script src="js/case_view.js"></script>
+<!-- //마크업 확인용입니다. -->
+</body>
+</html>

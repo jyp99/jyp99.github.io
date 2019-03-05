@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>error :: Payco Place Shop</title>
+<link rel="stylesheet" href="css/solution.css">
+<style type="text/css">
+html,body,.wrap{height:100%;background:#eee}
+.error .wrap{min-width:1000px;min-height:0;display:flex}
+.content{margin:0 auto;height:100%;font-size:0}
+.error_area{position:absolute;left:50%;top:260px;margin-left:-200px;width:400px;text-align:center}
+.error_tit{margin-bottom:10px;font-size:26px;color:#333;font-weight:normal}
+.error_txt{font-size:14px;line-height:22px;color:#999;}
+.rights_txt{margin-top:46px;font-size:11px;color:#999}
+.ico_error{overflow:hidden;display:block;margin:0 auto 40px;width:89px;height:72px;background:url(img/ico_error.png) no-repeat;line-height:9999px}
+</style>
+</head>
+<body class="error">
+
+<div class="wrap">
+	<!-- 공통 에러 템플릿 -->
+	<div class="error_area" style="display:none">
+		<h1 class="error_tit"><span class="ico_error"></span>페이지를 표시할 수 없습니다.</h1>
+		<p class="error_txt">페이지의 주소가 잘못 입력되었거나,<br>변경 혹은 삭제되어 페이지를 표시할 수 없습니다.<br>입력하신 주소가 정확한지 다시 한 번 확인해 주시기 바랍니다.</p>
+		<p class="rights_txt">Copyright &copy; NHN Entertainment Corp. All Rights Reserved.</p>
+	</div>
+	<!-- [D] 페이지 접속 지연 -->
+	<div class="error_area" style="display:none">
+		<h1 class="error_tit"><span class="ico_error"></span>페이지 접속이 지연되고 있습니다.</h1>
+		<p class="error_txt">일시적인 문제로 요청하신 페이지의 접속이 지연되고 있습니다.<br>서비스 이용에 불편을 드려 대단히 죄송합니다.</p>
+		<p class="rights_txt">Copyright &copy; NHN Entertainment Corp. All Rights Reserved.</p>
+	</div>
+	<!-- [D] 서비스 점검 중 -->
+	<div class="error_area">
+		<h1 class="error_tit"><span class="ico_error"></span>현재 서비스 임시 점검 중입니다.</h1>
+		<p class="error_txt">서비스 이용에 불편을 드려 대단히 죄송합니다.<br>자세한 사항은 앱 내 공지사항을 참고해 주세요.</p>
+		<p class="rights_txt">Copyright &copy; NHN Entertainment Corp. All Rights Reserved.</p>
+	</div>
+</div>
+
+</body>
+</html>

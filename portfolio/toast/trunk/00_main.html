@@ -1,0 +1,1655 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="all">
+<title>토스트(TOAST)</title>
+
+<meta name="description" content="NHN 엔터테인먼트에서 제공하는 토스트 클라우드 서비스. 오픈스택 기반의 클라우드 인프라, 게임솔루션, 보안, 문자/이메일/알림톡, 협업도구 Dooray, ERP 제공">
+<meta name="keywords" content="토스트, 토스트 클라우드, 클라우드 서비스, 토스트 닷컴, 클라우드, NHN엔터테인먼트, NHN엔터, NHN Entertainment, NHN Ent, TOAST, TOAST Cloud, TOAST CAM, TOAST PC, TOAST Analytics, toast, 토스트캠, 토스트피씨,토스트애널리틱스">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="토스트(TOAST)">
+<meta property="og:description" content="NHN 엔터테인먼트에서 제공하는 토스트 클라우드 서비스. 오픈스택 기반의 클라우드 인프라, 게임솔루션, 보안, 문자/이메일/알림톡, 협업도구 Dooray, ERP 제공">
+<meta property="og:keywords" content="토스트, 토스트 클라우드, 클라우드 서비스, 토스트 닷컴, 클라우드, NHN엔터테인먼트, NHN엔터, NHN Entertainment, NHN Ent, TOAST, TOAST Cloud, TOAST CAM, TOAST PC, TOAST Analytics, toast, 토스트캠, 토스트피씨,토스트애널리틱스">
+<meta property="og:image" content="http://images.toast.com/toast/com/web/common/toast.com.jpg">
+<meta property="og:image:secure_url" content="http://images.toast.com/toast/com/web/common/toast.com.jpg">
+<meta property="og:url" content="https://toast.com">
+<link rel="shortcut icon" href="https://toast.com/resources/img/favicons/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" sizes="180x180" href="/resources/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/resources/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/resources/img/favicons/favicon-16x16.png">
+<link rel="manifest" href="/resources/img/favicons/manifest.json">
+<link rel="mask-icon" href="/resources/img/favicons/safari-pinned-tab.svg">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="css/gnb.css">
+<link rel="stylesheet" type="text/css" href="css/toast.css">
+<link rel="stylesheet" type="text/css" href="css/gnb_mobile.css">
+<link rel="stylesheet" type="text/css" href="css/toast_mobile.css">
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul class="skip">
+<li><a href="#header" onclick="document.getElementById('header').tabIndex=-1;document.getElementById('header').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+
+<div class="wrap_outer">
+	<!--[D] noti_browser -->
+	<?php include 'inc/noti_browser.html';?>
+	<!--//[D] noti_browser -->
+	<div class="wrap">
+	
+		<!--[D] HEADER -->
+		<?php include 'inc/header.html';?>
+		<!--//[D] HEADER -->
+		<div id="container" class="container">
+			<!-- [D] CONTENTS -->
+			<main id="content" class="content">
+				<!-- [D] 메인 배너 슬라이드 -->
+				<div id="myCarousel" class="main_banner carousel slide" data-ride="carousel">
+					<ol class="carousel-indicators">
+					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					<li data-target="#myCarousel" data-slide-to="1"></li>
+					<li data-target="#myCarousel" data-slide-to="2"></li>
+					<li data-target="#myCarousel" data-slide-to="3"></li>
+					</ol>
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<div class="carousel-caption">
+								<em class="title_txt">TOAST 오픈 기념 크레딧 <br class="is_m_show">20만 원 지급!</em>
+								<p class="sub_txt">TOAST에 신규 회원으로 가입하시는 모든 고객께 TOAST 서비스에 사용할 수 있는 크레딧을 드립니다.</p>
+								<a href="#" class="btn_detail_view">자세히 보기</a>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<div class="carousel-caption">
+								<em class="title_txt">자사 서비스 경험 노하우가 반영된 비즈니스 플랫폼!</em>
+								<p class="sub_txt">"TOAST"는 기업에서 필요한 솔루션을 제공해 드리고 있습니다.</p>
+								<a href="#" class="btn_detail_view">자세히 보기</a>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<div class="carousel-caption">
+								<em class="title_txt">게임 서비스 경험을 토대로 개발된 게임 특화 플랫폼!</em>
+								<p class="sub_txt">게임 통합 SDK, 인증, 결제, 보안, 고객 운영 지원, 글로벌 서비스 지원</p>
+								<a href="#" class="btn_detail_view">자세히 보기</a>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<div class="carousel-caption">
+								<em class="title_txt">초기 구축 비용 No! 사용한 만큼 과금!</em>
+								<p class="sub_txt">SMS/LMS/MMS/국제 문자, 080 수신 거부 서비스, Kakao Alimtalk, Push/Email</p>
+								<a href="#" class="btn_detail_view">자세히 보기</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //[D] 메인 배너 슬라이드 -->
+				<div class="direction_change_wrap">
+				<section class="sec sec_notice">
+					<div class="sec_inner">
+						<div class="noti_wrap">
+							<div class="noti_group">
+								<h2 class="h_txt">TOAST Meetup!</h2>
+								<ul class="lst_noti">
+								<li class="noti_item">
+									<a href="#" class="link_noti">
+										<span class="noti_tit_wrap">
+											<span class="noti_tit">요즘 잘나가는 프론트엔드 개발환경 만들기(2018): ES6</span>
+										</span>
+										<span class="date_txt">2018. 07. 03</span>
+									</a>
+								</li>
+								<li class="noti_item">
+									<a href="#" class="link_noti">
+										<span class="noti_tit_wrap"><span class="noti_tit">Log&amp;Crash Search의 Network Insight 기능 소개</span></span>
+										<span class="date_txt">2018. 07. 03</span>
+									</a>
+								</li>
+								<li class="noti_item">
+									<a href="#" class="link_noti">
+										<span class="noti_tit_wrap">
+											<span class="noti_tit">앱실행속도 개선을 위한 최적화 가이드 (2)</span>
+										</span>
+										<span class="date_txt">2018. 05. 30</span>
+									</a>
+								</li>
+								<li class="noti_item">
+									<a href="#" class="link_noti">
+										<span class="noti_tit_wrap">
+											<span class="noti_tit">앱실행속도 개선을 위한 최적화 가이드 (1)</span>
+										</span>
+										<span class="date_txt">2018. 05. 30</span>
+									</a>
+								</li>
+								</ul>
+								<a href="#" class="btn_more">더보기</a>
+							</div>
+							<div class="noti_group">
+								<h2 class="h_txt">서비스 공지</h2>
+								<ul class="lst_noti">
+								<li class="noti_item">
+									<a href="#" class="link_noti">
+										<span class="noti_tit_wrap">
+											<em class="category_tag tag_check">점검</em>
+											<span class="noti_tit">네트워크 품질 향상 작업</span>
+										</span>
+										<span class="date_txt">2018. 07. 05</span>
+									</a>
+								</li>
+								<li class="noti_item">
+									<a href="#" class="link_noti">
+										<span class="noti_tit_wrap">
+											<em class="category_tag tag_noti">안내</em>
+											<span class="noti_tit">TOAST Dooray! OBT 1차 종료 및 2차 OBT 시작 안내</span>
+										</span>
+										<span class="date_txt">2018. 07. 02</span>
+									</a>
+								</li>
+								<li class="noti_item">
+									<a href="#" class="link_noti">
+										<span class="noti_tit_wrap">
+											<em class="category_tag tag_new">신규</em>
+											<span class="noti_tit">Vaccine 신규 서비스 안내</span>
+										</span>
+										<span class="date_txt">2018. 06. 26</span>
+									</a>
+								</li>
+								<li class="noti_item">
+									<a href="#" class="link_noti">
+										<span class="noti_tit_wrap">
+											<em class="category_tag tag_error">장애</em>
+											<span class="noti_tit">Console 접속 오류</span>
+										</span>
+										<span class="date_txt">2018. 06. 18</span>
+									</a>
+								</li>
+								</ul>
+								<a href="#" class="btn_more">더보기</a>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="sec sec_service">
+					<div class="sec_inner">
+						<h2 class="h_section">TOAST 서비스</h2>
+						<!-- [D] PC 노출 영역 -->
+						<ul class="nav nav-justified main_nav is_pc_show">
+						<li class="nav-item">
+							<a href="#main_service_tab1" data-toggle="tab" class="nav-link active"><span class="nav_txt">강력하고 안정적인 클라우드 인프라</span></a>
+						</li>
+						<li class="nav-item">
+							<a href="#main_service_tab2" data-toggle="tab" class="nav-link"><span class="nav_txt">게임/모바일/웹 서비스 운영</span></a>
+						</li>
+						<li class="nav-item">
+							<a href="#main_service_tab3" data-toggle="tab" class="nav-link"><span class="nav_txt">효율적인 개발을 위한 다양한 서비스</span></a>
+						</li>
+						<li class="nav-item">
+							<a href="#main_service_tab4" data-toggle="tab" class="nav-link"><span class="nav_txt">기업/조직 운영을 위한 서비스</span></a>
+						</li>
+						</ul>
+						<!-- //[D] PC 노출 영역 -->
+						<div class="tab-content">
+							<div id="main_service_tab1" class="tab-pane fade show active">
+								<h3 class="title_txt is_pc_show">강력하고 안정적인 클라우드 인프라</h3>
+								<h3 class="title_txt is_m_show"><a href="#main_service_collapse1" data-toggle="collapse" class="link_txt">강력하고 안정적인 클라우드 인프라</a></h3>
+								<div id="main_service_collapse1" class="row_wrap collapse" data-parent="#accordion">
+									<div class="col_group">
+										<div class="service_group">
+											<div class="service_title_area">
+												<i class="service_icon ic-compute"></i>
+												<h4 class="service_title is_pc_ibshow">Compute</h4>
+												<h4 class="service_title is_m_show"><a class="link_txt" href="#main_service_collapse1_1" data-toggle="collapse">Compute</a></h4>
+											</div>
+											<ul id="main_service_collapse1_1" class="lst_service collapse" data-parent="#accordion">
+											<li class="service_item is_new"><!-- [D]NEW 라벨 필요한 service_item에 is_new 클래스 추가 -->
+												<a href="/service/compute/instance" class="service_link">
+													<i class="service_icon ic-compute-instance"></i><span class="service_name">Instance</span>
+												</a>
+											</li>
+											<li class="service_item is_update"><!-- [D]UPDATE 라벨 필요한 service_item에 is_update 클래스 추가 -->
+												<a href="/service/compute/image" class="service_link">
+													<i class="service_icon ic-compute-image"></i><span class="service_name">Image</span>
+												</a>
+											</li>
+											<li class="service_item">
+												<a href="/service/compute/auto_scale" class="service_link">
+													<i class="service_icon ic-compute-auto-scale"></i><span class="service_name">Auto Scale</span>
+												</a>
+											</li>
+											<li class="service_item">
+												<a href="/service/compute/auto_scale" class="service_link">
+													<i class="service_icon ic-compute-monitoring"></i><span class="service_name">Monitoring</span>
+												</a>
+											</li>
+											<li class="service_item">
+												<a href="/service/compute/auto_scale" class="service_link">
+													<i class="service_icon ic-compute-monitoring-v2"></i><span class="service_name">Monitoring V2</span>
+												</a>
+											</li>
+											</ul>
+										</div>
+										<div class="service_group">
+											<div class="service_title_area">
+												<i class="service_icon ic-network"></i>
+												<h4 class="service_title is_pc_ibshow">Network</h4>
+												<h4 class="service_title is_m_show"><a class="link_txt" href="#main_service_collapse1_2" data-toggle="collapse">Network</a></h4>
+											</div>
+											<ul id="main_service_collapse1_2" class="lst_service collapse" data-parent="#accordion">
+											<li class="service_item">
+												<a href="linkrvice/network/vpc" class="service_link">
+													<i class="service_icon ic-network-vpc"></i><span class="service_name">VPC</span>
+												</a>
+											</li>
+											<li class="service_item">
+												<a href="/service/network/load_balancer" class="service_link">
+													<i class="service_icon ic-network-load-balancer"></i><span class="service_name">Load Balancer</span>
+												</a>
+											</li>
+											</ul>
+										</div>
+									</div>
+									<div class="col_group">
+										<div class="service_group">
+											<div class="service_title_area">
+												<i class="service_icon ic-database"></i>
+												<h4 class="service_title is_pc_ibshow">Database</h4>
+												<h4 class="service_title is_m_show"><a class="link_txt" href="#main_service_collapse1_3" data-toggle="collapse">Database</a></h4>
+											</div>
+											<ul id="main_service_collapse1_3" class="lst_service collapse" data-parent="#accordion">
+											<li class="service_item">
+												<a href="/service/database/rds_for_mysql" class="service_link">
+													<i class="service_icon ic-database-rds-for-mysql"></i><span class="service_name">RDS for MySQL</span>
+												</a>
+											</li>
+											</ul>
+										</div>
+										<div class="service_group">
+											<div class="service_title_area">
+												<i class="service_icon ic-content-delivery"></i>
+												<h4 class="service_title is_pc_ibshow">Content Delivery</h4>
+												<h4 class="service_title is_m_show"><a class="link_txt" href="#main_service_collapse1_4" data-toggle="collapse">Content Delivery</a></h4>
+											</div>
+											<ul id="main_service_collapse1_4" class="lst_service collapse" data-parent="#accordion">
+											<li class="service_item">
+												<a href="/service/content_delivery/cdn" class="service_link">
+													<i class="service_icon ic-content-delivery-cdn"></i><span class="service_name">CDN</span>
+												</a>
+											</li>
+											<li class="service_item">
+												<a href="/service/content_delivery/image" class="service_link">
+													<i class="service_icon ic-content-delivery-image"></i><span class="service_name">Image</span>
+												</a>
+											</li>
+											</ul>
+										</div>
+									</div>
+									<div class="col_group">
+										<div class="service_group">
+											<div class="service_title_area">
+												<i class="service_icon ic-storage"></i>
+												<h4 class="service_title is_pc_ibshow">Storage</h4>
+												<h4 class="service_title is_m_show"><a class="link_txt" href="#main_service_collapse1_5" data-toggle="collapse">Storage</a></h4>
+											</div>
+											<ul id="main_service_collapse1_5" class="lst_service collapse" data-parent="#accordion">
+											<li class="service_item">
+												<a href="/service/storage/block_storage" class="service_link">
+													<i class="service_icon ic-storage-block-storage"></i><span class="service_name">Block Storage</span>
+												</a>
+											</li>
+											<li class="service_item">
+												<a href="linkrvice/storage/nas" class="service_link">
+													<i class="service_icon ic-storage-nas-offline"></i><span class="service_name">NAS (offline)</span>
+												</a>
+											</li>
+											<li class="service_item">
+												<a href="/service/storage/object_storage" class="service_link">
+													<i class="service_icon ic-storage-object-storage"></i><span class="service_name">Object Storage</span>
+												</a>
+											</li>
+											<li class="service_item">
+												<a href="/service/storage/backup" class="service_link">
+													<i class="service_icon ic-storage-backup"></i><span class="service_name">Backup</span>
+												</a>
+											</li>
+											</ul>
+										</div>
+										<div class="service_group">
+											<div class="service_title_area">
+												<i class="service_icon ic-management"></i>
+												<h4 class="service_title is_pc_ibshow">Management</h4>
+												<h4 class="service_title is_m_show"><a class="link_txt" href="#main_service_collapse1_6" data-toggle="collapse">Management</a></h4>
+											</div>
+											<ul id="main_service_collapse1_6" class="lst_service collapse" data-parent="#accordion">
+											<li class="service_item">
+												<a href="/service/management/managed" class="service_link">
+													<i class="service_icon ic-management-managed"></i><span class="service_name">Managed</span>
+												</a>
+											</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="main_service_tab2" class="tab-pane fade">
+								<h3 class="title_txt is_pc_show">게임/모바일/웹 서비스 운영</h3>
+								<h3 class="title_txt is_m_show"><a href="#main_service_collapse2" data-toggle="collapse" class="link_txt">게임/모바일/웹 서비스 운영</a></h3>
+								<div id="main_service_collapse2" class="row_wrap collapse" data-parent="#accordion">
+									<div class="col_group">
+										<div class="service_group">
+											<div class="service_title_area">
+												<i class="service_icon ic-game"></i>
+												<h4 class="service_title is_pc_ibshow">Game</h4>
+												<h4 class="service_title is_m_show"><a class="link_txt" href="#main_service_collapse2_1" data-toggle="collapse">Game</a></h4>
+											</div>
+											<ul id="main_service_collapse2_1" class="lst_service collapse" data-parent="#accordion">
+											<li class="service_item">
+												<a href="/service/game/gamebase" class="service_link">
+													<i class="service_icon ic-game-gamebase"></i><span class="service_name">Gamebase</span>
+												</a>
+											</li>
+											<li class="service_item">
+												<a href="/service/game/leaderboard" class="service_link">
+													<i class="service_icon ic-game-leaderboard"></i><span class="service_name">Leaderboard</span>
+												</a>
+											</li>
+											<li class="service_item">
+												<a href="/service/game/launching" class="service_link">
+													<i class="service_icon ic-game-launching"></i><span class="service_name">Launching</span>
+												</a>
+											</li>
+											<li class="service_item">
+												<a href="/service/game/smart_downloader" class="service_link">
+													<i class="service_icon ic-game-smart-downloader"></i><span class="service_name">Smart Downloader</span>
+												</a>
+											</li>
+											</ul>
+										</div>
+										<div class="service_group">
+											<div class="service_title_area">
+												<i class="service_icon ic-security"></i>
+												<h4 class="service_title is_pc_ibshow">Security</h4>
+												<h4 class="service_title is_m_show"><a class="link_txt" href="#main_service_collapse2_2" data-toggle="collapse">Security</a></h4>
+											</div>
+											<ul id="main_service_collapse2_2" class="lst_service collapse" data-parent="#accordion">
+											<li class="service_item">
+												<a href="/service/security/appguard" class="service_link">
+													<i class="service_icon ic-security-appguard"></i><span class="service_name">AppGuard</span>
+												</a>
+											</li>
+											<li class="service_item">
+												<a href="/service/security/security_check" class="service_link">
+													<i class="service_icon ic-security-security-check"></i><span class="service_name">Security Check</span>
+												</a>
+											</li>
+											<li class="service_item">
+												<a href="/service/security/security_monitoring" class="service_link">
+													<i class="service_icon ic-security-security-monitoring"></i><span class="service_name">Security Monitoring</span>
+												</a>
+											</li>
+											<li class="service_item">
+												<a href="/service/security/mal_url_detector" class="service_link">
+													<i class="service_icon ic-security-mal-url-detector"></i><span class="service_name">Mal-URL Detector</span>
+												</a>
+											</li>
+											<li class="service_item">
+												<a href="/service/security/captcha" class="service_link">
+													<i class="service_icon ic-security-captcha"></i><span class="service_name">CAPTCHA</span>
+												</a>
+											</li>
+											<li class="service_item">
+												<a href="/service/security/otp" class="service_link">
+													<i class="service_icon ic-security-otp"></i><span class="service_name">OTP</span>
+												</a>
+											</li>
+											<li class="service_item">
+												<a href="/service/security/dbsafer" class="service_link">
+													<i class="service_icon ic-security-dbsafer"></i><span class="service_name">DBSafer</span>
+												</a>
+											</li>
+											<li class="service_item is_new">
+												<a href="/service/security/web_firewall" class="service_link">
+													<i class="service_icon ic-security-web-firewall"></i><span class="service_name">Web Firewall</span>
+												</a>
+											</li>
+											<li class="service_item is_new">
+												<a href="/service/security/vaccine" class="service_link">
+													<i class="service_icon ic-security-vaccine"></i><span class="service_name">Vaccine</span>
+												</a>
+											</li>
+											</ul>
+										</div>
+	
+	
+									</div>
+											
+									<div class="col_group">
+										<div class="service_group">
+											<div class="service_title_area">
+												<i class="service_icon ic-mobile-service"></i>
+												<h4 class="service_title is_pc_ibshow">Mobile Service</h4>
+												<h4 class="service_title is_m_show"><a class="link_txt" href="#main_service_collapse2_3" data-toggle="collapse">Mobile Service</a></h4>
+											</div>
+											<ul id="main_service_collapse2_3" class="lst_service collapse" data-parent="#accordion">
+											<li class="service_item">
+												<a href="/service/mobile_service/iap" class="service_link">
+													<i class="service_icon ic-mobile-service-iap"></i><span class="service_name">IAP</span>
+												</a>
+											</li>
+											<li class="service_item">
+												<a href="/service/mobile_service/mobile_device_info" class="service_link">
+													<i class="service_icon ic-mobile-service-mobile-device-info"></i><span class="service_name">Mobile Device Info</span>
+												</a>
+											</li>
+											</ul>
+										</div>
+										<div class="service_group">
+											<div class="service_title_area">
+												<i class="service_icon ic-notification"></i>
+												<h4 class="service_title is_pc_ibshow">Notification</h4>
+												<h4 class="service_title is_m_show"><a class="link_txt" href="#main_service_collapse2_4" data-toggle="collapse">Notification</a></h4>
+											</div>
+											<ul id="main_service_collapse2_4" class="lst_service collapse" data-parent="#accordion">
+											<li class="service_item">
+												<a href="/service/notification/push" class="service_link">
+													<i class="service_icon ic-notification-push"></i><span class="service_name">Push</span>
+												</a>
+											</li>
+											<li class="service_item">
+												<a href="/service/notification/sms" class="service_link">
+													<i class="service_icon ic-notification-sms"></i><span class="service_name">SMS</span>
+												</a>
+											</li>
+											<li class="service_item">
+												<a href="/service/notification/email" class="service_link">
+													<i class="service_icon ic-notification-email"></i><span class="service_name">Email</span>
+												</a>
+											</li>
+											<li class="service_item">
+												<a href="/service/notification/alimtalk" class="service_link">
+													<i class="service_icon ic-notification-kakaotalk-bizmessage"></i><span class="service_name">Alimtalk</span>
+												</a>
+											</li>
+											</ul>
+										</div>
+									</div>
+													
+									<div class="col_group">
+										<div class="service_group">
+											<div class="service_title_area">
+												<i class="service_icon ic-analytics"></i>
+												<h4 class="service_title is_pc_ibshow">Analytics</h4>
+												<h4 class="service_title is_m_show"><a class="link_txt" href="#main_service_collapse2_5" data-toggle="collapse">Analytics</a></h4>
+											</div>
+											<ul id="main_service_collapse2_5" class="lst_service collapse" data-parent="#accordion">
+											<li class="service_item">
+												<a href="/service/analytics/app_analytics" class="service_link">
+													<i class="service_icon ic-analytics-app-analytics"></i><span class="service_name">App Analytics</span>
+												</a>
+											</li>
+											<li class="service_item">
+												<a href="/service/analytics/log_crash_search" class="service_link">
+													<i class="service_icon ic-analytics-log-crash-search"></i><span class="service_name">Log &amp; Crash Search</span>
+												</a>
+											</li>
+											</ul>
+										</div>
+									</div>
+											
+								</div>
+							</div>
+							<div id="main_service_tab3" class="tab-pane fade">
+								<h3 class="title_txt is_pc_show">효율적인 개발을 위한 다양한 서비스</h3>
+								<h3 class="title_txt is_m_show"><a href="#main_service_collapse3" data-toggle="collapse" class="link_txt">효율적인 개발을 위한 다양한 서비스</a></h3>
+								<div id="main_service_collapse3" class="row_wrap collapse" data-parent="#accordion">
+									<div class="col_group">
+										<div class="service_group">
+											<div class="service_title_area">
+												<i class="service_icon ic-application-service"></i>
+												<h4 class="service_title is_pc_ibshow">Application Service</h4>
+												<h4 class="service_title is_m_show"><a class="link_txt" href="#main_service_collapse3_1" data-toggle="collapse">Application Service</a></h4>
+											</div>
+											<ul id="main_service_collapse3_1" class="lst_service collapse" data-parent="#accordion">
+												<li class="service_item">
+													<a href="/service/application_service/maps" class="service_link">
+														<i class="service_icon ic-application-service-maps"></i><span class="service_name">Maps</span>
+													</a>
+												</li>
+												<li class="service_item">
+													<a href="/service/application_service/role" class="service_link">
+														<i class="service_icon ic-application-service-role"></i><span class="service_name">ROLE</span>
+													</a>
+												</li>
+												<li class="service_item">
+													<a href="/service/application_service/api_gateway" class="service_link">
+														<i class="service_icon ic-application-service-api-gateway"></i><span class="service_name">API Gateway</span>
+													</a>
+												</li>
+												<li class="service_item">
+													<a href="/service/application_service/rtcs" class="service_link">
+														<i class="service_icon ic-application-service-rtcs"></i><span class="service_name">RTCS</span>
+													</a>
+												</li>
+												<li class="service_item">
+													<a href="/service/application_service/cs_bbs" class="service_link">
+														<i class="service_icon ic-application-service-cs-bbs"></i><span class="service_name">CS &amp; BBS</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="col_group">
+										<div class="service_group">
+											<div class="service_title_area">
+												<i class="service_icon ic-search"></i>
+												<h4 class="service_title is_pc_ibshow">Search</h4>
+												<h4 class="service_title is_m_show"><a class="link_txt" href="#main_service_collapse3_2" data-toggle="collapse">Search</a></h4>
+											</div>
+											<ul id="main_service_collapse3_2" class="lst_service collapse" data-parent="#accordion">
+												<li class="service_item">
+													<a href="/service/search/cloud_search" class="service_link">
+														<i class="service_icon ic-search-cloud-search"></i><span class="service_name">Cloud Search</span>
+													</a>
+												</li>
+												<li class="service_item">
+													<a href="/service/search/autocomplete" class="service_link">
+														<i class="service_icon ic-search-autocomplete"></i><span class="service_name">Autocomplete</span>
+													</a>
+												</li>
+												<li class="service_item">
+													<a href="/service/search/corporation_search" class="service_link">
+														<i class="service_icon ic-search-corporation-search"></i><span class="service_name">Corporation Search</span>
+													</a>
+												</li>
+												<li class="service_item">
+													<a href="/service/search/address_search" class="service_link">
+														<i class="service_icon ic-search-address-search"></i><span class="service_name">Address Search</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="col_group">
+										<div class="service_group">
+											<div class="service_title_area">
+												<i class="service_icon ic-dev-tools"></i>
+												<h4 class="service_title is_pc_ibshow">Dev Tool</h4>
+												<h4 class="service_title is_m_show"><a class="link_txt" href="#main_service_collapse3_3" data-toggle="collapse">Dev Tool</a></h4>
+											</div>
+											<ul id="main_service_collapse3_3" class="lst_service collapse" data-parent="#accordion">
+												<li class="service_item">
+													<a href="/service/dev_tool/deploy" class="service_link">
+														<i class="service_icon ic-dev-tools-deploy"></i><span class="service_name">Deploy</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="main_service_tab4" class="tab-pane fade">
+								<h3 class="title_txt is_pc_show">기업/조직 운영을 위한 서비스</h3>
+								<h3 class="title_txt is_m_show"><a href="#main_service_collapse4" data-toggle="collapse" class="link_txt">기업/조직 운영을 위한 서비스</a></h3>
+								<div id="main_service_collapse4" class="row_wrap collapse" data-parent="#accordion">
+									<div class="col_group">
+										<div class="service_group">
+											<div class="service_title_area">
+												<i class="service_icon ic-erp"></i>
+												<h4 class="service_title is_pc_ibshow">ERP</h4>
+												<h4 class="service_title is_m_show"><a class="link_txt" href="#main_service_collapse4_1" data-toggle="collapse">ERP</a></h4>
+											</div>
+											<ul id="main_service_collapse4_1" class="lst_service collapse" data-parent="#accordion">
+												<li class="service_item">
+													<a href="/service/erp/communication_board" class="service_link">
+														<i class="service_icon ic-erp-communication-board"></i><span class="service_name">Communication Board</span>
+													</a>
+												</li>
+												<li class="service_item">
+													<a href="/service/erp/workflow" class="service_link">
+														<i class="service_icon ic-erp-workflow"></i><span class="service_name">Workflow</span>
+													</a>
+												</li>
+												<li class="service_item">
+													<a href="/service/erp/human_resources" class="service_link">
+														<i class="service_icon ic-erp-human-resources"></i><span class="service_name">Human Resources</span>
+													</a>
+												</li>
+												<li class="service_item">
+													<a href="/service/erp/finance" class="service_link">
+														<i class="service_icon ic-erp-finance"></i><span class="service_name">Finance</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+										<div class="service_group">
+											<div class="service_title_area">
+												<i class="service_icon ic-bill"></i>
+												<h4 class="service_title is_pc_ibshow">Bill</h4>
+												<h4 class="service_title is_m_show"><a class="link_txt" href="#main_service_collapse4_2" data-toggle="collapse">Bill</a></h4>
+											</div>
+											<ul id="main_service_collapse4_2" class="lst_service collapse" data-parent="#accordion">
+												<li class="service_item">
+													<a href="/service/bill/bill" class="service_link">
+														<i class="service_icon ic-bill-bill-e-tax"></i><span class="service_name">Bill (e-Tax)</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="col_group">
+										<div class="service_group">
+											<div class="service_title_area">
+												<i class="service_icon ic-dooray"></i>
+												<h4 class="service_title is_pc_ibshow">Dooray!</h4>
+												<h4 class="service_title is_m_show"><a class="link_txt" href="#main_service_collapse4_3" data-toggle="collapse">Dooray!</a></h4>
+											</div>
+											<ul id="main_service_collapse4_3" class="lst_service collapse" data-parent="#accordion">
+												<li class="service_item">
+													<a href="/service/dooray/project" class="service_link">
+														<i class="service_icon ic-dooray-project"></i><span class="service_name">Project</span>
+													</a>
+												</li>
+												<li class="service_item">
+													<a href="/service/dooray/messenger" class="service_link">
+														<i class="service_icon ic-dooray-messenger"></i><span class="service_name">Messenger</span>
+													</a>
+												</li>
+												<li class="service_item">
+													<a href="/service/dooray/mail" class="service_link">
+														<i class="service_icon ic-dooray-mail"></i><span class="service_name">Mail</span>
+													</a>
+												</li>
+												<li class="service_item">
+													<a href="/service/dooray/calendar" class="service_link">
+														<i class="service_icon ic-dooray-calendar"></i><span class="service_name">Calendar</span>
+													</a>
+												</li>
+												<li class="service_item">
+													<a href="/service/dooray/drive" class="service_link">
+														<i class="service_icon ic-dooray-drive"></i><span class="service_name">Drive</span>
+													</a>
+												</li>
+												<li class="service_item">
+													<a href="/service/dooray/contacts" class="service_link">
+														<i class="service_icon ic-dooray-contacts"></i><span class="service_name">Contacts</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+										<div class="service_group">
+											<div class="service_title_area">
+												<i class="service_icon ic-idc"></i>
+												<h4 class="service_title is_pc_ibshow">IDC</h4>
+												<h4 class="service_title is_m_show"><a class="link_txt" href="#main_service_collapse4_4" data-toggle="collapse">IDC</a></h4>
+											</div>
+											<ul id="main_service_collapse4_4" class="lst_service collapse" data-parent="#accordion">
+												<li class="service_item">
+													<a href="/service/idc/tcc" class="service_link">
+														<i class="service_icon ic-idc-tcc"></i><span class="service_name">TCC</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="col_group">
+										<div class="service_group">
+											<div class="service_title_area">
+												<i class="service_icon ic-contact-center"></i>
+												<h4 class="service_title is_pc_ibshow">Contact Center</h4>
+												<h4 class="service_title is_m_show"><a class="link_txt" href="#main_service_collapse4_5" data-toggle="collapse">Contact Center</a></h4>
+											</div>
+											<ul id="main_service_collapse4_5" class="lst_service collapse" data-parent="#accordion">
+												<li class="service_item">
+													<a href="/service/contact_center/omni_contact" class="service_link">
+														<i class="service_icon ic-contact-center-omni-contact"></i><span class="service_name">Omni Contact</span>
+													</a>
+												</li>
+												<li class="service_item">
+													<a href="/service/contact_center/mobile_contact" class="service_link">
+														<i class="service_icon ic-contact-center-mobile-contact"></i><span class="service_name">Mobile Contact</span>
+													</a>
+												</li>
+												<li class="service_item">
+													<a href="/service/contact_center/online_contact" class="service_link">
+														<i class="service_icon ic-contact-center-online-contact"></i><span class="service_name">Online Contact</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+	
+	
+	
+					</div>
+				</section>
+				</div>
+				<div class="full_banner tcc_banner">
+					<div class="inner">
+						<em class="logo_area"><img src="img/logo_TCC.svg" alt="TCC"></em>
+						<p class="banner_txt">TOAST는 NHN엔터테인먼트의 자체 기술력으로 설계하여 판교에 구축한<br>도심형 인터넷 데이터 센터에서 운영됩니다.</p>
+						<div class="btn_wrap">
+							<a href="#" class="btn_link">자세히 보기</a>
+						</div>
+					</div>
+				</div>
+				<section class="sec customer_sec">
+					<div class="sec_inner">
+						<h2 class="h_section">TOAST 고객사례</h2>
+						<div class="nav_scroll_wrap">
+						<div class="inner">
+						<ul class="nav nav-justified main_nav">
+						<li class="nav-item">
+							<a href="#main_customer_tab1" data-toggle="tab" class="nav-link active"><span class="nav_txt">전체 보기</span></a>
+						</li>
+						<li class="nav-item">
+							<a href="#main_customer_tab2" data-toggle="tab" class="nav-link"><span class="nav_txt">게임</span></a>
+						</li>
+						<li class="nav-item">
+							<a href="#main_customer_tab3" data-toggle="tab" class="nav-link"><span class="nav_txt">웹 서비스</span></a>
+						</li>
+						<li class="nav-item">
+							<a href="#main_customer_tab4" data-toggle="tab" class="nav-link"><span class="nav_txt">커머스</span></a>
+						</li>
+						<li class="nav-item">
+							<a href="#main_customer_tab5" data-toggle="tab" class="nav-link"><span class="nav_txt">공공 및 교육 기관</span></a>
+						</li>
+						</ul>
+						</div>
+						</div>
+						<div class="tab-content">
+							<div id="main_customer_tab1" class="tab-pane fade show active">
+								<h3 class="blind">전체 보기</h3>
+								<div class="row_wrap">
+									<ul class="lst_partner">
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_web_1.png" alt="thinkware" class="is_pc_show">
+										<img src="img/partners/logo_partner_web_1_m.png" alt="thinkware" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_web_kongdoo.png" alt="kongdoo" class="is_pc_show">
+										<img src="img/partners/logo_partner_web_kongdoo_m.png" alt="kongdoo" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_web_13.png" alt="mangoplate" class="is_pc_show">
+										<img src="img/partners/logo_partner_web_13_m.png" alt="mangoplate" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_web_2.png" alt="NHN godo" class="is_pc_show">
+										<img src="img/partners/logo_partner_web_2_m.png" alt="NHN godo" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_web_3.png" alt="comico" class="is_pc_show">
+										<img src="img/partners/logo_partner_web_3_m.png" alt="comico" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_web_4.png" alt="bugs" class="is_pc_show">
+										<img src="img/partners/logo_partner_web_4_m.png" alt="bugs" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_web_5.png" alt="peoplefund" class="is_pc_show">
+										<img src="img/partners/logo_partner_web_5_m.png" alt="peoplefund" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_web_6.png" alt="NHN PAYCO" class="is_pc_show">
+										<img src="img/partners/logo_partner_web_6_m.png" alt="NHN PAYCO" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_web_7.png" alt="hivelab" class="is_pc_show">
+										<img src="img/partners/logo_partner_web_7_m.png" alt="hivelab" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_web_8.png" alt="transcosmos" class="is_pc_show">
+										<img src="img/partners/logo_partner_web_8_m.png" alt="transcosmos" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_web_9.png" alt="groovers" class="is_pc_show">
+										<img src="img/partners/logo_partner_web_9_m.png" alt="groovers" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_web_10.png" alt="crowdy" class="is_pc_show">
+										<img src="img/partners/logo_partner_web_10_m.png" alt="crowdy" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_web_11.png" alt="crowdworks" class="is_pc_show">
+										<img src="img/partners/logo_partner_web_11_m.png" alt="crowdworks" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_web_12.png" alt="SK 매직" class="is_pc_show">
+										<img src="img/partners/logo_partner_web_12_m.png" alt="SK 매직" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_web_theboms.png" alt="더봄에스" class="is_pc_show">
+										<img src="img/partners/logo_partner_web_theboms_m.png" alt="더봄에스" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_web_rehoboth.png" alt="rehoboth" class="is_pc_show">
+										<img src="img/partners/logo_partner_web_rehoboth_m.png" alt="rehoboth" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_web_revivallabs.png" alt="revivallabs" class="is_pc_show">
+										<img src="img/partners/logo_partner_web_revivallabs_m.png" alt="revivallabs" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_web_spirink.png" alt="심야상담소" class="is_pc_show">
+										<img src="img/partners/logo_partner_web_spirink_m.png" alt="심야상담소" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_web_edito.png" alt="edito" class="is_pc_show">
+										<img src="img/partners/logo_partner_web_edito_m.png" alt="edito" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_web_epopcon.png" alt="epopcon" class="is_pc_show">
+										<img src="img/partners/logo_partner_web_epopcon_m.png" alt="epopcon" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_web_intelliquant.png" alt="intelliquant" class="is_pc_show">
+										<img src="img/partners/logo_partner_web_intelliquant_m.png" alt="intelliquant" class="is_m_show">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_web_t-monet.png" alt="t-monet">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_web_goodcen.png" alt="goodcen">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_web_danvistore.png" alt="danvistore">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_web_mediaon.png" alt="mediaon">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_web_yanatrip.png" alt="yanatrip">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_web_april7.png" alt="april7">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_web_catchform.png" alt="catchform">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_web_codestates.png" alt="codestates">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_web_quvitsecurity.png" alt="quvitsecurity">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_web_classting.png" alt="classting">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_commerce_2.png" alt="1300k">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_commerce_6.png" alt="LOHB">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_commerce_7.png" alt="당근마켓">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_commerce_1.png" alt="티몬">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_commerce_3.png" alt="YDEA">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_commerce_4.png" alt="NHN 티켓링크">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_commerce_8.png" alt="BUXI">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_commerce_9.png" alt="callbus">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_commerce_1moment.png" alt="1moment">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_commerce_gearlounge.png" alt="gearlounge">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_commerce_realseereal.png" alt="realseereal">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_commerce_ideastudy.png" alt="ideastudy">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_commerce_inkminkm.png" alt="inkminkm">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_commerce_tasteshop.png" alt="tasteshop">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_commerce_mansole.png" alt="mansole">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_game_4.png" alt="loadcomplete">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_game_1.png" alt="entermate">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_game_signalnco.png" alt="signalnco">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_game_12.png" alt="cyou">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_game_13.png" alt="LONGTU KOREA">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_game_14.png" alt="YJM GAMES">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_game_15.png" alt="WILD STONE">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_game_16.png" alt="EPIC PIER">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_game_2.png" alt="polygon">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_game_3.png" alt="neptune">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_game_5.png" alt="treenod">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_game_6.png" alt="n dream">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_game_7.png" alt="troll games">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_game_8.png" alt="new.f.o">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_game_9.png" alt="sn">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_game_10.png" alt="trinity games">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_game_11.png" alt="moongci">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_game_nextfuturelab.png" alt="nextfuturelab">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_game_nsouls.png" alt="nsouls">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_game_5minlab.png" alt="5minlab">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_game_bluehole.png" alt="bluehole">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_game_aceproject.png" alt="aceproject">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_game_etgames.png" alt="etgames">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_game_mobirix.png" alt="mobirix">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_game_nhn629.png" alt="NHN 629">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_game_nhnblackpick.png" alt="NHN blackpick">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_game_nhnpixelcube.png" alt="NHN pixelcube">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_game_playworks.png" alt="playworks">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_public_2.png" alt="경희대학교">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_public_3.png" alt="단국대학교">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_public_kasi.png" alt="한국천문연구원">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_public_1.png" alt="충남대학교 산학협력단">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_public_edupang.png" alt="edupang">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_public_minischool.png" alt="minischool">
+									</li>
+									</ul>
+								</div>
+							</div>
+							<div id="main_customer_tab2" class="tab-pane fade">
+								<h3 class="blind">게임</h3>
+								<div class="row_wrap">
+									<ul class="lst_partner main_partner">
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_game_4.png" alt="loadcomplete" class="is_pc_show">
+										<img src="img/partners/logo_partner_game_4_m.png" alt="loadcomplete" class="is_m_show">
+										<a href="#" class="btn_detail">자세히 보기</a>
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_game_1.png" alt="entermate" class="is_pc_show">
+										<img src="img/partners/logo_partner_game_1_m.png" alt="entermate" class="is_m_show">
+										<a href="#" class="btn_detail">자세히 보기</a>
+										</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_game_signalnco.png" alt="signal and company" class="is_pc_show">
+										<img src="img/partners/logo_partner_game_signalnco_m.png" alt="signal and company" class="is_m_show">
+										<a href="#" class="btn_detail">자세히 보기</a>
+									</li>
+									</ul>
+									<ul class="lst_partner">
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_game_12.png" alt="cyou" class="is_pc_show">
+										<img src="img/partners/logo_partner_game_12_m.png" alt="cyou" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_game_13.png" alt="LONGTU KOREA" class="is_pc_show">
+										<img src="img/partners/logo_partner_game_13_m.png" alt="LONGTU KOREA" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_game_14.png" alt="YJM GAMES" class="is_pc_show">
+										<img src="img/partners/logo_partner_game_14_m.png" alt="YJM GAMES" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_game_15.png" alt="WILD STONE" class="is_pc_show">
+										<img src="img/partners/logo_partner_game_15_m.png" alt="WILD STONE" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_game_16.png" alt="EPIC PIER" class="is_pc_show">
+										<img src="img/partners/logo_partner_game_16_m.png" alt="EPIC PIER" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_game_2.png" alt="polygon" class="is_pc_show">
+										<img src="img/partners/logo_partner_game_2_m.png" alt="polygon" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_game_3.png" alt="neptune" class="is_pc_show">
+										<img src="img/partners/logo_partner_game_3_m.png" alt="neptune" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_game_5.png" alt="treenod" class="is_pc_show">
+										<img src="img/partners/logo_partner_game_5_m.png" alt="treenod" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_game_6.png" alt="n dream" class="is_pc_show">
+										<img src="img/partners/logo_partner_game_6_m.png" alt="n dream" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_game_7.png" alt="troll games" class="is_pc_show">
+										<img src="img/partners/logo_partner_game_7_m.png" alt="troll games" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_game_8.png" alt="new.f.o" class="is_pc_show">
+										<img src="img/partners/logo_partner_game_8_m.png" alt="new.f.o" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_game_9.png" alt="sn" class="is_pc_show">
+										<img src="img/partners/logo_partner_game_9_m.png" alt="sn" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_game_10.png" alt="trinity games" class="is_pc_show">
+										<img src="img/partners/logo_partner_game_10_m.png" alt="trinity games" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_game_11.png" alt="moongci" class="is_pc_show">
+										<img src="img/partners/logo_partner_game_11_m.png" alt="moongci" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_game_nextfuturelab.png" alt="nextfuturelab" class="is_pc_show">
+										<img src="img/partners/logo_partner_game_nextfuturelab_m.png" alt="nextfuturelab" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_game_nsouls.png" alt="nsouls" class="is_pc_show">
+										<img src="img/partners/logo_partner_game_nsouls_m.png" alt="nsouls" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_game_5minlab.png" alt="5minlab" class="is_pc_show">
+										<img src="img/partners/logo_partner_game_5minlab_m.png" alt="5minlab" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_game_bluehole.png" alt="bluehole" class="is_pc_show">
+										<img src="img/partners/logo_partner_game_bluehole_m.png" alt="bluehole" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_game_aceproject.png" alt="aceproject" class="is_pc_show">
+										<img src="img/partners/logo_partner_game_aceproject_m.png" alt="aceproject" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_game_etgames.png" alt="etgames" class="is_pc_show">
+										<img src="img/partners/logo_partner_game_etgames_m.png" alt="etgames" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_game_mobirix.png" alt="mobirix" class="is_pc_show">
+										<img src="img/partners/logo_partner_game_mobirix_m.png" alt="mobirix" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_game_nhn629.png" alt="NHN 629" class="is_pc_show">
+										<img src="img/partners/logo_partner_game_nhn629_m.png" alt="NHN 629" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_game_nhnblackpick.png" alt="NHN blackpick" class="is_pc_show">
+										<img src="img/partners/logo_partner_game_nhnblackpick_m.png" alt="NHN blackpick" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_game_nhnpixelcube.png" alt="NHN pixelcube" class="is_pc_show">
+										<img src="img/partners/logo_partner_game_nhnpixelcube_m.png" alt="NHN pixelcube" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_game_playworks.png" alt="playworks" class="is_pc_show">
+										<img src="img/partners/logo_partner_game_playworks_m.png" alt="playworks" class="is_m_show">
+									</li>
+									</ul>
+								</div>
+							</div>
+							<div id="main_customer_tab3" class="tab-pane fade">
+								<h3 class="blind">웹 서비스</h3>
+								<div class="row_wrap">
+									<ul class="lst_partner main_partner">
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_web_1.png" alt="thinkware" class="is_pc_show">
+										<img src="img/partners/logo_partner_web_1_m.png" alt="thinkware" class="is_m_show">
+										<a href="#" class="btn_detail">자세히 보기</a>
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_web_kongdoo.png" alt="kongdoo" class="is_pc_show">
+										<img src="img/partners/logo_partner_web_kongdoo_m.png" alt="kongdoo" class="is_m_show">
+										<a href="#" class="btn_detail">자세히 보기</a>
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_web_13.png" alt="mangoplate" class="is_pc_show">
+										<img src="img/partners/logo_partner_web_13_m.png" alt="mangoplate" class="is_m_show">
+										<a href="#" class="btn_detail">자세히 보기</a>
+									</li>
+									</ul>
+									
+									<ul class="lst_partner">
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_web_2.png" alt="NHN godo" class="is_pc_show">
+										<img src="img/partners/logo_partner_web_2_m.png" alt="NHN godo" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_web_3.png" alt="comico" class="is_pc_show">
+										<img src="img/partners/logo_partner_web_3_m.png" alt="comico" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_web_4.png" alt="bugs" class="is_pc_show">
+										<img src="img/partners/logo_partner_web_4_m.png" alt="bugs" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_web_5.png" alt="peoplefund" class="is_pc_show">
+										<img src="img/partners/logo_partner_web_5_m.png" alt="peoplefund" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_web_6.png" alt="NHN PAYCO" class="is_pc_show">
+										<img src="img/partners/logo_partner_web_6_m.png" alt="NHN PAYCO" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_web_7.png" alt="hivelab" class="is_pc_show">
+										<img src="img/partners/logo_partner_web_7_m.png" alt="hivelab" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_web_8.png" alt="transcosmos" class="is_pc_show">
+										<img src="img/partners/logo_partner_web_8_m.png" alt="transcosmos" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_web_9.png" alt="groovers" class="is_pc_show">
+										<img src="img/partners/logo_partner_web_9_m.png" alt="groovers" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_web_10.png" alt="crowdy" class="is_pc_show">
+										<img src="img/partners/logo_partner_web_10_m.png" alt="crowdy" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_web_11.png" alt="crowdworks" class="is_pc_show">
+										<img src="img/partners/logo_partner_web_11_m.png" alt="crowdworks" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_web_12.png" alt="SK 매직" class="is_pc_show">
+										<img src="img/partners/logo_partner_web_12_m.png" alt="SK 매직" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_web_theboms.png" alt="더봄에스" class="is_pc_show">
+										<img src="img/partners/logo_partner_web_theboms_m.png" alt="더봄에스" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_web_rehoboth.png" alt="rehoboth" class="is_pc_show">
+										<img src="img/partners/logo_partner_web_rehoboth_m.png" alt="rehoboth" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_web_revivallabs.png" alt="revivallabs" class="is_pc_show">
+										<img src="img/partners/logo_partner_web_revivallabs_m.png" alt="revivallabs" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_web_spirink.png" alt="심야상담소" class="is_pc_show">
+										<img src="img/partners/logo_partner_web_spirink_m.png" alt="심야상담소" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_web_edito.png" alt="edito" class="is_pc_show">
+										<img src="img/partners/logo_partner_web_edito_m.png" alt="edito" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_web_epopcon.png" alt="epopcon" class="is_pc_show">
+										<img src="img/partners/logo_partner_web_epopcon_m.png" alt="epopcon" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_web_intelliquant.png" alt="intelliquant" class="is_pc_show">
+										<img src="img/partners/logo_partner_web_intelliquant_m.png" alt="intelliquant" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_web_t-monet.png" alt="t-monet" class="is_pc_show">
+										<img src="img/partners/logo_partner_web_t-monet_m.png" alt="t-monet" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_web_goodcen.png" alt="goodcen" class="is_pc_show">
+										<img src="img/partners/logo_partner_web_goodcen_m.png" alt="goodcen" class="is_m_show">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_web_danvistore.png" alt="danvistore">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_web_mediaon.png" alt="mediaon">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_web_yanatrip.png" alt="yanatrip">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_web_april7.png" alt="april7">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_web_catchform.png" alt="catchform">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_web_codestates.png" alt="codestates">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_web_quvitsecurity.png" alt="quvitsecurity">
+									</li>
+									<li class="partner_item is_pc_ibshow">
+										<img src="img/partners/logo_partner_web_classting.png" alt="classting">
+									</li>
+									</ul>
+								</div>
+							</div>
+							<div id="main_customer_tab4" class="tab-pane fade">
+								<h3 class="blind">커머스</h3>
+								<div class="row_wrap">
+									<ul class="lst_partner main_partner">
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_commerce_2.png" alt="1300K" class="is_pc_show">
+										<img src="img/partners/logo_partner_commerce_2_m.png" alt="1300K" class="is_m_show">
+										<a href="#" class="btn_detail">자세히 보기</a>
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_commerce_6.png" alt="LOHB" class="is_pc_show">
+										<img src="img/partners/logo_partner_commerce_6_m.png" alt="LOHB" class="is_m_show">
+										<a href="#" class="btn_detail">자세히 보기</a>
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_commerce_7.png" alt="당근마켓" class="is_pc_show">
+										<img src="img/partners/logo_partner_commerce_7_m.png" alt="당근마켓" class="is_m_show">
+										<a href="#" class="btn_detail">자세히 보기</a>
+									</li>
+									</ul>
+									<ul class="lst_partner">
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_commerce_1.png" alt="티몬" class="is_pc_show">
+										<img src="img/partners/logo_partner_commerce_1_m.png" alt="티몬" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_commerce_3.png" alt="YDEA" class="is_pc_show">
+										<img src="img/partners/logo_partner_commerce_3_m.png" alt="YDEA" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_commerce_4.png" alt="NHN 티켓링크" class="is_pc_show">
+										<img src="img/partners/logo_partner_commerce_4_m.png" alt="NHN 티켓링크" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_commerce_8.png" alt="BUXI" class="is_pc_show">
+										<img src="img/partners/logo_partner_commerce_8_m.png" alt="BUXI" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_commerce_9.png" alt="callbus" class="is_pc_show">
+										<img src="img/partners/logo_partner_commerce_9_m.png" alt="callbus" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_commerce_1moment.png" alt="1moment" class="is_pc_show">
+										<img src="img/partners/logo_partner_commerce_1moment_m.png" alt="1moment" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_commerce_gearlounge.png" alt="gearlounge" class="is_pc_show">
+										<img src="img/partners/logo_partner_commerce_gearlounge_m.png" alt="gearlounge" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_commerce_realseereal.png" alt="realseereal" class="is_pc_show">
+										<img src="img/partners/logo_partner_commerce_realseereal_m.png" alt="realseereal" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_commerce_ideastudy.png" alt="ideastudy" class="is_pc_show">
+										<img src="img/partners/logo_partner_commerce_ideastudy_m.png" alt="ideastudy" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_commerce_inkminkm.png" alt="inkminkm" class="is_pc_show">
+										<img src="img/partners/logo_partner_commerce_inkminkm_m.png" alt="inkminkm" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_commerce_tasteshop.png" alt="tasteshop" class="is_pc_show">
+										<img src="img/partners/logo_partner_commerce_tasteshop_m.png" alt="tasteshop" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_commerce_mansole.png" alt="mansole" class="is_pc_show">
+										<img src="img/partners/logo_partner_commerce_mansole_m.png" alt="mansole" class="is_m_show">
+									</li>
+									</ul>
+								</div>
+							</div>
+							<div id="main_customer_tab5" class="tab-pane fade">
+								<h3 class="blind">공공 및 교육 기관</h3>
+								<div class="row_wrap">
+									<ul class="lst_partner main_partner">
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_public_2.png" alt="경희대학교" class="is_pc_show">
+										<img src="img/partners/logo_partner_public_2_m.png" alt="경희대학교" class="is_m_show">
+										<a href="#" class="btn_detail">자세히 보기</a>
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_public_3.png" alt="단국대학교" class="is_pc_show">
+										<img src="img/partners/logo_partner_public_3_m.png" alt="단국대학교" class="is_m_show">
+										<a href="#" class="btn_detail">자세히 보기</a>
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_public_kasi.png" alt="한국천문연구원" class="is_pc_show">
+										<img src="img/partners/logo_partner_public_kasi_m.png" alt="한국천문연구원" class="is_m_show">
+										<a href="#" class="btn_detail">자세히 보기</a>
+									</li>
+									</ul>
+									<ul class="lst_partner">
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_public_1.png" alt="충남대학교 산학협력단" class="is_pc_show">
+										<img src="img/partners/logo_partner_public_1_m.png" alt="충남대학교 산학협력단" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_public_edupang.png" alt="edupang" class="is_pc_show">
+										<img src="img/partners/logo_partner_public_edupang_m.png" alt="edupang" class="is_m_show">
+									</li>
+									<li class="partner_item">
+										<img src="img/partners/logo_partner_public_minischool.png" alt="minischool" class="is_pc_show">
+										<img src="img/partners/logo_partner_public_minischool_m.png" alt="minischool" class="is_m_show">
+									</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="sec sec_advertisement has_top_line">
+					<div class="sec_inner">
+						<h2 class="h_section">TOAST 특장점</h2>
+						<ul class="lst_advertisement">
+						<li class="advertisement_item">
+							<h3 class="h_txt">다양한 서비스 구성</h3>
+							<p class="dest_txt">인프라, 개발, 테스트, 운영과 기술 지원,<br>사업화에 필요한 다양한 서비스를 제공합니다.</p>
+						</li>
+						<li class="advertisement_item">
+							<h3 class="h_txt">플랫폼 중심 클라우드</h3>
+							<p class="dest_txt">인프라에 기반한 플랫폼 중심<br>클라우드입니다.</p>
+						</li>
+						<li class="advertisement_item">
+							<h3 class="h_txt">합리적인 가격</h3>
+							<p class="dest_txt">사용한 만큼만 과금됩니다.</p>
+						</li>
+						<li class="advertisement_item">
+							<h3 class="h_txt">강력한 기술 지원</h3>
+							<p class="dest_txt">10년 이상 한게임, 벅스, 페이코 서비스를 통해 축적된<br class="is_pc_show">IT 운영 경험으로 안정된 서비스를 제공합니다.</p>
+						</li>
+						<li class="advertisement_item">
+							<h3 class="h_txt">쉽게 사용할 수 있는 콘솔 제공</h3>
+							<p class="dest_txt">웹 브라우저에서 간단한 클릭만으로<br>서비스를 사용할 수 있습니다.</p>
+						</li>
+						<li class="advertisement_item">
+							<h3 class="h_txt">성장하는 기업을 위한 서비스</h3>
+							<p class="dest_txt">사내 메신저, 프로젝트 관리부터, 인사/재무/자원 관리까지<br class="is_pc_show">기업의 IT인프라를 위한 서비스를 이용할 수 있습니다.</p>
+						</li>
+						</ul>
+	
+					</div>
+				</section>
+				<div class="full_banner now_start_banner">
+					<div class="inner">
+						<em class="main_title">지금 바로 시작해 보세요!</em>
+						<div class="btn_wrap">
+							<a href="#" class="btn_link is_disabled is_pc_ibshow">새 계정 생성</a><!-- [D]비활성 필요시 btn_link에 is_disabled 클래스 추가 -->
+							<a href="#" class="btn_link">구축 및 비용 문의</a>
+						</div>
+					</div>
+				</div>
+				<section class="sec sec_contact">
+					<div class="sec_inner">
+						<h2 class="blind">TOAST 문의 하기</h2>
+						<ul class="lst_contact">
+						<li class="contact_item contact_online">
+							<em class="h_txt">온라인 1:1 문의</em>
+							<p class="desc_txt">상세한 컨설팅을 받아 보실 수 있습니다. <a href="/support/inquiry?alias=tab5_03" class="btn_inquiry">문의하기</a></p>
+						</li>
+						<li class="contact_item contact_call">
+							<em class="h_txt">대표전화: 1588-7967</em>
+							<p class="desc_txt">운영 시간: 월~금 09:30-18:00<br>고객 센터 운영 시간 종료 후 기술 문의는 1:1 문의를 이용해 주세요.</p>
+						</li>
+						<li class="contact_item contact_catalk">
+							<em class="h_txt">카카오톡 ID: NHN TOAST</em>
+							<p class="desc_txt">토/일/공휴일 또는 업무 외 시간에 서비스 문의, 견적 등 사업 관련 문의는 카카오톡을 이용해 주세요.</p>
+						</li>
+						</ul>
+					</div>
+				</section>
+				
+				<section class="sec has_top_line sec_certification">
+					<div class="sec_inner">
+						<h2 class="blind">TOAST 인증 마크</h2>
+						<!-- [D]PC 노출 영역 -->
+						<div id="carousel_certification" class="carousel_certification carousel slide is_pc_show" data-ride="carousel">
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+									<div class="mark_group">
+										<a href="00_certification_mark.html#sec_certification_mark" class="item_certification">
+											<span class="mark_area">
+												<img src="img/certification/cloud_security.png" alt="">
+											</span>
+											<span class="mark_desc">클라우드 컴퓨팅 서비스 보안<br>CSAP 인증</span>
+										</a>
+										<a href="00_certification_mark.html#sec_certification_mark2" class="item_certification">
+											<span class="mark_area">
+												<img src="img/certification/27017.png" alt="">
+											</span>
+											<span class="mark_desc">클라우드 서비스 정보보호 관리체계<br>ISO/IEC 27017 인증</span>
+										</a>
+										<a href="00_certification_mark.html#sec_certification_mark3" class="item_certification">
+											<span class="mark_area">
+												<img src="img/certification/27018.png" alt="">
+											</span>
+											<span class="mark_desc">클라우드 서비스 개인정보 관리체계<br>ISO/IEC 27018 인증</span>
+										</a>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<div class="mark_group">
+										<a href="00_certification_mark.html#sec_certification_mark4" class="item_certification">
+											<span class="mark_area">
+												<img src="img/certification/isms.png" alt="">
+											</span>
+											<span class="mark_desc">정보보호 관리체계<br>ISMS 인증</span>
+										</a>
+										<a href="00_certification_mark.html#sec_certification_mark5" class="item_certification">
+											<span class="mark_area">
+												<img src="img/certification/pims.png" alt="">
+											</span>
+											<span class="mark_desc">개인정보보호 관리체계<br>PIMS 인증</span>
+										</a>
+										<a href="00_certification_mark.html#sec_certification_mark6" class="item_certification">
+											<span class="mark_area">
+												<img src="img/certification/27001.png" alt="">
+											</span>
+											<span class="mark_desc">국제 정보보호 관리체계<br>ISO/IEC 27001 인증</span>
+										</a>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<div class="mark_group">
+										<a href="00_certification_mark.html#sec_certification_mark7" class="item_certification">
+											<span class="mark_area">
+												<img src="img/certification/29100.png" alt="">
+											</span>
+											<span class="mark_desc">국제 개인정보 프레임워크<br>ISO/IEC 29100 인증</span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- Left and right controls -->
+							<a class="carousel-control-prev" href="#carousel_certification" data-slide="prev">
+								<span class="carousel-control-prev-icon"></span>
+							</a>
+							<a class="carousel-control-next" href="#carousel_certification" data-slide="next">
+								<span class="carousel-control-next-icon"></span>
+							</a>
+						</div>
+						<!-- //[D]PC 노출 영역 -->
+						<!-- [D]모바일 노출 영역 -->
+						<div id="carousel_certification_m" class="carousel_certification carousel slide is_m_show" data-ride="carousel">
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+									<div class="mark_group">
+										<a href="00_certification_mark.html#sec_certification_mark" class="item_certification">
+											<span class="mark_area">
+												<img src="img/certification/cloud_security.png" alt="">
+											</span>
+											<span class="mark_desc">클라우드 컴퓨팅 서비스 보안<br>CSAP 인증</span>
+										</a>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<div class="mark_group">
+										<a href="00_certification_mark.html#sec_certification_mark2" class="item_certification">
+											<span class="mark_area">
+												<img src="img/certification/27017.png" alt="">
+											</span>
+											<span class="mark_desc">클라우드 서비스 정보보호 관리체계<br>ISO/IEC 27017 인증</span>
+										</a>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<div class="mark_group">
+										<a href="00_certification_mark.html#sec_certification_mark3" class="item_certification">
+											<span class="mark_area">
+												<img src="img/certification/27018.png" alt="">
+											</span>
+											<span class="mark_desc">클라우드 서비스 개인정보 관리체계<br>ISO/IEC 27018 인증</span>
+										</a>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<div class="mark_group">
+										<a href="00_certification_mark.html#sec_certification_mark4" class="item_certification">
+											<span class="mark_area">
+												<img src="img/certification/isms.png" alt="">
+											</span>
+											<span class="mark_desc">정보보호 관리체계<br>ISMS 인증</span>
+										</a>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<div class="mark_group">
+										<a href="00_certification_mark.html#sec_certification_mark5" class="item_certification">
+											<span class="mark_area">
+												<img src="img/certification/pims.png" alt="">
+											</span>
+											<span class="mark_desc">개인정보보호 관리체계<br>PIMS 인증</span>
+										</a>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<div class="mark_group">
+										<a href="00_certification_mark.html#sec_certification_mark6" class="item_certification">
+											<span class="mark_area">
+												<img src="img/certification/27001.png" alt="">
+											</span>
+											<span class="mark_desc">국제 정보보호 관리체계<br>ISO/IEC 27001 인증</span>
+										</a>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<div class="mark_group">
+										<a href="00_certification_mark.html#sec_certification_mark7" class="item_certification">
+											<span class="mark_area">
+												<img src="img/certification/29100.png" alt="">
+											</span>
+											<span class="mark_desc">국제 개인정보 프레임워크<br>ISO/IEC 29100 인증</span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- Left and right controls -->
+							<a class="carousel-control-prev" href="#carousel_certification_m" data-slide="prev">
+								<span class="carousel-control-prev-icon"></span>
+							</a>
+							<a class="carousel-control-next" href="#carousel_certification_m" data-slide="next">
+								<span class="carousel-control-next-icon"></span>
+							</a>
+						</div>
+						<!-- //[D]모바일 노출 영역 -->
+					</div>
+				</section>
+				
+	
+			</main>
+			<!-- //[D] CONTENTS -->
+			<a href="#container" class="btn_top is_fixed_type">TOP</a>
+			<a href="#container" class="btn_top">TOP</a>
+		</div>
+		<!--[D] FOOTER -->
+		<?php include 'inc/footer.html';?>
+		<!--//[D] FOOTER -->
+	</div>
+	
+	<!--[D] widget -->
+		<?php include 'inc/widget.html';?>
+	<!--//[D] widget -->
+	
+	<!-- [D] LAYER -->
+	<?php include 'inc/layer_loading.html';?>
+	<!-- [D] LAYER -->
+</div>
+
+<!-- Javascript Area -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+<!-- 마크업 확인용입니다. -->
+<style>
+.case_view{display:inline-block;position:fixed;bottom:0;left:0;z-index:1000;width:auto;padding:5px;background:#000;opacity:0.7}
+.case_view .btn{display:inline-block;margin:3px;padding:7px;color:#333;background:#212121;color:#fff}
+</style>
+<div class="case_view">
+	<?php include 'inc/case_view_common.html';?>
+	<a href="#" class="btn" onclick="$(this).siblings('.btn').toggle();return false;">케이스뷰 토글</a>
+</div>
+
+
+<script src="js/case_view.js"></script>
+<!-- //마크업 확인용입니다. -->
+</body>
+</html>

@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+.wrap.login{height:100%;min-height:0;}
+.login .footer{position:absolute;bottom:0;left:0;right:0;margin:0}
+.login .content{position:relative;top:auto;left:auto;right:auto;height:100%;}
+.login .login_wrap{position:absolute;top:50%;left:50%;margin:-190px 0 0 -430px;z-index:10;}
+.login_wrap .logo,.ico_katalk_plus,.ico_payco,.ico_payco2,.ico_next_bar{display:inline-block;overflow:hidden;width:auto;height:10px;background:url(../img/sp_login.png) no-repeat 0 0;line-height:999px;vertical-align:top}
+.login_wrap .logo{background-image:url(../img/logo_payco_place2.png);background-size:cover}
+.login_wrap{width:860px;height:420px;padding:60px 68px 60px 83px;border:1px solid #e5e5e5;background-color:#fff;font-size:0;box-sizing:border-box}
+.login_wrap .h_main{line-height:26px;font-size:0}
+.login_wrap .h_main .logo{width:268px;height:26px;margin-right:12px;vertical-align:top}
+.login_wrap .h_main .txt{display:inline-block;font-size:26px;font-weight:normal;vertical-align:bottom}
+.login_wrap .section{display:-webkit-box;display:-ms-flexbox;display:flex;position:relative;margin-top:41px}
+.login_area{display:inline-block;position:relative;width:330px;padding-right:44px;vertical-align:top;border-right:1px solid #eee;}
+.login_area .dsc_txt{font-size:16px}
+.login_area .inp_txt{width:100%;height:44px;margin-top:8px;padding:0 20px;border:1px solid #ddd;font-size:14px;box-sizing:border-box}
+.login_area .inp_txt::-webkit-input-placeholder{color:#ccc}
+.login_area .inp_txt::-moz-placeholder{color:#ccc}
+.login_area .inp_txt:-ms-input-placeholder{color:#ccc}
+.login_area .inp_txt:-moz-placeholder{color:#ccc}
+.login_area .inp_txt:first-child{margin-top:29px}
+.login_area .other_menu{margin-top:25px;font-size:0;text-align:center}
+.login_area .other_menu .link{display:inline-block;position:relative}
+.login_area .other_menu .link:before{display:inline-block;position:absolute;top:0;left:0;width:1px;height:13px;background-color:#efefef;content:''}
+.login_area .other_menu .link:first-child:before{display:none}
+.login_area .other_menu .btn{margin:0 8px;padding:5px;font-size:12px;color:#777}
+.login_area .txt{font-size:22px;line-height:30px;color:#333}
+.login_area .txt_md{font-size:14px;line-height:22px;color:#333}
+.login_area .txt_sm{font-size:12px;line-height:18px;color:#333}
+.login_area .btn_login{position:static;right:auto;top:auto;display:block;width:100%;height:44px;margin-top:20px;background-color:#fa2828;line-height:44px;font-size:16px;font-weight:bold;color:#fff;text-align:center;box-sizing:border-box}
+.btn_join,.btn_logout{display:inline-block;width:130px;height:36px;background-color:#333;line-height:36px;font-size:12px;font-weight:normal;color:#fff;text-align:center;vertical-align:top;box-sizing:border-box}
+.btn_logout{background-color:#fff;color:#333;border:1px solid #333}
+.btn_login b,.btn_join b{display:inline-block;margin-left:4px;vertical-align:middle}
+.ico_payco{width:71px;height:16px;vertical-align:middle;background-position:0 -24px}
+.ico_payco2{width:52px;height:12px;vertical-align:middle;background-position:0 -42px}
+.btn_join b{font-weight:normal;}
+.login_bottom{margin-top:68px;}
+.login_bottom:after{display:block;clear:both;content:''}
+.login_bottom .txt_dsc{float:left;font-size:12px;line-height:18px;}
+.login_bottom .btn_join{float:right}
+.login_area .txt + .txt_md{margin-top:11px;}
+.login_bottom + .txt_sm{margin-top:7px;}
+
+.join_process{margin-top:11px;padding:9px 16px 7px 24px;background-color:#f7f7f7;}
+.join_process_tit{position:relative;font-size:12px;line-height:18px;}
+.join_process_tit:before{position:absolute;top:5px;left:-7px;width:3px;height:3px;vertical-align:top;background-color:#555;border-radius:50%;content:''}
+.join_process_val{margin-top:2px;font-size:14px;line-height:22px;}
+.login_bottom.is_half{display:-webkit-box;display:-ms-flexbox;display:flex;margin-top:16px}
+.login_bottom.is_half [class^=btn_]{float:none;width:50%;-webkit-box-flex:1;-ms-flex:1;flex:1}
+.login_bottom.is_half [class^=btn_] + [class^=btn_]{margin-left:11px;}
+
+.service_center_area{display:inline-block;position:relative;width:290px;height:100%;padding-left:42px}
+.service_center_area .h_txt{font-size:22px;font-weight:normal}
+.service_center_area .bnt_faq{display:inline-block;position:absolute;top:0;right:0;height:24px;border:1px solid #bbb;line-height:24px;font-size:12px;color:#333;text-align:center;box-sizing:border-box}
+.service_center_area .dsc_txt{margin-top:13px;font-size:14px;line-height:22px;color:#333}
+.service_center_area .cs_contact{margin-top:22px}
+.service_center_area .cs_contact .h_txt{font-size:14px}
+.service_center_area .cs_contact .tel{margin:12px 0 0 -2px;font-size:22px}
+.service_center_area .cs_contact .email{margin-top:2px;font-size:13px;color:#777;letter-spacing:-0.025em}
+.service_center_area .ad_txt_area{margin-top:11px;padding-top:13px;border-top:1px solid #eee}
+.service_center_area .ad_txt_area .ico_katalk_plus{width:68px;height:22px;margin-right:3px;background-position:0 0;vertical-align:middle}
+.service_center_area .ad_txt_area .txt{display:inline-block;font-size:12px;letter-spacing:-.02em;vertical-align:middle}
+.service_center_area .btn_join{position:absolute;right:0;top:138px;width:110px}
+
+.ico_next_bar{width:7px;height:12px;margin:5px 6px 0;background-position:0 -56px}
+
+/*PG 약관 레이어*/
+.login .layer_wrap{top:40px}
+.login .layer_sm{position:absolute;top:50%;left:50%;margin:-300px 0 0 -225px;}
+.layer_txt_md{font-size:14px;line-height:21px;color:#333;}
+.terms{height:238px;border:1px solid #ddd;background:#fff;flex:none;}
+.layer_txt + .scroll_box{margin-top:24px}
+.scroll_inner{overflow:hidden;height:auto;padding:8px;color:#44474a;line-height:18px}
+.terms + .checkbox{margin-top:10px;}
+.checkbox .lbl{margin-left:7px;font-size:12px;line-height:18px;color:#333;}
+
+/*약관 임시 스타일*/
+.terms_tit{margin-top:18px;font-size:12px}
+.scroll_inner > .terms_tit:first-child{margin-top:0}
+.terms_dsc{font-weight:normal;font-size:12px}
+.terms_lst li{list-style:none}
+.terms_table th{border-top:1px solid #fff;background-color:#eee;text-align:center}
+.terms_table td{padding:5px}
+.terms .bold_txt{font-weight:bold}
+.terms .point_txt{color:#4f81bd}

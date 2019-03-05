@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="all">
+<title>로그인 :: TOAST IAM</title>
+<link rel="stylesheet" type="text/css" href="css/iam.css">
+<link rel="stylesheet" type="text/css" href="css/case_view.css"><!--[D]마크업 확인용 입니다. 리얼 반영 시 제거 부탁드립니다 -->
+</head>
+<body><!-- [D] 모바일 뷰 : body에 is_m 클래스 추가 -->
+<div class="wrap">
+	<!-- [D] CONTENTS -->
+	<div id="content" class="content login_content">
+		<h1 class="logo_area"><img src="img/logo_toast.svg" alt="NHN TOAST"></h1>
+		<div class="form_wrap login_bx">
+			<h2 class="title_text"><span class="organization_name">NHN Entertainment</span> 로그인</h2>
+			<p class="dsc_txt"><span class="service_name">Dooray</span> 서비스 이용을 위해 로그인합니다.</p>
+			<form>
+			<fieldset>
+			<legend>로그인 정보 입력</legend>
+			<em class="alert_txt" style="display:none">등록되지 않은 아이디이거나<br>아이디 또는 비밀번호가 일치하지 않습니다.</em>
+			<div class="input_wrap">
+				<div class="error_control_area"><!-- [D]입력 오류시 error_control_area에 is_error 클래스 추가 -->
+					<div class="inp_row">
+						<span class="inp_bx">
+							<input type="text" class="inp" title="아이디" placeholder="아이디">
+						</span>
+					</div>
+					<em class="error_txt">잘못 입력하였습니다.</em>
+				</div>
+				<div class="error_control_area">
+					<div class="inp_row">
+						<span class="inp_bx">
+							<input type="password" class="inp" title="비밀번호" placeholder="비밀번호">
+						</span>
+					</div>
+					<em class="error_txt">잘못 입력하였습니다.</em>
+					<span class="tooltip" role="tooltip"><!-- [D] 툴팁 활성시 tooltip 에 is_show 클래스 추가 -->
+						<span class="tooltip_arrow"></span>
+						<span class="tooltip_inner">Caps Lock이 켜져 있습니다.</span>
+					</span>
+				</div>
+			</div>
+			<div class="other_func_area">
+				<span class="inp_checkbox">
+					<input type="checkbox" id="check1" class="inp_chk">
+					<label for="check1" class="inp_label">
+						<span class="ico_checkbox"></span>
+						<span class="label_text">아이디 저장</span>
+					</label>
+				</span>
+				<a href="#" class="btn_find_pass">비밀번호 찾기</a>
+			</div>
+			<div class="btn_area">
+				<button type="button" class="btn btn_point">로그인</button>
+			</div>
+			</fieldset>
+			</form>
+			<div class="signup_link_area">
+				<span class="guide_text">계정이 없으신가요?<br>조직 관리자에게 문의하여 계정추가를 요청하세요.</span>
+			</div>
+		</div>
+	</div>
+	<!-- //[D] CONTENTS -->
+</div>
+<!-- 마크업 확인용입니다. -->
+<div class="case_view">
+	<a href="#" class="btn btn_device_change">모바일 화면 보기</a>
+  <a href="#" class="btn btn_error">입력 오류 화면</a>
+  <a href="#" class="btn btn_tooltip_toggle">툴팁 메세지</a>
+	<a href="#" class="btn btn_state_reset">초기화면 리셋</a>
+	<a href="#" class="btn btn_toggle_caseview">케이스뷰 접기/펼치기</a>
+</div>
+<script src="js/libs/jquery-1.12.4.min.js"></script>
+<script src="js/case_view.js"></script>
+<!-- //마크업 확인용입니다. -->
+</body>
+</html>
