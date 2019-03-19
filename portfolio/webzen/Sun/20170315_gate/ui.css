@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+body{background:#1b1b1b;}
+.blind{overflow:hidden; position:absolute; top:0px; left:0px; width:1px; height:1px; font-size:1px; line-height:999px}
+.e-bg-l,.e-bg-r{position:absolute; top:0; width:50%;height:1060px; background-repeat:no-repeat;}
+.e-bg-l{left:0; margin-left:-640px; background-position:100% 0;background-image:url('images/bg_l.jpg');}
+.e-bg-r{left:50%; *margin-left:-1px; background-position:640px 0;background-image:url('images/bg_r.jpg');}
+.e-container{position:relative; min-width:1280px;}
+.e-contents{position:relative; width:1280px; height:1060px; margin:0 auto; background:url('images/bg_contents.jpg') no-repeat; z-index:10;}
+.checkbox {position: absolute; top: 71px; right: 144px;}
+.checkbox label{margin-left:5px; font-size: 12px; color:#fff; cursor: pointer; }
+.checkbox input {vertical-align: middle;}
+.e-btn{display:block; overflow:hidden; position:absolute; text-indent:-999px;}
+.go-home{left:224px; bottom:226px; width:330px; height:90px; background:url('images/btn_home.jpg');}
+.go-update{right:224px; bottom:226px; width:330px; height:90px; background:url('images/btn_update.jpg');}
+.logo{display:block; overflow:hidden; position:absolute; top:0; left:46px; width:350px; height:255px; background:url('images/logo.png') no-repeat; text-indent:-999px;}
+.logo a{display:block; position:absolute; top:30px; left:94px; width:163px; height:114px; background:url('images/t.gif');}

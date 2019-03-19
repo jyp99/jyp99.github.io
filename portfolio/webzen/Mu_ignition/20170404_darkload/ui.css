@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+body{background:#120203;}
+
+.blind{overflow:hidden; position:absolute; top:-999px; left:-999px; width:1px; height:1px; font-size:0; line-height:0;}
+
+.e-btn{display:block; overflow:hidden; text-indent:-999px;}
+
+.e-bg-l,.e-bg-r{position:absolute; top:0; width:50%; height:1000px; background-repeat:no-repeat; z-index:-1;}
+.e-bg-l{left:0; margin-left:-640px; background:url('images/bg_l.jpg') no-repeat; background-position:100% 0;}
+.e-bg-r{left:50%; min-width:640px; *margin-left:-1px; background:url('images/bg_r.jpg') no-repeat; background-position:640px 0;}
+
+.e-container{overflow:hidden; position:relative; min-width:1280px;}
+
+.e-btn.logo{position:absolute; top:52px; left:49px; width:126px; height:88px; background:url('images/logo.png') no-repeat; z-index:5;}
+.e-contents{position:relative; width:1280px; height:1000px; margin:0 auto; background-image:url('images/bg_img.jpg'); background-repeat:no-repeat; background-position:50% 0; z-index:1;}
+
+.e-btn-wrap{position:absolute; top:53px; right:70px; width:452px; height:48px; z-index:5;}
+.e-btn-wrap .e-btn{float:left; margin-left:4px;}
+.e-btn-wrap .e-btn:first-child{margin-left:0;}
+.e-btn.gamestart{top:0; right:195px; width:200px; height:48px; background-image:url('images/btn_start.png');}
+.e-btn.go-cafe{width:122px; height:51px; background-image:url('images/btn_cafe.png');}
+.e-btn.go-home{width:122px; height:51px; background-image:url('images/btn_home.png');}
+.today-clse{display:block; overflow:hidden; position:relative; float:right; width:153px; height:19px; margin:16px 10px 0 0; text-indent:-999px; cursor:pointer;}
+.today-clse label{display:block; width:100%; height:100%; text-indent:-999px; cursor:pointer; overflow:hidden; background:url(images/btn_today.png) no-repeat;}
+.today-clse label.checked{background-position:0 100%;}
+.today-clse input{position:absolute; left:-999px;}
+
+.e-move-area{position:absolute; top:270px; left:224px; width:832px; height:468px;}
+.e-move-area iframe{width:100%; height:100%; border:none;}

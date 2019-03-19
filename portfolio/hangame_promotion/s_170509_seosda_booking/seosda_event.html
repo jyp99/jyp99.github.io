@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="euc-kr">
+<title>사전예약 이벤트 : 한게임 섯다</title>
+<link rel="stylesheet" type="text/css" href="css/seosda.css">
+</head>
+<body>
+<div class="wrap">
+	<!-- HEADER -->
+	<div class="header">
+		<div class="top_wrap">
+			<div class="inner">
+				<a href="http://slot.hangame.com/slot/web/introduce.gsc" class="hangame_logo"><img src="img/logo_hangame.png" alt="한게임"></a>
+			</div>
+		</div>
+		<h1 class="seosda_logo"><a href="#"><img src="img/logo.png" alt="한게임 섯다"></a></h1>
+		<ul class="top_menu">
+		<li class="booking active"><a href="#">사전예약 이벤트</a></li>
+		<li class="launching"><a href="#">런칭 이벤트</a></li>
+		</ul>
+	</div>
+	<!-- //HEADER -->
+	<!-- CONTAINER -->
+	<div class="container">
+		<div class="spot">
+			<h2 class="blind">그 손맛 그대로 모바일로 <em>한게임 섯다M 사전예약</em></h2>
+			<p class="blind">사전예약하고 한게임 보상과 갤럭시S8</p>
+		</div>
+		<div class="sec">
+			<div class="choice_wrap">
+				<h3 class="blind">한게임 보상 : 선택</h3>
+				<!-- [D]체크시 chk_wrap에 is_checked 클래스 추가 -->
+				<ul class="lst_choice">
+				<li class="chk_wrap item1 is_checked">
+					<input type="radio" name="reward" id="reward1" value="" class="inp_rdo">
+					<label for="reward1" class="lbl">고스톱 1억냥</label>
+					<span class="checkbox"></span>
+				</li>
+				<li class="chk_wrap item2">
+					<input type="radio" name="reward" id="reward2" value="" class="inp_rdo">
+					<label for="reward2" class="lbl">포커 1억골드</label>
+					<span class="checkbox"></span>
+				</li>
+				<li class="chk_wrap item3">
+					<input type="radio" name="reward" id="reward3" value="" class="inp_rdo">
+					<label for="reward3" class="lbl">바둑 5백만M</label>
+					<span class="checkbox"></span>
+				</li>
+				</ul>
+			</div>
+			<p class="blind">+ 모바일 섯다 보상 : 한게임 섯다M 5억쩐+보석7개</p>
+			<div class="booking_wrap">
+				<form action="" class="form_area">
+					<div class="inp_wrap"><!-- input에 포커스 or 값입력시 inp_wrap에 focus 클래스 추가 -->
+						<p class="placeholder">번호를 입력해주세요</p>
+						<input type="text" name="" class="inp_phone">
+					</div>
+					<div class="agree_area">
+						<span class="chk_wrap"><!-- [D]체크시 chk_wrap에 is_checked 클래스 추가 -->
+							<input type="checkbox" id="agree" class="inp_check">
+							<label for="agree" class="lbl"><span class="checkbox"></span>개인정보 수집 및 이용 동의(필수)</label>
+						</span>
+						<a href="" class="btn_dsc">내용확인</a>
+					</div>
+					<a href="" class="btn btn_app">Google Play 사전예약</a>
+				</form>
+				<ul class="blind">
+				<li>한게임 섯다M은 안드로이드 폰(AOS)으로만 출시 예정입니다. (IOS 제외)</li>
+				<li>보상은 런칭 이후 별도 문자로 전달 드릴 예정입니다.</li>
+				</ul>
+			</div>			
+		</div>
+		<div class="sec2">
+			<h3 class="blind">추가혜택! 푸짐한 경품 이벤트</h3>
+			<p class="blind">사전예약 후 SNS 공유하면 추첨을 통해 경품을 드립니다!</p>
+			<ul class="blind">
+			<li>삼성 갤럭시S8 : 1명</li>
+			<li>신세계 상품권 10만원 : 10명</li>
+			<li>헛개수 기프티콘 : 100명</li>
+			</ul>
+			<ul class="lst_share">
+			<li><a href="#" class="btn btn_facebook">페이스북 공유하기</a></li>
+			<li><a href="#" class="btn btn_twitter">트위터 공유하기</a></li>
+			<li><a href="#" class="btn btn_castory">카카오스토리 공유하기</a></li>
+			</ul>
+			<ul class="blind">
+			<li>경품이벤트는 SNS에 많이 공유 할수록 당첨 확률은 올라갑니다.</li>
+			<li>경품 추첨 결과는 한게임 섯다M 런칭 이후 한게임 공지사항을 통해 발표 예정입니다.</li>
+			</ul>	
+			<a href="#" class="copy"><span class="blind">Copyright &copy; NHN Entertainment Corp. All Rights Reserved.</span></a>
+		</div>
+	</div>
+	<!-- //CONTAINER -->
+    <div class="bg_l"></div>
+    <div class="bg_r"></div>
+</div>
+
+<!-- [D] POPUP -->
+<div class="dimmed" style="display:none"></div>
+<!-- 사전 예약 완료 -->
+<div class="ly_pop ly_bg1" style="display:none">
+	<div class="ly_cont">
+		<h2 class="blind">한게임 섯다</h2>
+		<p class="phone_number">010-1234-5678</p>
+		<p class="pop_txt">사전 예약이 완료되었습니다.</p>
+		<!-- 이미 참여한경우 아래 문구 노출 -->
+		<p class="pop_txt" style="display:none">이미 사전 예약에 참여하셨습니다.</p>
+		<!-- [D]보상:바둑 대체 -->
+		<span class="reward_area">
+			<span class="reward_txt">바둑 500만M</span>
+		</span>		
+		<!-- [D]보상:포커 대체 -->
+		<span class="reward_area poker" style="display:none">
+			<span class="reward_txt">포커 1억 골드</span>
+		</span>
+		<!-- [D]보상:신맞고 대체 -->
+		<span class="reward_area gostop" style="display:none">
+			<span class="reward_txt">고스톱 1억냥</span>
+		</span>
+		<p class="blind">+ 5억쩐 + 보석7개</p>
+		<p class="blind">사전예약 보상은 '한게임 섯다M' 정식 오픈 시 지급됩니다.</p>
+		<a href="#" class="ly_btn_ok"><span class="blind">확인</span></a>
+	</div>
+	<a href="#" class="ly_btn_close"><span class="blind">닫기</span></a>
+</div>
+<!-- //사전 예약 완료 -->
+
+<!-- 개인 정보수집/이용 -->
+<div class="ly_pop ly_bg2" style="display:none">
+	<div class="ly_cont">
+		<h2 class="blind">개인정보 수집 및 이용 동의</h2>
+		<ul class="agree_txt">
+		<li>개인정보 수집 및 이용 목적 : 본 이벤트 진행과 관련한<br>고지사항 전달 및 관련 문의 대응, 경품 지급 및 관련 안내</li>
+		<li>수집하는 개인정보의 항목 : 휴대폰 번호</li>
+		<li>개인정보 보유 및 이용 기간 : 게임 공식 서비스 시작일로 부터<br>6개월 동안 보관 후 파기</li>
+		</ul>
+		<p class="dsc_txt">개인정보 수집 및 이용에 대한 동의를 하실 수 있습니다.<br>단, 거부 시 이벤트 참여자 제한됩니다.</p>
+		<a href="#" class="ly_btn_ok"><span class="blind">확인</span></a>
+	</div>
+	<a href="#" class="ly_btn_close"><span class="blind">닫기</span></a>
+</div>
+<!-- //개인 정보수집/이용 -->
+
+<!-- 동의 체크 -->
+<div class="ly_pop ly_bg3" style="display:none">
+	<div class="ly_cont">
+		<p class="cnt_txt_inn">
+			<span class="dummy"></span>
+			<span class="cnt_txt">개인정보 수집 및 이용 동의<br>항목에 체크해주세요.</span>
+		</p>
+		<a href="#" class="ly_btn_ok"><span class="blind">확인</span></a>
+	</div>
+	<a href="#" class="ly_btn_close"><span class="blind">닫기</span></a>
+</div>
+<!-- //동의 체크 -->
+
+<!-- 휴대폰 번호 확인 -->
+<div class="ly_pop ly_bg3" style="display:none">
+	<div class="ly_cont">
+		<p class="cnt_txt_inn">
+			<span class="dummy"></span>
+			<span class="cnt_txt">정확한 휴대폰 번호를<br>입력해주세요.</span>
+		</p>
+		<a href="#" class="ly_btn_ok"><span class="blind">확인</span></a>
+	</div>
+	<a href="#" class="ly_btn_close"><span class="blind">닫기</span></a>
+</div>
+<!-- //휴대폰 번호 확인 -->
+
+<!-- 개인 정보수집/이용 -->
+<div class="ly_pop ly_bg4" style="display:none">
+	<div class="ly_cont">
+		<h2 class="blind">정보확인</h2>
+		<dl class="lst_data">
+		<dt class="blind">폰번호</dt>
+		<dd>010-1234-5678</dd>
+		<dt class="blind">선택 보상</dt>
+		<dd>포커 1억골드</dd>
+		</dl>
+		<p class="dsc_txt">위 정보로 한게임 섯다 M<br>사전 예약을 하시겠습니까?</p>
+		<a href="#" class="ly_btn_ok"><span class="blind">확인</span></a>
+		<a href="#" class="ly_btn_cancel"><span class="blind">취소</span></a>
+	</div>
+	<a href="#" class="ly_btn_close"><span class="blind">닫기</span></a>
+</div>
+<!-- //개인 정보수집/이용 -->
+
+<!-- 사전예약 안하고 참여시 -->
+<div class="ly_pop ly_bg3" style="display:none">
+	<div class="ly_cont">
+		<p class="cnt_txt_inn">
+			<span class="dummy"></span>
+			<span class="cnt_txt">사전예약 후 참여 가능합니다.</span>
+		</p>
+		<a href="#" class="ly_btn_ok"><span class="blind">확인</span></a>
+	</div>
+	<a href="#" class="ly_btn_close"><span class="blind">닫기</span></a>
+</div>
+<!-- //사전예약 안하고 참여시 -->
+
+<!-- //[D] POPUP -->
+<!-- [D] 마크업 리뷰용, 개발시 제외 -->
+<script src="http://ui-dev.nhnent.com/svnview/hivelab/share/js/jquery-1.11.1.min.js"></script>
+<style>
+.case_review{position:fixed;top:60px;right:40px;width:250px;padding:8px;z-index:100;background:#000;color:#fff;opacity:0.7;filter:alpha(opacity=70)}
+.case_review a{display:block;padding:4px 0;font-size:12px;color:#fff}
+.case_review a:hover{color:#fff4a6}
+</style>
+<script>
+$(function(){
+	$('.ly_pop a').click(function(){
+		$('.ly_pop,.dimmed').hide();
+	});
+	$('.choice_wrap .lbl').click(function(){
+		$(this).parents('ul').find('.chk_wrap').removeClass('is_checked');
+		$(this).parents('.chk_wrap').addClass('is_checked');
+	});
+	$('.agree_area .lbl').click(function(){
+		$(this).parents('.chk_wrap').toggleClass('is_checked');
+	})
+});
+</script>
+<div class="case_review">
+	<a href="#" onclick="$('.ly_pop').hide();$('.ly_pop:eq(0), .dimmed').show();$('.ly_pop:eq(0) .pop_txt:eq(0)').show();$('.ly_pop:eq(0) .pop_txt:eq(1)').hide();return false;">[팝업] 사전예약완료</a>
+	<a href="#" onclick="$('.ly_pop').hide();$('.ly_pop:eq(0), .dimmed').show();$('.ly_pop:eq(0) .pop_txt:eq(0)').hide();$('.ly_pop:eq(0) .pop_txt:eq(1)').show();return false;">[팝업] 이미 사전예약 참여</a>
+	<a href="#" onclick="$('.ly_pop').hide();$('.ly_pop:eq(0), .dimmed').show();$('.ly_pop .reward_area').hide();$('.ly_pop .reward_area:eq(1)').show();return false;">ㄴ사전예약 보상 확인용_포커</a>
+	<a href="#" onclick="$('.ly_pop').hide();$('.ly_pop:eq(0), .dimmed').show();$('.ly_pop .reward_area').hide();$('.ly_pop .reward_area:eq(2)').show();return false;">ㄴ사전예약 보상 확인용_고스돕</a>
+	<a href="#" onclick="$('.ly_pop').hide();$('.ly_pop:eq(1), .dimmed').show();return false;">[팝업] 개인정보 수집/이용</a>
+	<a href="#" onclick="$('.ly_pop').hide();$('.ly_pop:eq(2), .dimmed').show();return false;">[팝업] 동의 체크</a>
+	<a href="#" onclick="$('.ly_pop').hide();$('.ly_pop:eq(3), .dimmed').show();return false;">[팝업] 휴대폰 번호 확인</a>
+	<a href="#" onclick="$('.ly_pop').hide();$('.ly_pop:eq(4), .dimmed').show();return false;">[팝업] 정보확인</a>
+	<a href="#" onclick="$('.ly_pop').hide();$('.ly_pop:eq(5), .dimmed').show();return false;">[팝업] 사전예약 안하고 참여시</a>
+</div>
+<!-- //[D] 마크업 리뷰용, 개발시 제외 -->
+</body>
+</html>

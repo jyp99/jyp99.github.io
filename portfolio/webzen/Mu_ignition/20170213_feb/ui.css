@@ -1,0 +1,69 @@
+@charset "utf-8";
+
+html,body{height:100%; background:#000;}
+
+.e-contents h2,.e-contents h3,.e-contents h4,.e-contents h5,.e-contents p,.e-contents ul,
+.blind{overflow:hidden; position:absolute; top:-999px; left:-999px; width:1px; height:1px; font-size:0; line-height:0}
+
+.e-btn{display:block; overflow:hidden; position:absolute; text-indent:-999px; background:url('images/t.gif');}
+
+.e-container{overflow:hidden; position:relative; max-width:1920px; min-width:1280px; min-height:100%; margin:0 auto; background-repeat:no-repeat; background-position:50% 0; background-attachment:fixed; z-index:1;}
+.e-container.tab1{background-color:#060101; background-image:url('images/bg_update.jpg');}
+.e-container.tab2{background-color:#000; background-image:url('images/bg_event.jpg');}
+
+.e-header.is-fixed{position:fixed; top:0; z-index:20;}
+.e-header h1{position:absolute; width:220px; height:217px; background:url('images/bg_lnb.png') repeat;}
+.e-header.is-fixed h1{position:fixed;}
+
+.e-btn.logo{top:32px; left:52px; width:115px; height:80px; background:url('images/logo.png') no-repeat; z-index:10;}
+.e-btn.go-home{top:143px; left:0; width:109px; height:75px; background:url('images/sp_menu.png') no-repeat 0 0; z-index:10;}
+.e-btn.go-home:hover,.e-btn.go-home:focus{background-position:0 100%;}
+.e-btn.go-cafe{top:143px; left:109px; width:111px; height:75px; background:url('images/sp_menu.png') no-repeat -111px 0; z-index:10;}
+.e-btn.go-cafe:hover,.e-btn.go-cafe:focus{background-position:-111px 100%;}
+
+.e-nav{position:absolute; top:0; left:220px; right:0; height:90px; z-index:20;}
+.is-fixed .e-nav{position:fixed;}
+.nav-item{display:block; float:left; overflow:hidden; width:50%; height:90px; background:url('images/sp_nav.png') no-repeat 50% -92px; text-indent:-999px;}
+.nav-item2{*margin-left:-1px; background-position:50% -276px;}
+.nav-item1:hover,.nav-item1:focus,.tab1 .nav-item1{background-position-y:0;}
+.nav-item2:hover,.nav-item2:focus,.tab2 .nav-item2{background-position-y:-184px;}
+
+.e-lnb{position:absolute; top:217px; width:220px; height:100%; padding-top:2px; background:url('images/bg_lnb.png') repeat; z-index:10;}
+.is-fixed .e-lnb{position:fixed; bottom:0;}
+.lnb-item{display:block; overflow:hidden; width:220px; height:75px; margin-bottom:2px; background:url('images/sp_lnb.png') no-repeat; text-indent:-999px;}
+.tab1 .lnb-item1{background-position:0 0;}
+.tab1 .lnb-item2{background-position:0 -75px;}
+.tab1 .lnb-item3{background-position:0 -150px;}
+.tab1 .lnb-item4{background-position:0 -225px;}
+.tab1 .lnb-item5{background-position:0 -300px;}
+.tab1 .lnb-item6{background-position:0 -375px;}
+.tab2 .lnb-item1{background-position:0 -450px;}
+.tab2 .lnb-item2{background-position:0 -600px;}
+.tab2 .lnb-item3{background-position:0 -675px;}
+.tab2 .lnb-item4{background-position:0 -750px;}
+.lnb-item.on{background-position-x:-220px;}
+
+.e-contents{position:relative; padding-left:220px;}
+
+.e-sec{overflow:hidden; position:relative; padding:67px 0 100px; background-repeat:no-repeat; background-position:50% 0; text-align:center;}
+.tab2 .e-sec{padding-top:127px;}
+.e-sec h3{top:-90px;}
+
+.e-btn.next-cont{bottom:100px; left:50%; width:70px; height:72px; margin-left:-35px;}
+
+.udt_home{height:1100px; padding:0; background-image:url('images/bg_udt_home.png');}
+.checkbox{display:block; overflow:hidden; position:absolute; right:50px; top:140px; width:191px; height:51px; z-index:20;}
+.checkbox label{display:block; overflow:hidden; width:100%; height:100%; background:url('images/bg_checkbox.png') no-repeat; text-indent:-999px; cursor:pointer;}
+.checkbox label.checked{background-position:0 100%;}
+.checkbox input{position:absolute; left:-999px;}
+.gamestart{top:453px; left:50%; width:420px; height:124px; margin-left:-206px;}
+.udt_home .e-btn.next-cont{top:719px; bottom:auto; margin-left:-29px;}
+
+.event1{height:803px;padding:0; background-image:url('images/img_event1.jpg');}
+.event2{height:803px;}
+.event3 .bg{display:block; position:absolute; width:752px; height:499px; top:160px; left:50%; margin-left:48px; background:url('images/bg_event3.png') no-repeat;}
+.event3 img{position:relative; z-index:10;}
+
+@media all and (min-width:1920px) {
+.is-fixed .e-nav{left:50%; width:1700px; margin-left:-740px;}
+}

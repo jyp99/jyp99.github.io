@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+@font-face {
+font-family: 'NanumSquare';
+src: url(../font/NanumSquareR.eot);
+src: url(../font/NanumSquareR.eot?#iefix) format('embedded-opentype'), url(../font/NanumSquareR.woff) format('woff'), url(../font/NanumSquareR.ttf) format('truetype');
+}
+
+/* Reset */
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select{margin:0;padding:0}
+html,body{width:100%;height:100%}
+body,input,textarea,select,table{font-family:NanumSquare,'나눔스퀘어','Nanum Square','Malgun Gothic','맑은고딕','Apple SD Gothic Neo',Dotum,'돋움',sans-serif;font-size:12px}
+img,fieldset{border:0;vertical-align:top}
+dl,ul,ol,menu,li{list-style:none}
+address,caption,em{font-style:normal}
+a{text-decoration:none}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:none}
+label{cursor:pointer}
+.blind{overflow:hidden;position:absolute;top:0;left:0;width:1px;height:1px;font-size:1px;line-height:100px;white-space:nowrap}
+
+/* Layout */
+#wrap{position:relative}
+#container{position:relative;width:1280px;margin:0 auto}
+.bg_l,.bg_r{position:absolute;top:0;z-index:-1;width:50%;height:1560px}
+.bg_l{left:-640px;background:url(../img/bg_l.jpg) no-repeat 100% 0}
+.bg_r{left:50%;*margin-left:-1px;background:url(../img/bg_r.jpg) no-repeat 640px 0}
+.sec{position:relative}
+.btn_charge{display:block;overflow:hidden;position:absolute;top:1099px;left:50%;width:667px;height:89px;margin-left:-334px;background:url(../img/bg_tr.gif)}
+.notice{height:180px;padding-top:46px;background:url(../img/bg_notice.jpg) no-repeat}
+.notice .h_tx{margin-left:306px;width:72px;height:21px;background:url(../img/h_noti.png) no-repeat}
+.lst_noti{padding:14px 200px 0 305px;font-size:18px;color:#595959;letter-spacing:-.8px;line-height:30px}
+.footer{height:70px;background:url(../img/bg_footer.jpg) no-repeat}
+.footer .copyright{display:block;overflow:hidden;position:absolute;top:13px;left:50%;width:420px;height:25px;margin-left:-210px;text-indent:-999px}

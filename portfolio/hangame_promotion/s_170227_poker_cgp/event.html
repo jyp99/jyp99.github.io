@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>한게임 포커 : 레볼루션</title>
+	<link rel="stylesheet" href="css/event.css">
+	<link rel="stylesheet" href="libs/swiper.css">
+</head>
+<body>
+<!-- header -->
+<!-- 스크롤시 상단 메뉴 고정 top_fix 추가 -->
+<div id="header" class="head">
+	<div class="inner">
+		<div class="gnb">
+			<h1 class="blind">한게임 포커</h1>
+			<div class="top_menu"><a href="#"><img src="img/btn_login.gif" width="48" height="18" alt="로그인"></a><!-- <a href="#"><img src="img/btn_logout.gif" width="59" height="18" alt="로그아웃"></a> --><a href="#" class="btn">포커</a><span class="bar">|</span><a href="#"><img src="img/hangame.png" width="69" height="18" alt="HANGAME"></a></div>
+			<h2 class="blind">한게임 포커 : 레볼루션</h2>
+		</div>
+	</div>
+</div>
+<!-- //header -->
+<div class="dn_area">
+	<p class="blind">언제 어디서나 자유롭게</p>
+	<a href="#" class="btn_dn m">모바일에 설치</a>
+	<p class="blind">PC에서 더 실감나게</p>
+	<a href="#" class="btn_dn pc">PC버전 시작</a>
+</div>
+<!-- container -->
+<div id="container">
+	<div class="visual"><!-- [D] PC쪽(오른쪽) 활성 중일 때 to_pc 클래스 추가, 모바일쪽(왼쪽) 활성 중일 때 to_m 클래스 추가, 중립시 visual 클래스만 -->
+		<!-- [D] clip:rect(top right bottom left)의 좌표값으로 right값만 조절, % 단위로 지정이 안되므로 요소 너비를 받아와서 50%에 해당하는 값 입력, 리사이즈 시 다시 계산하여 입력 -->
+		<div class="clip" style="/*clip:rect(0px 640px 990px 0px)*/"></div>
+		<span class="txt pc"></span>
+		<span class="txt m"></span>
+		<span class="indicator pc"><span class="arr"></span></span>
+		<span class="indicator m"><span class="arr"></span></span>
+	</div>
+
+	<div class="intro_cont">
+
+		<div class="cont login">
+			<h3 class="blind">빠르고 간편한 로그인</h3>
+			<p class="blind">한게임, 페이코, 구글, 페이스북, 네이버 아이디로 간편하게 로그인하고 즐기세요!</p>
+		</div>
+
+		<div class="cont four_game">
+			<h3 class="blind">지루할 틈 없는 4종의 게임</h3>
+			<ul class="blind">
+			<li>포커의 클래식 : 7포커</li>
+			<li>카드 4장의 승부 : 로우바둑이</li>
+			<li>9명 맥스 베팅의 스릴 : 홀덤</li>
+			<li>하이vs로우 두가지 즐거움 : 하이로우</li>
+			</ul>
+		</div>
+
+		<div class="cont jackpot">
+			<h3 class="blind">스릴 넘치는 게임 한 판</h3>
+			<p class="blind">재미있고 화끈한 한 판을 지금 즐기세요! 높은 족보로 승리하면 잭팟은 보너스!</p>
+		</div>
+
+		<div class="cont luckyland">
+			<h3 class="blind">또 다른 재미, 럭키랜드</h3>
+			<p class="blind">럭키랜드 미니게임의 행운, 또 다른 감동을 느껴보세요!</p>
+		</div>
+
+		<div class="cont blackjack">
+			<h3 class="blind">오직 한게임에서만 "블랙잭"</h3>
+			<p class="blind">딜러 VS 플레이어들과의 멋진 대결!! "블랙잭"의 짜릿한 승리의 쾌감을 한게임 모바일 포커에서 느껴보세요</p>
+			<a href="#" class="btn_blackjack">블랙잭 영상보기</a>
+		</div>
+
+		<div class="cont contents">
+			<h3 class="blind">재미난 컨텐츠도 풍성</h3>
+			<p class="blind">다양한 컨텐츠로 게임에 재미를 팍팍 더 해 드립니다!</p>
+			<ul class="blind">
+			<li>달성하고 보너스 획득 : 업무 &middot; 목표</li>
+			<li>매주 총 상금 3조 칩 : 랭킹전</li>
+			<li>2시간마다 티켓 지급 : 뽑기</li>
+			</ul>
+		</div>
+
+	</div>
+
+	<div class="event_sld_sec">
+		<div class="inner">
+			<div class="swiper-container">
+				<div class="sld_wrap swiper-wrapper">
+					<div class="sld_img swiper-slide"><img src="img/img1.png" alt="게임소개 이미지"></div>
+					<div class="sld_img swiper-slide"><img src="img/img2.png" alt="게임소개 이미지"></div>
+					<div class="sld_img swiper-slide"><img src="img/img3.png" alt="게임소개 이미지"></div>
+					<div class="sld_img swiper-slide"><img src="img/img4.png" alt="게임소개 이미지"></div>
+					<div class="sld_img swiper-slide"><img src="img/img5.png" alt="게임소개 이미지"></div>
+					<div class="sld_img swiper-slide"><img src="img/img6.png" alt="게임소개 이미지"></div>
+					<div class="sld_img swiper-slide"><img src="img/img7.png" alt="게임소개 이미지"></div>
+				</div>
+			</div>
+			<div class="sld_pagination"></div>
+			<a href="#" class="prev">이전 이미지 보기</a>
+			<a href="#" class="next">다음 이미지 보기</a>
+		</div>
+
+		<dl class="blind">
+		<dt>제명</dt>
+		<dd>한게임 포커 : 레볼루션</dd>
+		<dt>상호</dt>
+		<dd>엔에이치엔 엔터테인먼트(주)</dd>
+		<dt>이용등급</dt>
+		<dd>청소년이용불가</dd>
+		<dt>등급분류번호</dt>
+		<dd>CC-NP-170329-002</dd>
+		<dt>제작년월일</dt>
+		<dd>2017.03.29</dd>
+		<dt>신고(등록)번호</dt>
+		<dd>제2013-000028호</dd>
+		</dl>
+
+		<div class="copyright"><a href="http://www.nhnent.com/ko/index.nhn" target="_blank">Copyright ⓒ NHN Entertainment Corp. All Rights Reserved.</a></div>
+	</div>
+</div>
+<!-- //container -->
+<!-- footer -->
+<div id="footer"></div>
+<!-- //footer -->
+
+<a href="#" class="btn_top">맨 위로</a>
+
+<!-- [D] dimmed -->
+<div class="dimmed" style="display:none"></div>
+<!-- [D] popup - 모바일 한게임 포커 설치 -->
+<div class="pop_content ly_guide" style="display:none">
+	<h2 class="blind">모바일 한게임 포커 설치 방법</h2>
+	<ul>
+	<li><span class="blind">1544-6446 전화로 설치하기, 휴대폰에서 전화를 걸어주세요.</span></li>
+	<li><a href="#" class="btn_sms">빠른 문자 설치</a></li>
+	<li><a href="#" class="btn_playstore">구글 접속하여 설치(아이폰은 이용 불가능합니다.)</a></li>
+	<li><a href="#" class="btn_qr">QR코드로 설치</a></li>
+	</ul>
+	<span class="pop_btn_close"><a href="#">닫기</a></span>
+</div>
+<!-- [D] popup - 모바일 한게임 포커 설치 - 빠른 문자 설치 -->
+<div class="pop_content ly_sms" style="display:none">
+	<h2 class="blind">빠른 문자 설치</h2>
+	<h3 class="blind">Google Play 설치 URL을 문자로 전송해드립니다.</h3>
+	<div class="phone_input_bx">
+		<!-- [D] .input_bx2에 focus시 value 값 제거, 입력값 없이 blur 되는 경우 다시 value에 "내 번호 입력" 삽입 -->
+		<span class="txt_bx"><input type="text" value="010" class="input_bx1"><span class="hyphen">-</span><input type="text" class="input_bx2" value="내 번호 입력"></span><a href="#" class="btn_send">전송</a>
+	</div>
+	<h3 class="blind">주의사항</h3>
+	<ul class="blind">
+	<li>문자 전송은 무료입니다.</li>
+	<li>수신한 URL 접속 시에는 이동통신사별 무선 데이터 통화료가 발생할 수 있습니다.</li>
+	<li>아이폰에서는 설치가 불가능 합니다.</li>
+	</ul>
+	<span class="pop_btn_close"><a href="#">닫기</a></span>
+</div>
+<!-- [D] popup - 모바일 한게임 포커 설치 - 구글 접속하여 설치 -->
+<div class="pop_content ly_playstore" style="display:none">
+	<h2 class="blind">구글 접속하여 설치</h2>
+	<p class="blind">내 폰에서 Google Play를 실행하세요.</p>
+	<ol class="blind">
+	<li>검색창에 한게임 입력</li>
+	<li>한게임 포커 터치</li>
+	<li>설치하기 터치</li>
+	</ol>
+	<span class="pop_btn_close"><a href="#">닫기</a></span>
+</div>
+<!-- [D] popup - 모바일 한게임 포커 설치 - QR코드 찍는 방법 -->
+<div class="pop_content ly_qr" style="display:none">
+	<h2 class="blind">QR코드 찍는 방법</h2>
+	<ol class="blind">
+	<li>앱 실행 후 검색창 우측 버튼 터치</li>
+	<li>QR코드 모양의 버튼을 터치</li>
+	<li>네모칸 안에 QR코드가 들어오면 마켓으로 이동</li>
+	</ol>
+	<span class="pop_btn_close"><a href="#">닫기</a></span>
+</div>
+
+<!-- [D] 마크업 검수용 스크립트입니다. 개발 시 삭제 부탁드립니다. -->
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="libs/swiper.min.js"></script>
+<script>
+var mySwiper = new Swiper('.swiper-container',{
+	pagination:'.sld_pagination',
+	paginationClickable:true
+})
+$('.prev').on('click', function(e){
+	e.preventDefault()
+	mySwiper.swipePrev()
+})
+$('.next').on('click', function(e){
+	e.preventDefault()
+	mySwiper.swipeNext()
+})
+$(document).ready(function () {
+	function visual() {
+		var clipRgt = ($('.clip').width() / 2) + 'px';
+		var clipVal = 'rect(0px ' + clipRgt + ' 990px 0px)';
+		$('.clip').css({'clip': clipVal });
+	}
+
+	visual();
+
+	$(window).on('resize', function () {
+		visual();
+	});
+
+	$(window).scroll(function(){
+		var head = 838;
+		($(window).scrollTop() > head) ? $('.dn_area').addClass('top_fix') : $('.dn_area').removeClass('top_fix');
+	});
+
+	$('.btn_dn.m').on('click', function (e) {
+		e.preventDefault();
+		$('.ly_guide').show().siblings('.dimmed').show();
+	});
+
+	$('.btn_sms').on('click', function (e) {
+		e.preventDefault();
+		$('.ly_guide').hide().siblings('.ly_sms').show();
+	});
+
+	$('.btn_playstore').on('click', function (e) {
+		e.preventDefault();
+		$('.ly_guide').hide().siblings('.ly_playstore').show();
+	});
+
+	$('.btn_qr').on('click', function (e) {
+		e.preventDefault();
+		$('.ly_guide').hide().siblings('.ly_qr').show();
+	});
+
+	$('.pop_content [class^=pop_btn_close]').on('click', function (e) {
+		e.preventDefault();
+		$('.dimmed,.pop_content').hide();
+	});
+});
+</script>
+<div class="caseview" style="position:fixed;top:50px;right:50px;padding:5px;background:#000;z-index:100">
+	<a href="#" style="display:block;padding:5px;color:#fff" onclick="$('.visual').removeClass('to_pc').addClass('to_m').find('.clip').css('clip','rect(0px ' + $('.clip').width() + 'px 990px 0px)');return false;">[비쥬얼] 모바일</a>
+	<a href="#" style="display:block;padding:5px;color:#fff" onclick="$('.visual').removeClass('to_m').addClass('to_pc').find('.clip').css('clip','rect(0px 0px 990px 0px)');return false;">[비쥬얼] PC</a>
+</div>
+<!-- // 마크업 검수용 스크립트입니다. 개발 시 삭제 부탁드립니다. -->
+
+</body>
+</html>
