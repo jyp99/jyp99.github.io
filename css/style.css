@@ -54,9 +54,9 @@ input:-ms-input-placeholder{color:#999!important}
 /* 프로필 */
 .profile_wrap .img_area{display:block;overflow:hidden;width:180px;height:180px;margin:0 auto;background-color:#fff;border-radius:100%}
 .profile_wrap .img_area img{width:100%}
-.profile_wrap .name{margin-top:20px;color:#eee;font-weight:300;font-size:23px;line-height:1}
-.profile_wrap .job{display:block;margin-top:2px;font-size:13px;color:#eee}
-.profile_wrap .career{display:block;position:relative;margin-top:6px;padding-left:10px}
+.profile_wrap .name{margin-top:16px;color:#eee;font-weight:300;font-size:21px;line-height:1}
+.profile_wrap .job{display:block;margin-top:3px;font-size:12px;color:#eee}
+.profile_wrap .career{display:block;position:relative;margin-top:8px;padding-left:10px}
 .profile_wrap .career:before{display:inline-block;position:absolute;top:3px;bottom:1px;left:0;width:2px;background-color:#eee;content:''}
 .profile_wrap .career .h_txt{color:#eee;font-size:12px;line-height:16px}
 .profile_wrap .career .lst_desc{display:block;position:relative;margin-top:2px;color:#eee;font-size:11px;line-height:16px}
@@ -75,7 +75,7 @@ input:-ms-input-placeholder{color:#999!important}
 .portfolio_wrap .portfolio_item:first-of-type{margin-top:0}
 .portfolio_wrap .link_portfolio{display:block;position:relative;padding-right:140px}
 .portfolio_wrap .portfolio_tit{font-weight:400;font-size:17px}
-.portfolio_wrap .portfolio_desc{margin-top:7px;font-size:12px;line-height:16px}
+.portfolio_wrap .portfolio_desc{margin-top:5px;font-size:12px;line-height:16px}
 .portfolio_wrap .portfolio_date{display:block;margin-top:8px;color:#555;font-size:10px}
 .portfolio_wrap .thum_area{overflow:hidden;position:absolute;right:0;top:50%;width:120px;height:86px;margin-top: -43px;border: 1px solid #ddd;text-align:center;font-size:0}
 .portfolio_wrap .thum_area img{display:inline-block;width:100%;vertical-align:middle}
@@ -102,6 +102,7 @@ input:-ms-input-placeholder{color:#999!important}
 .portfolio_content .desc_wrap .inner{max-width:600px;margin:0 auto}
 .portfolio_content .desc_txt{margin-top:10px;font-size:13px;line-height:20px}
 .portfolio_content .desc_txt:first-of-type{margin-top:0}
+.portfolio_content .portfolio_img_wrap+.desc_txt{margin-top:20px}
 .portfolio_content .link_txt{color:blue;text-decoration:underline}
 .portfolio_content .lst_spec{margin-top:20px;padding:13px 15px;background-color:#f3f3f3;font-size:0}
 .portfolio_content .lst_spec .spec_tit,.portfolio_content .lst_spec .spec_desc{margin-top:1px;font-size:12px;line-height:20px}
@@ -130,7 +131,7 @@ input:-ms-input-placeholder{color:#999!important}
 .main_content+.footer{position:relative;z-index:1;background-color:#fff;margin-top:0;padding-left:0}
 .profile_wrap{display:block;position:fixed;z-index:0;top:0;width:100%;height:320px;padding:0;font-size:0;background:url(../img/img_profile.png) center no-repeat;background-size:cover;transition:none}
 .profile_wrap:after{background-image:linear-gradient(to bottom, transparent, transparent 50%, rgba(0, 0, 0, .3))}
-.profile_wrap .inner{display:block;position:absolute;bottom:0;left:0;right:0;padding:40px 44px}
+.profile_wrap .inner{display:block;position:absolute;bottom:0;left:0;right:0;padding:30px}
 .profile_wrap .img_area{display:none}
 .profile_wrap .name{position:relative;margin-top:0;text-align:right}
 .profile_wrap .job{position:relative;text-align:right}
@@ -139,6 +140,9 @@ input:-ms-input-placeholder{color:#999!important}
 .profile_wrap .career .detail_item{padding-left:0}
 .profile_wrap .career .detail_item:before{position:static}
 .profile_wrap .career:before{display:none}
+.portfolio_wrap .inner{padding:0 30px}
+.portfolio_wrap .portfolio_tit{font-size:17px}
+.portfolio_wrap .portfolio_desc{margin-top:6px}
 .is_folding .profile_wrap{display:none}
 .is_folding .main_content{padding-top:0}
 /* 포트폴리오 상세 페이지 */
