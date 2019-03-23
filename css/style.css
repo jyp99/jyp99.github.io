@@ -89,7 +89,7 @@ input:-ms-input-placeholder{color:#999!important}
 .is_folding .portfolio_wrap{position:static;padding-top:230px}
 .is_folding .portfolio_wrap:before{height:200px}
 .is_folding .portfolio_wrap .h_txt{position:absolute;top:150px;max-width:none;border-bottom:0;font-size:34px;color:#fff;text-shadow:1px 1px rgba(0, 0, 0, .5)}
-.is_folding .portfolio_wrap .portfolio_item{border-top:0}
+.is_folding .portfolio_wrap .portfolio_item:first-of-type{border-top:0}
 .is_folding .main_content+.footer{padding-left:0}
 
 /* 포트폴리오 상세 페이지 */
