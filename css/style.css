@@ -1,8 +1,8 @@
 @charset "utf-8";
 
 /* nanumbarungothick */
-@font-face{font-family:'NanumBarunGothic';src:url(font/NanumBarunGothic.eot);src:url(font/NanumBarunGothic.eot?#iefix) format('embedded-opentype'), url(font/NanumBarunGothic.woff) format('woff'),url(font/NanumBarunGothic.ttf) format('truetype')}
-@font-face{font-family:'NanumBarunGothic';font-weight:bold;src:url(font/NanumBarunGothicBold.eot);src:url(font/NanumBarunGothicBold.eot?#iefix) format('embedded-opentype'), url(font/NanumBarunGothicBold.woff) format('woff'),url(font/NanumBarunGothicBold.ttf) format('truetype')}
+@font-face{font-family:'NanumBarunGothic';src:url(../font/NanumBarunGothic.eot);src:url(../font/NanumBarunGothic.eot?#iefix) format('embedded-opentype'), url(../font/NanumBarunGothic.woff) format('woff'),url(../font/NanumBarunGothic.ttf) format('truetype')}
+@font-face{font-family:'NanumBarunGothic';font-weight:bold;src:url(../font/NanumBarunGothicBold.eot);src:url(../font/NanumBarunGothicBold.eot?#iefix) format('embedded-opentype'), url(../font/NanumBarunGothicBold.woff) format('woff'),url(../font/NanumBarunGothicBold.ttf) format('truetype')}
 
 /* Reset */
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,p,table,th,td,form,fieldset,legend,textarea,input,select,textarea,button,article,aside,dialog,footer,header,section,footer,nav,figure,main{margin:0;padding:0}
@@ -40,7 +40,7 @@ input:-ms-input-placeholder{color:#999!important}
 .btn_top:after{display:inline-block;position:absolute;top:50%;left:50%;width:30px;height:30px;margin:-15px 0 0 -15px;background:url(../img/ico_top.svg) no-repeat;background-size:contain;line-height:1;content:''}
 .footer{text-align:center}
 .footer .inner{display:block;margin:0 20px;padding:23px;border-top:1px solid #ddd}
-.copyright_txt{font-size:12px;color:#777;font-weight:300}
+.copyright_txt{font-size:11px;color:#777;font-weight:300}
 
 /* 메인 */
 .main_content{padding-left:290px}
@@ -54,29 +54,29 @@ input:-ms-input-placeholder{color:#999!important}
 /* 프로필 */
 .profile_wrap .img_area{display:block;overflow:hidden;width:180px;height:180px;margin:0 auto;background-color:#fff;border-radius:100%}
 .profile_wrap .img_area img{width:100%}
-.profile_wrap .name{margin-top:20px;color:#eee;font-weight:300;font-size:26px;line-height:1}
-.profile_wrap .job{display:block;margin-top:0px;font-size:14px;color:#eee}
-.profile_wrap .career{display:block;position:relative;margin-top:9px;padding-left:10px}
+.profile_wrap .name{margin-top:20px;color:#eee;font-weight:300;font-size:23px;line-height:1}
+.profile_wrap .job{display:block;margin-top:2px;font-size:13px;color:#eee}
+.profile_wrap .career{display:block;position:relative;margin-top:6px;padding-left:10px}
 .profile_wrap .career:before{display:inline-block;position:absolute;top:3px;bottom:1px;left:0;width:2px;background-color:#eee;content:''}
 .profile_wrap .career .h_txt{color:#eee;font-size:12px;line-height:16px}
-.profile_wrap .career .lst_desc{display:block;position:relative;margin-top:4px;color:#eee;font-size:11px;line-height:16px}
+.profile_wrap .career .lst_desc{display:block;position:relative;margin-top:2px;color:#eee;font-size:11px;line-height:16px}
 .profile_wrap .career .desc_item{margin-top:2px;font-size:10px;line-height:13px}
 .profile_wrap .career .lst_detail{margin-top:3px}
-.profile_wrap .career .detail_item{position:relative;padding-left:12px}
+.profile_wrap .career .detail_item{position:relative;margin-top:2px;padding-left:12px}
 .profile_wrap .career .detail_item:before{position:absolute;left:2px;margin-right:4px;content:'-'}
 
 /* 포트폴리오 */
 .portfolio_wrap{display:block;position:relative;z-index:1;margin:0 auto;padding:33px 0;background-color:#fff}
 .portfolio_wrap:before{position:absolute;top:0;left:0;width:100%;height:0;background-image:url(../img/img_cover_profile.jpg);background-size:cover;transition:height 0.5s;content:''}
 .portfolio_wrap .inner{max-width:800px;margin:0 auto;padding:0 44px}
-.portfolio_wrap .h_txt{display:block;max-width:800px;margin:0 auto;padding-bottom:7px;font-size:16px}
+.portfolio_wrap .h_txt{display:block;max-width:800px;margin:0 auto;padding-bottom:7px;font-size:16px;letter-spacing:0.06em}
 .portfolio_wrap .lst_portfolio{margin:2px auto 0}
 .portfolio_wrap .portfolio_item{padding:23px 0 22px;border-top:1px solid #eee}
 .portfolio_wrap .portfolio_item:first-of-type{margin-top:0}
 .portfolio_wrap .link_portfolio{display:block;position:relative;padding-right:140px}
-.portfolio_wrap .portfolio_tit{font-weight:400;font-size:19px}
-.portfolio_wrap .portfolio_desc{margin-top:3px;font-size:13px;line-height:17px}
-.portfolio_wrap .portfolio_date{display:block;margin-top:10px;color:#555;font-size:12px}
+.portfolio_wrap .portfolio_tit{font-weight:400;font-size:17px}
+.portfolio_wrap .portfolio_desc{margin-top:7px;font-size:12px;line-height:16px}
+.portfolio_wrap .portfolio_date{display:block;margin-top:8px;color:#555;font-size:10px}
 .portfolio_wrap .thum_area{overflow:hidden;position:absolute;right:0;top:50%;width:120px;height:86px;margin-top: -43px;border: 1px solid #ddd;text-align:center;font-size:0}
 .portfolio_wrap .thum_area img{display:inline-block;width:100%;vertical-align:middle}
 .portfolio_wrap .thum_area:before{display:inline-block;height:100%;vertical-align:middle;content:''}
@@ -100,11 +100,11 @@ input:-ms-input-placeholder{color:#999!important}
 .cover_wrap:after{display:block;position:absolute;bottom:0;left:0;z-index:0;width:100%;height:100px;background-image:linear-gradient(to bottom, transparent , rgba(0, 0, 0, 0.5));content:''}
 .portfolio_content .desc_wrap{padding:50px 60px 100px}
 .portfolio_content .desc_wrap .inner{max-width:600px;margin:0 auto}
-.portfolio_content .desc_txt{margin-top:20px;font-size:14px;line-height:20px;letter-spacing:-0.02em}
+.portfolio_content .desc_txt{margin-top:10px;font-size:13px;line-height:20px}
 .portfolio_content .desc_txt:first-of-type{margin-top:0}
 .portfolio_content .link_txt{color:blue;text-decoration:underline}
 .portfolio_content .lst_spec{margin-top:20px;padding:13px 15px;background-color:#f3f3f3;font-size:0}
-.portfolio_content .lst_spec .spec_tit,.portfolio_content .lst_spec .spec_desc{margin-top:5px;font-size:14px;line-height:18px;letter-spacing:-0.02em}
+.portfolio_content .lst_spec .spec_tit,.portfolio_content .lst_spec .spec_desc{margin-top:1px;font-size:12px;line-height:20px}
 .portfolio_content .lst_spec .spec_tit{position:relative;float:left;padding-left:8px}
 .portfolio_content .lst_spec .spec_tit:before{display:inline-block;position:absolute;left:0;top:7px;width:2px;height:2px;background-color:#000;content:''}
 .portfolio_content .lst_spec .spec_desc:before{display:inline-block;margin:0 5px;content:':'}
