@@ -10,7 +10,7 @@ article,aside,dialog,footer,header,section,footer,nav,figure,main{display:block}
 html,body{height:100%}
 body{-webkit-text-size-adjust:none;-ms-text-size-adjust:none}
 body,input,select,textarea,button{font-family:NanumBarunGothic,'나눔바른고딕','Nanum BarunGothic','Malgun Gothic','맑은고딕','Apple SD Gothic Neo',Dotum,'돋움',sans-serif}
-input,select,textarea,button{-webkit-appearance:none;-moz-appearance:none;appearance:none;-webkit-border-radius:0}
+input,select,textarea,button{-webkit-appearance:none;-moz-appearance:none;appearance:none}
 fieldset,li,img{border:0;vertical-align:top}
 ul,ol{list-style:none}
 button{overflow:visible;border:0;background-color:transparent;cursor:pointer}
@@ -31,22 +31,27 @@ input:-ms-input-placeholder{color:#999!important}
 .skip a:focus,#skip a:active{position:absolute;top:0;z-index:100;padding:10px 0;background:#000;font-weight:bold;color:#fff;font-size:20px;text-decoration:none}
 .sp{display:inline-block;overflow:hidden;background:url(../img/sp.png) no-repeat;line-height:999px}
 
+/* 공통 */
 .wrap{min-width:320px}
-
-/* 메인 */
 .logo{position:fixed;top:20px;left:20px;z-index:10;width:40px;height:40px}
 .logo .link_area{display:block}
 .logo img{width:100%}
-.main_content{padding-left:290px;transition:padding 0.5s}
+.btn_top{position:fixed;overflow:hidden;right:30px;bottom:30px;z-index:10;width:50px;height:50px;background-color:#999;line-height:999px;border-radius:100%}
+.btn_top:after{display:inline-block;position:absolute;top:50%;left:50%;width:30px;height:30px;margin:-15px 0 0 -15px;background:url(../img/ico_top.svg) no-repeat;background-size:contain;line-height:1;content:''}
+.footer{text-align:center}
+.footer .inner{display:block;margin:0 20px;padding:23px;border-top:1px solid #ddd}
+.copyright_txt{font-size:12px;color:#777;font-weight:300}
+
+/* 메인 */
+.main_content{padding-left:290px}
+.main_content+.footer{padding-left:290px}
 .profile_wrap{display:table;position:fixed;z-index: 2;width:290px;left:0;height:100%;padding:0 40px;background-color:#885454;vertical-align:middle;box-sizing:border-box;transition:left 0.5s}
 .profile_wrap:after{position:absolute;z-index:0;left:0;bottom: 0;width:100%;height:100%;background-image:linear-gradient(to bottom, transparent, transparent 50%, rgba(140, 31, 31, 0.3));content:''}
 .profile_wrap .inner{display:table-cell;position:relative;z-index:1;vertical-align:middle}
 .btn_profile_toggle{display:inline-block;overflow:hidden;position:absolute;top:50%;right:-24px;width:24px;height:40px;margin-top:-20px;background-color:#555;line-height:999px}
-.profile_wrap .btn_profile_toggle:after{display:inline-block;position:absolute;top:50%;left:50%;width:20px;height:20px;margin-top:-10px;margin-left:-10px;background:url(../img/ico_arrow.svg) no-repeat;background-size:contain;content:''}
-.is_folding .main_content{padding-left:0}
-.is_folding .profile_wrap{left:-290px}
-.is_folding .profile_wrap .btn_profile_toggle:after{transform:rotate(180deg)}
+.btn_profile_toggle:after{display:inline-block;position:absolute;top:50%;left:50%;width:20px;height:20px;margin-top:-10px;margin-left:-10px;background:url(../img/ico_arrow.svg) no-repeat;background-size:contain;content:''}
 
+/* 프로필 */
 .profile_wrap .img_area{display:block;overflow:hidden;width:180px;height:180px;margin:0 auto;background-color:#fff;border-radius:100%}
 .profile_wrap .img_area img{width:100%}
 .profile_wrap .name{margin-top:20px;color:#eee;font-weight:300;font-size:26px;line-height:1}
@@ -59,62 +64,73 @@ input:-ms-input-placeholder{color:#999!important}
 .profile_wrap .career .lst_detail{margin-top:3px}
 .profile_wrap .career .detail_item{position:relative;padding-left:12px}
 .profile_wrap .career .detail_item:before{position:absolute;left:2px;margin-right:4px;content:'-'}
+
+/* 포트폴리오 */
 .portfolio_wrap{display:block;position:relative;z-index:1;margin:0 auto;padding:33px 0;background-color:#fff}
+.portfolio_wrap:before{position:absolute;top:0;left:0;width:100%;height:0;background-image:url(../img/img_cover_profile.jpg);background-size:cover;transition:height 0.5s;content:''}
 .portfolio_wrap .inner{max-width:800px;margin:0 auto;padding:0 44px}
-.portfolio_wrap .h_txt{display:block;max-width:800px;margin:0 auto;padding-bottom:7px;border-bottom:1px solid #eee;font-size:16px}
+.portfolio_wrap .h_txt{display:block;max-width:800px;margin:0 auto;padding-bottom:7px;font-size:16px}
 .portfolio_wrap .lst_portfolio{margin:2px auto 0}
-.portfolio_wrap .portfolio_item{padding:23px 0 22px;border-bottom:1px solid #eee}
+.portfolio_wrap .portfolio_item{padding:23px 0 22px;border-top:1px solid #eee}
 .portfolio_wrap .portfolio_item:first-of-type{margin-top:0}
 .portfolio_wrap .link_portfolio{display:block;position:relative;padding-right:140px}
 .portfolio_wrap .portfolio_tit{font-weight:400;font-size:19px}
 .portfolio_wrap .portfolio_desc{margin-top:3px;font-size:13px;line-height:17px}
 .portfolio_wrap .portfolio_date{display:block;margin-top:10px;color:#555;font-size:12px}
 .portfolio_wrap .thum_area{overflow:hidden;position:absolute;right:0;top:50%;width:120px;height:86px;margin-top: -43px;border: 1px solid #ddd;text-align:center;font-size:0}
-.thum_area img{display:inline-block;width:100%;vertical-align:middle}
-.thum_area:before{display:inline-block;height:100%;vertical-align:middle;content:''}
-.thum_area .msg_txt{display:inline-block;vertical-align:middle;font-size:14px;color:#555}
+.portfolio_wrap .thum_area img{display:inline-block;width:100%;vertical-align:middle}
+.portfolio_wrap .thum_area:before{display:inline-block;height:100%;vertical-align:middle;content:''}
+.portfolio_wrap .thum_area .msg_txt{display:inline-block;vertical-align:middle;font-size:14px;color:#555}
+
+/* 프로필 접음 */
+.is_folding .main_content{padding-left:0}
+.is_folding .profile_wrap{left:-290px}
+.is_folding .btn_profile_toggle:after{transform:rotate(180deg)}
 .is_folding .portfolio_wrap{position:static;padding-top:230px}
-.portfolio_wrap:before{position:absolute;top:0;left:0;width:100%;height:0;background-image:url(../img/img_cover_profile.jpg);background-size:cover;transition:height 0.5s;content:''}
 .is_folding .portfolio_wrap:before{height:200px}
 .is_folding .portfolio_wrap .h_txt{position:absolute;top:150px;max-width:none;border-bottom:0;font-size:34px;color:#fff;text-shadow:1px 1px rgba(0, 0, 0, .5)}
-.portfolio_content .link_txt{color:blue;text-decoration:underline}
+.is_folding .portfolio_wrap .portfolio_item{border-top:0}
+.is_folding .main_content+.footer{padding-left:0}
+
+/* 포트폴리오 상세 페이지 */
 .cover_wrap{position:relative;height:180px;background:url(../img/img_cover_portfolio.jpg);background-size:cover}
 .cover_wrap .inner{display:block;position:relative;z-index:1;max-width:600px;height:100%;margin:auto;padding:0 60px}
 .cover_wrap .inner:before{display:inline-block;height:100%;vertical-align:bottom;content:''}
 .cover_wrap .h_txt{display:inline-block;position:relative;z-index:1;margin-left:-5px;margin-bottom:20px;color:#fff;vertical-align:bottom;font-size:30px;font-weight:300}
 .cover_wrap:after{display:block;position:absolute;bottom:0;left:0;z-index:0;width:100%;height:100px;background-image:linear-gradient(to bottom, transparent , rgba(0, 0, 0, 0.5));content:''}
-.desc_wrap{padding:50px 60px}
-.desc_wrap .inner{max-width:600px;margin:0 auto}
-.desc_wrap .inner p{margin-top:20px;font-size:14px;line-height:20px;letter-spacing:-0.02em}
-.desc_wrap .inner p:first-of-type{margin-top:0}
-.lst_spec{margin-top:20px;padding:13px 15px;background-color:#f3f3f3;font-size:0}
-.lst_spec li{position:relative;margin-top:5px;padding-left:8px;font-size:14px;line-height:18px;letter-spacing:-0.02em}
-.lst_spec li:first-of-type{margin-top:0}
-.lst_spec li:before{display:inline-block;position:absolute;left:0;top:7px;width:2px;height: 2px;background-color:#000;content:''}
-.portfolio_img_wrap{position:relative;overflow:hidden;max-height:270px;margin:20px auto;border:1px solid #ddd}
-.portfolio_img_wrap.is_m{width:360px;max-height:640px}
-.portfolio_img_wrap.is_m img{width:100%}
-.desc_wrap .inner img{width:100%}
-.btn_img_view{overflow:hidden;position:absolute;right:0;bottom:0;z-index:1;width:40px;height:40px;background-color:#ddd;line-height:999px}
-.btn_img_view:hover{background-color:#bbb}
-.btn_img_view:before,.btn_img_view:after{position:absolute;top:50%;left:50%;background-color:#fff;content:''}
-.btn_img_view:before{width:10px;height:2px;margin:-1px 0 0 -5px}
-.btn_img_view:after{width:2px;height:10px;margin:-5px 0 0 -1px}
+.portfolio_content .desc_wrap{padding:50px 60px 100px}
+.portfolio_content .desc_wrap .inner{max-width:600px;margin:0 auto}
+.portfolio_content .desc_txt{margin-top:20px;font-size:14px;line-height:20px;letter-spacing:-0.02em}
+.portfolio_content .desc_txt:first-of-type{margin-top:0}
+.portfolio_content .link_txt{color:blue;text-decoration:underline}
+.portfolio_content .lst_spec{margin-top:20px;padding:13px 15px;background-color:#f3f3f3;font-size:0}
+.portfolio_content .lst_spec .spec_tit,.portfolio_content .lst_spec .spec_desc{margin-top:5px;font-size:14px;line-height:18px;letter-spacing:-0.02em}
+.portfolio_content .lst_spec .spec_tit{position:relative;float:left;padding-left:8px}
+.portfolio_content .lst_spec .spec_tit:before{display:inline-block;position:absolute;left:0;top:7px;width:2px;height:2px;background-color:#000;content:''}
+.portfolio_content .lst_spec .spec_desc:before{display:inline-block;margin:0 5px;content:':'}
+.portfolio_content .lst_spec .spec_desc:after{clear:both;content:''}
+.portfolio_content .lst_spec .spec_tit:first-of-type,.portfolio_content .lst_spec .spec_desc:first-of-type{margin-top:0}
+.portfolio_img_wrap{position:relative;overflow:hidden;max-height:270px;margin:20px auto 0;border:1px solid #ddd}
+.portfolio_img_wrap.is_m{max-width:360px;max-height:640px}
+.portfolio_img_wrap img{width:100%}
+.portfolio_img_wrap .btn_img_view{overflow:hidden;position:absolute;right:0;bottom:0;z-index:1;width:40px;height:40px;background-color:#ddd;line-height:999px}
+.portfolio_img_wrap .btn_img_view:hover{background-color:#bbb}
+.portfolio_img_wrap .btn_img_view:before,.portfolio_img_wrap .btn_img_view:after{position:absolute;top:50%;left:50%;background-color:#fff;content:''}
+.portfolio_img_wrap .btn_img_view:before{width:10px;height:2px;margin:-1px 0 0 -5px}
+.portfolio_img_wrap .btn_img_view:after{width:2px;height:10px;margin:-5px 0 0 -1px}
 .portfolio_img_wrap.is_active{max-height:none}
 .portfolio_img_wrap.is_active .btn_img_view:after{display:none}
-.btn_back{position:fixed;overflow:hidden;right:30px;bottom:30px;width:50px;height:50px;background-color:#999;line-height:999px;border-radius:100%}
-.btn_back:after{display:inline-block;position:absolute;top:50%;left:50%;width:24px;height:24px;margin-top:-12px;margin-left:-12px;background:url(../img/ico_back.svg) no-repeat;background-size:contain;line-height:1;content:''}
-.footer{margin-top:60px;text-align:center}
-.footer .inner{display:block;margin:0 20px;padding:23px;border-top:1px solid #ddd}
-.copyright_txt{font-size:12px;color:#777;font-weight:300}
-.main_content+.footer{padding-left:290px;transition:padding 0.5s}
-.is_folding .main_content+.footer{padding-left:0}
 
 @media all and (max-width:600px){
-.main_content{padding-left:0;padding-top:320px;transition:none}
+/* 공통 */
+.btn_profile_toggle{display:none}
+.footer .inner{margin:0}
+/* 메인 */
+.main_content{padding-left:0;padding-top:320px}
+.main_content+.footer{position:relative;z-index:1;background-color:#fff;margin-top:0;padding-left:0}
 .profile_wrap{display:block;position:fixed;z-index:0;top:0;width:100%;height:320px;padding:0;font-size:0;background:url(../img/img_profile.png) center no-repeat;background-size:cover;transition:none}
-.profile_wrap .inner{display:block;position:absolute;bottom:0;left:0;right:0;padding:40px 44px}
 .profile_wrap:after{background-image:linear-gradient(to bottom, transparent, transparent 50%, rgba(0, 0, 0, .3))}
+.profile_wrap .inner{display:block;position:absolute;bottom:0;left:0;right:0;padding:40px 44px}
 .profile_wrap .img_area{display:none}
 .profile_wrap .name{position:relative;margin-top:0;text-align:right}
 .profile_wrap .job{position:relative;text-align:right}
@@ -123,8 +139,15 @@ input:-ms-input-placeholder{color:#999!important}
 .profile_wrap .career .detail_item{padding-left:0}
 .profile_wrap .career .detail_item:before{position:static}
 .profile_wrap .career:before{display:none}
-.btn_profile_toggle{display:none}
-.main_content+.footer{position:relative;z-index:1;background-color:#fff;margin-top:0;padding-left:0}
+.is_folding .profile_wrap{display:none}
+.is_folding .main_content{padding-top:0}
+/* 포트폴리오 상세 페이지 */
+.cover_wrap .inner{padding:0 30px}
+.portfolio_content .desc_wrap{padding:30px}
 }
 
-@media all and (max-width:320px){}
+@media all and (max-width:400px){
+.logo{top:5px;left:5px}
+.portfolio_wrap .link_portfolio{padding:0}
+.portfolio_wrap .thum_area{position:static;width:100%;height:140px;margin-top:16px}
+}

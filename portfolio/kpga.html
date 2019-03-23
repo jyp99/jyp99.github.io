@@ -7,33 +7,21 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noodp, notranslate, noimageindex">
 <title>박진영 포트폴리오</title>
-
-<!-- Icon & Favicon / 미사용시 삭제 -->
 <link rel="shortcut icon" href="../img/icon/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="../img/icon/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../img/icon/favicon-32x32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="../img/icon/favicon-180x180.png">
-<!-- // Icon & Favicon -->
 <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
-<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
-<ul class="skip">
-<li><a href="#header" onclick="document.getElementById('header').tabIndex=-1;document.getElementById('header').focus();return false;">주 메뉴 바로가기</a></li>
-<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
-</ul>
-<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
-
 <div class="wrap">
-	<!--[D] HEADER -->
 	<div class="logo">
-		<a href="../index.html" class="link_area">
-			<img src="../img/logo_j.png" alt="J">
+		<a href="../index.html" title="포트폴리오 메인" class="link_area">
+			<img src="../img/logo_j.png" alt="logo">
 		</a>
 	</div>
-	<!--//[D] HEADER -->
 	<!-- [D] CONTENTS -->
-	<div class="content portfolio_content">
+	<div id="content" class="content portfolio_content">
 		<div class="cover_wrap">
 			<div class="inner">
 				<h1 class="h_txt">KPGA STATS</h1>
@@ -41,12 +29,17 @@
 		</div>
 		<div class="desc_wrap">
 			<div class="inner">
-				<p>KPGA 경기 진행중 경기 중인 선수 위치 및 정보를 지도위에 표시해 줌으로서 경기현황을 한 눈에 확인할 수 있는 서비스 페이지. 선수 위치 찾기 서비스는 티웨이 홀인원 골 등의 케이스를 선택하여 노출, 선수명 검색, 마커 클릭시 경기 중인 조 정보 확인 등이 가능하다.</p>
-				<ul class="lst_spec">
-				<li>작업 기간 : 2018. 05 ~ 2018. 09</li>
-				<li>리얼 : <a href="http://stats.kpga.co.kr/stats.kpga?tour=11" target="_blank" class="link_txt">KPGA  STATS</a>, <a href="http://stats.kpga.co.kr/liveMap?gameCode=2018110006000" target="_blank" class="link_txt">선수위치 찾기 서비스</a></li>
-				<li>마크업 산출물 : <a href="../portfolio/kpga/@index.html" target="_blank" class="link_txt">KPGA  STATS 인덱스</a></li>
-				</ul>
+				<p class="desc_txt">KPGA 경기 진행중 경기 중인 선수 위치 및 정보를 지도위에 표시해 줌으로서 경기현황을 한 눈에 확인할 수 있는 서비스 페이지. 선수 위치 찾기 서비스는 티웨이 홀인원 골 등의 케이스를 선택하여 노출, 선수명 검색, 마커 클릭시 경기 중인 조 정보 확인 등이 가능하다.</p>
+				<dl class="lst_spec">
+				<dt class="spec_tit">작업 기간</dt>
+				<dd class="spec_desc">2018. 05 ~ 2018. 09</dd>
+				<dt class="spec_tit">리얼</dt>
+				<dd class="spec_desc"><a href="http://stats.kpga.co.kr/stats.kpga?tour=11" target="_blank" class="link_txt">KPGA  STATS</a>, <a href="http://stats.kpga.co.kr/liveMap?gameCode=2018110006000" target="_blank" class="link_txt">선수위치 찾기 서비스</a></dd>
+				<dt class="spec_tit">마크업 산출물</dt>
+				<dd class="spec_desc"><a href="../portfolio/kpga/@index.html" target="_blank" class="link_txt">KPGA  STATS 인덱스</a></dd>
+				<dt class="spec_tit">크로스브라우징</dt>
+				<dd class="spec_desc">ie10 이상, 모던브라우저, ios 7.* 이상, aos 4.* 이상</dd>
+				</dl>
 				<div class="portfolio_img_wrap">
 					<img src="https://t1.daumcdn.net/cfile/tistory/99EFFD465C5E7FC02B" alt="">
 					<button type="button" class="btn_img_view">이미지 크게 보기</button>
@@ -55,21 +48,21 @@
 					<img src="https://t1.daumcdn.net/cfile/tistory/9938E23C5C60DC422D" alt="">
 					<button type="button" class="btn_img_view">이미지 크게 보기</button>
 				</div>
-				<p>KPGA STATS와 KPGA는 도메인은 다르지만, 같은 사이트내에서 이동하는것처럼 보일수 있도록, 헤더와 푸터, 모바일 GNB는 KPGA 사이트의 것과 동일하게 보이도록 작업이 필요했고, 지도는 다음지도 api(http://apis.map.daum.net/)를, 차트는 jui-chart(http://chartplay.jui.io/)를 가져와서 커스텀하여 사용했다.</p>
+				<p class="desc_txt">KPGA STATS와 KPGA는 도메인은 다르지만, 같은 사이트내에서 이동하는것처럼 보일수 있도록, 헤더와 푸터, 모바일 GNB는 KPGA 사이트의 것과 동일하게 보이도록 작업이 필요했고, 지도는 다음지도 api(http://apis.map.daum.net/)를, 차트는 jui-chart(http://chartplay.jui.io/)를 가져와서 커스텀하여 사용했다.</p>
 				<div class="portfolio_img_wrap is_m">
 					<img src="https://t1.daumcdn.net/cfile/tistory/99C76C3C5C5E83900F" alt="">
 					<button type="button" class="btn_img_view">이미지 크게 보기</button>
 				</div>
-				<p>클라이언트 쪽에서 경기 코스 지도 이미지와 선수의 실시간 위치 기록 데이터를 넘겨 받아서 코스와 지점을 지도 이미지 위에 라인 및 써클 등으로 표현해주고, 지점을 클릭 시 자세한 정보가 노출되는 레이어 팝업을 클릭된 지점 위에 띄워주는 UI가 있어서, 이 부분에 대한 마크업 구현 및 개발에서 계산되어 뿌려질 값이 어떻게 적용되면 되는지 가이드를 만들어 전달했던게 기억에 남는다.</p>
+				<p class="desc_txt">클라이언트 쪽에서 경기 코스 지도 이미지와 선수의 실시간 위치 기록 데이터를 넘겨 받아서 코스와 지점을 지도 이미지 위에 라인 및 써클 등으로 표현해주고, 지점을 클릭 시 자세한 정보가 노출되는 레이어 팝업을 클릭된 지점 위에 띄워주는 UI가 있어서, 이 부분에 대한 마크업 구현 및 개발에서 계산되어 뿌려질 값이 어떻게 적용되면 되는지 가이드를 만들어 전달했던게 기억에 남는다.</p>
 				<div class="portfolio_img_wrap is_m">
 					<img src="https://t1.daumcdn.net/cfile/tistory/996161455C60E47E2F" alt="">
 					<button type="button" class="btn_img_view">이미지 크게 보기</button>
 				</div>
-				<p>전달받은 좌표로 라인과 점을 표현하는 방법으로 svg의 path와 circle이 적합할 것이라고 판단하여, svg로 작업 했다.
+				<p class="desc_txt">전달받은 좌표로 라인과 점을 표현하는 방법으로 svg의 path와 circle이 적합할 것이라고 판단하여, svg로 작업 했다.
 				전달받게될 맵의 사이즈 360*550을 표현 해주기 위해 svg에 viewBox="0 0 360 550"를 주고, 위 그림과 같이 점이 표시될 포인트 좌표를 확인한 후 이미지 상단 왼쪽(0,0)을 기준으로 포인트 좌표까지의 가로, 세로 크기를 px 값으로 적용하고, 포인트 크기가 작아서 터치가 좀 어려운 이슈가 있어서 svg안에 노출되는 점과는 별개로, 클릭 용 마크업을 별개로 추가해 주는 작업이 필요하여 클릭용 원과 클릭시 노출될 레이어팝업의 위치는 각각 원과 레이어팝업의 인라인 스타일 값에 적용되도록([left = 100/360*지점 x 좌표, top =100/550*지점 y 좌표]) 개발 쪽에 가이드했다.</p>
 			</div>
 		</div>
-		<a href="../index.html" class="btn_back">뒤로</a>
+		<a href="#content" class="btn_top">위로</a>
 	</div>
 	<!-- //[D] CONTENTS -->
 	<!--[D] FOOTER -->
