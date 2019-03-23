@@ -80,7 +80,7 @@ input:-ms-input-placeholder{color:#999!important}
 .portfolio_wrap .thum_area{overflow:hidden;position:absolute;right:0;top:50%;width:120px;height:86px;margin-top: -43px;border: 1px solid #ddd;text-align:center;font-size:0}
 .portfolio_wrap .thum_area img{display:inline-block;width:100%;vertical-align:middle}
 .portfolio_wrap .thum_area:before{display:inline-block;height:100%;vertical-align:middle;content:''}
-.portfolio_wrap .thum_area .msg_txt{display:inline-block;vertical-align:middle;font-size:14px;color:#555}
+.portfolio_wrap .thum_area .msg_txt{display:inline-block;vertical-align:middle;font-size:12px;color:#555}
 
 /* 프로필 접음 */
 .is_folding .main_content{padding-left:0}
